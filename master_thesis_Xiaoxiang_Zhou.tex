@@ -1,0 +1,269 @@
+
+\documentclass[reqno,11pt]{book}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[all,pdf]{xy}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+\usepackage[table,xcdraw]{xcolor} % before tikz-cd
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{scalerel}
+\usepackage{stackengine,wasysym}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem*{bbox}{Black box}
+\newtheorem{eg}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\orde}{\operatorname{ord}_e }
+\newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
+\newcommand{\Vcell}{\operatorname{\mathcal{V}}}
+\setlength\intextsep{0cm}
+\setlength\textfloatsep{0cm}
+
+
+% from https://tex.stackexchange.com/questions/63545/big-tilde-in-math-mode
+
+\begin{document}
+\date{}
+
+\title
+{Master thesis
+}
+
+
+%\author{Xiaoxiang Zhou}
+%\address{School of Mathematical Sciences\\
+%University of Bonn\\
+%Bonn, 53115\\ Germany\\} 
+%\email{email:xx352229@mail.ustc.edu.cn}
+
+
+
+\setcounter{tocdepth}{1}
+\maketitle
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Variety and stratification}
+
+\section{Initial case: $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$}
+
+We introduce the complete flag variety to give a bird's eye view on the whole section. Actually, the entire difficulty is bundled in this example.
+
+Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup, Weyl group respectively, i.e.,
+
+$$\GL_n= \begin{pmatrix}
+* & \dots & * \\
+\vdots & \ddots & \vdots \\
+* & \dots & * 
+\end{pmatrix} \quad
+B= \begin{pmatrix}
+* & \dots & * \\
+ & \ddots & \vdots \\
+0 &  & * 
+\end{pmatrix} \quad
+T= \begin{pmatrix}
+* &  & 0 \\
+ & \ddots &  \\
+0 &  & * 
+\end{pmatrix} \quad
+B= \begin{pmatrix}
+1 & \dots & * \\
+ & \ddots & \vdots \\
+0 &  & 1
+\end{pmatrix} \quad
+$$
+$$W:= N_{\GL_n}(T)/T \cong S_n$$
+
+\begin{defn}[flag]
+For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
+$$F: 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_k = \mathbb{C}^n.$$
+$F$ is called a complete flag if $\dim V_i = i$ for all $i$, otherwise $F$ is called a partial flag.
+\end{defn}
+
+\begin{defn}[complete flag variety]
+The complete flag variety $\mathcal{F}$ is defined as 
+\begin{equation*}
+\begin{aligned}
+  \mathcal{F}=\;& \GL_n/B \\ 
+    \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^n \right\} \\ 
+      =\;& \left\{ 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_n = \mathbb{C}^n \;\middle|\; \dim V_i =i \right\} \\ 
+       \cong\;&  \left\{ \text{Borel subgroups of } \GL_n \right\} \\
+          =\;& \left\{ gBg^{-1} \;\middle|\; g \in \GL_n \right\} \\ 
+\end{aligned}
+\end{equation*}
+\end{defn}
+
+\begin{remark}\
+\begin{enumerate}
+\item We implicitly give the base point of $\mathcal{F}$, which is not considered as the data of $\mathcal{F}$. Fix a standard basis of $\mathbb{C}^n$ by $\{v_1, \ldots, v_n \}$, we define the standard flag
+$$F_{\Id}: 0 \subseteq \left< v_1 \right> \subseteq \left< v_1,v_2 \right> \subseteq \cdots \subseteq \left< v_1, \ldots, v_n \right> = \mathbb{C}^n.$$
+\item We have the natural $\GL_n$-action on $\mathcal{F}$, which is considered as the data of $\mathcal{F}$.
+
+For $g \in \GL_n$, we define the flag attached to $g$: 
+$$F_g \triangleq gF_{\Id}: 0 \subseteq \left< gv_1 \right> \subseteq \left< gv_1,gv_2 \right> \subseteq \cdots \subseteq \left< gv_1, \ldots, gv_n \right> = \mathbb{C}^n.$$
+Especially, for $w \in W=N_{\GL_n}(T)/T \cong S_n$, the flag attached to $w$
+\begin{equation*}
+\begin{aligned}
+  F_w:\;&  0 \subseteq \left< \tilde{w}v_1 \right> \subseteq \left< \tilde{w}v_1,\tilde{w}v_2 \right> \subseteq \cdots \subseteq \left< \tilde{w}v_1, \ldots, \tilde{w}v_n \right> = \mathbb{C}^n\\ 
+  &  0 \subseteq \left< v_{w(1)} \right> \subseteq \left< v_{w(1)},v_{w(2)} \right> \subseteq \cdots \subseteq \left< v_{w(1)}, \ldots, v_{w(n)} \right> = \mathbb{C}^n\\
+\end{aligned}
+\end{equation*}
+does not depend on the choice of the lift $\tilde{w} \in N_{\GL_n}(T)$ of $w$.
+
+Readers can verify that $\left\{ F_w \middle| w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while $\left\{ wBw^{-1} \middle| w \in W \right\}$ are all Borel subgroups of $G$ containing the standard torus $T$.
+\item For $n=2$, $\mathcal{F} \cong \mathbb{P}^1$. We encourage readers to use $\mathbb{P}^1$ as a toy example for the whole theory.
+\end{enumerate}
+\end{remark}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+interpretation & $\GL_n/B$           & flags                       & Borel subgroups \\ \hline
+base point     & $\Id$               & $F_{\Id}$                   & $B$             \\ \hline
+$\GL_n$-action & left multiplication & $\{V_i\} \mapsto \{gV_i \}$ & conjugation     \\ \hline
+general point  & $g$                 & $F_g$                       & $gBg^{-1}$      \\ \hline
+\end{tabular}
+\end{table}
+        
+$\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition, \footnote{For the most time the formula doees not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
+$$\GL_n \cong \bigsqcup_{w\in W} BwB$$
+
+We get a stratification of $\mathcal{F}$ by $B$-orbits:
+$$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
+The $B$-orbit $BwB/B$ is called the Schubert cell, denoted by $\Vcell_w$. Since 
+$$\Vcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
+the Schubert cell is an affine space of dimension $l(w)$.
+
+As a result, we know a lot of information of $\mathcal{F}$:
+%https://tex.stackexchange.com/questions/112576/math-mode-in-tabular-without-having-to-use-everywhere
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "l" column type
+\begin{table}[]
+\centering
+\begin{tabular}{|C|C|C|C|C|C|C|C|}
+\hline
+H^i(\mathcal{F}; \mathbb{C}) & 0 & 2 & 4 & 6  & 8  & 10 & 12 \\ \hline
+1                            & 1 &   &   &    &    &    &    \\ \hline
+2                            & 1 & 1 &   &    &    &    &    \\ \hline
+3                            & 1 & 2 & 2 & 1  &    &    &    \\ \hline
+4                            & 1 & 3 & 5 & 6  & 5  & 3  & 1  \\ \hline
+5                            & 1 & 4 & 9 & 15 & 20 & 22 & 20 \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[]
+\centering
+\begin{tabular}{C|C|C}
+\hline
+G    & \text{Orbit}                       & G\text{-fixed points}  \\ \hline
+GL_n & \mathcal{F} \cong \GL_n/B          & \varnothing            \\ \hline
+B    & \Vcell_w \cong B/(B \cap wBw^{-1}) & \{F_{\Id} \}           \\ \hline
+T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
+\end{tabular}
+\end{table}
+\section{quiver and Weyl group}
+\section{algebraic group and Lie algebra}
+\section{typical variety}
+\section{stratification and $T$-fixed points}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{K-theory and cohomology theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Localization theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Excess intersection formula}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{From formula to diagram}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Generalization}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Atiyah-Segal completion theorem}
+
+
+%\bibliographystyle{plain}
+%\bibliography{reference}
+\end{document}
+
+
+
+
