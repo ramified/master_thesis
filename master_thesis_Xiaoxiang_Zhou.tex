@@ -150,7 +150,7 @@ T= \begin{pmatrix}
  & \ddots &  \\
 \scriptstyle 0 &  & * 
 \end{pmatrix} \quad
-B= \begin{pmatrix}
+N= \begin{pmatrix}
 \scriptstyle 1 & \cdots & * \\[-1.4mm]
  & \ddots & \vdots \\
 \scriptstyle 0 &  & \scriptstyle 1
@@ -159,13 +159,13 @@ $$
 $$W:= N_{\GL_n}(T)/T \cong S_n$$
 }
 
-\begin{defn}[flag]
+\begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_k = \mathbb{C}^n.$$
 $F$ is called a complete flag if $\dim V_i = i$ for all $i$, otherwise $F$ is called a partial flag.
 \end{defn}
 
-\begin{defn}[complete flag variety]
+\begin{defn}[Complete flag variety]
 The complete flag variety $\mathcal{F}$ is defined as 
 \begin{equation*}
 \begin{aligned}
@@ -210,7 +210,7 @@ general point  & $g$                 & $F_g$                       & $gBg^{-1}$ 
 \end{tabular}
 \end{table}
         
-$\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition, \footnote{For the most time the formula doees not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
+$\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition, \footnote{For the most time the formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
 $$\GL_n \cong \bigsqcup_{w\in W} BwB$$
 
 We get a stratification of $\mathcal{F}$ by $B$-orbits:
@@ -244,7 +244,53 @@ B    & \Vcell_w \cong B/(B \cap wBw^{-1}) & \{F_{\Id} \}           \\ \hline
 T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 \end{tabular}
 \end{table}
+
+
+
 \section{quiver and Weyl group}
+To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following subsections.
+
+Roughly speaking, a quiver is a directed multigraph permitting loops.
+
+\begin{defn}[Quiver]
+???
+\end{defn}
+
+\begin{remark}
+In the first part of our master thesis, all the quivers are supposed to be connected and finite (i.e., $Q_0$, $Q_1$ are finite sets). We will only encounter disconnected and infinite quiver as Auslander--Reiten quiver later on.
+\end{remark}
+
+\begin{eg}
+The following graphs are quivers.
+
+???
+
+The reader can easily writen down the quadruple of these quivers. ???
+
+For convenience, we mainly use simpler quivers as examples:
+
+???
+
+\end{eg}
+
+From those quivers we are able to construct relatively complicated algebraic and geometrical objects.
+
+\begin{defn}[Quiver representation]
+???
+\end{defn}
+\begin{eg}
+A representation of $1$-loop quiver $L(1)$ is a $2$-tuple
+$$(V, \; \alpha: V \longrightarrow V)$$
+which is equivalent to a (finite dimensional) $\mathbb{C}[t]$-module.
+\end{eg}
+\begin{remark}
+The equivalence appeared in the example can actually be generalized to arbitrary quivers. For a quiver $Q$, we can define the path algebra $\mathbb{C}Q$, and view any $Q$-representation as $\mathbb{C}Q$-module, and vice versa.
+\end{remark}
+
+One important information of the quiver representation is the dimension vector.
+\begin{defn}[Dimension vector]
+???
+\end{defn} 
 \section{algebraic group and Lie algebra}
 
 In this subsection we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
@@ -477,6 +523,24 @@ For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, ???,
 
 
 \end{eg}
+
+For the Lie algebra, we use the corresponding Fraktur-font symbols:
+\begin{equation*}
+\begin{aligned}
+  & \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{b}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{t}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{n}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{b}}_{\ww}  \\
+  & \mathfrak{g}_{\dimvec{d}},
+  &&\mathfrak{b}_{\dimvec{d}},
+  &&\mathfrak{t}_{\dimvec{d}},
+  &&\mathfrak{n}_{\dimvec{d}},
+  &&\mathfrak{b}_{\ww},\\
+  & \mathfrak{n}_{\ww},\hspace{5mm}
+  &&\mathfrak{n}_{\ww,\ww''},
+  &&\mathfrak{m}_{\ww,\ww''},
+  &&\mathfrak{p}_{\ww,\ww s},
+  &&\\
+\end{aligned}
+\end{equation*}
+
 \section{typical variety}
 \section{stratification and $T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

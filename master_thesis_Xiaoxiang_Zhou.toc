@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Variety and stratification}{5}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Initial case: $\mathcal {F}$ and $\mathcal {F} \times \mathcal {F}$}{5}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}quiver and Weyl group}{7}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}algebraic group and Lie algebra}{7}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}algebraic group and Lie algebra}{8}{section.1.3}% 
 \contentsline {section}{\numberline {1.4}typical variety}{9}{section.1.4}% 
 \contentsline {section}{\numberline {1.5}stratification and $T$-fixed points}{9}{section.1.5}% 
 \contentsline {chapter}{\numberline {2}K-theory and cohomology theory}{11}{chapter.2}% 

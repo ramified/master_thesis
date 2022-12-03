@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 DEC 2022 00:59
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 DEC 2022 12:33
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1238,16 +1238,30 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 237.
 
-[6] [7]
+[6] [7] [8]
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 530.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 530.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 530.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
+euf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 481.
+(hyperref)                removing `math shift' on input line 545.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 481.
+(hyperref)                removing `math shift' on input line 545.
 
-[8] [9] [10
+[9] [10
 
 ]
 Chapter 2.
@@ -1272,22 +1286,22 @@ Chapter 6.
 ]
 Chapter 7.
 [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 503.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
  (master_thesis_Xiaoxiang_Zhou.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 503.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 503.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 567.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 567.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: 5D6F69EE8262A42B65C79CB2090246FB.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 503.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
  ) 
 Here is how much of TeX's memory you used:
- 24583 strings out of 427748
- 422032 string characters out of 3150981
- 569877 words of memory out of 3000000
- 28174 multiletter control sequences out of 15000+200000
- 28311 words of font info for 130 fonts, out of 3000000 for 9000
+ 24607 strings out of 427748
+ 422380 string characters out of 3150981
+ 570878 words of memory out of 3000000
+ 28190 multiletter control sequences out of 15000+200000
+ 30646 words of font info for 140 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,18n,84p,3277b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
 
