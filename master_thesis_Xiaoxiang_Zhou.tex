@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage{extarrows}
 \usepackage[mathscr]{eucal}
 \usepackage{float}
 \usepackage{mathrsfs}
@@ -90,6 +91,9 @@
 \newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
 \newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
 \newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
 \newcommand{\norm}[1]{\Vert{#1}\Vert}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
@@ -128,29 +132,32 @@
 We introduce the complete flag variety to give a bird's eye view on the whole section. Actually, the entire difficulty is bundled in this example.
 
 Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup, Weyl group respectively, i.e.,
-
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
 $$\GL_n= \begin{pmatrix}
-* & \dots & * \\
+* & \cdots & * \\[-1.4mm]
 \vdots & \ddots & \vdots \\
-* & \dots & * 
+* & \cdots & * 
 \end{pmatrix} \quad
 B= \begin{pmatrix}
-* & \dots & * \\
+* & \cdots & * \\[-1.4mm]
  & \ddots & \vdots \\
-0 &  & * 
+\scriptstyle 0 &  & * 
 \end{pmatrix} \quad
 T= \begin{pmatrix}
-* &  & 0 \\
+* &  & \scriptstyle 0 \\[-1.4mm]
  & \ddots &  \\
-0 &  & * 
+\scriptstyle 0 &  & * 
 \end{pmatrix} \quad
 B= \begin{pmatrix}
-1 & \dots & * \\
+\scriptstyle 1 & \cdots & * \\[-1.4mm]
  & \ddots & \vdots \\
-0 &  & 1
+\scriptstyle 0 &  & \scriptstyle 1
 \end{pmatrix} \quad
 $$
 $$W:= N_{\GL_n}(T)/T \cong S_n$$
+}
 
 \begin{defn}[flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
@@ -239,6 +246,237 @@ T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 \end{table}
 \section{quiver and Weyl group}
 \section{algebraic group and Lie algebra}
+
+In this subsection we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
+
+We fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $\mathbb{C}$-vector space with quiver partition
+$$V=\bigoplus_{i \in Q_0} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
+
+\begin{defn}[absolute algebraic groups]
+%The following algebraic groups are not related to the quiver partition of $V$.
+We set
+$$\absgp{G}_{\abdimvec{d}}:= \GL(V)=\GL_{\abdimvec{d}}(\mathbb{C}),$$
+and $\absgp{B}_{\abdimvec{d}}$, $\absgp{T}_{\abdimvec{d}}$, $\absgp{N}_{\abdimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
+
+The Weyl group is
+$$\absgp{W}_{\abdimvec{d}}:= N_{\absgp{G}_{\abdimvec{d}}}(\absgp{T}_{\abdimvec{d}})/\absgp{T}_{\abdimvec{d}} \cong S_{\abdimvec{d}}.$$
+
+For $\ww \in \absgp{W}_{\abdimvec{d}}$, we define\footnote{As usual, we abuse the notation of $\ww$ and its lift.}
+$$\absgp{B}_{\ww}:= \ww \absgp{B}_{\abdimvec{d}} \ww^{-1}.$$
+We will view $\absgp{B}_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $\absgp{G}_{\abdimvec{d}}$-action.
+\end{defn}
+
+We also have a series of algebraic groups compatible with the quiver partition of $V$, and they're more common in this thesis.
+
+\begin{defn}[relative algebraic groups]
+
+We set
+$$G_{\dimvec{d}}:= \bigoplus_{i \in Q_0}\GL(V_i)=\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
+and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
+
+The Weyl group is
+$$W_{\dimvec{d}}:= N_{G_{\dimvec{d}}}(T_{\dimvec{d}})/T_{\dimvec{d}} \cong \prod_{i \in Q_0}S_{\dimvec{d}_i}.$$
+
+For $\ww=wu \in W_{\dimvec{d}}$, we define
+$$B_{\ww}:= w B_{\dimvec{d}} w^{-1}.$$
+We will view $B_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $G_{\dimvec{d}}$-action.
+\end{defn}
+
+We also have a series of algebraic groups with subscription as elements in the Weyl group:
+\begin{defn}[more algebraic groups]
+For $\ww, \ww'' \in \absgp{W}_{\abdimvec{d}}$, define
+\begin{equation*}
+\begin{aligned}
+  N_{\ww}:=\;& R_u(B_{\ww}),  \\ 
+  N_{\ww,\ww''}:=\;& N_{\ww} \cap N_{\ww''},  \\ 
+  M_{\ww,\ww''}:=\;& N_{\ww}/N_{\ww,\ww''},  \\ 
+\end{aligned}
+\end{equation*}
+where $R_u$ denotes for the unipotent radical.
+
+For $s \in \Pi$ such that $\ww s \ww^{-1} \in W_d$ (i.e., $W_{\dimvec{d}}\ww=W_{\dimvec{d}}\ww s$), define
+\begin{equation*}
+\begin{aligned}
+  P_{\ww,\ww s}:\xlongequal{\ww =wu}\;& w\left( B_{\dimvec{d}} usu^{-1} B_{\dimvec{d}} \cup B_{\dimvec{d}} \right)w^{-1} \\ 
+  \xlongequal{\phantom{\ww =wu}}\;&  B_{\ww} \ww s\ww^{-1} B_{\ww} \cup B_{\ww}  \\ 
+\end{aligned}
+\end{equation*}
+\end{defn}
+\begin{remark}
+One can easily show that $N_{\ww, \ww s}=R_u (P_{\ww, \ww s})$.
+\end{remark}
+%problems on making short vertical space
+%https://tex.stackexchange.com/questions/183562/how-to-reduce-vertical-space-in-matrix?newreg=ca78ba434426423a8be8ce4f1df4548c
+%https://tex.stackexchange.com/questions/643384/horizontal-spacing-bmatrix-in-align-environment
+%https://tex.stackexchange.com/questions/275725/adjusting-separation-between-matrix-entries
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+
+%small fonts: use \scriptstyle instead of \scriptsize
+
+%vertical line:
+%https://tex.stackexchange.com/questions/33519/vertical-line-in-matrix-using-latexit
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\begin{eg}
+For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, ???,
+\begin{equation*}
+\begin{aligned}
+  &\absgp{G}_{\abdimvec{d}}= \begin{pmatrix}
+  * & * & * & * & * \\
+  * & * & * & * & * \\
+  * & * & * & * & * \\
+  * & * & * & * & * \\
+  * & * & * & * & * \\
+  \end{pmatrix}&
+  \absgp{B}_{\abdimvec{d}}=
+  \begin{pmatrix}
+  * & * & * & * & * \\
+   & * & * & * & * \\
+   &  & * & * & * \\
+   &  &  & * & * \\
+   &  &  &  & * \\
+  \end{pmatrix}&&
+  \absgp{T}_{\abdimvec{d}}=
+  \begin{pmatrix}
+  * &  &  &  &  \\
+   & * &  &  &  \\
+   &  & * &  &  \\
+   &  &  & * &  \\
+   &  &  &  & * \\
+  \end{pmatrix}&&
+  \absgp{N}_{\abdimvec{d}}=
+  \begin{pmatrix}
+  \scriptstyle 1 & * & * & * & * \\
+   & \scriptstyle 1 & * & * & * \\
+   &  & \scriptstyle 1 & * & * \\
+   &  &  & \scriptstyle 1 & * \\
+   &  &  &  & \scriptstyle 1 \\
+  \end{pmatrix}
+    \\
+  &\absgp{W}_{\abdimvec{d}}\cong S_5&
+  \absgp{B}_{\ww}=
+   \begin{pmatrix}
+  * & * &  &  & * \\
+   & * &  &  &  \\
+  * & * & * &  & * \\
+  * & * & * & * & * \\
+   & * &  &  & * \\
+  \end{pmatrix}&&
+  \absgp{B}_{\ww s}=
+     \begin{pmatrix}
+    * & * & *  &  & * \\
+     & * &  &  &  \\
+     & * & * &  & * \\
+    * & * & * & * & * \\
+     & * &  &  & * \\
+    \end{pmatrix}&&
+  \\
+  &G_{\dimvec{d}}\;=
+  \begin{pmatrix}[ccc|cc]
+  * & * & * &  &  \\
+  * & * & * &  &  \\
+  * & * & * &  &  \\
+     \hline
+   &  &  & * & * \\ 
+   &  &  & * & * \\ 
+  \end{pmatrix}&
+  B_{\dimvec{d}}=
+    \begin{pmatrix}[ccc|cc]
+    * & * & * &  &  \\
+     & * & * &  &  \\
+     &  & * &  &  \\
+        \hline
+     &  &  & * & * \\ 
+     &  &  &  & * \\ 
+    \end{pmatrix}&&
+  T_{\dimvec{d}}=
+    \begin{pmatrix}[ccc|cc]
+     * &  &  &  &  \\
+       & * &  &  &  \\
+       &  & * &  &  \\
+          \hline
+       &  &  & * &  \\
+       &  &  &  & * \\
+    \end{pmatrix}&&
+  N_{\dimvec{d}}=
+         \begin{pmatrix}[ccc|cc]
+          \scriptstyle 1 & * & * &  &  \\
+           & \scriptstyle 1 & * &  &  \\
+           &  & \scriptstyle 1 &  &  \\
+              \hline
+           &  &  & \scriptstyle 1 & * \\ 
+           &  &  &  & \scriptstyle 1 \\ 
+          \end{pmatrix}  
+  \\
+&W_{\dimvec{d}}\cong S_3 \times S_2&
+  B_{\ww}=
+   \begin{pmatrix}[ccc|cc]
+  * & * &  &  &  \\
+   & * &  &  &  \\
+  * & * & * &  &  \\
+     \hline
+   &  &  & * &  \\
+   &  &  & * & * \\
+  \end{pmatrix}&&
+  B_{\ww s}=
+     \begin{pmatrix}[ccc|cc]
+  * &  &  &  &  \\
+  * & * &  &  &  \\
+  * & * & * &  &  \\
+     \hline
+   &  &  & * &  \\
+   &  &  & * & * \\
+    \end{pmatrix}&&
+  \\
+   &N_{\ww}=
+    \begin{pmatrix}[ccc|cc]
+   \scriptstyle 1 & * &  &  &  \\
+    & \scriptstyle 1 &  &  &  \\
+   * & * & \scriptstyle 1 &  &  \\
+      \hline
+    &  &  & \scriptstyle 1 &  \\
+    &  &  & * & \scriptstyle 1 \\
+   \end{pmatrix}&
+   N_{\ww,\ww s}=
+      \begin{pmatrix}[ccc|cc]
+   \scriptstyle 1 &  &  &  &  \\
+    & \scriptstyle 1 &  &  &  \\
+   * & * & \scriptstyle 1 &  &  \\
+      \hline
+    &  &  & \scriptstyle 1 &  \\
+    &  &  & * & \scriptstyle 1 \\
+     \end{pmatrix}&& 
+   M_{\ww,\ww s}=
+      \begin{pmatrix}[ccc|cc]
+   \scriptstyle 1 & * &  &  &  \\
+    & \scriptstyle 1 &  &  &  \\
+   \scriptstyle- & \scriptstyle- & \scriptstyle 1 &  &  \\
+      \hline
+    &  &  & \scriptstyle 1 &  \\
+    &  &  & \scriptstyle- & \scriptstyle 1 \\
+     \end{pmatrix}&& 
+   P_{\ww,\ww s}=
+      \begin{pmatrix}[ccc|cc]
+   * & * &  &  &  \\
+   * & * &  &  &  \\
+   * & * & * &  &  \\
+   \hline
+    &  &  & * &  \\
+    &  &  & * & * \\
+     \end{pmatrix}
+\end{aligned}
+\end{equation*}
+
+
+
+
+\end{eg}
 \section{typical variety}
 \section{stratification and $T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
