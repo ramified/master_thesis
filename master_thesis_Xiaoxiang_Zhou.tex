@@ -23,6 +23,7 @@
 \usepackage{hyperref}
 \usepackage{scalerel}
 \usepackage{stackengine,wasysym}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
 %\usepackage[notcite,notref]{showkeys}
 
 % showkeys  make label explicit on the paper
@@ -44,6 +45,8 @@
 \newtheorem{ques}[theorem]{Question}
 \newtheorem*{bbox}{Black box}
 \newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
 
 \theoremstyle{plain}
 \newtheorem{thmsub}{Theorem}[subsection]
@@ -59,6 +62,7 @@
 
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}{Remarks}
+
 
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
@@ -92,8 +96,13 @@
 \newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
 \newcommand{\dimvec}[1]{\mathbf{#1}}
 \newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
 \newcommand{\absgp}[1]{\mathbb{#1}}
 \newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+
 \newcommand{\norm}[1]{\Vert{#1}\Vert}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
@@ -247,7 +256,7 @@ T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 
 
 
-\section{quiver and Weyl group}
+\section{Quiver}
 To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following subsections.
 
 Roughly speaking, a quiver is a directed multigraph permitting loops.
@@ -291,14 +300,208 @@ One important information of the quiver representation is the dimension vector.
 \begin{defn}[Dimension vector]
 ???
 \end{defn} 
-\section{algebraic group and Lie algebra}
 
+\section{Symmetric group calculus}
+
+As a reminder, we recall some basic diagrams referring to the elements in $S_n$, and do some calculations by these diagrams. We will also relate cosets with flag-type dimension vectors.
+
+Fix a quiver $Q$ and dimension vector $\dimvec{d}$. Later (Definition \ref{def:absalggp}, \ref{def:relalggp}) we will define 
+$$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \in Q_0} S_{\dimvec{d}_i} \leqslant \absgp{W}_{\abdimvec{d}}$$
+For simplicity, we take $Q_0=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embed in  $S_{\abdimvec{d}}$ in the most natural way.
+
+\begin{remark}
+We have different ways to express $\ww \in \absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}}$. For example, take $\abdimvec{d}=5$, $\ww \in S_5$ by
+$$\ww(1)=4,\quad \ww(2)=3,\quad \ww(3)=1,\quad \ww(4)=5,\quad \ww(5)=2,$$ 
+then
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\begin{equation*}
+\begin{aligned}
+  \ww=\;& (14523)= \begin{pmatrix}
+  1\,2\,3\,4\,5\\ 4\,3\,1\,5\,2
+  \end{pmatrix} =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
+  &&\scriptstyle 1&&\\
+  &&&&\scriptstyle 1\\
+  &\scriptstyle 1&&&\\
+  \scriptstyle 1&&&&\\
+  &&&\scriptstyle 1&
+  \end{bmatrix} \\ 
+  =\;& (23)(34)(45)(12)(23)(12) = \hspace{0mm} 
+  \raisebox{-8mm}{ \begin{tikzpicture}
+   \permutation[
+   height=0.2,
+   bullb=0,
+   floor=5,
+   tkzpic=0,
+   type=1
+   ]{2,1,3,4,5}
+   \permutation[
+   height=0.2,
+   bulla=0,
+   bullb=0,
+   floor=4,
+   tkzpic=0,
+   type=0
+   ]{1,3,2,4,5}
+   \permutation[
+   height=0.2,
+   bulla=0,
+   bullb=0,
+   floor=3,
+   tkzpic=0,
+   type=0
+   ]{2,1,3,4,5}
+    \permutation[
+    height=0.2,
+    bulla=0,
+    bullb=0,
+    floor=2,
+    tkzpic=0,
+    type=0
+    ]{1,2,3,5,4}
+   \permutation[
+   height=0.2,
+   bulla=0,
+   bullb=0,
+   floor=1,
+   tkzpic=0,
+   type=0
+   ]{1,2,4,3,5}
+   \permutation[
+   height=0.2,
+   bulla=0,
+   floor=0,
+   tkzpic=0,
+   type=-1
+   ]{1,3,2,4,5}
+   \end{tikzpicture}}
+\end{aligned}
+\end{equation*}
+}
+
+Even though all expressions give us the same amount of information, the diagram presents them more vividly. For example, each intersection of strands corresponds to a simple reflection, so we read from the diagram that $l(\ww)=6$. Readers can also check that
+\begin{equation*}
+\begin{aligned}
+  &  l(\ww s_1)=5,\quad l(\ww s_2)=5,\quad l(\ww s_3)=7,\quad l(\ww s_4)=5,\\ 
+  &  l(s_1\ww)=7,\quad l(s_2\ww)=5,\quad l(s_3\ww)=5,\quad l(s_4\ww)=7,\\ 
+\end{aligned}
+\end{equation*} 
+where $s_i:=(i,i+1) \in S_5$ are simple reflections.
+
+\end{remark}
+
+\begin{defn}[Special elements in the Weyl group]
+For $i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\}$, the simple reflection is defined as
+$$s_i:=(i,i+1) \in  S_{\abdimvec{d}}.$$
+We denote
+\begin{equation*}
+\begin{aligned}
+  \Pi=\;&  \Big\{ s_i \in S_{\abdimvec{d}} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\} \\ 
+    \Pi_{\dimvec{d}}=\;&  \Big\{ s_i \in S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\} \\ 
+    =\;&\left\{ s_1,\ldots, s_{\abdimvec{d}-1} \right\} \smallsetminus \left\{s_{\dimvec{d}_1},s_{\dimvec{d}_1+\dimvec{d}_2},\ldots,s_{\dimvec{d}_1+\cdots+\dimvec{d}_{k-1}} \right\} \\
+\end{aligned}
+\end{equation*}
+to be the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively.
+
+We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ to be the longest elements in $\absgp{W}_{\abdimvec{d}}$, $W_{\dimvec{d}}$, respectively.
+\end{defn}
+
+We discuss about right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
+
+Multiplying on left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following fact more explicitly.
+
+\begin{fact}
+Every element $\ww_{\max} \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$.
+\end{fact}
+
+\begin{eg}
+???
+
+This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\}$.
+
+???%add color for it
+\end{eg}
+
+It is easy to see from the diagram that in every coset, there exists an unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. We collect these minimal length coset representatives as a set, and denote it by $\MinWd$.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
+
+\begin{proposition}
+For any $\ww \in \absgp{W}_{\abdimvec{d}}$, exists unique $w \in $, $u \in \MinWd$ such that $\ww=wu$. 
+\end{proposition}
+\begin{ex}
+For $u \in \MinWd$, $s_i \in \Pi$, show that
+$$us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow\quad us_iu^{-1}=s_{u(i)} \in \Pi_{\dimvec{d}}.$$
+\end{ex}
+
+We finish this subsection with figures and examples.
+% https://q.uiver.app/?q=WzAsOSxbMywwLCJcXE1pbldkIl0sWzMsMSwiV197XFxkaW12ZWN7ZH19XFxzZXRtaW51c1xcYWJzZ3B7V31fe1xcYWJkaW12ZWN7ZH19Il0sWzIsMSwiXFxhYnNncHtXfV97XFxhYmRpbXZlY3tkfX0iXSxbNCwxLCIwIl0sWzEsMSwiV197XFxkaW12ZWN7ZH19Il0sWzAsMSwiMCJdLFs2LDAsInUiXSxbNSwxLCJcXHd3PXd1Il0sWzYsMSwiXFxmdGRpbXZlY3tkfSJdLFswLDEsIlxcY29uZyJdLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMV0sWzEsM10sWzQsMl0sWzUsNF0sWzcsOCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFs2LDgsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
+\[\begin{tikzcd}
+	&&& \MinWd &&& u \\
+	0 & {W_{\dimvec{d}}} & {\absgp{W}_{\abdimvec{d}}} & {W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}} & 0 & {\ww=wu} & {\ftdimvec{d}}
+	\arrow["\cong", from=1-4, to=2-4]
+	\arrow[hook', from=1-4, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[maps to, from=2-6, to=2-7]
+	\arrow[maps to, from=1-7, to=2-7]
+\end{tikzcd}\]
+
+\begin{eg}
+In this table, $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, typical elements would be
+$$\ww =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1,type=0]{4,3,1,5,2}} \quad
+w =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1,type=0]{3,1,2,5,4}} \quad
+u =\hspace{-3mm} \raisebox{-7mm}{
+ \begin{tikzpicture}
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ 
+ \end{tikzpicture}
+ } \quad  $$
+ 
+ \begin{table}[ht]
+ $$
+ \begin{array}{l|l|r|c}
+ \hline
+ \multicolumn{1}{c|}{\text{set}} & \multicolumn{1}{c|}{\text{element}} & \multicolumn{1}{c|}{\text{special element}} & \text{others} \\ \hline
+\absgp{W}_{\abdimvec{d}} = S_5 & \ww,x                               &   \ww_{\max}=  \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{5,4,3,2,1}}                                        &   \Pi_{\phantom{d}}=\{s_1,s_2,s_3,s_4 \}            \\ \hline
+W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}                                        &  \Pi_d=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
+W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus S_5 & \ww, \ftdimvec{d}                   &          \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,3,1,5,2} }                                   &    \Compd           \\ \hline
+\MinWd =\left\{\hspace{-7mm}\raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}  ,\ldots \right\}  & u                                   &                                       \raisebox{-3mm}{ \permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}      &   \Shuffled            \\ \hline
+ \end{array}
+ $$
+ \end{table}
+ %调整表格。。。大难题
+\end{eg}
+
+\begin{eg}
+In this table, $\abdimvec{d}=3$, $\dimvec{d}=(1,2)$, $s=(12)$, $t=(23)$. The columns "order of basis" and $Borel subgroups$ have not been introduced yet, and they are here for the future usage.
+
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=12cm]{figures/temporary/smalleg_Weyl.jpg}
+      \label{fig:smalleg_Weyl}
+        \caption{desired picture}
+        
+        \end{figure}
+        
+\end{eg}
+\section{Algebraic group and Lie algebra}
 In this subsection we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
 
 We fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $\mathbb{C}$-vector space with quiver partition
 $$V=\bigoplus_{i \in Q_0} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
 
-\begin{defn}[absolute algebraic groups]
+\begin{defn}[absolute algebraic groups]\label{def:absalggp}
 %The following algebraic groups are not related to the quiver partition of $V$.
 We set
 $$\absgp{G}_{\abdimvec{d}}:= \GL(V)=\GL_{\abdimvec{d}}(\mathbb{C}),$$
@@ -314,7 +517,7 @@ We will view $\absgp{B}_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $\ab
 
 We also have a series of algebraic groups compatible with the quiver partition of $V$, and they're more common in this thesis.
 
-\begin{defn}[relative algebraic groups]
+\begin{defn}[relative algebraic groups]\label{def:relalggp}
 
 We set
 $$G_{\dimvec{d}}:= \bigoplus_{i \in Q_0}\GL(V_i)=\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
@@ -541,8 +744,8 @@ For the Lie algebra, we use the corresponding Fraktur-font symbols:
 \end{aligned}
 \end{equation*}
 
-\section{typical variety}
-\section{stratification and $T$-fixed points}
+\section{Typical variety}
+\section{Stratification and $T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{K-theory and cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
