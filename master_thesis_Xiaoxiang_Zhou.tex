@@ -47,6 +47,7 @@
 \newtheorem{eg}[theorem]{Example}
 \newtheorem{ex}[theorem]{Exercise}
 \newtheorem{fact}[theorem]{Fact}
+\newtheorem{warning}[theorem]{Warning}
 
 \theoremstyle{plain}
 \newtheorem{thmsub}{Theorem}[subsection]
@@ -102,12 +103,14 @@
 \DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
 \DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
 \DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
-
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
 \newcommand{\norm}[1]{\Vert{#1}\Vert}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
-\newcommand{\Vcell}{\operatorname{\mathcal{V}}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
 
@@ -133,6 +136,20 @@
 \setcounter{tocdepth}{1}
 \maketitle
 \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{warning}
+I made some assumptions during the writing. To avoid confusing readers, these assumptions are listed here:
+\begin{itemize}
+\item For quivers, all the quivers we considered (except Auslander--Reiten quivers) are connected and finite (Remark \ref{rmk:quiver_restriction}). For simplicity, From ??? to ???, all the quivers have no loops or cycles.
+%maybe the cycle condition can be removed.
+
+\item  For any $\ww \in \WWd$, we always write $\ww = wu$, where $w \in \Wd$ and $u$ is the shortest element in the coset $\Wd \ww$. The flag-type dimension vector $\ftdimvec{d} \in \Wd \setminus \WWd$ corresponds to $u$, i.e., $\ftdimvec{d}=\Wd u$.
+
+\item For the diagram, we always read from top to bottom.
+\end{itemize}
+\end{warning}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Variety and stratification}
 
@@ -167,7 +184,7 @@ N= \begin{pmatrix}
 $$
 $$W:= N_{\GL_n}(T)/T \cong S_n$$
 }
-
+\subsubsection{$\mathcal{F}$}
 \begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_k = \mathbb{C}^n.$$
@@ -189,6 +206,9 @@ The complete flag variety $\mathcal{F}$ is defined as
 
 \begin{remark}\
 \begin{enumerate}
+\item $\mathcal{F}$ is a smooth projective variety of dimension $\frac{n(n+1)}{2}$, which can be seen from the embedding
+$$\mathcal{F} \hookrightarrow \Gr(1,n) \times \cdots \times \Gr(n-1,n)$$
+
 \item We implicitly give the base point of $\mathcal{F}$, which is not considered as the data of $\mathcal{F}$. Fix a standard basis of $\mathbb{C}^n$ by $\{v_1, \ldots, v_n \}$, we define the standard flag
 $$F_{\Id}: 0 \subseteq \left< v_1 \right> \subseteq \left< v_1,v_2 \right> \subseteq \cdots \subseteq \left< v_1, \ldots, v_n \right> = \mathbb{C}^n.$$
 \item We have the natural $\GL_n$-action on $\mathcal{F}$, which is considered as the data of $\mathcal{F}$.
@@ -224,7 +244,7 @@ $$\GL_n \cong \bigsqcup_{w\in W} BwB$$
 
 We get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
-The $B$-orbit $BwB/B$ is called the Schubert cell, denoted by $\Vcell_w$. Since 
+The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}, denoted by $\Vcell_w$. Since 
 $$\Vcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
 the Schubert cell is an affine space of dimension $l(w)$.
 
@@ -254,8 +274,91 @@ T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 \end{tabular}
 \end{table}
 
+$\overline{\Vcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
+$$\overline{\Vcell}_w= \bigsqcup_{w' \leq w} \Vcell_w$$
+as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
+$$\overline{\Vcell}_s= \Vcell_{\Id} \sqcup \Vcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
+For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert variety are not smooth.
 
 
+\subsubsection{$\mathcal{F} \times \mathcal{F}$}
+As a more complicated geometrical object, $\mathcal{F} \times \mathcal{F}$ works as the base space for the Steinberg variety, which turns out to be the central focus in the thesis. $\mathcal{F} \times \mathcal{F}$ has naturally a diagonal $\GL_n$-action:
+$$\GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g,F_1,F_2) \longmapsto (gF_1,gF_2).$$
+Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $GL_n$-orbits, indexed by the Weyl group:
+$$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
+
+Denote $\VVcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \VVcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
+$$\VVcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
+
+Different from $\mathcal{F}$, the $\GL_n$-action on $\mathcal{F} \times \mathcal{F}$ is not transitive. To facilitate the stratification of $\mathcal{F}\times \mathcal{F}$, we introduce the twisted $\GL_n \times \GL_n$-action:
+$$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g_1,g_2,F_g,F_{g'}) \longmapsto (F_{g_1g},F_{g_1(gg_2g^{-1}) g'}).$$
+If we write $\underline{F}_{g,g'}:= (F_g,F_{gg'}) \in \mathcal{F} \times \mathcal{F}$, then 
+$$(g_1,g_2,\underline{F}_{g,g'})=\underline{F}_{g_1g,g_2g'}.$$
+
+This $\GL_n \times \GL_n$-action is now transitive, and decompose $\mathcal{F}\times \mathcal{F}$ as disjoint union of finite many $B \times B$-orbits, which are compatible with $G$-orbits:
+
+\begin{equation*}
+\begin{aligned}
+  &\VVcell_{w,w'}:=\; (B \times B) \cdot \underline{F}_{w,w'} \subseteq \mathcal{F}\times \mathcal{F}\\ 
+  &\mathcal{F}\times \mathcal{F}= \bigsqcup_{w, w'\in W} \VVcell_{w,w'} \qquad\VVcell_{w'}= \bigsqcup_{w\in W} \VVcell_{w,w'} \\
+  & \VVcell_{w,w'} \cong B/(B \cap wBw^{-1}) \times B/(B \cap w'Bw'^{-1}) \cong \mathbb{A}^{l(w)+l(w')}
+\end{aligned}
+\end{equation*}
+
+We conclude the information of orbits and fixed points of $\mathcal{F}\times \mathcal{F}$ in Table \ref{table:orbit_of_F*F}:
+
+\begin{table}[ht]
+\centering
+\[
+\begin{array}{c|c|c}
+\hline
+G                  & \text{Orbit}              & G\text{-fixed points}                      \\ \hline
+\GL_n \times \GL_n & \mathcal{F} \times \mathcal{F} & \varnothing                                \\ \hline
+\GL_n              & \VVcell_{w'}              & \varnothing                                \\ \hline
+B \times B         & \VVcell_{w,w'}            & \{F_{\Id,\Id} \}                           \\ \hline
+T                  & -                         & \{\underline{F}_{w,w'} |  \, w,w' \in W \} \\ \hline
+\end{array}
+\]
+\caption{Orbit and fixed points of $\mathcal{F}\times \mathcal{F}$}
+\label{table:orbit_of_F*F}
+\end{table}
+
+Like $\mathcal{F}$, we also study the closure of $\VVcell_{w'}$ and $\VVcell_{w,w'}$ in special case. It can be shown that 
+$$\overline{\VVcell}_{w'} = \bigsqcup_{x'\leq w'} \VVcell_{x'} \qquad 
+\overline{\VVcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \VVcell_{x,x'}$$
+as a set. Especially, for any $s \in W$ with $l(s)=1$,
+
+\begin{equation*}
+\begin{aligned}
+ \overline{\VVcell}_{s} = \VVcell_{\Id} \sqcup \VVcell_{s} \cong\;& 
+ \GL_n/B \sqcup \GL_n /(B \cap sBs^{-1}) \\ 
+  \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (B \cap sBs^{-1}) \\ 
+  \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (BsB/B) \\ 
+  \cong\;& \GL_n \times^{B} (P_s/B) \\ 
+\end{aligned}
+\end{equation*}
+is an $\mathcal{F}$-bundle over $\mathbb{P}^1$.\footnote{??? need to explain $\times^{B}$} Also, 
+\begin{equation*}
+\begin{aligned}
+\overline{\VVcell}_{\Id,s} = \VVcell_{\Id,\Id} \sqcup \VVcell_{\Id,s} \cong\;& 
+ \big(B/B \times B/B\big) \sqcup \big(B/B \times BsB/B\big)  \\ 
+ \cong\;& P_s/B \cong \mathbb{P}^1
+\end{aligned}
+\end{equation*}
+Other closure can be highly singular.
+
+\begin{eg}
+In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathcal{F}$ has $6$ $\GL_3$-orbits, and each $\GL_3$-orbits decompose as $6$ $B\times B$-orbits, with dimensions equal to $l(w)+l(w')$.
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=12cm]{figures/temporary/BB_orbits_FF.jpg}
+      \label{fig:stratifications_of_FF}
+        \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
+        
+\end{figure}
+\end{eg}
+
+Now wee understand a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process of analysis(investigations?) will be applied repeatedly in subsection ???. 
 \section{Quiver}
 To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following subsections.
 
@@ -265,7 +368,7 @@ Roughly speaking, a quiver is a directed multigraph permitting loops.
 ???
 \end{defn}
 
-\begin{remark}
+\begin{remark}\label{rmk:quiver_restriction}
 In the first part of our master thesis, all the quivers are supposed to be connected and finite (i.e., $Q_0$, $Q_1$ are finite sets). We will only encounter disconnected and infinite quiver as Auslander--Reiten quiver later on.
 \end{remark}
 
@@ -285,7 +388,11 @@ For convenience, we mainly use simpler quivers as examples:
 From those quivers we are able to construct relatively complicated algebraic and geometrical objects.
 
 \begin{defn}[Quiver representation]
-???
+Fix a quiver $Q$. A representation of $Q$ consists of the following data:
+\begin{itemize}
+\item A finite dimensional $\mathbb{C}$-vector space $V_i$ for each vertex $i \in Q_0$;
+\item A $\mathbb{C}$-linear map $V_a: V_{s(a)} \longrightarrow V_{t(a)}$ for each arrow $a \in Q_1$.
+\end{itemize}
 \end{defn}
 \begin{eg}
 A representation of $1$-loop quiver $L(1)$ is a $2$-tuple
@@ -426,7 +533,7 @@ This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\
 It is easy to see from the diagram that in every coset, there exists an unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. We collect these minimal length coset representatives as a set, and denote it by $\MinWd$.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
 
 \begin{proposition}
-For any $\ww \in \absgp{W}_{\abdimvec{d}}$, exists unique $w \in $, $u \in \MinWd$ such that $\ww=wu$. 
+For any $\ww \in \absgp{W}_{\abdimvec{d}}$, exists unique $w \in \Wd$, $u \in \MinWd$ such that $\ww=wu$. 
 \end{proposition}
 \begin{ex}
 For $u \in \MinWd$, $s_i \in \Pi$, show that
