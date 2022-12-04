@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  4 DEC 2022 11:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  4 DEC 2022 11:28
 entering extended mode
-**./S5.tex
-(S5.tex
+**./S5_Q1.tex
+(S5_Q1.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/standalone
@@ -797,8 +797,8 @@ tendlayer/tikz/libraries\tikzlibrarydecorations.shapes.code.tex"
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libr
 aries/decorations\pgflibrarydecorations.shapes.code.tex")))
 \c@levelscounter=\count274
-) (S5.aux)
-\openout1 = `S5.aux'.
+) (S5_Q1.aux)
+\openout1 = `S5_Q1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -816,15 +816,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
 ABD: EveryShipout initializing macros
-Missing character: There is no ; in font nullfont!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 14.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 Missing character: There is no [ in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -839,53 +830,10 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-\fe@count@abs@i=\count275
-\fe@count@abs@ii=\count276
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 8.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -893,14 +841,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [1
 
-] (S5.aux) ) 
+] (S5_Q1.aux) ) 
 Here is how much of TeX's memory you used:
- 22348 strings out of 427748
- 458435 string characters out of 3150981
- 572639 words of memory out of 3000000
- 26168 multiletter control sequences out of 15000+200000
+ 22231 strings out of 427748
+ 456233 string characters out of 3150981
+ 467603 words of memory out of 3000000
+ 26051 multiletter control sequences out of 15000+200000
  532346 words of font info for 25 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,6n,92p,440b,1031s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,5n,78p,443b,734s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on S5.pdf (1 page).
+Output written on S5_Q1.pdf (1 page).
