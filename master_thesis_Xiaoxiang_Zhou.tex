@@ -133,7 +133,7 @@
 
 
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \maketitle
 \tableofcontents
 
@@ -403,10 +403,29 @@ which is equivalent to a (finite dimensional) $\mathbb{C}[t]$-module.
 The equivalence appeared in the example can actually be generalized to arbitrary quivers. For a quiver $Q$, we can define the path algebra $\mathbb{C}Q$, and view any $Q$-representation as $\mathbb{C}Q$-module, and vice versa.
 \end{remark}
 
-One important information of the quiver representation is the dimension vector.
-\begin{defn}[Dimension vector]
-???
+For many constructions, we only care about the data of vector space.
+\begin{defn}[$Q$-vector space]
+Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with the direct sum decomposition
+$$V= \bigoplus_{i \in Q_0} V_i.$$
+The dimension vector of a $Q$-vector space is defined as
+$$\dimv V =\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \subseteq \prod_{i \in Q_0} \mathbb{Z}.$$
 \end{defn} 
+
+On the country, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
+$$V= \bigoplus_{i \in Q_0} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
+
+\begin{defn}[Space of representations with given dimension vector]
+For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in Q_0} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
+\begin{equation*}
+\begin{aligned}
+  \Rep_{\dimvec{d}}(Q)=\;&  \left\{ (V_i,V_a: V_{s(a)} \longrightarrow V_{t(a)} ) \text{ as a representation of $Q$}  \right\} \\ 
+  =\;& \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right)
+\end{aligned}
+\end{equation*}
+
+Since we encode the information of vector space in $\dimvec{d}$, $\Rep_{\dimvec{d}}(Q)$ only records the information of linear maps.
+\end{defn}
+
 
 \section{Symmetric group calculus}
 
@@ -851,6 +870,25 @@ For the Lie algebra, we use the corresponding Fraktur-font symbols:
 \end{aligned}
 \end{equation*}
 
+We also have to encode the information of representations as Lie algebra. Notice that
+$$\Hom (V_{s(a)},V_{t(a)}) \hookrightarrow \Hom(V,V) \cong \boldsymbol{\mathfrak{g}}_{\abdimvec{d}} \qquad f \longmapsto \iota_{t(a)} \circ f \circ \pi_{s(a)}$$
+realizes $\Hom (V_{s(a)},V_{t(a)})$ as a Lie subalgebra of $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$, so 
+$$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
+\begin{defn}[Lie algebras connected with representations]
+For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote temperately 
+$$V_{\ww,i}:= \left< e_{\ww(1)},\ldots e_{\ww(i)} \right> \subseteq V.$$
+We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
+%https://tex.stackexchange.com/questions/352752/align-inside-left-right
+
+$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,i} \cap V_{s(a)}) \subseteq V_{\ww,i} \right\},$$
+\begin{equation*}
+\begin{aligned}
+  \mathfrak{r}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww} \cap \mathfrak{r}_{\ww''},  \\ 
+  \mathfrak{d}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww}/\mathfrak{r}_{\ww,\ww''},  \\ 
+\end{aligned}
+\end{equation*}
+
+\end{defn}
 \section{Typical variety}
 \section{Stratification and $T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

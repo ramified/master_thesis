@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  4 DEC 2022 11:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 DEC 2022 13:18
 entering extended mode
 **./S5_Q1.tex
 (S5_Q1.tex
@@ -816,19 +816,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
 ABD: EveryShipout initializing macros
-Missing character: There is no [ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ] in font nullfont!
 Missing character: There is no ; in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 8.
@@ -845,10 +832,10 @@ Missing character: There is no ; in font nullfont!
 Here is how much of TeX's memory you used:
  22231 strings out of 427748
  456233 string characters out of 3150981
- 467603 words of memory out of 3000000
+ 467790 words of memory out of 3000000
  26051 multiletter control sequences out of 15000+200000
  532346 words of font info for 25 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,5n,78p,443b,734s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,5n,78p,443b,743s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on S5_Q1.pdf (1 page).
