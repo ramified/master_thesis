@@ -48,6 +48,7 @@
 \newtheorem{ex}[theorem]{Exercise}
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem{warning}[theorem]{Warning}
+\newtheorem{setting}[theorem]{Setting}
 
 \theoremstyle{plain}
 \newtheorem{thmsub}{Theorem}[subsection]
@@ -77,6 +78,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Img}{\operatorname{Im}}
 \DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
 \DeclareMathOperator{\Mod}{\operatorname{Mod}}
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
@@ -87,6 +89,7 @@
 \DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
 \DeclareMathOperator{\Pic}{\operatorname{Pic}}
 \DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
 \newcommand{\Spec}{\operatorname{Spec}}
 \DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
 \DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
@@ -109,10 +112,15 @@
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
 \newcommand{\Vcell}{\mathcal{V}}
 \newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
+
+\setcounter{secnumdepth}{3}
+
 
 
 % from https://tex.stackexchange.com/questions/63545/big-tilde-in-math-mode
@@ -153,7 +161,7 @@ I made some assumptions during the writing. To avoid confusing readers, these as
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Variety and stratification}
 
-\section{Initial case: $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$}
+\section{Initial case: $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$}\label{sec:inital_case}
 
 We introduce the complete flag variety to give a bird's eye view on the whole section. Actually, the entire difficulty is bundled in this example.
 
@@ -184,11 +192,11 @@ N= \begin{pmatrix}
 $$
 $$W:= N_{\GL_n}(T)/T \cong S_n$$
 }
-\subsubsection{$\mathcal{F}$}
+\subsection{$\mathcal{F}$}
 \begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
-$$F: 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_k = \mathbb{C}^n.$$
-$F$ is called a complete flag if $\dim V_i = i$ for all $i$, otherwise $F$ is called a partial flag.
+$$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_k = V.$$
+$F$ is called a complete flag if $\dim V_j = j$ for all $j$, otherwise $F$ is called a partial flag.
 \end{defn}
 
 \begin{defn}[Complete flag variety]
@@ -197,7 +205,7 @@ The complete flag variety $\mathcal{F}$ is defined as
 \begin{aligned}
   \mathcal{F}=\;& \GL_n/B \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^n \right\} \\ 
-      =\;& \left\{ 0 \subseteq V_1 \subseteq V_2 \subseteq \cdots \subseteq V_n = \mathbb{C}^n \;\middle|\; \dim V_i =i \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = \mathbb{C}^n \;\middle|\; \dim M_j =j \right\} \\ 
        \cong\;&  \left\{ \text{Borel subgroups of } \GL_n \right\} \\
           =\;& \left\{ gBg^{-1} \;\middle|\; g \in \GL_n \right\} \\ 
 \end{aligned}
@@ -244,8 +252,8 @@ $$\GL_n \cong \bigsqcup_{w\in W} BwB$$
 
 We get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
-The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}, denoted by $\Vcell_w$. Since 
-$$\Vcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
+The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}, denoted by $\Omcell_w$. Since 
+$$\Omcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
 the Schubert cell is an affine space of dimension $l(w)$.
 
 As a result, we know a lot of information of $\mathcal{F}$:
@@ -269,39 +277,39 @@ H^i(\mathcal{F}; \mathbb{C}) & 0 & 2 & 4 & 6  & 8  & 10 & 12 \\ \hline
 \hline
 G    & \text{Orbit}                       & G\text{-fixed points}  \\ \hline
 GL_n & \mathcal{F} \cong \GL_n/B          & \varnothing            \\ \hline
-B    & \Vcell_w \cong B/(B \cap wBw^{-1}) & \{F_{\Id} \}           \\ \hline
+B    & \Omcell_w \cong B/(B \cap wBw^{-1}) & \{F_{\Id} \}           \\ \hline
 T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 \end{tabular}
 \end{table}
 
-$\overline{\Vcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
-$$\overline{\Vcell}_w= \bigsqcup_{w' \leq w} \Vcell_w$$
+$\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
+$$\overline{\Omcell}_w= \bigsqcup_{w' \leq w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
-$$\overline{\Vcell}_s= \Vcell_{\Id} \sqcup \Vcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
+$$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
 For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert variety are not smooth.
 
 
-\subsubsection{$\mathcal{F} \times \mathcal{F}$}
+\subsection{$\mathcal{F} \times \mathcal{F}$}
 As a more complicated geometrical object, $\mathcal{F} \times \mathcal{F}$ works as the base space for the Steinberg variety, which turns out to be the central focus in the thesis. $\mathcal{F} \times \mathcal{F}$ has naturally a diagonal $\GL_n$-action:
 $$\GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g,F_1,F_2) \longmapsto (gF_1,gF_2).$$
 Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $GL_n$-orbits, indexed by the Weyl group:
 $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
 
-Denote $\VVcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \VVcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
-$$\VVcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
+Denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
+$$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
 
 Different from $\mathcal{F}$, the $\GL_n$-action on $\mathcal{F} \times \mathcal{F}$ is not transitive. To facilitate the stratification of $\mathcal{F}\times \mathcal{F}$, we introduce the twisted $\GL_n \times \GL_n$-action:
 $$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g_1,g_2,F_g,F_{g'}) \longmapsto (F_{g_1g},F_{g_1(gg_2g^{-1}) g'}).$$
 If we write $\underline{F}_{g,g'}:= (F_g,F_{gg'}) \in \mathcal{F} \times \mathcal{F}$, then 
-$$(g_1,g_2,\underline{F}_{g,g'})=\underline{F}_{g_1g,g_2g'}.$$
+$$(g_1,g_2) \cdot\underline{F}_{g,g'}=\underline{F}_{g_1g,g_2g'}.$$
 
 This $\GL_n \times \GL_n$-action is now transitive, and decompose $\mathcal{F}\times \mathcal{F}$ as disjoint union of finite many $B \times B$-orbits, which are compatible with $G$-orbits:
 
 \begin{equation*}
 \begin{aligned}
-  &\VVcell_{w,w'}:=\; (B \times B) \cdot \underline{F}_{w,w'} \subseteq \mathcal{F}\times \mathcal{F}\\ 
-  &\mathcal{F}\times \mathcal{F}= \bigsqcup_{w, w'\in W} \VVcell_{w,w'} \qquad\VVcell_{w'}= \bigsqcup_{w\in W} \VVcell_{w,w'} \\
-  & \VVcell_{w,w'} \cong B/(B \cap wBw^{-1}) \times B/(B \cap w'Bw'^{-1}) \cong \mathbb{A}^{l(w)+l(w')}
+  &\OOmcell_{w,w'}:=\; (B \times B) \cdot \underline{F}_{w,w'} \subseteq \mathcal{F}\times \mathcal{F}\\ 
+  &\mathcal{F}\times \mathcal{F}= \bigsqcup_{w, w'\in W} \OOmcell_{w,w'} \qquad\OOmcell_{w'}= \bigsqcup_{w\in W} \OOmcell_{w,w'} \\
+  & \OOmcell_{w,w'} \cong B/(B \cap wBw^{-1}) \times B/(B \cap w'Bw'^{-1}) \cong \mathbb{A}^{l(w)+l(w')}
 \end{aligned}
 \end{equation*}
 
@@ -314,8 +322,8 @@ We conclude the information of orbits and fixed points of $\mathcal{F}\times \ma
 \hline
 G                  & \text{Orbit}              & G\text{-fixed points}                      \\ \hline
 \GL_n \times \GL_n & \mathcal{F} \times \mathcal{F} & \varnothing                                \\ \hline
-\GL_n              & \VVcell_{w'}              & \varnothing                                \\ \hline
-B \times B         & \VVcell_{w,w'}            & \{F_{\Id,\Id} \}                           \\ \hline
+\GL_n              & \OOmcell_{w'}              & \varnothing                                \\ \hline
+B \times B         & \OOmcell_{w,w'}            & \{F_{\Id,\Id} \}                           \\ \hline
 T                  & -                         & \{\underline{F}_{w,w'} |  \, w,w' \in W \} \\ \hline
 \end{array}
 \]
@@ -323,14 +331,14 @@ T                  & -                         & \{\underline{F}_{w,w'} |  \, w,
 \label{table:orbit_of_F*F}
 \end{table}
 
-Like $\mathcal{F}$, we also study the closure of $\VVcell_{w'}$ and $\VVcell_{w,w'}$ in special case. It can be shown that 
-$$\overline{\VVcell}_{w'} = \bigsqcup_{x'\leq w'} \VVcell_{x'} \qquad 
-\overline{\VVcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \VVcell_{x,x'}$$
+Like $\mathcal{F}$, we also study the closure of $\OOmcell_{w'}$ and $\OOmcell_{w,w'}$ in special case. It can be shown that 
+$$\overline{\OOmcell}_{w'} = \bigsqcup_{x'\leq w'} \OOmcell_{x'} \qquad 
+\overline{\OOmcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}$$
 as a set. Especially, for any $s \in W$ with $l(s)=1$,
 
 \begin{equation*}
 \begin{aligned}
- \overline{\VVcell}_{s} = \VVcell_{\Id} \sqcup \VVcell_{s} \cong\;& 
+ \overline{\OOmcell}_{s} = \OOmcell_{\Id} \sqcup \OOmcell_{s} \cong\;& 
  \GL_n/B \sqcup \GL_n /(B \cap sBs^{-1}) \\ 
   \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (B \cap sBs^{-1}) \\ 
   \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (BsB/B) \\ 
@@ -340,7 +348,7 @@ as a set. Especially, for any $s \in W$ with $l(s)=1$,
 is an $\mathcal{F}$-bundle over $\mathbb{P}^1$.\footnote{??? need to explain $\times^{B}$} Also, 
 \begin{equation*}
 \begin{aligned}
-\overline{\VVcell}_{\Id,s} = \VVcell_{\Id,\Id} \sqcup \VVcell_{\Id,s} \cong\;& 
+\overline{\OOmcell}_{\Id,s} = \OOmcell_{\Id,\Id} \sqcup \OOmcell_{\Id,s} \cong\;& 
  \big(B/B \times B/B\big) \sqcup \big(B/B \times BsB/B\big)  \\ 
  \cong\;& P_s/B \cong \mathbb{P}^1
 \end{aligned}
@@ -358,9 +366,9 @@ In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathc
 \end{figure}
 \end{eg}
 
-Now wee understand a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process of analysis(investigations?) will be applied repeatedly in subsection ???. 
+Now wee understand a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process of analysis(investigations?) will be applied repeatedly in section ???. 
 \section{Quiver}
-To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following subsections.
+To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following sections.
 
 Roughly speaking, a quiver is a directed multigraph permitting loops.
 
@@ -404,7 +412,7 @@ The equivalence appeared in the example can actually be generalized to arbitrary
 \end{remark}
 
 For many constructions, we only care about the data of vector space.
-\begin{defn}[$Q$-vector space]
+\begin{defn}[$Q$-vector space/Vector space with quiver partition]
 Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with the direct sum decomposition
 $$V= \bigoplus_{i \in Q_0} V_i.$$
 The dimension vector of a $Q$-vector space is defined as
@@ -414,6 +422,11 @@ $$\dimv V =\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \subseteq \prod_{i \
 On the country, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
 $$V= \bigoplus_{i \in Q_0} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
 
+\begin{defn}
+The total dimension vector of a $Q$-vector space $V$ is defined as
+$$\left| \dimv V  \right|:=\dim_{\mathbb{C}} V.$$
+For $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, denote $\abdimvec{d}:= \sum_{i \in Q_0} \dimvec{d}_i$.
+\end{defn}
 \begin{defn}[Space of representations with given dimension vector]
 For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in Q_0} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
 \begin{equation*}
@@ -426,6 +439,51 @@ For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector 
 Since we encode the information of vector space in $\dimvec{d}$, $\Rep_{\dimvec{d}}(Q)$ only records the information of linear maps.
 \end{defn}
 
+For both $Q$-vector space and $Q$-representations, we can define (complete) flags.
+
+\begin{defn}[Flag with quiver] \label{def:flag_with_quiver}
+For a quiver representation $V \in \rep(Q)$, a flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
+$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V \qquad M_j\in \rep(Q). $$
+For a $Q$-vector space $V=\oplus_{i \in Q_0}V_i$, a (quiver-graded) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
+$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V \qquad M_j=\bigoplus_{i \in Q_0}M_{j,i}. $$
+For both $Q$-vector space and $Q$-representation, $F$ is called a complete flag if $k=\dim_{\mathbb{C}} V$ and
+$$\dim_{\mathbb{C}} M_j=j \qquad \text{ for any }j \in \{1,\ldots, \abdimvec{d}  \}$$
+\end{defn}
+For the flag we also have the notation of dimension vector.
+\begin{defn}[flag-type dimension vector]
+For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V$, the dimension vector of $F$ is defined as
+$$\ftdimvec{d}=\big(\!\dimv M_j   \big)_{j \in \{1,\ldots,k\}} \subseteq \prod_{\substack{i \in Q_0 \\ j \in \{1,\ldots,k\}}} \mathbb{Z}.$$
+$\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e., \footnote{For convenience, we denote $M_0$ by 0.}
+$$\left| \dimv M_{j+1}/M_j \right|=1 \qquad \text{ for any }j \in \{0,\ldots, \abdimvec{d}-1  \}.$$
+\end{defn}
+
+\begin{eg}
+For quiver $Q: i \longrightarrow i'$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
+\begin{equation*}
+\begin{aligned}
+  V=\;& V_i \oplus V_{i'} \\ 
+  =\;& \left< v_1,v_2,v_3 \right>_{\mathbb{C}} \oplus \left< v_4,v_5 \right>_{\mathbb{C}}\\ 
+\end{aligned}
+\end{equation*}
+The flag 
+$$F: 0 \subseteq \left< v_4 \right>
+\subseteq \left< v_4,v_1 \right>
+\subseteq \left< v_4,v_1,v_2 \right>
+\subseteq \left< v_4,v_1,v_2,v_5 \right>
+\subseteq \left< v_4,v_1,v_2,v_5,v_3 \right>=V$$
+is a complete flag of $V$, with dimension vector
+$$\ftdimvec{d}= \begin{pmatrix}
+3,2\\ 2,2 \\ 2,1 \\ 1,1 \\ 0,1
+\end{pmatrix}.$$
+\end{eg}
+\begin{remark}
+The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition on set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
+$$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
+such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding map $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\ptt^{-1}(i).$$} . As an example,
+$$\ftdimvec{d}= \begin{pmatrix}
+3,2\\ 2,2 \\ 2,1 \\ 1,1 \\ 0,1
+\end{pmatrix} \quad\text{ corresponds to }\quad \{1,2,3,4,5\}= \{2,3,5\} \sqcup \{1,4\}.$$
+\end{remark}
 
 \section{Symmetric group calculus}
 
@@ -446,7 +504,7 @@ then
 \begin{aligned}
   \ww=\;& (14523)= \begin{pmatrix}
   1\,2\,3\,4\,5\\ 4\,3\,1\,5\,2
-  \end{pmatrix} =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
+  \end{pmatrix} = \raisebox{-7mm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
   &&\scriptstyle 1&&\\
   &&&&\scriptstyle 1\\
   &\scriptstyle 1&&&\\
@@ -559,7 +617,7 @@ For $u \in \MinWd$, $s_i \in \Pi$, show that
 $$us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow\quad us_iu^{-1}=s_{u(i)} \in \Pi_{\dimvec{d}}.$$
 \end{ex}
 
-We finish this subsection with figures and examples.
+We finish this section with figures and examples.
 % https://q.uiver.app/?q=WzAsOSxbMywwLCJcXE1pbldkIl0sWzMsMSwiV197XFxkaW12ZWN7ZH19XFxzZXRtaW51c1xcYWJzZ3B7V31fe1xcYWJkaW12ZWN7ZH19Il0sWzIsMSwiXFxhYnNncHtXfV97XFxhYmRpbXZlY3tkfX0iXSxbNCwxLCIwIl0sWzEsMSwiV197XFxkaW12ZWN7ZH19Il0sWzAsMSwiMCJdLFs2LDAsInUiXSxbNSwxLCJcXHd3PXd1Il0sWzYsMSwiXFxmdGRpbXZlY3tkfSJdLFswLDEsIlxcY29uZyJdLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMV0sWzEsM10sWzQsMl0sWzUsNF0sWzcsOCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFs2LDgsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
 \[\begin{tikzcd}
 	&&& \MinWd &&& u \\
@@ -593,7 +651,7 @@ u =\hspace{-3mm} \raisebox{-7mm}{
  
  \end{tikzpicture}
  } \quad  $$
- 
+\def\arraystretch{2.5}
  \begin{table}[ht]
  $$
  \begin{array}{l|l|r|c}
@@ -621,11 +679,19 @@ In this table, $\abdimvec{d}=3$, $\dimvec{d}=(1,2)$, $s=(12)$, $t=(23)$. The col
         \end{figure}
         
 \end{eg}
-\section{Algebraic group and Lie algebra}
-In this subsection we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
 
-We fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $\mathbb{C}$-vector space with quiver partition
+\vspace*{3cm}
+\section{Algebraic group and Lie algebra}
+In this section we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
+
+\begin{setting}\label{set:Qvs}
+We fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $Q$-vector space 
 $$V=\bigoplus_{i \in Q_0} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
+When a basis of $V$ is needed, we fix a total order on $Q_0$, and denote
+$$V=\left< v_1, \ldots v_{\abdimvec{d}} \right> $$
+where
+$$V_i=\left< v_{f_i+1}, \ldots v_{f_i+\dimvec{d}_i} \right> \qquad f_i= \sum_{i' < i} \dimvec{d}_{i'}.$$
+\end{setting}
 
 \begin{defn}[absolute algebraic groups]\label{def:absalggp}
 %The following algebraic groups are not related to the quiver partition of $V$.
@@ -876,11 +942,11 @@ realizes $\Hom (V_{s(a)},V_{t(a)})$ as a Lie subalgebra of $\boldsymbol{\mathfra
 $$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
 \begin{defn}[Lie algebras connected with representations]
 For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote temperately 
-$$V_{\ww,i}:= \left< e_{\ww(1)},\ldots e_{\ww(i)} \right> \subseteq V.$$
+$$V_{\ww,j}:= \left< e_{\ww(1)},\ldots e_{\ww(j)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
 %https://tex.stackexchange.com/questions/352752/align-inside-left-right
 
-$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,i} \cap V_{s(a)}) \subseteq V_{\ww,i} \right\},$$
+$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,j} \cap V_{s(a)}) \subseteq V_{\ww,j} \right\},$$
 \begin{equation*}
 \begin{aligned}
   \mathfrak{r}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww} \cap \mathfrak{r}_{\ww''},  \\ 
@@ -889,9 +955,122 @@ $$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\mi
 \end{equation*}
 
 \end{defn}
+
+\begin{remark}
+We also have twisted notations for Lie algebras. For example,
+\begin{equation*}
+\begin{aligned}
+  \underline{\mathfrak{n}}_{\ww,\ww'}=\;& \mathfrak{n}_{\ww,\ww\ww'},
+   &&\underline{\mathfrak{m}}_{\ww,\ww'}=\; \mathfrak{m}_{\ww,\ww\ww'},
+   &&
+   \underline{\mathfrak{p}}_{\ww,s}=\; \mathfrak{p}_{\ww,\ww s}, \\ 
+  \underline{\mathfrak{r}}_{\ww,\ww'}=\;& \mathfrak{r}_{\ww,\ww\ww'},
+  &&\underline{\mathfrak{d}}_{\ww,\ww'}=\; \mathfrak{d}_{\ww,\ww\ww'}.&&  \\ 
+\end{aligned}
+\end{equation*}
+Another twist happens when we add minus sign as the superscript:
+\begin{equation*}
+\begin{aligned}
+  &\boldsymbol{\mathfrak{b}}_{\ww}^{-} =\boldsymbol{\mathfrak{b}}_{\ww_{\max}\ww},&& \\
+&  \mathfrak{b}_{\ww}^{-}=\mathfrak{b}_{w_{\max}\ww}, && 
+\mathfrak{n}_{\ww}^{-}=\mathfrak{b}_{w_{\max}\ww}, \\
+&  \mathfrak{n}_{\ww,\ww''}^{-}=\mathfrak{n}_{w_{\max}\ww,w_{\max}\ww''}, && 
+\mathfrak{m}_{\ww,\ww''}^{-}=\mathfrak{m}_{w_{\max}\ww,w_{\max}\ww''}.  \\
+\end{aligned}
+\end{equation*}
+\end{remark}
 \section{Typical variety}
-\section{Stratification and $T$-fixed points}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this section, we define nearly all the varieties we care about in the same spirit as Section \ref{sec:inital_case}. Their stratifications and related "Schubert" varieties will be defined in Section \ref{sec:stratification}.
+
+Recall Setting \ref{sec:inital_case} and Definition \ref{def:flag_with_quiver}.
+\begin{defn}[Absolute complete flag variety]
+The absolute complete flag variety $\mathcal{F}_{\abdimvec{d}}$ is defined as 
+\begin{equation*}
+\begin{aligned}
+  \mathcal{F}_{\abdimvec{d}}=\;& \absgp{G}_{\abdimvec{d}}/\absgp{B}_{\abdimvec{d}} \\ 
+    \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^{\abdimvec{d}} \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = \mathbb{C}^{\abdimvec{d}} \;\middle|\; \dim M_j =j \right\} \\ 
+       \cong\;&  \left\{ \text{Borel subgroups of } \absgp{G}_{\abdimvec{d}} \right\} \\
+          =\;& \left\{ g\absgp{B}_{\abdimvec{d}}g^{-1} \;\middle|\; g \in \absgp{G}_{\abdimvec{d}} \right\} \\ 
+\end{aligned}
+\end{equation*}
+Here, $M_i$ can have no $Q$-vector space structure.
+\end{defn}
+
+\begin{defn}[Relative complete flag variety]
+The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
+\begin{equation*}
+\begin{aligned}
+  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_j \right| =j \phantom{\Big)\!\!\!} \right\}
+\end{aligned}
+\end{equation*}
+Here, $M_i$ are $Q$-vector spaces.
+\end{defn}
+
+\begin{defn}[complete flag variety with flag-type dimension vector]
+For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
+\begin{equation*}
+\begin{aligned}
+  \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
+      =\;& \left\{ F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \dimv F =\ftdimvec{d} \phantom{\Big)\!\!\!} \right\}
+\end{aligned}
+\end{equation*}
+It is easy to see that
+$$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}.$$
+\end{defn}
+
+\begin{remark}\
+\begin{enumerate}
+\item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\ftdimvec{d}}$ are smooth varieties, since
+$$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in Q_0} \GL_{\dimvec{d}_i}/B$$
+are products of usual flag varieties.
+\item $\mathcal{F}_{\abdimvec{d}}$ is an $\GL_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\ftdimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
+\end{enumerate}
+\end{remark}
+
+We need to simplify our notations of flags.
+\begin{defn}[Special flags]
+For a basis $\{x_1, \ldots ,x_{\abdimvec{d}} \}$, denote the flag
+$$F_{\{x_1, \ldots ,x_{\abdimvec{d}} \}} : 0 \subseteq \left<x_1 \right> \subseteq \left<x_1,x_2 \right>\subseteq \cdots \subseteq  \left<x_1,\ldots x_{\abdimvec{d}} \right>=V.$$
+\end{defn}
+For $g\in \absgp{G}_{\abdimvec{d}}$, $\ww \in \WWd$, define
+\begin{equation*}
+\begin{aligned}
+  F_{\Id}=\;& F_{\{v_1, \ldots ,v_{\abdimvec{d}} \}} \qquad&& \in \mathcal{F}_{\dimvec{d}} \\ 
+  F_{g}=\;& gF_{\Id}=F_{\{gv_1, \ldots ,gv_{\abdimvec{d}} \}} \qquad&& \in \mathcal{F}_{\abdimvec{d}} \\ 
+  F_{\ww}=\;& \ww F_{\Id}=F_{\{v_{\ww(1)}, \ldots ,v_{\ww(\abdimvec{d})} \}} \qquad&& \in \mathcal{F}_{\dimvec{d}} \\ 
+\end{aligned}
+\end{equation*}
+$F_{\Id}$ is called the \textbf{standard flag} of $V$.
+
+Now we can define flag varieties attached to $\ww \in \WWd$.
+\begin{defn}
+For $\ww=wu \in \WWd$, define $\mathcal{F}_{\ww}$ as the $G_{\dimvec{d}}$-orbit of $F_{\ww}$. By the orbit-stabilizer theorem,
+$$\mathcal{F}_{\ww} \cong G_{\dimvec{d}}/B_{\ww}.$$
+We can generalize it a little bit: for $g \in G_{\dimvec{d}}$, $F_{g\ww} \in \mathcal{F}_{\dimvec{d}}$,
+$$\mathcal{F}_{g\ww}:=G_{\dimvec{d}} \cdot F_{g\ww} \cong G_{\dimvec{d}}/B_{g\ww}=G_{\dimvec{d}}/gB_{\ww}g^{-1}.$$
+\end{defn}
+\begin{remark}
+$F_{\ww}$ is the preferred base point of $\mathcal{F}_{\ww}$. Ignoring the base point,
+$$\mathcal{F}_{\ww}=\mathcal{F}_{u}=\mathcal{F}_{\ftdimvec{d}} \quad \text{ for } \ww=wu \quad \ftdimvec{d}=\Wd \ww.$$
+In fact, we are not defining new varieties; we give old varieties new names, so that we can manipulate them more freely.
+\end{remark}
+
+Like Section \ref{sec:inital_case}, we also consider the product of two flag varieties. For $g,g',g'' \in \absgp{G}_{\abdimvec{d}}$, $\ww,\ww',\ww'' \in \WWd$, denote
+\begin{equation*}
+\begin{aligned}
+   F_{\Id,\Id}&=(F_{\Id},F_{\Id}) && \\ 
+   F_{g,g''}&=(F_{g},F_{g''})\qquad & \underline{F}_{g,g'}&=F_{g,gg'}=(F_{g},F_{gg'})\\
+   F_{\ww,\ww''}&=(F_{\ww},F_{\ww''}) & \underline{F}_{\ww,\ww'}&=F_{\ww,\ww\ww'}=(F_{\ww},F_{\ww\ww'})\\  
+\end{aligned}
+\end{equation*}
+
+Table ??? concludes all varieties we get until now.
+
+\section{Stratification and $T$-fixed points}\label{sec:stratification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{K-theory and cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Localization theorem}
