@@ -80,6 +80,7 @@
 \DeclareMathOperator{\Id}{\operatorname{Id}}
 \DeclareMathOperator{\rep}{\operatorname{rep}}
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
 \DeclareMathOperator{\Mod}{\operatorname{Mod}}
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
 \DeclareMathOperator{\Ext}{\operatorname{Ext}}
@@ -680,7 +681,7 @@ In this table, $\abdimvec{d}=3$, $\dimvec{d}=(1,2)$, $s=(12)$, $t=(23)$. The col
         
 \end{eg}
 
-\vspace*{3cm}
+\vspace*{1cm}
 \section{Algebraic group and Lie algebra}
 In this section we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
 
@@ -750,7 +751,7 @@ One can easily show that $N_{\ww, \ww s}=R_u (P_{\ww, \ww s})$.
 %https://tex.stackexchange.com/questions/183562/how-to-reduce-vertical-space-in-matrix?newreg=ca78ba434426423a8be8ce4f1df4548c
 %https://tex.stackexchange.com/questions/643384/horizontal-spacing-bmatrix-in-align-environment
 %https://tex.stackexchange.com/questions/275725/adjusting-separation-between-matrix-entries
-\setlength\arraycolsep{1pt}
+{\setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
 
 %small fonts: use \scriptstyle instead of \scriptsize
@@ -918,7 +919,7 @@ For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, ???,
 
 
 \end{eg}
-
+}
 For the Lie algebra, we use the corresponding Fraktur-font symbols:
 \begin{equation*}
 \begin{aligned}
@@ -979,7 +980,7 @@ Another twist happens when we add minus sign as the superscript:
 \end{aligned}
 \end{equation*}
 \end{remark}
-\section{Typical variety}
+\section{Typical variety}\label{sec:typical_variety}
 
 In this section, we define nearly all the varieties we care about in the same spirit as Section \ref{sec:inital_case}. Their stratifications and related "Schubert" varieties will be defined in Section \ref{sec:stratification}.
 
@@ -1067,23 +1068,103 @@ Like Section \ref{sec:inital_case}, we also consider the product of two flag var
 \end{aligned}
 \end{equation*}
 
-Table ??? concludes all varieties we get until now.
+Table \ref{table:base_varieties} concludes all varieties we get until now.
+\begin{table}[ht]
+\centering
+\[
+\begin{array}{l|c|l|c}
+\hline
+                                                                                   &\text{base point} &                                                                                                                                                                & \text{base point}   \\ \hline
+\mathcal{F}_{\abdimvec{d}} \cong \absgp{G}_{\abdimvec{d}}/\absgp{B}_{\abdimvec{d}} & F_{\Id}    & \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}                                                                                                   & F_{\Id,\Id}  \\ \hline
+\mathcal{F}_{\ftdimvec{d}} \cong G_{\dimvec{d}}/B_{\dimvec{d}}                     & F_u        & \mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}                                                                                                  & F_{u,u'}     \\ \hline
+\mathcal{F}_{\ww} \cong G_{\dimvec{d}}/B_{\ww}                                     & F_{\ww}    & \mathcal{F}_{\ww} \times \mathcal{F}_{\ww'}                                                                                                                    & F_{\ww,\ww'} \\ \hline
+\displaystyle\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}       & -          & \displaystyle\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} = \bigsqcup_{\ftdimvec{d},\ftdimvec{d}'}\mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'} & -            \\ \hline
+\end{array}
+\]
+\caption{Base varieties and their preferred base point}
+\label{table:base_varieties}
+\end{table}
 
+Now it is time to conclude information about arrows, and construct spaces over varieties in Table \ref{table:base_varieties}.
+
+\begin{defn}[Incidence variety]
+For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
+\begin{equation*}
+\begin{aligned}
+  \RRep_{\ftdimvec{d}}(Q)=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
+  \RRep_{\dimvec{d}}(Q)=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
+  =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
+\end{aligned}
+\end{equation*}
+and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimvec{d}}$ to be the natural morphisms from the incidence varieties to $\Rep_{\dimvec{d}}(Q)$ or flag varieties, as follows:
+
+???
+
+\begin{remark}
+For $M \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
+$$\Flag{\ftdimvec{d}}(M):= \mu_{\ftdimvec{d}}^{-1}(M) \cong \pi_{\ftdimvec{d}}\big(\mu_{\ftdimvec{d}}^{-1}(M)\big) \subseteq \mathcal{F}_{\ftdimvec{d}}$$
+records the complete flags of subrepresentations of $M$. The partial flag variety version of $\Flag{\ftdimvec{d}}(M)$ will become the key object in the second part.
+\end{remark}
+\end{defn}
+\begin{defn}[Steinberg variety]
+For quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define ???
+\end{defn}
+\begin{remark}
+???
+\end{remark}
 \section{Stratification and $T$-fixed points}\label{sec:stratification}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{K-theory and cohomology theory}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Localization theorem}
 
+Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed as relatively easy pieces. In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also mention about their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology theory in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another "basis" in Chapter \ref{chap:localization}.
+
+We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
+
+From my humble point of view, there is no easy cohomology theory, in a sense that key properties are usually hard to prove. On the other hand, plenty of examples can be quickly computed once we grasp some properties and use them in black boxes. Therefore, we won't prove any properties we stated. We have no choice but to do so, for the restricted space and time.
+
+The main reference for this Chapter is ???.
+\section{Definitions and initial examples}
+We give definitions for both $K$-theory and cohomology theory, which are lengthy already.
+\section{Basic constructions: pullbask, pushforward and tensor product}
+\section{Induction}
+\section{Reduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Cellular fibration theorem}
+
+
+\section{Thom isomorphism}
+\section{Statement}
+\section{Application: module structure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Localization theorem}\label{chap:localization}
+
+\section{Euler class}
+\section{Statement}
+\section{Application: change of basis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Excess intersection formula}
+
+\section{Convolution}
+\section{Statement}
+\section{Application: convolution formula}
+\section{Demazure operator}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Generalization}
+
+
+\section{quiver with loops}
+\section{$G \times \mathbb{C}^{\times}$-action}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{From formula to diagram}
 
+\section{One point quiver}
+\section{$A_2$-quiver}
+\section{$1$-loop quiver}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Generalization}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Atiyah-Segal completion theorem}
