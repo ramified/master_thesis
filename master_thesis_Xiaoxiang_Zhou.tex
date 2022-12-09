@@ -92,6 +92,7 @@
 \DeclareMathOperator{\Jac}{\operatorname{Jac}}
 \DeclareMathOperator{\ptt}{\operatorname{par}}
 \newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
 \DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
 \DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
 \newcommand{\Gr}{\operatorname{Gr}}
@@ -1022,7 +1023,7 @@ It is easy to see that
 $$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}.$$
 \end{defn}
 
-\begin{remark}\
+\begin{remark}\label{rmk:action_on_flag}\
 \begin{enumerate}
 \item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\ftdimvec{d}}$ are smooth varieties, since
 $$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in Q_0} \GL_{\dimvec{d}_i}/B$$
@@ -1087,12 +1088,12 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 
 Now it is time to conclude information about arrows, and construct spaces over varieties in Table \ref{table:base_varieties}.
 
-\begin{defn}[Incidence variety]
+\begin{defn}[Incidence variety]\label{def:incidence_variety}
 For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
-  \RRep_{\ftdimvec{d}}(Q)=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
-  \RRep_{\dimvec{d}}(Q)=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
+  \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
+  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
   =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
 \end{aligned}
 \end{equation*}
@@ -1107,10 +1108,38 @@ records the complete flags of subrepresentations of $M$. The partial flag variet
 \end{remark}
 \end{defn}
 \begin{defn}[Steinberg variety]
-For quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define ???
+For quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define 
+\begin{equation*}
+\begin{aligned}
+  \St_{\ftdimvec{d},\ftdimvec{d}'}:=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
+  \St_{\dimvec{d}}:=\;& \RRep_{\dimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\dimvec{d}}(Q) \\
+  =\;& \bigsqcup_{\ftdimvec{d},\ftdimvec{d}'} \St_{\ftdimvec{d},\ftdimvec{d}'}
+\end{aligned}
+\end{equation*}
+$\St_{\dimvec{d}}$ is called the \textbf{Steinberg variety}.
 \end{defn}
-\begin{remark}
+$\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence variety between $\Rep_{\dimvec{d}}(Q)$ and $\mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}$, since
+\begin{equation*}
+\begin{aligned}
+\St_{\ftdimvec{d},\ftdimvec{d}'}:=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
+\subseteq \;& \left( \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \right) 
+\times_{\Rep_{\dimvec{d}}(Q)}
+\left( \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}'}  \right) \\
+\cong\;& \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}
+\end{aligned}
+\end{equation*} 
+For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$ as natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
+
 ???
+
+
+\begin{remark}[Group actions]\
+\begin{enumerate}
+\item $\Rep_{\dimvec{d}}(Q)\subseteq \oplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$ has a natural $G_{\dimvec{d}}$-action, which is induced by the conjugation action of $G_{\dimvec{d}}$ on $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$. We have already mentioned the $G_{\dimvec{d}}$-action on $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ in Remark \ref{rmk:action_on_flag}. Therefore, by restriction we automatically get $G_{\dimvec{d}}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. All the maps we mentioned in Definition \ref{def:incidence_variety} are $G_{\dimvec{d}}$-equivariant.
+\item In Section \ref{sec:Cstar_action} we will also view all the varieties as $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-varieties, so we also shortly introduce $\mathbb{C}^{\times}$-action here. View $\Rep_{\dimvec{d}}(Q)$ as a $\mathbb{C}$-vector space, $\mathbb{C}^{\times}$ acts on $\Rep_{\dimvec{d}}(Q)$ by scalar multiplication. For $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$, $\mathbb{C}^{\times}$ acts trivially, and by restriction we get $\mathbb{C}^{\times}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. Also, all the maps we mentioned above are $\mathbb{C}^{\times}$-equivariant.
+\item It may worth mentioning that $\mathcal{F}_{\dimvec{d}}$ has an $\WWd$-action which can be extended neither to $\absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\dimvec{d}}$ nor to $\WWd$-action on $\RRep_{\ftdimvec{d}}(Q)$.
+
+\end{enumerate}
 \end{remark}
 \section{Stratification and $T$-fixed points}\label{sec:stratification}
 
@@ -1118,18 +1147,35 @@ Natural defined varieties resemble burr puzzles, they have delicate structures a
 
 We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
 
+\begin{defn}[Twisted action]
+We define the twisted $\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$:
+$$\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \longrightarrow \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \qquad \left( g_1,g_2,\underline{F}_{g,g'} \right) \longmapsto \underline{F}_{g_1g,g_2g'}$$
+which is the same as original $G_{\dimvec{d}}$-action when we restrict to $G_{\dimvec{d}} \times \{\Id \}$-action. Other $G \times G$-actions on $\mathcal{F} \times \mathcal{F}$ are defined in a similar way.
+\end{defn}
+
+\begin{defn}[Stratifications of $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$]
+For $\ww,\ww' \in \WWd$, we define
+\begin{equation*}
+\begin{aligned}
+  \Vcell_{\ww}=\;& \absgp{B}_{\abdimvec{d}} \cdot F_{\ww} \qquad&& \subseteq \mathcal{F}_{\abdimvec{d}} \\ 
+  \VVcell_{\ww,\ww'}=\;& (\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
+  \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
+\end{aligned}
+\end{equation*}
+as $\absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{G}_{\abdimvec{d}}$-orbit of $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, respectively.
+\end{defn}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
 
 From my humble point of view, there is no easy cohomology theory, in a sense that key properties are usually hard to prove. On the other hand, plenty of examples can be quickly computed once we grasp some properties and use them in black boxes. Therefore, we won't prove any properties we stated. We have no choice but to do so, for the restricted space and time.
 
-The main reference for this Chapter is ???.
+The main reference for the K-theory is ???.
 \section{Definitions and initial examples}
 We give definitions for both $K$-theory and cohomology theory, which are lengthy already.
 \section{Basic constructions: pullbask, pushforward and tensor product}
 \section{Induction}
 \section{Reduction}
-
+\section{Equivariant cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cellular fibration theorem}
 
@@ -1156,7 +1202,7 @@ We give definitions for both $K$-theory and cohomology theory, which are lengthy
 
 
 \section{quiver with loops}
-\section{$G \times \mathbb{C}^{\times}$-action}
+\section{$G \times \mathbb{C}^{\times}$-action}\label{sec:Cstar_action}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{From formula to diagram}
