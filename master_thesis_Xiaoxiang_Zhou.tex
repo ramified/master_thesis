@@ -118,6 +118,8 @@
 \newcommand{\OOmcell}{\boldsymbol{\Omega}}
 \newcommand{\Vcell}{\mathcal{V}}
 \newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
 
@@ -1188,12 +1190,73 @@ For $\ww,\ww' \in \WWd$, we define
 \begin{equation*}
 \begin{aligned}
   \Vcell_{\ww}=\;& \absgp{B}_{\abdimvec{d}} \cdot F_{\ww} \qquad&& \subseteq \mathcal{F}_{\abdimvec{d}} \\ 
-  \VVcell_{\ww,\ww'}=\;& (\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
-  \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
+  \VVcell_{\ww,\ww'}=\;& \left(\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}\right) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
+  \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} \cdot \underline{F}_{\Id,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
 \end{aligned}
 \end{equation*}
 as $\absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{G}_{\abdimvec{d}}$-orbit of $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, respectively.
 \end{defn}
+
+By Bruhat-decomposition, we are able to show
+$$\mathcal{F}_{\abdimvec{d}}= \bigsqcup_{\ww} \Vcell_{\ww} \qquad \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} = \bigsqcup_{\ww'} \VVcell_{\ww'} = \bigsqcup_{\ww,\ww'} \VVcell_{\ww,\ww'}.$$
+We also realize these orbits as quotients of algebraic groups by the orbit-stabilizer theorem, as follows:
+\begin{equation*}
+\begin{aligned}
+  \Vcell_{\ww}=\;& \absgp{B}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \right) \qquad&&  \cong \mathbb{A}^{l(\ww)} \\ 
+  \VVcell_{\ww,\ww'}=\;& \left(\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}\right) / \left(\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \times \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'}\right)&& \cong \mathbb{A}^{l(\ww)+l(\ww')}  \\ 
+  \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'} \right) && \cong \mathbb{A}^{l(\ww')}\text{-bundle over }\mathcal{F}_{\abdimvec{d}}  \\ 
+\end{aligned}
+\end{equation*}
+
+Similar stratifications happen for the relative complete flag variety $\mathcal{F}_{\dimvec{d}}$.
+
+\begin{defn}[Stratifications of $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$]
+For $\ww,\ww' \in \WWd$, we define
+\begin{equation*}
+\begin{aligned}
+  \Ocell_{\ww}=\;& B_{\dimvec{d}} \cdot F_{\ww} \qquad&&\subseteq \mathcal{F}_{\ww}&& \subseteq \mathcal{F}_{\dimvec{d}} \\ 
+  \OOcell_{\ww,\ww'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\ww} \times \mathcal{F}_{\ww\ww'} && \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\\ 
+  \OOcell_{\ww'}=\;& \bigsqcup_{u} G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} && \subseteq \bigsqcup_{u}\mathcal{F}_{u} \times \mathcal{F}_{u\ww'}\hspace{-1cm}&& \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \\ 
+\end{aligned}
+\end{equation*}
+as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, (union of) $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, respectively.
+\end{defn}
+Notice that $\Ocell_{\ww}$, $\OOcell_{\ww,\ww'}$, $\OOcell_{\ww'}$ are preimages of $\Vcell_{\ww}$, $\VVcell_{\ww,\ww'}$, $\VVcell_{\ww'}$ under the maps
+$$\mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}.$$
+Therefore, 
+$$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ww} \Ocell_{\ww} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} = \bigsqcup_{\ww'} \OOcell_{\ww'} = \bigsqcup_{\ww,\ww'} \OOcell_{\ww,\ww'}.$$
+
+Some stratifications are quite compatible with the connected component of $\mathcal{F}_{\dimvec{d}}$, so we give new names for them.
+
+\begin{defn}[Stratifications of $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$]
+For $u,u' \in \MinWd$, $w,w' \in \Wd$, we define
+\begin{equation*}
+\begin{aligned}
+  \Omcell_{w}^{u}=\;& B_{\dimvec{d}} \cdot F_{wu} \qquad&& \subseteq \mathcal{F}_{u} \\ 
+  \OOmcell_{w,w'}^{u,u'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) \cdot \left( F_{wu}, F_{ww'u'} \right)  && \subseteq \mathcal{F}_{u} \times \mathcal{F}_{u'}\\ 
+  \OOmcell_{w'}^{u,u'}=\;&  G_{\dimvec{d}} \cdot \left( F_{u}, F_{w'u'} \right) && \subseteq \mathcal{F}_{u} \times \mathcal{F}_{u'} \\ 
+\end{aligned}
+\end{equation*}
+as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{u}$, $\mathcal{F}_{u} \times \mathcal{F}_{u'}$, $\mathcal{F}_{u} \times \mathcal{F}_{u'}$, respectively.
+\end{defn}
+
+By Bruhat decomposition, we are again able to show
+$$\mathcal{F}_{u}= \bigsqcup_{w} \Omcell_{w}^{u} \qquad \mathcal{F}_{u} \times \mathcal{F}_{u'} = \bigsqcup_{w'} \OOmcell_{w'}^{u,u'} = \bigsqcup_{w,w'} \OOmcell_{w,w'}^{u,u'}$$
+and
+\begin{equation*}
+\begin{aligned}
+  \Omcell_{w}^{u}=\;& B_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w} \right) \qquad&&  \cong \mathbb{A}^{l(w)} \\ 
+  \OOmcell_{w,w'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) / \left(B_{\dimvec{d}} \cap B_{w} \times B_{\dimvec{d}} \cap B_{w'}\right)&& \cong \mathbb{A}^{l(w)+l(w')}  \\ 
+  \OOmcell_{w'}=\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
+\end{aligned}
+\end{equation*}
+
+We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'=\tilde{w}'\tilde{u}$ for $\tilde{w}' \in \Wd$, $\tilde{u} \in \MinWd$, then
+$$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu}, F_{wuw'u'}  \right)= \left( F_{wu}, F_{w\tilde{w}'\tilde{u}u'}  \right) \in \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}u'}.$$
+This incompatibility comes from our twisted $G_{\dimvec{d}} \times G_{\dimvec{d}}$-actions. In particular, denote
+$$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} = \OOmcell_{\tilde{w}'}^{u,\tilde{u}u'} \subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}u'},$$
+we have identifications
+$$\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}'}^{u,\tilde{u}u'} \qquad \OOcell_{\ww'}=\OOcell_{\ww'}^{u}.$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
 
