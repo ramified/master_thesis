@@ -27,6 +27,10 @@
 \usepackage[width=0.5,tiewidth=0.7]{strands}
 \usepackage{quiver}
 \usepackage{enumitem}
+\usepackage{array}
+\usepackage{diagbox}
+\usepackage{makecell}
+%\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
 
 % showkeys  make label explicit on the paper
@@ -123,6 +127,21 @@
 \newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
 \newcommand{\Ocell}{\mathcal{O}}
 \newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+
+\newcommand{\inCell}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fbox{
+  \begin{minipage}{1cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}$} \hfill $\,$}%
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0cm}
+  \end{minipage}
+  }
+}
+
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
 
@@ -364,32 +383,43 @@ Other closure can be highly singular.
 
 \begin{eg}
 In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathcal{F}$ has $6$ $\GL_3$-orbits, and each $\GL_3$-orbits decompose as $6$ $B\times B$-orbits, with dimensions equal to $l(w)+l(w')$.
-\begin{figure}[ht]
-  \vspace{0cm}
-    \centering  \includegraphics[width=12cm]{figures/temporary/BB_orbits_FF.jpg}
-      \label{fig:stratifications_of_FF}
-        \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
-        
-\end{figure}
+%\begin{figure}[ht]
+%  \vspace{0cm}
+%    \centering  \includegraphics[width=12cm]{figures/temporary/BB_orbits_FF.jpg}
+%      \label{fig:stratifications_of_FF}
+%        \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
+%        
+%\end{figure}
+
+%\hspace{2mm}\diaghead(1,-1){\theadfont $B_{\dimvec{d}} \cdot F_{ww'}$}%
+%       {$B_{\dimvec{d}} \cdot F_{w}$}{$B_{\dimvec{d}} \cdot F_{ww'}$} \hspace{10mm}
+
 \begin{table}[ht]
  {
-\def\arraystretch{2.5}
+%\def\arraystretch{2.5}
+\arraycolsep=0pt
 \centering
 \[
+%\newcolumntype{C}{>{\hfil$}p{1cm}<{$\hfil}} % centered, in math mode, fixed width
 \begin{array}{|c|c|c|c|c|c|c|}
-\hline
-              & \Omcell_{\Id}      & \Omcell_{t}      & \Omcell_{s}      & \Omcell_{ts}      & \Omcell_{st}      & \Omcell_{sts}      \\ \hline
-\Omcell_{\Id} & \OOmcell_{\Id,\Id} & \OOmcell_{\Id,t} & \OOmcell_{\Id,s} & \OOmcell_{\Id,ts} & \OOmcell_{\Id,st} & \OOmcell_{\Id,sts} \\ \hline
-\Omcell_{t} & \OOmcell_{t,t}   & \OOmcell_{t,\Id}   & \OOmcell_{t,ts}   & \OOmcell_{t,s}   & \OOmcell_{t,sts}   & \OOmcell_{t,st}   \\ \hline
-\Omcell_{s} & \OOmcell_{s,s}   & \OOmcell_{s,st}   & \OOmcell_{s,\Id}   & \OOmcell_{s,sts}   & \OOmcell_{s,t}   & \OOmcell_{s,ts}   \\ \hline
-\Omcell_{ts} & \OOmcell_{ts,st}  & \OOmcell_{ts,s}  & \OOmcell_{ts,sts}  & \OOmcell_{ts,\Id}  & \OOmcell_{ts,ts}  & \OOmcell_{ts,t}  \\ \hline
-\Omcell_{st}  & \OOmcell_{st,ts}  & \OOmcell_{st,sts}  & \OOmcell_{st,t} & \OOmcell_{st,st}  & \OOmcell_{st,\Id}  & \OOmcell_{st,s}  \\ \hline
-\Omcell_{sts} & \OOmcell_{sts,sts} & \OOmcell_{sts,ts} & \OOmcell_{sts,st} & \OOmcell_{sts,t} & \OOmcell_{sts,s} & \OOmcell_{sts,\Id} \\ \hline
+\hline \hbox{\diagbox[innerwidth=30mm,height=3\normalbaselineskip,outerleftsep=0pt,outerrightsep=0pt,innerleftsep=1pt,innerrightsep=1pt]{$\scriptstyle B_{\dimvec{d}} \cdot F_{w}$ }{\textcolor{red}{$\scriptstyle\dim$} \\ $\hspace{0.5cm}\scriptstyle(B \times B) \cdot \underline{F}_{w,w'}$\hspace{-8mm}\vspace{-2mm} }{$\scriptstyle B_{\dimvec{d}} \cdot F_{ww'}$}}
+            &    \inCell{0}{\Omcell_{\Id}}    & \inCell{1}{\Omcell_{t}}      & \inCell{1}{\Omcell_{s}}      & \inCell{2}{\Omcell_{ts}}      & \inCell{2}{\Omcell_{st}}      & \inCell{3}{\Omcell_{sts}}      \\ \hline
+\inCell{0}{\Omcell_{\Id}} & \inCell{0}{\OOmcell_{\Id,\Id}} & \inCell{1}{\OOmcell_{\Id,t}} & \inCell{1}{\OOmcell_{\Id,s}} & \inCell{2}{\OOmcell_{\Id,ts}} & \inCell{2}{\OOmcell_{\Id,st}} & \inCell{3}{\OOmcell_{\Id,sts}} \\ \hline
+\inCell{1}{\Omcell_{t}} & \inCell{2}{\OOmcell_{t,t}}   & \inCell{1}{\OOmcell_{t,\Id}}   & \inCell{3}{\OOmcell_{t,ts}}   & \inCell{2}{\OOmcell_{t,s}}   & \inCell{4}{\OOmcell_{t,sts}}   & \inCell{3}{\OOmcell_{t,st}}   \\ \hline
+\inCell{1}{\Omcell_{s}} & \inCell{2}{\OOmcell_{s,s}}   & \inCell{3}{\OOmcell_{s,st}}   & \inCell{1}{\OOmcell_{s,\Id}}   & \inCell{4}{\OOmcell_{s,sts}}   & \inCell{2}{\OOmcell_{s,t}}   & \inCell{3}{\OOmcell_{s,ts}}   \\ \hline
+\inCell{2}{\Omcell_{ts}} & \inCell{4}{\OOmcell_{ts,st}}  & \inCell{3}{\OOmcell_{ts,s}}  & \inCell{5}{\OOmcell_{ts,sts}}  & \inCell{2}{\OOmcell_{ts,\Id}}  & \inCell{4}{\OOmcell_{ts,ts}}  & \inCell{3}{\OOmcell_{ts,t}}  \\ \hline
+\inCell{2}{\Omcell_{st}}  & \inCell{4}{\OOmcell_{st,ts}}  & \inCell{5}{\OOmcell_{st,sts}}  & \inCell{3}{\OOmcell_{st,t}} & \inCell{4}{\OOmcell_{st,st}}  & \inCell{2}{\OOmcell_{st,\Id}}  & \inCell{3}{\OOmcell_{st,s}}  \\ \hline
+\inCell{3}{\Omcell_{sts}} & \inCell{6}{\OOmcell_{sts,sts}} & \inCell{5}{\OOmcell_{sts,ts}} & \inCell{5}{\OOmcell_{sts,st}} & \inCell{4}{\OOmcell_{sts,t}} & \inCell{4}{\OOmcell_{sts,s}} & \inCell{3}{\OOmcell_{sts,\Id}} \\ \hline
 \end{array}
 \]
 }
+      \label{table:stratifications_of_FF}
+        \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
+        
 \end{table}
 \end{eg}
+
+
 
 Now wee understand a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process of analysis(investigations?) will be applied repeatedly in Section \ref{sec:typical_variety} and \ref{sec:stratification}. 
 \section{Quiver}
