@@ -144,7 +144,7 @@
 
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
-
+\def\arraystretch{1.2}
 \setcounter{secnumdepth}{3}
 
 
@@ -383,37 +383,10 @@ Other closure can be highly singular.
 
 \begin{eg}
 In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathcal{F}$ has $6$ $\GL_3$-orbits, and each $\GL_3$-orbits decompose as $6$ $B\times B$-orbits, with dimensions equal to $l(w)+l(w')$.
-%\begin{figure}[ht]
-%  \vspace{0cm}
-%    \centering  \includegraphics[width=12cm]{figures/temporary/BB_orbits_FF.jpg}
-%      \label{fig:stratifications_of_FF}
-%        \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
-%        
-%\end{figure}
-
-%\hspace{2mm}\diaghead(1,-1){\theadfont $B_{\dimvec{d}} \cdot F_{ww'}$}%
-%       {$B_{\dimvec{d}} \cdot F_{w}$}{$B_{\dimvec{d}} \cdot F_{ww'}$} \hspace{10mm}
-
 \begin{table}[ht]
- {
-%\def\arraystretch{2.5}
-\arraycolsep=0pt
-\centering
-\[
-%\newcolumntype{C}{>{\hfil$}p{1cm}<{$\hfil}} % centered, in math mode, fixed width
-\begin{array}{|c|c|c|c|c|c|c|}
-\hline \hbox{\diagbox[innerwidth=30mm,height=3\normalbaselineskip,outerleftsep=0pt,outerrightsep=0pt,innerleftsep=1pt,innerrightsep=1pt]{$\scriptstyle B_{\dimvec{d}} \cdot F_{w}$ }{\textcolor{red}{$\scriptstyle\dim$} \\ $\hspace{0.5cm}\scriptstyle(B \times B) \cdot \underline{F}_{w,w'}$\hspace{-8mm}\vspace{-2mm} }{$\scriptstyle B_{\dimvec{d}} \cdot F_{ww'}$}}
-            &    \inCell{0}{\Omcell_{\Id}}    & \inCell{1}{\Omcell_{t}}      & \inCell{1}{\Omcell_{s}}      & \inCell{2}{\Omcell_{ts}}      & \inCell{2}{\Omcell_{st}}      & \inCell{3}{\Omcell_{sts}}      \\ \hline
-\inCell{0}{\Omcell_{\Id}} & \inCell{0}{\OOmcell_{\Id,\Id}} & \inCell{1}{\OOmcell_{\Id,t}} & \inCell{1}{\OOmcell_{\Id,s}} & \inCell{2}{\OOmcell_{\Id,ts}} & \inCell{2}{\OOmcell_{\Id,st}} & \inCell{3}{\OOmcell_{\Id,sts}} \\ \hline
-\inCell{1}{\Omcell_{t}} & \inCell{2}{\OOmcell_{t,t}}   & \inCell{1}{\OOmcell_{t,\Id}}   & \inCell{3}{\OOmcell_{t,ts}}   & \inCell{2}{\OOmcell_{t,s}}   & \inCell{4}{\OOmcell_{t,sts}}   & \inCell{3}{\OOmcell_{t,st}}   \\ \hline
-\inCell{1}{\Omcell_{s}} & \inCell{2}{\OOmcell_{s,s}}   & \inCell{3}{\OOmcell_{s,st}}   & \inCell{1}{\OOmcell_{s,\Id}}   & \inCell{4}{\OOmcell_{s,sts}}   & \inCell{2}{\OOmcell_{s,t}}   & \inCell{3}{\OOmcell_{s,ts}}   \\ \hline
-\inCell{2}{\Omcell_{ts}} & \inCell{4}{\OOmcell_{ts,st}}  & \inCell{3}{\OOmcell_{ts,s}}  & \inCell{5}{\OOmcell_{ts,sts}}  & \inCell{2}{\OOmcell_{ts,\Id}}  & \inCell{4}{\OOmcell_{ts,ts}}  & \inCell{3}{\OOmcell_{ts,t}}  \\ \hline
-\inCell{2}{\Omcell_{st}}  & \inCell{4}{\OOmcell_{st,ts}}  & \inCell{5}{\OOmcell_{st,sts}}  & \inCell{3}{\OOmcell_{st,t}} & \inCell{4}{\OOmcell_{st,st}}  & \inCell{2}{\OOmcell_{st,\Id}}  & \inCell{3}{\OOmcell_{st,s}}  \\ \hline
-\inCell{3}{\Omcell_{sts}} & \inCell{6}{\OOmcell_{sts,sts}} & \inCell{5}{\OOmcell_{sts,ts}} & \inCell{5}{\OOmcell_{sts,st}} & \inCell{4}{\OOmcell_{sts,t}} & \inCell{4}{\OOmcell_{sts,s}} & \inCell{3}{\OOmcell_{sts,\Id}} \\ \hline
-\end{array}
-\]
-}
-      \label{table:stratifications_of_FF}
+  \vspace{0cm}
+    \centering  \includegraphics[width=12.8cm]{figures/table/table_1.pdf}
+      \label{fig:stratifications_of_FF}
         \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
         
 \end{table}
@@ -570,17 +543,23 @@ $$F: 0 \subseteq \left< v_4 \right>
 \subseteq \left< v_4,v_1,v_2,v_5 \right>
 \subseteq \left< v_4,v_1,v_2,v_5,v_3 \right>=V$$
 is a complete flag of $V$, with dimension vector
+{
+\def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
 3,2\\ 2,2 \\ 2,1 \\ 1,1 \\ 0,1
 \end{pmatrix}.$$
+}
 \end{eg}
 \begin{remark}
 The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition on set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
 $$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
 such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding map $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\ptt^{-1}(i).$$} . As an example,
+{
+\def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
 3,2\\ 2,2 \\ 2,1 \\ 1,1 \\ 0,1
 \end{pmatrix} \quad\text{ corresponds to }\quad \{1,2,3,4,5\}= \{2,3,5\} \sqcup \{1,4\}.$$
+}
 \end{remark}
 
 \section{Symmetric group calculus}
@@ -750,6 +729,8 @@ u =\hspace{-3mm} \raisebox{-7mm}{
  \end{tikzpicture}
  } \quad  $$
  {
+ 
+ %https://tex.stackexchange.com/questions/394775/vertical-space-distribution-when-arraystretch-is-increased
 \def\arraystretch{2.5}
  \begin{table}[ht]
  $$
@@ -767,8 +748,9 @@ W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus
  %调整表格。。。大难题
 \end{eg}
 
-\begin{eg}
-In this table, $\abdimvec{d}=3$, $\dimvec{d}=(1,2)$, $s=(12)$, $t=(23)$. The columns "order of basis" and $Borel subgroups$ have not been introduced yet, and they are here for the future usage.
+\begin{eg}\label{eg:3-case-1}
+In this table, 
+$$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns "order of basis" and "Borel subgroups" have not been introduced yet, and they are here for the future usage.
 
 \begin{figure}[ht]
   \vspace{0cm}
@@ -1353,6 +1335,18 @@ This incompatibility comes from our twisted $G_{\dimvec{d}} \times G_{\dimvec{d}
 $$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} = \OOmcell_{\tilde{w}'}^{u,\tilde{u}u'} \subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}u'},$$
 we have identifications
 $$\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}'}^{u,\tilde{u}u'} \qquad \OOcell_{\ww'}=\OOcell_{\ww'}^{u}.$$
+
+After so many notations are introduced rapidly, an enlightening example is needed here.
+\begin{eg}[Follows Example \ref{eg:3-case-1}]\label{eg:3-case-2}
+Here, $\WWd=S_3$, $\Wd=S_1 \times S_2$.
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=12.8cm]{figures/table/table_2.pdf}
+      \label{fig:stratifications_of_FdFd}
+        \caption{stratifications of $\mathcal{F}_{\dimvec{d}}\times \mathcal{F}_{\dimvec{d}}$}
+        
+\end{table}
+\end{eg}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
 

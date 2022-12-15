@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.2}Quiver}{9}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Symmetric group calculus}{12}{section.1.3}% 
 \contentsline {section}{\numberline {1.4}Algebraic group and Lie algebra}{15}{section.1.4}% 
-\contentsline {subsection}{\numberline {1.4.1}Algebraic group}{15}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {1.4.1}Algebraic group}{16}{subsection.1.4.1}% 
 \contentsline {subsection}{\numberline {1.4.2}Lie algebra}{17}{subsection.1.4.2}% 
 \contentsline {section}{\numberline {1.5}Typical variety}{18}{section.1.5}% 
 \contentsline {subsection}{\numberline {1.5.1}Flag variety}{18}{subsection.1.5.1}% 

@@ -1,0 +1,214 @@
+
+\documentclass[border={7pt 0pt 7pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{diagbox}
+\usepackage{xcolor}%colors
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{booktabs, cellspace, hhline}
+
+\usepackage{arydshln} %you can use the arydshln package which adds \hdashline for horizontal and : for vertical dashed lines
+%be loaded after array, longtable, colortab and colortbl
+
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\x}{2mm}
+\newcommand{\Prl}{%parallelogram
+    \mathord{\text{%
+        \tikz[baseline] \draw[fill=red!10, line width=0.3mm] (0,\x) -- (1.2*\x,\x) -- (2*\x,0) -- (0.8*\x,0) -- cycle;}
+        }
+}
+\newcommand{\Hrztl}{%horizontal line
+    \mathord{\text{%
+        \tikz[baseline] \draw[line width=0.35mm] (0,0) -- (1.5*\x,0) ;}
+        }
+}
+\newcommand{\Vtcl}{%vertical line
+\;
+    \mathord{\text{%
+        \tikz[baseline] \draw[line width=0.42mm] (0,\x) -- (0,0);}
+        }
+}
+\newcommand{\Hptn}{%Hypotenuse
+    \mathord{\text{%
+        \tikz[baseline] \draw[line width=0.35mm]  (0,\x) -- (\x,0);}
+        }
+}
+\newcommand{\Centpt}{%central point
+\;
+    \mathord{\text{%
+        \tikz[baseline] \filldraw (0,0) circle (0.45mm);
+        }
+        }
+}
+\newcommand{\inCell}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fbox{
+  \begin{minipage}{1cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\;$}%
+      \vspace{1.2mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0.9mm}
+  \end{minipage}
+  }
+}
+\newcommand{\inlCell}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fbox{
+  \begin{minipage}{2.2cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\,$}%
+      \vspace{1.2mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0.9mm}
+  \end{minipage}
+  }
+}
+\newcommand{\inuCell}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fbox{
+  \begin{minipage}{1cm}
+    \centering
+    \vspace{-1mm}
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\,$}%
+      \vspace{-0.55mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{-3mm}
+  \end{minipage}
+  }
+}
+\newcommand{\inCellA}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fcolorbox{black}{cyan!10}{
+  \begin{minipage}{1cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\;$}%
+      \vspace{1.2mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0.9mm}
+  \end{minipage}
+  }
+}
+\newcommand{\inCellB}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fcolorbox{black}{cyan!30}{
+  \begin{minipage}{1cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\;$}%
+      \vspace{1.2mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0.9mm}
+  \end{minipage}
+  }
+}
+\newcommand{\inCellC}[2]
+{\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
+\fcolorbox{black}{cyan!70}{
+  \begin{minipage}{1cm}
+    \centering
+      {\hspace{-0.13cm}\textcolor{red}{$\scriptstyle {#1}\mathstrut$} \hfill $\;$}%
+      \vspace{1.2mm}
+      \linebreak 
+      {$#2$}%
+      \linebreak 
+      \vspace{0.9mm}
+  \end{minipage}
+  }
+}
+\begin{document}
+
+\begin{table}[ht]
+ {
+\def\arraystretch{1.2}
+\arraycolsep=0pt
+\centering
+\[
+%\newcolumntype{C}{>{\hfil$}p{1cm}<{$\hfil}} % centered, in math mode, fixed width
+\begin{array}{|c|c|c;{3pt/1pt}c|c;{3pt/1pt}c|c;{3pt/1pt}c|}
+\hline
+\multicolumn{2}{|c|}{\multirow{2}{*}{\hbox{\diagbox[innerwidth=30mm,height=3.05\normalbaselineskip,outerleftsep=0pt,outerrightsep=0pt,innerleftsep=1pt,innerrightsep=1pt]
+{$\scriptstyle B_{\dimvec{d}} \cdot F_{\ww}$ }
+{\\[-6.5mm]\textcolor{red}{\tiny shape} \\[-1mm] $\hspace{0.2cm}\scriptstyle(B_{\dimvec{d}} \times B_{\dimvec{d}}) \cdot \underline{F}_{\ww,\ww'}$\hspace{-8mm}\vspace{-0mm} }
+{$\scriptstyle B_{\dimvec{d}} \cdot F_{\ww\ww'}$}}}}&\multicolumn{2}{c|}{\mathcal{F}_{\Id}}&\multicolumn{2}{c|}{\mathcal{F}_{s}}&\multicolumn{2}{c|}{\mathcal{F}_{st}}\\
+\cline{3-8}
+     \multicolumn{2}{|c|}{}  %remove vertical line 
+     &    \inuCell{\Centpt}{\Ocell_{\Id}}    & \inuCell{\Hrztl}{\Ocell_{t}}      & \inuCell{\Centpt}{\Ocell_{s}}      & \inuCell{\Hrztl}{\Ocell_{ts}}      & \inuCell{\Centpt}{\Ocell_{st}}      & \inuCell{\Hrztl}{\Ocell_{sts}}      \\ \hline
+\multirow{2}*[-5mm]{$\;\mathcal{F}_{\Id}\;$}&\inlCell{\Centpt}{\Ocell_{\Id}=\Omcell_{\Id}^{\Id}} & \inCell{\Centpt}{\OOmcell_{\Id,\Id}^{\Id,\Id}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{\Id,\Id}} & \inCellA{\Centpt}{\OOmcell_{\Id,\Id}^{\Id,s}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{\Id,s}} &\inCell{\Centpt}{\OOmcell_{\Id,\Id}^{\Id,st}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{\Id,st}} \\ \cdashline{2-8}[3pt/1pt]
+&\inlCell{\Vtcl}{\Ocell_{t}=\Omcell_{t}^{\Id}} & \inCell{\Prl}{\OOmcell_{t,t}^{\Id,\Id}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{\Id,\Id}} & \inCell{\Prl}{\OOmcell_{t,t}^{\Id,s}} & \inCellA{\Hptn}{\OOmcell_{t,\Id}^{\Id,s}} &\inCell{\Prl}{\OOmcell_{t,t}^{\Id,st}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{\Id,st}} \\ \hline
+
+\multirow{2}*[-5mm]{$\;\mathcal{F}_{s}\;$}&\inlCell{\Centpt}{\Ocell_{s}=\Omcell_{\Id}^{s}} & \inCellB{\Centpt}{\OOmcell_{\Id,\Id}^{s,\Id}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{s,\Id}} & \inCell{\Centpt}{\OOmcell_{\Id,\Id}^{s,s}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{s,s}} &\inCell{\Centpt}{\OOmcell_{\Id,\Id}^{s,st}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{s,st}} \\ \cdashline{2-8}[3pt/1pt]
+&\inlCell{\Vtcl}{\Ocell_{ts}=\Omcell_{t}^{s}} & \inCell{\Prl}{\OOmcell_{t,t}^{s,\Id}} & \inCellC{\Hptn}{\OOmcell_{t,\Id}^{s,\Id}} & \inCell{\Prl}{\OOmcell_{t,t}^{s,s}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{s,s}} &\inCell{\Prl}{\OOmcell_{t,t}^{s,st}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{s,st}} \\ \hline
+
+\multirow{2}*[-5mm]{$\;\mathcal{F}_{st}\;$}&\inlCell{\Centpt}{\Ocell_{ts}=\Omcell_{\Id}^{st}} & \inCell{\Centpt}{\OOmcell_{\Id,\Id}^{st,\Id}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{st,\Id}} & \inCell{\Centpt}{\OOmcell_{\Id,\Id}^{st,s}} & \inCell{\Hrztl}{\OOmcell_{\Id,t}^{st,s}} &\inCell{\Centpt}{\OOmcell_{\Id,\Id}^{st,st}} & \inCellA{\Hrztl}{\OOmcell_{\Id,t}^{st,st}} \\ \cdashline{2-8}[3pt/1pt]
+&\inlCell{\Vtcl}{\Ocell_{sts}=\Omcell_{t}^{st}} & \inCell{\Prl}{\OOmcell_{t,t}^{st,\Id}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{st,\Id}} & \inCell{\Prl}{\OOmcell_{t,t}^{st,s}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{st,s}} &\inCellA{\Prl}{\OOmcell_{t,t}^{st,st}} & \inCell{\Hptn}{\OOmcell_{t,\Id}^{st,st}} \\ \hline
+\end{array}
+\]
+}
+        
+\end{table}
+\end{document}
