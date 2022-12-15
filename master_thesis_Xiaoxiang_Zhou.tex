@@ -127,6 +127,7 @@
 \newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
 \newcommand{\Ocell}{\mathcal{O}}
 \newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\preimage}[1]{\widetilde{#1}}
 
 \newcommand{\inCell}[2]
 {\setlength{\fboxrule}{0pt} %%https://tex.stackexchange.com/questions/393676/remove-border-of-a-framebox
@@ -568,7 +569,7 @@ $$\ftdimvec{d}= \begin{pmatrix}
 \begin{remark}
 The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition on set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
 $$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
-such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding map $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\ptt^{-1}(i).$$} . As an example,
+such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in Q_0}\ptt^{-1}(i).$$} . As an example,
 {
 \def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
@@ -1443,6 +1444,29 @@ contains $8$ $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbits.
 \subsection{Stratification: incidence variety}
 Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
 
+\begin{defn}[Stratifications of incidence varieties]
+For $\ww=wu$, $\ww'=w'u' \in \WWd$, denote $uwu' =\tilde{w}\tilde{u}$, $\ftdimvec{d}=\Wd u$, $\ftdimvec{d}'=\Wd u'$, $\widetilde{\ftdimvec{d}}=\Wd \tilde{u}$, we define
+\begin{equation*}
+\begin{aligned}
+  \preimage{\Omcell}_{w}^{u}:=\;& \pi_{\ftdimvec{d}}^{-1}(\Omcell_{w}^{u})&& \subseteq \RRep_{\ftdimvec{d}}(Q) \\ 
+  \preimage{\OOmcell}_{w,w'}^{u,u'}:=\;& \pi_{\ftdimvec{d},\ftdimvec{d}'}^{-1}(\OOmcell_{w,w'}^{u,u'})&& \subseteq \St_{\ftdimvec{d},\ftdimvec{d}'} \\ 
+  \preimage{\OOmcell}_{w'}^{u,u'}:=\;& \pi_{\ftdimvec{d},\ftdimvec{d}'}^{-1}(\OOmcell_{w'}^{u,u'})&& \subseteq \St_{\ftdimvec{d},\ftdimvec{d}'} \\[3mm]
+  \preimage{\OOcell}_{\ww'}^{u}:=\;& \pi_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}^{-1}(\OOcell_{\ww'}^{u}) = \preimage{\OOmcell}_{\tilde{w}}^{u,\tilde{u}}\hspace{2cm}&& \subseteq \St_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}  \\[3mm]
+  \preimage{\Ocell}_{\ww}:=\;& \pi_{\dimvec{d}}^{-1}(\Ocell_{\ww})&& \subseteq \RRep_{\dimvec{d}}(Q) \\ 
+  \preimage{\OOcell}_{\ww,\ww'}:=\;& \pi_{\dimvec{d},\dimvec{d}'}^{-1}(\OOcell_{\ww,\ww'})&& \subseteq \St_{\dimvec{d}} \\ 
+  \preimage{\OOcell}_{\ww'}:=\;& \pi_{\dimvec{d},\dimvec{d}'}^{-1}(\OOcell_{\ww'})&& \subseteq \St_{\dimvec{d}} \\ 
+\end{aligned}
+\end{equation*}
+\end{defn}
+
+
+It is not hard to see that they are stratifications:
+\begin{equation*}
+\begin{aligned}
+  \RRep_{\ftdimvec{d}}(Q)=\;& \bigsqcup_{\ww} \preimage{\Omcell}_{w}^{u} \qquad &  \St_{\ftdimvec{d},\ftdimvec{d}'} =\;& \bigsqcup_{w} \preimage{\OOmcell}_{w'}^{u,u'} = \bigsqcup_{w,w'} \preimage{\OOmcell}_{w,w'}^{u,u'}  \\
+  \RRep_{\dimvec{d}}(Q)=\;& \bigsqcup_{\ww} \preimage{\Ocell}_{\ww} \qquad &  \St_{\ftdimvec{d},\ftdimvec{d}'} =\;& \bigsqcup_{\ww'} \preimage{\OOcell}_{\ww'} = \bigsqcup_{\ww,\ww'} \preimage{\OOcell}_{\ww,\ww'}  \\
+\end{aligned}
+\end{equation*}
 \subsection{$T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
