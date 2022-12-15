@@ -1,0 +1,52 @@
+\contentsline {warning}{{Warning}{0.0.{1}}{}}{4}{theorem.0.0.1}% 
+\contentsline {defn}{{Definition}{1.1.{1}}{Flag}}{5}{theorem.1.1.1}% 
+\contentsline {defn}{{Definition}{1.1.{2}}{Complete flag variety}}{5}{theorem.1.1.2}% 
+\contentsline {remark}{{Remark}{1.1.{3}}{}}{5}{theorem.1.1.3}% 
+\contentsline {eg}{{Example}{1.1.{4}}{}}{9}{theorem.1.1.4}% 
+\contentsline {defn}{{Definition}{1.2.{1}}{Quiver}}{10}{theorem.1.2.1}% 
+\contentsline {remark}{{Remark}{1.2.{2}}{}}{10}{theorem.1.2.2}% 
+\contentsline {eg}{{Example}{1.2.{3}}{}}{10}{theorem.1.2.3}% 
+\contentsline {defn}{{Definition}{1.2.{4}}{Quiver representation}}{10}{theorem.1.2.4}% 
+\contentsline {eg}{{Example}{1.2.{5}}{}}{11}{theorem.1.2.5}% 
+\contentsline {remark}{{Remark}{1.2.{6}}{}}{11}{theorem.1.2.6}% 
+\contentsline {defn}{{Definition}{1.2.{7}}{$Q$-vector space/Vector space with quiver partition}}{11}{theorem.1.2.7}% 
+\contentsline {defn}{{Definition}{1.2.{8}}{}}{11}{theorem.1.2.8}% 
+\contentsline {defn}{{Definition}{1.2.{9}}{Space of representations with given dimension vector}}{11}{theorem.1.2.9}% 
+\contentsline {defn}{{Definition}{1.2.{10}}{Flag with quiver}}{12}{theorem.1.2.10}% 
+\contentsline {defn}{{Definition}{1.2.{11}}{flag-type dimension vector}}{12}{theorem.1.2.11}% 
+\contentsline {eg}{{Example}{1.2.{12}}{}}{12}{theorem.1.2.12}% 
+\contentsline {remark}{{Remark}{1.2.{13}}{}}{13}{theorem.1.2.13}% 
+\contentsline {remark}{{Remark}{1.3.{1}}{}}{13}{theorem.1.3.1}% 
+\contentsline {defn}{{Definition}{1.3.{2}}{Special elements in the Weyl group}}{14}{theorem.1.3.2}% 
+\contentsline {fact}{{Fact}{1.3.{3}}{}}{14}{theorem.1.3.3}% 
+\contentsline {eg}{{Example}{1.3.{4}}{}}{14}{theorem.1.3.4}% 
+\contentsline {proposition}{{Proposition}{1.3.{5}}{}}{14}{theorem.1.3.5}% 
+\contentsline {ex}{{Exercise}{1.3.{6}}{}}{15}{theorem.1.3.6}% 
+\contentsline {eg}{{Example}{1.3.{7}}{}}{15}{theorem.1.3.7}% 
+\contentsline {eg}{{Example}{1.3.{8}}{}}{15}{theorem.1.3.8}% 
+\contentsline {setting}{{Setting}{1.4.{1}}{}}{16}{theorem.1.4.1}% 
+\contentsline {defn}{{Definition}{1.4.{2}}{absolute algebraic groups}}{16}{theorem.1.4.2}% 
+\contentsline {defn}{{Definition}{1.4.{3}}{relative algebraic groups}}{17}{theorem.1.4.3}% 
+\contentsline {defn}{{Definition}{1.4.{4}}{more algebraic groups}}{17}{theorem.1.4.4}% 
+\contentsline {remark}{{Remark}{1.4.{5}}{}}{17}{theorem.1.4.5}% 
+\contentsline {eg}{{Example}{1.4.{6}}{}}{17}{theorem.1.4.6}% 
+\contentsline {defn}{{Definition}{1.4.{7}}{Lie algebras connected with representations}}{18}{theorem.1.4.7}% 
+\contentsline {remark}{{Remark}{1.4.{8}}{}}{19}{theorem.1.4.8}% 
+\contentsline {defn}{{Definition}{1.5.{1}}{Absolute complete flag variety}}{19}{theorem.1.5.1}% 
+\contentsline {defn}{{Definition}{1.5.{2}}{Relative complete flag variety}}{19}{theorem.1.5.2}% 
+\contentsline {defn}{{Definition}{1.5.{3}}{complete flag variety with flag-type dimension vector}}{19}{theorem.1.5.3}% 
+\contentsline {remark}{{Remark}{1.5.{4}}{}}{20}{theorem.1.5.4}% 
+\contentsline {defn}{{Definition}{1.5.{5}}{Special flags}}{20}{theorem.1.5.5}% 
+\contentsline {defn}{{Definition}{1.5.{6}}{}}{20}{theorem.1.5.6}% 
+\contentsline {remark}{{Remark}{1.5.{7}}{}}{21}{theorem.1.5.7}% 
+\contentsline {defn}{{Definition}{1.5.{8}}{Incidence variety}}{21}{theorem.1.5.8}% 
+\contentsline {remark}{{Remark}{1.5.{9}}{}}{22}{theorem.1.5.9}% 
+\contentsline {defn}{{Definition}{1.5.{10}}{Steinberg variety}}{22}{theorem.1.5.10}% 
+\contentsline {remark}{{Remark}{1.5.{11}}{Group actions}}{22}{theorem.1.5.11}% 
+\contentsline {defn}{{Definition}{1.6.{1}}{Twisted action}}{23}{theorem.1.6.1}% 
+\contentsline {defn}{{Definition}{1.6.{2}}{Stratifications of $\mathcal {F}_{\abdimvec {d}}$ and $\mathcal {F}_{\abdimvec {d}} \times \mathcal {F}_{\abdimvec {d}}$}}{23}{theorem.1.6.2}% 
+\contentsline {defn}{{Definition}{1.6.{3}}{Stratifications of $\mathcal {F}_{\dimvec {d}}$ and $\mathcal {F}_{\dimvec {d}} \times \mathcal {F}_{\dimvec {d}}$}}{24}{theorem.1.6.3}% 
+\contentsline {defn}{{Definition}{1.6.{4}}{Stratifications of $\mathcal {F}_{u}$ and $\mathcal {F}_{u} \times \mathcal {F}_{u'}$}}{24}{theorem.1.6.4}% 
+\contentsline {lemma}{{Lemma}{1.6.{5}}{}}{25}{theorem.1.6.5}% 
+\contentsline {proof}{{\proofname }{1}{}}{25}{proof.1}% 
+\contentsline {eg}{{Example}{1.6.{6}}{Follows Example \ref {eg:3-case-1}}}{25}{theorem.1.6.6}% 

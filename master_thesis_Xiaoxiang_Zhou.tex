@@ -178,7 +178,7 @@ I made some assumptions during the writing. To avoid confusing readers, these as
 \item For quivers, all the quivers we considered (except Auslander--Reiten quivers) are connected and finite (Remark \ref{rmk:quiver_restriction}). For simplicity, From ??? to ???, all the quivers have no loops or cycles.
 %maybe the cycle condition can be removed.
 
-\item  For any $\ww \in \WWd$, we always write $\ww = wu$, where $w \in \Wd$ and $u$ is the shortest element in the coset $\Wd \ww$. The flag-type dimension vector $\ftdimvec{d} \in \Wd \setminus \WWd$ corresponds to $u$, i.e., $\ftdimvec{d}=\Wd u$.
+\item  For any $\ww \in \WWd$, we always write $\ww = wu$, where $w \in \Wd$ and $u$ is the shortest element in the coset $\Wd \ww$. The flag-type dimension vector $\ftdimvec{d} \in \Wd \setminus \WWd$ corresponds to $u$, i.e., $\ftdimvec{d}=\Wd u$. Whenever $\tilde{w}$ and $\tilde{u}$ emerge, they are always defined by $uw'u'=\tilde{w}\tilde{u}$.
 
 \item For the diagram, we always read from top to bottom.
 \end{itemize}
@@ -274,7 +274,7 @@ general point  & $g$                 & $F_g$                       & $gBg^{-1}$ 
 \end{table}
         
 $\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition, \footnote{For the most time the formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
-$$\GL_n \cong \bigsqcup_{w\in W} BwB$$
+$$\GL_n =\bigsqcup_{w\in W} BwB$$
 
 We get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
@@ -312,7 +312,7 @@ $\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert vari
 $$\overline{\Omcell}_w= \bigsqcup_{w' \leq w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
 $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
-For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert variety are not smooth.
+For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert varieties are not smooth.
 
 
 \subsection{$\mathcal{F} \times \mathcal{F}$}
@@ -322,7 +322,7 @@ Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consist
 $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
 
 Denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
-$$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
+$$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right).$$
 
 Different from $\mathcal{F}$, the $\GL_n$-action on $\mathcal{F} \times \mathcal{F}$ is not transitive. To facilitate the stratification of $\mathcal{F}\times \mathcal{F}$, we introduce the twisted $\GL_n \times \GL_n$-action:
 $$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g_1,g_2,F_g,F_{g'}) \longmapsto (F_{g_1g},F_{g_1(gg_2g^{-1}) g'}).$$
@@ -360,22 +360,24 @@ T                  & -                         & \{\underline{F}_{w,w'} |  \, w,
 Like $\mathcal{F}$, we also study the closure of $\OOmcell_{w'}$ and $\OOmcell_{w,w'}$ in special case. It can be shown that 
 $$\overline{\OOmcell}_{w'} = \bigsqcup_{x'\leq w'} \OOmcell_{x'} \qquad 
 \overline{\OOmcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}$$
-as a set. Especially, for any $s \in W$ with $l(s)=1$,
+as a set. Especially, for any $s \in W$ with $l(s)=1$, \footnote{Here, $\GL_n \times^B X$ is called contracted product. Roughly, it is defined by
+$$\GL_n \times^B X :=\GL_n \times X/\big( (gb,x) \sim (g,bx) \big)$$
+We will discuss contracted product in Subsection \ref{subsec:contracted_product} thoroughly.}
 
 \begin{equation*}
 \begin{aligned}
- \overline{\OOmcell}_{s} = \OOmcell_{\Id} \sqcup \OOmcell_{s} \cong\;& 
- \GL_n/B \sqcup \GL_n /(B \cap sBs^{-1}) \\ 
-  \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (B \cap sBs^{-1}) \\ 
-  \cong\;& \GL_n \times^{B} (B/B) \sqcup GL_n \times^{B} (BsB/B) \\ 
-  \cong\;& \GL_n \times^{B} (P_s/B) \\ 
+ \overline{\OOmcell}_{s} = \OOmcell_{\Id}\sqcup \OOmcell_{s} \cong\;& 
+  \GL_n /(B \cap sBs^{-1}) &&\sqcup \GL_n/B \\ 
+  \cong\;&  \GL_n \times^{B} \left(B/(B \cap sBs^{-1})\right)\hspace{-0.4cm} &&\sqcup \GL_n \times^{B} (B/B) \\ 
+  \cong\;& \GL_n \times^{B} (BsB/B) &&\sqcup \GL_n \times^{B} (B/B)  \\ 
+  \cong\;& \GL_n \times^{B} (P_s/B)&& \\ 
 \end{aligned}
 \end{equation*}
-is an $\mathcal{F}$-bundle over $\mathbb{P}^1$.\footnote{??? need to explain $\times^{B}$} Also, 
+is an $\mathcal{F}$-bundle over $\mathbb{P}^1$. Also, 
 \begin{equation*}
 \begin{aligned}
-\overline{\OOmcell}_{\Id,s} = \OOmcell_{\Id,\Id} \sqcup \OOmcell_{\Id,s} \cong\;& 
- \big(B/B \times B/B\big) \sqcup \big(B/B \times BsB/B\big)  \\ 
+\overline{\OOmcell}_{\Id,s} = \OOmcell_{\Id,s} \sqcup \OOmcell_{\Id,\Id} \cong\;& 
+ \big(B/B \times BsB/B\big) \sqcup \big(B/B \times B/B\big)  \\ 
  \cong\;& P_s/B \cong \mathbb{P}^1
 \end{aligned}
 \end{equation*}
@@ -390,6 +392,19 @@ In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathc
         \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
         
 \end{table}
+
+We can also see the $\GL_3$-orbit (and its closure) from the table, for example,
+\begin{equation*}
+\begin{aligned}
+  \OOmcell_{s}=\;& \OOmcell_{\Id,s} \sqcup
+  \OOmcell_{t,s} \sqcup
+  \OOmcell_{s,s} \sqcup
+  \OOmcell_{ts,s} \sqcup
+  \OOmcell_{st,s} \sqcup
+  \OOmcell_{sts,s}  \\ 
+  \overline{\OOmcell}_{s}=\;& \OOmcell_{s} \sqcup \OOmcell_{\Id} = \bigsqcup_{w} (\OOmcell_{w,s} \sqcup \OOmcell_{w,\Id})
+\end{aligned}
+\end{equation*}
 \end{eg}
 
 
@@ -440,7 +455,7 @@ $$\begin{tikzcd}[ampersand replacement=\&]
 \end{tabular}
 \vspace{5mm}
 \end{table}
-The reader can easily writen down the quadruple of these quivers. Take $Q=K(2)$ as an example, we have 
+The reader can easily read the quadruple of quivers from the graphs. Take $Q=K(2)$ as an example, we have 
 $$Q_0=\{1,2\}, \qquad Q_1=\{a,b\} \qquad s,t: \{a,b\}\longrightarrow \{1,2\}$$
 by $s(a)=s(b)=1$, $t(a)=t(b)=2$.
 
@@ -738,7 +753,7 @@ u =\hspace{-3mm} \raisebox{-7mm}{
  \hline
  \multicolumn{1}{c|}{\text{set}} & \multicolumn{1}{c|}{\text{element}} & \multicolumn{1}{c|}{\text{special element}} & \text{others} \\ \hline
 \absgp{W}_{\abdimvec{d}} = S_5 & \ww,x                               &   \ww_{\max}=  \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{5,4,3,2,1}}                                        &   \Pi_{\phantom{d}}=\{s_1,s_2,s_3,s_4 \}            \\ \hline
-W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}                                        &  \Pi_d=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
+W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}                                        &  \Pi_{\dimvec{d}}=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
 W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus S_5 & \ww, \ftdimvec{d}                   &          \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,3,1,5,2} }                                   &    \Compd           \\ \hline
 \MinWd =\left\{\hspace{-7mm}\raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}  ,\ldots \right\}  & u                                   &                                       \raisebox{-3mm}{ \permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}      &   \Shuffled            \\ \hline
  \end{array}
@@ -1255,6 +1270,8 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 
 Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed as relatively easy pieces. In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also mention about their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology theory in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another "basis" in Chapter \ref{chap:localization}.
 
+\subsection{Stratification: flag variety}
+
 We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
 
 \begin{defn}[Twisted action]
@@ -1324,21 +1341,79 @@ and
 \begin{equation*}
 \begin{aligned}
   \Omcell_{w}^{u}=\;& B_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w} \right) \qquad&&  \cong \mathbb{A}^{l(w)} \\ 
-  \OOmcell_{w,w'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) / \left(B_{\dimvec{d}} \cap B_{w} \times B_{\dimvec{d}} \cap B_{w'}\right)&& \cong \mathbb{A}^{l(w)+l(w')}  \\ 
-  \OOmcell_{w'}=\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
+  \OOmcell_{w,w'}^{u,u'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) / \left(B_{\dimvec{d}} \cap B_{w} \times B_{\dimvec{d}} \cap B_{w'}\right)&& \cong \mathbb{A}^{l(w)+l(w')}  \\ 
+  \OOmcell_{w'}^{u,u'}=\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
 \end{aligned}
 \end{equation*}
 
-We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'=\tilde{w}'\tilde{u}$ for $\tilde{w}' \in \Wd$, $\tilde{u} \in \MinWd$, then
-$$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu}, F_{wuw'u'}  \right)= \left( F_{wu}, F_{w\tilde{w}'\tilde{u}u'}  \right) \in \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}u'}.$$
+We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'u'=\tilde{w}\tilde{u}$ for $\tilde{w}' \in \Wd$, $\tilde{u} \in \MinWd$, then
+$$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu}, F_{wuw'u'}  \right)= \left( F_{wu}, F_{w\tilde{w}\tilde{u}}  \right) \in \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}}.$$
 This incompatibility comes from our twisted $G_{\dimvec{d}} \times G_{\dimvec{d}}$-actions. In particular, denote
-$$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} = \OOmcell_{\tilde{w}'}^{u,\tilde{u}u'} \subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}u'},$$
-we have identifications
-$$\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}'}^{u,\tilde{u}u'} \qquad \OOcell_{\ww'}=\OOcell_{\ww'}^{u}.$$
+$$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'}\subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}},$$
+we have $\OOcell_{\ww'}=\sqcup_{u} \OOcell_{\ww'}^{u}$ and identifications
+$$\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}}^{u,\tilde{u}} \qquad \OOcell_{\ww'}^{u}=\OOmcell_{\tilde{w}}^{u,\tilde{u}}.$$
+
+We can also describe the closure of orbits, for example,
+\begin{equation*}
+  \overline{\Omcell}_{w}^{u}= \bigsqcup_{x\leq w}\Omcell_{x}^{u}  \qquad
+  \overline{\OOmcell}_{w,w'}^{u,u'}=\bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}^{u,u'} \qquad
+  \overline{\OOmcell}_{w'}^{u,u'}=\bigsqcup_{x'\leq w'} \OOmcell_{x'}^{u,u'} \\ 
+\end{equation*}
+Especially, for any $s \in \Pi_{\dimvec{d}}$, $u,u' \in \MinWd$, we have
+$$\overline{\OOmcell}_{s}^{u,u'} = \OOmcell_{s}^{u,u'} \sqcup \OOmcell_{\Id}^{u,u'} \cong G_{\dimvec{d}} \times^{B_{\dimvec{d}}} \left( P_{\Id,s} / B_{\dimvec{d}} \right)$$
+when we work over base point $F_{u,u'}$. If we work over different base points, we will get different isomorphisms, as follows:
+\begin{equation*}
+\begin{aligned}
+ \overline{\OOmcell}_{s}^{u,u'} = \OOmcell_{\Id}^{u,u'}\sqcup \OOmcell_{s}^{u,u'} \cong\;& 
+  G_{\dimvec{d}} /(B_w \cap B_{ws} ) &&\sqcup G_{\dimvec{d}}/B_w \\ 
+  \cong\;&  G_{\dimvec{d}} \times^{B_w} \big(B_w/(B_w \cap B_{ws})\big)\hspace{-0.4cm} &&\sqcup G_{\dimvec{d}} \times^{B_w} (B_w/B_w) \\ 
+  \cong\;& G_{\dimvec{d}} \times^{B_w} (B_w sB_w/B_w) &&\sqcup G_{\dimvec{d}} \times^{B_w} (B_w/B_w)  \\ 
+  \cong\;& G_{\dimvec{d}} \times^{B_w} (\underline{P}_{w,s}/B_w)&& \qquad \text{ base point }F_{wu,wu'}\\ 
+  \cong\;& G_{\dimvec{d}} \times^{B_w} (\underline{P}_{w,s}/B_{ws})&& \qquad \text{ base point }F_{wu,wsu'}\\ 
+\end{aligned}
+\end{equation*}
+We restrict the result of $\overline{\OOmcell}_{s}^{u,u'}$ to $\overline{\OOcell}_{s}^{u}$ in Lemma \ref{lem:iso_of_orbits}.
+
+\begin{lemma}\label{lem:iso_of_orbits}
+For $\ww=wu \in \WWd$, $s\in \Pi$ such that $\ww s \ww^{-1} \in \Wd$, we have isomorphisms of $G_{\dimvec{d}}$-varieties
+\begin{equation*}
+\begin{aligned}
+& G_{\dimvec{d}} \times^{B_{\ww}} (\underline{P}_{\ww,s}/B_{\ww}) \longrightarrow \overline{\OOcell}_{s}^{u} \qquad && (g,p) \longmapsto (g \cdot F_{\ww}, gp \cdot F_{\ww})\\
+& G_{\dimvec{d}} \times^{B_{\ww}} (\underline{P}_{\ww,s}/B_{\ww s}) \longrightarrow \overline{\OOcell}_{s}^{u} \qquad && (g,p) \longmapsto (g \cdot F_{\ww}, gp \cdot F_{\ww s})\\
+\end{aligned}
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Notice that when $\ww s \ww^{-1} \in \Wd$, $\OOcell_{s}^{u}=\OOmcell_{usu^{-1}}^{u,u}$. Therefore, 
+\begin{equation*}
+\begin{aligned}
+ \overline{\OOcell}_{s}^{u}=\overline{\OOmcell}_{usu^{-1}}^{u,u} \cong\;& 
+ \begin{cases}
+ G_{\dimvec{d}} \times^{B_w} (\underline{P}_{w,usu^{-1}}/B_w) & \text{ base point }F_{wu,wu} \\
+ G_{\dimvec{d}} \times^{B_w} (\underline{P}_{w,usu^{-1}}/B_{wusu^{-1}}) & \text{ base point }F_{wu,wus} 
+ \end{cases} \\ 
+  \cong\;& 
+  \begin{cases}
+  G_{\dimvec{d}} \times^{B_{\ww}} (\underline{P}_{\ww,s}/B_{\ww}) & \qquad\text{ base point }F_{\ww,\ww} \\
+  G_{\dimvec{d}} \times^{B_{\ww}} (\underline{P}_{\ww,s}/B_{\ww s}) & \qquad\text{ base point }F_{\ww,\ww s} 
+  \end{cases} \\ 
+\end{aligned}
+\end{equation*}
+\\[-2\baselineskip]
+\end{proof}
+
+
+
+
 
 After so many notations are introduced rapidly, an enlightening example is needed here.
 \begin{eg}[Follows Example \ref{eg:3-case-1}]\label{eg:3-case-2}
-Here, $\WWd=S_3$, $\Wd=S_1 \times S_2$.
+Here, $\WWd=S_3$, $\Wd=S_1 \times S_2$,
+$$\ww=ts=t \cdot s, \qquad \ww'=s=\Id \cdot s,\qquad \ww\ww'=t=t \cdot \Id.$$
+
+$\mathcal{F}_{\dimvec{d}}$ has $3$ connected components, each of them has $2$ $B_{\dimvec{d}}$-orbits;
+
+ $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$ has $9$ connected components, each of them has $4$ $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbits.
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=12.8cm]{figures/table/table_2.pdf}
@@ -1346,7 +1421,29 @@ Here, $\WWd=S_3$, $\Wd=S_1 \times S_2$.
         \caption{stratifications of $\mathcal{F}_{\dimvec{d}}\times \mathcal{F}_{\dimvec{d}}$}
         
 \end{table}
+We have given every orbit a name, and other spaces are finite union of these orbits, for example,
+\begin{equation*}
+\begin{aligned}
+  \OOcell_{ts,s}=\;& \OOmcell_{t,\Id}^{s,\Id} \\ 
+  \OOcell_{s}^{s}=\;& \OOmcell_{\Id}^{s,\Id} = \OOmcell_{\Id,\Id}^{s,\Id} \sqcup \OOmcell_{t,\Id}^{s,\Id} \\ 
+  \OOcell_{s}=\;& \OOcell_{s}^{s} \sqcup \OOcell_{s}^{\Id} \sqcup \OOcell_{s}^{st} \\   
+  =\;& \OOcell_{s}^{s} \sqcup \OOcell_{s}^{\Id} \sqcup \OOcell_{s}^{st} \\  
+  =\;& \OOmcell_{\Id}^{s,\Id} \sqcup \OOmcell_{\Id}^{\Id,s} \sqcup \OOmcell_{\Id}^{st,st}
+   \\  
+  =\;& \OOmcell_{\Id,\Id}^{s,\Id} \sqcup \OOmcell_{t,\Id}^{s,\Id} \sqcup \OOmcell_{\Id,\Id}^{\Id,s} \sqcup  \OOmcell_{t,\Id}^{\Id,s} \sqcup \OOmcell_{\Id,\Id}^{st,st} \sqcup \OOmcell_{t,\Id}^{st,st}
+   \\  
+\end{aligned}
+\end{equation*}
+Their closures are also clear from the example, for example, 
+$$\overline{\OOcell}_s=\OOcell_{s} \sqcup \OOmcell_{\Id}^{st,st}$$
+contains $8$ $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbits.
 \end{eg}
+
+
+\subsection{Stratification: incidence variety}
+Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
+
+\subsection{$T$-fixed points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
 
@@ -1358,6 +1455,7 @@ We give definitions for both $K$-theory and cohomology theory, which are lengthy
 \section{Basic constructions: pullback, proper pushforward and tensor product}
 \section{Thom isomorphism}
 \section{Induction}
+\subsection{Contracted product}\label{subsec:contracted_product}
 \section{Reduction}
 \section{Equivariant cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

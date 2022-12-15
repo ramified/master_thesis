@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  15 DEC 2022 01:01
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  15 DEC 2022 19:25
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1863,7 +1863,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (15.36858pt too wide) detected at line 745
+Overfull \hbox (15.36858pt too wide) detected at line 760
 []
  []
 
@@ -1872,13 +1872,13 @@ File: figures/temporary/smalleg_Weyl.jpg Graphic file (type bmp)
 [14] [15] [16]
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1010.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1025.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1010.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1025.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 1010.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1025.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
@@ -1889,7 +1889,7 @@ File: figures/comm_diagram/incidence_variety_1.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_2.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_2.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1194--1199
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1209--1214
 [][] [] 
  []
 
@@ -1899,117 +1899,126 @@ File: figures/comm_diagram/incidence_variety_3.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_4.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1237--1242
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1252--1257
 [][] [] 
  []
 
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1254.
+(hyperref)                removing `math shift' on input line 1269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1254.
+(hyperref)                removing `math shift' on input line 1269.
 
-[22]
+[22] [23]
 File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
- [23] [24]
+ [24] [25]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1446.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1446.
+
+[26]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1351.
+(hyperref)                removing `math shift' on input line 1448.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1351.
+(hyperref)                removing `math shift' on input line 1448.
 
-[25
+[27
 
-] [26
+] [28
 
 ]
 Chapter 3.
-[27] [28
-
-]
-Chapter 4.
 [29] [30
 
 ]
-Chapter 5.
+Chapter 4.
 [31] [32
+
+]
+Chapter 5.
+[33] [34
 
 ]
 Chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1389.
+(hyperref)                removing `math shift' on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1389.
+(hyperref)                removing `\times' on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1389.
+(hyperref)                removing `superscript' on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1389.
+(hyperref)                removing `\times' on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1389.
+(hyperref)                removing `math shift' on input line 1487.
 
-[33] [34
+[35] [36
 
 ]
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1395.
+(hyperref)                removing `math shift' on input line 1493.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1395.
+(hyperref)                removing `subscript' on input line 1493.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1395.
+(hyperref)                removing `math shift' on input line 1493.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1396.
+(hyperref)                removing `math shift' on input line 1494.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1396.
+(hyperref)                removing `math shift' on input line 1494.
 
-[35] [36
+[37] [38
 
 ]
 Chapter 8.
-[37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1405.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1405.
+[39]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1503.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1503.
  (master_thesis_Xiaoxiang_Zhou.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1405.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1405.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1503.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1503.
 
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: F21983D58DA0842F872B922778EFD44B.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1405.
+(rerunfilecheck)             Checksum: E97B6567A718DADD2FBA4A502DEEE1BD.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1503.
  ) 
 Here is how much of TeX's memory you used:
- 38354 strings out of 427748
- 699279 string characters out of 3150981
- 866043 words of memory out of 3000000
- 41771 multiletter control sequences out of 15000+200000
- 568618 words of font info for 188 fonts, out of 3000000 for 9000
+ 38359 strings out of 427748
+ 699363 string characters out of 3150981
+ 866201 words of memory out of 3000000
+ 41776 multiletter control sequences out of 15000+200000
+ 568854 words of font info for 189 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,22n,84p,3277b,1226s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (37 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (39 pages).
