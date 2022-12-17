@@ -30,6 +30,7 @@
 \usepackage{array}
 \usepackage{diagbox}
 \usepackage{makecell}
+\usepackage{adjustbox}
 %\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
 
@@ -71,7 +72,6 @@
 
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}{Remarks}
-
 
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
@@ -149,10 +149,26 @@
 \def\arraystretch{1.2}
 \setcounter{secnumdepth}{3}
 
+\makeatletter
+\preto\env@matrix{\renewcommand{\arraystretch}{0.6}
+\setlength\arraycolsep{1pt}}
+\makeatother
 
+% HIGHLIGHTING
+
+\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
 
 % from https://tex.stackexchange.com/questions/63545/big-tilde-in-math-mode
 
+%https://tex.stackexchange.com/questions/456307/invalid-use-of-intertext-in-aligned
+\newcommand{\alignedintertext}[1]{%
+  \noalign{%
+    \vskip\belowdisplayshortskip
+    \vtop{\hsize=\linewidth#1\par
+    \expandafter}%
+    \expandafter\prevdepth\the\prevdepth
+  }%
+}
 \begin{document}
 \date{}
 
@@ -260,7 +276,7 @@ Especially, for $w \in W=N_{\GL_n}(T)/T \cong S_n$, the flag attached to $w$
 \end{equation*}
 does not depend on the choice of the lift $\tilde{w} \in N_{\GL_n}(T)$ of $w$.
 
-Readers can verify that $\left\{ F_w \middle| w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while $\left\{ wBw^{-1} \middle| w \in W \right\}$ are all Borel subgroups of $G$ containing the standard torus $T$.
+Readers can verify that $\left\{ F_w \,\middle|\, w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while $\left\{ wBw^{-1} \,\middle|\, w \in W \right\}$ are all Borel subgroups of $G$ containing the standard torus $T$.
 \item For $n=2$, $\mathcal{F} \cong \mathbb{P}^1$. We encourage readers to use $\mathbb{P}^1$ as a toy example for the whole theory.
 \end{enumerate}
 \end{remark}
@@ -598,7 +614,7 @@ then
 \begin{aligned}
   \ww=\;& (14523)= \begin{pmatrix}
   1\,2\,3\,4\,5\\ 4\,3\,1\,5\,2
-  \end{pmatrix} = \raisebox{-7mm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
+  \end{pmatrix} = \parbox[h][][c]{3cm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
   &&\scriptstyle 1&&\\
   &&&&\scriptstyle 1\\
   &\scriptstyle 1&&&\\
@@ -606,7 +622,7 @@ then
   &&&\scriptstyle 1&
   \end{bmatrix} \\ 
   =\;& (23)(34)(45)(12)(23)(12) = \hspace{0mm} 
-  \raisebox{-8mm}{ \begin{tikzpicture}
+  \parbox[h][][c]{3cm}{ \begin{tikzpicture}
    \permutation[
    height=0.2,
    bullb=0,
@@ -694,11 +710,78 @@ Every element $\ww_{\max} \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ c
 \end{fact}
 
 \begin{eg}
-???
+\begin{equation*}
+\begin{aligned}
+\parbox[h][][c]{3cm}{
+ \begin{tikzpicture}
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ \end{tikzpicture}
+ }
+  =\hspace{8mm}& 
+\parbox[h][][c]{3cm}{
+ \begin{tikzpicture}
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ \end{tikzpicture}
+ } \qquad   \text{ in } \Wd\setminus \WWd \\
+ since\hspace{5.7cm}&\hspace{10cm}\\
+%\shortintertext{since}
+\parbox[h][][c]{3cm}{
+ \begin{tikzpicture}
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,2},{3,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,2},{1,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,2},{2,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,2},{4,1},{4,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,2},{5,1},{5,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{1,1},{2,1},{3,1}} 
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{1,0},{2,0},{3,0}} 
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,1},{5,1}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,0},{5,0}}
+ \end{tikzpicture}
+ }
+  =\hspace{8mm}& 
+\parbox[h][][c]{3cm}{
+ \begin{tikzpicture}
+% \vpartition[
+% floor=1,
+% tkzpic=0,
+% type=0
+% ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,2},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,2},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,2},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,2},{4,0},{5,0},{4,2}} 
+ \end{tikzpicture}
+ } \qquad   \text{ in } \WWd \\
+ \end{aligned}
+ \end{equation*}
 
 This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\}$.
 
-???%add color for it
 \end{eg}
 
 It is easy to see from the diagram that in every coset, there exists an unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. We collect these minimal length coset representatives as a set, and denote it by $\MinWd$.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
@@ -728,9 +811,9 @@ We finish this section with figures and examples.
 
 \begin{eg}
 In this table, $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, typical elements would be
-$$\ww =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1,type=0]{4,3,1,5,2}} \quad
-w =\hspace{-7mm} \raisebox{-7mm}{\permutation[tkzpic=1,type=0]{3,1,2,5,4}} \quad
-u =\hspace{-3mm} \raisebox{-7mm}{
+$$\ww = \parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{4,3,1,5,2}} \quad
+w =\parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{3,1,2,5,4}} \quad
+u =\parbox[h][][c]{3cm}{
  \begin{tikzpicture}
  \vpartition[
  floor=0,
@@ -748,16 +831,49 @@ u =\hspace{-3mm} \raisebox{-7mm}{
  {
  
  %https://tex.stackexchange.com/questions/394775/vertical-space-distribution-when-arraystretch-is-increased
-\def\arraystretch{2.5}
+\def\arraystretch{2}
  \begin{table}[ht]
  $$
  \begin{array}{l|l|r|c}
  \hline
  \multicolumn{1}{c|}{\text{set}} & \multicolumn{1}{c|}{\text{element}} & \multicolumn{1}{c|}{\text{special element}} & \text{others} \\ \hline
-\absgp{W}_{\abdimvec{d}} = S_5 & \ww,x                               &   \ww_{\max}=  \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{5,4,3,2,1}}                                        &   \Pi_{\phantom{d}}=\{s_1,s_2,s_3,s_4 \}            \\ \hline
-W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}                                        &  \Pi_{\dimvec{d}}=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
-W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus S_5 & \ww, \ftdimvec{d}                   &          \raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,3,1,5,2} }                                   &    \Compd           \\ \hline
-\MinWd =\left\{\hspace{-7mm}\raisebox{-3mm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}  ,\ldots \right\}  & u                                   &                                       \raisebox{-3mm}{ \permutation[tkzpic=1,type=0,scale=0.5]{4,1,2,5,3}}      &   \Shuffled            \\ \hline
+\absgp{W}_{\abdimvec{d}} = S_5 & \ww,x                               &   \ww_{\max}=  \lbox{\parbox[h][][c]{1.5cm}{\permutation[tkzpic=1,type=0,scale=0.5]{5,4,3,2,1}}  }                                      &   \Pi_{\phantom{d}}=\{s_1,s_2,s_3,s_4 \}            \\ \hline
+W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \lbox{\parbox[h][][c]{1.5cm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}    }                                    &  \Pi_{\dimvec{d}}=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
+W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus S_5 & \ww, \ftdimvec{d}                   &          \parbox[h][][c]{1.6cm}{\parbox[h][][c]{1.5cm}{ \begin{tikzpicture}[scale=0.5]
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ \end{tikzpicture}} }                                   &    \Compd           \\ \hline
+\MinWd =\left\{\parbox[h][][c]{1.5cm}{ \begin{tikzpicture}[scale=0.5]
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ \end{tikzpicture}}  ,\ldots \right\}  & u                                   &                                       \parbox[h][][c]{1.5cm}{ \begin{tikzpicture}[scale=0.5]
+ \vpartition[
+ floor=0,
+ tkzpic=0,
+ type=0
+ ]{{5}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid,tieheight=0]{{1},{2},{3}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,1},{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,1},{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,1},{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
+ \end{tikzpicture}}      &   \Shuffled            \\ \hline
  \end{array}
  $$
  \end{table}
@@ -769,13 +885,12 @@ W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus
 In this table, 
 $$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns "order of basis" and "Borel subgroups" have not been introduced yet, and they are here for the future usage.
 
-\begin{figure}[ht]
+\begin{table}[ht]
   \vspace{0cm}
-    \centering  \includegraphics[width=12cm]{figures/temporary/smalleg_Weyl.jpg}
+    \centering  \includegraphics[width=15cm]{figures/table/table_basic_information.pdf}
       \label{fig:smalleg_Weyl}
-        \caption{desired picture}
-        
-        \end{figure}
+%        \caption{desired picture}       
+        \end{table}
         
 \end{eg}
 
@@ -866,7 +981,8 @@ One can easily show that $N_{\ww, \ww s}=R_u (P_{\ww, \ww s})$.
   \array{#1}}
 \makeatother
 \begin{eg}
-For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, ???,
+For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, $\ww =\hspace{-3mm} \parbox[h][][c]{2cm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,3,1,5,2}}$\hspace{-7mm}, 
+$w =\hspace{-3mm}\parbox[h][][c]{2cm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,1,2,5,4}}$\hspace{-7mm}, $s=s_2$, we compute all the algebraic groups we mentioned:
 \begin{equation*}
 \begin{aligned}
   &\absgp{G}_{\abdimvec{d}}= \begin{pmatrix}
@@ -1101,17 +1217,6 @@ The absolute complete flag variety $\mathcal{F}_{\abdimvec{d}}$ is defined as
 Here, $M_i$ can have no $Q$-vector space structure.
 \end{defn}
 
-\begin{defn}[Relative complete flag variety]
-The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
-\begin{equation*}
-\begin{aligned}
-  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \right\} \\ 
-      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_j \right| =j \phantom{\Big)\!\!\!} \right\}
-\end{aligned}
-\end{equation*}
-Here, $M_i$ are $Q$-vector spaces.
-\end{defn}
-
 \begin{defn}[complete flag variety with flag-type dimension vector]
 For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
 \begin{equation*}
@@ -1120,16 +1225,26 @@ For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{
       =\;& \left\{ F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \dimv F =\ftdimvec{d} \phantom{\Big)\!\!\!} \right\}
 \end{aligned}
 \end{equation*}
-It is easy to see that
-$$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}.$$
+\end{defn}
+
+\begin{defn}[Relative complete flag variety]
+The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
+\begin{equation*}
+\begin{aligned}
+  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_j \right| =j \phantom{\Big)\!\!\!} \right\}\\
+      =\;& \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}
+\end{aligned}
+\end{equation*}
+Here, $M_i$ are $Q$-vector spaces.
 \end{defn}
 
 \begin{remark}\label{rmk:action_on_flag}\
 \begin{enumerate}
-\item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\ftdimvec{d}}$ are smooth varieties, since
+\item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ are smooth varieties, since
 $$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in Q_0} \GL_{\dimvec{d}_i}/B$$
 are products of usual flag varieties.
-\item $\mathcal{F}_{\abdimvec{d}}$ is an $\GL_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\ftdimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
+\item $\mathcal{F}_{\abdimvec{d}}$ is an $\GL_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\ftdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
 \end{enumerate}
 \end{remark}
 
@@ -1353,7 +1468,9 @@ $$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu},
 This incompatibility comes from our twisted $G_{\dimvec{d}} \times G_{\dimvec{d}}$-actions. In particular, denote
 $$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'}\subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}},$$
 we have $\OOcell_{\ww'}=\sqcup_{u} \OOcell_{\ww'}^{u}$ and identifications
-$$\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}}^{u,\tilde{u}} \qquad \OOcell_{\ww'}^{u}=\OOmcell_{\tilde{w}}^{u,\tilde{u}}.$$
+\begin{equation}\label{eq:identification}
+\Ocell_{\ww}=\Omcell_{w}^{u} \qquad \OOcell_{\ww,\ww'}=\OOmcell_{w,\tilde{w}}^{u,\tilde{u}} \qquad \OOcell_{\ww'}^{u}=\OOmcell_{\tilde{w}}^{u,\tilde{u}}.\tag{$\star$}
+\end{equation}
 
 We can also describe the closure of orbits, for example,
 \begin{equation*}
@@ -1374,6 +1491,18 @@ when we work over base point $F_{u,u'}$. If we work over different base points, 
   \cong\;& G_{\dimvec{d}} \times^{B_w} (\underline{P}_{w,s}/B_{ws})&& \qquad \text{ base point }F_{wu,wsu'}\\ 
 \end{aligned}
 \end{equation*}
+
+Closures of $\OOcell$-cells are obtained by identifications (\ref{eq:identification}). To illustrate it, we compute $\overline{\OOcell}_s$ by hand. Let $\ww'=s, us=\tilde{w}\tilde{u}$,
+ 
+\begin{equation*}
+\begin{aligned}
+ \overline{\OOcell}_{s} = \;&\bigsqcup_u \overline{\OOcell}_{s}^{u} = \bigsqcup_u \overline{\OOmcell}_{\tilde{w}}^{u,\tilde{u}}\\
+ =\;& \left(\bigsqcup_{u:usu^{-1} \in \Wd} \overline{\OOmcell}_{usu^{-1}}^{u,u}\right) \sqcup \left(\bigsqcup_{u:usu^{-1} \notin \Wd} \overline{\OOmcell}_{\Id}^{u,us}\right)\\
+ =\;& \left(\bigsqcup_{u:usu^{-1} \in \Wd} \OOmcell_{usu^{-1}}^{u,u}\right) \sqcup \left(\bigsqcup_{u:usu^{-1} \notin \Wd} \OOmcell_{\Id}^{u,us}\right) \sqcup \left(\bigsqcup_{u:usu^{-1} \in \Wd} \OOmcell_{\Id}^{u,u}\right)\\
+ =\;&\OOcell_{s} \sqcup \left(\bigsqcup_{u:usu^{-1} \in \Wd} \OOcell_{\Id}^{u}\right)
+\end{aligned}
+\end{equation*}
+
 We restrict the result of $\overline{\OOmcell}_{s}^{u,u'}$ to $\overline{\OOcell}_{s}^{u}$ in Lemma \ref{lem:iso_of_orbits}.
 
 \begin{lemma}\label{lem:iso_of_orbits}
@@ -1452,7 +1581,7 @@ For $\ww=wu$, $\ww'=w'u' \in \WWd$, denote $uwu' =\tilde{w}\tilde{u}$, $\ftdimve
   \preimage{\Omcell}_{w}^{u}:=\;& \pi_{\ftdimvec{d}}^{-1}(\Omcell_{w}^{u})&& \subseteq \RRep_{\ftdimvec{d}}(Q) \\ 
   \preimage{\OOmcell}_{w,w'}^{u,u'}:=\;& \pi_{\ftdimvec{d},\ftdimvec{d}'}^{-1}(\OOmcell_{w,w'}^{u,u'})&& \subseteq \St_{\ftdimvec{d},\ftdimvec{d}'} \\ 
   \preimage{\OOmcell}_{w'}^{u,u'}:=\;& \pi_{\ftdimvec{d},\ftdimvec{d}'}^{-1}(\OOmcell_{w'}^{u,u'})&& \subseteq \St_{\ftdimvec{d},\ftdimvec{d}'} \\[3mm]
-  \preimage{\OOcell}_{\ww'}^{u}:=\;& \pi_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}^{-1}(\OOcell_{\ww'}^{u}) = \preimage{\OOmcell}_{\tilde{w}}^{u,\tilde{u}}\hspace{2cm}&& \subseteq \St_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}  \\[3mm]
+  \preimage{\OOcell}_{\ww'}^{u}:=\;& \pi_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}^{-1}(\OOcell_{\ww'}^{u}) = \preimage{\OOmcell}_{\tilde{w}}^{u,\tilde{u}}\hspace{1cm}&& \subseteq \St_{\ftdimvec{d},\widetilde{\ftdimvec{d}}}  \\[3mm]
   \preimage{\Ocell}_{\ww}:=\;& \pi_{\dimvec{d}}^{-1}(\Ocell_{\ww})&& \subseteq \RRep_{\dimvec{d}}(Q) \\ 
   \preimage{\OOcell}_{\ww,\ww'}:=\;& \pi_{\dimvec{d},\dimvec{d}'}^{-1}(\OOcell_{\ww,\ww'})&& \subseteq \St_{\dimvec{d}} \\ 
   \preimage{\OOcell}_{\ww'}:=\;& \pi_{\dimvec{d},\dimvec{d}'}^{-1}(\OOcell_{\ww'})&& \subseteq \St_{\dimvec{d}} \\ 
@@ -1465,10 +1594,107 @@ It is not hard to see that they are stratifications:
 \begin{equation*}
 \begin{aligned}
   \RRep_{\ftdimvec{d}}(Q)=\;& \bigsqcup_{\ww} \preimage{\Omcell}_{w}^{u} \qquad &  \St_{\ftdimvec{d},\ftdimvec{d}'} =\;& \bigsqcup_{w} \preimage{\OOmcell}_{w'}^{u,u'} = \bigsqcup_{w,w'} \preimage{\OOmcell}_{w,w'}^{u,u'}  \\
-  \RRep_{\dimvec{d}}(Q)=\;& \bigsqcup_{\ww} \preimage{\Ocell}_{\ww} \qquad &  \St_{\ftdimvec{d},\ftdimvec{d}'} =\;& \bigsqcup_{\ww'} \preimage{\OOcell}_{\ww'} = \bigsqcup_{\ww,\ww'} \preimage{\OOcell}_{\ww,\ww'}  \\
+  \RRep_{\dimvec{d}}(Q)=\;& \bigsqcup_{\ww} \preimage{\Ocell}_{\ww} \qquad &  \St_{\dimvec{d}} =\;& \bigsqcup_{\ww'} \preimage{\OOcell}_{\ww'} = \bigsqcup_{\ww,\ww'} \preimage{\OOcell}_{\ww,\ww'}  \\
 \end{aligned}
 \end{equation*}
+
+\begin{proposition}
+Those stratifications are affine spaces over corresponding base spaces. To be precise,
+\begin{equation*}
+\begin{aligned}
+  \preimage{\Omcell}_{w}^{u}=\;& \mathfrak{r}_{wu}\text{-bundle over }\Omcell_{w}^{u}  \\ 
+  \preimage{\OOmcell}_{w,w'}^{u,u'}=\;&\mathfrak{r}_{wu,ww'u'}\text{-bundle over }\OOmcell_{w,w'}^{u,u'} \\ 
+  \preimage{\OOmcell}_{w'}^{u,u'}=\;&\mathfrak{r}_{u,w'u'}\text{-bundle over }\OOmcell_{w'}^{u,u'} \\[3mm]
+  \preimage{\OOcell}_{\ww'}^{u}=\;&\underline{\mathfrak{r}}_{u,\ww'}\text{-bundle over }\OOcell_{\ww'}^{u}  \\[3mm]
+  \preimage{\Ocell}_{\ww}=\;&\mathfrak{r}_{\ww}\text{-bundle over }\Ocell_{\ww} \\ 
+  \preimage{\OOcell}_{\ww,\ww'}=\;&\underline{\mathfrak{r}}_{\ww,\ww'}\text{-bundle over }\OOcell_{\ww,\ww'} \\ 
+  \preimage{\OOcell}_{\ww'}=\;&\underline{\mathfrak{r}}_{\Id,\ww'}\text{-bundle over }\OOcell_{\ww'} \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+The fibers are all computed over the preferred base point. The group action induces the isomorphism between different fibers, and lift affine local charts on base space (viewed as group quotient) to the local charts of fiber bundles. 
+\end{proof}
+
+We will frequently use closures of some stratifications, so we give them names.
+
+\begin{defn}
+We define
+\begin{equation*}
+\begin{aligned}
+  \St_{w'}^{u,u'}:=\;& \overline{\preimage{\OOmcell}}_{w'}^{u,u'} && \subseteq \hspace{7mm}\St^{u,u'}:= \St_{\ftdimvec{d},\ftdimvec{d}'}, \\
+  \St_{\ww'}:=\;& \overline{\preimage{\OOcell}}_{\ww'} && \subseteq \phantom{\hspace{7mm} \St^{u,u'}:=}\St_{\dimvec{d}}.
+\end{aligned}
+\end{equation*}
+\end{defn}
+
+\begin{proposition}[Properties of the closure]
+$\St_{\ww'}$ is a Zarisky-locally trivial cone bundle over $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$. To be precise, under the map
+$$\pi_{\dimvec{d},\dimvec{d},\ww'}: \St_{\ww'} \longrightarrow \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}},$$
+for any $x,x' \in \WWd$, $\pi_{\dimvec{d},\dimvec{d},\ww'}^{-1}(\OOcell_{x,x'})$ is a trivial fiber bundle over $\OOcell_{x,x'}$, whose fibers are cones.
+\end{proposition}
+I have no idea when $\St_{\ww'}$ is a Zarisky-locally trivial vector bundle. Let us see when we need this fact.
+
+\begin{remark}
+Notice that
+\begin{equation*}
+\begin{aligned}
+  \St_{w'}^{u,u'}:=\;& \overline{\preimage{\OOmcell}}_{w'}^{u,u'} && \subseteq \hspace{7mm}\preimage{\overline{\OOmcell}}_{w'}^{u,u'}:= \pi_{\ftdimvec{d},\ftdimvec{d}'}^{-1}\left( \overline{\OOmcell}_{w'}^{u,u'} \right), \\
+  \St_{\ww'}:=\;& \overline{\preimage{\OOcell}}_{\ww'} && \subseteq \hspace{7mm} \preimage{\overline{\OOcell}}_{\ww'} :=\pi_{\dimvec{d},\dimvec{d}}^{-1}\left( \overline{\OOcell}_{\ww'} \right).
+\end{aligned}
+\end{equation*}
+Even though these inclusions are usually not equalities, we can still say something when the length of $w'$ or $\ww'$ is small. For example,
+\begin{equation*}
+\begin{aligned}
+&\St_{\Id}^{u,u'}=\preimage{\OOmcell}_{\Id}^{u,u'} \\ 
+&\St_{\Id}=\preimage{\OOcell}_{\Id}\\
+\preimage{\OOmcell}_{s}^{u,u'}\sqcup \OOmcell_{\Id}^{u,u'} \subseteq &\St_{s}^{u,u'} \subseteq \preimage{\OOmcell}_{s}^{u,u'}\sqcup \preimage{\OOmcell}_{\Id}^{u,u'} \qquad &(s \in \Pi_{\dimvec{d}})\\
+ \preimage{\OOcell}_{s} \sqcup \left(\bigsqcup_{u:usu^{-1} \in \Wd}\OOcell_{\Id}^{u}\right) \subseteq& \St_{s} \subseteq \preimage{\OOcell}_{s} \sqcup \left(\bigsqcup_{u:usu^{-1} \in \Wd}\preimage{\OOcell}_{\Id}^{u}\right) \qquad &(s \in \Pi_{\phantom{d}})
+\end{aligned}
+\end{equation*}
+
+I have no idea if we have any accurate description for $\St_{s}^{u,u'}$ and $\St_{s}$.
+
+We end this subsection by Table ???:
+
+\end{remark}
 \subsection{$T$-fixed points}
+
+Compare with stratifications, $T$-fixed points are easy to compute and have clear structures. Somewhat surprisingly, these $T$-fixed points encode most information of varieties.
+
+Recall that the $T$-fixed points of a complete flag variety $\mathcal{F}$ are exactly those coordinate flags $\left\{ F_w \,\middle|\, w \in W \right\}$. For absolute or relative flag varieties, we have similar results:
+$$\mathcal{F}_{\abdimvec{d}}^{\absgp{T}_{\abdimvec{d}}} = \mathcal{F}_{\dimvec{d}}^{T_{\dimvec{d}}}= \left\{ F_{\ww} \,\middle|\, \ww \in \WWd \right\} \qquad \mathcal{F}_u^{T_{\dimvec{d}}} = \left\{ F_{wu} \,\middle|\, w \in \Wd \right\}$$ 
+For $\Rep_{\dimvec{d}}(Q)$, we get
+$$\big(\!\Rep_{\dimvec{d}}(Q) \big)^{T_{\dimvec{d}}} = \bigoplus_{a \in Q_1} \bigg( \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \bigg)^{T_{\dimvec{d}}} =\{ \rho_0 \}$$
+where $\rho_0$ is the zero representation in $\Rep_{\dimvec{d}}(Q)$.
+
+Combining these two results, one can easily describe $T$-fixed points of varieties constructed over them:
+\begin{equation*}
+\begin{aligned}
+  \left(\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}\right)^{\absgp{T}_{\abdimvec{d}}}=\;& \left\{  (F_{\ww},F_{\ww'}) \,\middle|\,  \ww,\ww' \in \WWd  \right\} \\ 
+  \left(\mathcal{F}_{u} \times \mathcal{F}_{u'}\right)^{T_{\dimvec{d}}}=\;&  \left\{  (F_{wu},F_{w'u'}) \,\middle|\,  w,w' \in \Wd  \right\} \\ 
+  \left(\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\right)^{T_{\dimvec{d}}}=\;&  \left\{  (F_{\ww},F_{\ww'}) \,\middle|\,  \ww,\ww' \in \WWd  \right\} \\ 
+  \left(\RRep_{\ftdimvec{d}}(Q)\right)^{T_{\dimvec{d}}}=\;& \left\{  (\rho_0,F_{wu}) \,\middle|\,  w \in \Wd  \right\} \\ 
+  \left(\RRep_{\dimvec{d}}(Q)\right)^{T_{\dimvec{d}}}=\;& \left\{  (\rho_0,F_{\ww}) \,\middle|\,  \ww \in \WWd  \right\} \\ 
+  \left(\St_{\ftdimvec{d},\ftdimvec{d}'}\right)^{T_{\dimvec{d}}}=\;&  \left\{  (\rho_0,F_{wu},F_{w'u'}) \,\middle|\,  w,w' \in \Wd  \right\}\\ 
+  \left(\St_{\dimvec{d}}\right)^{T_{\dimvec{d}}}=\;& \left\{  (\rho_0,F_{\ww},F_{\ww'}) \,\middle|\,  \ww,\ww' \in \WWd  \right\} \\ 
+\end{aligned}
+\end{equation*}
+Notice that, each $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$ contains exactly one $T_{\dimvec{d}}$-fixed point. Also, all the $T$-fixed points lie in the zero sections. By this reason, we can compute more:
+\begin{equation*}
+\begin{aligned}
+\left(\St_{\Id}^{u,u'}\right)^{T_{\dimvec{d}}}=\;&  \left\{  (\rho_0,F_{wu},F_{wu'}) \,\middle|\,  w \in \Wd  \right\}\\ 
+\left(\St_{\Id}\right)^{T_{\dimvec{d}}}=\;&  \left\{  (\rho_0,F_{\ww},F_{\ww}) \,\middle|\,  \ww \in \WWd  \right\}\\
+\left(\St_{s}^{u,u'}\right)^{T_{\dimvec{d}}} =\;&  \left\{  (\rho_0,F_{wu},F_{wsu'}) \,\middle|\,  w \in \Wd  \right\} \sqcup \left\{  (\rho_0,F_{wu},F_{wu'}) \,\middle|\,  w \in \Wd  \right\}\\
+ \left(\St_{s}\right)^{T_{\dimvec{d}}} =\;&  \left\{  (\rho_0,F_{\ww},F_{\ww s}) \,\middle|\,  \ww \in \WWd  \right\} \sqcup  \left\{  (\rho_0,F_{\ww},F_{\ww}) \,\middle|\,  \ww \in \WWd, \ww s \ww^{-1} \in \Wd  \right\}\\
+\end{aligned}
+\end{equation*}
+
+With huge effort, finally we fixed all the symbols and understand those typical varieties in detail.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
 
@@ -1569,7 +1795,7 @@ We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
 
 
 \end{defn}
-\section{Basic constructions: pullback, proper pushforward and tensor product}
+\section[Basic constructions]{Basic constructions: pullback, proper pushforward and tensor product}
 \subsection{pullback}
 \subsection{proper pushforward}
 \subsection{tensor product}
