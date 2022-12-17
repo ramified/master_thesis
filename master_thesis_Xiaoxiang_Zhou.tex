@@ -89,6 +89,7 @@
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
 \DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
 \DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
 \DeclareMathOperator{\Ext}{\operatorname{Ext}}
 \DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
@@ -1422,7 +1423,7 @@ $\mathcal{F}_{\dimvec{d}}$ has $3$ connected components, each of them has $2$ $B
         \caption{stratifications of $\mathcal{F}_{\dimvec{d}}\times \mathcal{F}_{\dimvec{d}}$}
         
 \end{table}
-We have given every orbit a name, and other spaces are finite union of these orbits, for example,
+We have given every orbit a name, and other spaces are finite union of these orbits. For example,
 \begin{equation*}
 \begin{aligned}
   \OOcell_{ts,s}=\;& \OOmcell_{t,\Id}^{s,\Id} \\ 
@@ -1435,7 +1436,7 @@ We have given every orbit a name, and other spaces are finite union of these orb
    \\  
 \end{aligned}
 \end{equation*}
-Their closures are also clear from the example, for example, 
+Their closures are also clear from the table, for example, 
 $$\overline{\OOcell}_s=\OOcell_{s} \sqcup \OOmcell_{\Id}^{st,st}$$
 contains $8$ $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbits.
 \end{eg}
@@ -1473,10 +1474,105 @@ It is not hard to see that they are stratifications:
 
 From my humble point of view, there is no easy cohomology theory, in a sense that key properties are usually hard to prove. On the other hand, plenty of examples can be quickly computed once we grasp some properties and use them in black boxes. Therefore, we won't prove any properties we stated. We have no choice but to do so, for the restricted space and time.
 
-The main reference for the K-theory is ???.
+The main reference for the $K$-theory is ???. 
+{
+%I don't know how to fix the problem where the latter $$$$ does not work.
+\makeatletter
+\g@addto@macro{\item}{%
+  \abovedisplayskip=0ex
+  \belowdisplayskip=0ex}
+\makeatother
+\begin{setting}
+Throughout abstract results of $K$-theory, we use the following notations:
+\begin{itemize}
+\setlength\itemsep{-2mm}
+\item $G$ stands for a linear algebraic group, i.e., a closed subgroup of $\GL_n(\mathbb{C})$. \footnote{The closed embedding $G \hookrightarrow \GL_n(\mathbb{C})$ is not considered as the data of $G$.} Denote
+$m: G \times G \longrightarrow G$
+as the multiplication map of $G$.
+\item $X$ is a variety over $\mathbb{C}$, i.e., a reduced, separated scheme of finite type over $\mathbb{C}$. We assume $X$ to be quasi-projective.
+\item 
+Usually, $X$ is equipped with an algebraic $G$-action (which is compatible with the variety structure of $G$ and $X$), then we say that $X$ is a $G$-variety. In that case, we will denote 
+$\alpha: G \times X \longrightarrow X$
+as the $G$-action map.
+\item $\mathcal{F}$ is usually a sheaf on $X$, which is not flag variety $\GL_n/B$.
+\end{itemize}
+\end{setting}
+}
 \section{Definitions and initial examples}
-We give definitions for both $K$-theory and cohomology theory, which are lengthy already.
+We give definition for $K$-theory, which is lengthy already. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
+
+\begin{defn}[G-equivariant sheaf, ???]
+For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.\footnote{Be careful, under this convention, the projection map $p_3^{23}=p_3^{13}: G \times X \longrightarrow X$ has subscription $3$, and $p_2$ means the projection from $G \times G \times X$ to the second $G$. This convention is different with notations in ???.}
+% https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
+\[\begin{tikzcd}[column sep={1.5cm,between origins}]
+	&& {G \times G \times X} &&&[2cm]\\
+	& {G \times G} && {G \times X} && {G \times X} \\
+	G && G && X &
+	\arrow["{p_1^{12}}"', from=2-2, to=3-1]
+	\arrow["{p_{12}}"', from=1-3, to=2-2]
+	\arrow["{p_{23}}", from=1-3, to=2-4]
+	\arrow["{p_3^{23}}", from=2-4, to=3-5]
+	\arrow["{p_2^{12}}", from=2-2, to=3-3]
+	\arrow["{p_2^{23}}"', from=2-4, to=3-3]
+	\arrow["{p_3^{13}}"{pos=0.3}, dashed, from=2-6, to=3-5]
+	\arrow["{p_1^{13}}"'{pos=0.2}, dashed, from=2-6, to=3-1]
+	\arrow["{p_{13}}", curve={height=-12pt}, from=1-3, to=2-6]
+\end{tikzcd}\]
+We have morphisms
+% https://q.uiver.app/?q=WzAsMyxbMSwwLCJHIFxcdGltZXMgWCJdLFswLDAsIkcgXFx0aW1lcyBYIFxcdGltZXMgWCJdLFsyLDAsIlgiXSxbMCwyLCJcXGFscGhhIiwwLHsib2Zmc2V0IjotMn1dLFswLDIsInBfM157MjN9PXBfM157MTN9IiwwLHsib2Zmc2V0IjoyfV0sWzEsMCwiXFxJZF9HIFxcdGltZXMgXFxhbHBoYSJdLFsxLDAsIm0gXFx0aW1lcyBcXElkX1giLDAseyJvZmZzZXQiOi00fV0sWzEsMCwicF97MjN9IiwwLHsib2Zmc2V0Ijo0fV1d
+\[\begin{tikzcd}[column sep=huge]
+	{G \times X \times X} & {G \times X} & X
+	\arrow["\alpha", shift left=3, from=1-2, to=1-3]
+	\arrow["{p_3^{23}=p_3^{13}}", shift right=3, from=1-2, to=1-3]
+	\arrow["{\Id_G \times \alpha}", from=1-1, to=1-2]
+	\arrow["{m \times \Id_X}", shift left=6, from=1-1, to=1-2]
+	\arrow["{p_{23}}", shift right=6, from=1-1, to=1-2]
+\end{tikzcd}\]
+which satisfies the "coequalizer conditions":
+\begin{equation*}
+\begin{aligned}
+  \alpha \circ (m \times \Id_X) =\;& \alpha \circ (\Id_G \times \alpha)  &\qquad (g_1,g_2,x) &\longmapsto g_1g_2x\\ 
+  p_3^{23} \circ (\Id_G \times \alpha) =\;& \alpha \circ p_{23}  & (g_1,g_2,x) &\longmapsto g_2x\\ 
+  p_3^{23} \circ (m \times \Id_X) =\;& p_3^{23} \circ p_{23}  & (g_1,g_2,x) &\longmapsto x\\ 
+\end{aligned}
+\end{equation*}
+
+A \textbf{$\mathbf{G}$-equivariant (coherent) sheaf}\footnote{we will omit the word "coherent" for shorter notation.} on $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with an isomorphism
+$$\phi_{\mathcal{F}}:\alpha^* \mathcal{F} \longrightarrow p_3^{23,*} \mathcal{F}$$
+such that the following diagram commutes:
+% https://q.uiver.app/?q=WzAsNixbMSwwLCIobSBcXHRpbWVzIFxcSWRfWCleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzIsMCwiKG0gXFx0aW1lcyBcXElkX1gpXiogcF8zXnsyMywqfSBcXG1hdGhjYWx7Rn0iXSxbMCwxLCIoXFxJZF9HIFxcdGltZXMgXFxhbHBoYSleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzMsMSwicF97MjN9XipwXzNeezIzLCp9IFxcbWF0aGNhbHtGfSJdLFsxLDIsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIHBfM157MjMsKn0gXFxtYXRoY2Fse0Z9Il0sWzIsMiwicF97MjN9XiogXFxhbHBoYV4qIFxcbWF0aGNhbHtGfSJdLFswLDEsIihtIFxcdGltZXMgXFxJZF9YKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il0sWzIsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsMywicF97MjN9XipcXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsyLDQsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il1d
+\[\begin{tikzcd}[column sep={2cm,between origins}]
+	& {(m \times \Id_X)^* \alpha^* \mathcal{F}} &[3.5cm] {(m \times \Id_X)^* p_3^{23,*} \mathcal{F}} &\\
+	{(\Id_G \times \alpha)^* \alpha^* \mathcal{F}} &&& {p_{23}^*p_3^{23,*} \mathcal{F}} \\
+	& {(\Id_G \times \alpha)^* p_3^{23,*} \mathcal{F}} & {p_{23}^* \alpha^* \mathcal{F}}
+	\arrow["{(m \times \Id_X)^* \phi_{\mathcal{F}}}", from=1-2, to=1-3]
+	\arrow[no head,equal, from=2-1, to=1-2]
+	\arrow[shift left=1, no head,equal, from=1-3, to=2-4]
+	\arrow[no head,equal, from=3-2, to=3-3]
+	\arrow["{p_{23}^*\phi_{\mathcal{F}}}", from=3-3, to=2-4]
+	\arrow["{(\Id_G \times \alpha)^* \phi_{\mathcal{F}}}", from=2-1, to=3-2]
+\end{tikzcd}\]
+
+A \textbf{($\mathbf{G}$-equivariant) morphism} $f: (\mathcal{F},\phi_{\mathcal{F}}) \longrightarrow (\mathcal{G},\phi_{\mathcal{G}})$ between two $G$-equivariant sheaves is a morphism $f:\mathcal{F} \longrightarrow \mathcal{G}$ in $\Coh(X)$ such that the diagram
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzAsMSwiXFxhbHBoYV4qIFxcbWF0aGNhbHtHfSJdLFsxLDAsInBfM157MjMsKn0gXFxtYXRoY2Fse0Z9Il0sWzEsMSwicF8zXnsyMywqfSBcXG1hdGhjYWx7R30iXSxbMCwyLCJcXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsxLDMsIlxccGhpX3tcXG1hdGhjYWx7R319Il0sWzAsMSwiXFxhbHBoYV4qIGYiLDJdLFsyLDMsInBfM157MjMsKn0gZiJdXQ==
+\[\begin{tikzcd}
+	{\alpha^* \mathcal{F}} & {p_3^{23,*} \mathcal{F}} \\
+	{\alpha^* \mathcal{G}} & {p_3^{23,*} \mathcal{G}}
+	\arrow["{\phi_{\mathcal{F}}}", from=1-1, to=1-2]
+	\arrow["{\phi_{\mathcal{G}}}", from=2-1, to=2-2]
+	\arrow["{\alpha^* f}"', from=1-1, to=2-1]
+	\arrow["{p_3^{23,*} f}", from=1-2, to=2-2]
+\end{tikzcd}\]
+commutes.
+
+We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
+
+
+\end{defn}
 \section{Basic constructions: pullback, proper pushforward and tensor product}
+\subsection{pullback}
+\subsection{proper pushforward}
+\subsection{tensor product}
 \section{Thom isomorphism}
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
