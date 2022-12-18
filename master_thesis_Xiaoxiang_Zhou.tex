@@ -83,6 +83,7 @@
 \DeclareMathOperator{\Id}{\operatorname{Id}}
 \DeclareMathOperator{\rep}{\operatorname{rep}}
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
 \DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
 \DeclareMathOperator{\Mod}{\operatorname{Mod}}
 \DeclareMathOperator{\Coh}{\operatorname{Coh}}
@@ -92,9 +93,13 @@
 \DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
 \DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
 \DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Alggp}{\text{-Alg gp}}
 \DeclareMathOperator{\Pic}{\operatorname{Pic}}
 \DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\pt}{\operatorname{pt}}
 \DeclareMathOperator{\ptt}{\operatorname{par}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
 \newcommand{\Spec}{\operatorname{Spec}}
 \DeclareMathOperator{\St}{\mathcal{Z}}
 \DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
@@ -205,6 +210,7 @@ I made some assumptions during the writing. To avoid confusing readers, these as
 
 We introduce the complete flag variety to give a bird's eye view on the whole section. Actually, the entire difficulty is bundled in this example.
 
+\begin{setting}\label{set:initial_case}
 Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup, Weyl group respectively, i.e.,
 {
 \setlength\arraycolsep{1pt}
@@ -232,6 +238,8 @@ N= \begin{pmatrix}
 $$
 $$W:= N_{\GL_n}(T)/T \cong S_n$$
 }
+\end{setting}
+
 \subsection{$\mathcal{F}$}
 \begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
@@ -1507,7 +1515,7 @@ when we work over base point $F_{u,u'}$. If we work over different base points, 
 \end{aligned}
 \end{equation*}
 
-Closures of $\OOcell$-cells are obtained by identifications (\ref{eq:identification}). To illustrate it, we compute $\overline{\OOcell}_s$ by hand. Let $\ww'=s, us=\tilde{w}\tilde{u}$,
+Closures of $\OOcell$-cells are obtained by identifications \eqref{eq:identification}. To illustrate it, we compute $\overline{\OOcell}_s$ by hand. Let $\ww'=s, us=\tilde{w}\tilde{u}$,
  
 \begin{equation*}
 \begin{aligned}
@@ -1766,54 +1774,199 @@ For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ a
 We have morphisms
 % https://q.uiver.app/?q=WzAsMyxbMSwwLCJHIFxcdGltZXMgWCJdLFswLDAsIkcgXFx0aW1lcyBYIFxcdGltZXMgWCJdLFsyLDAsIlgiXSxbMCwyLCJcXGFscGhhIiwwLHsib2Zmc2V0IjotMn1dLFswLDIsInBfM157MjN9PXBfM157MTN9IiwwLHsib2Zmc2V0IjoyfV0sWzEsMCwiXFxJZF9HIFxcdGltZXMgXFxhbHBoYSJdLFsxLDAsIm0gXFx0aW1lcyBcXElkX1giLDAseyJvZmZzZXQiOi00fV0sWzEsMCwicF97MjN9IiwwLHsib2Zmc2V0Ijo0fV1d
 \[\begin{tikzcd}[column sep=huge]
-	{G \times X \times X} & {G \times X} & X
-	\arrow["\alpha", shift left=3, from=1-2, to=1-3]
-	\arrow["{p_3^{23}=p_3^{13}}", shift right=3, from=1-2, to=1-3]
-	\arrow["{\Id_G \times \alpha}", from=1-1, to=1-2]
+	{G \times G \times X} & {G \times X} & X
+	\arrow["{p_3^{23}=p_3^{13}}", shift left=3, from=1-2, to=1-3]
+	\arrow["\alpha", shift right=3, from=1-2, to=1-3]
+	\arrow["{p_{23}}", from=1-1, to=1-2]
 	\arrow["{m \times \Id_X}", shift left=6, from=1-1, to=1-2]
-	\arrow["{p_{23}}", shift right=6, from=1-1, to=1-2]
+	\arrow["{\Id_G \times \alpha}", shift right=6, from=1-1, to=1-2]
 \end{tikzcd}\]
 which satisfies the "coequalizer conditions":
 \begin{equation*}
 \begin{aligned}
-  \alpha \circ (m \times \Id_X) =\;& \alpha \circ (\Id_G \times \alpha)  &\qquad (g_1,g_2,x) &\longmapsto g_1g_2x\\ 
-  p_3^{23} \circ (\Id_G \times \alpha) =\;& \alpha \circ p_{23}  & (g_1,g_2,x) &\longmapsto g_2x\\ 
   p_3^{23} \circ (m \times \Id_X) =\;& p_3^{23} \circ p_{23}  & (g_1,g_2,x) &\longmapsto x\\ 
+  p_3^{23} \circ (\Id_G \times \alpha) =\;& \alpha \circ p_{23}  & (g_1,g_2,x) &\longmapsto g_2x\\ 
+  \alpha \circ (m \times \Id_X) =\;& \alpha \circ (\Id_G \times \alpha)  &\qquad (g_1,g_2,x) &\longmapsto g_1g_2x\\ 
 \end{aligned}
 \end{equation*}
 
 A \textbf{$\mathbf{G}$-equivariant (coherent) sheaf}\footnote{we will omit the word "coherent" for shorter notation.} on $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with an isomorphism
-$$\phi_{\mathcal{F}}:\alpha^* \mathcal{F} \longrightarrow p_3^{23,*} \mathcal{F}$$
+$$\phi_{\mathcal{F}}: p_3^{23,*}\mathcal{F} \longrightarrow \alpha^* \mathcal{F}$$
 such that the following diagram commutes:
 % https://q.uiver.app/?q=WzAsNixbMSwwLCIobSBcXHRpbWVzIFxcSWRfWCleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzIsMCwiKG0gXFx0aW1lcyBcXElkX1gpXiogcF8zXnsyMywqfSBcXG1hdGhjYWx7Rn0iXSxbMCwxLCIoXFxJZF9HIFxcdGltZXMgXFxhbHBoYSleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzMsMSwicF97MjN9XipwXzNeezIzLCp9IFxcbWF0aGNhbHtGfSJdLFsxLDIsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIHBfM157MjMsKn0gXFxtYXRoY2Fse0Z9Il0sWzIsMiwicF97MjN9XiogXFxhbHBoYV4qIFxcbWF0aGNhbHtGfSJdLFswLDEsIihtIFxcdGltZXMgXFxJZF9YKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il0sWzIsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsMywicF97MjN9XipcXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsyLDQsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il1d
-\[\begin{tikzcd}[column sep={2cm,between origins}]
-	& {(m \times \Id_X)^* \alpha^* \mathcal{F}} &[3.5cm] {(m \times \Id_X)^* p_3^{23,*} \mathcal{F}} &\\
-	{(\Id_G \times \alpha)^* \alpha^* \mathcal{F}} &&& {p_{23}^*p_3^{23,*} \mathcal{F}} \\
-	& {(\Id_G \times \alpha)^* p_3^{23,*} \mathcal{F}} & {p_{23}^* \alpha^* \mathcal{F}}
+\begin{equation}\label{eq:associative_constraint}
+\begin{tikzcd}[column sep={2cm,between origins}]
+	&{(m \times \Id_X)^* p_3^{23,*} \mathcal{F}}  &[3.5cm]{(m \times \Id_X)^* \alpha^* \mathcal{F}}  &\\
+	{p_{23}^*p_3^{23,*} \mathcal{F}} &&&  {(\Id_G \times \alpha)^* \alpha^* \mathcal{F}}\\
+	& {p_{23}^* \alpha^* \mathcal{F}} &{(\Id_G \times \alpha)^* p_3^{23,*} \mathcal{F}} 
 	\arrow["{(m \times \Id_X)^* \phi_{\mathcal{F}}}", from=1-2, to=1-3]
 	\arrow[no head,equal, from=2-1, to=1-2]
 	\arrow[shift left=1, no head,equal, from=1-3, to=2-4]
 	\arrow[no head,equal, from=3-2, to=3-3]
-	\arrow["{p_{23}^*\phi_{\mathcal{F}}}", from=3-3, to=2-4]
-	\arrow["{(\Id_G \times \alpha)^* \phi_{\mathcal{F}}}", from=2-1, to=3-2]
-\end{tikzcd}\]
+	\arrow["{(\Id_G \times \alpha)^* \phi_{\mathcal{F}}}", from=3-3, to=2-4]
+	\arrow["{p_{23}^*\phi_{\mathcal{F}}}", from=2-1, to=3-2]
+\end{tikzcd}
+\end{equation}
 
 A \textbf{($\mathbf{G}$-equivariant) morphism} $f: (\mathcal{F},\phi_{\mathcal{F}}) \longrightarrow (\mathcal{G},\phi_{\mathcal{G}})$ between two $G$-equivariant sheaves is a morphism $f:\mathcal{F} \longrightarrow \mathcal{G}$ in $\Coh(X)$ such that the diagram
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzAsMSwiXFxhbHBoYV4qIFxcbWF0aGNhbHtHfSJdLFsxLDAsInBfM157MjMsKn0gXFxtYXRoY2Fse0Z9Il0sWzEsMSwicF8zXnsyMywqfSBcXG1hdGhjYWx7R30iXSxbMCwyLCJcXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsxLDMsIlxccGhpX3tcXG1hdGhjYWx7R319Il0sWzAsMSwiXFxhbHBoYV4qIGYiLDJdLFsyLDMsInBfM157MjMsKn0gZiJdXQ==
-\[\begin{tikzcd}
-	{\alpha^* \mathcal{F}} & {p_3^{23,*} \mathcal{F}} \\
-	{\alpha^* \mathcal{G}} & {p_3^{23,*} \mathcal{G}}
+\begin{equation}\label{eq:equiv_morphism}
+\begin{tikzcd}
+	{ p_3^{23,*} \mathcal{F}} & {\alpha^* \mathcal{F}} \\
+	{ p_3^{23,*} \mathcal{G}} & {\alpha^* \mathcal{G}}
 	\arrow["{\phi_{\mathcal{F}}}", from=1-1, to=1-2]
 	\arrow["{\phi_{\mathcal{G}}}", from=2-1, to=2-2]
-	\arrow["{\alpha^* f}"', from=1-1, to=2-1]
-	\arrow["{p_3^{23,*} f}", from=1-2, to=2-2]
-\end{tikzcd}\]
+	\arrow["{p_3^{23,*} f}"', from=1-1, to=2-1]
+	\arrow["{\alpha^* f}", from=1-2, to=2-2]
+\end{tikzcd}
+\end{equation}
 commutes.
 
 We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
 
 
 \end{defn}
+\begin{defn}[$G$-equivariant $K$-theory]
+For a $G$-variety $X$, the $G$-equivariant $K$-theory is defined as the Grothendieck group of $G$-equivariant coherent sheaves over $X$, i.e.,
+$$K_0^G(X):= K_0(\Coh^G(X)).$$
+Specifically, for a point $\pt=\Spec \mathbb{C}$ with trivial $G$-action, denote
+$$\Rpt(G):= K_0^G(\pt)=K_0(\Rep(G))$$
+as the representation ring of group $G$.
+\end{defn}
+
+Let us unravel this construction a little bit. For (geometrical) points $g,g_1,g_2 \in G$, denote that
+\begin{equation*}
+\begin{aligned}
+  \iota_{g}:\;&  X \longrightarrow G \times X \qquad & x & \longmapsto (g,x)  \\ 
+  \iota_{g_1,g_2}:\;&  X \longrightarrow G \times G \times X \qquad & x & \longmapsto (g_1,g_2,x)  \\
+  \alpha_{g}:\;& \hspace{-2mm} \begin{tikzcd}[column sep=7mm]
+  	X & {G \times X} & X
+  	\arrow["\alpha", from=1-2, to=1-3]
+  	\arrow["{\iota_g}", hook, from=1-1, to=1-2]
+  \end{tikzcd} \qquad & x & \longmapsto gx  \\
+\end{aligned}
+\end{equation*}
+By pulling back along $\iota_{g}$ and $\iota_{g_1,g_2}$, we can see geometrical meanings in the expressions. Apply $\iota_{g}^{*}$ to $\phi_{\mathcal{F}}$, one get
+% https://q.uiver.app/?q=WzAsNCxbMiwwLCIgXFxwaGlfe2cseH1ee1xcbWF0aGNhbHtGfX1cXGhhdHs9fVxcbGVmdChcXGlvdGFfe2d9XnsqfVxccGhpX3tcXG1hdGhjYWx7Rn19XFxyaWdodClfeDogXFxtYXRoY2Fse0Z9X3giXSxbMCwwLCJcXGlvdGFfe2d9XnsqfVxccGhpX3tcXG1hdGhjYWx7Rn19OiBcXG1hdGhjYWx7Rn0iXSxbMSwwLCJcXGFscGhhX3tnfV57Kn1cXG1hdGhjYWx7Rn0iXSxbMywwLCJcXG1hdGhjYWx7Rn1fe2d4fSJdLFswLDNdLFsxLDJdLFsyLDAsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjozMCwidGFyZ2V0IjozMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
+\[\begin{tikzcd}
+	{\iota_{g}^{*}\phi_{\mathcal{F}}: \mathcal{F}} & {\alpha_{g}^{*}\mathcal{F}} &[1.5cm] { \phi_{g,x}^{\mathcal{F}}\hat{=}\left(\iota_{g}^{*}\phi_{\mathcal{F}}\right)_x: \mathcal{F}_x} & {\mathcal{F}_{gx}}
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-1, to=1-2]
+	\arrow[shorten <=7mm, shorten >=7mm,squiggly={
+	               pre length=7mm, post length=7mm
+	             }, maps to, from=1-2, to=1-3]
+\end{tikzcd}\]
+Therefore, $\phi_{\mathcal{F}}$ encodes information of $G$-action on $\mathcal{F}$, which is $G$-equivariant.
+
+Now we apply $\iota_{g_1,g_2}^{*}$ to \eqref{eq:associative_constraint}:
+% https://q.uiver.app/?q=WzAsOCxbMywwLCIgXFxtYXRoY2Fse0Z9X3giXSxbMCwwLCJcXG1hdGhjYWx7Rn0iXSxbMiwwLCJcXGFscGhhX3tnXzEsZ18yfV57Kn1cXG1hdGhjYWx7Rn09XFxhbHBoYV97Z18xfV57Kn1cXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfSJdLFs1LDAsIlxcbWF0aGNhbHtGfV97Z18xZ18yeH0iXSxbMSwyLCJcXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfSJdLFs0LDIsIlxcbWF0aGNhbHtGfV97Z18yeH0iXSxbMiwxXSxbMywxXSxbMCwzLCJcXHBoaV97Z18xZ18yLHh9XntcXG1hdGhjYWx7Rn19Il0sWzEsMiwiXFxpb3RhX3tnXzEsZ18yfV57Kn1cXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsxLDQsIlxcaW90YV97Z18yfV57Kn1cXHBoaV97XFxtYXRoY2Fse0Z9fSIsMl0sWzQsMiwiXFxpb3RhX3tnXzF9XnsqfVxccGhpX3tcXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfX0iLDJdLFswLDUsIlxccGhpX3tnXzIseH1ee1xcbWF0aGNhbHtGfX0iLDJdLFs1LDMsIlxccGhpX3tnXzEsZ18yeH1ee1xcbWF0aGNhbHtGfX09XFxwaGlfe2dfMSx4fV57XFxhbHBoYV97Z18yfV57Kn1cXG1hdGhjYWx7Rn19IiwyXSxbNiw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MzAsInRhcmdldCI6MzB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dXQ==
+\[\begin{tikzcd}[column sep={2cm,between origins}, row sep=small]
+	{\mathcal{F}} && {\makebox[10ex][l]{$\alpha_{g_1,g_2}^{*}\mathcal{F}=\alpha_{g_1}^{*}\alpha_{g_2}^{*}\mathcal{F}$}} & [2cm]{ \mathcal{F}_x} && {\mathcal{F}_{g_1g_2x}} \\
+	&& {} & {} \\
+	& {\alpha_{g_2}^{*}\mathcal{F}} &&& {\mathcal{F}_{g_2x}}
+	\arrow["{\phi_{g_1g_2,x}^{\mathcal{F}}}", from=1-4, to=1-6]
+	\arrow["{\iota_{g_1,g_2}^{*}\phi_{\mathcal{F}}}", from=1-1, to=1-3]
+	\arrow["{\iota_{g_2}^{*}\phi_{\mathcal{F}}}"', from=1-1, to=3-2]
+	\arrow["{\iota_{g_1}^{*}\phi_{\alpha_{g_2}^{*}\mathcal{F}}}"', from=3-2, to=1-3]
+	\arrow["{\phi_{g_2,x}^{\mathcal{F}}}"', from=1-4, to=3-5]
+	\arrow["{\phi_{g_1,g_2x}^{\mathcal{F}}=\phi_{g_1,x}^{\alpha_{g_2}^{*}\mathcal{F}}}"', from=3-5, to=1-6]
+	\arrow[shorten <=17mm, shorten >=7mm,squiggly={
+		               pre length=17mm, post length=7mm
+		             }, maps to, from=2-3, to=2-4]
+\end{tikzcd}\]
+So \eqref{eq:associative_constraint} is just the associative constraint of the $G$-structure on $\mathcal{F}$.
+
+Similarly, apply $\iota_{g}^{*}$ to \eqref{eq:equiv_morphism}, we get
+% https://q.uiver.app/?q=WzAsMTAsWzIsMCwiIFxcbWF0aGNhbHtGfV94Il0sWzAsMCwiXFxtYXRoY2Fse0Z9Il0sWzEsMCwiXFxhbHBoYV97Z31eeyp9XFxtYXRoY2Fse0Z9Il0sWzMsMCwiXFxtYXRoY2Fse0Z9X3tneH0iXSxbMCwyLCJcXG1hdGhjYWx7R30iXSxbMiwyLCIgXFxtYXRoY2Fse0d9X3giXSxbMSwxXSxbMiwxXSxbMSwyLCJcXGFscGhhX3tnfV57Kn1cXG1hdGhjYWx7R30iXSxbMywyLCJcXG1hdGhjYWx7R31fe2d4fSJdLFswLDMsIlxccGhpX3tnLHh9XntcXG1hdGhjYWx7Rn19Il0sWzEsMiwiXFxpb3RhX3tnfV57Kn1cXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsxLDQsImYiLDJdLFswLDUsImZfeCIsMl0sWzYsNywiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjMwLCJ0YXJnZXQiOjMwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMiw4LCJcXGFscGhhX3tnfV57Kn1mIl0sWzQsOCwiXFxpb3RhX3tnfV57Kn1cXHBoaV97XFxtYXRoY2Fse0d9fSJdLFs1LDksIlxccGhpX3tnLHh9XntcXG1hdGhjYWx7R319Il0sWzMsOSwiZl97Z3h9Il1d
+\[\begin{tikzcd}[row sep=tiny]
+	{\mathcal{F}} & {\alpha_{g}^{*}\mathcal{F}} &[15mm] { \mathcal{F}_x} & {\mathcal{F}_{gx}} \\
+	& {} & {} \\
+	{\mathcal{G}} & {\alpha_{g}^{*}\mathcal{G}} & { \mathcal{G}_x} & {\mathcal{G}_{gx}}
+	\arrow["{\phi_{g,x}^{\mathcal{F}}}", from=1-3, to=1-4]
+	\arrow["{\iota_{g}^{*}\phi_{\mathcal{F}}}", from=1-1, to=1-2]
+	\arrow["f"', from=1-1, to=3-1]
+	\arrow["{f_x}"', from=1-3, to=3-3]
+	\arrow[shorten <=9mm, shorten >=9mm,squiggly={
+		               pre length=9mm, post length=9mm
+		             }, maps to, from=2-2, to=2-3]
+	\arrow["{\alpha_{g}^{*}f}", from=1-2, to=3-2]
+	\arrow["{\iota_{g}^{*}\phi_{\mathcal{G}}}", from=3-1, to=3-2]
+	\arrow["{\phi_{g,x}^{\mathcal{G}}}", from=3-3, to=3-4]
+	\arrow["{f_{gx}}", from=1-4, to=3-4]
+\end{tikzcd}\]
+So \eqref{eq:equiv_morphism} is just the condition for $f$ to be $G$-equivariant.
+
+There are two extreme situations worth mentioning about. 
+When $G=\Id$, there is no $G$-action structure constrain on varieties and sheaves. Therefore,
+$$\Coh^{\Id}(X)=\Coh(X) \qquad K_0^{\Id}(X)=K_0(X)\hat{=} K_0(\Coh(X)).$$
+When $G$ acts on $X=\Spec A$ trivially, any sheaf $\mathcal{F} \in \Coh^G(X)$ can be viewed as an (finitely generated)\footnote{We already assume $X$ to be of finite type, so coherent condition is equivalent to finitely generated condition.} $A$-module $M$ with $G$-action, so
+$$\Coh^G(X)=\rep_A(G) \xlongequal{\text{when $G$ is finite}} \Mod(A[G]).$$
+In particular, any sheaf $\mathcal{F} \in \Coh^G(\pt)$ can be viewed as a finite dimensional complex $G$-representation, so
+$$\Coh^G(\pt)=\rep_{\mathbb{C}}(G) \xlongequal{\text{when $G$ is finite}} \Mod(\mathbb{C}[G]).$$
+
+???(If I have time I will compute $K_0(\mathbb{P}^1)$ here.)
+\subsection{Representation ring $\Rpt(G)$}
+Now let us try to figure out some examples.
+
+Recall that any coherent sheaf over $\pt$ is equivalent to a finite dimensional $\mathbb{C}$-vector space, and any $G$-equivariant coherent sheaf over $\pt$ is equivalent to a finite dimensional complex $G$-representation. Moreover, by Jordan-Hölder theorem, every finite dimensional complex $G$-representation can be written as a composition series such that each quotient object is irreducible. Therefore,
+$$\Rpt(G)=\bigoplus_{\rho \in \Irr(G)} \mathbb{Z}$$
+as a free $\mathbb{Z}$-module.
+
+For $\Rpt(G)$, we have the multiplication structure induced by tensor products on complex $G$-representations. Let us see some examples now. We use Setting \ref{set:initial_case} in these examples.
+
+\begin{eg}
+For trivial group $\Id$, every $\Id$-representation is just a $\mathbb{C}$-vector space, which can be written as the direct sum of $1$-dimensional vector spaces. Therefore,
+$$\Rpt(\Id)=\mathbb{Z}.$$
+\end{eg}
+
+\begin{eg}
+For group $T$, since $T$ is abelian, every $T$-representation can be written as direct sum of $1$-dimensional vector spaces. Furthermore,
+\begin{equation*}
+\begin{aligned}
+  \Irr(T)=\;&  \left\{ \rho: T \longrightarrow \mathbb{C}^{\times} \;\middle|\;\rho \text{ is an (algebraic) group homomorphism}  \right\} \\ 
+  =\;& \Hom_{\mathbb{C}\Alggp}(T, \mathbb{C}^{\times}):= X^{*}(T)
+\end{aligned}
+\end{equation*} 
+We get
+$$\Rpt(T)=\bigoplus_{\rho \in \Irr(T)} \mathbb{Z}=\mathbb{Z}\left[X^{*}(T) \right].$$
+The group structure in $X^{*}(T)$ is given by tensor product, so the multiplication structure is induced by the group structure in $X^{*}(T)$. Denote 
+$$\varepsilon_i: T \longrightarrow \mathbb{C}^{\times} \qquad \begin{pmatrix}
+t_1 &&&&\\[-3mm]
+& \ddots&&&\\[-1mm]
+&&t_i&&\\[-3mm]
+&&& \ddots&\\[-1mm]
+&&&&t_n\\
+\end{pmatrix} \longmapsto t_i$$
+as a $\mathbb{Z}$-basis of $X^{*}(T)$, then 
+$$\Rpt(T) \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]$$
+as a $\mathbb{Z}$-algebra.
+
+By forgetting $T$-actions, we get a morphism of $\mathbb{Z}$-algebra
+$$\Rpt(T) \longrightarrow \Rpt(\Id) \qquad f(\varepsilon_1,\ldots,\varepsilon_n) \longmapsto f(1,\ldots,1).$$
+\end{eg}
+
+\begin{eg}
+After we prove the reduction theorem ???(ref), we can show that
+$$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]$$
+\end{eg}
+
+\begin{eg}
+By ???(ref Thm 6.1.4),
+$$\Rpt(\GL_n) \cong \Rpt(T)^{W} \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]^{S_n}.$$
+This can be viewed as a "group" analogue of Chevalley restriction theorem. Notice that we have clear description of finite dimensional irreducible representations of $\GL_n$, and the forget map
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHJlcChcXEdMX24pIl0sWzEsMCwiXFxyZXAoVCkiXSxbMiwwLCJcXFJwdChcXEdMX24pIl0sWzMsMCwiXFxScHQoVCkiXSxbMiwzXSxbMCwxXSxbMSwyLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
+\[\begin{tikzcd}
+	{\rep(\GL_n)} & {\rep(T)} &[1.5cm] {\Rpt(\GL_n)} & {\Rpt(T)}
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-1, to=1-2]
+	\arrow[shorten <=7mm, shorten >=7mm,squiggly={
+		               pre length=7mm, post length=7mm
+		             }, maps to, from=1-2, to=1-3]
+\end{tikzcd}\]
+views $\GL_n$-representations as special $W$-invariant $T$-representations.
+\end{eg}
+
+From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some factors of $K$-theory.
 \section[Basic constructions]{Basic constructions: pullback, proper pushforward and tensor product}
 \subsection{pullback}
 \subsection{proper pushforward}
@@ -1821,6 +1974,17 @@ We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
 \section{Thom isomorphism}
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
+\begin{defn}[Contracted product]
+Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety. The contracted product of $G$ and $X$ over $H$ is defined as
+$$G \times^H X :=(G \times X)/\sim$$
+where
+$$(gh,x) \sim (g,hx) \qquad \text{ for any $g \in G$, $h \in H$, $x \in X$.}$$
+\end{defn}
+$G \times^H X$ has a natural variety structure, which is not easy to construct. $G$ acts on $G \times^H X$ by multiplying from the left side. We have a $G$-equivariant flat morphism
+$$G \times^H X \longrightarrow G/H \qquad (g,x) \longrightarrow gH$$
+which realize $G \times^H X$ as an $X$-bundle over $G/H$. In particular, for $X=\pt$, we get an isomorphism of $G$-varieties
+$$G \times^H \pt \stackrel{\sim}{\longrightarrow} G/H.$$
+
 \section{Reduction}
 \section{Equivariant cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
