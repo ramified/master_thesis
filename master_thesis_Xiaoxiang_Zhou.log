@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 DEC 2022 15:17
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 DEC 2022 16:26
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -2107,10 +2107,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1906.
 Here is how much of TeX's memory you used:
  39545 strings out of 427748
  722424 string characters out of 3150981
- 900465 words of memory out of 3000000
+ 900442 words of memory out of 3000000
  42942 multiletter control sequences out of 15000+200000
  569326 words of font info for 191 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,22n,84p,3277b,1277s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,22n,84p,3277b,1267s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on master_thesis_Xiaoxiang_Zhou.pdf (45 pages).

@@ -152,8 +152,8 @@
 
 % HIGHLIGHTING
 
-\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
-
+%\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
+\newcommand{\lbox}{\adjustbox{}}
 % from https://tex.stackexchange.com/questions/63545/big-tilde-in-math-mode
 
 %https://tex.stackexchange.com/questions/456307/invalid-use-of-intertext-in-aligned
@@ -948,7 +948,7 @@ We will view $B_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $G_{\dimvec{
 
 \begin{remark}\label{rmk:Borel_difference}
 Be careful that $B_{\ww} \neq \ww B_{\dimvec{d}} \ww^{-1}$. Actually,
-$$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}} \cap B_{\dimvec{d}}=wB_{\dimvec{d}}w^{-1}$$
+$$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}}\ww^{-1} \cap B_{\dimvec{d}}=wB_{\dimvec{d}}w^{-1}$$
 The difference is clearly shown in Table \ref{table:smalleg_Weyl}.
 \end{remark}
 
