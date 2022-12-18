@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 DEC 2022 23:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 DEC 2022 15:17
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1647,53 +1647,53 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
  (master_thesis_Xiaoxiang_Zhou.aux)
 \openout1 = `master_thesis_Xiaoxiang_Zhou.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
-LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 168.
+LaTeX Font Info:    ... okay on input line 168.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 172.
+LaTeX Font Info:    Try loading font information for U+msa on input line 168.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 172.
+LaTeX Font Info:    Try loading font information for U+msb on input line 168.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 172.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 168.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 172.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 168.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Package xypdf Info: Line width: 0.43799pt on input line 172.
+Package xypdf Info: Line width: 0.43799pt on input line 168.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1730,7 +1730,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 172.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring OFF on input line 172.
+Package hyperref Info: Link coloring OFF on input line 168.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1746,9 +1746,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count343
 )
-LaTeX Info: Redefining \ref on input line 172.
-LaTeX Info: Redefining \pageref on input line 172.
-LaTeX Info: Redefining \nameref on input line 172.
+LaTeX Info: Redefining \ref on input line 168.
+LaTeX Info: Redefining \pageref on input line 168.
+LaTeX Info: Redefining \nameref on input line 168.
  (master_thesis_Xiaoxiang_Zhou.out)
 (master_thesis_Xiaoxiang_Zhou.out)
 \@outlinefile=\write5
@@ -1776,36 +1776,36 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 Chapter 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 208.
+(hyperref)                removing `\times' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 235.
 
 [5
 
 ]
-Overfull \hbox (21.6989pt too wide) in paragraph at lines 279--280
+Overfull \hbox (21.6989pt too wide) in paragraph at lines 275--276
 []\TU/lmr/m/n/10.95 Readers can verify that $[]$ are all $\OML/cmm/m/it/10.95 T
 $\TU/lmr/m/n/10.95 -fixed points of $\OMS/cmsy/m/n/10.95 F$\TU/lmr/m/n/10.95 , 
 while $[]$
@@ -1813,29 +1813,29 @@ while $[]$
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 306.
+               Default added (so using `tbp') on input line 302.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 318.
+               Default added (so using `tbp') on input line 314.
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 336.
+(hyperref)                removing `math shift' on input line 332.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 336.
+(hyperref)                removing `\times' on input line 332.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 336.
+(hyperref)                removing `math shift' on input line 332.
 
-[7]
+[7] [8]
 File: figures/table/table_1.pdf Graphic file (type pdf)
 <use figures/table/table_1.pdf>
- [8] [9] [10] [11] [12]
+ [9] [10] [11] [12]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1888,51 +1888,51 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (45.23189pt too wide) detected at line 781
+Overfull \hbox (45.23189pt too wide) detected at line 785
 [][]
  []
 
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 [14]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 File: figures/table/table_basic_information.pdf Graphic file (type pdf)
 <use figures/table/table_basic_information.pdf>
  [15] [16]
@@ -1947,74 +1947,78 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
+Underfull \vbox (badness 3019) has occurred while \output is active []
+
+ [17]
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1143.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1156.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1143.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1156.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 1143.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1156.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [17] [18] [19]
+) [18] [19] [20]
 File: figures/comm_diagram/incidence_variety_1.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_1.pdf>
 File: figures/comm_diagram/incidence_variety_2.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_2.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1326--1331
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1339--1344
 [][] [] 
  []
 
-[20]
+[21]
 File: figures/comm_diagram/incidence_variety_3.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_3.pdf>
 File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_4.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1369--1374
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1382--1387
 [][] [] 
  []
 
-[21]
+[22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1386.
+(hyperref)                removing `math shift' on input line 1399.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1386.
+(hyperref)                removing `math shift' on input line 1399.
 
-[22] [23] [24]
+[23] [24] [25]
 File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
- [25] [26] [27]
+ [26] [27] [28]
+File: figures/table/table_orbit.pdf Graphic file (type pdf)
+<use figures/table/table_orbit.pdf>
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1662.
+(hyperref)                removing `math shift' on input line 1681.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1662.
+(hyperref)                removing `math shift' on input line 1681.
 
-[28] [29] [30
-
-]
+[29] [30]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1699.
+(hyperref)                removing `math shift' on input line 1718.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1699.
+(hyperref)                removing `math shift' on input line 1718.
 
 
-Overfull \hbox (10.4609pt too wide) in paragraph at lines 1731--1733
+Overfull \hbox (10.4609pt too wide) in paragraph at lines 1750--1752
 [][]\TU/lmr/bx/n/10.95 Definition 2.1.1 \TU/lmr/m/n/10.95 (G-equivariant sheaf,
  ???)\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 For a $\OML/cmm/m/it/10.95 G$\TU
 /lmr/m/it/10.95 -variety $\OML/cmm/m/it/10.95 X$\TU/lmr/m/it/10.95 , denote $\O
@@ -2022,7 +2026,9 @@ ML/cmm/m/it/10.95 p[]; p[] \OT1/cmr/m/n/10.95 := \OML/cmm/m/it/10.95 p[]; p[] \
 OT1/cmr/m/n/10.95 :=
  []
 
-[31] [32] [33] [34
+[31
+
+] [32] [33] [34
 
 ]
 Chapter 3.
@@ -2034,75 +2040,75 @@ Chapter 4.
 
 ]
 Chapter 5.
-[39] [40
-
-]
+[39] [40]
 Chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1833.
+(hyperref)                removing `math shift' on input line 1890.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1833.
+(hyperref)                removing `\times' on input line 1890.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1833.
+(hyperref)                removing `superscript' on input line 1890.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 1833.
+(hyperref)                removing `\times' on input line 1890.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1833.
+(hyperref)                removing `math shift' on input line 1890.
 
-[41] [42
+[41
+
+] [42
 
 ]
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1839.
+(hyperref)                removing `math shift' on input line 1896.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1839.
+(hyperref)                removing `subscript' on input line 1896.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1839.
+(hyperref)                removing `math shift' on input line 1896.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1840.
+(hyperref)                removing `math shift' on input line 1897.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1840.
+(hyperref)                removing `math shift' on input line 1897.
 
 [43] [44
 
 ]
 Chapter 8.
 [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1849.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1849.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1906.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1906.
  (master_thesis_Xiaoxiang_Zhou.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1849.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1849.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1906.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1906.
 
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: DC73B0C9399E424AA0467F4E73093319.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1849.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1906.
  ) 
 Here is how much of TeX's memory you used:
- 39453 strings out of 427748
- 720128 string characters out of 3150981
- 965601 words of memory out of 3000000
- 42851 multiletter control sequences out of 15000+200000
+ 39545 strings out of 427748
+ 722424 string characters out of 3150981
+ 900465 words of memory out of 3000000
+ 42942 multiletter control sequences out of 15000+200000
  569326 words of font info for 191 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,22n,84p,3277b,1277s stack positions out of 5000i,500n,10000p,200000b,50000s

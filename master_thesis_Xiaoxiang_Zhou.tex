@@ -36,10 +36,6 @@
 
 % showkeys  make label explicit on the paper
 
-\makeatletter
-\@namedef{subjclassname@2010}{%
-  \textup{2010} Mathematics Subject Classification}
-\makeatother
 
 \numberwithin{equation}{section}
 
@@ -353,10 +349,18 @@ This $\GL_n \times \GL_n$-action is now transitive, and decompose $\mathcal{F}\t
 \begin{aligned}
   &\OOmcell_{w,w'}:=\; (B \times B) \cdot \underline{F}_{w,w'} \subseteq \mathcal{F}\times \mathcal{F}\\ 
   &\mathcal{F}\times \mathcal{F}= \bigsqcup_{w, w'\in W} \OOmcell_{w,w'} \qquad\OOmcell_{w'}= \bigsqcup_{w\in W} \OOmcell_{w,w'} \\
-  & \OOmcell_{w,w'} \cong B/(B \cap wBw^{-1}) \times B/(B \cap w'Bw'^{-1}) \cong \mathbb{A}^{l(w)+l(w')}
 \end{aligned}
 \end{equation*}
-
+\begin{equation}\label{eq:twisted_stabilizer}
+\begin{aligned}
+   \OOmcell_{w,w'} \cong\;& (B \times B)/\left\{ (g_1,g_2) \in B \times B  \;\middle|\; (g_1,g_2) \cdot (F_w,F_{ww'})=(F_w,F_{ww'})  \right\}\\
+=\;& (B \times B)/\left\{ (g_1,g_2) \in B \times B  \;\middle|\; g_1wB=wB, g_1wg_2w'B=ww'B  \right\}\\   
+=\;& (B \times B)/\left\{ (g_1,g_2) \in B \times B  \;\middle|\; g_1wB=wB, (w^{-1}g_1w)g_2w'B=w'B  \right\}\\   
+=\;& (B \times B)/\left\{ (g_1,g_2) \in B \times B  \;\middle|\; g_1\in wBw^{-1}, g_2 \in (w^{-1}g_1^{-1}w) \left(w'Bw'^{-1}\right)  \right\}\\  
+=\;& (B \times B)/\left\{ (g_1,g_2) \in \left(B \cap wBw^{-1}\right) \times (w^{-1}g_1^{-1}w)  \left(B \cap  w'Bw'^{-1}\right)    \right\}\\  
+   \cong\;& B/(B \cap wBw^{-1}) \times B/(B \cap w'Bw'^{-1}) \cong \mathbb{A}^{l(w)+l(w')}
+\end{aligned}
+\end{equation}
 We conclude the information of orbits and fixed points of $\mathcal{F}\times \mathcal{F}$ in Table \ref{table:orbit_of_F*F}:
 
 \begin{table}[ht]
@@ -561,7 +565,7 @@ $\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the d
 $$\left| \dimv M_{j+1}/M_j \right|=1 \qquad \text{ for any }j \in \{0,\ldots, \abdimvec{d}-1  \}.$$
 \end{defn}
 
-\begin{eg}
+\begin{eg}\label{eg:5-case-0}
 For quiver $Q: i \longrightarrow i'$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
 \begin{equation*}
 \begin{aligned}
@@ -709,7 +713,7 @@ Multiplying on left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diag
 Every element $\ww_{\max} \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$.
 \end{fact}
 
-\begin{eg}
+\begin{eg}\label{eg:3-case-0.1}
 \begin{equation*}
 \begin{aligned}
 \parbox[h][][c]{3cm}{
@@ -791,7 +795,12 @@ For any $\ww \in \absgp{W}_{\abdimvec{d}}$, exists unique $w \in \Wd$, $u \in \M
 \end{proposition}
 \begin{ex}
 For $u \in \MinWd$, $s_i \in \Pi$, show that
-$$us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow\quad us_iu^{-1}=s_{u(i)} \in \Pi_{\dimvec{d}}.$$
+\begin{equation*}
+\begin{aligned}
+us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow&\quad us_iu^{-1}=s_{u(i)} \in \Pi_{\dimvec{d}},\\
+us_iu^{-1}\notin W_{\dimvec{d}} \quad\Longrightarrow&\quad us_i \in \MinWd.
+\end{aligned}
+\end{equation*}
 \end{ex}
 
 We finish this section with figures and examples.
@@ -809,7 +818,7 @@ We finish this section with figures and examples.
 	\arrow[maps to, from=1-7, to=2-7]
 \end{tikzcd}\]
 
-\begin{eg}
+\begin{eg}\label{eg:5-case-1}
 In this table, $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, typical elements would be
 $$\ww = \parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{4,3,1,5,2}} \quad
 w =\parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{3,1,2,5,4}} \quad
@@ -883,18 +892,16 @@ W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus
 
 \begin{eg}\label{eg:3-case-1}
 In this table, 
-$$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns "order of basis" and "Borel subgroups" have not been introduced yet, and they are here for the future usage.
+$$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns "order of basis" and "Borel subgroups" will be introduced in Definition \ref{def:special_flags} and Remark \ref{rmk:Borel_difference}.
 
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=15cm]{figures/table/table_basic_information.pdf}
-      \label{fig:smalleg_Weyl}
-%        \caption{desired picture}       
+      \caption{basic information of $(1,2)$-case}  
+      \label{table:smalleg_Weyl}     
         \end{table}
         
 \end{eg}
-
-\vspace*{1cm}
 \section{Algebraic group and Lie algebra}
 In this section we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
 
@@ -939,6 +946,12 @@ $$B_{\ww}:= w B_{\dimvec{d}} w^{-1}.$$
 We will view $B_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $G_{\dimvec{d}}$-action.
 \end{defn}
 
+\begin{remark}\label{rmk:Borel_difference}
+Be careful that $B_{\ww} \neq \ww B_{\dimvec{d}} \ww^{-1}$. Actually,
+$$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}} \cap B_{\dimvec{d}}=wB_{\dimvec{d}}w^{-1}$$
+The difference is clearly shown in Table \ref{table:smalleg_Weyl}.
+\end{remark}
+
 We also have a series of algebraic groups with subscription as elements in the Weyl group:
 \begin{defn}[more algebraic groups]
 For $\ww, \ww'' \in \absgp{W}_{\abdimvec{d}}$, define
@@ -980,7 +993,7 @@ One can easily show that $N_{\ww, \ww s}=R_u (P_{\ww, \ww s})$.
   \let\@ifnextchar\new@ifnextchar
   \array{#1}}
 \makeatother
-\begin{eg}
+\begin{eg}[Follows Example \ref{eg:5-case-1}] \label{eg:5-case-2}
 For $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, $\ww =\hspace{-3mm} \parbox[h][][c]{2cm}{\permutation[tkzpic=1,type=0,scale=0.5]{4,3,1,5,2}}$\hspace{-7mm}, 
 $w =\hspace{-3mm}\parbox[h][][c]{2cm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,1,2,5,4}}$\hspace{-7mm}, $s=s_2$, we compute all the algebraic groups we mentioned:
 \begin{equation*}
@@ -1164,7 +1177,7 @@ $$V_{\ww,j}:= \left< e_{\ww(1)},\ldots e_{\ww(j)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
 %https://tex.stackexchange.com/questions/352752/align-inside-left-right
 
-$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,j} \cap V_{s(a)}) \subseteq V_{\ww,j} \right\},$$
+$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,j} \cap V_{s(a)}) \subseteq V_{\ww,j} \text{ for any } j \right\},$$
 \begin{equation*}
 \begin{aligned}
   \mathfrak{r}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww} \cap \mathfrak{r}_{\ww''},  \\ 
@@ -1189,11 +1202,11 @@ We also have twisted notations for Lie algebras. For example,
 Another twist happens when we add minus sign as the superscript:
 \begin{equation*}
 \begin{aligned}
-  &\boldsymbol{\mathfrak{b}}_{\ww}^{-} =\boldsymbol{\mathfrak{b}}_{\ww_{\max}\ww},&& \\
-&  \mathfrak{b}_{\ww}^{-}=\mathfrak{b}_{w_{\max}\ww}, && 
-\mathfrak{n}_{\ww}^{-}=\mathfrak{b}_{w_{\max}\ww}, \\
-&  \mathfrak{n}_{\ww,\ww''}^{-}=\mathfrak{n}_{w_{\max}\ww,w_{\max}\ww''}, && 
-\mathfrak{m}_{\ww,\ww''}^{-}=\mathfrak{m}_{w_{\max}\ww,w_{\max}\ww''}.  \\
+  \boldsymbol{\mathfrak{b}}_{\ww}^{-} =&\boldsymbol{\mathfrak{b}}_{\ww_{\max}\ww},&& \\
+  \mathfrak{b}_{\ww}^{-}=&\mathfrak{b}_{w_{\max}\ww}, & 
+\mathfrak{n}_{\ww}^{-}=&\mathfrak{b}_{w_{\max}\ww}, \\
+  \mathfrak{n}_{\ww,\ww''}^{-}=&\mathfrak{n}_{w_{\max}\ww,w_{\max}\ww''}, & 
+\mathfrak{m}_{\ww,\ww''}^{-}=&\mathfrak{m}_{w_{\max}\ww,w_{\max}\ww''}.  \\
 \end{aligned}
 \end{equation*}
 \end{remark}
@@ -1249,7 +1262,7 @@ are products of usual flag varieties.
 \end{remark}
 
 We need to simplify our notations of flags.
-\begin{defn}[Special flags]
+\begin{defn}[Special flags]\label{def:special_flags}
 For a basis $\{x_1, \ldots ,x_{\abdimvec{d}} \}$, denote the flag
 $$F_{\{x_1, \ldots ,x_{\abdimvec{d}} \}} : 0 \subseteq \left<x_1 \right> \subseteq \left<x_1,x_2 \right>\subseteq \cdots \subseteq  \left<x_1,\ldots x_{\abdimvec{d}} \right>=V.$$
 \end{defn}
@@ -1310,8 +1323,8 @@ Now it is time to conclude information about arrows, and construct spaces over v
 For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
-  \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
-  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \middle| \rho(M_j) \subseteq M_j \right\} \\
+  \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_j \text{ for any } j \right\} \\
+  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_j \text{ for any } j \right\} \\
   =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
 \end{aligned}
 \end{equation*}
@@ -1351,7 +1364,7 @@ $\St_{\dimvec{d}}$ is called the \textbf{Steinberg variety}.
 $\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence variety between $\Rep_{\dimvec{d}}(Q)$ and $\mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}$, since
 \begin{equation*}
 \begin{aligned}
-\St_{\ftdimvec{d},\ftdimvec{d}'}:=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
+\St_{\ftdimvec{d},\ftdimvec{d}'}=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
 \subseteq \;& \left( \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \right) 
 \times_{\Rep_{\dimvec{d}}(Q)}
 \left( \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}'}  \right) \\
@@ -1394,7 +1407,7 @@ We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \time
 \begin{defn}[Twisted action]
 We define the twisted $\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$:
 $$\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \longrightarrow \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \qquad \left( g_1,g_2,\underline{F}_{g,g'} \right) \longmapsto \underline{F}_{g_1g,g_2g'}$$
-which is the same as original $G_{\dimvec{d}}$-action when we restrict to $G_{\dimvec{d}} \times \{\Id \}$-action. Other $G \times G$-actions on $\mathcal{F} \times \mathcal{F}$ are defined in a similar way.
+which is the same as original $\absgp{G}_{\abdimvec{d}}$-action when we restrict to $\absgp{G}_{\abdimvec{d}} \times \{\Id \}$-action. Other $G \times G$-actions on $\mathcal{F} \times \mathcal{F}$ are defined in a similar way.
 \end{defn}
 
 \begin{defn}[Stratifications of $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$]
@@ -1420,25 +1433,7 @@ We also realize these orbits as quotients of algebraic groups by the orbit-stabi
 \end{aligned}
 \end{equation*}
 
-Similar stratifications happen for the relative complete flag variety $\mathcal{F}_{\dimvec{d}}$.
-
-\begin{defn}[Stratifications of $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$]
-For $\ww,\ww' \in \WWd$, we define
-\begin{equation*}
-\begin{aligned}
-  \Ocell_{\ww}=\;& B_{\dimvec{d}} \cdot F_{\ww} \qquad&&\subseteq \mathcal{F}_{\ww}&& \subseteq \mathcal{F}_{\dimvec{d}} \\ 
-  \OOcell_{\ww,\ww'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\ww} \times \mathcal{F}_{\ww\ww'} && \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\\ 
-  \OOcell_{\ww'}=\;& \bigsqcup_{u} G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} && \subseteq \bigsqcup_{u}\mathcal{F}_{u} \times \mathcal{F}_{u\ww'}\hspace{-1cm}&& \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \\ 
-\end{aligned}
-\end{equation*}
-as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, (union of) $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, respectively.
-\end{defn}
-Notice that $\Ocell_{\ww}$, $\OOcell_{\ww,\ww'}$, $\OOcell_{\ww'}$ are preimages of $\Vcell_{\ww}$, $\VVcell_{\ww,\ww'}$, $\VVcell_{\ww'}$ under the maps
-$$\mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}.$$
-Therefore, 
-$$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ww} \Ocell_{\ww} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} = \bigsqcup_{\ww'} \OOcell_{\ww'} = \bigsqcup_{\ww,\ww'} \OOcell_{\ww,\ww'}.$$
-
-Some stratifications are quite compatible with the connected component of $\mathcal{F}_{\dimvec{d}}$, so we give new names for them.
+Similar stratifications happen for $\mathcal{F}_{u}$ and $\mathcal{F}_{\dimvec{d}}$.
 
 \begin{defn}[Stratifications of $\mathcal{F}_{u}$ and $\mathcal{F}_{u} \times \mathcal{F}_{u'}$]
 For $u,u' \in \MinWd$, $w,w' \in \Wd$, we define
@@ -1462,6 +1457,26 @@ and
   \OOmcell_{w'}^{u,u'}=\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
 \end{aligned}
 \end{equation*}
+
+\begin{defn}[Stratifications of $\mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$]
+For $\ww,\ww' \in \WWd$, we define
+\begin{equation*}
+\begin{aligned}
+  \Ocell_{\ww}=\;& B_{\dimvec{d}} \cdot F_{\ww} \qquad&&\subseteq \mathcal{F}_{\ww}&& \subseteq \mathcal{F}_{\dimvec{d}} \\ 
+  \OOcell_{\ww,\ww'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) \cdot \underline{F}_{\ww,\ww'} && \subseteq \mathcal{F}_{\ww} \times \mathcal{F}_{\ww\ww'} && \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\\ 
+  \OOcell_{\ww'}=\;& \bigsqcup_{u} G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} && \subseteq \bigsqcup_{u}\mathcal{F}_{u} \times \mathcal{F}_{u\ww'}\hspace{-1cm}&& \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \\ 
+\end{aligned}
+\end{equation*}
+as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, (union of) $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, respectively.
+\end{defn}
+Notice that $\Ocell_{\ww}$, $\OOcell_{\ww,\ww'}$, $\OOcell_{\ww'}$ are preimages of $\Vcell_{\ww}$, $\VVcell_{\ww,\ww'}$, $\VVcell_{\ww'}$ under the maps
+$$\mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}.$$
+Therefore, 
+$$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ww} \Ocell_{\ww} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} = \bigsqcup_{\ww'} \OOcell_{\ww'} = \bigsqcup_{\ww,\ww'} \OOcell_{\ww,\ww'}.$$
+
+%Some stratifications are quite compatible with the connected component of $\mathcal{F}_{\dimvec{d}}$, so we give new names for them.
+
+
 
 We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'u'=\tilde{w}\tilde{u}$ for $\tilde{w}' \in \Wd$, $\tilde{u} \in \MinWd$, then
 $$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu}, F_{wuw'u'}  \right)= \left( F_{wu}, F_{w\tilde{w}\tilde{u}}  \right) \in \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}}.$$
@@ -1548,9 +1563,8 @@ $\mathcal{F}_{\dimvec{d}}$ has $3$ connected components, each of them has $2$ $B
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=12.8cm]{figures/table/table_2.pdf}
-      \label{fig:stratifications_of_FdFd}
         \caption{stratifications of $\mathcal{F}_{\dimvec{d}}\times \mathcal{F}_{\dimvec{d}}$}
-        
+        \label{table:stratifications_of_FdFd}
 \end{table}
 We have given every orbit a name, and other spaces are finite union of these orbits. For example,
 \begin{equation*}
@@ -1656,8 +1670,13 @@ Even though these inclusions are usually not equalities, we can still say someth
 
 I have no idea if we have any accurate description for $\St_{s}^{u,u'}$ and $\St_{s}$.
 
-We end this subsection by Table ???:
-
+We end this subsection by Table \ref{table:orbit}:
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=15cm]{figures/table/table_orbit.pdf}
+      \caption{stratifications of typical varieties}
+      \label{table:orbit}        
+\end{table}
 \end{remark}
 \subsection{$T$-fixed points}
 
@@ -1821,6 +1840,44 @@ We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
 \chapter{Excess intersection formula}
 
 \section{Convolution}
+The construction of the convolution product has a similar flavor with Fourier-Mukai transformation, which is the composition of pullback, tensor product and proper pushforward.
+
+\begin{defn}[Convolution product]
+For the convenience of reading, we divide the whole process into three steps.
+\paragraph*{\underline{Step1}}Setting.
+
+Let $M_1$, $M_2$, $M_3$ be smooth quasi-projective $G$-varieties. For convenience, denote
+$$M_{ij}:=M_i \times M_j \qquad M_{123}=M_1 \times M_2 \times M_3$$
+and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.
+% https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
+\[\begin{tikzcd}[column sep={1.5cm,between origins}]
+	&& {M_{123}} &&&[2cm]\\
+	& {M_{12}} && {M_{23}} && {M_{13}} \\
+	M_1 && M_2 && M_3 &
+	\arrow["{p_1^{12}}"', from=2-2, to=3-1]
+	\arrow["{p_{12}}"', from=1-3, to=2-2]
+	\arrow["{p_{23}}", from=1-3, to=2-4]
+	\arrow["{p_3^{23}}", from=2-4, to=3-5]
+	\arrow["{p_2^{12}}", from=2-2, to=3-3]
+	\arrow["{p_2^{23}}"', from=2-4, to=3-3]
+	\arrow["{p_3^{13}}"{pos=0.3}, dashed, from=2-6, to=3-5]
+	\arrow["{p_1^{13}}"'{pos=0.2}, dashed, from=2-6, to=3-1]
+	\arrow["{p_{13}}", curve={height=-12pt}, from=1-3, to=2-6]
+\end{tikzcd}\]
+(Check that $p_i = p_i^{jk} \circ p_{jk}$ for $1 \leqslant j < k \leqslant 3$, $i=j$ or $i=k$)
+
+
+
+\paragraph*{\underline{Step2}}Convolution product on the level of varieties.
+
+For closed $G$-subvarieties $Z_{12} \subseteq M_{12}$, $Z_{23} \subseteq M_{23}$, denote
+$$Z_{123}:= p_{12}^{-1}(Z_{12}) \cap p_{23}^{-1}(Z_{23}) \subseteq M_123$$
+as the intersection of two preimages. The \textbf{convolution product} of $Z_{12}$ and $Z_{23}$ is defined as
+$$Z_{12} \circ Z_{23} := p_{13}(Z_{123}) \subseteq M_{13}$$
+which is a closed $G$-subvariety of $M_{13}$.
+\paragraph*{\underline{Step3}}Convolution product on the level of $K$-theories.
+
+\end{defn}
 \section{Statement}
 \section{Application: convolution formula}
 \section{Demazure operator}

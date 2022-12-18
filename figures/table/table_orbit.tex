@@ -1,0 +1,142 @@
+
+\documentclass[border={7pt 0pt 200pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}%colors
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+
+%\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
+\newcommand{\lbox}{\adjustbox{}}
+
+\newcommand{\preimage}[1]{\widetilde{#1}}
+
+\newenvironment{smbmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\setcellgapes{0.2ex}
+  \begin{bmatrix}
+}%
+{\end{bmatrix}
+\egroup
+}% end code
+\newenvironment{smpmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.8}
+\setcellgapes{0.2ex}
+  \begin{pmatrix}
+}%
+{\end{pmatrix}
+\egroup
+}% end code
+\begin{document}
+
+\begin{table}[ht]
+ \[
+ \setcellgapes{0.8ex}\makegapedcells
+\centering
+ \begin{array}{|c|c|c|c|c|c|}
+ \hline
+  \multicolumn{2}{|c|}{\multirow{3}{*}{\hbox{\diagbox[innerwidth=37mm,height=4\line,outerleftsep=-1ex,outerrightsep=-1ex,innerleftsep=3pt,innerrightsep=3pt,font=\footnotesize\itshape]
+   {\hspace{-4mm}variety\\[-2mm]base point\\[-1mm]}
+   {\hspace{4mm}stratification \\[-2mm] \hspace{4mm}\textcolor{blue}{stabilizer} \hspace{11mm}}
+   {type}}}}&&&&\\
+ \multicolumn{2}{|c|}{}& \text{$B$-orbit} & \text{$B \times B$-orbit} & \text{$G$-orbit} & \text{Remark}\rule{0mm}{4mm}\\
+ \multicolumn{2}{|c|}{}&&&&\rule{0mm}{4mm}\\
+  \hline
+% \multicolumn{2}{|c|}{\hbox{\diagbox[innerwidth=38mm,height=3\normalbaselineskip,outerleftsep=-1ex,outerrightsep=-1ex,innerleftsep=1pt,innerrightsep=1pt,font=\footnotesize\itshape]
+% {variety\\[-3mm]base point}
+% {stratification \\[-3mm] stabilizer }
+% {type}}}& \text{$B$-orbit} & \text{$B \times B$-orbit} & \text{$G$-orbit} & \text{Remark}\\
+%  \hline
+  \mathcal{F} & \mathcal{F} \times \mathcal{F} & \Omcell_{g} & \OOmcell_{g,g'} & \OOmcell_{g'} &\\
+  F_{g} & (F_{g},F_{gg'}) & \textcolor{blue}{B \cap gBg^{-1}} &\textcolor{blue}{\left( B \cap gBg^{-1}\right) \times \left(B \cap g'Bg'^{-1}\right)} & \textcolor{blue}{gBg^{-1} \cap gg'B(gg')^{-1}} &\\\hline
+  
+  \mathcal{F}_{\abdimvec{d}} & \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} & \Vcell_{\ww} & \VVcell_{\ww,\ww'} & \VVcell_{\ww'} &\\
+  F_{\ww} & (F_{\ww},F_{\ww\ww'}) & \textcolor{blue}{\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww}} & \textcolor{blue}{\left(\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww}\right) \times \left(\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'}\right) }& \textcolor{blue}{\absgp{B}_{\ww} \cap \absgp{B}_{\ww\ww'}} &\\\hline
+  
+  \mathcal{F}_{u} & \mathcal{F}_{u} \times \mathcal{F}_{u'} & \Omcell_{w}^{u} & \OOmcell_{w,w'}^{u,u'} & \OOmcell_{w'}^{u,u'} &\\
+  F_{wu} & (F_{wu},F_{ww'u'}) & \textcolor{blue}{B_{\dimvec{d}} \cap B_{w} }& \textcolor{blue}{ \left(B_{\dimvec{d}} \cap B_{w}\right) \times \left(B_{\dimvec{d}} \cap B_{w'}\right) }& \textcolor{blue}{B_{w} \cap B_{ww'}} &\\\hline
+  
+  \mathcal{F}_{\dimvec{d}} & \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} & \Omcell_{w}^{u} & \OOmcell_{w,\tilde{w}}^{u,\tilde{u}} & \OOcell_{\ww'}^{u}=\OOmcell_{\tilde{w}}^{u,\tilde{u}} &\\
+  F_{\ww} & (F_{\ww},F_{\ww\ww'}) & \textcolor{blue}{B_{\dimvec{d}} \cap B_{w}} & \textcolor{blue}{\left(B_{\dimvec{d}} \cap B_{w}\right) \times \left(B_{\dimvec{d}} \cap B_{\tilde{w}}\right)} & \textcolor{blue}{B_{w} \cap B_{w\tilde{w}}} &\\
+  \textcolor{BrickRed}{F_{wu}} & \textcolor{BrickRed}{(F_{wu},F_{w\tilde{w}\tilde{u}})} &  &  &  &\\ \hline 
+  
+  \multicolumn{6}{|c|}{\text{The following may not be single orbit, but derived from the above definition.}}\\ \hline
+  
+  \mathcal{F}_{\dimvec{d}} & \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} & \Ocell_{\ww} & \OOcell_{\ww,\ww'} & \OOcell_{\ww'} & \text{preimage of \hspace{1.6cm}}\\
+  F_{\ww} & (F_{\ww},F_{\ww\ww'}) & \textcolor{BrickRed}{\Omcell_{w}^{u}} & \textcolor{BrickRed}{\OOmcell_{w,\tilde{w}}^{u,\tilde{u}}} & \textcolor{BrickRed}{\sqcup_{u}\OOcell_{\ww'}^{u}} & \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \hookrightarrow \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}\\\hline
+  
+  
+  \RRep_{\ftdimvec{d}}(Q) & \St_{\ftdimvec{d},\ftdimvec{d}'} & \preimage{\Omcell}_{w}^{u} & \preimage{\OOmcell}_{w,w'}^{u,u'} & \preimage{\OOmcell}_{w'}^{u,u'} &\text{preimage of \hspace{1.6cm}}\\
+  F_{wu} & (F_{wu},F_{ww'u'}) & & &  &\St_{\ftdimvec{d},\ftdimvec{d}'} \hookrightarrow \mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}\\\hline
+
+  \RRep_{\dimvec{d}}(Q) & \St_{\dimvec{d}} & \preimage{\Omcell}_{w}^{u} & \preimage{\OOmcell}_{w,\tilde{w}}^{u,\tilde{u}} & \preimage{\OOcell}_{\ww'}^{u}=\preimage{\OOmcell}_{\tilde{w}}^{u,\tilde{u}} &\text{preimage of \hspace{1.6cm}}\\
+  F_{\ww} & (F_{\ww},F_{\ww\ww'}) & & &  &\St_{\dimvec{d}} \hookrightarrow \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\\\hline 
+  
+  \RRep_{\dimvec{d}}(Q) & \St_{\dimvec{d}} & \preimage{\Ocell}_{\ww} & \preimage{\OOcell}_{\ww,\ww'} & \preimage{\OOcell}_{\ww'} &\text{preimage of \hspace{1.6cm}}\\
+  F_{\ww} & (F_{\ww},F_{\ww\ww'}) &\textcolor{BrickRed}{\preimage{\Omcell}_{w}^{u}} & \textcolor{BrickRed}{\preimage{\OOmcell}_{w,\tilde{w}}^{u,\tilde{u}}} & \textcolor{BrickRed}{\sqcup_{u}\preimage{\OOcell}_{\ww'}^{u}} &\St_{\dimvec{d}} \hookrightarrow \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}\\\hline 
+ \end{array}
+ \]
+        
+\end{table}
+\end{document}

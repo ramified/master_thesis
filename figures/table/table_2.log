@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  15 DEC 2022 00:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 DEC 2022 14:59
 entering extended mode
 **./table_2.tex
 (table_2.tex
@@ -860,7 +860,7 @@ Overfull \hbox (2.2347pt too wide) detected at line 214
 Here is how much of TeX's memory you used:
  16854 strings out of 427748
  347529 string characters out of 3150981
- 478844 words of memory out of 3000000
+ 478845 words of memory out of 3000000
  20531 multiletter control sequences out of 15000+200000
  8120 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
