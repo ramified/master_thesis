@@ -1755,7 +1755,7 @@ With huge effort, finally we fixed all the symbols and understand those typical 
 
 From my humble point of view, there is no easy cohomology theory, in a sense that key properties are usually hard to prove. On the other hand, plenty of examples can be quickly computed once we grasp some properties and use them in black boxes. Therefore, we won't prove any properties we stated. We have no choice but to do so, for the restricted space and time.
 
-The main reference for the $K$-theory is ???. 
+The main reference for the $K$-theory is \cite[Chapter 5]{chriss1997representation}. 
 {
 %I don't know how to fix the problem where the latter $$$$ does not work.
 \makeatletter
@@ -1782,8 +1782,8 @@ as the $G$-action map.
 \section{Definitions and initial examples}
 We give definition for $K$-theory, which is lengthy already. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
 
-\begin{defn}[G-equivariant sheaf, ???]
-For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.\footnote{Be careful, under this convention, the projection map $p_3^{23}=p_3^{13}: G \times X \longrightarrow X$ has subscription $3$, and $p_2$ means the projection from $G \times G \times X$ to the second $G$. This convention is different with notations in ???.}
+\begin{defn}[{G-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]
+For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.\footnote{Be careful, under this convention, the projection map $p_3^{23}=p_3^{13}: G \times X \longrightarrow X$ has subscription $3$, and $p_2$ means the projection from $G \times G \times X$ to the second $G$. This convention is different with notations in \cite[5.1]{chriss1997representation}.}
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
 \[\begin{tikzcd}[column sep={1.5cm,between origins}]
 	&& {G \times G \times X} &&&[2cm]\\
@@ -1979,7 +1979,7 @@ $$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \m
 \end{eg}
 
 \begin{eg}
-By ???(ref Thm 6.1.4),
+By \cite[Theorem 6.1.4]{chriss1997representation},
 $$\Rpt(\GL_n) \cong \Rpt(T)^{W} \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]^{S_n}.$$
 This can be viewed as a "group" analogue of Chevalley restriction theorem. Notice that we have clear description of finite dimensional irreducible representations of $\GL_n$, and the forget map
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHJlcChcXEdMX24pIl0sWzEsMCwiXFxyZXAoVCkiXSxbMiwwLCJcXFJwdChcXEdMX24pIl0sWzMsMCwiXFxScHQoVCkiXSxbMiwzXSxbMCwxXSxbMSwyLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
@@ -2093,8 +2093,8 @@ which is a closed $G$-subvariety of $M_{13}$.
 \chapter{Atiyah-Segal completion theorem}
 
 
-%\bibliographystyle{plain}
-%\bibliography{reference}
+\bibliographystyle{plain}
+\bibliography{reference}
 \end{document}
 
 

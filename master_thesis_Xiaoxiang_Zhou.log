@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  19 DEC 2022 09:07
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  19 DEC 2022 09:29
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -2023,15 +2023,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1754.
 
-
-Overfull \hbox (10.4609pt too wide) in paragraph at lines 1786--1788
-[][]\TU/lmr/bx/n/10.95 Definition 2.1.1 \TU/lmr/m/n/10.95 (G-equivariant sheaf,
- ???)\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 For a $\OML/cmm/m/it/10.95 G$\TU
-/lmr/m/it/10.95 -variety $\OML/cmm/m/it/10.95 X$\TU/lmr/m/it/10.95 , denote $\O
-ML/cmm/m/it/10.95 p[]; p[] \OT1/cmr/m/n/10.95 := \OML/cmm/m/it/10.95 p[]; p[] \
-OT1/cmr/m/n/10.95 :=
- []
-
 [33] [34] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2174,10 +2165,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 Chapter 8.
-[49]
+(master_thesis_Xiaoxiang_Zhou.bbl [49] [50
+
+]) [51]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2098.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 2098.
- (master_thesis_Xiaoxiang_Zhou.aux)
+
+(master_thesis_Xiaoxiang_Zhou.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2098.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2098.
 
@@ -2187,12 +2181,12 @@ anged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2098.
  ) 
 Here is how much of TeX's memory you used:
- 39875 strings out of 427748
- 730986 string characters out of 3150981
- 903900 words of memory out of 3000000
- 43271 multiletter control sequences out of 15000+200000
+ 39879 strings out of 427748
+ 731080 string characters out of 3150981
+ 904030 words of memory out of 3000000
+ 43272 multiletter control sequences out of 15000+200000
  569326 words of font info for 191 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,22n,84p,3277b,1267s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (49 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (51 pages).
