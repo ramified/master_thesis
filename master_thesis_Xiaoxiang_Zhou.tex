@@ -31,6 +31,7 @@
 \usepackage{diagbox}
 \usepackage{makecell}
 \usepackage{adjustbox}
+\usepackage{indentfirst}
 %\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
 
@@ -87,6 +88,7 @@
 \DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
 \DeclareMathOperator{\Mod}{\operatorname{Mod}}
 \DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
 \DeclareMathOperator{\Ext}{\operatorname{Ext}}
 \DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
@@ -114,6 +116,7 @@
 \newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
 \newcommand{\absgp}[1]{\mathbb{#1}}
 \newcommand{\ww}{\varpi}
+\newcommand{\Ri}{\operatorname{R}^i\!\!}
 \DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
 \DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
 \DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
@@ -144,7 +147,8 @@
   \end{minipage}
   }
 }
-
+%global settings
+\setlength\parindent{15pt}
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
 \def\arraystretch{1.2}
@@ -1860,6 +1864,8 @@ $$K_0^G(X):= K_0(\Coh^G(X)).$$
 Specifically, for a point $\pt=\Spec \mathbb{C}$ with trivial $G$-action, denote
 $$\Rpt(G):= K_0^G(\pt)=K_0(\Rep(G))$$
 as the representation ring of group $G$.
+
+We may omit $0$ for the convenience of writing and typing.
 \end{defn}
 
 Let us unravel this construction a little bit. For (geometrical) points $g,g_1,g_2 \in G$, denote that
@@ -1995,11 +2001,150 @@ views $\GL_n$-representations as special $W$-invariant $T$-representations.
 \end{eg}
 
 From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some tools (or weapons???) in $K$-theory.
-\section[Basic constructions]{Basic constructions: pullback, proper pushforward and tensor product}
-\subsection{non-derived $3$-functors in $\Coh^G(X)$} 
-\subsection{$3$-functors in $K_0^G(X)$, smooth case}
-\subsection{$3$-functors in $K_0^G(X)$, restriction with supports}
+\section[Three functors]{Three functors: pullback, proper pushforward and tensor product}
+In this section, we will construct three basic functors of equivariant $K$-theory: pullback, proper pushforward and tensor product.
+
+\subsection{Non-derived three functors in $\Coh^G(X)$} 
+We assume that readers know the non-derived pullback, pushforward and tensor product of normal coherent sheaves. (See \cite[Chapter 16]{vakil2017rising})
+
+As a special reminder, the pushforward of coherent sheaves may be not coherent. This problem can be remedied by Grothendieck's coherence theorem \cite[Theorem 18.9.1]{vakil2017rising}, once we impose morphisms to be proper (and Noetherian hypotheses on varieties). That is why we only consider about proper pushforward.
+
+Now let us consider the effect of $G$-equivariance. Somewhat surprising, these three functors behave quite well with group actions.
+
+\begin{defn}[Group action on pullback, proper pushforward and tensor product]
+Let $X,Y$ be $G$-varieties, $f: Y \longrightarrow X$ be a $G$-equivariant morphism. For $(\mathcal{G},\phi_{\mathcal{G}}) \in \Coh^G(Y)$, we define group actions on $f^*\mathcal{F}$, $f_*\mathcal{G}$ and $\mathcal{F} \otimes \mathcal{G}$, as follows.
+
+% https://q.uiver.app/?q=WzAsMTAsWzAsMywiRyBcXHRpbWVzIFgiXSxbMSwzLCJYIl0sWzAsMSwiRyBcXHRpbWVzIFkiXSxbMSwxLCJZIl0sWzIsMiwiXFxtYXRoY2Fse0Z9Il0sWzIsMCwiXFxtYXRoY2Fse0d9Il0sWzMsMywiRyBcXHRpbWVzIFgiXSxbNCwzLCJYIl0sWzUsMiwiXFxtYXRoY2Fse0Z9Il0sWzYsMiwiXFxtYXRoY2Fse0Z9JyJdLFswLDEsInBfezMsWH1eezIzfSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJcXGFscGhhX1giLDAseyJvZmZzZXQiOjJ9XSxbMiwzLCJwX3szLFl9XnsyM30iLDAseyJvZmZzZXQiOi0yfV0sWzIsMywiXFxhbHBoYV9ZIiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiXFxJZF9HIFxcdGltZXMgZiIsMl0sWzMsMSwiZiJdLFsyLDEsIiIsMix7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFs1LDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwxLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsNywicF97MyxYfV57MjN9IiwwLHsib2Zmc2V0IjotMn1dLFs2LDcsIlxcYWxwaGFfWCIsMCx7Im9mZnNldCI6Mn1dLFs4LDcsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSw3LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[column sep={between origins, 25mm}]
+	&&[-20mm] {\mathcal{G}}&&& [-30mm]&[-15mm]\\[-4mm]
+	{G \times Y} & Y \\
+	&& {\mathcal{F}} &&& {\mathcal{F}} & {\mathcal{F}'} \\[-4mm]
+	{G \times X} & X && {G \times X} & X
+	\arrow["{p_{3,X}^{23}}", shift left=2, from=4-1, to=4-2]
+	\arrow["{\alpha_X}", shift right=2, from=4-1, to=4-2]
+	\arrow["{p_{3,Y}^{23}}", shift left=2, from=2-1, to=2-2]
+	\arrow["{\alpha_Y}"', shift right=2, from=2-1, to=2-2]
+	\arrow["{\Id_G \times f}"', from=2-1, to=4-1]
+	\arrow["f"', from=2-2, to=4-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=4-2]
+	\arrow[no head, from=1-3, to=2-2]
+	\arrow[no head, from=3-3, to=4-2]
+	\arrow["{p_{3,X}^{23}}", shift left=2, from=4-4, to=4-5]
+	\arrow["{\alpha_X}", shift right=2, from=4-4, to=4-5]
+	\arrow[no head, from=3-6, to=4-5]
+	\arrow[no head, from=3-7, to=4-5]
+\end{tikzcd}\]
+By definition, we get $$p_{3,X}^{23} \circ \Id_G \times f = f \circ p_{3,Y}^{23}.$$ 
+Since $f$ is $G$-equivariant, $$\alpha_X \circ \Id_G \times f = f \circ \alpha_Y.$$
+These two diagrams are Cartesian, and $p_{3,X}^{23}, \alpha_X$ are flat.
+
+The pullback $(f^*\mathcal{F},\phi_{f^*\mathcal{F}}) \in \Coh^G(Y)$ is defined by
+$$\phi_{f^* \mathcal{F}}: p_{3,Y}^{23,*}f^*\mathcal{F}=\left( \Id_G \times f  \right)^* p_{3,X}^{23,*}\mathcal{F} 
+\begin{tikzcd}[column sep=20mm]
+	{} & {}
+	\arrow["{\left( \Id_G \times f  \right)^* \phi_{\mathcal{F}}}", from=1-1, to=1-2]
+\end{tikzcd} 
+\left( \Id_G \times f  \right)^* \alpha_{X}^*\mathcal{F} =\alpha_{Y}^* f^*\mathcal{F}$$
+
+By flat base change \cite[Theorem 24.2.8]{vakil2017rising}, assuming $f$ is proper, the proper pushforward $(f_{*}\mathcal{G},\phi_{f_{*}\mathcal{G}}) \in \Coh^G(X)$ is defined by
+$$\phi_{f_{*}\mathcal{G}}: p_{3,X}^{23,*}f_{*}\mathcal{G}\cong\left( \Id_G \times f  \right)_{*} p_{3,Y}^{23,*}\mathcal{G} 
+\begin{tikzcd}[column sep=20mm]
+	{} & {}
+	\arrow["{\left( \Id_G \times f  \right)_{*} \phi_{\mathcal{G}}}", from=1-1, to=1-2]
+\end{tikzcd}
+ \left( \Id_G \times f  \right)_{*} \alpha_{Y}^*\mathcal{G} \cong\alpha_{X}^*f_{*}\mathcal{G}$$
+
+In general, we can also define $(\Ri f_{*}\mathcal{G},\phi_{\Ri f_{*}\mathcal{G}}) \in \Coh^G(X)$ by
+$$\phi_{\Ri f_{*}\mathcal{G}}: p_{3,X}^{23,*}\Ri f_{*}\mathcal{G}\cong\Ri \left( \Id_G \times f  \right)_{*} p_{3,Y}^{23,*}\mathcal{G} 
+\begin{tikzcd}[column sep=20mm]
+	{} & {}
+	\arrow["{\Ri\, \left( \Id_G \times f  \right)_{*} \phi_{\mathcal{G}}}", from=1-1, to=1-2]
+\end{tikzcd}
+ \Ri \left( \Id_G \times f  \right)_{*} \alpha_{Y}^*\mathcal{G} \cong\alpha_{X}^*\Ri f_{*}\mathcal{G}$$
+ 
+ Similarly, the tensor product $(\mathcal{F} \otimes \mathcal{F}', \phi_{\mathcal{F} \otimes \mathcal{F}'}) \in \Coh^G(X)$ is defined by
+ $$\phi_{\mathcal{F} \otimes \mathcal{F}'}: p_{3,X}^{23,*}\left(\mathcal{F} \otimes \mathcal{F}'\right) \cong p_{3,X}^{23,*} \mathcal{F} \otimes p_{3,X}^{23,*} \mathcal{F}'
+ \begin{tikzcd}[column sep=20mm]
+ 	{} & {}
+ 	\arrow["{ \phi_{\mathcal{F}} \otimes \phi_{\mathcal{F}'}}", from=1-1, to=1-2]
+ \end{tikzcd} 
+ \alpha_{X}^* \mathcal{F} \otimes \alpha_{X}^* \mathcal{F}' \cong\alpha_{X}^* \left(\mathcal{F} \otimes \mathcal{F}'\right).$$
+\end{defn}
+
+The following definition will be useful in redefining tensor products.
+\begin{defn}[External tensor product]
+For two $G$-varieties $X$ and $Y$, define a functor 
+$$\boxtimes: \Coh^G(X) \times \Coh^G(Y) \longrightarrow \Coh^G(X \times Y) \qquad (\mathcal{F},\mathcal{G}) \longmapsto \mathcal{F} \boxtimes \mathcal{G}$$
+where
+$$\mathcal{F} \boxtimes \mathcal{G}:=p_X^*\mathcal{F} \otimes p_X^*\mathcal{G}.$$
+$\boxtimes$ is called the \textbf{external tensor product}.
+\end{defn}
+\begin{remark}\label{rmk:ext_tensor_product}
+For $G$-variety $X$ and $\mathcal{F}$, $\mathcal{F}' \in \Coh^G(X)$, denote $\Delta: X \hookrightarrow X \times X$ to be the diagonal embedding, we have
+$$\mathcal{F} \otimes \mathcal{F}' \cong \Delta^* (\mathcal{F} \boxtimes \mathcal{F}')$$
+Unlike $\otimes$, $\boxtimes$ is always an exact functor. This feature let us redefine tensor product in $K$-theory later on.
+\end{remark}
+\subsection{Smooth case}
+We would like to extend functors in $\Coh^G(X)$ to $K^G(X)$. However, these (non-derived) functors are usually not exact, so we have to work over ($G$-equivariant) derived category of cohrent sheaves $\Dcoh^{G}(X)$ and replace every functor by its derived version.
+
+Still, we can not extend functors from $\Dcoh^G(X)$ to $K^G(X)$. The chain complex in $\Dcoh^G(X)$ can have infinite many non-zero terms, which can not be viewed as an element in $K^G(X)$. Therefore, we consider the bounded ($G$-equivariant) derived category $\Dcoh^{b,G}(X)$ as a full subcategory of $\Dcoh^G(X)$.
+
+The last problem comes when we restrict functors to $\Dcoh^{b,G}(X)$:
+\begin{equation*}
+\begin{aligned}
+  f^*:\;& \Dcoh^{b,G}(X) \longrightarrow \Dcoh^{G}(Y) \\
+  f_*:\;& \Dcoh^{b,G}(Y) \longrightarrow \Dcoh^{b,G}(X) \\
+  \otimes:\;& \Dcoh^{b,G}(X) \times \Dcoh^{b,G}(X) \longrightarrow \Dcoh^{G}(X) \\   
+\end{aligned}
+\end{equation*}
+Other than proper pushforward, pullback and tensor product do not preserve boundness. Therefore, we have to make the following assumption:
+\begin{equation}\label{eq:assumption}
+\text{$X$, $Y$ are smooth $G$-varieties, and $f: Y \longrightarrow X$ is $G$-equivariant.}
+\end{equation}
+Under this assumption, pullback and tensor product preserve boundness.
+
+\begin{remark}[Reasons for preserving boundness]
+Suppose varieties are smooth (not needed for proper pushforward). 
+
+\begin{itemize}
+\item For pullback preserving boundness, see \cite[5.2.5(ii)]{chriss1997representation}.
+\item  For proper pushforward, see \cite[5.2.13]{chriss1997representation}, and it essentially use the higher cohomology vanishing theorem \cite[Theorem 18.8.5]{vakil2017rising}.
+\item  For tensor product, we use \ref{rmk:ext_tensor_product} in the derived way. $\boxtimes$ is exact, and $\Delta^*$ preserves boundness when $X$ is smooth, so $\otimes$ also preserves boundness. In particular, one can define tensor product on $K^G(X)$ for $X$ smooth:
+$$\otimes: K^G(X) \times K^G(X) 
+ \begin{tikzcd}[column sep=5mm]
+ 	{} & {}
+ 	\arrow["{\boxtimes}", from=1-1, to=1-2]
+ \end{tikzcd} 
+ K^G(X \times X) 
+ \begin{tikzcd}[column sep=5mm]
+ 	{} & {}
+ 	\arrow["{\Delta^*}", from=1-1, to=1-2]
+ \end{tikzcd}  
+ K^G(X) \qquad \mathcal{F} \otimes \mathcal{F}'=\Delta^*\left( \mathcal{F} \boxtimes \mathcal{F}' \right)
+ $$
+\end{itemize}
+
+\end{remark}
+\begin{remark}
+When $f: Y \longrightarrow X$ is open embedding, the non-derived pullback $f^*$ is exact, so we can define pullback on $K$-theory automatically.
+\end{remark}
+\subsection{Restriction with supports}
+In practice, the varieties we consider are not smooth. Luckily, these varieties are always embedded in some ambiance spaces which are smooth.
+
+\subsection{Algebraic structures of $K$-theory} 
+With enough tools in hand, we can define some extra structures on $K^G(X)$. (By priority $K^G(X)$ is an abelian group)
+
+
+
+
+
+
 \section{Thom isomorphism}
+In this section we state Thom isomorphism theorem, which is an analogy of Poincaré lemma in $K$-theory.
+\begin{proposition}[{Thom isomorphism, \cite[Theorem 5.4.17]{chriss1997representation}}]
+内容...
+\end{proposition}
+For a proof, see \cite[Theorem 5.4.17].
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
 \begin{defn}[Contracted product]
