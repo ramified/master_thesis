@@ -1,0 +1,96 @@
+
+\documentclass[border={7pt -40pt 30pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}%colors
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+
+%\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
+\newcommand{\lbox}{\adjustbox{}}
+
+\newcommand{\preimage}[1]{\widetilde{#1}}
+
+\begin{document}
+
+% https://q.uiver.app/?q=WzAsMTcsWzIsMiwiTV97MTIzfSJdLFsxLDMsIk1fezEyfSJdLFszLDMsIk1fezIzfSJdLFs1LDMsIk1fezEzfSJdLFs0LDQsIk1fMyJdLFsyLDQsIk1fMiJdLFswLDQsIk1fMSJdLFs2LDMsIlpfezEyfSJdLFs2LDEsIlxcbWF0aGNhbHtGfV97MTJ9Il0sWzgsMywiWl97MjN9Il0sWzMsNSwiXFxidWxsZXQiXSxbOCwxLCJcXG1hdGhjYWx7Rn1fezIzfSJdLFs3LDIsIlpfezEyM30iXSxbOSwzLCJaX3sxM30iXSxbOSwxLCJcXG1hdGhjYWx7Rn1fezEzfSJdLFsxMCwwLCJwX3sxMn1eKlxcbWF0aGNhbHtGfV97MTJ9Il0sWzExLDAsInBfezIzfV4qXFxtYXRoY2Fse0Z9X3syM30iXSxbMSw2XSxbMCwxLCJwX3sxMn0iLDJdLFswLDIsInBfezIzfSJdLFsyLDRdLFsxLDVdLFsyLDVdLFswLDMsInBfezEzfSIsMCx7ImN1cnZlIjotMn1dLFs3LDEsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzgsNywiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxMiwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNSwxMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwwLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxMSw5LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE0LDEzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEzLDMsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzksMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=
+\[\begin{tikzcd}[sep={2cm,between origins}]
+	&&&&&[2cm]&[-133mm]&[-3mm]&[3mm]&[4cm]&[-110mm] {p_{12}^*\mathcal{F}_{12}} & [-7mm] {p_{23}^*\mathcal{F}_{23}} \\
+	&&&&&& {\mathcal{F}_{12}} && {\mathcal{F}_{23}} & {\mathcal{F}_{13}} \\[-32mm]
+	&& {M_{123}} &&&&& {Z_{123}} \\
+	& {M_{12}} && {M_{23}} && {M_{13}} & {Z_{12}} && {Z_{23}} & {Z_{13}} \\
+	{M_1} && {M_2} && {M_3} \\
+	&&& \bullet
+	\arrow[from=4-2, to=5-1]
+	\arrow["{p_{12}}"', from=3-3, to=4-2]
+	\arrow["{p_{23}}", from=3-3, to=4-4]
+	\arrow[from=4-4, to=5-5]
+	\arrow[from=4-2, to=5-3]
+	\arrow[from=4-4, to=5-3]
+	\arrow["{p_{13}}", curve={height=-9pt}, from=3-3, to=4-6]
+	\arrow[hook, from=4-7, to=4-2]
+	\arrow[no head, from=2-7, to=4-7]
+	\arrow[no head, from=1-12, to=3-8]
+	\arrow[no head, from=1-11, to=3-8]
+	\arrow[hook, from=3-8, to=3-3]
+	\arrow[no head, from=2-9, to=4-9]
+	\arrow[no head, from=2-10, to=4-10,crossing over]
+	\arrow[hook, from=4-10, to=4-6]
+	\arrow[hook, from=4-9, to=4-4]
+\end{tikzcd}\]
+\end{document}

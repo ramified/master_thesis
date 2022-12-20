@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  19 DEC 2022 09:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  20 DEC 2022 09:53
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -2098,6 +2098,140 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1936.
 
 [36]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathop' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Umathcharnumdef' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\std@minus' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Umathcodenum' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.43306pt
+(hyperref)                removed on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathgroup' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\symoperators' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2000.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2001.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2001.
+
+
 Underfull \vbox (badness 1297) has occurred while \output is active []
 
  [37]
@@ -2113,80 +2247,104 @@ Chapter 4.
 
 ]
 Chapter 5.
-[43] [44]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2039--2040
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2063--2064
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 2070--2071
+
+ []
+
+File: figures/table/table_convolution.pdf Graphic file (type pdf)
+<use figures/table/table_convolution.pdf>
+[44] [45] [46
+
+]
 Chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2082.
+(hyperref)                removing `math shift' on input line 2119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 2082.
+(hyperref)                removing `\times' on input line 2119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2082.
+(hyperref)                removing `superscript' on input line 2119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 2082.
+(hyperref)                removing `\times' on input line 2119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2082.
+(hyperref)                removing `math shift' on input line 2119.
 
-[45
-
-] [46
+[47] [48
 
 ]
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2088.
+(hyperref)                removing `math shift' on input line 2125.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2088.
+(hyperref)                removing `subscript' on input line 2125.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2088.
+(hyperref)                removing `math shift' on input line 2125.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2089.
+(hyperref)                removing `math shift' on input line 2126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2089.
+(hyperref)                removing `math shift' on input line 2126.
 
-[47] [48
+[49] [50
 
 ]
 Chapter 8.
-(master_thesis_Xiaoxiang_Zhou.bbl [49] [50
+(master_thesis_Xiaoxiang_Zhou.bbl [51] [52
 
-]) [51]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2098.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2098.
+]) [53]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2135.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2135.
 
 (master_thesis_Xiaoxiang_Zhou.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2098.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2098.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2135.
 
-Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
-anged.
-(rerunfilecheck)             Checksum: 7DA18F0649F24CA5FD76EC1FD0B07785.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2098.
+
+
+Package rerunfilecheck Warning: File `master_thesis_Xiaoxiang_Zhou.out' has cha
+nged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `master_thesis_Xiaoxiang_Zhou.out':
+(rerunfilecheck)             Before: 7DA18F0649F24CA5FD76EC1FD0B07785
+(rerunfilecheck)             After:  2D532DAFEFF5292E23F8E543B2277B25.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2135.
  ) 
 Here is how much of TeX's memory you used:
- 39879 strings out of 427748
- 731080 string characters out of 3150981
+ 39957 strings out of 427748
+ 733238 string characters out of 3150981
  904030 words of memory out of 3000000
- 43272 multiletter control sequences out of 15000+200000
+ 43349 multiletter control sequences out of 15000+200000
  569326 words of font info for 191 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,22n,84p,3277b,1267s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,22n,94p,3277b,1267s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (51 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (53 pages).

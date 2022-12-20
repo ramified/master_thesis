@@ -18,9 +18,9 @@
 \contentsline {section}{\numberline {2.1}Definitions and initial examples}{33}{section.2.1}% 
 \contentsline {subsection}{\numberline {2.1.1}Representation ring $\Rpt (G)$}{36}{subsection.2.1.1}% 
 \contentsline {section}{\numberline {2.2}Basic constructions}{38}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}pullback}{38}{subsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.2.2}proper pushforward}{38}{subsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.2.3}tensor product}{38}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.1}non-derived $3$-functors in $\Coh ^G(X)$}{38}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}$3$-functors in $K_0^G(X)$, smooth case}{38}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}$3$-functors in $K_0^G(X)$, restriction with supports}{38}{subsection.2.2.3}% 
 \contentsline {section}{\numberline {2.3}Thom isomorphism}{38}{section.2.3}% 
 \contentsline {section}{\numberline {2.4}Induction}{38}{section.2.4}% 
 \contentsline {subsection}{\numberline {2.4.1}Contracted product}{38}{subsection.2.4.1}% 
@@ -36,13 +36,13 @@
 \contentsline {chapter}{\numberline {5}Excess intersection formula}{43}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Convolution}{43}{section.5.1}% 
 \contentsline {section}{\numberline {5.2}Statement}{44}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Application: convolution formula}{44}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Demazure operator}{44}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}Generalization}{45}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}quiver with loops}{45}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{45}{section.6.2}% 
-\contentsline {chapter}{\numberline {7}From formula to diagram}{47}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}One point quiver}{47}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}$A_2$-quiver}{47}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}$1$-loop quiver}{47}{section.7.3}% 
-\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{49}{chapter.8}% 
+\contentsline {section}{\numberline {5.3}Application: convolution formula}{45}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Demazure operator}{45}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Generalization}{47}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}quiver with loops}{47}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{47}{section.6.2}% 
+\contentsline {chapter}{\numberline {7}From formula to diagram}{49}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}One point quiver}{49}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}$A_2$-quiver}{49}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}$1$-loop quiver}{49}{section.7.3}% 
+\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{51}{chapter.8}% 

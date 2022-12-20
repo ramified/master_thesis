@@ -1463,9 +1463,9 @@ $$\mathcal{F}_{\abdimvec{d}}= \bigsqcup_{\ww} \Vcell_{\ww} \qquad \mathcal{F}_{\
 We also realize these orbits as quotients of algebraic groups by the orbit-stabilizer theorem, as follows:
 \begin{equation*}
 \begin{aligned}
-  \Vcell_{\ww}=\;& \absgp{B}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \right) \qquad&&  \cong \mathbb{A}^{l(\ww)} \\ 
-  \VVcell_{\ww,\ww'}=\;& \left(\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}\right) / \left(\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \times \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'}\right)&& \cong \mathbb{A}^{l(\ww)+l(\ww')}  \\ 
-  \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'} \right) && \cong \mathbb{A}^{l(\ww')}\text{-bundle over }\mathcal{F}_{\abdimvec{d}}  \\ 
+  \Vcell_{\ww}\cong\;& \absgp{B}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \right) \qquad&&  \cong \mathbb{A}^{l(\ww)} \\ 
+  \VVcell_{\ww,\ww'}\cong\;& \left(\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}\right) / \left(\absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww} \times \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'}\right)&& \cong \mathbb{A}^{l(\ww)+l(\ww')}  \\ 
+  \VVcell_{\ww'}\cong\;& \absgp{G}_{\abdimvec{d}} /\left(  \absgp{B}_{\abdimvec{d}} \cap \absgp{B}_{\ww'} \right) && \cong \mathbb{A}^{l(\ww')}\text{-bundle over }\mathcal{F}_{\abdimvec{d}}  \\ 
 \end{aligned}
 \end{equation*}
 
@@ -1488,9 +1488,9 @@ $$\mathcal{F}_{u}= \bigsqcup_{w} \Omcell_{w}^{u} \qquad \mathcal{F}_{u} \times \
 and
 \begin{equation*}
 \begin{aligned}
-  \Omcell_{w}^{u}=\;& B_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w} \right) \qquad&&  \cong \mathbb{A}^{l(w)} \\ 
-  \OOmcell_{w,w'}^{u,u'}=\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) / \left(B_{\dimvec{d}} \cap B_{w} \times B_{\dimvec{d}} \cap B_{w'}\right)&& \cong \mathbb{A}^{l(w)+l(w')}  \\ 
-  \OOmcell_{w'}^{u,u'}=\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
+  \Omcell_{w}^{u}\cong\;& B_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w} \right) \qquad&&  \cong \mathbb{A}^{l(w)} \\ 
+  \OOmcell_{w,w'}^{u,u'}\cong\;& \left(B_{\dimvec{d}} \times B_{\dimvec{d}}\right) / \left(B_{\dimvec{d}} \cap B_{w} \times B_{\dimvec{d}} \cap B_{w'}\right)&& \cong \mathbb{A}^{l(w)+l(w')}  \\ 
+  \OOmcell_{w'}^{u,u'}\cong\;& G_{\dimvec{d}} /\left(  B_{\dimvec{d}} \cap B_{w'} \right) && \cong \mathbb{A}^{l(w')}\text{-bundle over }\mathcal{F}_{u}  \\ 
 \end{aligned}
 \end{equation*}
 
@@ -1818,7 +1818,7 @@ which satisfies the "coequalizer conditions":
 \end{aligned}
 \end{equation*}
 
-A \textbf{$\mathbf{G}$-equivariant (coherent) sheaf}\footnote{we will omit the word "coherent" for shorter notation.} on $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with an isomorphism
+A \textbf{$\mathbf{G}$-equivariant (coherent) sheaf} \footnote{we will omit the word "coherent" for shorter notation.} on $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with an isomorphism
 $$\phi_{\mathcal{F}}: p_3^{23,*}\mathcal{F} \longrightarrow \alpha^* \mathcal{F}$$
 such that the following diagram commutes:
 % https://q.uiver.app/?q=WzAsNixbMSwwLCIobSBcXHRpbWVzIFxcSWRfWCleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzIsMCwiKG0gXFx0aW1lcyBcXElkX1gpXiogcF8zXnsyMywqfSBcXG1hdGhjYWx7Rn0iXSxbMCwxLCIoXFxJZF9HIFxcdGltZXMgXFxhbHBoYSleKiBcXGFscGhhXiogXFxtYXRoY2Fse0Z9Il0sWzMsMSwicF97MjN9XipwXzNeezIzLCp9IFxcbWF0aGNhbHtGfSJdLFsxLDIsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIHBfM157MjMsKn0gXFxtYXRoY2Fse0Z9Il0sWzIsMiwicF97MjN9XiogXFxhbHBoYV4qIFxcbWF0aGNhbHtGfSJdLFswLDEsIihtIFxcdGltZXMgXFxJZF9YKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il0sWzIsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsMywicF97MjN9XipcXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsyLDQsIihcXElkX0cgXFx0aW1lcyBcXGFscGhhKV4qIFxccGhpX3tcXG1hdGhjYWx7Rn19Il1d
@@ -1889,7 +1889,7 @@ Therefore, $\phi_{\mathcal{F}}$ encodes information of $G$-action on $\mathcal{F
 Now we apply $\iota_{g_1,g_2}^{*}$ to \eqref{eq:associative_constraint}:
 % https://q.uiver.app/?q=WzAsOCxbMywwLCIgXFxtYXRoY2Fse0Z9X3giXSxbMCwwLCJcXG1hdGhjYWx7Rn0iXSxbMiwwLCJcXGFscGhhX3tnXzEsZ18yfV57Kn1cXG1hdGhjYWx7Rn09XFxhbHBoYV97Z18xfV57Kn1cXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfSJdLFs1LDAsIlxcbWF0aGNhbHtGfV97Z18xZ18yeH0iXSxbMSwyLCJcXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfSJdLFs0LDIsIlxcbWF0aGNhbHtGfV97Z18yeH0iXSxbMiwxXSxbMywxXSxbMCwzLCJcXHBoaV97Z18xZ18yLHh9XntcXG1hdGhjYWx7Rn19Il0sWzEsMiwiXFxpb3RhX3tnXzEsZ18yfV57Kn1cXHBoaV97XFxtYXRoY2Fse0Z9fSJdLFsxLDQsIlxcaW90YV97Z18yfV57Kn1cXHBoaV97XFxtYXRoY2Fse0Z9fSIsMl0sWzQsMiwiXFxpb3RhX3tnXzF9XnsqfVxccGhpX3tcXGFscGhhX3tnXzJ9XnsqfVxcbWF0aGNhbHtGfX0iLDJdLFswLDUsIlxccGhpX3tnXzIseH1ee1xcbWF0aGNhbHtGfX0iLDJdLFs1LDMsIlxccGhpX3tnXzEsZ18yeH1ee1xcbWF0aGNhbHtGfX09XFxwaGlfe2dfMSx4fV57XFxhbHBoYV97Z18yfV57Kn1cXG1hdGhjYWx7Rn19IiwyXSxbNiw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MzAsInRhcmdldCI6MzB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dXQ==
 \[\begin{tikzcd}[column sep={2cm,between origins}, row sep=small]
-	{\mathcal{F}} && {\makebox[10ex][l]{$\alpha_{g_1,g_2}^{*}\mathcal{F}=\alpha_{g_1}^{*}\alpha_{g_2}^{*}\mathcal{F}$}} & [2cm]{ \mathcal{F}_x} && {\mathcal{F}_{g_1g_2x}} \\
+	{\mathcal{F}} && {\makebox[10ex][l]{$\alpha_{g_1,g_2}^{*}\mathcal{F}=\alpha_{g_1}^{*}\alpha_{g_2}^{*}\mathcal{F}$}} & [2cm]{ \mathcal{F}_x} && {\mathcal{F}_{g_1 g_2 x}} \\
 	&& {} & {} \\
 	& {\alpha_{g_2}^{*}\mathcal{F}} &&& {\mathcal{F}_{g_2x}}
 	\arrow["{\phi_{g_1g_2,x}^{\mathcal{F}}}", from=1-4, to=1-6]
@@ -1994,11 +1994,11 @@ This can be viewed as a "group" analogue of Chevalley restriction theorem. Notic
 views $\GL_n$-representations as special $W$-invariant $T$-representations.
 \end{eg}
 
-From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some factors of $K$-theory.
+From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some tools (or weapons???) in $K$-theory.
 \section[Basic constructions]{Basic constructions: pullback, proper pushforward and tensor product}
-\subsection{pullback}
-\subsection{proper pushforward}
-\subsection{tensor product}
+\subsection{non-derived $3$-functors in $\Coh^G(X)$} 
+\subsection{$3$-functors in $K_0^G(X)$, smooth case}
+\subsection{$3$-functors in $K_0^G(X)$, restriction with supports}
 \section{Thom isomorphism}
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
@@ -2036,7 +2036,7 @@ The construction of the convolution product has a similar flavor with Fourier-Mu
 
 \begin{defn}[Convolution product]
 For the convenience of reading, we divide the whole process into three steps.
-\paragraph*{\underline{Step1}}Setting.
+\paragraph*{\underline{Step1.}}Setting.\\[-3mm]
 
 Let $M_1$, $M_2$, $M_3$ be smooth quasi-projective $G$-varieties. For convenience, denote
 $$M_{ij}:=M_i \times M_j \qquad M_{123}=M_1 \times M_2 \times M_3$$
@@ -2060,17 +2060,54 @@ and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some fa
 
 
 
-\paragraph*{\underline{Step2}}Convolution product on the level of varieties.
+\paragraph*{\underline{Step2.}}Convolution product on the level of varieties.\\[-3mm]
 
 For closed $G$-subvarieties $Z_{12} \subseteq M_{12}$, $Z_{23} \subseteq M_{23}$, denote
-$$Z_{123}:= p_{12}^{-1}(Z_{12}) \cap p_{23}^{-1}(Z_{23}) \subseteq M_123$$
+$$Z_{123}:= p_{12}^{-1}(Z_{12}) \cap p_{23}^{-1}(Z_{23}) \subseteq M_{123}$$
 as the intersection of two preimages. The \textbf{convolution product} of $Z_{12}$ and $Z_{23}$ is defined as
 $$Z_{12} \circ Z_{23} := p_{13}(Z_{123}) \subseteq M_{13}$$
 which is a closed $G$-subvariety of $M_{13}$.
-\paragraph*{\underline{Step3}}Convolution product on the level of $K$-theories.
+\paragraph*{\underline{Step3.}}Convolution product on the level of $K$-theories.\\[-3mm]
 
+Denote 
+$$\pi_{12}:=p_{12}\big|_{Z_{123}} \qquad \pi_{23}:=p_{23}\big|_{Z_{123}} \qquad
+\pi_{13}:=p_{13}\big|_{Z_{123}}$$
+as corresponding morphisms restricted to $Z_{123}$. We assume that $\pi_{13}$ is proper, so that we can use proper pushforward in $K$-theory.
+
+We define the convolution product by
+$$*: K_0^G(Z_{12}) \times K_0^G(Z_{23}) \longrightarrow K_0^G(Z_{12} \circ Z_{23}) \qquad (\mathcal{F}_{12}, \mathcal{F}_{23}) \longmapsto \mathcal{F}_{12}*\mathcal{F}_{23}$$
+$$\mathcal{F}_{12}*\mathcal{F}_{23}=\pi_{13,*}\left(\pi_{12}^* \mathcal{F}_{12} \otimes \pi_{23}^* \mathcal{F}_{23} \right) \in K_0^G(Z_{12} \circ Z_{23})$$
+\begin{remark}
+Those "$Z$-varieties" ($Z_{12}$, $p_{12}^{-1}(Z_{12})$, $Z_{123}$, etc.) are often singular in practice, so $\pi_{12}^{*}$, $\pi_{23}^{*}$ and $\otimes$ are defined in the sense of "restriction with supports", under the "$M$-varieties" which are smooth. The following diagram best illustrate the "actual" definition.
+%closed immersion induce f.faithful map in quasicoherent sheaf: https://en.wikipedia.org/wiki/Closed_immersion
+% https://q.uiver.app/?q=WzAsOCxbMCwwLCJLXzBeRyhaX3sxMn0pIFxcdGltZXMgS18wXkcoWl97MjN9KSJdLFsxLDAsIktfMF5HXFxiaWcocF97MTJ9XnstMX0oWl97MTJ9KVxcYmlnKSBcXHRpbWVzIEtfMF5HXFxiaWcocF97MTJ9XnstMX0oWl97MjN9KVxcYmlnKSJdLFswLDEsIktfMF5HKE1fezEyfSkgXFx0aW1lcyBLXzBeRyhNX3syM30pIl0sWzEsMSwiS18wXkcoTV97MTIzfSkgXFx0aW1lcyBLXzBeRyhNX3sxMjN9KSJdLFsyLDEsIktfMF5HKE1fezEyM30pIl0sWzMsMSwiS18wXkcoTV97MTN9KSJdLFsyLDAsIktfMF5HKFpfezEyM30pIl0sWzMsMCwiS18wXkcoWl97MTJ9IFxcY2lyYyBaX3syM30pIl0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFs2LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzcsNSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwzLCJwX3sxMn1eKiBcXHRpbWVzIHBfezIzfV4qIl0sWzMsNCwiXFxvdGltZXMiXSxbNCw1LCJwX3sxMywqfSJdLFs2LDcsIlxccGlfezEzLCp9Il0sWzEsNiwiXFxvdGltZXMiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXHBpX3sxMn1eKiBcXHRpbWVzIFxccGlfezIzfV4qIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\tikzcdset{scale cd/.style={every label/.append style={scale=#1},
+    cells={nodes={scale=#1}}}}
+\[\begin{tikzcd}[scale cd=0.84]
+	{K_0^G(Z_{12}) \times K_0^G(Z_{23})} & {K_0^G\big(p_{12}^{-1}(Z_{12})\big) \times K_0^G\big(p_{12}^{-1}(Z_{23})\big)} & {K_0^G(Z_{123})} & {K_0^G(Z_{12} \circ Z_{23})} \\
+	{K_0^G(M_{12}) \times K_0^G(M_{23})} & {K_0^G(M_{123}) \times K_0^G(M_{123})} & {K_0^G(M_{123})} & {K_0^G(M_{13})}
+	\arrow[hook', from=1-1, to=2-1]
+	\arrow[hook', from=1-2, to=2-2]
+	\arrow[hook', from=1-3, to=2-3]
+	\arrow[hook', from=1-4, to=2-4]
+	\arrow["{p_{12}^* \times p_{23}^*}", from=2-1, to=2-2]
+	\arrow["\otimes", from=2-2, to=2-3]
+	\arrow["{p_{13,*}}", from=2-3, to=2-4]
+	\arrow["{\pi_{13,*}}", from=1-3, to=1-4]
+	\arrow["\otimes", dashed, from=1-2, to=1-3]
+	\arrow["{\pi_{12}^* \times \pi_{23}^*}", dashed, from=1-1, to=1-2]
+\end{tikzcd}\]
+\end{remark}
 \end{defn}
+The whole process can be concluded in the following diagram.
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  
+    \includegraphics[]{figures/table/table_convolution.pdf}       
+\end{table}
+
 \section{Statement}
+To facilitate the computation of intersection (i.e., tensor product in the construction of convolution product), we state the excess intersection formula.
 \section{Application: convolution formula}
 \section{Demazure operator}
 
