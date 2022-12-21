@@ -341,7 +341,7 @@ $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/
 For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert varieties are not smooth.
 
 
-\subsection{$\mathcal{F} \times \mathcal{F}$}
+\subsection{$\mathcal{F} \times \mathcal{F}$}\label{subsec:product_of_F}
 As a more complicated geometrical object, $\mathcal{F} \times \mathcal{F}$ works as the base space for the Steinberg variety, which turns out to be the central focus in the thesis. $\mathcal{F} \times \mathcal{F}$ has naturally a diagonal $\GL_n$-action:
 $$\GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g,F_1,F_2) \longmapsto (gF_1,gF_2).$$
 Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $GL_n$-orbits, indexed by the Weyl group:
@@ -1652,7 +1652,7 @@ It is not hard to see that they are stratifications:
 \end{aligned}
 \end{equation*}
 
-\begin{proposition}
+\begin{proposition}\label{prop:strataffine}
 Those stratifications are affine spaces over corresponding base spaces. To be precise,
 \begin{equation*}
 \begin{aligned}
@@ -1932,7 +1932,7 @@ So \eqref{eq:equiv_morphism} is just the condition for $f$ to be $G$-equivariant
 
 There are two extreme situations worth mentioning about. 
 When $G=\Id$, there is no $G$-action structure constrain on varieties and sheaves. Therefore,
-$$\Coh^{\Id}(X)=\Coh(X) \qquad K_0^{\Id}(X)=K_0(X)\hat{=} K_0(\Coh(X)).$$
+$$\Coh^{\Id}(X)=\Coh(X) \qquad K_0^{\Id}(X)=K_0(X) \,\hat{=}\, K_0(\Coh(X)).$$
 When $G$ acts on $X=\Spec A$ trivially, any sheaf $\mathcal{F} \in \Coh^G(X)$ can be viewed as an (finitely generated)\footnote{We already assume $X$ to be of finite type, so coherent condition is equivalent to finitely generated condition.} $A$-module $M$ with $G$-action, so
 $$\Coh^G(X)=\rep_A(G) \xlongequal{\text{when $G$ is finite}} \Mod(A[G]).$$
 In particular, any sheaf $\mathcal{F} \in \Coh^G(\pt)$ can be viewed as a finite dimensional complex $G$-representation, so
@@ -2034,8 +2034,8 @@ Let $X,Y$ be $G$-varieties, $f: Y \longrightarrow X$ be a $G$-equivariant morphi
 	\arrow[no head, from=3-6, to=4-5]
 	\arrow[no head, from=3-7, to=4-5]
 \end{tikzcd}\]
-By definition, we get $$p_{3,X}^{23} \circ \Id_G \times f = f \circ p_{3,Y}^{23}.$$ 
-Since $f$ is $G$-equivariant, $$\alpha_X \circ \Id_G \times f = f \circ \alpha_Y.$$
+By definition, we get $$p_{3,X}^{23} \circ \left(\Id_G \times f\right) = f \circ p_{3,Y}^{23}.$$ 
+Since $f$ is $G$-equivariant, $$\alpha_X \circ \left(\Id_G \times f\right) = f \circ \alpha_Y.$$
 These two diagrams are Cartesian, and $p_{3,X}^{23}, \alpha_X$ are flat.
 
 The pullback $(f^*\mathcal{F},\phi_{f^*\mathcal{F}}) \in \Coh^G(Y)$ is defined by
@@ -2142,11 +2142,22 @@ With enough tools in hand, we can define some extra structures on $K^G(X)$. (By 
 \section{Thom isomorphism}
 In this section we state Thom isomorphism theorem, which is an analogy of Poincaré lemma in $K$-theory.
 \begin{proposition}[{Thom isomorphism, \cite[Theorem 5.4.17]{chriss1997representation}}]
-内容...
+Let $X$ be a $G$-variety, $\pi: E \longrightarrow X$ be a $G$-equivariant affine bundle on $X$. The pullback 
+$$\pi^*: K^G(X) \longrightarrow K^G(E)$$
+is an isomorphism of $K$-theories as $\Rpt(G)$-module.
 \end{proposition}
-For a proof, see \cite[Theorem 5.4.17].
+For a proof, see \cite[Theorem 5.4.17]{chriss1997representation}.
+
+With Thom isomorphism, we can compute $K$-theory of affine bundles by the $K$-theory of the base spaces. Proposition \ref{prop:strataffine} offers plenty of cases to apply Thom isomorphism. Also, for any $k \in \mathbb{N}_{>0}$,
+$$K^G(\mathbb{A}^k) \cong K^G(\pt)\cong R(G).$$
+This can be applied to $\OOmcell_w^u$ and $\OOmcell_{w,w'}^{u,u'}$. 
+
+
+
+
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
+Before we state the induction formula, let us recall one basic construction of spaces: the contracted product.
 \begin{defn}[Contracted product]
 Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety. The contracted product of $G$ and $X$ over $H$ is defined as
 $$G \times^H X :=(G \times X)/\sim$$
@@ -2158,6 +2169,7 @@ $$G \times^H X \longrightarrow G/H \qquad (g,x) \longrightarrow gH$$
 which realize $G \times^H X$ as an $X$-bundle over $G/H$. In particular, for $X=\pt$, we get an isomorphism of $G$-varieties
 $$G \times^H \pt \stackrel{\sim}{\longrightarrow} G/H.$$
 
+The contracted product is not only used for the induction formula, but also used in the definition of equivariant cohomology theory (see ???) and description of some typical varieties (see the description of \ref{subsec:product_of_F}).
 \section{Reduction}
 \section{Equivariant cohomology theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
