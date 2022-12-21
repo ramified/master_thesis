@@ -21,12 +21,12 @@
 \contentsline {subsection}{\numberline {2.2.1}Non-derived three functors in $\Coh ^G(X)$}{38}{subsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.2.2}Smooth case}{39}{subsection.2.2.2}% 
 \contentsline {subsection}{\numberline {2.2.3}Restriction with supports}{40}{subsection.2.2.3}% 
-\contentsline {subsection}{\numberline {2.2.4}Algebraic structures of $K$-theory}{40}{subsection.2.2.4}% 
-\contentsline {section}{\numberline {2.3}Thom isomorphism}{40}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Induction}{40}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}Contracted product}{40}{subsection.2.4.1}% 
-\contentsline {section}{\numberline {2.5}Reduction}{41}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{41}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.2.4}Algebraic structures of $K$-theory}{41}{subsection.2.2.4}% 
+\contentsline {section}{\numberline {2.3}Thom isomorphism}{41}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Induction}{42}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Contracted product}{42}{subsection.2.4.1}% 
+\contentsline {section}{\numberline {2.5}Reduction}{42}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{42}{section.2.6}% 
 \contentsline {chapter}{\numberline {3}Cellular fibration theorem}{43}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Statement}{43}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Application: module structure}{43}{section.3.2}% 

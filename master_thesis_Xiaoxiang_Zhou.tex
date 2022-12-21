@@ -81,6 +81,7 @@
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
 \DeclareMathOperator{\Id}{\operatorname{Id}}
 \DeclareMathOperator{\rep}{\operatorname{rep}}
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
@@ -2131,13 +2132,96 @@ When $f: Y \longrightarrow X$ is open embedding, the non-derived pullback $f^*$ 
 \subsection{Restriction with supports}
 In practice, the varieties we consider are not smooth. Luckily, these varieties are always embedded in some ambiance spaces which are smooth.
 
+\begin{defn}[Pullback with supports]
+Let $Z,Z'$ be $G$-varieties, $h: Z' \longrightarrow Z$ be a $G$-equivariant closed embedding. Suppose that $h$ is the restriction with support by some $f:X \longrightarrow Y$ satisfying the assumption \eqref{eq:assumption}, i.e., we have a $G$-equivariant closed embedding $\iota_Z: Z \longrightarrow X$ such that 
+$Z' \cong f^{-1}(Z)$ and $h=f\big|_{Z'}$.
+Denote $\iota_{Z'}: Z' \longrightarrow Y$ as the induced $G$-equivariant closed embedding, we would like to construct the pullback $h^*: K^G(Z) \longrightarrow K^G(Z')$.
+
+% https://q.uiver.app/?q=WzAsMTAsWzAsMCwiWiciXSxbMSwwLCJaIl0sWzAsMiwiWSJdLFsxLDIsIlgiXSxbMiwwLCJLXkcoWicpIl0sWzIsMiwiS15HKFkpIl0sWzMsMiwiS15HKFgpIl0sWzMsMCwiS15HKFopIl0sWzEsMV0sWzIsMV0sWzAsMSwiaCIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiXFxpb3RhX1oiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDMsImYiXSxbMCwyLCJcXGlvdGFfe1onfSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNSwiXFxpb3RhX3taJywqfSIsMl0sWzYsNSwiZl4qIiwyXSxbNyw2LCJcXGlvdGFfe1osKn0iXSxbNSw0LCJcXGdyIiwyLHsiY3VydmUiOjIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDQsImheKiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDksIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifSwiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=
+\[\begin{tikzcd}[column sep={10mm}, row sep={4mm}]
+	{Z'} & Z &[5mm] {K^G(Z')} & {K^G(Z)} \\
+	& {} & {} \\
+	Y & X & {K^G(Y)} & {K^G(X)}
+	\arrow["h", hook, from=1-1, to=1-2]
+	\arrow["{\iota_Z}", hook, from=1-2, to=3-2]
+	\arrow["f", from=3-1, to=3-2]
+	\arrow["{\iota_{Z'}}"', hook, from=1-1, to=3-1]
+	\arrow["{\iota_{Z',*}}"', from=1-3, to=3-3]
+	\arrow["{f^*}"', from=3-4, to=3-3]
+	\arrow["{\iota_{Z,*}}", from=1-4, to=3-4]
+	\arrow["\gr"', curve={height=12pt}, dotted, from=3-3, to=1-3]
+	\arrow["{h^*}"', dashed, from=1-4, to=1-3]
+	\arrow[shorten <=7mm, shorten >=9mm,squiggly={
+			               pre length=7mm, post length=9mm
+			             }, maps to, from=2-2, to=2-3]
+\end{tikzcd}\]
+
+Follows \cite[5.2.7(ii)]{chriss1997representation}, one can construct a morphism
+$$\gr: \Img \left(  f^* \circ \iota_{Z,*} \right) \longrightarrow K^G(Z')$$
+which satisfies $\iota_{Z',*} \circ \gr = \Id$ on $\Img\left(  f^* \circ \iota_{Z,*} \right)$. The pullback is defined as
+% https://q.uiver.app/?q=WzAsNCxbMywwLCJLXkcoWicpIl0sWzIsMCwiS15HKFkpIl0sWzEsMCwiS15HKFgpIl0sWzAsMCwiaF4qOkteRyhaKSJdLFsyLDEsImZeKiJdLFszLDIsIlxcaW90YV97WiwqfSJdLFsxLDAsIlxcZ3IiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=
+\[\begin{tikzcd}
+	{h^*:K^G(Z)} & {K^G(X)} & {K^G(Y)} & {K^G(Z').}
+	\arrow["{f^*}", from=1-2, to=1-3]
+	\arrow["{\iota_{Z,*}}", from=1-1, to=1-2]
+	\arrow["\gr", dotted, from=1-3, to=1-4]
+\end{tikzcd}\]
+\end{defn}
+
+\begin{defn}[Tensor product with supports/Intersection product]
+Let $X$ be a smooth $G$-variety, and $Z$, $Z' \subseteq X$ be two closed $G$-subvarieties. The tensor product with supports is defined as
+% https://q.uiver.app/?q=WzAsMyxbMiwwLCJLXkcoWiBcXGNhcCBaJykiXSxbMSwwLCJLXkcoWiBcXHRpbWVzIFonKSJdLFswLDAsIlxcb3RpbWVzOkteRyhaKSBcXHRpbWVzIEteRyhaJykiXSxbMSwwLCJcXERlbHRhXioiXSxbMiwxLCJcXGJveHRpbWVzIl1d
+\[\begin{tikzcd}
+	{\otimes:K^G(Z) \times K^G(Z')} & {K^G(Z \times Z')} & {K^G(Z \cap Z')}
+	\arrow["{\Delta^*}", from=1-2, to=1-3]
+	\arrow["\boxtimes", from=1-1, to=1-2]
+\end{tikzcd}\]
+i.e., $\mathcal{F} \otimes \mathcal{F}' := \Delta^* (\mathcal{F} \boxtimes \mathcal{F}')$.
+
+The following diagram explains the word "restriction with supports":
+% https://q.uiver.app/?q=WzAsNixbMiwwLCJLXkcoWiBcXGNhcCBaJykiXSxbMSwwLCJLXkcoWiBcXHRpbWVzIFonKSJdLFswLDAsIkteRyhaKSBcXHRpbWVzIEteRyhaJykiXSxbMCwxLCJLXkcoWCkgXFx0aW1lcyBLXkcoWCkiXSxbMSwxLCJLXkcoWCBcXHRpbWVzIFgpIl0sWzIsMSwiS15HKFgpIl0sWzEsMCwiXFxEZWx0YV4qIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsMSwiXFxib3h0aW1lcyJdLFszLDQsIlxcYm94dGltZXMiXSxbNCw1LCJcXERlbHRhXioiXSxbMiwzXSxbMSw0XSxbMCw1XV0=
+\[\begin{tikzcd}
+	{K^G(Z) \times K^G(Z')} & {K^G(Z \times Z')} & {K^G(Z \cap Z')} \\
+	{K^G(X) \times K^G(X)} & {K^G(X \times X)} & {K^G(X)}
+	\arrow["{\Delta^*}", dashed, from=1-2, to=1-3]
+	\arrow["\boxtimes", from=1-1, to=1-2]
+	\arrow["\boxtimes", from=2-1, to=2-2]
+	\arrow["{\Delta^*}", from=2-2, to=2-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+\end{tikzcd}\]
+\end{defn}
 \subsection{Algebraic structures of $K$-theory} 
 With enough tools in hand, we can define some extra structures on $K^G(X)$. (By priority $K^G(X)$ is an abelian group)
 
+\begin{proposition}[$R(G)$-module]
+For any $G$-variety $X$, $K^G(X)$ is a $\Rpt (G)$-module by
+$$\Rpt (G) \times K^G(X) \cong K^G(\pt) \times K^G(X)  \begin{tikzcd}[column sep=5mm]
+ 	{} & {}
+ 	\arrow["{\boxtimes}", from=1-1, to=1-2]
+ \end{tikzcd} 
+ K^G(\pt \times X) \cong K^G(X).$$
+\end{proposition}
+Under this proposition, these three functors become $\Rpt(G)$-homomorphisms.
 
+\begin{proposition}[$\otimes$ as multiplication]
+For any smooth $G$-variety $X$, $K^G(X)$ is a commutative associative $\Rpt(G)$-algebra, where the multiplication (call the $\otimes$-product on $K^G(X)$) is defined by
+$$K^G(X) \times K^G(X) 
+\begin{tikzcd}[column sep=5mm]
+ 	{} & {}
+ 	\arrow["{\otimes}", from=1-1, to=1-2]
+ \end{tikzcd}
+ K^G(X).
+ $$
+\end{proposition}
+Under this proposition, for any $X$, $Y$, $f$ satisfying assumption \eqref{eq:assumption}, $f^*$ is a ring homomorphism.
 
+\begin{warning}
+We will define another product (called the convolution product) on some $K$-theories in Section \ref{sec:convolution}. These two products are essentially different products, and people have to specify which one they are using, when they discuss the "algebra structures on $K$-theories". For us, we only use $\otimes$-product for $K^G(\pt)$ (except Chapter \ref{chap:AScompletion}). 
 
-
+After that, whenever we see an isomorphism of $K$-theories, we need to specify which structures this isomorphism preserve.
+\end{warning}
 
 \section{Thom isomorphism}
 In this section we state Thom isomorphism theorem, which is an analogy of Poincaré lemma in $K$-theory.
@@ -2188,7 +2272,7 @@ The contracted product is not only used for the induction formula, but also used
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Excess intersection formula}
 
-\section{Convolution}
+\section{Convolution}\label{sec:convolution}
 The construction of the convolution product has a similar flavor with Fourier-Mukai transformation, which is the composition of pullback, tensor product and proper pushforward.
 
 \begin{defn}[Convolution product]
@@ -2284,7 +2368,7 @@ To facilitate the computation of intersection (i.e., tensor product in the const
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Atiyah-Segal completion theorem}
+\chapter{Atiyah-Segal completion theorem}\label{chap:AScompletion}
 
 
 \bibliographystyle{plain}
