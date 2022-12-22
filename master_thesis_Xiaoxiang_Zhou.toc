@@ -2,14 +2,14 @@
 \contentsline {section}{\numberline {1.1}Initial case: $\mathcal {F}$ and $\mathcal {F} \times \mathcal {F}$}{5}{section.1.1}% 
 \contentsline {subsection}{\numberline {1.1.1}$\mathcal {F}$}{5}{subsection.1.1.1}% 
 \contentsline {subsection}{\numberline {1.1.2}$\mathcal {F} \times \mathcal {F}$}{7}{subsection.1.1.2}% 
-\contentsline {section}{\numberline {1.2}Quiver}{10}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Quiver}{9}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Symmetric group calculus}{13}{section.1.3}% 
 \contentsline {section}{\numberline {1.4}Algebraic group and Lie algebra}{16}{section.1.4}% 
-\contentsline {subsection}{\numberline {1.4.1}Algebraic group}{16}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {1.4.1}Algebraic group}{17}{subsection.1.4.1}% 
 \contentsline {subsection}{\numberline {1.4.2}Lie algebra}{18}{subsection.1.4.2}% 
-\contentsline {section}{\numberline {1.5}Typical variety}{19}{section.1.5}% 
+\contentsline {section}{\numberline {1.5}Typical variety}{20}{section.1.5}% 
 \contentsline {subsection}{\numberline {1.5.1}Flag variety}{20}{subsection.1.5.1}% 
-\contentsline {subsection}{\numberline {1.5.2}Incidence variety}{21}{subsection.1.5.2}% 
+\contentsline {subsection}{\numberline {1.5.2}Incidence variety}{22}{subsection.1.5.2}% 
 \contentsline {section}{\numberline {1.6}Stratification and $T$-fixed points}{23}{section.1.6}% 
 \contentsline {subsection}{\numberline {1.6.1}Stratification: flag variety}{24}{subsection.1.6.1}% 
 \contentsline {subsection}{\numberline {1.6.2}Stratification: incidence variety}{27}{subsection.1.6.2}% 
@@ -23,30 +23,32 @@
 \contentsline {subsection}{\numberline {2.2.2}Smooth case}{39}{subsection.2.2.2}% 
 \contentsline {subsection}{\numberline {2.2.3}Restriction with supports}{40}{subsection.2.2.3}% 
 \contentsline {subsection}{\numberline {2.2.4}Algebraic structures of $K$-theory}{41}{subsection.2.2.4}% 
-\contentsline {section}{\numberline {2.3}Thom isomorphism}{41}{section.2.3}% 
+\contentsline {section}{\numberline {2.3}Thom isomorphism}{42}{section.2.3}% 
 \contentsline {section}{\numberline {2.4}Induction}{42}{section.2.4}% 
 \contentsline {subsection}{\numberline {2.4.1}Contracted product}{42}{subsection.2.4.1}% 
 \contentsline {subsection}{\numberline {2.4.2}Statement}{43}{subsection.2.4.2}% 
 \contentsline {subsection}{\numberline {2.4.3}Applications}{43}{subsection.2.4.3}% 
 \contentsline {section}{\numberline {2.5}Reduction}{43}{section.2.5}% 
 \contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{44}{section.2.6}% 
-\contentsline {chapter}{\numberline {3}Cellular fibration theorem}{45}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Statement}{45}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Application: module structure}{45}{section.3.2}% 
-\contentsline {chapter}{\numberline {4}Localization theorem}{47}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Euler class}{47}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Statement}{47}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Application: change of basis}{47}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Excess intersection formula}{49}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Convolution}{49}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Statement}{50}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Application: convolution formula}{51}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Demazure operator}{51}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}Generalization}{53}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}quiver with loops}{53}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{53}{section.6.2}% 
-\contentsline {chapter}{\numberline {7}From formula to diagram}{55}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}One point quiver}{55}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}$A_2$-quiver}{55}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}$1$-loop quiver}{55}{section.7.3}% 
-\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{57}{chapter.8}% 
+\contentsline {subsection}{\numberline {2.6.1}$G$-equivariant cohomology $H_G^* (X; \mathbb {Q})$}{44}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}Cohomology ring $\Spt (G)$}{44}{subsection.2.6.2}% 
+\contentsline {chapter}{\numberline {3}Cellular fibration theorem}{47}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Statement}{47}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Application: module structure}{47}{section.3.2}% 
+\contentsline {chapter}{\numberline {4}Localization theorem}{49}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Euler class}{49}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Statement}{49}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Application: change of basis}{49}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Excess intersection formula}{51}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Convolution}{51}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Statement}{52}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Application: convolution formula}{53}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Demazure operator}{53}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Generalization}{55}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}quiver with loops}{55}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{55}{section.6.2}% 
+\contentsline {chapter}{\numberline {7}From formula to diagram}{57}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}One point quiver}{57}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}$A_2$-quiver}{57}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}$1$-loop quiver}{57}{section.7.3}% 
+\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{59}{chapter.8}% 

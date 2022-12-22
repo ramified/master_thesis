@@ -73,8 +73,8 @@
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
 
-\DeclareMathOperator{\EGG}{\operatorname{E}}
-\DeclareMathOperator{\BGG}{\operatorname{B}}
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
 \DeclareMathOperator{\GL}{\operatorname{GL}}
 \DeclareMathOperator{\SL}{\operatorname{SL}}
 \DeclareMathOperator{\supp}{supp}
@@ -353,7 +353,15 @@ Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consist
 $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
 
 Denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
-$$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right).$$
+$$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
+which is an $\mathbb{A}^{l(w')}$-bundle over $\mathcal{F}$, as shown below:
+% https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG1hdGhiYntBfV57bCh3Jyl9IFxcY29uZyBCL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMCwiXFxHTF9uL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMSwiXFxtYXRoY2Fse0Z9PVxcR0xfbi9CXFxoc3BhY2V7NW1tfSJdLFswLDFdLFsxLDJdXQ==
+\[\begin{tikzcd}
+	{\mathbb{A}^{l(w')} \cong B/\left( B \cap w'B(w')^{-1}  \right)} & {\GL_n/\left( B \cap w'B(w')^{-1}  \right)} \\
+	& {\hspace{-10mm}\mathcal{F}=\GL_n/B}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}\]
 
 Different from $\mathcal{F}$, the $\GL_n$-action on $\mathcal{F} \times \mathcal{F}$ is not transitive. To facilitate the stratification of $\mathcal{F}\times \mathcal{F}$, we introduce the twisted $\GL_n \times \GL_n$-action:
 $$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g_1,g_2,F_g,F_{g'}) \longmapsto (F_{g_1g},F_{g_1(gg_2g^{-1}) g'}).$$
@@ -1945,7 +1953,7 @@ In particular, any sheaf $\mathcal{F} \in \Coh^G(\pt)$ can be viewed as a finite
 $$\Coh^G(\pt)=\rep_{\mathbb{C}}(G) \xlongequal{\text{when $G$ is finite}} \Mod(\mathbb{C}[G]).$$
 
 ???(If I have time I will compute $K_0(\mathbb{P}^1)$ here.)
-\subsection{Representation ring $\Rpt(G)$}
+\subsection{Representation ring $\Rpt(G)$}\label{subset:rep_ring}
 Now let us try to figure out some examples.
 
 Recall that any coherent sheaf over $\pt$ is equivalent to a finite dimensional $\mathbb{C}$-vector space, and any $G$-equivariant coherent sheaf over $\pt$ is equivalent to a finite dimensional complex $G$-representation. Moreover, by Jordan-Hölder theorem, every finite dimensional complex $G$-representation can be written as a composition series such that each quotient object is irreducible. Therefore,
@@ -1986,7 +1994,7 @@ $$\Rpt(T) \longrightarrow \Rpt(\Id) \qquad f(\varepsilon_1,\ldots,\varepsilon_n)
 \end{eg}
 
 \begin{eg}
-After we state the reduction isomorphism ???(ref), we can show that
+After we state the reduction isomorphism \ref{prop:reduction_isomorphism}, we can show that
 $$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]$$
 \end{eg}
 
@@ -2142,7 +2150,10 @@ For a triple $(X,Y,f)$ satisfying assumption \eqref{eq:assumption1}, and a $G$-e
 \end{defn}
 We can now define pullback of $f$ in the following assumption:
 \begin{equation}\label{eq:assumption2}
-\text{$f:Y \longrightarrow X$ is $G$-equivariant, and $f$ is a restriction with supports by some $f':Y' \longrightarrow X'$, where $X'$, $Y'$ are smooth.}
+\begin{aligned}
+\text{$f:Y \longrightarrow X$ is $G$-equivariant, and $f$ is a restriction with supports}&\\
+\text{by some $f':Y' \longrightarrow X'$, where $X'$, $Y'$ are smooth.}&
+\end{aligned}
 \end{equation}
 
 \begin{defn}[Pullback with supports]
@@ -2219,7 +2230,7 @@ $$\Rpt (G) \times K^G(X) \cong K^G(\pt) \times K^G(X)  \begin{tikzcd}[column sep
 Under this proposition, these three functors become $\Rpt(G)$-homomorphisms.
 
 \begin{proposition}[$\otimes$ as multiplication]
-For any smooth $G$-variety $X$, $K^G(X)$ is a commutative associative $\Rpt(G)$-algebra, where the multiplication (call the $\otimes$-product on $K^G(X)$) is defined by
+For any smooth $G$-variety $X$, $K^G(X)$ is a unital commutative associative $\Rpt(G)$-algebra, where the multiplication (call the $\otimes$-product on $K^G(X)$) is defined by
 $$K^G(X) \times K^G(X) 
 \begin{tikzcd}[column sep=5mm]
  	{} & {}
@@ -2231,7 +2242,7 @@ $$K^G(X) \times K^G(X)
 Under this proposition, for any $X$, $Y$, $f$ satisfying assumption \eqref{eq:assumption1}, $f^*$ is a ring homomorphism.
 
 \begin{warning}
-We will define another product (called the convolution product) on some $K$-theories in Section \ref{sec:convolution}. These two products are essentially different products, and people have to specify which one they are using, when they discuss the "algebra structures on $K$-theories". For us, we only use $\otimes$-product for $K^G(\pt)$ (except Chapter \ref{chap:AScompletion}). 
+We will define another product (called the convolution product) on some $K$-theories in Section \ref{sec:convolution}. These two products are essentially different products, and people have to specify which one they are using, when they discuss the "algebra structures on $K$-theories". The final task is to compute the convolution product of $K^{G_{\dimvec{d}}} (\St_{\dimvec{d}})$, not the $\otimes$-product.
 
 After that, whenever we see an isomorphism of $K$-theories, we need to specify which structures this isomorphism preserve.
 \end{warning}
@@ -2266,7 +2277,7 @@ $$G \times^H X \longrightarrow G/H \qquad (g,x) \longrightarrow gH$$
 which realize $G \times^H X$ as an $X$-bundle over $G/H$. In particular, for $X=\pt$, we get an isomorphism of $G$-varieties
 $$G \times^H \pt \stackrel{\sim}{\longrightarrow} G/H.$$
 
-The contracted product is not only used for the induction isomorphism, but also used in the definition of equivariant cohomology theory (see ???) and description of some typical varieties (see the description of \ref{subsec:product_of_F}).
+The contracted product is not only used for the induction isomorphism, but also used in the definition of equivariant cohomology theory (see Definition \ref{def:equivariant_cohomology}) and description of some typical varieties (see the description of $\overline{\OOmcell}_s$ in  \ref{subsec:product_of_F}).
 
 \subsection{Statement}
 
@@ -2300,7 +2311,7 @@ When $X$ is smooth, $\Res_H^G$ is an isomorphism as algebras (for $\otimes$-prod
 
 We denote the inverse functor of $\Res_H^G$ by $\Ind_H^G$, called the induction, which is also explicitly constructed by pulling back and descent argument in \cite[5.2.16]{chriss1997representation}.
 
-(Present the construction of $\Ind_H^G$ and example of $K^{\GL_2} (\mathbb{P}^1)$, if time permits.)
+(???Present the construction of $\Ind_H^G$ and example of $K^{\GL_2} (\mathbb{P}^1)$, if time permits.)
 
 \subsection{Applications}
 This induction formula is usually used for computing $G$-equivariant $K$-theory of $G$-orbits. For example, in Setting \ref{set:initial_case},
@@ -2314,13 +2325,13 @@ In the next section we will explore how to reduce $B$-equivariant $K$-theory to 
 \section{Reduction}
 Let $P = M \ltimes U$ be a linear algebraic group in this section, where $M$ is reductive and $U=R_u(M)$ is the unipotent radical of $P$.
 
-\begin{proposition}[{Reduction isomorphism, \cite[5.2.18]{chriss1997representation} }]
+\begin{proposition}[{Reduction isomorphism, \cite[5.2.18]{chriss1997representation} }]\label{prop:reduction_isomorphism}
 For any $P$-variety $X$, the forgetful map
 $$K^P(X) \longrightarrow K^M(X)$$
 is an isomorphism as $\Rpt(M)$-modules. (and as algebras for $\otimes$-product, when $X$ is smooth)
 \end{proposition}
 
-In the proof of Reduction isomorphism, induction isomorphism and Thom isomorphism are used in an essential way.
+In the proof of reduction isomorphism, induction isomorphism and Thom isomorphism are used in an essential way.
 
 This isomorphism allows us to identify $B$-equivariant $K$-theory and $T$-equivariant $K$-theory. In particular, $\Rpt(B) \cong \Rpt(T)$ as $\mathbb{Z}$-algebras.
 
@@ -2328,6 +2339,60 @@ This isomorphism allows us to identify $B$-equivariant $K$-theory and $T$-equiva
 The theory of equivariant cohomology theory is completely parallel with the theory of equivariant $K$-theory. We shortly sketch the definition and refer readers to see \cite[Chapter 2]{przezdziecki2015geometric} for details (like the definition of universal principle bundle $\EGG G \longrightarrow \BGG G$)
 
 Nearly all the abstract results for $K$-theory have a corresponding cohomology theory version in \cite{przezdziecki2015geometric}. We will mention about the difference of Euler class in Section \ref{sec:euler_class}, compute some examples in Chapter \ref{chap:diagram}, and compare these two theories in Chapter \ref{chap:AScompletion}.
+
+\subsection{$G$-equivariant cohomology $H_G^* (X; \mathbb{Q})$}
+
+\begin{defn}[{$G$-equivariant cohomology, \cite[Definition 2.7]{przezdziecki2015geometric}}]\label{def:equivariant_cohomology}
+For a $G$-variety $X$, the $G$-equivariant cohomology theory is defined as the cohomology ring of the contracted product space $\EGG G \times^G X$, i.e.,
+$$H_G^* (X; \mathbb{Q}):= H^* \!\left(\EGG G \times^G X; \mathbb{Q}\right).$$
+Specifically, for a point $\{\pt\}=\Spec \mathbb{C}$ with trivial $G$-action, denote
+$$\Spt(G):= H_G^* \big(\{\pt\}; \mathbb{Q}\big)=H^* (\BGG G; \mathbb{Q})$$
+as the cohomology ring of classifying space $\BGG G$.
+
+We work with coefficient $\mathbb{Q}$ for simplicity, and we may omit $\mathbb{Q}$ for the convenience of writing and typing.
+\end{defn}
+
+
+Parallelly, there are two extreme situations worth mentioning about. 
+When $G=\Id$, $\EGG G =\{\pt\}$. Therefore,
+$$H_{\Id}^* (X; \mathbb{Q})= H^* \!\left(\{\pt\} \times^{\Id} X; \mathbb{Q}\right) \cong H^* (X; \mathbb{Q}).$$
+When $G$ acts on $X$ trivially, we get
+$$H_{G}^* (X; \mathbb{Q})= H^* (\BGG G \times X; \mathbb{Q}) \cong H^* (\BGG G; \mathbb{Q}) \otimes_{\mathbb{Q}} H^* (X; \mathbb{Q}).$$
+
+\subsection{Cohomology ring $\Spt(G)$}\label{subsec:coh_ring}
+
+We also list examples in parallel with subsection \ref{subset:rep_ring}. Everything is much more sketchy though. We use Setting \ref{set:initial_case}.
+
+\begin{eg}
+For trivial group $\Id$, $\BGG \Id=\{\pt\}$, so
+$$\Spt(\Id)=H^*\big(\{\pt\} ; \mathbb{Q}\big) \cong \mathbb{Q}.$$
+\end{eg}
+
+\begin{eg}[{ \cite[Example 2.9(i)]{przezdziecki2015geometric} }]
+For group $T$, $\BGG T=\prod_{j=i}^{n} \mathbb{CP}^{\infty}$, so
+$$\Spt(T)=H^*\!\left(\prod_{j=1}^{n} \mathbb{CP}^{\infty} ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n H^*\left( \mathbb{CP}^{\infty}\; ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n \mathbb{Q}[t_j] = \mathbb{Q}[t_1,\ldots , t_n] $$
+where $\deg t_j=2$ for any $j$.
+
+By forgetting $T$-actions, we get a morphism of $\mathbb{Q}$-algebra
+$$\Spt(T) \longrightarrow \Spt(\Id) \qquad f(t_1,\ldots,t_n) \longmapsto f(0,\ldots,0).$$
+\end{eg}
+
+\begin{eg}
+By using the reduction isomorphism \ref{prop:reduction_isomorphism} in the version of cohomology theory, we can show that
+$$\Spt(N) \cong \Spt(\Id) \cong \mathbb{Q} \qquad \Spt(B) \cong \Spt(T) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
+\end{eg}
+
+\begin{eg}[{\cite[Example 2.9(ii)]{przezdziecki2015geometric} }]
+For group $\GL_n$, $\BGG \GL_n=\Gr(n,\infty)$, so
+$$\Spt(T)=H^*\!\left(\Gr(n,\infty) ; \mathbb{Q}\right) \cong \mathbb{Q}[t_1,\ldots , t_n]^{S_n} $$
+
+We also have the Chevalley restriction theorem in the version of cohomology theory. In this case, it says
+$$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]^{S_n}.$$
+\end{eg}
+
+The three functors on cohomology theory are defined in a different way, which are induced from the three functors in normal cohomology theory, see \cite[2.3.2]{przezdziecki2015geometric}. Thom isomorphism, induction isomorphism and reduction isomorphism are still true in the equivariant cohomology theory case. In particular, we have
+$$H_G^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
+as an $\Spt(G)$-module. $H_G^*(\mathcal{F})$ is a free $\Spt(G)$-module with rank $\#W=n!$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cellular fibration theorem}
 \section{Statement}
@@ -2387,7 +2452,7 @@ We define the convolution product by
 $$*: K_0^G(Z_{12}) \times K_0^G(Z_{23}) \longrightarrow K_0^G(Z_{12} \circ Z_{23}) \qquad (\mathcal{F}_{12}, \mathcal{F}_{23}) \longmapsto \mathcal{F}_{12}*\mathcal{F}_{23}$$
 $$\mathcal{F}_{12}*\mathcal{F}_{23}=\pi_{13,*}\left(\pi_{12}^* \mathcal{F}_{12} \otimes \pi_{23}^* \mathcal{F}_{23} \right) \in K_0^G(Z_{12} \circ Z_{23})$$
 \begin{remark}
-Those "$Z$-varieties" ($Z_{12}$, $p_{12}^{-1}(Z_{12})$, $Z_{123}$, etc.) are often singular in practice, so $\pi_{12}^{*}$, $\pi_{23}^{*}$ and $\otimes$ are defined in the sense of "restriction with supports", under the "$M$-varieties" which are smooth. The following diagram best illustrate the "actual" definition.
+Those "$Z$-varieties" ($Z_{12}$, $p_{12}^{-1}(Z_{12})$, $Z_{123}$, etc.) are often singular in practice, so $\pi_{12}^{*}$, $\pi_{23}^{*}$ and $\otimes$ are defined in the sense of "restriction with supports", under the "$M$-varieties" which are smooth. The following diagram best illustrates the "actual" definition.
 %closed immersion induce f.faithful map in quasicoherent sheaf: https://en.wikipedia.org/wiki/Closed_immersion
 % https://q.uiver.app/?q=WzAsOCxbMCwwLCJLXzBeRyhaX3sxMn0pIFxcdGltZXMgS18wXkcoWl97MjN9KSJdLFsxLDAsIktfMF5HXFxiaWcocF97MTJ9XnstMX0oWl97MTJ9KVxcYmlnKSBcXHRpbWVzIEtfMF5HXFxiaWcocF97MTJ9XnstMX0oWl97MjN9KVxcYmlnKSJdLFswLDEsIktfMF5HKE1fezEyfSkgXFx0aW1lcyBLXzBeRyhNX3syM30pIl0sWzEsMSwiS18wXkcoTV97MTIzfSkgXFx0aW1lcyBLXzBeRyhNX3sxMjN9KSJdLFsyLDEsIktfMF5HKE1fezEyM30pIl0sWzMsMSwiS18wXkcoTV97MTN9KSJdLFsyLDAsIktfMF5HKFpfezEyM30pIl0sWzMsMCwiS18wXkcoWl97MTJ9IFxcY2lyYyBaX3syM30pIl0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFs2LDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzcsNSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwzLCJwX3sxMn1eKiBcXHRpbWVzIHBfezIzfV4qIl0sWzMsNCwiXFxvdGltZXMiXSxbNCw1LCJwX3sxMywqfSJdLFs2LDcsIlxccGlfezEzLCp9Il0sWzEsNiwiXFxvdGltZXMiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwxLCJcXHBpX3sxMn1eKiBcXHRpbWVzIFxccGlfezIzfV4qIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
 \tikzcdset{scale cd/.style={every label/.append style={scale=#1},
