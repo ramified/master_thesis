@@ -200,7 +200,7 @@ as a free $\mathbb{Z}$-module.
 
 For $\Rpt(G)$, we have the multiplication structure induced by tensor products on complex $G$-representations. Let us see some examples now. We use Setting \ref{set:initial_case} in these examples.
 
-\begin{eg}
+\begin{eg}\label{eg:K-initial-1}
 For trivial group $\Id$, every $\Id$-representation is just a $\mathbb{C}$-vector space, which can be written as the direct sum of $1$-dimensional vector spaces. Therefore,
 $$\Rpt(\Id)=\mathbb{Z}.$$
 \end{eg}
@@ -236,7 +236,7 @@ After we state the reduction isomorphism \ref{prop:reduction_isomorphism}, we ca
 $$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]$$
 \end{eg}
 
-\begin{eg}
+\begin{eg}\label{eg:K-initial-4}
 By \cite[Theorem 6.1.4]{chriss1997representation},
 $$\Rpt(\GL_n) \cong \Rpt(T)^{W} \cong \mathbb{Z}\!\left[ \varepsilon_1^{\pm 1},\ldots,\varepsilon_n^{\pm 1} \right]^{S_n}.$$
 This can be viewed as a "group" analogue of Chevalley restriction theorem. Notice that we have clear description of finite dimensional irreducible representations of $\GL_n$, and the forget map
@@ -351,19 +351,20 @@ The last problem comes when we restrict functors to $\Dcoh^{b,G}(X)$:
   \otimes:\;& \Dcoh^{b,G}(X) \times \Dcoh^{b,G}(X) \longrightarrow \Dcoh^{G}(X) \\   
 \end{aligned}
 \end{equation*}
-Other than proper pushforward, pullback and tensor product do not preserve boundness. Therefore, we have to make the following assumption:
+Other than proper pushforward, \footnote{See \cite[5.2.13]{chriss1997representation} for proper pushforward preserving boundness, and it essentially use the higher cohomology vanishing theorem \cite[Theorem 18.8.5]{vakil2017rising}.} pullback and tensor product may not preserve boundness. 
+
+
+For pullback, boundness preserving is equivalent to the following condition:
+\begin{equation}\label{eq:assumption0}
+\text{$f: Y \longrightarrow X$ is $G$-equivariant of globally finite $\Tor$-dimension.}
+\end{equation}
+
+When $X,Y$ are smooth, the condition \eqref{eq:assumption0} is automatically satisfied. (See \cite[5.2.5(ii)]{chriss1997representation}). The condition is concluded as follows:
 \begin{equation}\label{eq:assumption1}
 \text{$X$, $Y$ are smooth $G$-varieties, and $f: Y \longrightarrow X$ is $G$-equivariant.}
 \end{equation}
-Under this assumption, pullback and tensor product preserve boundness.
 
-\begin{remark}[Reasons for preserving boundness]
-Suppose varieties are smooth (not needed for proper pushforward). 
-
-\begin{itemize}
-\item For pullback preserving boundness, see \cite[5.2.5(ii)]{chriss1997representation}.
-\item  For proper pushforward, see \cite[5.2.13]{chriss1997representation}, and it essentially use the higher cohomology vanishing theorem \cite[Theorem 18.8.5]{vakil2017rising}.
-\item  For tensor product, we use \ref{rmk:ext_tensor_product} in the derived way. $\boxtimes$ is exact, and $\Delta^*$ preserves boundness when $X$ is smooth, so $\otimes$ also preserves boundness. In particular, one can define tensor product on $K^G(X)$ for $X$ smooth:
+Tensor product also preserve boundness when $X$ is smooth. By Remark \ref{rmk:ext_tensor_product}, $\boxtimes$ is exact, and $\Delta^*$ preserves boundness when $X$ is smooth, so $\otimes$ also preserves boundness. In particular, one can define tensor product on $K^G(X)$ for $X$ smooth:
 $$\otimes: K^G(X) \times K^G(X) 
  \begin{tikzcd}[column sep=5mm]
  	{} & {}
@@ -376,9 +377,7 @@ $$\otimes: K^G(X) \times K^G(X)
  \end{tikzcd}  
  K^G(X) \qquad \mathcal{F} \otimes \mathcal{F}'=\Delta^*\left( \mathcal{F} \boxtimes \mathcal{F}' \right)
  $$
-\end{itemize}
 
-\end{remark}
 \begin{remark}
 When $f: Y \longrightarrow X$ is open embedding, the non-derived pullback $f^*$ is exact, so we can define pullback on $K$-theory automatically.
 \end{remark}
@@ -479,7 +478,7 @@ $$K^G(X) \times K^G(X)
  K^G(X).
  $$
 \end{proposition}
-Under this proposition, for any $X$, $Y$, $f$ satisfying assumption \eqref{eq:assumption1}, $f^*$ is a ring homomorphism.
+Under this proposition, for any morphism $f:Y \longrightarrow X$ of smooth $G$-varieties, $f^*$ is a ring homomorphism.
 
 \begin{warning}
 We will define another product (called the convolution product) on some $K$-theories in Section \ref{sec:convolution}. These two products are essentially different products, and people have to specify which one they are using, when they discuss the "algebra structures on $K$-theories". The final task is to compute the convolution product of $K^{G_{\dimvec{d}}} (\St_{\dimvec{d}})$, not the $\otimes$-product.
@@ -519,9 +518,16 @@ $$G \times^H \pt \stackrel{\sim}{\longrightarrow} G/H.$$
 
 The contracted product is not only used for the induction isomorphism, but also used in the definition of equivariant cohomology theory (see Definition \ref{def:equivariant_cohomology}) and description of some typical varieties (see the description of $\overline{\OOmcell}_s$ in  \ref{subsec:product_of_F}).
 
+\begin{eg}\label{eg:contracted_product_FF}
+In the setting \ref{set:initial_case}, the $\GL_n$-equivariant map
+$$\GL_n \times^B \mathcal{F} \stackrel{\sim}{\longrightarrow} \GL_n/B \times \mathcal{F} =\mathcal{F} \times \mathcal{F} \qquad (g,g'B) \longmapsto (gB,gg'B)$$
+realizes $\mathcal{F} \times \mathcal{F}$ as a contracted product, and 
+$$\OOmcell_{w'} \cong \GL_n \times^B \Omcell_{w'}$$
+under this isomorphism.
+\end{eg}
 \subsection{Statement}
 
-\begin{proposition}[{Induction isomorphism, \cite[5.2.16]{chriss1997representation}}]
+\begin{proposition}[{Induction isomorphism, \cite[5.2.16]{chriss1997representation}}]\label{prop:induction_isomorphism}
 Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety, we have a Cartesian diagram of $H$-varieties
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJYPUggXFx0aW1lc15IWCJdLFsxLDAsIkcgXFx0aW1lc15IWCJdLFswLDEsIlxccHQ9SC9IIl0sWzEsMSwiRy9IIl0sWzAsMl0sWzIsMywiXFxpb3RhX3tcXHB0fSJdLFsxLDMsIlxccGkiXSxbMCwxLCJcXGlvdGFfWCJdXQ==
 \[\begin{tikzcd}
@@ -553,10 +559,17 @@ We denote the inverse functor of $\Res_H^G$ by $\Ind_H^G$, called the induction,
 
 (???Present the construction of $\Ind_H^G$ and example of $K^{\GL_2} (\mathbb{P}^1)$, if time permits.)
 
+\begin{remark}
+The isomorphism $\Res_H^G$ also gives $K^G(G \times^H X)$ a $\Rpt(H)$-module structure.
+\end{remark}
 \subsection{Applications}
 This induction formula is usually used for computing $G$-equivariant $K$-theory of $G$-orbits. For example, in Setting \ref{set:initial_case},
 $$K^{\GL_n}(\mathcal{F})=K^{\GL_n}(\GL_n/B) \cong K^B(\pt)=\Rpt(B)$$
 is an isomorphism as $\Rpt(\GL_n)$-modules. Notice that $K^{\GL_n}(\mathcal{F})$ is a free $\Rpt(\GL_n)$-module of rank $\#W=n!$.
+
+Also, the isomorphism
+$$K^{\GL_n}(\mathcal{F} \times \mathcal{F}) \cong K^{\GL_n}(\GL_n \times^B\mathcal{F}) \cong K^{B}(\mathcal{F})$$
+gives $K^{\GL_n}(\mathcal{F} \times \mathcal{F})$ a $\Rpt(B)$-module structure.
 
 In the next section we will explore how to reduce $B$-equivariant $K$-theory to $T$-equivariant $K$-theory.
 
@@ -631,5 +644,9 @@ $$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]^
 \end{eg}
 
 The three functors on cohomology theory are defined in a different way, which are induced from the three functors in normal cohomology theory, see \cite[2.3.2]{przezdziecki2015geometric}. Thom isomorphism, induction isomorphism and reduction isomorphism are still true in the equivariant cohomology theory case. In particular, we have
-$$H_G^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
-as an $\Spt(G)$-module. $H_G^*(\mathcal{F})$ is a free $\Spt(G)$-module with rank $\#W=n!$.
+$$H_{\GL_n}^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
+as an $\Spt(\GL_n)$-module. $H_{\GL_n}^*(\mathcal{F})$ is a free $\Spt(\GL_n)$-module with rank $\#W=n!$.
+
+Also, the isomorphism
+$$H_{\GL_n}^*(\mathcal{F} \times \mathcal{F}) \cong H_{\GL_n}^*(\GL_n \times^B\mathcal{F}) \cong H_{B}^*(\mathcal{F})$$
+gives $H_{\GL_n}^*(\mathcal{F} \times \mathcal{F})$ an $\Spt(B)$-module structure.

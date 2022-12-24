@@ -28,10 +28,10 @@
 \contentsline {subsection}{\numberline {2.4.1}Contracted product}{42}{subsection.2.4.1}% 
 \contentsline {subsection}{\numberline {2.4.2}Statement}{43}{subsection.2.4.2}% 
 \contentsline {subsection}{\numberline {2.4.3}Applications}{43}{subsection.2.4.3}% 
-\contentsline {section}{\numberline {2.5}Reduction}{43}{section.2.5}% 
+\contentsline {section}{\numberline {2.5}Reduction}{44}{section.2.5}% 
 \contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{44}{section.2.6}% 
 \contentsline {subsection}{\numberline {2.6.1}$G$-equivariant cohomology $H_G^* (X; \mathbb {Q})$}{44}{subsection.2.6.1}% 
-\contentsline {subsection}{\numberline {2.6.2}Cohomology ring $\Spt (G)$}{44}{subsection.2.6.2}% 
+\contentsline {subsection}{\numberline {2.6.2}Cohomology ring $\Spt (G)$}{45}{subsection.2.6.2}% 
 \contentsline {chapter}{\numberline {3}Cellular fibration theorem}{47}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Statement}{47}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Application: module structure}{49}{section.3.2}% 
