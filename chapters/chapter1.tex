@@ -1494,9 +1494,7 @@ $\St_{\ww'}$ is a Zarisky-locally trivial cone bundle over $\mathcal{F}_{\dimvec
 $$\pi_{\dimvec{d},\dimvec{d},\ww'}: \St_{\ww'} \longrightarrow \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}},$$
 for any $x,x' \in \WWd$, $\pi_{\dimvec{d},\dimvec{d},\ww'}^{-1}(\OOcell_{x,x'})$ is a trivial fiber bundle over $\OOcell_{x,x'}$, whose fibers are cones.
 \end{proposition}
-I have no idea when $\St_{\ww'}$ is a Zarisky-locally trivial vector bundle. Let us see when we need this fact.
 
-\begin{remark}
 Notice that
 \begin{equation*}
 \begin{aligned}
@@ -1514,8 +1512,19 @@ Even though these inclusions are usually not equalities, we can still say someth
 \end{aligned}
 \end{equation*}
 
-I have no idea if we have any accurate description for $\St_{s}^{u,u'}$ and $\St_{s}$.
+\begin{proposition}\label{prop:vector_bundle_Z_s}
+$\St_s$ is a Zarisky-locally trivial vector bundle over $\overline{\OOcell}_s$, with fiber $\mathfrak{r}_{u,us}$ at point $\underline{F}_{u,s}$.
+\end{proposition}
+\begin{proof}
+This is claimed in \cite[2.20(c)]{varagnolo2011canonical}. In fact, we have a $G_{\dimvec{d}}$-equivariant morphism
+$$\phi: G_{\dimvec{d}} \times^{B_u} \left(  \underline{P}_{u,s}/B_{us} \times \underline{\mathfrak{r}}_{u,s} \right) \hookrightarrow \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \qquad (g,p,x) \longmapsto (gx, g \cdot F_u, gp \cdot F_{us})$$
+which realized $G_{\dimvec{d}} \times^{B_u} \left(  \underline{P}_{u,s}/B_{us} \times \underline{\mathfrak{r}}_{u,s} \right)$ as a closed subset of $\Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}$. In the meantime, the open dense subset $$G_{\dimvec{d}} \times^{B_u} \left(  B_{us}sB_{us}/B_{us}\times \underline{\mathfrak{r}}_{u,s} \right) \subseteq G_{\dimvec{d}} \times^{B_u} \left(  \underline{P}_{u,s}/B_{us}\times \underline{\mathfrak{r}}_{u,s} \right)$$
+ is identified with $\preimage{\OOcell}_{s}^{u}$ by $\phi$. Therefore, $\phi$ identifies $\St_{s}^{u,\tilde{u}}$ with the vector bundle $G_{\dimvec{d}} \times^{B_u} \left(  \underline{P}_{u,s}/B_{us} \times \underline{\mathfrak{r}}_{u,s} \right)$ over $\overline{\OOcell}_{s}^{u}$, with fiber $\underline{\mathfrak{r}}_{u,s}=\mathfrak{r}_{u,us}$.
+\end{proof}
 
+\begin{remark}\label{rmk:vector_bundle_O_s}
+By the same method, one can show that $\overline{\preimage{\Ocell}}_{s}$ is a Zarisky-locally trivial vector bundle over $\overline{\Ocell}_s$, with fiber $\mathfrak{r}_{s}$ at point $F_{s}$.
+\end{remark}
 We end this subsection by Table \ref{table:orbit}:
 \begin{table}[ht]
   \vspace{0cm}
@@ -1523,7 +1532,7 @@ We end this subsection by Table \ref{table:orbit}:
       \caption{stratifications of typical varieties}
       \label{table:orbit}        
 \end{table}
-\end{remark}
+
 \subsection{$T$-fixed points}
 
 Compare with stratifications, $T$-fixed points are easy to compute and have clear structures. Somewhat surprisingly, these $T$-fixed points encode most information of varieties.
@@ -1555,5 +1564,97 @@ Notice that, each $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit of $\mathcal{F}_{
  \left(\St_{s}\right)^{T_{\dimvec{d}}} =\;&  \left\{  (\rho_0,F_{\ww},F_{\ww s}) \,\middle|\,  \ww \in \WWd  \right\} \sqcup  \left\{  (\rho_0,F_{\ww},F_{\ww}) \,\middle|\,  \ww \in \WWd, \ww s \ww^{-1} \in \Wd  \right\}\\
 \end{aligned}
 \end{equation*}
+
+\subsection{Tangent spaces of $T$-fixed points}
+
+The tangent space of $T$-fixed points will be used in Chapter \ref{chap:localization}, so we fix symbols of them and compute some of them as Lie algebras.\footnote{In algebraic geometry, we can define the tangent space at even singular points, see \cite[12.1]{vakil2017rising}.}
+
+\begin{defn}[Tangent space of $T$-fixed points]
+For $\ww,\ww',x \in \WWd$, we denote the following tangent spaces:
+\begin{equation*}
+\begin{aligned}
+  \mathcal{T}_{\ww}:=\;& T_{F_{\ww}}\mathcal{F}_{\dimvec{d}} \quad& \mathcal{T}_{\ww}^x:=\;& T_{F_{\ww}}\overline{\Ocell}_x \quad& \mathcal{T}_{\ww,\ww'}^x:=\;& T_{F_{\ww,\ww'}}\overline{\OOcell}_x  \\ 
+    \preimage{\mathcal{T}}_{\ww}:=\;& T_{(\rho_0,F_{\ww})}\RRep_{\dimvec{d}}(Q) \quad& \preimage{\mathcal{T}}_{\ww}^x:=\;& T_{(\rho_0,F_{\ww})}\overline{\preimage{\Ocell}}_x \quad& \preimage{\mathcal{T}}_{\ww,\ww'}^x:=\;& T_{(\rho_0,F_{\ww},F_{\ww'})}\St_x  \\ 
+\end{aligned}
+\end{equation*}
+When we underline, the subscripts are twisted. For example, 
+$$\underline{\mathcal{T}}_{\ww,\ww'}^x := \mathcal{T}_{\ww,\ww\ww'}^x =T_{F_{\ww,\ww\ww'}}\overline{\OOcell}_x.$$
+\end{defn}
+
+From the description of $\mathcal{F}_{\dimvec{d}}$ and $\RRep_{\dimvec{d}}(Q)$, we know that
+\begin{equation*}
+\begin{aligned}
+ \mathcal{T}_{\ww}=\;& T_{F_{\ww}}\mathcal{F}_{\dimvec{d}} \cong T_{\Id}(G_{\dimvec{d}}/B_{\ww}) \cong \mathfrak{g}_{\dimvec{d}}/\mathfrak{b}_{\ww} && \cong \phantom{ \mathfrak{r}_{\ww} \oplus\;\, }  \mathfrak{n}_{\ww}^{-}  \\ 
+ \preimage{\mathcal{T}}_{\ww}=\;& T_{(\rho_0,F_{\ww})}\RRep_{\dimvec{d}}(Q) \cong T_{\rho_0}\mathfrak{r}_{\ww} \oplus T_{F_{\ww}}\mathcal{F}_{\dimvec{d}} && \cong \mathfrak{r}_{\ww} \oplus \mathfrak{n}_{\ww}^{-}  \\ 
+\end{aligned}
+\end{equation*}
+
+For the rest, we can only compute special cases.
+
+%the original version. No need for general case, even for u!
+\begin{proposition}
+For $s \in \Pi$, We have identifications
+\begin{equation*}
+\begin{aligned}
+  \mathcal{T}_{\Id}^{s}\cong \;& \mathfrak{m}_{s,\Id} \quad & \preimage{\mathcal{T}}_{\Id}^{s}\cong \;& \mathfrak{r}_s \oplus \mathfrak{m}_{s,\Id} \\ 
+  \mathcal{T}_{s}^{s}\cong \;& \mathfrak{m}_{\Id,s} \quad & \preimage{\mathcal{T}}_{s}^{s}\cong \;& \mathfrak{r}_s \oplus \mathfrak{m}_{\Id,s}. \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+We know from Remark \ref{rmk:vector_bundle_O_s} that
+\begin{equation*}
+\begin{aligned}
+ \mathcal{T}_{\Id}^{s}\cong\;&  T_{\Id}(P_{\Id,s}/B_{\dimvec{d}}) \cong \mathfrak{p}_{\Id,s}/\mathfrak{b}_{\dimvec{d}} \cong \mathfrak{b}_{s}/\left(\mathfrak{b}_{s} \cap \mathfrak{b}_{\dimvec{d}}\right) && \cong \phantom{ \mathfrak{r}_{s} \oplus\;\, }  \mathfrak{m}_{s,\Id}  \\ 
+ \preimage{\mathcal{T}}_{\Id}^{s}\cong\;& T_{\rho_0}\mathfrak{r}_{s} \oplus \mathcal{T}_{\Id}^{s} && \cong  \mathfrak{r}_{s} \oplus \mathfrak{m}_{s,\Id}  \\ 
+\end{aligned}
+\end{equation*}
+Other proofs are the same.
+\end{proof}
+
+
+
+\begin{proposition}
+For $\ww \in \WWd$, $s \in \MinWd$, We have identifications
+\begin{equation*}
+\begin{aligned}
+  \mathcal{T}_{\ww,\ww}^{s}\cong \;& \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww s,\ww} \quad & \preimage{\mathcal{T}}_{\ww,\ww}^{s}\cong \;& \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww s,\ww} \\ 
+  \mathcal{T}_{\ww,\ww s}^{s}\cong \;& \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \quad & \preimage{\mathcal{T}}_{\ww,\ww s}^{s}\cong \;& \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+We know from Lemma \ref{lem:iso_of_orbits} and Proposition \ref{prop:vector_bundle_Z_s} that
+\begin{equation*}
+\begin{aligned}
+ \mathcal{T}_{\ww,\ww}^{s}\cong\;&  T_{(\Id,\Id)} \left(G_{\dimvec{d}} \times^{B_{\ww}} (\underline{P}_{\ww,s}/B_{\ww}) \right) \cong \mathfrak{g}_{\dimvec{d}}/\mathfrak{b}_{\ww} \oplus \mathfrak{p}_{\ww,\ww s}/\mathfrak{b}_{\ww} && \cong  \phantom{\mathfrak{r}_{\ww,\ww s} \oplus\;\,} \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww s,\ww}  \\ 
+ \preimage{\mathcal{T}}_{\ww,\ww}^{s}\cong\;& T_{\rho_0}\mathfrak{r}_{\ww,\ww s} \oplus \mathcal{T}_{\ww,\ww}^{s} && \cong  \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww s,\ww} \\ 
+\end{aligned}
+\end{equation*}
+Other proofs are the same.
+\end{proof}
+
+\begin{remark}
+We know a little more on the biggest cells. Here is an example. When $\ww'=\ww x$, $F_{\ww, \ww x} \in \OOcell_x$, so
+\begin{equation*}
+\begin{aligned}
+  \mathcal{T}_{\ww,\ww x}^{x}=\;&  T_{F_{\ww,\ww x}}\overline{\OOcell}_x = T_{F_{\ww,\ww x}}\OOcell_x = T_{F_{\ww,\ww x}}\OOcell_{x}^{u}  && \cong \phantom{\mathfrak{r}_{\ww,\ww x} \oplus\;\,} \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww x} \\ 
+  \preimage{\mathcal{T}}_{\ww,\ww x}^{x}=\;&  T_{(\rho_0, F_{\ww}, F_{\ww x})}\St_x = T_{(\rho_0, F_{\ww}, F_{\ww x})}\preimage{\OOcell}_x \cong   T_{\rho_0} \mathfrak{r}_{\ww,\ww x} \oplus \mathcal{T}_{\ww,\ww x}^{x}\hspace{-3mm} && \cong  \mathfrak{r}_{\ww,\ww x} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww x} \\ 
+\end{aligned}
+\end{equation*}
+In particular,
+\begin{equation*}
+\begin{aligned}
+  \mathcal{T}_{\ww,\ww}^{\Id}\cong \;& \mathfrak{n}_{\ww}^{-}  \quad & \preimage{\mathcal{T}}_{\ww,\ww}^{s}\cong \;& \mathfrak{r}_{\ww,\ww} \oplus \mathfrak{n}_{\ww}^{-}  \\ 
+  \mathcal{T}_{\ww,\ww s}^{s}\cong \;& \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \quad & \preimage{\mathcal{T}}_{\ww,\ww s}^{s}\cong \;& \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \\ 
+\end{aligned}
+\end{equation*}
+\end{remark}
+
+
+
+
 
 With huge effort, finally we fixed all the symbols and understand those typical varieties in detail.

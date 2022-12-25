@@ -10,9 +10,20 @@ Tomasz Przezdziecki.
 \newblock Geometric approach to klr algebras and their representation theory,
   2015.
 
+\bibitem{thomason1993k}
+Robert~W Thomason.
+\newblock Les k-groupes d'un sch{\'e}ma {\'e}clat{\'e} et une formule
+  d'intersection exc{\'e}dentaire.
+\newblock {\em Inventiones mathematicae}, 112(1):195--215, 1993.
+
 \bibitem{vakil2017rising}
 Ravi Vakil.
 \newblock The rising sea: Foundations of algebraic geometry.
 \newblock {\em preprint}, 2017.
+
+\bibitem{varagnolo2011canonical}
+Michela Varagnolo and Eric Vasserot.
+\newblock Canonical bases and klr-algebras.
+\newblock 2011.
 
 \end{thebibliography}

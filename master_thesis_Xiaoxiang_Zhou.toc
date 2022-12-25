@@ -13,7 +13,8 @@
 \contentsline {section}{\numberline {1.6}Stratification and $T$-fixed points}{23}{section.1.6}% 
 \contentsline {subsection}{\numberline {1.6.1}Stratification: flag variety}{24}{subsection.1.6.1}% 
 \contentsline {subsection}{\numberline {1.6.2}Stratification: incidence variety}{27}{subsection.1.6.2}% 
-\contentsline {subsection}{\numberline {1.6.3}$T$-fixed points}{29}{subsection.1.6.3}% 
+\contentsline {subsection}{\numberline {1.6.3}$T$-fixed points}{30}{subsection.1.6.3}% 
+\contentsline {subsection}{\numberline {1.6.4}Tangent spaces of $T$-fixed points}{31}{subsection.1.6.4}% 
 \contentsline {chapter}{\numberline {2}$K$-theory and cohomology theory}{33}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Definitions and initial examples}{33}{section.2.1}% 
 \contentsline {subsection}{\numberline {2.1.1}$G$-equivariant sheaf and $K^G_0(X)$}{33}{subsection.2.1.1}% 

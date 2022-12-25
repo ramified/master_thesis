@@ -399,9 +399,9 @@ We can now define pullback of $f$ in the following assumption:
 Let $Z,Z'$ be $G$-varieties, $h: Z' \longrightarrow Z$ be a $G$-equivariant closed embedding. Suppose that $h$ is a restriction with support of some $(X,Y,f)$ satisfying the assumption \eqref{eq:assumption1}, i.e., we have a $G$-equivariant closed embedding $\iota_Z: Z \longrightarrow X$ such that 
 $Z' \cong f^{-1}(Z)$ and $h=f\big|_{Z'}$.
 Denote $\iota_{Z'}: Z' \longrightarrow Y$ as the induced $G$-equivariant closed embedding, we would like to construct the pullback $h^*: K^G(Z) \longrightarrow K^G(Z')$.
-
+\begin{equation}\label{eq:pullback_with_supports}
 % https://q.uiver.app/?q=WzAsMTAsWzAsMCwiWiciXSxbMSwwLCJaIl0sWzAsMiwiWSJdLFsxLDIsIlgiXSxbMiwwLCJLXkcoWicpIl0sWzIsMiwiS15HKFkpIl0sWzMsMiwiS15HKFgpIl0sWzMsMCwiS15HKFopIl0sWzEsMV0sWzIsMV0sWzAsMSwiaCIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiXFxpb3RhX1oiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDMsImYiXSxbMCwyLCJcXGlvdGFfe1onfSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNSwiXFxpb3RhX3taJywqfSIsMl0sWzYsNSwiZl4qIiwyXSxbNyw2LCJcXGlvdGFfe1osKn0iXSxbNSw0LCJcXGdyIiwyLHsiY3VydmUiOjIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDQsImheKiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDksIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifSwiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=
-\[\begin{tikzcd}[column sep={10mm}, row sep={4mm}]
+\begin{tikzcd}[column sep={10mm}, row sep={4mm}]
 	{Z'} & Z &[5mm] {K^G(Z')} & {K^G(Z)} \\
 	& {} & {} \\
 	Y & X & {K^G(Y)} & {K^G(X)}
@@ -417,11 +417,13 @@ Denote $\iota_{Z'}: Z' \longrightarrow Y$ as the induced $G$-equivariant closed 
 	\arrow[shorten <=7mm, shorten >=9mm,squiggly={
 			               pre length=7mm, post length=9mm
 			             }, maps to, from=2-2, to=2-3]
-\end{tikzcd}\]
+\end{tikzcd}
+\end{equation}
+
 
 Follows \cite[5.2.7(ii)]{chriss1997representation}, one can construct a morphism
-$$\gr: \Img \left(  f^* \circ \iota_{Z,*} \right) \longrightarrow K^G(Z')$$
-which satisfies $\iota_{Z',*} \circ \gr = \Id$ on $\Img\left(  f^* \circ \iota_{Z,*} \right)$. The pullback is defined as
+$$\gr: \Img \left(  f^* \circ \iota_{Z,*} \right) \longrightarrow K^G(Z'),$$
+and the pullback is defined as
 % https://q.uiver.app/?q=WzAsNCxbMywwLCJLXkcoWicpIl0sWzIsMCwiS15HKFkpIl0sWzEsMCwiS15HKFgpIl0sWzAsMCwiaF4qOkteRyhaKSJdLFsyLDEsImZeKiJdLFszLDIsIlxcaW90YV97WiwqfSJdLFsxLDAsIlxcZ3IiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=
 \[\begin{tikzcd}
 	{h^*:K^G(Z)} & {K^G(X)} & {K^G(Y)} & {K^G(Z').}
@@ -430,6 +432,10 @@ which satisfies $\iota_{Z',*} \circ \gr = \Id$ on $\Img\left(  f^* \circ \iota_{
 	\arrow["\gr", dotted, from=1-3, to=1-4]
 \end{tikzcd}\]
 \end{defn}
+
+\begin{warning}
+The diagram \eqref{eq:pullback_with_supports} of $K$-group is usually not commutative. In fact, we will state the excess base change in Section \ref{sec:statement_localization}, in which the Euler class measures the failure of diagram to be commutative.
+\end{warning}
 
 \begin{defn}[Tensor product with supports/Intersection product]
 Let $X$ be a smooth $G$-variety, and $Z$, $Z' \subseteq X$ be two closed $G$-subvarieties. The tensor product with supports is defined as
