@@ -1,0 +1,111 @@
+
+\documentclass[border={7pt 0pt 7pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}%colors
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\pt}{\operatorname{pt}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+
+%\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
+\newcommand{\lbox}{\adjustbox{}}
+
+\newcommand{\preimage}[1]{\widetilde{#1}}
+
+\newenvironment{smbmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\setcellgapes{0.2ex}
+  \begin{bmatrix}
+}%
+{\end{bmatrix}
+\egroup
+}% end code
+\newenvironment{smpmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.8}
+\setcellgapes{0.2ex}
+  \begin{pmatrix}
+}%
+{\end{pmatrix}
+\egroup
+}% end code
+\begin{document}
+
+\begin{table}[]
+\[
+ \setcellgapes[t]{1.2ex}\makegapedcells
+\centering
+\begin{array}{|c|c|c|c|}
+\hline
+      & \Gape[0cm][2mm]{\pt}         & \mathcal{F}                                                    & \mathcal{F} \otimes \mathcal{F}                                         \\
+       \hline
+\GL_n & \Rpt(T)^{W} & \Rpt(T)                                                        & \displaystyle\bigoplus_{w'} \Rpt(T)  \left[ \overline{\OOmcell}_{w'} \right]^{\GL_n} \\ \hline
+B     & \Rpt(T)     & \displaystyle\bigoplus_{w} \Rpt(T) \left[ \overline{\Omcell}_{w} \right]^B  & \displaystyle\bigoplus_{w,w'} \Rpt(T) \left[ \overline{\OOmcell}_{w,w'} \right]^B    \\ \hline
+\Id   & \mathbb{Z}  & \displaystyle\bigoplus_{w} \mathbb{Z} \left[ \overline{\Omcell}_{w} \right] & \displaystyle\bigoplus_{w,w'} \mathbb{Z} \left[ \overline{\OOmcell}_{w,w'} \right]   \\ \hline
+\end{array}
+\]
+\end{table}
+
+\end{document}
