@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Localization theorem}\label{chap:localization}
+We have already gotten the module structure of $K$-theories. However, these basis behave badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because "the information is not concentrated enough". In this chapter we will introduce another basis, which "concentrate information in the $T$-fixed points". The localization formula describe the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
+
+
+\section{Euler class}\label{sec:euler_class}
+In the category of coherent sheaf, the "proper base change" is usually not true. In order to describe the defect of the diagram, we introduce the Euler class.
+
+\begin{defn}[Euler class, for $K$-group]
+Let $X$ be a $G$-variety, and $\mathcal{T}$ be a $G$-equivariant vector bundle over $X$. The Euler class is defined by
+$$\eu(\mathcal{T}):= \sum_{k=0}^{\infty} (-1)^k \left[ \Lambda^{k} \mathcal{T}^* \right] \in \Rpt(G) $$
+\end{defn}
+
+In practice, $X$ are points and $G$ is a torus. In that case, since we know the representation of a torus (see Example \ref{eg:K-initial-2}), the Euler class can be explicitly written down. For example, ($X=\pt$)
+\begin{equation*}
+\begin{aligned}
+  &\eu\left( 1 \right)=  1\\ 
+    &\eu\left( \frac{e_1}{e_2} \right)=  1-\frac{e_2}{e_1}\\ 
+      &\eu\left(\frac{e_1}{e_2}+\frac{e_2}{e_3}+\frac{e_3}{e_1} \right)=  \left(1-\frac{e_2}{e_1}\right)\left(1-\frac{e_3}{e_2}\right)\left(1-\frac{e_1}{e_3}\right)\\ 
+\end{aligned}
+\end{equation*}
+Here we confuse the notation of $\Rpt(T)$ and $\Rep(T)$: the elements inside the bracket of Euler class should be viewed as a vector bundle rather than a linear combination of coherent sheaves. 
+
+\begin{warning}
+Compared with usual Euler class, some properties are kept in $K$-theory version, while some are not. For example, for line bundles $\mathcal{L}$, $\mathcal{L}_1$, $\mathcal{L}_2$ over $X$,
+\begin{equation*}
+\begin{aligned}
+  &  \eu(\mathcal{T} \oplus \mathcal{T}') \cong \eu(\mathcal{T}) \cdot \eu(\mathcal{T}'),            \\ 
+  & \eu(\mathcal{L}_1 \otimes \mathcal{L}_2) \neq \eu(\mathcal{L}_1 )+\eu( \mathcal{L}_2) \qquad \eu(\mathcal{L}^{*}) \neq -\eu(\mathcal{L}).
+\end{aligned}
+\end{equation*}
+\end{warning}
+
+\begin{remark}
+We also have equivariant Euler class for cohomology theory, see \cite[Chapter 9]{przezdziecki2015geometric}, ??? for more details. In particular, for any $T$-representation $\mathcal{T}$ with weight space decomposition $\mathcal{T}^{*} = \oplus \mathcal{T}_{\lambda}^{*}$, the Euler class of $\mathcal{T}$ (for cohomology theory) is defined by
+$$\eu'(\mathcal{T}):= \prod_{\lambda \in X^{*}(T)} \lambda^{\dim \mathcal{T}_{\lambda}^{*}} \in \Spt(T) $$
+where $X^{*}(T)$ embeds in $\Spt(T)$ by
+$$X^{*}(T) \longrightarrow \Spt(T) \qquad \sum_{i}k_i \varepsilon_i \longmapsto \sum_{i}k_i \lambda_i.$$
+For example,
+\begin{equation*}
+\begin{aligned}
+  &\eu'\left( 1 \right)=  1\\ 
+    &\eu'\left( \frac{e_1}{e_2} \right)=  \lambda_2-\lambda_1\\ 
+      &\eu'\left(\frac{e_1}{e_2}+\frac{e_2}{e_3}+\frac{e_3}{e_1} \right)=  \left(\lambda_2-\lambda_1\right)\left(\lambda_3-\lambda_2\right)\left(\lambda_1-\lambda_3\right)\\ 
+\end{aligned}
+\end{equation*}
+\end{remark}
+
+\section{Statement}\label{sec:statement_localization}
+We first state one general theorem, which will be connected with both localization formula and excess intersection formula.
+
+\begin{theorem}[{Excess base change, \cite[Théorème 3.1]{thomason1993k}}]\label{thm:excess_base_change}
+Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$, $\varphi$ are regular embeddings and $f,g$ are of globally finite $\Tor$-dimension. Denote $\mathcal{N}_{\phi}$ and $\mathcal{N}_{\varphi}$ as the normal cone of $\phi$, $\varphi$ respectively, and $\mathcal{T}:=(g^{*}\mathcal{N}_{\varphi})/\mathcal{N}_{\phi}$ as a vector bundle over $W$.
+\begin{equation}\label{eq:excess_base_change}
+% https://q.uiver.app/?q=WzAsNyxbMSwxLCJXIl0sWzMsMSwiWiJdLFszLDIsIlgiXSxbMSwyLCJZIl0sWzQsMCwiXFxtYXRoY2Fse059X3tcXHZhcnBoaX0iXSxbMiwwLCJnXnsqfVxcbWF0aGNhbHtOfV97XFx2YXJwaGl9Il0sWzAsMCwiXFxtYXRoY2Fse059X3tcXHBoaX0iXSxbMywyLCJmIl0sWzEsMiwiXFx2YXJwaGkiXSxbMCwxLCJnIl0sWzAsMywiXFxwaGkiLDJdLFs0LDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[row sep={between origins,20mm},column sep={between origins,5mm}]
+	{\mathcal{N}_{\phi}} && {g^{*}\mathcal{N}_{\varphi}} &[10mm]& {\mathcal{N}_{\varphi}} \\[-12mm]
+	& N && Z \\
+	& Y && X
+	\arrow["f", from=3-2, to=3-4]
+	\arrow["\varphi", from=2-4, to=3-4]
+	\arrow["g", from=2-2, to=2-4]
+	\arrow["\phi"', from=2-2, to=3-2]
+	\arrow[no head, from=1-5, to=2-4]
+	\arrow[no head, from=1-3, to=2-2]
+	\arrow[no head, from=1-1, to=2-2]
+\end{tikzcd}
+\end{equation}
+
+For any $\alpha \in K^G(Z)$, we have the \textbf{excess base change formula}:
+$$f^* \circ \varphi_{*}(\alpha)=\phi_{*} \left( \eu(\mathcal{T})\cdot g^*(\alpha)\rule{0mm}{4mm}  \right) \qquad \text{ in }K^{G}(Y)$$
+
+
+\end{theorem}
+
+By applying Theorem \ref{thm:excess_base_change} to the Cartesian square \eqref{eq:fake_localization_formula}, we get the (fake) localization formula:
+\begin{equation}\label{eq:fake_localization_formula}
+% https://q.uiver.app/?q=WzAsNCxbMSwwLCJYXlQiXSxbMCwwLCJYXlQiXSxbMCwxLCJYXlQiXSxbMSwxLCJYIl0sWzAsMywiaSJdLFsyLDMsImkiXSxbMSwwLCJcXElkIl0sWzEsMiwiXFxJZCIsMl1d
+\begin{tikzcd}
+	{X^T} & {X^T} \\
+	{X^T} & X
+	\arrow["i", from=1-2, to=2-2]
+	\arrow["i", from=2-1, to=2-2]
+	\arrow["\Id", from=1-1, to=1-2]
+	\arrow["\Id"', from=1-1, to=2-1]
+\end{tikzcd}
+\end{equation}
+
+\begin{proposition}[Fake localization formula]
+For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote $i:X^T \longrightarrow X$ and $i_k: \{x_k\} \longrightarrow X$ as embeddings. For any $\beta \in K^T(X^T)$, $\beta_k \in K^T(\{x_k\})$, we have formulas
+$$i^*i_* \beta =\eu \left( \bigoplus_k T_{x_k}X \right) \cdot \beta \qquad i_{k}^*i_{k,*} \beta =\eu \left( T_{x_k}X \right) \cdot \beta_k.$$
+
+
+\end{proposition}
+
+This proposition is not as powerful as it is supposed to be, but it explains some technical details in the localization theorem and localization formula. First, we would like to work on a base ring where Euler classes are invertible, so we denote the curly font as everything in the fraction field.
+\begin{equation*}
+\begin{aligned}
+  \Rptc(T):=\;& \Frac\!\big(\!\Rpt(T)\big) \qquad & \Kcurl^T(X):=\;& K^T(X) \otimes_{\Rpt(T)}\Rptc(T)  \\ 
+  \Sptc(T):=\;& \Frac\!\big(\!\Spt(T)\big) \qquad & \Hcurl_{T}^{*}(X):=\;& H_{T}^{*}(X) \otimes_{\Spt(T)}\Sptc(T)  \\
+\end{aligned}
+\end{equation*}
+
+Now we can do linear algebras and discuss about the actual basis:
+\begin{theorem}[{Localization theorem, \cite[Theorem 10.1]{przezdziecki2015geometric} or \cite[Corollary 5.11.3]{chriss1997representation}}] \label{thm:localization_theorem}
+Let $X$ be a smooth $T$-variety,  $i:X^T \longrightarrow X$ be the embedding. The morphisms $i_*$, $i^*$ are isomorphism after tensored over the fraction field, i.e.,
+% https://q.uiver.app/?q=WzAsNixbMSwwLCJcXEtjdXJsXlQoWCkiXSxbMCwwLCJcXEtjdXJsXlQoWF5UKSJdLFsyLDAsIlxcS2N1cmxeVChYXlQpIl0sWzAsMSwiXFxIY3VybF97VH1eeyp9KFheVCkiXSxbMSwxLCJcXEhjdXJsX3tUfV57Kn0oWCkiXSxbMiwxLCJcXEhjdXJsX3tUfV57Kn0oWF5UKSJdLFswLDIsImleKiJdLFszLDQsImlfKiJdLFs0LDUsImleKiJdLFsxLDAsImlfKiJdXQ==
+\[\begin{tikzcd}[row sep=0mm]
+	{\Kcurl^T(X^T)} & {\Kcurl^T(X)} & {\Kcurl^T(X^T)} \\
+	{\Hcurl_{T}^{*}(X^T)} & {\Hcurl_{T}^{*}(X)} & {\Hcurl_{T}^{*}(X^T)}
+	\arrow["{i^*}", from=1-2, to=1-3]
+	\arrow["{i_*}", from=2-1, to=2-2]
+	\arrow["{i^*}", from=2-2, to=2-3]
+	\arrow["{i_*}", from=1-1, to=1-2]
+\end{tikzcd}\]
+are isomorphism as $\mathcal{R}(T)$ or $\mathcal{S}(T)$-modules.
+\end{theorem}
+
+The genuine localization formula is stated as follows.
+
+\begin{theorem}[{Localization formula, \cite[Theorem 10.2]{przezdziecki2015geometric} or \cite[Proposition 6]{edidin1998localization}}]\label{thm:localization_formula}
+For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote $i_k: \{x_k\} \longrightarrow X$ as embeddings. For any $\alpha \in \Kcurl^T(X)$, we have formula
+$$\alpha= \sum_{k=1}^{m} \eta_k \cdot i_{k,*}i_{k}^* \alpha $$
+where $\eta_k:= \left(\!\rule{0mm}{3.5mm} \eu(T_{x_k}X) \right)^{-1} \in \Rptc(T)$.
+
+More generally, suppose $f: Y \hookrightarrow X$ is a $T$-equivariant closed subvariety with finite fixed points $\{x_1,\ldots,x_{m'} \}$, denote $i'_k: \{x_k\} \longrightarrow Y$ as embeddings. For any $\beta \in \Kcurl^T(Y)$, we have formula
+$$\beta= \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} \beta. $$
+
+\end{theorem}
+
+Let us unravel Theorem \ref{thm:localization_formula} a little bit. For the closed $T$-equivariant subset $Z$ of $Y$, denote $[Z]_X^T \in K^T(X)$, $[Z]_Y^T \in K^T(Y)$, $[x_k]_Y^T \in K^T(Y)$. Substitute the localization formula, we get
+\begin{equation*}
+\begin{aligned}\
+   [Z]_Y^T=\;& \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} [Z]_Y^T&& \\
+   =\;& \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}\left(i_{k}^* [Z]_X^T \cdot 1_{\Rpt(T)}\right) && \text{by definition of $[Z]_X^T$}\\
+   =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot\left( i'_{k,*} 1_{\Rpt(T)}\right) && \text{$i'_{k,*}$ is a $\Rpt(T)$-module homomorphism}\hspace{-14mm}\\
+   =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot[x_k]_Y^T && \text{by definition of $[x_k]_Y^T$}\\
+\end{aligned}
+\end{equation*}
+When $Z$ is smooth at $x_k$,\footnote{The smoothness guaranteed the regular embedding condition in Theorem \ref{thm:excess_base_change}.} denote $g: Z \hookrightarrow X$ and $j_k: \{x_k\} \longrightarrow Z$, 
+\begin{equation*}
+\begin{aligned}\
+   i_{k}^* [Z]_X^T=\;& i_{k}^* g_* \big(  \pi_Z^* 1_{\Rpt(T)} \big) &&\\
+   =\;& \eu \left( j_k^* N_Z X  \right) \cdot j_k^* \big(  \pi_Z^* 1_{\Rpt(T)} \big) \qquad&& \text{by excess base change}\\
+   =\;& \eu \left( \frac{T_{x_k}X}{T_{x_k}Z}  \right) \cdot  1_{\Rpt(T)}&& \pi_Z \circ j_k = \Id_{\pt} \\
+   =\;& \frac{\eu \left(T_{x_k}X\right)}{\eu \left(T_{x_k}Z\right)} && \text{ $\Rep(T)$ is semisimple} \\
+\end{aligned}
+\end{equation*}
+Therefore, the coefficient before $[x_k]_Y^T$ is 
+$$\eta_k \cdot \left(i_{k}^* [Z]_X^T\right) = \frac{1}{\eu \left(T_{x_k}X\right)}\cdot\frac{\eu \left(T_{x_k}X\right)}{\eu \left(T_{x_k}Z\right)}=\frac{1}{\eu \left(T_{x_k}Z\right)}.$$
+In other word, we computed the transition matrix between two basis, where the matrix coefficient is roughly the inverse of the Euler class. Keep this is mind, and let us see applications now.
+
+\section{Application: change of basis}
+Before we really start working, let us make a shorthand for the basis and the Euler class.
+
+\begin{defn}[Another basis]
+For $\ww$, $\ww'$, $x \in \WWd$, denote
+\begin{equation*}
+\begin{aligned}
+  \psi_{\ww}:=\;& \left[\{F_{\ww}\} \right]^{T_{\dimvec{d}}} = (i_{\ww})_{*} 1_{\Rpt(T_{\dimvec{d}})} && \in K^{T_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}}) \\ 
+  \psi_{\ww}^{x}:=\;& \left[\{F_{\ww}\} \right]^{T_{\dimvec{d}}} = (i_{\ww}^x)_{*} 1_{\Rpt(T_{\dimvec{d}})} && \in K^{T_{\dimvec{d}}} (\overline{\Ocell}_x) \\ 
+  \psi_{\ww,\ww'}:=\;& \left[\{F_{\ww,\ww'}\} \right]^{T_{\dimvec{d}}} = (i_{\ww,\ww'})_{*} 1_{\Rpt(T_{\dimvec{d}})} && \in K^{T_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} ) \\ 
+  \psi_{\ww,\ww'}^{x}:=\;& \left[\{F_{\ww,\ww'}\} \right]^{T_{\dimvec{d}}} = (i_{\ww,\ww'}^{x})_{*} 1_{\Rpt(T_{\dimvec{d}})} && \in K^{T_{\dimvec{d}}} (\overline{\OOcell}_x) \\ 
+\end{aligned}
+\end{equation*}
+The same symbols are used for 
+$$\preimage{\psi}_{\ww} \in K^{T_{\dimvec{d}}} \left( \RRep_{\dimvec{d}}(Q) \right)  \quad  \preimage{\psi}_{\ww}^{x} \in K^{T_{\dimvec{d}}} \left( \overline{\preimage{\Ocell}}_x \right)  \quad  \preimage{\psi}_{\ww,\ww'} \in K^{T_{\dimvec{d}}} (\St_{\dimvec{d}})  \quad  \preimage{\psi}_{\ww,\ww'}^{x} \in K^{T_{\dimvec{d}}} (\St_x).$$
+Also, we use underline to twist subscripts, like $\underline{\psi}_{\ww,\ww'}:=\psi_{\ww,\ww\ww'}$.
+\end{defn}
+
+By Theorem \ref{thm:localization_theorem},
+\begin{equation*}
+\begin{aligned}
+   \Kcurl^{T_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}}) \cong\;& \bigoplus_{\ww} \Rptc(T_{\dimvec{d}}) \psi_{\ww}\qquad & \Kcurl^{T_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} ) \cong\;& \bigoplus_{\ww,\ww'} \Rptc(T_{\dimvec{d}}) \psi_{\ww,\ww'} \\ 
+   \Kcurl^{T_{\dimvec{d}}} \left(\RRep_{\dimvec{d}}(Q)\right) \cong\;& \bigoplus_{\ww} \Rptc(T_{\dimvec{d}}) \preimage{\psi}_{\ww} & \Kcurl^{T_{\dimvec{d}}} (\St_{\dimvec{d}} ) \cong\;& \bigoplus_{\ww,\ww'} \Rptc(T_{\dimvec{d}}) \preimage{\psi}_{\ww,\ww'}. \\ 
+\end{aligned}
+\end{equation*}
+
+\begin{defn}[Shorthand for Euler class]
+For $\ww$, $\ww'$, $x \in \WWd$, denote the Euler class in $\Rpt(T_{\dimvec{d}})$:
+\begin{equation*}
+\begin{aligned}
+  \Lambda_{\ww}:=\;& \eu\left(\mathcal{T}_{\ww}\right) \quad& \Lambda_{\ww}^x:=\;& \eu\left(\mathcal{T}_{\ww}^x\right) \quad& \Lambda_{\ww,\ww'}^x:=\;& \eu\left(\mathcal{T}_{\ww,\ww'}^x \right) \\ 
+    \preimage{\Lambda}_{\ww}:=\;& \eu\left(\preimage{\mathcal{T}}_{\ww}\right) \quad& \preimage{\Lambda}_{\ww}^x:=\;& \eu\left(\preimage{\mathcal{T}}_{\ww}^x\right) \quad& \preimage{\Lambda}_{\ww,\ww'}^x:=\;& \eu\left(\preimage{\mathcal{T}}_{\ww,\ww'}^x\right)  \\ 
+\end{aligned}
+\end{equation*}
+For completeness, denote
+$$\Lambda_{\ww,\ww'}:=\eu\left(\mathcal{T}_{\ww,\ww'}\right) \qquad \preimage{\Lambda}_{\ww,\ww'}:=\eu\left(\preimage{\mathcal{T}}_{\ww,\ww'}\right).$$
+Also, we use underline to twist subscripts.
+\end{defn}
+
+Now we can compute the transition matrix of two basis.
+
+\begin{eg}
+Let $X=Y=\mathcal{F}_{\dimvec{d}}$, $T=T_{\dimvec{d}}$, $i_{\ww}: \{F_{\ww}\} \hookrightarrow \mathcal{F}_{\dimvec{d}}$ be the embedding, $y \in \Wd$, we get
+$$\left[  \overline{\Omcell}_{y}^{u} \right]^{T_{\dimvec{d}}}= \sum_{w \leq y} \Lambda_{wu}^{-1}\left(  i_{wu}^{*} \left[  \overline{\Omcell}_y^{u} \right]^{T_{\dimvec{d}}} \right) \cdot \psi_{wu}.$$
+When $\overline{\Omcell}_{y}^{u}$ is smooth at $F_{wu}$, $\Lambda_{wu}^{-1}\left(  i_{wu}^{*} \left[  \overline{\Omcell}_y^{u} \right]^{T_{\dimvec{d}}} \right) = \left( \eu \left( T_{F_{wu}} \overline{\Omcell}_{y}^{u}  \right)\rule{0mm}{4mm} \right)^{-1} = \left(\Lambda_{wu}^{yu}\right)^{-1}$. Especially, for $s \in \Pi_{\dimvec{d}}$,
+\begin{equation*}
+\begin{aligned}
+  \left[  \overline{\Omcell}_{\Id}^{u} \right]^{T_{\dimvec{d}}}=\;&  \left( \Lambda_{u}^{u}  \right)^{-1} \psi_{u}=\psi_{u} \\
+  \left[  \overline{\Omcell}_{s}^{u} \right]^{T_{\dimvec{d}}}=\;&  \left( \Lambda_{u}^{su}  \right)^{-1} \psi_{u} + \left( \Lambda_{su}^{su}  \right)^{-1} \psi_{su} \\
+  \left[  \mathcal{F}_{u} \right]^{T_{\dimvec{d}}}=\;&  \sum_{w} \Lambda_{wu}^{-1} \psi_{wu} \\
+  \left[  \mathcal{F}_{\dimvec{d}} \right]^{T_{\dimvec{d}}}=\;&  \sum_{\ww} \Lambda_{\ww}^{-1} \psi_{\ww} \\  
+\end{aligned}
+\end{equation*}
+Also, for $s \in \Pi$,
+$$
+\left[  \overline{\Ocell}_s \right]^{T_{\dimvec{d}}}=
+\begin{cases}
+\left( \Lambda_{\Id}^{s}  \right)^{-1} \psi_{\Id} + \left( \Lambda_{s}^{s}  \right)^{-1} \psi_{s}, &s \in \Pi_{\dimvec{d}}\\
+\psi_{s}, &s \notin \Pi_{\dimvec{d}}
+\end{cases}
+$$
+\end{eg}
+
+\begin{eg}
+Let $X=Y=\RRep_{\dimvec{d}}(Q)$, $T=T_{\dimvec{d}}$, $i_{\ww}: \{(\rho_0, F_{\ww})\} \hookrightarrow \RRep_{\dimvec{d}}(Q)$ be the embedding, $y \in \Wd$, we get
+$$\left[  \overline{\preimage{\Omcell}}_{y}^{u} \right]^{T_{\dimvec{d}}}= \sum_{w \leq y} \preimage{\Lambda}_{wu}^{-1}\left(  i_{wu}^{*} \left[  \overline{\preimage{\Omcell}}_y^{u} \right]^{T_{\dimvec{d}}} \right) \cdot \preimage{\psi}_{wu}.$$
+When $\overline{\preimage{\Omcell}}_{y}^{u}$ is smooth at $F_{wu}$, $\preimage{\Lambda}_{wu}^{-1}\left(  i_{wu}^{*} \left[  \overline{\preimage{\Omcell}}_y^{u} \right]^{T_{\dimvec{d}}} \right) = \left( \eu \left( T_{F_{wu}} \overline{\preimage{\Omcell}}_{y}^{u}  \right)\rule{0mm}{4mm} \right)^{-1} = \left(\preimage{\Lambda}_{wu}^{yu}\right)^{-1}$. Especially, for $s \in \Pi_{\dimvec{d}}$,
+\begin{equation*}
+\begin{aligned}
+  \left[  \overline{\preimage{\Omcell}}_{\Id}^{u} \right]^{T_{\dimvec{d}}}=\;&  \left( \preimage{\Lambda}_{u}^{u}  \right)^{-1} \preimage{\psi}_{u}=\preimage{\psi}_{u} \\
+  \left[  \overline{\preimage{\Omcell}}_{s}^{u} \right]^{T_{\dimvec{d}}}=\;&  \left( \preimage{\Lambda}_{u}^{su}  \right)^{-1} \preimage{\psi}_{u} + \left( \preimage{\Lambda}_{su}^{su}  \right)^{-1} \preimage{\psi}_{su} \\
+  \left[  \RRep_{\ftdimvec{d}}(Q) \right]^{T_{\dimvec{d}}}=\;&  \sum_{w} \preimage{\Lambda}_{wu}^{-1} \preimage{\psi}_{wu} \\
+  \left[  \RRep_{\dimvec{d}}(Q) \right]^{T_{\dimvec{d}}}=\;&  \sum_{\ww} \preimage{\Lambda}_{\ww}^{-1} \preimage{\psi}_{\ww} \\  
+\end{aligned}
+\end{equation*}
+Also, for $s \in \Pi$,
+$$
+\left[  \overline{\preimage{\Ocell}}_s \right]^{T_{\dimvec{d}}}=
+\begin{cases}
+\left( \preimage{\Lambda}_{\Id}^{s}  \right)^{-1} \preimage{\psi}_{\Id} + \left( \preimage{\Lambda}_{s}^{s}  \right)^{-1} \preimage{\psi}_{s}, &s \in \Pi_{\dimvec{d}}\\
+\preimage{\psi}_{s}, &s \notin \Pi_{\dimvec{d}}
+\end{cases}
+$$
+\end{eg}
+
+\begin{eg}
+Let $X=Y=\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $T=T_{\dimvec{d}}$, $s \in \Pi$. Since $\overline{\OOcell}_s$ is smooth, we get
+$$\left[  \overline{\OOcell}_s \right]^{T_{\dimvec{d}}}= \sum_{\ww \in \WWd} \left( \Lambda_{\ww,\ww s}^{s} \right)^{-1} \psi_{\ww,\ww s} +  \sum_{\substack{\ww \in \WWd \\ \ww s \ww^{-1} \in \Wd}} \left( \Lambda_{\ww,\ww}^{s} \right)^{-1} \psi_{\ww,\ww}.$$
+One can also write $\left[  \overline{\OOcell}_{\ww} \right]$ in terms of $\Rptc(T_{\dimvec{d}})$-linear combination of those $\psi_{\ww,\ww'}$.
+
+%$$\left[  \overline{\OOmcell}_{y,y'}^{u,u'} \right]^{T_{\dimvec{d}}}= \sum_{(w,w') \leq (y,y')} \Lambda_{wu,ww'u'}^{-1}\left(  i_{wu,ww'u'}^{*} \left[  \overline{\OOmcell}_{y,y'}^{u,u'} \right]^{T_{\dimvec{d}}} \right) \cdot \psi_{wu,ww'u'}.$$
+%When $\overline{\OOmcell}_{y,y'}^{u,u'}$ is smooth at $F_{wu,ww'u'}$, $\Lambda_{wu,ww'u'}^{-1}\left(  i_{wu,ww'u'}^{*} \left[  \overline{\OOmcell}_{y,y'}^{u,u'} \right]^{T_{\dimvec{d}}} \right) = \left( \eu \left( T_{F_{wu,ww'u'}} \overline{\OOmcell}_{y,y'}^{u,u'}  \right)\rule{0mm}{4mm} \right)^{-1}$. Especially, for $s \in \Pi_{\dimvec{d}}$,
+%%%%haven't change the result
+%\begin{equation*}
+%\begin{aligned}
+%  \left[  \overline{\OOmcell}_{\Id,\Id}^{u,u'} \right]^{T_{\dimvec{d}}}=\;&  \left( \Lambda_{u}^{u}  \right)^{-1} \psi_{u}=\psi_{u} \\
+%  \left[  \overline{\OOmcell}_{\Id,s}^{u,u'} \right]^{T_{\dimvec{d}}}=\;&  \left( \Lambda_{u}^{su}  \right)^{-1} \psi_{u} + \left( \Lambda_{su}^{su}  \right)^{-1} \psi_{su} \\
+%  \left[  \mathcal{F}_{u} \right]^{T_{\dimvec{d}}}=\;&  \sum_{w} \Lambda_{wu}^{-1} \psi_{wu} \\
+%  \left[  \mathcal{F}_{\dimvec{d}} \right]^{T_{\dimvec{d}}}=\;&  \sum_{\ww} \Lambda_{\ww}^{-1} \psi_{\ww} \\  
+%\end{aligned}
+%\end{equation*}
+%Also, for $s \in \Pi$,
+%$$
+%\left[  \overline{\OOcell}_s \right]^{T_{\dimvec{d}}}=
+%\begin{cases}
+%\left( \Lambda_{\Id}^{s}  \right)^{-1} \psi_{\Id} + \left( \Lambda_{s}^{s}  \right)^{-1} \psi_{s}, &s \in \Pi_{\dimvec{d}}\\
+%\psi_{s}, &s \notin \Pi_{\dimvec{d}}
+%\end{cases}
+%$$
+\end{eg}
+
+\begin{eg}
+Let $X=\Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $Y=\St_{\dimvec{d}}$, $T=T_{\dimvec{d}}$, $s \in \Pi$. Since $\St_s$ is smooth, we get
+$$\left[  \St_s \right]^{T_{\dimvec{d}}}= \sum_{\ww \in \WWd} \left( \preimage{\Lambda}_{\ww,\ww s}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww s} +  \sum_{\substack{\ww \in \WWd \\ \ww s \ww^{-1} \in \Wd}} \left( \preimage{\Lambda}_{\ww,\ww}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww}.$$
+One can also write $\left[  \overline{\OOcell}_{\ww} \right]$ in terms of $\Rptc(T_{\dimvec{d}})$-linear combination of those $\preimage{\psi}_{\ww,\ww'}$.
+\end{eg}
