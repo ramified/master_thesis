@@ -38,18 +38,18 @@
 \contentsline {section}{\numberline {3.2}Application: module structure}{49}{section.3.2}% 
 \contentsline {chapter}{\numberline {4}Localization theorem}{53}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Euler class}{53}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Statement}{53}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Application: change of basis}{53}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Excess intersection formula}{55}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Convolution}{55}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Statement}{56}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Application: convolution formula}{57}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Demazure operator}{57}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}Generalization}{59}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}quiver with loops}{59}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{59}{section.6.2}% 
-\contentsline {chapter}{\numberline {7}From formula to diagram}{61}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}One point quiver}{61}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}$A_2$-quiver}{61}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}$1$-loop quiver}{61}{section.7.3}% 
-\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{63}{chapter.8}% 
+\contentsline {section}{\numberline {4.2}Statement}{54}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Application: change of basis}{56}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Excess intersection formula}{57}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Convolution}{57}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Statement}{58}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Application: convolution formula}{59}{section.5.3}% 
+\contentsline {section}{\numberline {5.4}Demazure operator}{59}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Generalization}{61}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}quiver with loops}{61}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{61}{section.6.2}% 
+\contentsline {chapter}{\numberline {7}From formula to diagram}{63}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}One point quiver}{63}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}$A_2$-quiver}{63}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}$1$-loop quiver}{63}{section.7.3}% 
+\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{65}{chapter.8}% 
