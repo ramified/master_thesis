@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Localization theorem}\label{chap:localization}
-We have already gotten the module structure of $K$-theories. However, these basis behave badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because "the information is not concentrated enough". In this chapter we will introduce another basis, which "concentrate information in the $T$-fixed points". The localization formula describe the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
+We have already gotten the module structure of $K$-theories. However, this basis behaves badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because "the information is not concentrated enough". In this chapter we will introduce another basis, which "concentrates information in the $T$-fixed points". The localization formula describes the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
 
 
 \section{Euler class}\label{sec:euler_class}
@@ -8,7 +8,7 @@ In the category of coherent sheaf, the "proper base change" is usually not true.
 
 \begin{defn}[Euler class, for $K$-group]
 Let $X$ be a $G$-variety, and $\mathcal{T}$ be a $G$-equivariant vector bundle over $X$. The Euler class is defined by
-$$\eu(\mathcal{T}):= \sum_{k=0}^{\infty} (-1)^k \left[ \Lambda^{k} \mathcal{T}^* \right] \in \Rpt(G) $$
+$$\eu(\mathcal{T}):= \sum_{k=0}^{\infty} (-1)^k \left[ \Lambda^{k} \mathcal{T}^* \right] \in K^G(X) $$
 \end{defn}
 
 In practice, $X$ are points and $G$ is a torus. In that case, since we know the representation of a torus (see Example \ref{eg:K-initial-2}), the Euler class can be explicitly written down. For example, ($X=\pt$)
@@ -19,7 +19,7 @@ In practice, $X$ are points and $G$ is a torus. In that case, since we know the 
       &\eu\left(\frac{e_1}{e_2}+\frac{e_2}{e_3}+\frac{e_3}{e_1} \right)=  \left(1-\frac{e_2}{e_1}\right)\left(1-\frac{e_3}{e_2}\right)\left(1-\frac{e_1}{e_3}\right)\\ 
 \end{aligned}
 \end{equation*}
-Here we confuse the notation of $\Rpt(T)$ and $\Rep(T)$: the elements inside the bracket of Euler class should be viewed as a vector bundle rather than a linear combination of coherent sheaves. 
+Here we confuse the notation of $\Rpt(T)$ and $\Rep(T)$: the elements inside the bracket of Euler class should be viewed as a vector bundle rather than a $\mathbb{Z}$-linear combination of coherent sheaves. 
 
 \begin{warning}
 Compared with usual Euler class, some properties are kept in $K$-theory version, while some are not. For example, for line bundles $\mathcal{L}$, $\mathcal{L}_1$, $\mathcal{L}_2$ over $X$,
@@ -55,7 +55,7 @@ Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$
 % https://q.uiver.app/?q=WzAsNyxbMSwxLCJXIl0sWzMsMSwiWiJdLFszLDIsIlgiXSxbMSwyLCJZIl0sWzQsMCwiXFxtYXRoY2Fse059X3tcXHZhcnBoaX0iXSxbMiwwLCJnXnsqfVxcbWF0aGNhbHtOfV97XFx2YXJwaGl9Il0sWzAsMCwiXFxtYXRoY2Fse059X3tcXHBoaX0iXSxbMywyLCJmIl0sWzEsMiwiXFx2YXJwaGkiXSxbMCwxLCJnIl0sWzAsMywiXFxwaGkiLDJdLFs0LDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}[row sep={between origins,20mm},column sep={between origins,5mm}]
 	{\mathcal{N}_{\phi}} && {g^{*}\mathcal{N}_{\varphi}} &[10mm]& {\mathcal{N}_{\varphi}} \\[-12mm]
-	& N && Z \\
+	& W && Z \\
 	& Y && X
 	\arrow["f", from=3-2, to=3-4]
 	\arrow["\varphi", from=2-4, to=3-4]
@@ -69,7 +69,7 @@ Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$
 
 For any $\alpha \in K^G(Z)$, we have the \textbf{excess base change formula}:
 $$f^* \circ \varphi_{*}(\alpha)=\phi_{*} \left( \eu(\mathcal{T})\cdot g^*(\alpha)\rule{0mm}{4mm}  \right) \qquad \text{ in }K^{G}(Y)$$
-
+where the dot product of $\eu(\mathcal{T})$ is given by the tensor product in $K^G(W)$.
 
 \end{theorem}
 
@@ -137,7 +137,7 @@ Let us unravel Theorem \ref{thm:localization_formula} a little bit. For the clos
    =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot[x_k]_Y^T && \text{by definition of $[x_k]_Y^T$}\\
 \end{aligned}
 \end{equation*}
-When $Z$ is smooth at $x_k$,\footnote{The smoothness guaranteed the regular embedding condition in Theorem \ref{thm:excess_base_change}.} denote $g: Z \hookrightarrow X$ and $j_k: \{x_k\} \longrightarrow Z$, 
+When $Z$ is smooth at $x_k$,\footnote{The smoothness guarantees the regular embedding condition in Theorem \ref{thm:excess_base_change}.} denote $g: Z \hookrightarrow X$ and $j_k: \{x_k\} \longrightarrow Z$, 
 \begin{equation*}
 \begin{aligned}\
    i_{k}^* [Z]_X^T=\;& i_{k}^* g_* \big(  \pi_Z^* 1_{\Rpt(T)} \big) &&\\

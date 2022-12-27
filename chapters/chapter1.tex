@@ -6,7 +6,7 @@
 We introduce the complete flag variety to give a bird's eye view on the whole section. Actually, the entire difficulty is bundled in this example.
 
 \begin{setting}\label{set:initial_case}
-Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup, Weyl group respectively, i.e.,
+Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
 {
 \setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
@@ -39,14 +39,14 @@ $$W:= N_{\GL_n}(T)/T \cong S_n$$
 \begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_k = V.$$
-$F$ is called a complete flag if $\dim V_j = j$ for all $j$, otherwise $F$ is called a partial flag.
+$F$ is called a complete flag if $\dim M_j = j$ for all $j$, otherwise $F$ is called a partial flag.
 \end{defn}
 
 \begin{defn}[Complete flag variety]
 The complete flag variety $\mathcal{F}$ is defined as 
 \begin{equation*}
 \begin{aligned}
-  \mathcal{F}=\;& \GL_n/B \\ 
+  \mathcal{F}:=\;& \GL_n/B \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^n \right\} \\ 
       =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = \mathbb{C}^n \;\middle|\; \dim M_j =j \right\} \\ 
        \cong\;&  \left\{ \text{Borel subgroups of } \GL_n \right\} \\
@@ -75,7 +75,7 @@ Especially, for $w \in W=N_{\GL_n}(T)/T \cong S_n$, the flag attached to $w$
 \end{equation*}
 does not depend on the choice of the lift $\tilde{w} \in N_{\GL_n}(T)$ of $w$.
 
-Readers can verify that $\left\{ F_w \,\middle|\, w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while $\left\{ wBw^{-1} \,\middle|\, w \in W \right\}$ are all Borel subgroups of $G$ containing the standard torus $T$.
+Readers can verify that $\left\{ F_w \,\middle|\, w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while the set $\left\{ wBw^{-1} \,\middle|\, w \in W \right\}$ consists of all Borel subgroups of $G$ containing the standard torus $T$.
 \item For $n=2$, $\mathcal{F} \cong \mathbb{P}^1$. We encourage readers to use $\mathbb{P}^1$ as a toy example for the whole theory.
 \end{enumerate}
 \end{remark}
@@ -93,10 +93,11 @@ general point  & $g$                 & $F_g$                       & $gBg^{-1}$ 
 \end{tabular}
 \end{table}
         
-$\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition, \footnote{For the most time the formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
-$$\GL_n =\bigsqcup_{w\in W} BwB$$
-
-We get a stratification of $\mathcal{F}$ by $B$-orbits:
+$\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition,
+\footnotemark 
+\footnotetext{For the most time the formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
+$$\GL_n =\bigsqcup_{w\in W} BwB,$$
+we get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
 The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}, denoted by $\Omcell_w$. Since 
 $$\Omcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
@@ -105,43 +106,39 @@ the Schubert cell is an affine space of dimension $l(w)$.
 As a result, we know a lot of information of $\mathcal{F}$:
 %https://tex.stackexchange.com/questions/112576/math-mode-in-tabular-without-having-to-use-everywhere
 \newcolumntype{C}{>{$}c<{$}} % math-mode version of "l" column type
-\begin{table}[]
-\centering
-\begin{tabular}{|C|C|C|C|C|C|C|C|}
-\hline
-H^i(\mathcal{F}; \mathbb{C}) & 0 & 2 & 4 & 6  & 8  & 10 & 12 \\ \hline
-1                            & 1 &   &   &    &    &    &    \\ \hline
-2                            & 1 & 1 &   &    &    &    &    \\ \hline
-3                            & 1 & 2 & 2 & 1  &    &    &    \\ \hline
-4                            & 1 & 3 & 5 & 6  & 5  & 3  & 1  \\ \hline
-5                            & 1 & 4 & 9 & 15 & 20 & 22 & 20 \\ \hline
-\end{tabular}
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  
+    \includegraphics[]{figures/table/table_sing_coh.pdf}   
+    \caption{The singular cohomology $H^{i}(\mathcal{F};\mathbb{C})$ for $\mathcal{F}=\GL_n/B$}    
 \end{table}
+
 \begin{table}[]
 \centering
 \begin{tabular}{C|C|C}
 \hline
 G    & \text{Orbit}                       & G\text{-fixed points}  \\ \hline
-GL_n & \mathcal{F} \cong \GL_n/B          & \varnothing            \\ \hline
+\GL_n & \mathcal{F} \cong \GL_n/B          & \varnothing            \\ \hline
 B    & \Omcell_w \cong B/(B \cap wBw^{-1}) & \{F_{\Id} \}           \\ \hline
 T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 \end{tabular}
+\caption{Orbit and fixed points}
 \end{table}
 
 $\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
 $$\overline{\Omcell}_w= \bigsqcup_{w' \leq w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
 $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
-For other Schubert variety, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert varieties are not smooth.
+For other Schubert varieties, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert varieties are not smooth.
 
 
 \subsection{$\mathcal{F} \times \mathcal{F}$}\label{subsec:product_of_F}
 As a more complicated geometrical object, $\mathcal{F} \times \mathcal{F}$ works as the base space for the Steinberg variety, which turns out to be the central focus in the thesis. $\mathcal{F} \times \mathcal{F}$ has naturally a diagonal $\GL_n$-action:
 $$\GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g,F_1,F_2) \longmapsto (gF_1,gF_2).$$
-Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $GL_n$-orbits, indexed by the Weyl group:
+Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $\GL_n$-orbits, indexed by the Weyl group:
 $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
 
-Denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
+For $w'\in W$, denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
 $$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
 which is an $\mathbb{A}^{l(w')}$-bundle over $\mathcal{F}$, as shown below:
 % https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG1hdGhiYntBfV57bCh3Jyl9IFxcY29uZyBCL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMCwiXFxHTF9uL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMSwiXFxtYXRoY2Fse0Z9PVxcR0xfbi9CXFxoc3BhY2V7NW1tfSJdLFswLDFdLFsxLDJdXQ==
@@ -157,7 +154,7 @@ $$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \math
 If we write $\underline{F}_{g,g'}:= (F_g,F_{gg'}) \in \mathcal{F} \times \mathcal{F}$, then 
 $$(g_1,g_2) \cdot\underline{F}_{g,g'}=\underline{F}_{g_1g,g_2g'}.$$
 
-This $\GL_n \times \GL_n$-action is now transitive, and decompose $\mathcal{F}\times \mathcal{F}$ as disjoint union of finite many $B \times B$-orbits, which are compatible with $G$-orbits:
+This $\GL_n \times \GL_n$-action is now transitive, and decomposes $\mathcal{F}\times \mathcal{F}$ as disjoint union of finite many $B \times B$-orbits, which are compatible with $G$-orbits:
 
 \begin{equation*}
 \begin{aligned}
@@ -219,15 +216,17 @@ is an $\mathcal{F}$-bundle over $\mathbb{P}^1$. Also,
 \end{equation*}
 Other closure can be highly singular.
 
-\begin{eg}
-In the table, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathcal{F}$ has $6$ $\GL_3$-orbits, and each $\GL_3$-orbits decompose as $6$ $B\times B$-orbits, with dimensions equal to $l(w)+l(w')$.
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=12.8cm]{figures/table/table_1.pdf}
-      \label{fig:stratifications_of_FF}
+      \label{table:stratifications_of_FF}
         \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
         
 \end{table}
+
+\begin{eg}
+In the Table \ref{table:stratifications_of_FF}, $n=3$, $t=(12)$, $s=(23)$. In this case, $\mathcal{F}\times \mathcal{F}$ has $6$ $\GL_3$-orbits, and each $\GL_3$-orbits decompose as $6$ $B\times B$-orbits, with dimensions equal to $l(w)+l(w')$. 
+
 
 We can also see the $\GL_3$-orbit (and its closure) from the table, for example,
 \begin{equation*}
@@ -241,11 +240,12 @@ We can also see the $\GL_3$-orbit (and its closure) from the table, for example,
   \overline{\OOmcell}_{s}=\;& \OOmcell_{s} \sqcup \OOmcell_{\Id} = \bigsqcup_{w} (\OOmcell_{w,s} \sqcup \OOmcell_{w,\Id})
 \end{aligned}
 \end{equation*}
+We color pieces of $\OOmcell_{s}$ by blue, and $\OOmcell_{ts,s}$ by ink blue.
 \end{eg}
 
 
 
-Now wee understand a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process of analysis(investigations?) will be applied repeatedly in Section \ref{sec:typical_variety} and \ref{sec:stratification}. 
+Now we understand the structure a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process will be applied repeatedly in Section \ref{sec:typical_variety} and \ref{sec:stratification}. 
 \section{Quiver}
 To introduce more complicated spaces and discuss their stratifications, we fix notations related to quiver and algebraic group in the following sections.
 
@@ -318,11 +318,26 @@ $$\begin{tikzcd}[ampersand replacement=\&]
 From those quivers we are able to construct relatively complicated algebraic and geometrical objects.
 
 \begin{defn}[Quiver representation]
-Fix a quiver $Q$. A representation of $Q$ consists of the following data:
+Fix a quiver $Q$. 
+
+A representation of $Q$ consists of the following data:
 \begin{itemize}[noitemsep,topsep=0pt]
 \item A finite dimensional $\mathbb{C}$-vector space $V_i$ for each vertex $i \in Q_0$;
 \item A $\mathbb{C}$-linear map $V_a: V_{s(a)} \longrightarrow V_{t(a)}$ for each arrow $a \in Q_1$.
 \end{itemize}
+
+A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longrightarrow W_i$ (for every $i \in Q_0$) which make the following diagram commute:
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJWX3tzKGEpfSAiXSxbMSwwLCJWX3t0KGEpfSJdLFsxLDEsIldfe3QoYSl9Il0sWzAsMSwiV197cyhhKX0gIl0sWzAsMywiZl97cyhhKX0iLDJdLFswLDEsIlZfYSJdLFsxLDIsImZfe3QoYSl9Il0sWzMsMiwiV19hIl1d
+\[\begin{tikzcd}
+	{V_{s(a)} } & {V_{t(a)}} \\
+	{W_{s(a)} } & {W_{t(a)}}
+	\arrow["{f_{s(a)}}"', from=1-1, to=2-1]
+	\arrow["{V_a}", from=1-1, to=1-2]
+	\arrow["{f_{t(a)}}", from=1-2, to=2-2]
+	\arrow["{W_a}", from=2-1, to=2-2]
+\end{tikzcd}\]
+
+We denote $\rep(Q)$ as the category of representations of $Q$.
 \end{defn}
 \begin{eg}
 A representation of $1$-loop quiver $L(1)$ is a $2$-tuple
@@ -335,13 +350,13 @@ The equivalence appeared in the example can actually be generalized to arbitrary
 
 For many constructions, we only care about the data of vector space.
 \begin{defn}[$Q$-vector space/Vector space with quiver partition]
-Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with the direct sum decomposition
+Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with a direct sum decomposition
 $$V= \bigoplus_{i \in Q_0} V_i.$$
 The dimension vector of a $Q$-vector space is defined as
-$$\dimv V =\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \subseteq \prod_{i \in Q_0} \mathbb{Z}.$$
+$$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \subseteq \prod_{i \in Q_0} \mathbb{Z}.$$
 \end{defn} 
 
-On the country, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
+On the contrary, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
 $$V= \bigoplus_{i \in Q_0} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
 
 \begin{defn}
@@ -353,7 +368,7 @@ For $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, denote $\abdimv
 For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in Q_0} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
 \begin{equation*}
 \begin{aligned}
-  \Rep_{\dimvec{d}}(Q)=\;&  \left\{ (V_i,V_a: V_{s(a)} \longrightarrow V_{t(a)} ) \text{ as a representation of $Q$}  \right\} \\ 
+  \Rep_{\dimvec{d}}(Q):=\;&  \left\{ (V_i,V_a: V_{s(a)} \longrightarrow V_{t(a)} ) \text{ as a representation of $Q$}  \right\} \\ 
   =\;& \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right)
 \end{aligned}
 \end{equation*}
@@ -361,7 +376,7 @@ For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector 
 Since we encode the information of vector space in $\dimvec{d}$, $\Rep_{\dimvec{d}}(Q)$ only records the information of linear maps.
 \end{defn}
 
-For both $Q$-vector space and $Q$-representations, we can define (complete) flags.
+For both $Q$-vector spaces and $Q$-representations, we can define (complete) flags.
 
 \begin{defn}[Flag with quiver] \label{def:flag_with_quiver}
 For a quiver representation $V \in \rep(Q)$, a flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
@@ -402,7 +417,7 @@ $$\ftdimvec{d}= \begin{pmatrix}
 }
 \end{eg}
 \begin{remark}
-The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition on set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
+The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition of set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
 $$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
 such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in Q_0}\ptt^{-1}(i).$$} . As an example,
 {
@@ -503,7 +518,7 @@ where $s_i:=(i,i+1) \in S_5$ are simple reflections.
 
 \end{remark}
 
-\begin{defn}[Special elements in the Weyl group]
+\begin{defn}[Simple reflections in the Weyl group]
 For $i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\}$, the simple reflection is defined as
 $$s_i:=(i,i+1) \in  S_{\abdimvec{d}}.$$
 We denote
@@ -515,16 +530,15 @@ We denote
 \end{aligned}
 \end{equation*}
 to be the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively.
-
-We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ to be the longest elements in $\absgp{W}_{\abdimvec{d}}$, $W_{\dimvec{d}}$, respectively.
 \end{defn}
+We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ to be the longest elements in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively. See Table \ref{table:Wgp_collected_notations} for a picture of $\ww_{\max}$ and $w_{\max}$.
 
 We discuss about right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
 
 Multiplying on left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following fact more explicitly.
 
 \begin{fact}
-Every element $\ww_{\max} \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$.
+Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$.
 \end{fact}
 
 \begin{eg}\label{eg:3-case-0.1}
@@ -615,7 +629,7 @@ us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow&\quad us_iu^{-1}=s_{u(i)} \in 
 us_iu^{-1}\notin W_{\dimvec{d}} \quad\Longrightarrow&\quad us_i \in \MinWd.
 \end{aligned}
 \end{equation*}
-An example is shown in Table \ref{table:Lie_alg}.
+The picture of $us_i$ is shown in Table \ref{table:Lie_alg}.
 \end{ex}
 
 We finish this section with figures and examples.
@@ -660,7 +674,7 @@ u =\parbox[h][][c]{3cm}{
  $$
  \begin{array}{l|l|r|c}
  \hline
- \multicolumn{1}{c|}{\text{set}} & \multicolumn{1}{c|}{\text{element}} & \multicolumn{1}{c|}{\text{special element}} & \text{others} \\ \hline
+ \multicolumn{1}{c|}{\text{set}} & \multicolumn{1}{c|}{\text{element}} & \multicolumn{1}{c|}{\text{special element}} & \text{others/alias} \\ \hline
 \absgp{W}_{\abdimvec{d}} = S_5 & \ww,x                               &   \ww_{\max}=  \lbox{\parbox[h][][c]{1.5cm}{\permutation[tkzpic=1,type=0,scale=0.5]{5,4,3,2,1}}  }                                      &   \Pi_{\phantom{d}}=\{s_1,s_2,s_3,s_4 \}            \\ \hline
 W_{\dimvec{d}} = S_3 \times S_2      & w                                   &     w_{\max}= \lbox{\parbox[h][][c]{1.5cm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,2,1,5,4}}    }                                    &  \Pi_{\dimvec{d}}=\{s_1,s_2,\phantom{s_3,}s_4 \}              \\ \hline
 W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus S_5 & \ww, \ftdimvec{d}                   &          \parbox[h][][c]{1.6cm}{\parbox[h][][c]{1.5cm}{ \begin{tikzpicture}[scale=0.5]
@@ -700,6 +714,8 @@ W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus
  \end{tikzpicture}}      &   \Shuffled            \\ \hline
  \end{array}
  $$
+ \caption{Collected notations in $(3,2)$-case}
+ \label{table:Wgp_collected_notations}
  \end{table}
  }
  %调整表格。。。大难题
@@ -723,7 +739,7 @@ In this section we fix notations of algebraic group and Lie algebras. Later, the
 
 
 \begin{setting}\label{set:Qvs}
-We fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $Q$-vector space 
+Fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $Q$-vector space 
 $$V=\bigoplus_{i \in Q_0} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
 When a basis of $V$ is needed, we fix a total order on $Q_0$, and denote
 $$V=\left< v_1, \ldots v_{\abdimvec{d}} \right> $$
@@ -737,7 +753,7 @@ $$V_i=\left< v_{f_i+1}, \ldots v_{f_i+\dimvec{d}_i} \right> \qquad f_i= \sum_{i'
 %The following algebraic groups are not related to the quiver partition of $V$.
 We set
 $$\absgp{G}_{\abdimvec{d}}:= \GL(V)=\GL_{\abdimvec{d}}(\mathbb{C}),$$
-and $\absgp{B}_{\abdimvec{d}}$, $\absgp{T}_{\abdimvec{d}}$, $\absgp{N}_{\abdimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
+and $\absgp{B}_{\abdimvec{d}}$, $\absgp{T}_{\abdimvec{d}}$, $\absgp{N}_{\abdimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups, respectively.
 
 The Weyl group is
 $$\absgp{W}_{\abdimvec{d}}:= N_{\absgp{G}_{\abdimvec{d}}}(\absgp{T}_{\abdimvec{d}})/\absgp{T}_{\abdimvec{d}} \cong S_{\abdimvec{d}}.$$
@@ -752,7 +768,7 @@ We also have a series of algebraic groups compatible with the quiver partition o
 \begin{defn}[relative algebraic groups]\label{def:relalggp}
 
 We set
-$$G_{\dimvec{d}}:= \bigoplus_{i \in Q_0}\GL(V_i)=\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
+$$G_{\dimvec{d}}:= \bigoplus_{i \in Q_0}\GL(V_i)=\bigoplus_{i \in Q_0}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
 and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
 
 The Weyl group is
@@ -769,7 +785,7 @@ $$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}}\ww^{-1} \cap B_{\dimvec{d}}=wB_{\dimvec{
 The difference is clearly shown in Table \ref{table:smalleg_Weyl}.
 \end{remark}
 
-We also have a series of algebraic groups with subscription as elements in the Weyl group:
+We also have a series of algebraic groups indexed by elements in the Weyl group:
 \begin{defn}[more algebraic groups]
 For $\ww, \ww'' \in \absgp{W}_{\abdimvec{d}}$, define
 \begin{equation*}
@@ -779,7 +795,7 @@ For $\ww, \ww'' \in \absgp{W}_{\abdimvec{d}}$, define
   M_{\ww,\ww''}:=\;& N_{\ww}/N_{\ww,\ww''},  \\ 
 \end{aligned}
 \end{equation*}
-where $R_u$ denotes for the unipotent radical.
+where $R_u$ denotes the unipotent radical.
 
 For $s \in \Pi$ such that $\ww s \ww^{-1} \in W_d$ (i.e., $W_{\dimvec{d}}\ww=W_{\dimvec{d}}\ww s$), define
 \begin{equation*}
@@ -967,7 +983,7 @@ $w =\hspace{-3mm}\parbox[h][][c]{2cm}{\permutation[tkzpic=1,type=0,scale=0.5]{3,
 \end{eg}
 }
 \subsection{Lie algebra}
-For the Lie algebra, we use the corresponding Fraktur-font symbols:
+We use Fraktur-font symbols to represent the Lie algebras of the corresponding algebraic groups introduced in the last section:
 \begin{equation*}
 \begin{aligned}
   & \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{b}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{t}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{n}}_{\abdimvec{d}}, &&\boldsymbol{\mathfrak{b}}_{\ww}  \\
@@ -1021,7 +1037,7 @@ Consider the quiver $\begin{tikzcd}[ampersand replacement=\&]
   \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,1},{4,0},{5,0},{4,1}}
   
   \end{tikzpicture}
-  }$\hspace{-7mm}. Table \ref{table:Lie_alg} gives us an example of the shape of these Lie algebras. 
+  }$\hspace{-7mm}. Table \ref{table:Lie_alg} gives us an example of the shape of these Lie algebras. Symbols like $\frac{e_1}{e_2}$ will be explained in Example \ref{eg:K-initial-2}.
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=15cm]{figures/table/table_Lie_alg.pdf}
@@ -1048,7 +1064,7 @@ Another twist happens when we add minus sign as the superscript:
 \begin{aligned}
   \boldsymbol{\mathfrak{b}}_{\ww}^{-} =&\boldsymbol{\mathfrak{b}}_{\ww_{\max}\ww},&& \\
   \mathfrak{b}_{\ww}^{-}=&\mathfrak{b}_{w_{\max}\ww}, & 
-\mathfrak{n}_{\ww}^{-}=&\mathfrak{b}_{w_{\max}\ww}, \\
+\mathfrak{n}_{\ww}^{-}=&\mathfrak{n}_{w_{\max}\ww}, \\
   \mathfrak{n}_{\ww,\ww''}^{-}=&\mathfrak{n}_{w_{\max}\ww,w_{\max}\ww''}, & 
 \mathfrak{m}_{\ww,\ww''}^{-}=&\mathfrak{m}_{w_{\max}\ww,w_{\max}\ww''}.  \\
 \end{aligned}
@@ -1106,7 +1122,7 @@ are products of usual flag varieties.
 \end{remark}
 
 We need to simplify our notations of flags.
-\begin{defn}[Special flags]\label{def:special_flags}
+\begin{defn}[Coordinate flags and related flags]\label{def:special_flags}
 For a basis $\{x_1, \ldots ,x_{\abdimvec{d}} \}$, denote the flag
 $$F_{\{x_1, \ldots ,x_{\abdimvec{d}} \}} : 0 \subseteq \left<x_1 \right> \subseteq \left<x_1,x_2 \right>\subseteq \cdots \subseteq  \left<x_1,\ldots x_{\abdimvec{d}} \right>=V.$$
 \end{defn}

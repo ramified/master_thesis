@@ -1,7 +1,7 @@
 
 \documentclass[reqno,11pt]{book}
 %\special{dvipdfmx:config z 0}
-%%\includeonly{}
+%\includeonly{}
 %\includeonly{chapters/chapter1}
 
 %\usepackage{color,graphicx}
@@ -135,7 +135,7 @@
 \newcommand{\Ri}{\operatorname{R}^i\!\!}
 \DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
 \DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
-\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
 \newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
 \newcommand{\Wd}{W_{\dimvec{d}}}
 \newcommand{\norm}[1]{\Vert{#1}\Vert}
@@ -169,6 +169,8 @@
 \setlength\textfloatsep{0cm}
 \def\arraystretch{1.2}
 \setcounter{secnumdepth}{3}
+
+
 
 \makeatletter
 \preto\env@matrix{\renewcommand{\arraystretch}{0.6}
@@ -218,6 +220,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Excess intersection formula}
+Finally, we are able to compute the convolution structure of the Steinberg variety in this Chapter. We first introduce the convolution product, then give an explicit intersection formula, and finally apply theorems to our settings.
 
 \section{Convolution}\label{sec:convolution}
 The construction of the convolution product has a similar flavor with Fourier-Mukai transformation, which is the composition of pullback, tensor product and proper pushforward.
@@ -296,6 +299,21 @@ The whole process can be concluded in the following diagram.
 
 \section{Statement}
 To facilitate the computation of intersection (i.e., tensor product in the construction of convolution product), we state the excess intersection formula.
+
+\begin{theorem}[{Excess intersection formula, \cite[Corollary 9.4]{przezdziecki2015geometric}}]\label{thm:excess_intersection_formula}
+Let $X$ be a smooth $G$-variety, $X' \subseteq X$ be a (maybe singular) closed $G$-subvariety, and $Y_1,Y_2 \subseteq X'$ be closed $G$-equivariant embeddings (of globally finite $\Tor$-dimension). Denote
+\begin{equation*}
+\begin{aligned}
+  Y:=\;&Y_1 \cap Y_2 \qquad \iota_Y: Y \hookrightarrow X'  \\
+  \mathcal{T}:=\;&TX\big|_{Y} / \left( TY_1\big|_{Y}+ TY_2\big|_{Y}   \right) 
+\end{aligned}
+\end{equation*}
+Assume that $TY_1\big|_{Y} \cup TY_2\big|_{Y} = TY$, we get excess intersection formula:
+$$[Y_1]_{X'}^G \otimes [Y_2]_{X'}^G = \iota_{Y,*} \left(\eu( \mathcal{T} ) \cdot [Y]_{Y}^G \right).$$
+In particular, when $Y=\pt$ is a point, we get simplified formula in $K^G(X')$:
+$$[Y_1]^G \otimes [Y_2]^G = \eu( \mathcal{T} ) \cdot [Y]^G $$
+where $\eu( \mathcal{T} ) \in \Rpt(G)$ acts by scalar multiplication.
+\end{theorem}
 \section{Application: convolution formula}
 \section{Demazure operator}
 
