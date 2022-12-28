@@ -8,11 +8,8 @@ From my humble point of view, there is no easy cohomology theory, in a sense tha
 The main reference for the $K$-theory is \cite[Chapter 5]{chriss1997representation}. 
 {
 %I don't know how to fix the problem where the latter $$$$ does not work.
-\makeatletter
-\g@addto@macro{\item}{%
-  \abovedisplayskip=0ex
-  \belowdisplayskip=0ex}
-\makeatother
+\abovedisplayskip=1ex
+  \belowdisplayskip=1ex
 \begin{setting}
 Throughout abstract results of $K$-theory, we use the following notations:
 \begin{itemize}
@@ -28,12 +25,8 @@ as the $G$-action map.
 \item $\mathcal{F}$ is usually a sheaf on $X$, which is not flag variety $\GL_n/B$.
 \end{itemize}
 \end{setting}
-\makeatletter
-\g@addto@macro{\item}{%
-  \abovedisplayskip=1ex
-  \belowdisplayskip=1ex}
-\makeatother
 }
+
 \section{Definitions and initial examples}
 \subsection{$G$-equivariant sheaf and $K^G_0(X)$}
 We give definition for $K$-theory, which is lengthy already. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
@@ -464,6 +457,14 @@ The following diagram explains the word "restriction with supports":
 	\arrow[from=1-3, to=2-3]
 \end{tikzcd}\]
 \end{defn}
+\begin{lemma}\label{lem:unit_of_tensor_product}
+Let $X$ be a smooth variety, $Z \subseteq X$ be a closed $G$-subvariety, $\pi_Z:Z \longrightarrow \pt$ be the projection map. For any $\alpha \in K^G(Z)$, $\alpha \otimes \pi_Z^* 1_{\Rpt(G)} = \alpha$.
+\end{lemma}
+
+\begin{proof}
+This comes from the definition of the tensor product.
+\end{proof}
+
 \subsection{Algebraic structures of $K$-theory} 
 With enough tools in hand, we can define some extra structures on $K^G(X)$. (By priority $K^G(X)$ is an abelian group)
 
