@@ -426,12 +426,12 @@ $$\fakestar: K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right) \times K^{G_{\
 
 
 In this subsection, we compute the convolution product in the bottom line of the diagram in Remark \ref{rmk:process_convolution_product}.
-\begin{proposition}[Convolution product formula]
+\begin{proposition}[Convolution product formula]\label{prop:convolution_product_formula}
 For $\ww$, $\ww'$, $\ww''$, $\ww''' \in \WWd$, we have
 \begin{equation*}
 \begin{aligned}
   \preimage{\psi}_{\ww,\ww'} \fakestar \preimage{\psi}_{\ww'',\ww'''}=\;& \delta_{\ww',\ww''}\preimage{\Lambda}_{\ww'} \preimage{\psi}_{\ww,\ww'''} \\ 
-  \preimage{\psi}_{\ww,\ww'} \star \preimage{\psi}_{\ww''}=\;& \delta_{\ww',\ww''}\preimage{\Lambda}_{\ww'} \preimage{\psi}_{\ww}. \\   
+  \preimage{\psi}_{\ww,\ww'} \star \preimage{\psi}_{\ww''\phantom{,\ww'''}}=\;& \delta_{\ww',\ww''}\preimage{\Lambda}_{\ww'} \preimage{\psi}_{\ww}. \\   
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -537,6 +537,9 @@ $$\mathcal{T}:= \frac{T_y M_{123} }{T_y \big( p_{12}^{-1}(Y_{12}) \big) \oplus T
 
 \end{proof}
 
+Readers can think matrix multiplication as an analog of Proposition \ref{prop:convolution_product_formula}: denote $E_{ij} \in M^{n \times n}(\mathbb{C})$ as the matrix having $1$ in the $(i,j)$-position and $0$ elsewhere, and $e_i \in M^{n \times 1}(\mathbb{C})$ as the standard column vector, then
+$$E_{ij} E_{kl}=\delta_{jk}E_{il}\qquad E_{ij}e_k=\delta_{jk}e_i.$$
+
 \subsection{Demazure operator}
 In this subsection, we will compute the action of some elements in $K^{G_{\dimvec{d}}}  (\St_{\ftdimvec{d},\ftdimvec{d}'})$ acting on $K^{G_{\dimvec{d}}} \left( \RRep_{\ftdimvec{d}'}(Q) \right)$. As a reminder,
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJLXntHX3tcXGRpbXZlY3tkfX19IFxcbGVmdCggXFxSUmVwX3tcXGZ0ZGltdmVje2R9J30oUSkgXFxyaWdodCkiXSxbMCwxLCJLXntUX3tcXGRpbXZlY3tkfX19IFxcbGVmdCggXFxSUmVwX3tcXGZ0ZGltdmVje2R9J30oUSkgXFxyaWdodCkiXSxbMSwxLCJcXGRpc3BsYXlzdHlsZVxcYmlnb3BsdXNfe3d9IFxcUnB0KFRfe1xcZGltdmVje2R9fSkgXFxsZWZ0WyBcXG92ZXJsaW5le1xccHJlaW1hZ2V7XFxPbWNlbGx9fV97d31ee3V9IFxccmlnaHRdXntUX3tcXGRpbXZlY3tkfX19Il0sWzEsMCwiXFxkaXNwbGF5c3R5bGVcXHBoYW50b217XFxiaWdvcGx1c197d319XFxScHQoVF97XFxkaW12ZWN7ZH19KSBcXGxlZnRbIFxcUlJlcF97XFxmdGRpbXZlY3tkfSd9KFEpIFxccmlnaHRdXntHX3tcXGRpbXZlY3tkfX19Il0sWzMsMl0sWzAsMV0sWzAsMywiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
@@ -588,23 +591,35 @@ Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in 
   =\;& \left(\sum_{w} (wusf) \left( \preimage{\Lambda}_{wu,wu s}^{s} \right)^{-1} \psi_{wu} \right) +\delta_{u,u'}\left(\sum_{w} (wuf) \left( \preimage{\Lambda}_{wu,wu}^{s} \right)^{-1} \psi_{wu} \right)\\
   =\;& \sum_{w}
   \left[ \left(\frac{wusf}{\preimage{\Lambda}_{wu,wu s}^{s}}     +\delta_{u,u'} \frac{wuf}{\preimage{\Lambda}_{wu,wu}^{s}} \right) \preimage{\Lambda}_{wu} \right]\preimage{\Lambda}_{wu}^{-1}\psi_{wu} \\
+  =\;& \sum_{w} w
+  \left[  \left(\frac{usf}{\preimage{\Lambda}_{u,u s}^{s}}     +\delta_{u,u'} \frac{uf}{\preimage{\Lambda}_{u,u}^{s}} \right) \preimage{\Lambda}_{u} \right]\preimage{\Lambda}_{wu}^{-1}\psi_{wu} \\
   =\;& \sum_{w} wu
-  \left[ \left(\frac{sf}{\preimage{\Lambda}_{\Id,s}^{s}}     +\delta_{u,u'} \frac{f}{\preimage{\Lambda}_{\Id,\Id}^{s}}  \right)\preimage{\Lambda}_{\Id} \right]\preimage{\Lambda}_{wu}^{-1}\psi_{wu} \\
-  =\;&  \left[\left(\frac{sf}{\preimage{\Lambda}_{\Id,s}^{s}}     +\delta_{u,u'} \frac{f}{\preimage{\Lambda}_{\Id,\Id}^{s}}  \right)\preimage{\Lambda}_{\Id} \right]^{u} \\
+    \left[  \left(\frac{sf}{u^{-1}\preimage{\Lambda}_{u,u s}^{s}}     +\delta_{u,u'} \frac{f}{u^{-1}\preimage{\Lambda}_{u,u}^{s}} \right) u^{-1}\preimage{\Lambda}_{u} \right]\preimage{\Lambda}_{wu}^{-1}\psi_{wu} \\
+  =\;& 
+        \left[  \left(\frac{sf}{u^{-1}\preimage{\Lambda}_{u,u s}^{s}}     +\delta_{u,u'} \frac{f}{u^{-1}\preimage{\Lambda}_{u,u}^{s}} \right) u^{-1}\preimage{\Lambda}_{u} \right]^{u}    
 \end{aligned}
 \end{equation*} 
 Recall Subsection \ref{subsec:tangent_space} (especially Proposition  \ref{prop:tangent_space_2}), we get
 $$
-\preimage{\mathcal{T}}_{\Id,s}^{s}\cong \mathfrak{r}_{\Id,s} \oplus \mathfrak{n}_{\Id}^{-} \oplus \mathfrak{m}_{\Id,s}
+\preimage{\mathcal{T}}_{u,us}^{s}\cong \mathfrak{r}_{u,us} \oplus \mathfrak{n}_{u}^{-} \oplus \mathfrak{m}_{u,us}
 \qquad
-\preimage{\mathcal{T}}_{\Id,\Id}^{s}\cong  \mathfrak{r}_{\Id,s} \oplus \mathfrak{n}_{\Id}^{-} \oplus \mathfrak{m}_{s,\Id}
+\preimage{\mathcal{T}}_{u,u}^{s}\cong  \mathfrak{r}_{u,us} \oplus \mathfrak{n}_{u}^{-} \oplus \mathfrak{m}_{us,u}
 \qquad
-\preimage{\mathcal{T}}_{\Id} \cong \mathfrak{r}_{\Id} \oplus \mathfrak{n}_{\Id}^{-}. $$
+\preimage{\mathcal{T}}_{u} \cong \mathfrak{r}_{u} \oplus \mathfrak{n}_{u}^{-}. $$
 Therefore, 
-$$D_i^{u,u'} \star f^{u'}=\left[\left(\frac{sf}{\eu(\mathfrak{m}_{\Id,s})}     +\delta_{u,u'} \frac{f}{\eu(\mathfrak{m}_{s,\Id})}  \right)\eu(\mathfrak{d}_{\Id,s}) \right]^{u}$$
-\subsection{Miscellaneous}
+\begin{equation}\label{eq:final_destination}
+D_i^{u,u'} \star f^{u'}=\left[\left(\frac{sf}{u^{-1}\eu(\mathfrak{m}_{u,us})}     +\delta_{u,u'} \frac{f}{u^{-1}\eu(\mathfrak{m}_{us,u})}  \right)u^{-1}\eu(\mathfrak{d}_{u,us}) \right]^{u}.
+\end{equation}
+Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. We collect needed information in Table ???:
+
+???Table
+
+In the table, $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
+
+The formula \eqref{eq:final_destination} is our final destination in this part. We will express its importance in Subsection \ref{subsec:miscellaneous}, see some generalizations in Chapter \ref{chap:generalization} and compute some examples in Chapter \ref{chap:diagram}.
+\subsection{Miscellaneous}\label{subsec:miscellaneous}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Generalization}
+\chapter{Generalization}\label{chap:generalization}
 
 
 \section{quiver with loops}
