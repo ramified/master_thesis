@@ -207,7 +207,7 @@
 %\email{email:xx352229@mail.ustc.edu.cn}
 
 
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 
 \include{chapters/contents}
 \include{chapters/chapter1}
@@ -351,6 +351,13 @@ Readers may find Theorem \ref{thm:excess_intersection_formula} as a special case
    =\;& \iota_{Y,*} \left(\eu( \mathcal{T} ) \cdot [Y]_{Y}^G \right) &&\\
 \end{aligned}
 \end{equation*}
+
+The projection formula is stated here.
+\begin{proposition}[Projection formula]
+For any proper $G$-equivariant morphism $f:Y \longrightarrow X$ of globally finite $\Tor$-dimension, $\alpha \in K^G(Y)$, $\beta \in K^G(X)$, we have proper projection formula:
+$$f_* \alpha \otimes \beta =f_*(\alpha \otimes f^{*} \beta).$$
+\end{proposition}
+
 \section{Application: convolution structure}
 In this section, we will apply Definition \ref{def:convolution_product} and Theorem \ref{thm:excess_intersection_formula} to our typical varieties. In particular, we will get the convolution product formula in terms of basis elements $\preimage{\phi}_{\ww}$ and $\preimage{\phi}_{\ww,\ww'}$.
 
@@ -580,10 +587,30 @@ We also have the relative version. Suppose that $\Wd us_i=\Wd u'$ (which guarant
 $$D_i^{u,u'}:= \left[\St_{s_i}^{u,u'} \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}}(\St^{u,u'}).$$
 View $D_i^{u,u'}$ as an element in $\Kcurl^{T_{\dimvec{d}}}(\St^{u,u'})$, we get
 $$D_i^{u,u'}=\sum_{w} \left( \preimage{\Lambda}_{wu,wu s}^{s} \right)^{-1} \psi_{wu,wu s} + \delta_{u,u'}\sum_{w} \left( \preimage{\Lambda}_{wu,wu}^{s} \right)^{-1} \psi_{wu,wu}.$$
+
+The equivariant cohomology theory version of Demazure operators are denoted by $\partial_i$ and $\partial_i^{u,u'}$.
 \end{defn}
-Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in terms of $\phi$'s: ($s:=s_i$ for simplicity)
-\begin{equation*}
-\begin{aligned}
+\begin{theorem}\label{thm:Demazure_operator_1}
+We have a formula of Demazure operator:
+\begin{equation*}\label{eq:Demazure_operator}
+D_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \raisebox{2mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}}     + \frac{f}{1-\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}}$}  \right)\left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\right)^{k-1} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+and similar for the equivariant cohomology theory:
+\begin{equation*}\label{eq:Demazure_operator_cth}
+\partial_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \displaystyle\frac{sf}{ \lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}}     + \frac{f}{\lambda_{u(i)}^{u}-\lambda_{u(i+1)}^{u} }  \right)\left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k-1} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+\end{theorem}
+
+In the computation we mainly focus on the $K$-theory. Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in terms of $\phi$'s: ($s:=s_i$ for simplicity)
+\begingroup
+%\allowdisplaybreaks
+\begin{align*}
   D_i^{u,u'} \star f^{u'}=\;& \left(\sum_{w} \left( \preimage{\Lambda}_{wu,wu s}^{s} \right)^{-1} \psi_{wu,wu s} + \delta_{u,u'}\sum_{w} \left( \preimage{\Lambda}_{wu,wu}^{s} \right)^{-1} \psi_{wu,wu}\right) \\ 
   &\hspace{70mm}\times \left(\sum_{w} (wu'f) \; \preimage{\Lambda}_{wu'}^{-1} \psi_{wu'}\right)\\
   =\;& \left(\sum_{w} \left( \preimage{\Lambda}_{wu,wu s}^{s} \right)^{-1} \psi_{wu,wu s}\right) \cdot \left(\sum_{w} (wusf) \; \preimage{\Lambda}_{wus}^{-1} \psi_{wus}\right)\\
@@ -597,8 +624,8 @@ Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in 
     \left[  \left(\frac{sf}{u^{-1}\preimage{\Lambda}_{u,u s}^{s}}     +\delta_{u,u'} \frac{f}{u^{-1}\preimage{\Lambda}_{u,u}^{s}} \right) u^{-1}\preimage{\Lambda}_{u} \right]\preimage{\Lambda}_{wu}^{-1}\psi_{wu} \\
   =\;& 
         \left[  \left(\frac{sf}{u^{-1}\preimage{\Lambda}_{u,u s}^{s}}     +\delta_{u,u'} \frac{f}{u^{-1}\preimage{\Lambda}_{u,u}^{s}} \right) u^{-1}\preimage{\Lambda}_{u} \right]^{u}    
-\end{aligned}
-\end{equation*} 
+\end{align*}
+\endgroup
 Recall Subsection \ref{subsec:tangent_space} (especially Proposition  \ref{prop:tangent_space_2}), we get
 $$
 \preimage{\mathcal{T}}_{u,us}^{s}\cong \mathfrak{r}_{u,us} \oplus \mathfrak{n}_{u}^{-} \oplus \mathfrak{m}_{u,us}
@@ -610,13 +637,18 @@ Therefore,
 \begin{equation}\label{eq:final_destination}
 D_i^{u,u'} \star f^{u'}=\left[\left(\frac{sf}{u^{-1}\eu(\mathfrak{m}_{u,us})}     +\delta_{u,u'} \frac{f}{u^{-1}\eu(\mathfrak{m}_{us,u})}  \right)u^{-1}\eu(\mathfrak{d}_{u,us}) \right]^{u}.
 \end{equation}
-Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. We collect needed information in Table ???:
+Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. We collect needed information in Table \ref{table:euler_class_1}:
 
-???Table
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=15cm]{figures/table/table_euler_class.pdf}
+      \caption{}
+      \label{table:euler_class_1}        
+\end{table}
 
 In the table, $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
 
-The formula \eqref{eq:final_destination} is our final destination in this part. We will express its importance in Subsection \ref{subsec:miscellaneous}, see some generalizations in Chapter \ref{chap:generalization} and compute some examples in Chapter \ref{chap:diagram}.
+Theorem \ref{thm:Demazure_operator_1} is our final destination in this part. We will express its importance in Subsection \ref{subsec:miscellaneous}, see some generalizations in Chapter \ref{chap:generalization} and compute some examples in Chapter \ref{chap:diagram}.
 \subsection{Miscellaneous}\label{subsec:miscellaneous}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Generalization}\label{chap:generalization}
@@ -624,6 +656,13 @@ The formula \eqref{eq:final_destination} is our final destination in this part. 
 
 \section{quiver with loops}
 \section{$G \times \mathbb{C}^{\times}$-action}\label{sec:Cstar_action}
+
+\begin{table}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=15cm]{figures/table/table_euler_class_q.pdf}
+      \caption{}
+      \label{table:euler_class_2}        
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{From formula to diagram}\label{chap:diagram}

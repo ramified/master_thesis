@@ -1,0 +1,120 @@
+
+\documentclass[border={7pt 0pt 90pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}%colors
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\ptt}{\operatorname{par}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{\mathbf{#1}}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{\mathbf{#1},str}}
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\ww}{\varpi}
+\DeclareMathOperator{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\DeclareMathOperator{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\DeclareMathOperator{\Shuffled}{\operatorname{Schuffle}_{\dimvec{d}}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+%\newcommand{\lbox}{\adjustbox{cfbox=red, margin=-\fboxrule-\fboxsep}}
+\newcommand{\lbox}{\adjustbox{}}
+
+\newcommand{\preimage}[1]{\widetilde{#1}}
+
+\newenvironment{smbmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\setcellgapes{0.2ex}
+  \begin{bmatrix}
+}%
+{\end{bmatrix}
+\egroup
+}% end code
+\newenvironment{smpmatrix}% environment name
+{% begin code
+\bgroup
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.8}
+\setcellgapes{0.2ex}
+  \begin{pmatrix}
+}%
+{\end{pmatrix}
+\egroup
+}% end code
+\begin{document}
+
+\begin{table}[ht]
+ \[
+ \setcellgapes{0.8ex}\makegapedcells
+\centering
+ \begin{array}{|c|c|c|c|c|c|}
+\hline
+\text{Name}         & \mathfrak{g}                 & u^{-1}\mathfrak{g}                                           & u^{-1}\eu(\mathfrak{g})                                & u^{-1}\eu'(\mathfrak{g})                                 &           \\ \hline
+\multirow{2}{*}{$\mathfrak{m}_{u,us}$} & \frac{e_{u(i)}}{e_{u(i+1)}}  & \frac{e_{i}}{e_{i+1}}= \frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}   & 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}                  & \lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}                  & u=u'      \\ \cline{2-6}
+                    & 0                            & 0                                                            & 1                                                      & 1                                                        & u \neq u' \\ \hline
+\multirow{2}{*}{$\mathfrak{m}_{us,u}$} & \frac{e_{u(i+1)}}{e_{u(i)}}  & \frac{e_{i+1}}{e_{i}}= \frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}   & 1-\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}                  & \lambda_{u(i)}^{u}-\lambda_{u(i+1)}^{u}                  & u=u'      \\ \cline{2-6}
+                    & 0                            & 0                                                            & 1                                                      & 1                                                        & u \neq u' \\ \hline
+\mathfrak{d}_{u,us} & k\frac{e_{u(i)}}{e_{u(i+1)}}q^{-1} & k\frac{e_{i}}{e_{i+1}}q^{-1}= k\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}q^{-1} & \left(1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}q\right)^{k} & \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}+t\right)^{k} &           \\ \hline
+ \end{array}
+ \]
+        
+\end{table}
+%$$\text{Name} \qquad \mathfrak{g}\qquad  u^{-1}\mathfrak{g}\qquad  u^{-1}\eu(\mathfrak{g})\qquad  u^{-1}\eu'(\mathfrak{g})$$
+%$$\mathfrak{m}_{u,us} \qquad \frac{e_{u(i)}}{e_{u(i+1)}} \qquad \frac{e_{i}}{e_{i+1}}= \frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}\qquad 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}} \qquad \lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u} \qquad u=u'$$
+%$$\mathfrak{m}_{us,u} \qquad \frac{e_{u(i+1)}}{e_{u(i)}} \qquad \frac{e_{i+1}}{e_{i}}= \frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\qquad 1-\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}} \qquad \lambda_{u(i)}^{u}-\lambda_{u(i+1)}^{u} \qquad u=u'$$
+%$$\mathfrak{d}_{u,us} \qquad k\frac{e_{u(i)}}{e_{u(i+1)}} \qquad k\frac{e_{i}}{e_{i+1}}= k\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}\qquad \left(1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\right)^{k} \qquad \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k} $$
+\end{document}
