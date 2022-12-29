@@ -1,8 +1,8 @@
 
 \documentclass[reqno,11pt]{book}
 %\special{dvipdfmx:config z 0}
-%%\includeonly{}
-%\includeonly{chapters/chapter6}
+%%%\includeonly{}
+%\includeonly{chapters/chapter2}
 
 %\usepackage{color,graphicx}
 %\usepackage{mathrsfs,amsbsy}
@@ -122,6 +122,7 @@
 \DeclareMathOperator{\St}{\mathcal{Z}}
 \DeclareMathOperator{\Flagd}{\operatorname{Flag}_{\mathbf{d}}}
 \DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{\mathbf{d},str}}
+\DeclareMathOperator{\str}{\operatorname{str}}
 \newcommand{\Gr}{\operatorname{Gr}}
 \newcommand{\Grr}{\operatorname{Gr}}
 \newcommand{\Grq}{\operatorname{Gr}^{KQ}}
@@ -220,11 +221,44 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Generalization}\label{chap:generalization}
+\chapter{Generalizations, examples and connections}
+\section{Generalization}\label{sec:generalization}
+In this section we generalize results in different directions. Generalizing complete flag variety to partial flag variety needs further investigation, so we don't do this. After the generalization, we are able to cover the result in \cite[Theorem 7.2.5]{chriss1997representation}.
+
+\subsection{Quiver with loops}
+In this section we still assume the quiver has no cycles. For quiver with loops, we need to redefine Definition \ref{def:incidence_variety} in a strict version:
+\begin{defn}[Incidence variety for strict flags]\label{def:incidence_variety_str}
+For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
+\begin{equation*}
+\begin{aligned}
+  \RRep_{\ftdimvec{d},\str}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_{j-1} \text{ for any } j \right\} \\
+  \RRep_{\dimvec{d},\str}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_{j-1} \text{ for any } j \right\} \\
+  =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d},\str}(Q)
+\end{aligned}
+\end{equation*}
+and $\mu_{\ftdimvec{d},\str}$, $\pi_{\ftdimvec{d},\str}$, $\mu_{\dimvec{d},\str}$, $\pi_{\dimvec{d},\str}$ to be the natural morphisms from the incidence varieties to $\Rep_{\dimvec{d}}(Q)$ or flag varieties.
+\end{defn}
+We then replace $\RRep_{\dimvec{d}}(Q)$ by $\RRep_{\dimvec{d},\str}(Q)$. The Lie algebra $\mathfrak{r}_{\ww}$ (in Definition \ref{def:Lie_alg_with_rep}) is redefined by
+\begin{equation*}
+\begin{aligned}
+  \mathfrak{r}_{\ww}:=\;& \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,j} \cap V_{s(a)}) \subseteq V_{\ww,j} \text{ for any } j \right\}\\
+  \cong\;& \pi_{\dimvec{d},\str}^{-1}(\{F_{\ww} \})
+\end{aligned}
+\end{equation*}
+then the same formula in \ref{thm:Demazure_operator_1} still works.
+\subsection{$G \times \mathbb{C}^{\times}$-action}\label{subsec:Cstar_action}
 
 
-\section{quiver with loops}
-\section{$G \times \mathbb{C}^{\times}$-action}\label{sec:Cstar_action}
+The second generalization is about $G \times \mathbb{C}^{\times}$-actions. Recall the Remark \ref{rmk:action_on_flag}. Following the same arguments as in Example \ref{eg:K-initial-1}-\ref{eg:K-initial-4} and \ref{eg:H-initial-1}-\ref{eg:H-initial-4}, we get (in the Setting \ref{set:initial_case})
+\begin{equation*}
+\begin{aligned}
+ &\Rpt(N \times \mathbb{C}^{\times}) \cong \Rpt(\mathbb{C}^{\times}) \cong \mathbb{Z}[q^{\pm 1 }]&&\Spt(N \times \mathbb{C}^{\times}) \cong \Spt(\mathbb{C}^{\times}) \cong \mathbb{Q}[t] \\
+ &\Rpt(B \times \mathbb{C}^{\times}) \cong \Rpt(T \times \mathbb{C}^{\times}) \cong \mathbb{Z}[q^{\pm 1 }]\!\left[ e_1^{\pm 1},\ldots,e_n^{\pm 1} \right]&&\Spt(B \times \mathbb{C}^{\times}) \cong \Spt(T \times \mathbb{C}^{\times}) \cong \mathbb{Q}[t]\!\left[ \lambda_1,\ldots,\lambda_n \right]\\
+ &\Rpt(G \times \mathbb{C}^{\times})  \cong \mathbb{Z}[q^{\pm 1}]\!\left[ e_1^{\pm 1},\ldots,e_n^{\pm 1} \right]^{S_n}&&\Spt(G \times \mathbb{C}^{\times}) \cong \mathbb{Q}[t]\!\left[ \lambda_1,\ldots,\lambda_n \right]^{S_n}\\ 
+\end{aligned}
+\end{equation*}
+
+So everything remains the same except for the change of coefficient ring. In particular, for $D_i^{u,u'}:=[\St_{s_{i}}^{u,u'}]^{G_{\dimvec{d}} \times \mathbb{C}^{\times}}$, $f^{u}:=f \cdot \left[\RRep_{\ftdimvec{d},\str}(Q) \right]^{G_{\dimvec{d}}}$, we have formula \eqref{eq:final_destination}, with informations in Table \ref{table:euler_class_2}.
 
 \begin{table}[ht]
   \vspace{0cm}
@@ -233,16 +267,32 @@
       \label{table:euler_class_2}        
 \end{table}
 
+\begin{theorem}
+When the quiver has no cycle, we have a formula of Demazure operator for the $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-action:
+\begin{equation*}\label{eq:Demazure_operator_C*action}
+D_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \raisebox{2mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}}     + \frac{f}{1-\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}}$}  \right)\left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}} q\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}} q\right)^{k-1} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+and similar for the equivariant cohomology theory:
+\begin{equation*}\label{eq:Demazure_operator_cth_C*action}
+\partial_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \displaystyle\frac{sf}{ \lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}}     + \frac{f}{\lambda_{u(i)}^{u}-\lambda_{u(i+1)}^{u} }  \right)\left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u} +t \right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u} +t\right)^{k-1} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+\end{theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{From formula to diagram}\label{chap:diagram}
+\section{From formula to diagram}\label{sec:diagram}
 
-\section{One point quiver}
-\section{$A_2$-quiver}
-\section{$1$-loop quiver}
+\subsection{One point quiver}
+\subsection{$A_2$-quiver}
+\subsection{$1$-loop quiver}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Atiyah-Segal completion theorem}\label{chap:AScompletion}
+\section{Atiyah-Segal completion theorem}\label{sec:AScompletion}
 
 
 \bibliographystyle{plain}

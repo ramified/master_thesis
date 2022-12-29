@@ -1004,7 +1004,7 @@ We also have to encode the information of representations as Lie algebra. Notice
 $$\Hom (V_{s(a)},V_{t(a)}) \hookrightarrow \Hom(V,V) \cong \boldsymbol{\mathfrak{g}}_{\abdimvec{d}} \qquad f \longmapsto \iota_{t(a)} \circ f \circ \pi_{s(a)}$$
 realizes $\Hom (V_{s(a)},V_{t(a)})$ as a Lie subalgebra of $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$, so 
 $$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
-\begin{defn}[Lie algebras connected with representations]
+\begin{defn}[Lie algebras connected with representations]\label{def:Lie_alg_with_rep}
 For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote temperately 
 $$V_{\ww,j}:= \left< e_{\ww(1)},\ldots e_{\ww(j)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
@@ -1205,7 +1205,7 @@ and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimve
 \end{center}
 
 \begin{remark}
-For $M \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
+Fix $M \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
 $$\Flag{\ftdimvec{d}}(M):= \mu_{\ftdimvec{d}}^{-1}(M) \cong \pi_{\ftdimvec{d}}\big(\mu_{\ftdimvec{d}}^{-1}(M)\big) \subseteq \mathcal{F}_{\ftdimvec{d}}$$
 records the complete flags of subrepresentations of $M$. The partial flag variety version of $\Flag{\ftdimvec{d}}(M)$ will become the key object in the second part.
 \end{remark}
@@ -1251,8 +1251,8 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 \begin{remark}[Group actions]\
 \begin{enumerate}
 \item $\Rep_{\dimvec{d}}(Q)\subseteq \oplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$ has a natural $G_{\dimvec{d}}$-action, which is induced by the conjugation action of $G_{\dimvec{d}}$ on $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$. We have already mentioned the $G_{\dimvec{d}}$-action on $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ in Remark \ref{rmk:action_on_flag}. Therefore, by restriction we automatically get $G_{\dimvec{d}}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. All the maps we mentioned in Definition \ref{def:incidence_variety} are $G_{\dimvec{d}}$-equivariant.
-\item In Section \ref{sec:Cstar_action} we will also view all the varieties as $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-varieties, so we also shortly introduce $\mathbb{C}^{\times}$-action here. View $\Rep_{\dimvec{d}}(Q)$ as a $\mathbb{C}$-vector space, $\mathbb{C}^{\times}$ acts on $\Rep_{\dimvec{d}}(Q)$ by scalar multiplication. For $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$, $\mathbb{C}^{\times}$ acts trivially, and by restriction we get $\mathbb{C}^{\times}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. Also, all the maps we mentioned above are $\mathbb{C}^{\times}$-equivariant.
-\item It may worth mentioning that $\mathcal{F}_{\dimvec{d}}$ has an $\WWd$-action which can be extended neither to $\absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\dimvec{d}}$ nor to $\WWd$-action on $\RRep_{\ftdimvec{d}}(Q)$.
+\item In Subsection \ref{subsec:Cstar_action} we will also view all the varieties as $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-varieties, so we also shortly introduce $\mathbb{C}^{\times}$-action here. View $\Rep_{\dimvec{d}}(Q)$ as a $\mathbb{C}$-vector space, $\mathbb{C}^{\times}$ acts on $\Rep_{\dimvec{d}}(Q)$ by scalar multiplication. For $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$, $\mathbb{C}^{\times}$ acts trivially, and by restriction we get $\mathbb{C}^{\times}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. Also, all the maps we mentioned above are $\mathbb{C}^{\times}$-equivariant.
+\item It may be worth mentioning that $\mathcal{F}_{\dimvec{d}}$ has an $\WWd$-action which can be extended neither to $\absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\dimvec{d}}$ nor to $\WWd$-action on $\RRep_{\ftdimvec{d}}(Q)$.
 
 \end{enumerate}
 \end{remark}
@@ -1260,7 +1260,7 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 
 \section{Stratification and $T$-fixed points}\label{sec:stratification}
 
-Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed as relatively easy pieces. In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also mention about their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology theory in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another "basis" in Chapter \ref{chap:localization}.
+Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed into relatively easy pieces. In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also mention about their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology theory in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another "basis" in Chapter \ref{chap:localization}.
 
 \subsection{Stratification: flag variety}
 
@@ -1281,7 +1281,7 @@ For $\ww,\ww' \in \WWd$, we define
   \VVcell_{\ww'}=\;& \absgp{G}_{\abdimvec{d}} \cdot \underline{F}_{\Id,\ww'} && \subseteq \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \\ 
 \end{aligned}
 \end{equation*}
-as $\absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{G}_{\abdimvec{d}}$-orbit of $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, respectively.
+as $\absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{B}_{\abdimvec{d}} \times \absgp{B}_{\abdimvec{d}}$-orbit, $\absgp{G}_{\abdimvec{d}}$-orbit of $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$ and  $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, respectively.
 \end{defn}
 
 By Bruhat-decomposition, we are able to show
@@ -1306,7 +1306,7 @@ For $u,u' \in \MinWd$, $w,w' \in \Wd$, we define
   \OOmcell_{w'}^{u,u'}=\;&  G_{\dimvec{d}} \cdot \left( F_{u}, F_{w'u'} \right) && \subseteq \mathcal{F}_{u} \times \mathcal{F}_{u'} \\ 
 \end{aligned}
 \end{equation*}
-as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{u}$, $\mathcal{F}_{u} \times \mathcal{F}_{u'}$, $\mathcal{F}_{u} \times \mathcal{F}_{u'}$, respectively.
+as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{u}$, $\mathcal{F}_{u} \times \mathcal{F}_{u'}$ and $\mathcal{F}_{u} \times \mathcal{F}_{u'}$, respectively.
 \end{defn}
 
 By Bruhat decomposition, we are again able to show
@@ -1329,7 +1329,7 @@ For $\ww,\ww' \in \WWd$, we define
   \OOcell_{\ww'}=\;& \bigsqcup_{u} G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'} && \subseteq \bigsqcup_{u}\mathcal{F}_{u} \times \mathcal{F}_{u\ww'}\hspace{-1cm}&& \subseteq \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \\ 
 \end{aligned}
 \end{equation*}
-as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, (union of) $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, respectively.
+as $B_{\dimvec{d}}$-orbit, $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit, (union of) $G_{\dimvec{d}}$-orbit of $\mathcal{F}_{\dimvec{d}}$, $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$ and $\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$, respectively.
 \end{defn}
 Notice that $\Ocell_{\ww}$, $\OOcell_{\ww,\ww'}$, $\OOcell_{\ww'}$ are preimages of $\Vcell_{\ww}$, $\VVcell_{\ww,\ww'}$, $\VVcell_{\ww'}$ under the maps
 $$\mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \qquad \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} \hookrightarrow  \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}.$$

@@ -358,7 +358,7 @@ Later, every expression before $\preimage{\psi}_{\ww}$ should be viewed as an ex
 \end{remark}
 
 \begin{defn}[Demazure operator]
-For $i \in \{ 1,\ldots, \abdimvec{d}-1 \}$, the (absolute) Demazure operator is defined as
+For $i \in \{ 1,\ldots, \abdimvec{d}-1 \}$, set $s=s_i$, the (absolute) Demazure operator is defined as
 $$D_i:= \left[\St_{s_i} \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}}(\St_{\dimvec{d}}).$$
 View $D_i$ as an element in $\Kcurl^{T_{\dimvec{d}}}(\St_{\dimvec{d}})$, we get
 $$D_i=\sum_{\ww \in \WWd} \left( \preimage{\Lambda}_{\ww,\ww s}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww s} + \sum_{\stackrel{\ww \in \WWd}{\ww s \ww^{-1}\in \Wd}} \left( \preimage{\Lambda}_{\ww,\ww}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww}.$$
@@ -385,6 +385,7 @@ and similar for the equivariant cohomology theory:
 \left[sf  \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k-1} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
+In the formula, $s=s_i$,  $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
 \end{theorem}
 
 In the computation we mainly focus on the $K$-theory. Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in terms of $\phi$'s: ($s:=s_i$ for simplicity)
@@ -426,9 +427,7 @@ Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. W
       \label{table:euler_class_1}        
 \end{table}
 
-In the table, $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
-
-Theorem \ref{thm:Demazure_operator_1} is our final destination in this part. We will express its importance in Subsection \ref{subsec:miscellaneous}, see some generalizations in Chapter \ref{chap:generalization} and compute some examples in Chapter \ref{chap:diagram}.
+Theorem \ref{thm:Demazure_operator_1} is our final destination in this part. We will express its importance in Subsection \ref{subsec:miscellaneous}, see some generalizations in Section \ref{sec:generalization} and compute some examples in Section \ref{sec:diagram}.
 
 \subsection{Miscellaneous}\label{subsec:miscellaneous}
 In this subsection, we collect some results which are of significant importance theoretically. The arguments in reference work for both $K$-theory and cohomology theory.
@@ -441,7 +440,7 @@ Reduce the problem to the faithfulness for the action of $\Kcurl^{T_{\dimvec{d}}
 \end{proof}
 
 \begin{proposition}
-The elements $\{D_{i}^{u,u'}\}$ generate $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ as a $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$-algebra.
+The elements $\{D_{i}^{u,u'}\}_{u,u',i}$ generate $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ as a $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$-algebra.
 \end{proposition}
 \begin{proof}[Sketch of proof]
 See \cite[Theorem 11.3]{przezdziecki2015geometric}. The key observation is \cite[Lemma 7.30, 11.4]{przezdziecki2015geometric}.

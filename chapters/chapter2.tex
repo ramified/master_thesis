@@ -31,7 +31,7 @@ as the $G$-action map.
 \subsection{$G$-equivariant sheaf and $K^G_0(X)$}
 We give definition for $K$-theory, which is lengthy already. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
 
-\begin{defn}[{G-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]
+\begin{defn}[{$G$-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]\label{def:G-equivariant_sheaf}
 For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.\footnote{Be careful, under this convention, the projection map $p_3^{23}=p_3^{13}: G \times X \longrightarrow X$ has subscription $3$, and $p_2$ means the projection from $G \times G \times X$ to the second $G$. This convention is different with notations in \cite[5.1]{chriss1997representation}.}
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
 \[\begin{tikzcd}[column sep={1.5cm,between origins}]
@@ -113,7 +113,7 @@ as the representation ring of group $G$.
 We may omit $0$ for the convenience of writing and typing.
 \end{defn}
 
-Let us unravel this construction a little bit. For (geometrical) points $g,g_1,g_2 \in G$, denote that
+Let us unravel Definition \ref{def:G-equivariant_sheaf} a little bit. For (geometric) points $g,g_1,g_2 \in G$, denote that
 \begin{equation*}
 \begin{aligned}
   \iota_{g}:\;&  X \longrightarrow G \times X \qquad & x & \longmapsto (g,x)  \\ 
@@ -187,7 +187,7 @@ $$\Coh^G(\pt)=\rep_{\mathbb{C}}(G) \xlongequal{\text{when $G$ is finite}} \Mod(\
 \subsection{Representation ring $\Rpt(G)$}\label{subset:rep_ring}
 Now let us try to figure out some examples.
 
-Recall that any coherent sheaf over $\pt$ is equivalent to a finite dimensional $\mathbb{C}$-vector space, and any $G$-equivariant coherent sheaf over $\pt$ is equivalent to a finite dimensional complex $G$-representation. Moreover, by Jordan-Hölder theorem, every finite dimensional complex $G$-representation can be written as a composition series such that each quotient object is irreducible. Therefore,
+Recall that any coherent sheaf over a point $\pt$ is equivalent to a finite dimensional $\mathbb{C}$-vector space, and any $G$-equivariant coherent sheaf over $\pt$ is equivalent to a finite dimensional complex $G$-representation. Moreover, by Jordan-Hölder theorem, every finite dimensional complex $G$-representation can be written as a composition series such that each quotient object is irreducible. Therefore,
 $$\Rpt(G)=\bigoplus_{\rho \in \Irr(G)} \mathbb{Z}$$
 as a free $\mathbb{Z}$-module.
 
@@ -223,12 +223,12 @@ To distinguish the addition in $X^{*}(T)$ and $\mathbb{Z}\left[ X^{*}(T) \right]
 $$\Rpt(T) \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_n^{\pm 1} \right]$$
 as a $\mathbb{Z}$-algebra.
 
-By forgetting $T$-actions, we get a morphism of $\mathbb{Z}$-algebra
+By forgetting $T$-actions, we get a morphism of $\mathbb{Z}$-algebras
 $$\Rpt(T) \longrightarrow \Rpt(\Id) \qquad f(e_1,\ldots,e_n) \longmapsto f(1,\ldots,1).$$
 \end{eg}
 
 \begin{eg}\label{eg:K-initial-3}
-After we state the reduction isomorphism \ref{prop:reduction_isomorphism}, we can show that
+After stating the reduction isomorphism \ref{prop:reduction_isomorphism}, we can show that
 $$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_n^{\pm 1} \right]$$
 \end{eg}
 
@@ -248,12 +248,12 @@ This can be viewed as a "group" analogue of Chevalley restriction theorem. Notic
 views $\GL_n$-representations as special $W$-invariant $T$-representations.
 \end{eg}
 
-From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some tools (or weapons???) in $K$-theory.
+From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some tools in $K$-theory.
 \section[Three functors]{Three functors: pullback, proper pushforward and tensor product}
 In this section, we will construct three basic functors of equivariant $K$-theory: pullback, proper pushforward and tensor product.
 
 \subsection{Non-derived three functors in $\Coh^G(X)$} 
-We assume that readers know the non-derived pullback, pushforward and tensor product of normal coherent sheaves. (See \cite[Chapter 16]{vakil2017rising})
+We assume that readers know the non-derived pullback, pushforward and tensor product of (ordinary) coherent sheaves. (See \cite[Chapter 16]{vakil2017rising})
 
 As a special reminder, the pushforward of coherent sheaves may be not coherent. This problem can be remedied by Grothendieck's coherence theorem \cite[Theorem 18.9.1]{vakil2017rising}, once we impose morphisms to be proper (and Noetherian hypotheses on varieties). That is why we only consider about proper pushforward.
 
@@ -262,7 +262,7 @@ Now let us consider the effect of $G$-equivariance. Somewhat surprising, these t
 
 
 \begin{defn}[Group action on pullback, proper pushforward and tensor product]
-Let $X,Y$ be $G$-varieties, $f: Y \longrightarrow X$ be a $G$-equivariant morphism. For $(\mathcal{G},\phi_{\mathcal{G}}) \in \Coh^G(Y)$, we define group actions on $f^*\mathcal{F}$, $f_*\mathcal{G}$ and $\mathcal{F} \otimes \mathcal{G}$, as follows.
+Let $X,Y$ be $G$-varieties, $f: Y \longrightarrow X$ be a $G$-equivariant morphism. For $(\mathcal{F},\phi_{\mathcal{F}}), (\mathcal{F}',\phi_{\mathcal{F}'}) \in \Coh^G(X)$, $(\mathcal{G},\phi_{\mathcal{G}}) \in \Coh^G(Y)$, we define group actions on $f^*\mathcal{F}$, $f_*\mathcal{G}$ and $\mathcal{F} \otimes \mathcal{F}'$, as follows.
 
 % https://q.uiver.app/?q=WzAsMTAsWzAsMywiRyBcXHRpbWVzIFgiXSxbMSwzLCJYIl0sWzAsMSwiRyBcXHRpbWVzIFkiXSxbMSwxLCJZIl0sWzIsMiwiXFxtYXRoY2Fse0Z9Il0sWzIsMCwiXFxtYXRoY2Fse0d9Il0sWzMsMywiRyBcXHRpbWVzIFgiXSxbNCwzLCJYIl0sWzUsMiwiXFxtYXRoY2Fse0Z9Il0sWzYsMiwiXFxtYXRoY2Fse0Z9JyJdLFswLDEsInBfezMsWH1eezIzfSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJcXGFscGhhX1giLDAseyJvZmZzZXQiOjJ9XSxbMiwzLCJwX3szLFl9XnsyM30iLDAseyJvZmZzZXQiOi0yfV0sWzIsMywiXFxhbHBoYV9ZIiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiXFxJZF9HIFxcdGltZXMgZiIsMl0sWzMsMSwiZiJdLFsyLDEsIiIsMix7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFs1LDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwxLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsNywicF97MyxYfV57MjN9IiwwLHsib2Zmc2V0IjotMn1dLFs2LDcsIlxcYWxwaGFfWCIsMCx7Im9mZnNldCI6Mn1dLFs4LDcsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSw3LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
 \[\begin{tikzcd}[column sep={between origins, 25mm}]
@@ -326,16 +326,16 @@ The following definition will be useful in redefining tensor products.
 For two $G$-varieties $X$ and $Y$, define a functor 
 $$\boxtimes: \Coh^G(X) \times \Coh^G(Y) \longrightarrow \Coh^G(X \times Y) \qquad (\mathcal{F},\mathcal{G}) \longmapsto \mathcal{F} \boxtimes \mathcal{G}$$
 where
-$$\mathcal{F} \boxtimes \mathcal{G}:=p_X^*\mathcal{F} \otimes p_X^*\mathcal{G}.$$
+$$\mathcal{F} \boxtimes \mathcal{G}:=p_X^*\mathcal{F} \otimes p_Y^*\mathcal{G}, \qquad \text{$p_X$, $p_Y$ are projections.}\hspace{-40mm}  $$
 $\boxtimes$ is called the \textbf{external tensor product}.
 \end{defn}
 \begin{remark}\label{rmk:ext_tensor_product}
 For $G$-variety $X$ and $\mathcal{F}$, $\mathcal{F}' \in \Coh^G(X)$, denote $\Delta: X \hookrightarrow X \times X$ to be the diagonal embedding, we have
-$$\mathcal{F} \otimes \mathcal{F}' \cong \Delta^* (\mathcal{F} \boxtimes \mathcal{F}')$$
-Unlike $\otimes$, $\boxtimes$ is always an exact functor. This feature let us redefine tensor product in $K$-theory later on.
+$$\mathcal{F} \otimes \mathcal{F}' \cong \Delta^* (\mathcal{F} \boxtimes \mathcal{F}').$$
+Unlike $\otimes$, $\boxtimes$ is always an exact functor. This feature allows us to redefine tensor product in $K$-theory later on.
 \end{remark}
 \subsection{Smooth case}
-We would like to extend functors in $\Coh^G(X)$ to $K^G(X)$. However, these (non-derived) functors are usually not exact, so we have to work over ($G$-equivariant) derived category of cohrent sheaves $\Dcoh^{G}(X)$ and replace every functor by its derived version.
+We would like to extend functors in $\Coh^G(X)$ to $K^G(X)$. However, these (non-derived) functors are usually not exact, so we have to work over ($G$-equivariant) derived category of coherent sheaves $\Dcoh^{G}(X)$ and replace every functor by its derived version.
 
 Still, we can not extend functors from $\Dcoh^G(X)$ to $K^G(X)$. The chain complex in $\Dcoh^G(X)$ can have infinite many non-zero terms, which can not be viewed as an element in $K^G(X)$. Therefore, we consider the bounded ($G$-equivariant) derived category $\Dcoh^{b,G}(X)$ as a full subcategory of $\Dcoh^G(X)$.
 
@@ -347,10 +347,10 @@ The last problem comes when we restrict functors to $\Dcoh^{b,G}(X)$:
   \otimes:\;& \Dcoh^{b,G}(X) \times \Dcoh^{b,G}(X) \longrightarrow \Dcoh^{G}(X) \\   
 \end{aligned}
 \end{equation*}
-Other than proper pushforward, \footnote{See \cite[5.2.13]{chriss1997representation} for proper pushforward preserving boundness, and it essentially use the higher cohomology vanishing theorem \cite[Theorem 18.8.5]{vakil2017rising}.} pullback and tensor product may not preserve boundness. 
+Other than proper pushforward, \footnote{See \cite[5.2.13]{chriss1997representation} for proper pushforward preserving boundedness, and it essentially use the higher cohomology vanishing theorem \cite[Theorem 18.8.5]{vakil2017rising}.} pullback and tensor product may not preserve boundedness. 
 
 
-For pullback, boundness preserving is equivalent to the following condition:
+For pullback, preserving boundedness is equivalent to the following condition:
 \begin{equation}\label{eq:assumption0}
 \text{$f: Y \longrightarrow X$ is $G$-equivariant of globally finite $\Tor$-dimension.}
 \end{equation}
@@ -360,7 +360,7 @@ When $X,Y$ are smooth, the condition \eqref{eq:assumption0} is automatically sat
 \text{$X$, $Y$ are smooth $G$-varieties, and $f: Y \longrightarrow X$ is $G$-equivariant.}
 \end{equation}
 
-Tensor product also preserve boundness when $X$ is smooth. By Remark \ref{rmk:ext_tensor_product}, $\boxtimes$ is exact, and $\Delta^*$ preserves boundness when $X$ is smooth, so $\otimes$ also preserves boundness. In particular, one can define tensor product on $K^G(X)$ for $X$ smooth:
+Tensor product also preserves boundedness when $X$ is smooth. By Remark \ref{rmk:ext_tensor_product}, $\boxtimes$ is exact, and $\Delta^*$ preserves boundedness when $X$ is smooth, so $\otimes$ also preserves boundedness. In particular, one can define tensor product on $K^G(X)$ for $X$ smooth:
 $$\otimes: K^G(X) \times K^G(X) 
  \begin{tikzcd}[column sep=5mm]
  	{} & {}
@@ -375,19 +375,19 @@ $$\otimes: K^G(X) \times K^G(X)
  $$
 
 \begin{remark}
-When $f: Y \longrightarrow X$ is open embedding, the non-derived pullback $f^*$ is exact, so we can define pullback on $K$-theory automatically.
+When $f: Y \longrightarrow X$ is an open embedding, the non-derived pullback $f^*$ is exact, so we can define pullback on $K$-theory automatically.
 \end{remark}
 \subsection{Restriction with supports}
 In practice, the varieties we consider are not smooth. Luckily, these varieties are always embedded in some ambiance spaces which are smooth.
 
 \begin{defn}[Restriction with supports]
-For a triple $(X,Y,f)$ satisfying assumption \eqref{eq:assumption1}, and a $G$-equivariant closed subvariety $Z$ of $X$, the triple $\left(Z,f^{-1}(X),f\big|_{f^{-1}(X)}  \right)$ is called a restriction with supports of $(X,Y,f)$.
+For a triple $(X,Y,f)$ satisfying assumption \eqref{eq:assumption1}, and a $G$-equivariant closed subvariety $Z$ of $X$, the triple $\left(Z,f^{-1}(Z),f\big|_{f^{-1}(Z)}  \right)$ is called a restriction with supports of $(X,Y,f)$.
 \end{defn}
 We can now define pullback of $f$ in the following assumption:
 \begin{equation}\label{eq:assumption2}
 \begin{aligned}
 \text{$f:Y \longrightarrow X$ is $G$-equivariant, and $f$ is a restriction with supports}&\\
-\text{by some $f':Y' \longrightarrow X'$, where $X'$, $Y'$ are smooth.}&
+\text{of some $f':Y' \longrightarrow X'$, where $X'$, $Y'$ are smooth.}&
 \end{aligned}
 \end{equation}
 
@@ -417,7 +417,7 @@ Denote $\iota_{Z'}: Z' \longrightarrow Y$ as the induced $G$-equivariant closed 
 \end{equation}
 
 
-Follows \cite[5.2.7(ii)]{chriss1997representation}, one can construct a morphism
+Following \cite[5.2.7(ii)]{chriss1997representation}, one can construct a morphism
 $$\gr: \Img \left(  f^* \circ \iota_{Z,*} \right) \longrightarrow K^G(Z'),$$
 and the pullback is defined as
 % https://q.uiver.app/?q=WzAsNCxbMywwLCJLXkcoWicpIl0sWzIsMCwiS15HKFkpIl0sWzEsMCwiS15HKFgpIl0sWzAsMCwiaF4qOkteRyhaKSJdLFsyLDEsImZeKiJdLFszLDIsIlxcaW90YV97WiwqfSJdLFsxLDAsIlxcZ3IiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=
@@ -430,7 +430,7 @@ and the pullback is defined as
 \end{defn}
 
 \begin{warning}
-The diagram \eqref{eq:pullback_with_supports} of $K$-group is usually not commutative. In fact, we will state the excess base change in Section \ref{sec:statement_localization}, in which the Euler class measures the failure of diagram to be commutative.
+The diagram \eqref{eq:pullback_with_supports} of $K$-group is usually not commutative. In fact, we will state the excess base change in Section \ref{sec:statement_localization}, in which the Euler class measures the failure of diagram to be commutative. We draw the dashed arrow for $h^{*}$ to emphasize this awkward "noncommutativity".
 \end{warning}
 
 \begin{defn}[Tensor product with supports/Intersection product]
@@ -466,7 +466,7 @@ This comes from the definition of the tensor product.
 \end{proof}
 
 \subsection{Algebraic structures of $K$-theory} 
-With enough tools in hand, we can define some extra structures on $K^G(X)$. (By priority $K^G(X)$ is an abelian group)
+With enough tools in hand, we can define some extra structures on $K^G(X)$. (A priori $K^G(X)$ is an abelian group)
 
 \begin{proposition}[$\Rpt(G)$-module]
 For any $G$-variety $X$, $K^G(X)$ is a $\Rpt (G)$-module by
@@ -514,7 +514,7 @@ as an $\Rpt(G)$-module. This can be applied to $\OOmcell_w^u$ and $\OOmcell_{w,w
 
 \section{Induction}
 \subsection{Contracted product}\label{subsec:contracted_product}
-Before we state the induction isomorphism, let us recall one basic construction of spaces: the contracted product.
+Before stating the induction isomorphism, let us recall one basic construction of spaces: the contracted product.
 \begin{defn}[Contracted product]
 Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety. The contracted product of $G$ and $X$ over $H$ is defined as
 $$G \times^H X :=(G \times X)/\sim$$
@@ -562,7 +562,7 @@ is an equivalence of categories, and descend to an $\Rpt(H)$-module homomorphism
 	\arrow["{\iota_X^*}", from=1-2, to=1-3]
 	\arrow["{\text{forget}}", from=1-1, to=1-2]
 \end{tikzcd}\]
-When $X$ is smooth, $\Res_H^G$ is an isomorphism as algebras (for $\otimes$-product).
+When $X$ is smooth, $\Res_H^G$ is an isomorphism of algebras (for $\otimes$-product).
 \end{proposition}
 
 We denote the inverse functor of $\Res_H^G$ by $\Ind_H^G$, called the induction, which is also explicitly constructed by pulling back and descent argument in \cite[5.2.16]{chriss1997representation}.
@@ -601,12 +601,12 @@ This isomorphism allows us to identify $B$-equivariant $K$-theory and $T$-equiva
 \section{Equivariant cohomology theory}
 The theory of equivariant cohomology theory is completely parallel with the theory of equivariant $K$-theory. We shortly sketch the definition and refer readers to see \cite[Chapter 2]{przezdziecki2015geometric} for details (like the definition of universal principle bundle $\EGG G \longrightarrow \BGG G$)
 
-Nearly all the abstract results for $K$-theory have a corresponding cohomology theory version in \cite{przezdziecki2015geometric}. We will mention about the difference of Euler class in Section \ref{sec:euler_class}, compute some examples in Chapter \ref{chap:diagram}, and compare these two theories in Chapter \ref{chap:AScompletion}.
+Nearly all the abstract results for $K$-theory have a corresponding cohomology theory version in \cite{przezdziecki2015geometric}. We will mention about the difference of Euler class in Section \ref{sec:euler_class}, compute some examples in Section \ref{sec:diagram}, and compare these two theories in Section \ref{sec:AScompletion}.
 
 \subsection{$G$-equivariant cohomology $H_G^* (X; \mathbb{Q})$}
 
 \begin{defn}[{$G$-equivariant cohomology, \cite[Definition 2.7]{przezdziecki2015geometric}}]\label{def:equivariant_cohomology}
-For a $G$-variety $X$, the $G$-equivariant cohomology theory is defined as the cohomology ring of the contracted product space $\EGG G \times^G X$, i.e.,
+For a $G$-variety $X$, the $G$-equivariant cohomology theory is defined as the (singular) cohomology ring of the contracted product space $\EGG G \times^G X$, i.e.,
 $$H_G^* (X; \mathbb{Q}):= H^* \!\left(\EGG G \times^G X; \mathbb{Q}\right).$$
 Specifically, for a point $\{\pt\}=\Spec \mathbb{C}$ with trivial $G$-action, denote
 $$\Spt(G):= H_G^* \big(\{\pt\}; \mathbb{Q}\big)=H^* (\BGG G; \mathbb{Q})$$
@@ -626,35 +626,35 @@ $$H_{G}^* (X; \mathbb{Q})= H^* (\BGG G \times X; \mathbb{Q}) \cong H^* (\BGG G; 
 
 We also list examples in parallel with subsection \ref{subset:rep_ring}. Everything is much more sketchy though. We use Setting \ref{set:initial_case}.
 
-\begin{eg}
+\begin{eg}\label{eg:H-initial-1}
 For trivial group $\Id$, $\BGG \Id=\{\pt\}$, so
 $$\Spt(\Id)=H^*\big(\{\pt\} ; \mathbb{Q}\big) \cong \mathbb{Q}.$$
 \end{eg}
 
-\begin{eg}[{ \cite[Example 2.9(i)]{przezdziecki2015geometric} }]
+\begin{eg}[{ \cite[Example 2.9(i)]{przezdziecki2015geometric} }]\label{eg:H-initial-2}
 For group $T$, $\BGG T=\prod_{j=i}^{n} \mathbb{CP}^{\infty}$, so
-$$\Spt(T)=H^*\!\left(\prod_{j=1}^{n} \mathbb{CP}^{\infty} ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n H^*\left( \mathbb{CP}^{\infty}\; ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n \mathbb{Q}[t_j] = \mathbb{Q}[t_1,\ldots , t_n] $$
+$$\Spt(T)=H^*\!\left(\prod_{j=1}^{n} \mathbb{CP}^{\infty} ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n H^*\left( \mathbb{CP}^{\infty}\; ; \mathbb{Q}\right) \cong \bigotimes_{j=1}^n \mathbb{Q}[\lambda_j] = \mathbb{Q}[\lambda_1,\ldots,\lambda_n] $$
 where $\deg t_j=2$ for any $j$.
 
-By forgetting $T$-actions, we get a morphism of $\mathbb{Q}$-algebra
-$$\Spt(T) \longrightarrow \Spt(\Id) \qquad f(t_1,\ldots,t_n) \longmapsto f(0,\ldots,0).$$
+By forgetting $T$-actions, we get a morphism of $\mathbb{Q}$-algebras
+$$\Spt(T) \longrightarrow \Spt(\Id) \qquad f(\lambda_1,\ldots,\lambda_n) \longmapsto f(0,\ldots,0).$$
 \end{eg}
 
-\begin{eg}
+\begin{eg}\label{eg:H-initial-3}
 By using the reduction isomorphism \ref{prop:reduction_isomorphism} in the version of cohomology theory, we can show that
-$$\Spt(N) \cong \Spt(\Id) \cong \mathbb{Q} \qquad \Spt(B) \cong \Spt(T) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
+$$\Spt(N) \cong \Spt(\Id) \cong \mathbb{Q} \qquad \Spt(B) \cong \Spt(T) \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]$$
 \end{eg}
 
-\begin{eg}[{\cite[Example 2.9(ii)]{przezdziecki2015geometric} }]
+\begin{eg}[{\cite[Example 2.9(ii)]{przezdziecki2015geometric} }]\label{eg:H-initial-4}
 For group $\GL_n$, $\BGG \GL_n=\Gr(n,\infty)$, so
-$$\Spt(T)=H^*\!\left(\Gr(n,\infty) ; \mathbb{Q}\right) \cong \mathbb{Q}[t_1,\ldots , t_n]^{S_n} $$
+$$\Spt(T)=H^*\!\left(\Gr(n,\infty) ; \mathbb{Q}\right) \cong \mathbb{Q}[\lambda_1,\ldots,\lambda_n]^{S_n} $$
 
 We also have the Chevalley restriction theorem in the version of cohomology theory. In this case, it says
-$$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]^{S_n}.$$
+$$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]^{S_n}.$$
 \end{eg}
 
 The three functors on cohomology theory are defined in a different way, which are induced from the three functors in normal cohomology theory, see \cite[2.3.2]{przezdziecki2015geometric}. Thom isomorphism, induction isomorphism and reduction isomorphism are still true in the equivariant cohomology theory case. In particular, we have
-$$H_{\GL_n}^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ t_1,\ldots,t_n \right]$$
+$$H_{\GL_n}^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]$$
 as an $\Spt(\GL_n)$-module. $H_{\GL_n}^*(\mathcal{F})$ is a free $\Spt(\GL_n)$-module with rank $\#W=n!$.
 
 Also, the isomorphism

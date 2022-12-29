@@ -47,12 +47,13 @@
 \contentsline {subsection}{\numberline {5.3.1}Algebraic structures induced by convolution product}{62}{subsection.5.3.1}% 
 \contentsline {subsection}{\numberline {5.3.2}Convolution product formula}{63}{subsection.5.3.2}% 
 \contentsline {subsection}{\numberline {5.3.3}Demazure operator}{66}{subsection.5.3.3}% 
-\contentsline {subsection}{\numberline {5.3.4}Miscellaneous}{69}{subsection.5.3.4}% 
-\contentsline {chapter}{\numberline {6}Generalization}{71}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}quiver with loops}{71}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}$G \times \mathbb {C}^{\times }$-action}{71}{section.6.2}% 
-\contentsline {chapter}{\numberline {7}From formula to diagram}{73}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}One point quiver}{73}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}$A_2$-quiver}{73}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}$1$-loop quiver}{73}{section.7.3}% 
-\contentsline {chapter}{\numberline {8}Atiyah-Segal completion theorem}{75}{chapter.8}% 
+\contentsline {subsection}{\numberline {5.3.4}Miscellaneous}{68}{subsection.5.3.4}% 
+\contentsline {chapter}{\numberline {6}Generalizations, examples and connections}{71}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Generalization}{71}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Quiver with loops}{71}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}$G \times \mathbb {C}^{\times }$-action}{72}{subsection.6.1.2}% 
+\contentsline {section}{\numberline {6.2}From formula to diagram}{73}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}One point quiver}{73}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}$A_2$-quiver}{73}{subsection.6.2.2}% 
+\contentsline {subsection}{\numberline {6.2.3}$1$-loop quiver}{73}{subsection.6.2.3}% 
+\contentsline {section}{\numberline {6.3}Atiyah-Segal completion theorem}{73}{section.6.3}% 
