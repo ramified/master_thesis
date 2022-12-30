@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  4 DEC 2022 11:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  30 DEC 2022 13:53
 entering extended mode
 **./S5.tex
 (S5.tex
@@ -895,10 +895,10 @@ Missing character: There is no ; in font nullfont!
 
 ] (S5.aux) ) 
 Here is how much of TeX's memory you used:
- 22348 strings out of 427748
- 458435 string characters out of 3150981
- 572639 words of memory out of 3000000
- 26168 multiletter control sequences out of 15000+200000
+ 22349 strings out of 427748
+ 458452 string characters out of 3150981
+ 574778 words of memory out of 3000000
+ 26169 multiletter control sequences out of 15000+200000
  532346 words of font info for 25 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,6n,92p,440b,1031s stack positions out of 5000i,500n,10000p,200000b,50000s
