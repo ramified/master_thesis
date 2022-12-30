@@ -374,15 +374,15 @@ The equivariant cohomology theory version of Demazure operators are denoted by $
 We have a formula of Demazure operator:
 \begin{equation*}\label{eq:Demazure_operator}
 D_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \raisebox{2mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}}     + \frac{f}{1-\frac{e_{u(i)}^{u}}{e_{u(i+1)}^{u}}}$}  \right)\left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\displaystyle 1-\frac{e_{u(i+1)}^{u}}{e_{u(i)}^{u}}\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \raisebox{1mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
 and similar for the equivariant cohomology theory:
 \begin{equation*}\label{eq:Demazure_operator_cth}
 \partial_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \displaystyle\frac{sf}{ \lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}}     + \frac{f}{\lambda_{u(i)}^{u}-\lambda_{u(i+1)}^{u} }  \right)\left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\lambda_{u(i+1)}^{u}-\lambda_{u(i)}^{u}\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \displaystyle\frac{sf}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[sf  \left(\lambda_{i+1}-\lambda_{i}\right)^{k-1} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
 In the formula, $s=s_i$,  $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
@@ -422,7 +422,7 @@ Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. W
 
 \begin{table}[ht]
   \vspace{0cm}
-    \centering  \includegraphics[width=15cm]{figures/table/table_euler_class.pdf}
+    \centering  \includegraphics[width=12cm]{figures/table/table_euler_class.pdf}
       \caption{}
       \label{table:euler_class_1}        
 \end{table}
@@ -432,14 +432,14 @@ Theorem \ref{thm:Demazure_operator_1} is our final destination in this part. We 
 \subsection{Miscellaneous}\label{subsec:miscellaneous}
 In this subsection, we collect some results which are of significant importance theoretically. The arguments in reference work for both $K$-theory and cohomology theory.
 
-\begin{proposition}
+\begin{proposition}\label{prop:faithfulness}
 The action of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ on $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$ is faithful.
 \end{proposition}
 \begin{proof}[Sketch of proof]
 Reduce the problem to the faithfulness for the action of $\Kcurl^{T_{\dimvec{d}}}(\St_{\dimvec{d}})$ on $\Kcurl^{T_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$. For details, see \cite[Theorem 10.10]{przezdziecki2015geometric}.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop:generators}
 The elements $\{D_{i}^{u,u'}\}_{u,u',i}$ generate $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ as a $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$-algebra.
 \end{proposition}
 \begin{proof}[Sketch of proof]

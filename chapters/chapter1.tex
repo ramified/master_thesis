@@ -395,7 +395,7 @@ $$\left| \dimv M_{j+1}/M_j \right|=1 \qquad \text{ for any }j \in \{0,\ldots, \a
 \end{defn}
 
 \begin{eg}\label{eg:5-case-0}
-For quiver $Q: i \longrightarrow i'$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
+For quiver $Q: \textcolor{red}{i} \longrightarrow \textcolor{blue}{i'}$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
 \begin{equation*}
 \begin{aligned}
   V=\;& V_i \oplus V_{i'} \\ 
@@ -419,12 +419,28 @@ $$\ftdimvec{d}= \begin{pmatrix}
 \begin{remark}
 The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition of set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
 $$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
-such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in Q_0}\ptt^{-1}(i).$$} . As an example,
+such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in Q_0}\ptt^{-1}(i).$$} We color the set $\{1,\ldots, \abdimvec{d}  \}$ by the partition $\ptt$. In the Example \ref{eg:5-case-0},
 {
 \def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
 3,2\\ 2,2 \\ 2,1 \\ 1,1 \\ 0,1
-\end{pmatrix} \quad\text{ corresponds to }\quad \{1,2,3,4,5\}= \{2,3,5\} \sqcup \{1,4\}.$$
+\end{pmatrix} \quad
+\begin{aligned}
+&\text{ corresponds to }\quad \{1,2,3,4,5\}= \{2,3,5\} \sqcup \{1,4\}\\
+&\text{ corresponds to }\quad \begin{tikzpicture}
+% \vpartition[
+% floor=1,
+% tkzpic=0,
+% type=0
+% ]{{5}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,0}}
+ \end{tikzpicture}
+\end{aligned}
+$$
 }
 \end{remark}
 
@@ -537,11 +553,11 @@ We discuss about right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ 
 
 Multiplying on left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following fact more explicitly.
 
-\begin{fact}
-Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$.
+\begin{fact}\label{fact:5-case-0.05}
+Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$, i.e., an ordered set of points colored by the vertices of $Q$.
 \end{fact}
 
-\begin{eg}\label{eg:3-case-0.1}
+\begin{eg}\label{eg:5-case-0.1}
 \begin{equation*}
 \begin{aligned}
 \parbox[h][][c]{3cm}{
@@ -612,7 +628,18 @@ Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec
  \end{aligned}
  \end{equation*}
 
-This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\}$.
+This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\}$, and this corresponds to the ordered set of colored points:$\;$ $\begin{tikzpicture}
+% \vpartition[
+% floor=1,
+% tkzpic=0,
+% type=0
+% ]{{5}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,0}}
+ \end{tikzpicture}$
 
 \end{eg}
 
