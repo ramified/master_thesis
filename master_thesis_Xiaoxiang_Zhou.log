@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  30 DEC 2022 15:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 DEC 2022 01:27
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1760,25 +1760,151 @@ LaTeX Info: Redefining \nameref on input line 196.
 \@outlinefile=\write5
 \openout5 = `master_thesis_Xiaoxiang_Zhou.out'.
 
-\openout2 = `chapters/contents.aux'.
+\openout2 = `chapters/chapter5.aux'.
 
- (chapters/contents.tex
-
-LaTeX Warning: No \author given.
-
+ (chapters/chapter5.tex
+Chapter 5.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
 \se-ascii-print.def"
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+[59
 
 
 
-] [2
 
-] (master_thesis_Xiaoxiang_Zhou.toc)
-\tf@toc=\write6
-\openout6 = `master_thesis_Xiaoxiang_Zhou.toc'.
 
- [3
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+File: figures/table/figure_convolution.pdf Graphic file (type pdf)
+<use figures/table/figure_convolution.pdf>
+[60] [61] [62]
+Overfull \hbox (25.45673pt too wide) detected at line 202
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+[64] [65]
+Overfull \hbox (1.4011pt too wide) in paragraph at lines 356--358
+\TU/lmr/m/n/10.95 Later, every expression before $[]$ should be viewed as an ex
+pression in $\U/msb/m/n/10.95 Z  []$\TU/lmr/m/n/10.95 . 
+ []
+
+[66] [67]
+LaTeX Font Info:    Try loading font information for U+euf on input line 412.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
+euf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+File: figures/table/table_euler_class.pdf Graphic file (type pdf)
+<use figures/table/table_euler_class.pdf>
+ [68]) [69] [70
+
+
+
+]
+Chapter 6.
+
+Overfull \hbox (23.3304pt too wide) detected at line 259
+[][]
+ []
+
+[71]
+File: figures/table/table_euler_class_q.pdf Graphic file (type pdf)
+<use figures/table/table_euler_class_q.pdf>
+ [72]
+File: figures/strands/generators.pdf Graphic file (type pdf)
+<use figures/strands/generators.pdf>
+File: figures/strands/glue_vertically.pdf Graphic file (type pdf)
+<use figures/strands/glue_vertically.pdf>
+File: figures/strands/clear_relations.pdf Graphic file (type pdf)
+<use figures/strands/clear_relations.pdf>
+
+Underfull \vbox (badness 1460) has occurred while \output is active []
+
+ [73]
+[74]
+File: figures/strands/relations_1.pdf Graphic file (type pdf)
+<use figures/strands/relations_1.pdf>
+ [75]
+File: figures/strands/relations_1.pdf Graphic file (type pdf)
+<use figures/strands/relations_1.pdf>
+File: figures/strands/relations_1.pdf Graphic file (type pdf)
+<use figures/strands/relations_1.pdf>
+ [76]
+Overfull \hbox (22.14848pt too wide) in paragraph at lines 424--425
+[][]\TU/lmr/bx/n/10.95 Lemma 6.2.3. []\TU/lmr/m/it/10.95 For $\OML/cmm/m/it/10.
+95 f \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/c
+msy/m/n/10.95 ^^B \U/msb/m/n/10.95 C[]\OT1/cmr/m/n/10.95 )$\TU/lmr/m/it/10.95 ,
+ denote $\OML/cmm/m/it/10.95 D[] \OT1/cmr/m/n/10.95 = [][]$\TU/lmr/m/it/10.95 ,
+ $\OML/cmm/m/it/10.95 f[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 f \OMS/cmsy/
+m/n/10.95 ^^A [][] 2
+ []
+
+
+Overfull \hbox (25.49971pt too wide) detected at line 432
+\OML/cmm/m/it/10.95 K[] [] [] \U/msb/m/n/10.95 Z []  [] \OML/cmm/m/it/10.95 ;  
+H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
+/m/n/10.95 ] [] \OML/cmm/m/it/10.95 :
+ []
+
+
+Underfull \vbox (badness 2027) has occurred while \output is active []
+
+ [77]
+File: figures/strands/relations_1.pdf Graphic file (type pdf)
+<use figures/strands/relations_1.pdf>
+
+(master_thesis_Xiaoxiang_Zhou.bbl [78]) [79
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 459.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 459.
+ (master_thesis_Xiaoxiang_Zhou.aux
+(chapters/contents.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
+(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
+(chapters/chapter6.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 459.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 459.
+Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
+anged.
+(rerunfilecheck)             Checksum: C51995347893A69F5F1A55B3A95FE358.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 459.
+ ) 
+Here is how much of TeX's memory you used:
+ 39551 strings out of 427748
+ 722568 string characters out of 3150981
+ 826873 words of memory out of 3000000
+ 42919 multiletter control sequences out of 15000+200000
+ 551447 words of font info for 119 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 61i,28n,96p,3277b,1128s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (21 pages).

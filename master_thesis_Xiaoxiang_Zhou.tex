@@ -1,8 +1,8 @@
 
 \documentclass[reqno,11pt]{book}
-%\special{dvipdfmx:config z 0}
-%%%\includeonly{}
-%\includeonly{chapters/chapter5}
+\special{dvipdfmx:config z 0}
+%%\includeonly{}
+\includeonly{chapters/chapter5}
 
 %\usepackage{color,graphicx}
 %\usepackage{mathrsfs,amsbsy}
@@ -245,7 +245,7 @@ We then replace $\RRep_{\dimvec{d}}(Q)$ by $\RRep_{\dimvec{d},\str}(Q)$. The Lie
   \cong\;& \pi_{\dimvec{d},\str}^{-1}(\{F_{\ww} \})
 \end{aligned}
 \end{equation*}
-then the same formula in \ref{thm:Demazure_operator_1} still works.
+then the same formula in Theorem \ref{thm:Demazure_operator_1} still works.
 \subsection{$G \times \mathbb{C}^{\times}$-action}\label{subsec:Cstar_action}
 
 
@@ -267,40 +267,189 @@ So everything remains the same except for the change of coefficient ring. In par
       \label{table:euler_class_2}        
 \end{table}
 
-\begin{theorem}
+\begin{theorem}\label{thm:Demazure_operator_2}
 When the quiver has no cycle, we have a formula of Demazure operator for the $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-action:
 \begin{equation*}\label{eq:Demazure_operator_C*action}
 D_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \raisebox{1mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
 and similar for the equivariant cohomology theory:
 \begin{equation*}\label{eq:Demazure_operator_cth_C*action}
 \partial_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \displaystyle\frac{sf}{ \lambda_{i}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i} }  \right)\left(\lambda_{i}-\lambda_{i} +t \right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\lambda_{i}-\lambda_{i} +t\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \displaystyle\frac{s_i f}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i} +t \right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\lambda_{i+1}-\lambda_{i} +t\right)^{k} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
 \end{theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{From formula to diagram}\label{sec:diagram}
-This section is designed for showing examples. Recall Fact \ref{fact:5-case-0.05} that every $\ftdimvec{d}$ or $u$ corresponds to an ordered set of colored points. It can be imagined that the lines connecting two ordered sets represents one element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$. Actually, we draw the picture of generators of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ in Figure ???, where
+This section is designed for showing examples. Recall Fact \ref{fact:5-case-0.05} that every $\ftdimvec{d}$ or $u$ corresponds to an ordered set of colored points. It can be imagined that the lines connecting two ordered sets represents one element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$. Actually, we draw the picture of generators of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ in Figure \ref{fig:generators}, where
 $$e_{i}^{u}=:e_{u^{-1}(i)} \left[ \RRep_{u}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} \left( \RRep_{u}(Q) \right) \hookrightarrow K^{G_{\dimvec{d}}} \left( \St^{u,u} \right).$$
 
-???
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=12cm]{figures/strands/generators.pdf}
+      \caption{}
+      \label{fig:generators}        
+\end{figure}
 
-The convolution product can be then viewed as pictures gluing vertically, where the incompatible gives $0$. For example,
+The convolution product can be then viewed as pictures gluing vertically, where the incompatibility of colors gives $0$. For example,
 
-???
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=12cm]{figures/strands/glue_vertically.pdf}
+      \label{fig:glue_vertically}        
+\end{figure}
 
-By Proposition \ref{prop:generators}, every element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})= \oplus_{u,u'} K^{G_{\dimvec{d}}}(\St^{u,u'})$  can be expressed as a $\mathbb{Z}$-linear combination of strands. The expressions are not unique, so we need to find out their relations. 
+By Proposition \ref{prop:generators}, every element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})= \oplus_{u,u'} K^{G_{\dimvec{d}}}(\St^{u,u'})$  can be expressed as a $\mathbb{Z}$-linear combination of strands. The expressions are not unique, so we need to find out their relations. Some relations are clear from the picture (but still need to check), for example,
 
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=15cm]{figures/strands/clear_relations.pdf}
+      \label{fig:clear_relations}        
+\end{figure}
+
+We won't draw these "obvious" relations later. The first nontrivial relation comes from the following lemma.
+
+\begin{lemma}\label{lem:convolution_product_1}
+For $f \in \Rpt(T_{\dimvec{d}})$, denote $D_i^{u,u'} =\left[\St_{s_{i}}^{u,u'}\right]^{G_{\dimvec{d}}}$, $f^{u}=f \cdot \left[ \RRep_{\dimvec{d}}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} (\St_{\dimvec{d}})$, we have
+$$D_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u}.$$
+Similarly, for the $G_{\dimvec{d}}$-equivariant cohomology theory, we have
+$$\partial_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar \partial_i^{u,u'} +  \delta_{u,u'}\left[\left(s_i f-f\right)   \left(\lambda_{i+1}-\lambda_{i}\right)^{k-1} \right]^{u}.$$
+In the formula, $k$ stands for the number of arrows from the vertex associated to $v_{u(i+1)}$ to the vertex associated to $v_{u(i)}$.
+\end{lemma}
+\begin{proof}
+By Proposition \ref{prop:generators}, we only need to show, for any $g \in \Rpt(T_{\dimvec{d}})$,
+$$D_i^{u,u'} \fakestar f^{u'} \star g^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} \star g^{u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} \star g^{u'}.$$
+Now we apply Theorem \ref{thm:Demazure_operator_1}. The same argument works for equivariant cohomology theory.
+\end{proof}
+Lemma \ref{lem:convolution_product_1} explains "what would happen when a point walk through a crossing". For other relations, people have to guess by trial-and-error method. The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR-algebra}. The relations of the KLR-algebra can be found in ???, and we will only show the relations of $K$-theoretical version.
+\begin{warning}
+In the following examples, $\fakestar$ is often omitted for simplicity.
+\end{warning}
 \subsection{One point quiver}
+We begin with the trivial quiver, which has only one vertex and no arrows. Everything is simplified: 
+$$\WWd=\Wd,\quad \MinWd =\{\Id \}, \quad \RRep_{\dimvec{d}}(Q) \cong \mathcal{F}_{\dimvec{d}}, \quad \St_{\dimvec{d}} \cong\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}},$$
+$$K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}}) \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_{\abdimvec{d}}^{\pm 1} \right], \qquad H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}}) \cong \mathbb{Q}[\lambda_1,\ldots,\lambda_{\abdimvec{d}}].$$
+In this case, $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{$\boldsymbol{K}$-theoretic NilHecke algebra}, and $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{(cohomological) NilHecke algebra}.
+
+The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolution_product_1} are simplified: (superscripts are omitted, and functions $f$ in four formulas lie in $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}})$, $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$, $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}})$ and $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$, respectively)
+\begin{equation*}
+\begin{aligned}
+  D_i \star f =\;& \frac{s_i f}{1- \frac{e_{i+1}}{e_i}} + \frac{f}{1- \frac{e_{i}}{e_{i+1}}}\\ 
+  \partial_i \star f =\;& \frac{s_i f}{\lambda_{i+1}-\lambda_{i}}+\frac{ f}{\lambda_{i}-\lambda_{i+1}}=\frac{f -s_i f}{\lambda_{i}-\lambda_{i+1}}\\
+  D_i f =\;& (s_i f) D_i + \frac{f- s_i f}{1- \frac{e_{i}}{e_{i+1}}}\\ 
+  \partial_i f =\;& (s_i f) \partial_i + \frac{f- s_i f}{\lambda_{i}-\lambda_{i+1}}\\   
+\end{aligned}
+\end{equation*}
+
+The relations for $D_i$ are shown in Figure \ref{fig:relations_1}.
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=10cm]{figures/strands/relations_1.pdf}
+    \caption{}
+      \label{fig:relations_1}        
+\end{figure}
 \subsection{$A_2$-quiver}
+Now let us consider the $A_2$-quiver $\begin{tikzcd}[ampersand replacement=\&]
+	\textcolor{red}{\bullet} \& \textcolor{blue}{\bullet} 
+	\arrow[from=1-1, to=1-2]
+ \end{tikzcd}$. This time we have to color the dots and strands. In this case,
+$$K^{G_{\dimvec{d}}} \left(\RRep_{\dimvec{d}}(Q)\right) \cong \bigoplus_{u} \mathbb{Z}\!\left[ e_1^{u,\pm 1},\ldots,e_{\abdimvec{d}}^{u,\pm 1} \right], \qquad H_{G_{\dimvec{d}}}^{*}\!\!\left(\RRep_{\dimvec{d}}(Q)\right) \cong \bigoplus_{u} \mathbb{Q}\left[\lambda_1^{u},\ldots,\lambda_{\abdimvec{d}}^{u}\right].$$
+The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolution_product_1} are simplified: 
+\begingroup
+\allowdisplaybreaks
+\begin{align*}
+  D_i^{u,u'} \star f^{u'}=\;&\begin{cases}
+  \left[ \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}   \right]^{u} & \hspace{2mm}u=u',\\[3mm]
+  \left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right) \right]^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  	\textcolor{red}{u(i+1)} \& \textcolor{blue}{u(i)} 
+  	\arrow[from=1-1, to=1-2]
+   \end{tikzcd},\\[3mm]
+  \left(s_i f \right)^{u} & \begin{tikzcd}[ampersand replacement=\&]
+    	\textcolor{red}{u(i)} \& \textcolor{blue}{u(i+1)} 
+    	\arrow[from=1-1, to=1-2]
+     \end{tikzcd}.\\
+  \end{cases}\\ 
+  \partial_i^{u,u'} \star f^{u'}=\;&\begin{cases}
+  \left[\displaystyle\frac{f - s_i f}{ \lambda_i-\lambda_{i+1}}  \right]^{u} \hspace{16mm}$\,$& \hspace{2mm}u=u',\\[3mm]
+  \left[s_i f  \left(\lambda_{i+1}-\lambda_i\right) \right]^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  	\textcolor{red}{u(i+1)} \& \textcolor{blue}{u(i)} 
+  	\arrow[from=1-1, to=1-2]
+   \end{tikzcd},\\[3mm]
+  \left(s_i f \right)^{u} & \begin{tikzcd}[ampersand replacement=\&]
+    	\textcolor{red}{u(i)} \& \textcolor{blue}{u(i+1)} 
+    	\arrow[from=1-1, to=1-2]
+     \end{tikzcd}.\\
+  \end{cases}\\ 
+  D_i^{u,u'} f^{u'} =\;& (s_i f)^{u} D_i^{u,u'} + \left[\frac{f- s_i f}{1- \frac{e_{i}}{e_{i+1}}}\right]^{u}\\ 
+  \partial_i^{u,u'} f^{u'} =\;& (s_i f)^{u} \partial_i^{u,u'} + \left[\frac{f- s_i f}{\lambda_{i}-\lambda_{i+1}}\right]^{u}\\   
+\end{align*}
+\endgroup
+
+The relations for $D_i$ are shown in Figure \ref{fig:relations_2}.
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  
+    \includegraphics[width=10cm]{figures/strands/relations_1.pdf}
+    \caption{}
+      \label{fig:relations_2}        
+\end{figure}
 \subsection{$1$-loop quiver}
+In this subsection we try to give a simplest example for Section \ref{sec:generalization}, which is the $1$-loop quiver. In this case,
+$$K^{G_{\dimvec{d}}} \left(\RRep_{\dimvec{d},\str}(Q)\right) \cong  \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_{\abdimvec{d}}^{\pm 1} \right], \qquad H_{G_{\dimvec{d}}}^{*}\!\!\left(\RRep_{\dimvec{d},\str}(Q)\right) \cong  \mathbb{Q}\left[\lambda_1,\ldots,\lambda_{\abdimvec{d}}\right].$$
+The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolution_product_1} are simplified:
 
+\begin{equation*}
+\begin{aligned}
+  D_i \star f =\;& s_i f + f\cdot \frac{e_{i+1}}{e_{i}}\\ 
+  \partial_i \star f =\;& f -s_i f\\
+  D_i f =\;& (s_i f) D_i + (s_i f-f) \frac{e_{i+1}}{e_i}\\ 
+  \partial_i f =\;& (s_i f) \partial_i + (s_i f-f)\\   
+\end{aligned}
+\end{equation*}
+The relations for $D_i$ are shown in Figure \ref{fig:relations_3}.
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  
+    \includegraphics[width=10cm]{figures/strands/relations_1.pdf}
+    \caption{}
+      \label{fig:relations_3}        
+\end{figure}
 
+Now for the $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-action. We have analog of Lemma \ref{lem:convolution_product_1} for $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-action:
+\begin{lemma}\label{lem:convolution_product_2}
+For $f \in \Rpt(T_{\dimvec{d}} \times \mathbb{C}^{\times})$, denote $D_i^{u,u'} =\left[\St_{s_{i}}^{u,u'}\right]^{G_{\dimvec{d}}\times \mathbb{C}^{\times}}$, $f^{u}=f \cdot \left[ \RRep_{\dimvec{d}}(Q) \right]^{G_{\dimvec{d}}\times \mathbb{C}^{\times}} \in K^{G_{\dimvec{d}}\times \mathbb{C}^{\times}} (\St_{\dimvec{d}})$, we have
+$$D_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} +  \delta_{u,u'}\left[\left(f-s_i f\right) \raisebox{-1mm}{$\displaystyle\frac{\left( 1-\frac{e_{i+1}}{e_{i}} q\right)^{k}}{ 1-\frac{e_{i}}{e_{i+1}}}$}\right]^{u}.$$
+Similarly, for the $(G_{\dimvec{d}}\times \mathbb{C}^{\times})$-equivariant cohomology theory, we have
+$$\partial_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar \partial_i^{u,u'} +  \delta_{u,u'}\left[\left(f-s_i f\right) 
+\frac{\left(\lambda_{i+1}-\lambda_{i}+t\right)^{k}}{\lambda_{i}-\lambda_{i+1}}   \right]^{u}.$$
+In the formula, $k$ stands for the number of arrows from the vertex associated to $v_{u(i+1)}$ to the vertex associated to $v_{u(i)}$.
+\end{lemma}
+In the $1$-loop quiver case, notice that
+$$K^{G_{\dimvec{d}} \times \mathbb{C}^{\times}} \left(\RRep_{\dimvec{d},\str}(Q)\right) \cong  \mathbb{Z}\left[q^{\pm 1}\right]\!\left[ e_1^{\pm 1},\ldots,e_{\abdimvec{d}}^{\pm 1} \right], \quad H_{G_{\dimvec{d}}\times \mathbb{C}^{\times}}^{*}\!\!\left(\RRep_{\dimvec{d},\str}(Q)\right) \cong  \mathbb{Q}[t]\left[\lambda_1,\ldots,\lambda_{\abdimvec{d}}\right].$$
+
+The formulas in Theorem \ref{thm:Demazure_operator_2} and Lemma \ref{lem:convolution_product_2} are simplified:
+
+\begin{equation*}
+\begin{aligned}
+  D_i \star f=\;&
+  \left( \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k} \\
+  \partial_i \star f =\;& (f -s_i f) \frac{\lambda_{i+1}-\lambda_{i}+t}{\lambda_{i}-\lambda_{i+1}}\\
+  D_i f =\;& (s_i f) D_i + \left(f-s_i f\right) \displaystyle\frac{ 1-\frac{e_{i+1}}{e_{i}} q}{ 1-\frac{e_{i}}{e_{i+1}}}\\ 
+  \partial_i f =\;& (s_i f) \partial_i + (f-s_i f) \frac{\lambda_{i+1}-\lambda_{i}+t}{\lambda_{i}-\lambda_{i+1}}\\   
+\end{aligned}
+\end{equation*}
+The relations for $D_i$ are shown in Figure \ref{fig:relations_4}.
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  
+    \includegraphics[width=10cm]{figures/strands/relations_1.pdf}
+    \caption{}
+      \label{fig:relations_4}        
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Atiyah-Segal completion theorem}\label{sec:AScompletion}
 

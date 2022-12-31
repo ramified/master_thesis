@@ -346,7 +346,7 @@ For $f \in \Rpt(T_{\dimvec{d}}) \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_{\
 $$f^{u}=\sum_{w} f(e_1,\ldots,e_{\abdimvec{d}}) \preimage{\Lambda}_{wu}^{-1} \preimage{\psi}_{wu}.$$
 \begin{remark}\label{rmk:relabling_of_coef}
 This formula looks not so compatible with the group action. To facilitate our computation, we relable the coefficient ring before $\preimage{\psi}_{\ww}$ by $e_i^{\ww}:= e_{\ww^{-1}(i)}$, which means that
-$$\Kcurl^{T_{\dimvec{d}}} \left(\RRep_{\dimvec{d}}(Q)\right) \cong \bigoplus_{\ww} \mathbb{Z}\!\left[ e_1^{\ww,\pm 1},\ldots,e_{\abdimvec{d}}^{\ww,\pm 1} \right] \preimage{\psi}_{\ww}$$
+$$K^{T_{\dimvec{d}}} \left(\RRep_{\dimvec{d}}(Q)\right) \cong \bigoplus_{\ww} \mathbb{Z}\!\left[ e_1^{\ww,\pm 1},\ldots,e_{\abdimvec{d}}^{\ww,\pm 1} \right] \preimage{\psi}_{\ww}$$
 Therefore, 
 \begin{equation*}
 \begin{aligned}
@@ -374,18 +374,18 @@ The equivariant cohomology theory version of Demazure operators are denoted by $
 We have a formula of Demazure operator:
 \begin{equation*}\label{eq:Demazure_operator}
 D_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \raisebox{1mm}{$\displaystyle\frac{sf}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
 and similar for the equivariant cohomology theory:
 \begin{equation*}\label{eq:Demazure_operator_cth}
 \partial_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \displaystyle\frac{sf}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[sf  \left(\lambda_{i+1}-\lambda_{i}\right)^{k-1} \right]^{u} & u \neq u'.
+\left[\left( \displaystyle\frac{s_i f}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
-In the formula, $s=s_i$,  $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u_{i+1}}$ to the vertex associated to $v_{u_{i}}$.
+In the formula, $\lambda_l^{u}:=\lambda_{u^{-1}(l)}$, and $k$ stands for the number of arrows from the vertex associated to $v_{u(i+1)}$ to the vertex associated to $v_{u(i)}$.
 \end{theorem}
 
 In the computation we mainly focus on the $K$-theory. Using \ref{rmk:relabling_of_coef}, one can compute $D_i^{u,u'} \star f^{u'}$ in terms of $\phi$'s: ($s:=s_i$ for simplicity)
