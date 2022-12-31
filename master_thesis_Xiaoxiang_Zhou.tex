@@ -2,7 +2,7 @@
 \documentclass[reqno,11pt]{book}
 %\special{dvipdfmx:config z 0}
 %%%\includeonly{}
-%\includeonly{chapters/chapter5}
+%\includeonly{chapters/chapter6}
 
 %\usepackage{color,graphicx}
 %\usepackage{mathrsfs,amsbsy}
@@ -35,6 +35,7 @@
 \usepackage{makecell}
 \usepackage{adjustbox}
 \usepackage{indentfirst}
+\usepackage{pifont}
 %\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
 
@@ -348,7 +349,8 @@ The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolu
 The relations for $D_i$ are shown in Figure \ref{fig:relations_1}.
 \begin{figure}[ht]
   \vspace{0cm}
-    \centering  \includegraphics[width=10cm]{figures/temporary/color_wires.jpg}
+    \centering 
+    \includegraphics[width=10cm]{figures/strands/relations_1.pdf} 
     \caption{}
       \label{fig:relations_1}        
 \end{figure}
@@ -363,23 +365,27 @@ The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolu
 \allowdisplaybreaks
 \begin{align*}
   D_i^{u,u'} \star f^{u'}=\;&\begin{cases}
-  \left[ \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}   \right]^{u} & \hspace{2mm}u=u',\\[3mm]
-  \left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right) \right]^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  \left[ \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}   \right]^{u} & \text{\small\raisebox{-0.5mm}{\ding{192}}}\begin{tikzcd}[ampersand replacement=\&]
+    	u=u'
+     \end{tikzcd},\\[4mm]
+  \left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right) \right]^{u} & \text{\small\raisebox{-0.5mm}{\ding{193}}}\begin{tikzcd}[ampersand replacement=\&]
   	\textcolor{red}{u(i+1)} \& \textcolor{blue}{u(i)} 
   	\arrow[from=1-1, to=1-2]
    \end{tikzcd},\\[3mm]
-  \left(s_i f \right)^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  \left(s_i f \right)^{u} & \text{\small\raisebox{-0.5mm}{\ding{194}}}\begin{tikzcd}[ampersand replacement=\&]
     	\textcolor{red}{u(i)} \& \textcolor{blue}{u(i+1)} 
     	\arrow[from=1-1, to=1-2]
      \end{tikzcd}.\\
   \end{cases}\\ 
   \partial_i^{u,u'} \star f^{u'}=\;&\begin{cases}
-  \left[\displaystyle\frac{f - s_i f}{ \lambda_i-\lambda_{i+1}}  \right]^{u} \hspace{16mm}$\,$& \hspace{2mm}u=u',\\[3mm]
-  \left[s_i f  \left(\lambda_{i+1}-\lambda_i\right) \right]^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  \left[\displaystyle\frac{f - s_i f}{ \lambda_i-\lambda_{i+1}}  \right]^{u} \hspace{16mm}$\,$& \text{\small\raisebox{-0.5mm}{\ding{192}}}\begin{tikzcd}[ampersand replacement=\&]
+      	u=u'
+       \end{tikzcd},\\[3mm]
+  \left[s_i f  \left(\lambda_{i+1}-\lambda_i\right) \right]^{u} & \text{\small\raisebox{-0.5mm}{\ding{193}}}\begin{tikzcd}[ampersand replacement=\&]
   	\textcolor{red}{u(i+1)} \& \textcolor{blue}{u(i)} 
   	\arrow[from=1-1, to=1-2]
    \end{tikzcd},\\[3mm]
-  \left(s_i f \right)^{u} & \begin{tikzcd}[ampersand replacement=\&]
+  \left(s_i f \right)^{u} &\text{\small\raisebox{-0.5mm}{\ding{194}}} \begin{tikzcd}[ampersand replacement=\&]
     	\textcolor{red}{u(i)} \& \textcolor{blue}{u(i+1)} 
     	\arrow[from=1-1, to=1-2]
      \end{tikzcd}.\\
@@ -389,11 +395,12 @@ The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolu
 \end{align*}
 \endgroup
 
-The relations for $D_i$ are shown in Figure \ref{fig:relations_2}.
+Part of relations for $D_i$ are shown in Figure \ref{fig:relations_2}.
 \begin{figure}[ht]
   \vspace{0cm}
     \centering  
-    \includegraphics[width=10cm]{figures/strands/relations_1.pdf}
+    \includegraphics[width=13cm]{figures/strands/relations_2.pdf} 
+    \includegraphics[width=10cm]{figures/strands/relations_3.pdf} 
     \caption{}
       \label{fig:relations_2}        
 \end{figure}
@@ -434,6 +441,8 @@ The formulas in Theorem \ref{thm:Demazure_operator_2} and Lemma \ref{lem:convolu
   \partial_i f =\;& (s_i f) \partial_i + (f-s_i f) \frac{\lambda_{i+1}-\lambda_{i}+t}{\lambda_{i}-\lambda_{i+1}}\\   
 \end{aligned}
 \end{equation*}
+Readers are welcomed to write a complete set of relations.
+%??? Center of the algebra can be also computed
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Atiyah-Segal completion theorem}\label{sec:AScompletion}
 

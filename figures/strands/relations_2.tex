@@ -1,0 +1,127 @@
+\documentclass[border={7pt 0pt 40pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}%colors
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{array}
+\usepackage{pifont}
+\newcommand{\fakestar}{*}
+\begin{document}
+\begin{table}[]
+\arraycolsep=1pt
+\[
+ \setcellgapes{0ex}\makegapedcells
+\begin{array}{ccccccccccc}
+
+    \;\begin{tikzpicture}[baseline=(current bounding box)]
+    \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0}}
+    \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0}}
+    \tie[color=blue]{{1.25,0.75}}
+ \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+ \node at (-0.3,1) {$\scriptstyle u'$};
+    \node at (0.8,0.5) {\small\ding{194}};
+    \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+    \end{tikzpicture}        &=&
+    \;\begin{tikzpicture}[baseline=(current bounding box)]
+        \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0}}
+        \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0}}
+        \tie[color=blue]{{1.75,0.25}}
+     \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+     \node at (-0.3,1) {$\scriptstyle u'$};
+        \node at (0.8,0.5) {\small\ding{194}};
+        \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+        \end{tikzpicture} &&       
+        &\hspace{10mm}$\,$
+        &
+\;\begin{tikzpicture}[baseline=(current bounding box)]
+    \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0}}
+    \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0}}
+    \tie[color=blue]{{1.25,0.75}}
+    \tie[color=white,bulletie=0.02]{{1.25,0.75}}
+ \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+ \node at (-0.3,1) {$\scriptstyle u'$};
+    \node at (0.8,0.5) {\small\ding{194}};
+    \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+    \end{tikzpicture}        &=&
+    \;\begin{tikzpicture}[baseline=(current bounding box)]
+        \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0}}
+        \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0}}
+        \tie[color=blue]{{1.75,0.25}}
+        \tie[color=white,bulletie=0.02]{{1.75,0.25}}
+     \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+     \node at (-0.3,1) {$\scriptstyle u'$};
+        \node at (0.8,0.5) {\small\ding{194}};
+        \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+        \end{tikzpicture}
+           \\
+D_i^{u,u'}e_i^{u'}&=& e_{i+1}^{u}D_i^{u,u'} &&& &    D_i^{u,u'}(e_i^{u'})^{-1}&=& (e_{i+1}^{u})^{-1} D_i^{u,u'} \\
+\\
+   \;\begin{tikzpicture}[baseline=(current bounding box)]
+       \tie[color=red,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0.5},{1,0}}
+       \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0.5},{2,0}}
+    \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+    \node at (-0.3,0.53) {$\scriptstyle u'$};
+    \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+    \node at (0.8,0.22) {\small\ding{194}};
+       \node at (0.8,0.78) {\small\ding{193}};
+       \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+       \end{tikzpicture}        &=&
+       \;\begin{tikzpicture}[baseline=(current bounding box)]
+           \tie[color=red,bull=1,bulletie=0.01,style=solid]{{1,1},{1,0}}
+           \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{2,1},{2,0}}
+        \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+        \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+           \node at (0.8,0.5) {\phantom{\small\ding{194}}};
+           \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+           \end{tikzpicture} &-&
+\;\begin{tikzpicture}[baseline=(current bounding box)]
+           \tie[color=red,bull=1,bulletie=0.01,style=solid]{{1,1},{1,0}}
+           \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{2,1},{2,0}}
+           \tie[color=red]{{1,0.5}}
+           \tie[color=blue]{{2,0.5}}
+           \tie[color=white,bulletie=0.02]{{2,0.5}}
+        \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+        \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+           \node at (0.8,0.5) {\phantom{\small\ding{194}}};
+           \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+           \end{tikzpicture}        
+        &\hspace{10mm}$\,$
+        &   \;\begin{tikzpicture}[baseline=(current bounding box)]
+               \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{2,0.5},{1,0}}
+               \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{1,0.5},{2,0}}
+            \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+            \node at (-0.3,0.53) {$\scriptstyle u'$};
+            \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+            \node at (0.8,0.22) {\small\ding{193}};
+               \node at (0.8,0.78) {\small\ding{194}};
+               \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+               \end{tikzpicture}        &=&
+               \;\begin{tikzpicture}[baseline=(current bounding box)]
+                   \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{1,0}}
+                   \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{2,0}}
+                \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+                \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+                   \node at (0.8,0.5) {\phantom{\small\ding{194}}};
+                   \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+                   \end{tikzpicture} &-&
+        \;\begin{tikzpicture}[baseline=(current bounding box)]
+                   \tie[color=blue,bull=1,bulletie=0.01,style=solid]{{1,1},{1,0}}
+                   \tie[color=red,bull=1,bulletie=0.01,style=solid]{{2,1},{2,0}}
+                   \tie[color=blue]{{1,0.5}}
+                   \tie[color=red]{{2,0.5}}
+                   \tie[color=white,bulletie=0.02]{{1,0.5}}
+                \node at (-0.3,0.06) {$\scriptstyle u\phantom{'}$};
+                \node at (-0.3,1) {$\scriptstyle u\phantom{'}$};
+                   \node at (0.8,0.5) {\phantom{\small\ding{194}}};
+                   \node at (0.5,-0.2) {$\phantom{\scriptstyle i}$};
+                   \end{tikzpicture}  
+           \\
+D_i^{u,u'}D_i^{u',u} &=& 1^u &-&\left(\raisebox{0.4mm}{$\frac{e_i}{e_{i+1}}$}\right)^{u}& &    D_i^{u,u'}D_i^{u',u} &=& 1^u &-&\left(\raisebox{0.4mm}{$\frac{e_{i+1}}{e_{i}}$}\right)^{u}\\
+\end{array}
+\]
+\end{table}
+\end{document}

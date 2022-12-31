@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 DEC 2022 01:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 DEC 2022 12:29
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1645,6 +1645,21 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 ntfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\pif
+ont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\upz
+d.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ups
+y.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
 \c@theorem=\count340
 \c@thmsub=\count341
 \c@remarks=\count342
@@ -1653,53 +1668,53 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 (chapters/chapter4.aux) (chapters/chapter5.aux) (chapters/chapter6.aux))
 \openout1 = `master_thesis_Xiaoxiang_Zhou.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 196.
+LaTeX Font Info:    Try loading font information for U+msa on input line 197.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 196.
+LaTeX Font Info:    Try loading font information for U+msb on input line 197.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 196.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 197.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 196.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 197.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Package xypdf Info: Line width: 0.43799pt on input line 196.
+Package xypdf Info: Line width: 0.43799pt on input line 197.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1736,7 +1751,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 196.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring OFF on input line 196.
+Package hyperref Info: Link coloring OFF on input line 197.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1752,9 +1767,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count343
 )
-LaTeX Info: Redefining \ref on input line 196.
-LaTeX Info: Redefining \pageref on input line 196.
-LaTeX Info: Redefining \nameref on input line 196.
+LaTeX Info: Redefining \ref on input line 197.
+LaTeX Info: Redefining \pageref on input line 197.
+LaTeX Info: Redefining \nameref on input line 197.
  (master_thesis_Xiaoxiang_Zhou.out)
 (master_thesis_Xiaoxiang_Zhou.out)
 \@outlinefile=\write5
@@ -2106,7 +2121,7 @@ File: figures/table/table_euler_class.pdf Graphic file (type pdf)
 ]
 Chapter 6.
 
-Overfull \hbox (23.3304pt too wide) detected at line 259
+Overfull \hbox (23.3304pt too wide) detected at line 260
 [][]
  []
 
@@ -2125,16 +2140,15 @@ Underfull \vbox (badness 1460) has occurred while \output is active []
 
  [73]
 [74]
-File: figures/temporary/color_wires.jpg Graphic file (type bmp)
-<figures/temporary/color_wires.jpg>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [75]
 File: figures/strands/relations_1.pdf Graphic file (type pdf)
 <use figures/strands/relations_1.pdf>
-
-Overfull \hbox (22.14848pt too wide) in paragraph at lines 416--417
+ [75]
+File: figures/strands/relations_2.pdf Graphic file (type pdf)
+<use figures/strands/relations_2.pdf>
+File: figures/strands/relations_3.pdf Graphic file (type pdf)
+<use figures/strands/relations_3.pdf>
+ [76]
+Overfull \hbox (22.14848pt too wide) in paragraph at lines 423--424
 [][]\TU/lmr/bx/n/10.95 Lemma 6.2.3. []\TU/lmr/m/it/10.95 For $\OML/cmm/m/it/10.
 95 f \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/c
 msy/m/n/10.95 ^^B \U/msb/m/n/10.95 C[]\OT1/cmr/m/n/10.95 )$\TU/lmr/m/it/10.95 ,
@@ -2143,8 +2157,8 @@ msy/m/n/10.95 ^^B \U/msb/m/n/10.95 C[]\OT1/cmr/m/n/10.95 )$\TU/lmr/m/it/10.95 ,
 m/n/10.95 ^^A [][] 2
  []
 
-[76]
-Overfull \hbox (25.49971pt too wide) detected at line 424
+
+Overfull \hbox (25.49971pt too wide) detected at line 431
 \OML/cmm/m/it/10.95 K[] [] [] \U/msb/m/n/10.95 Z []  [] \OML/cmm/m/it/10.95 ;  
 H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 /m/n/10.95 ] [] \OML/cmm/m/it/10.95 :
@@ -2153,14 +2167,14 @@ H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 (master_thesis_Xiaoxiang_Zhou.bbl [77] [78]) [79
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 443.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 443.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
 
 (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/chapter1.aux) (chapters/chapter2.aux) (chapters/chapter3.aux)
 (chapters/chapter4.aux) (chapters/chapter5.aux) (chapters/chapter6.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 443.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 443.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 452.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: DE6DE2B49F66AC66F3E9BB07F1E9B238.
@@ -2168,14 +2182,14 @@ anged.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 443.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
  ) 
 Here is how much of TeX's memory you used:
- 41721 strings out of 427748
- 777555 string characters out of 3150981
- 978719 words of memory out of 3000000
- 45046 multiletter control sequences out of 15000+200000
- 569326 words of font info for 191 fonts, out of 3000000 for 9000
+ 41820 strings out of 427748
+ 779609 string characters out of 3150981
+ 979341 words of memory out of 3000000
+ 45135 multiletter control sequences out of 15000+200000
+ 570384 words of font info for 195 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,3277b,1267s stack positions out of 5000i,500n,10000p,200000b,50000s
 

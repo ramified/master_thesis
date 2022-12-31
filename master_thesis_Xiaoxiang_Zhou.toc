@@ -54,6 +54,6 @@
 \contentsline {subsection}{\numberline {6.1.2}$G \times \mathbb {C}^{\times }$-action}{72}{subsection.6.1.2}% 
 \contentsline {section}{\numberline {6.2}From formula to diagram}{73}{section.6.2}% 
 \contentsline {subsection}{\numberline {6.2.1}One point quiver}{74}{subsection.6.2.1}% 
-\contentsline {subsection}{\numberline {6.2.2}$A_2$-quiver}{76}{subsection.6.2.2}% 
-\contentsline {subsection}{\numberline {6.2.3}$1$-loop quiver}{76}{subsection.6.2.3}% 
+\contentsline {subsection}{\numberline {6.2.2}$A_2$-quiver}{75}{subsection.6.2.2}% 
+\contentsline {subsection}{\numberline {6.2.3}$1$-loop quiver}{77}{subsection.6.2.3}% 
 \contentsline {section}{\numberline {6.3}Atiyah-Segal completion theorem}{78}{section.6.3}% 

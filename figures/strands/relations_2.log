@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 DEC 2022 12:01
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 DEC 2022 11:58
 entering extended mode
-**./relations_1.tex
-(relations_1.tex
+**./relations_2.tex
+(relations_2.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/standalone
@@ -1089,8 +1089,23 @@ tendlayer/tikz/libraries\tikzlibrarydecorations.shapes.code.tex"
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libr
 aries/decorations\pgflibrarydecorations.shapes.code.tex")))
 \c@levelscounter=\count304
-) (relations_1.aux)
-\openout1 = `relations_1.aux'.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\pif
+ont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\upz
+d.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ups
+y.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (relations_2.aux)
+\openout1 = `relations_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -1106,17 +1121,26 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
+ ABD: EveryShipout initializing macros
+Overfull \hbox (45.1617pt too wide) detected at line 125
+[]
+ []
 
-ABD: EveryShipout initializing macros [1
 
-] (relations_1.aux) ) 
+Overfull \hbox (45.1617pt too wide) detected at line 127
+[]
+ []
+
+[1
+
+] (relations_2.aux) ) 
 Here is how much of TeX's memory you used:
- 26629 strings out of 427748
- 540301 string characters out of 3150981
- 649152 words of memory out of 3000000
- 30322 multiletter control sequences out of 15000+200000
- 532800 words of font info for 27 fonts, out of 3000000 for 9000
+ 26650 strings out of 427748
+ 540399 string characters out of 3150981
+ 633295 words of memory out of 3000000
+ 30330 multiletter control sequences out of 15000+200000
+ 533858 words of font info for 31 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,17n,84p,488b,985s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,18n,84p,488b,971s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on relations_1.pdf (1 page).
+Output written on relations_2.pdf (1 page).
