@@ -2,7 +2,7 @@
 \chapter{Cellular fibration theorem}
 \section{Statement}
 We first state one general theorem, and then apply it repeatly to get the cellular fibration theorem.
-\begin{theorem}[Glueing theorem]\label{thm:glueing_theorem}
+\begin{theorem}[{Glueing theorem, \cite[Lemma 5.5.1(a)]{chriss1997representation}}]\label{thm:glueing_theorem}
 Suppose the triple $(X,Y,\pi)$ satisfies assumption \eqref{eq:assumption2}. For a $G$-equivariant closed embedding $i:Z \hookrightarrow Y$, denote $U:=Y \smallsetminus Z$, and $j:U \hookrightarrow Y$ as the open immersion, as follows.
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJaIl0sWzEsMCwiWSJdLFsyLDAsIlUiXSxbMSwxLCJYIl0sWzAsMSwiaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzEsMywiXFxwaSJdXQ==
 \[\begin{tikzcd}
@@ -61,7 +61,7 @@ such that $\pi_j:=\pi\big|_{E_j \smallsetminus E_{j-1}}: E_j \smallsetminus E_{j
 When $X=\pt$, this filtration is called a \textbf{cellular decomposition} of $E$.
 \end{defn}
 
-\begin{theorem}[Cellular fibration]\label{thm:cellular_fibration}
+\begin{theorem}[{Cellular fibration, \cite[Lemma 5.5.1]{chriss1997representation}}]\label{thm:cellular_fibration}
 Suppose a $G$-equivariant morphism $\pi: E \longrightarrow X$ has a cellular fibration structure
 $$\varnothing =E_0 \subseteq E_1 \subseteq \cdots \subseteq E_k=E$$
 and $K^G(X)$ is a free $\Rpt(G)$-module with basis $\{y_1,\ldots,y_m \}$. 
@@ -84,7 +84,7 @@ When $\overline{U}_j$ is smooth, $\pi_{\overline{U}_j}^*(1_{\Rpt(G)})= 1_{K^G\le
 \end{itemize}
 \end{theorem}
 
-This theorem is powerful. Most stratifications can be (non-canonically) viewed as cellular decompositions, and the theorem gives us the $\Rpt(G)$-module structure of the total space. Readers can compare this theorem with the cellular cohomology of CW-complexs with no cell in odd dimension.
+Most stratifications can be (non-canonically) viewed as cellular decompositions, and the theorem gives us the $\Rpt(G)$-module structure of the total space. Readers can compare this theorem with the cellular cohomology of CW-complexs with no cell in odd dimension.
 
 
 \section{Application: module structure}
@@ -185,7 +185,7 @@ For computing $K^{\GL_n}(\mathcal{F} \times \mathcal{F})$, consider the ($GL_n$-
 	\arrow["\cdots"{marking}, draw=none, from=1-1, to=1-2]
 	\arrow["\cdots"{marking}, draw=none, from=1-2, to=1-3]
 \end{tikzcd}\]
-By Theorem \ref{thm:cellular_fibration} and Example \ref{eg:contracted_product_FF}, we get
+By Theorem \ref{thm:cellular_fibration} and Example \ref{eg:balanced_product_FF}, we get
 \begin{equation*}
 \begin{aligned}
   K^{\GL_n}(\mathcal{F} \times \mathcal{F})\cong\;& \bigoplus_{w'} K^{\GL_n}(\OOmcell_{w'})  \\ 
@@ -230,4 +230,4 @@ We compute $G_{\dimvec{d}}$-equivariant $K$-theory of the Steinberg variety in t
 \end{equation*}
 \end{eg}
 
-Now we've done with the module structure. The equivariant cohomology theory can be also computed in the exact same way, see \cite[Chapter 7]{przezdziecki2015geometric}.
+The equivariant cohomology theory can be computed in the same way, see \cite[Chapter 7]{przezdziecki2015geometric}.

@@ -35,7 +35,7 @@ $$W:= N_{\GL_n}(T)/T \cong S_n$$
 }
 \end{setting}
 
-\subsection{$\mathcal{F}$}
+\subsection{The flag variety $\mathcal{F}$}
 \begin{defn}[Flag]
 For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_k = V.$$
@@ -62,7 +62,7 @@ $$\mathcal{F} \hookrightarrow \Gr(1,n) \times \cdots \times \Gr(n-1,n)$$
 
 \item We implicitly give the base point of $\mathcal{F}$, which is not considered as the data of $\mathcal{F}$. Fix a standard basis of $\mathbb{C}^n$ by $\{v_1, \ldots, v_n \}$, we define the standard flag
 $$F_{\Id}: 0 \subseteq \left< v_1 \right> \subseteq \left< v_1,v_2 \right> \subseteq \cdots \subseteq \left< v_1, \ldots, v_n \right> = \mathbb{C}^n.$$
-\item We have the natural $\GL_n$-action on $\mathcal{F}$, which is considered as the data of $\mathcal{F}$.
+\item There is a natural $\GL_n$-action on $\mathcal{F}$.
 
 For $g \in \GL_n$, we define the flag attached to $g$: 
 $$F_g \triangleq gF_{\Id}: 0 \subseteq \left< gv_1 \right> \subseteq \left< gv_1,gv_2 \right> \subseteq \cdots \subseteq \left< gv_1, \ldots, gv_n \right> = \mathbb{C}^n.$$
@@ -76,7 +76,7 @@ Especially, for $w \in W=N_{\GL_n}(T)/T \cong S_n$, the flag attached to $w$
 does not depend on the choice of the lift $\tilde{w} \in N_{\GL_n}(T)$ of $w$.
 
 Readers can verify that $\left\{ F_w \,\middle|\, w \in W \right\}$ are all $T$-fixed points of $\mathcal{F}$, while the set $\left\{ wBw^{-1} \,\middle|\, w \in W \right\}$ consists of all Borel subgroups of $G$ containing the standard torus $T$.
-\item For $n=2$, $\mathcal{F} \cong \mathbb{P}^1$. We encourage readers to use $\mathbb{P}^1$ as a toy example for the whole theory.
+\item For $n=2$, $\mathcal{F} \cong \mathbb{P}^1$, and we use $\mathbb{P}^1$ as a toy example for the whole theory.
 \end{enumerate}
 \end{remark}
 
@@ -95,7 +95,7 @@ general point  & $g$                 & $F_g$                       & $gBg^{-1}$ 
         
 $\mathcal{F}$ is a well-studied variety, and has many combinatorical properties. For example, from the well-known Bruhat decomposition,
 \footnotemark 
-\footnotetext{For the most time the formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
+\footnotetext{The formula does not depend on the lift of $w$, so we abuse the notation of $w \in N_{\GL_n}(T)/T$ and $\tilde{w} \in N_{\GL_n}(T)$.}
 $$\GL_n =\bigsqcup_{w\in W} BwB,$$
 we get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
@@ -129,7 +129,7 @@ $\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert vari
 $$\overline{\Omcell}_w= \bigsqcup_{w' \leq w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
 $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
-For other Schubert varieties, the structures are quite dedicate and far away from the scope of this master thesis. For example, most  Schubert varieties are not smooth.
+Most  Schubert varieties are not smooth.
 
 
 \subsection{$\mathcal{F} \times \mathcal{F}$}\label{subsec:product_of_F}
@@ -193,9 +193,9 @@ T                  & -                         & \{\underline{F}_{w,w'} |  \, w,
 Like $\mathcal{F}$, we also study the closure of $\OOmcell_{w'}$ and $\OOmcell_{w,w'}$ in special case. It can be shown that 
 $$\overline{\OOmcell}_{w'} = \bigsqcup_{x'\leq w'} \OOmcell_{x'} \qquad 
 \overline{\OOmcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}$$
-as a set. Especially, for any $s \in W$ with $l(s)=1$, \footnote{Here, $\GL_n \times^B X$ is called contracted product. Roughly, it is defined by
+as a set. Especially, for any $s \in W$ with $l(s)=1$, \footnote{Here, $\GL_n \times^B X$ is called balanced product. Roughly, it is defined by
 $$\GL_n \times^B X :=\GL_n \times X/\big( (gb,x) \sim (g,bx) \big)$$
-We will discuss contracted product in Subsection \ref{subsec:contracted_product} thoroughly.}
+We will discuss balanced product in Subsection \ref{subsec:balanced_product} thoroughly.}
 
 \begin{equation*}
 \begin{aligned}
@@ -219,9 +219,8 @@ Other closure can be highly singular.
 \begin{table}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=12.8cm]{figures/table/table_1.pdf}
-      \label{table:stratifications_of_FF}
         \caption{stratifications of $\mathcal{F}\times \mathcal{F}$}
-        
+        \label{table:stratifications_of_FF}
 \end{table}
 
 \begin{eg}
@@ -240,7 +239,7 @@ We can also see the $\GL_3$-orbit (and its closure) from the table, for example,
   \overline{\OOmcell}_{s}=\;& \OOmcell_{s} \sqcup \OOmcell_{\Id} = \bigsqcup_{w} (\OOmcell_{w,s} \sqcup \OOmcell_{w,\Id})
 \end{aligned}
 \end{equation*}
-We color pieces of $\OOmcell_{s}$ by blue, and $\OOmcell_{ts,s}$ by ink blue.
+We color pieces of $\OOmcell_{s}$ by blue, and $\OOmcell_{ts,s}$ by light blue.
 \end{eg}
 
 
@@ -326,7 +325,7 @@ A representation of $Q$ consists of the following data:
 \item A $\mathbb{C}$-linear map $V_a: V_{s(a)} \longrightarrow V_{t(a)}$ for each arrow $a \in Q_1$.
 \end{itemize}
 
-A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longrightarrow W_i$ (for every $i \in Q_0$) which make the following diagram commute:
+A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longrightarrow W_i$ (for every $i \in Q_0$) which makes the following diagram commute:
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJWX3tzKGEpfSAiXSxbMSwwLCJWX3t0KGEpfSJdLFsxLDEsIldfe3QoYSl9Il0sWzAsMSwiV197cyhhKX0gIl0sWzAsMywiZl97cyhhKX0iLDJdLFswLDEsIlZfYSJdLFsxLDIsImZfe3QoYSl9Il0sWzMsMiwiV19hIl1d
 \[\begin{tikzcd}
 	{V_{s(a)} } & {V_{t(a)}} \\
@@ -339,21 +338,20 @@ A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longr
 
 We denote $\rep(Q)$ as the category of representations of $Q$.
 \end{defn}
-\begin{eg}
-A representation of $1$-loop quiver $L(1)$ is a $2$-tuple
+\begin{eg}\label{eg:1-loop_quiver}
+A representation of the $1$-loop quiver $L(1)$ is a $2$-tuple
 $$(V, \; \alpha: V \longrightarrow V)$$
 which is equivalent to a (finite dimensional) $\mathbb{C}[t]$-module.
 \end{eg}
 \begin{remark}
-The equivalence appeared in the example can actually be generalized to arbitrary quivers. For a quiver $Q$, we can define the path algebra $\mathbb{C}Q$, and view any $Q$-representation as $\mathbb{C}Q$-module, and vice versa.
+The equivalence in Example \ref{eg:1-loop_quiver} can be generalized to arbitrary quivers. For a quiver $Q$, we can define the path algebra $\mathbb{C}Q$, and view any $Q$-representation as $\mathbb{C}Q$-module, and vice versa.
 \end{remark}
 
-For many constructions, we only care about the data of vector space.
 \begin{defn}[$Q$-vector space/Vector space with quiver partition]
 Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with a direct sum decomposition
 $$V= \bigoplus_{i \in Q_0} V_i.$$
 The dimension vector of a $Q$-vector space is defined as
-$$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \subseteq \prod_{i \in Q_0} \mathbb{Z}.$$
+$$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \in \prod_{i \in Q_0} \mathbb{Z}.$$
 \end{defn} 
 
 On the contrary, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
@@ -389,13 +387,13 @@ $$\dim_{\mathbb{C}} M_j=j \qquad \text{ for any }j \in \{1,\ldots, \abdimvec{d} 
 For the flag we also have the notation of dimension vector.
 \begin{defn}[flag-type dimension vector]
 For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V$, the dimension vector of $F$ is defined as
-$$\ftdimvec{d}=\big(\!\dimv M_j   \big)_{j \in \{1,\ldots,k\}} \subseteq \prod_{\substack{i \in Q_0 \\ j \in \{1,\ldots,k\}}} \mathbb{Z}.$$
+$$\ftdimvec{d}=\big(\!\dimv M_j   \big)_{j \in \{1,\ldots,k\}} \in  \prod_{\substack{i \in Q_0 \\ j \in \{1,\ldots,k\}}} \mathbb{Z}.$$
 $\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e., \footnote{For convenience, we denote $M_0$ by 0.}
 $$\left| \dimv M_{j+1}/M_j \right|=1 \qquad \text{ for any }j \in \{0,\ldots, \abdimvec{d}-1  \}.$$
 \end{defn}
 
 \begin{eg}\label{eg:5-case-0}
-For quiver $Q: \textcolor{red}{i} \longrightarrow \textcolor{blue}{i'}$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
+For the quiver $Q: \textcolor{red}{i} \longrightarrow \textcolor{blue}{i'}$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
 \begin{equation*}
 \begin{aligned}
   V=\;& V_i \oplus V_{i'} \\ 
@@ -450,27 +448,27 @@ As a reminder, we recall some basic diagrams referring to the elements in $S_n$,
 
 Fix a quiver $Q$ and dimension vector $\dimvec{d}$. Later (Definition \ref{def:absalggp}, \ref{def:relalggp}) we will define 
 $$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \in Q_0} S_{\dimvec{d}_i} \leqslant \absgp{W}_{\abdimvec{d}}$$
-For simplicity, we take $Q_0=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embed in  $S_{\abdimvec{d}}$ in the most natural way.
+For simplicity, we take $Q_0=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embeds in  $S_{\abdimvec{d}}$.
 
 \begin{remark}
 We have different ways to express $\ww \in \absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}}$. For example, take $\abdimvec{d}=5$, $\ww \in S_5$ by
 $$\ww(1)=4,\quad \ww(2)=3,\quad \ww(3)=1,\quad \ww(4)=5,\quad \ww(5)=2,$$ 
-then
+then one can represent $\ww$ via
 {
 \setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
 \begin{equation*}
 \begin{aligned}
-  \ww=\;& (14523)= \begin{pmatrix}
+  \ww \hat{=}\;& (14523) \hat{=} \begin{pmatrix}
   1\,2\,3\,4\,5\\ 4\,3\,1\,5\,2
-  \end{pmatrix} = \parbox[h][][c]{3cm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-2mm} =\begin{bmatrix}
+  \end{pmatrix} \hat{=} \parbox[h][][c]{3cm}{\permutation[tkzpic=1]{4,3,1,5,2}}\hspace{-6mm} \hat{=}\begin{bmatrix}
   &&\scriptstyle 1&&\\
   &&&&\scriptstyle 1\\
   &\scriptstyle 1&&&\\
   \scriptstyle 1&&&&\\
   &&&\scriptstyle 1&
   \end{bmatrix} \\ 
-  =\;& (23)(34)(45)(12)(23)(12) = \hspace{0mm} 
+  \hat{=}\;& (23)(34)(45)(12)(23)(12) \hat{=} \hspace{0mm} 
   \parbox[h][][c]{3cm}{ \begin{tikzpicture}
    \permutation[
    height=0.2,
@@ -549,13 +547,13 @@ to be the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimve
 \end{defn}
 We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ to be the longest elements in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively. See Table \ref{table:Wgp_collected_notations} for a picture of $\ww_{\max}$ and $w_{\max}$.
 
-We discuss about right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
+We discuss right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
 
-Multiplying on left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following fact more explicitly.
+Multiplying on the left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following more explicitly.
 
-\begin{fact}\label{fact:5-case-0.05}
+\begin{proposition}\label{prop:5-case-0.05}
 Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$, i.e., an ordered set of points colored by the vertices of $Q$.
-\end{fact}
+\end{proposition}
 
 \begin{eg}\label{eg:5-case-0.1}
 \begin{equation*}
@@ -646,18 +644,17 @@ This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\
 It is easy to see from the diagram that in every coset, there exists an unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. We collect these minimal length coset representatives as a set, and denote it by $\MinWd$.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
 
 \begin{proposition}
-For any $\ww \in \absgp{W}_{\abdimvec{d}}$, exists unique $w \in \Wd$, $u \in \MinWd$ such that $\ww=wu$. 
+For any $\ww \in \absgp{W}_{\abdimvec{d}}$, there exists unique $w \in \Wd$, $u \in \MinWd$ such that $\ww=wu$. 
 \end{proposition}
-\begin{ex}
-For $u \in \MinWd$, $s_i \in \Pi$, show that
+\begin{proposition}
+For $u \in \MinWd$, $s_i \in \Pi$,
 \begin{equation*}
 \begin{aligned}
 us_iu^{-1}\in W_{\dimvec{d}} \quad\Longrightarrow&\quad us_iu^{-1}=s_{u(i)} \in \Pi_{\dimvec{d}},\\
 us_iu^{-1}\notin W_{\dimvec{d}} \quad\Longrightarrow&\quad us_i \in \MinWd.
 \end{aligned}
 \end{equation*}
-The picture of $us_i$ is shown in Table \ref{table:Lie_alg}.
-\end{ex}
+\end{proposition}
 
 We finish this section with figures and examples.
 % https://q.uiver.app/?q=WzAsOSxbMywwLCJcXE1pbldkIl0sWzMsMSwiV197XFxkaW12ZWN7ZH19XFxzZXRtaW51c1xcYWJzZ3B7V31fe1xcYWJkaW12ZWN7ZH19Il0sWzIsMSwiXFxhYnNncHtXfV97XFxhYmRpbXZlY3tkfX0iXSxbNCwxLCIwIl0sWzEsMSwiV197XFxkaW12ZWN7ZH19Il0sWzAsMSwiMCJdLFs2LDAsInUiXSxbNSwxLCJcXHd3PXd1Il0sWzYsMSwiXFxmdGRpbXZlY3tkfSJdLFswLDEsIlxcY29uZyJdLFswLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzIsMV0sWzEsM10sWzQsMl0sWzUsNF0sWzcsOCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFs2LDgsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
@@ -675,7 +672,7 @@ We finish this section with figures and examples.
 \end{tikzcd}\]
 
 \begin{eg}\label{eg:5-case-1}
-In this table, $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, typical elements would be
+In Table \ref{table:Wgp_collected_notations}, $\abdimvec{d}=5$, $\dimvec{d}=(3,2)$, typical elements would be
 $$\ww = \parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{4,3,1,5,2}} \quad
 w =\parbox[h][][c]{3cm}{\permutation[tkzpic=1,type=0]{3,1,2,5,4}} \quad
 u =\parbox[h][][c]{3cm}{
@@ -749,8 +746,8 @@ W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}} \cong (S_3 \times S_2) \setminus
 \end{eg}
 
 \begin{eg}\label{eg:3-case-1}
-In this table, 
-$$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns "order of basis" and "Borel subgroups" will be introduced in Definition \ref{def:special_flags} and Remark \ref{rmk:Borel_difference}.
+In Table \ref{table:smalleg_Weyl}, 
+$$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2,\qquad s=(12),\quad t=(23).$$ The columns ``order of basis" and ``Borel subgroups" will be introduced in Definition \ref{def:special_flags} and Remark \ref{rmk:Borel_difference}.
 
 \begin{table}[ht]
   \vspace{0cm}
@@ -760,10 +757,8 @@ $$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2
         \end{table}
         
 \end{eg}
-\section{Algebraic group and Lie algebra}\label{sec:algebraic_group_Lie_algebra}
-In this section we fix notations of algebraic group and Lie algebras. Later, the algebraic group will act on varieties, and some Lie algebra will serve as tangent spaces.
-
-
+\section{Algebraic groups and Lie algebras}\label{sec:algebraic_group_Lie_algebra}
+In this section we fix notations for some algebraic groups and Lie algebras. 
 
 \begin{setting}\label{set:Qvs}
 Fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $Q$-vector space 
@@ -774,9 +769,9 @@ where
 $$V_i=\left< v_{f_i+1}, \ldots v_{f_i+\dimvec{d}_i} \right> \qquad f_i= \sum_{i' < i} \dimvec{d}_{i'}.$$
 \end{setting}
 
-\subsection{Algebraic group}
+\subsection{Algebraic groups}
 
-\begin{defn}[absolute algebraic groups]\label{def:absalggp}
+\begin{defn}[Absolute algebraic groups]\label{def:absalggp}
 %The following algebraic groups are not related to the quiver partition of $V$.
 We set
 $$\absgp{G}_{\abdimvec{d}}:= \GL(V)=\GL_{\abdimvec{d}}(\mathbb{C}),$$
@@ -790,12 +785,10 @@ $$\absgp{B}_{\ww}:= \ww \absgp{B}_{\abdimvec{d}} \ww^{-1}.$$
 We will view $\absgp{B}_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $\absgp{G}_{\abdimvec{d}}$-action.
 \end{defn}
 
-We also have a series of algebraic groups compatible with the quiver partition of $V$, and they're more common in this thesis.
-
-\begin{defn}[relative algebraic groups]\label{def:relalggp}
+\begin{defn}[Relative algebraic groups]\label{def:relalggp}
 
 We set
-$$G_{\dimvec{d}}:= \bigoplus_{i \in Q_0}\GL(V_i)=\bigoplus_{i \in Q_0}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
+$$G_{\dimvec{d}}:= \prod_{i \in Q_0}\GL(V_i)=\prod_{i \in Q_0}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
 and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
 
 The Weyl group is
@@ -808,12 +801,12 @@ We will view $B_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $G_{\dimvec{
 
 \begin{remark}\label{rmk:Borel_difference}
 Be careful that $B_{\ww} \neq \ww B_{\dimvec{d}} \ww^{-1}$. Actually,
-$$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}}\ww^{-1} \cap B_{\dimvec{d}}=wB_{\dimvec{d}}w^{-1}$$
+$$B_{\ww}= \ww \absgp{B}_{\abdimvec{d}}\ww^{-1} \cap G_{\dimvec{d}}=wB_{\dimvec{d}}w^{-1}$$
 The difference is clearly shown in Table \ref{table:smalleg_Weyl}.
 \end{remark}
 
 We also have a series of algebraic groups indexed by elements in the Weyl group:
-\begin{defn}[more algebraic groups]
+\begin{defn}[More algebraic groups]
 For $\ww, \ww'' \in \absgp{W}_{\abdimvec{d}}$, define
 \begin{equation*}
 \begin{aligned}
@@ -1029,10 +1022,10 @@ We use Fraktur-font symbols to represent the Lie algebras of the corresponding a
 
 We also have to encode the information of representations as Lie algebra. Notice that
 $$\Hom (V_{s(a)},V_{t(a)}) \hookrightarrow \Hom(V,V) \cong \boldsymbol{\mathfrak{g}}_{\abdimvec{d}} \qquad f \longmapsto \iota_{t(a)} \circ f \circ \pi_{s(a)}$$
-realizes $\Hom (V_{s(a)},V_{t(a)})$ as a Lie subalgebra of $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$, so 
+realizes $\Hom (V_{s(a)},V_{t(a)})$ as a subspace of $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$, so 
 $$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
 \begin{defn}[Lie algebras connected with representations]\label{def:Lie_alg_with_rep}
-For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote temperately 
+For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote 
 $$V_{\ww,j}:= \left< e_{\ww(1)},\ldots e_{\ww(j)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
 %https://tex.stackexchange.com/questions/352752/align-inside-left-right
@@ -1097,9 +1090,9 @@ Another twist happens when we add minus sign as the superscript:
 \end{aligned}
 \end{equation*}
 \end{remark}
-\section{Typical variety}\label{sec:typical_variety}
+\section{Quiver flag varieties}\label{sec:typical_variety}
 
-In this section, we define nearly all the varieties we care about in the same spirit as Section \ref{sec:inital_case}. Their stratifications and related "Schubert" varieties will be defined in Section \ref{sec:stratification}.
+In this section, we define quiver flag varieties we care about in the same spirit as Section \ref{sec:inital_case}. Their stratifications and related ``Schubert" varieties will be defined in Section \ref{sec:stratification}.
 
 Recall Setting \ref{sec:inital_case} and Definition \ref{def:flag_with_quiver}.
 \subsection{Flag variety}
@@ -1144,7 +1137,7 @@ Here, $M_i$ are $Q$-vector spaces.
 \item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ are smooth varieties, since
 $$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in Q_0} \GL_{\dimvec{d}_i}/B$$
 are products of usual flag varieties.
-\item $\mathcal{F}_{\abdimvec{d}}$ is an $\GL_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\ftdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
+\item $\mathcal{F}_{\abdimvec{d}}$ is an $\absgp{G}_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\ftdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
 \end{enumerate}
 \end{remark}
 
@@ -1204,7 +1197,7 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 
 \subsection{Incidence variety}
 
-Now it is time to conclude information about arrows, and construct spaces over varieties in Table \ref{table:base_varieties}.
+Now it is time to include information about arrows.
 
 \begin{defn}[Incidence variety]\label{def:incidence_variety}
 For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
@@ -1238,7 +1231,7 @@ records the complete flags of subrepresentations of $M$. The partial flag variet
 \end{remark}
 \end{defn}
 \begin{defn}[Steinberg variety]
-For quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define 
+For a quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define 
 \begin{equation*}
 \begin{aligned}
   \St_{\ftdimvec{d},\ftdimvec{d}'}:=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
@@ -1287,7 +1280,8 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 
 \section{Stratification and $T$-fixed points}\label{sec:stratification}
 
-Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed into relatively easy pieces. In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also mention about their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology theory in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another "basis" in Chapter \ref{chap:localization}.
+%Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed into relatively easy pieces. 
+In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notations of orbits. We will also discuss their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another ``basis" in Chapter \ref{chap:localization}.
 
 \subsection{Stratification: flag variety}
 
@@ -1578,9 +1572,7 @@ We end this subsection by Table \ref{table:orbit}:
 
 \subsection{$T$-fixed points}
 
-Compare with stratifications, $T$-fixed points are easy to compute and have clear structures. Somewhat surprisingly, these $T$-fixed points encode most information of varieties.
-
-Recall that the $T$-fixed points of a complete flag variety $\mathcal{F}$ are exactly those coordinate flags $\left\{ F_w \,\middle|\, w \in W \right\}$. For absolute or relative flag varieties, we have similar results:
+Recall that the $T$-fixed points of a complete flag variety $\mathcal{F}$ are exactly the coordinate flags $\left\{ F_w \,\middle|\, w \in W \right\}$. For absolute or relative flag varieties, we have similar results:
 $$\mathcal{F}_{\abdimvec{d}}^{\absgp{T}_{\abdimvec{d}}} = \mathcal{F}_{\dimvec{d}}^{T_{\dimvec{d}}}= \left\{ F_{\ww} \,\middle|\, \ww \in \WWd \right\} \qquad \mathcal{F}_u^{T_{\dimvec{d}}} = \left\{ F_{wu} \,\middle|\, w \in \Wd \right\}$$ 
 For $\Rep_{\dimvec{d}}(Q)$, we get
 $$\big(\!\Rep_{\dimvec{d}}(Q) \big)^{T_{\dimvec{d}}} = \bigoplus_{a \in Q_1} \bigg( \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \bigg)^{T_{\dimvec{d}}} =\{ \rho_0 \}$$
@@ -1610,7 +1602,7 @@ Notice that, each $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit of $\mathcal{F}_{
 
 \subsection{Tangent spaces of $T$-fixed points}\label{subsec:tangent_space}
 
-The tangent space of $T$-fixed points will be used in Chapter \ref{chap:localization}, so we fix symbols of them and compute some of them as Lie algebras.\footnote{In algebraic geometry, we can define the tangent space at even singular points, see \cite[12.1]{vakil2017rising}.}
+The tangent space of $T$-fixed points will be used in Chapter \ref{chap:localization}, so we fix symbols of them and compute some of them as Lie algebras.\footnote{In algebraic geometry, we can define the tangent space even at singular points, see \cite[12.1]{vakil2017rising}.}
 
 \begin{defn}[Tangent space of $T$-fixed points]
 For $\ww,\ww',x \in \WWd$, we denote the following tangent spaces:
@@ -1693,14 +1685,11 @@ We know a little more on the biggest cells. Here is an example. When $\ww'=\ww x
 In particular,
 \begin{equation*}
 \begin{aligned}
-  \mathcal{T}_{\ww,\ww}^{\Id}\cong \;& \mathfrak{n}_{\ww}^{-}  \quad & \preimage{\mathcal{T}}_{\ww,\ww}^{s}\cong \;& \mathfrak{r}_{\ww,\ww} \oplus \mathfrak{n}_{\ww}^{-}  \\ 
-  \mathcal{T}_{\ww,\ww s}^{s}\cong \;& \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \quad & \preimage{\mathcal{T}}_{\ww,\ww s}^{s}\cong \;& \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s} \\ 
+  \mathcal{T}_{\ww,\ww}^{\Id}\cong \;& \mathfrak{n}_{\ww}^{-},  \quad & \preimage{\mathcal{T}}_{\ww,\ww}^{s}\cong \;& \mathfrak{r}_{\ww,\ww} \oplus \mathfrak{n}_{\ww}^{-},  \\ 
+  \mathcal{T}_{\ww,\ww s}^{s}\cong \;& \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s}, \quad & \preimage{\mathcal{T}}_{\ww,\ww s}^{s}\cong \;& \mathfrak{r}_{\ww,\ww s} \oplus \mathfrak{n}_{\ww}^{-} \oplus \mathfrak{m}_{\ww,\ww s}. \\ 
 \end{aligned}
 \end{equation*}
 \end{remark}
 
 
 
-
-
-With huge effort, finally we fixed all the symbols and understand those typical varieties in detail.

@@ -1,17 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Localization theorem}\label{chap:localization}
-We have already gotten the module structure of $K$-theories. However, this basis behaves badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because "the information is not concentrated enough". In this chapter we will introduce another basis, which "concentrates information in the $T$-fixed points". The localization formula describes the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
+We have already gotten the module structure of $K$-theories. However, this basis behaves badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because ``the information is not concentrated enough". In this chapter we will introduce another basis, which ``concentrates information in the $T$-fixed points". The localization formula describes the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
 
 
 \section{Euler class}\label{sec:euler_class}
-In the category of coherent sheaf, the "proper base change" is usually not true. In order to describe the defect of the diagram, we introduce the Euler class.
+In the category of coherent sheaf, the ``proper base change" is usually not true. In order to describe the defect of the diagram, we introduce the Euler class.
 
 \begin{defn}[Euler class, for $K$-group]
 Let $X$ be a $G$-variety, and $\mathcal{T}$ be a $G$-equivariant vector bundle over $X$. The Euler class is defined by
 $$\eu(\mathcal{T}):= \sum_{k=0}^{\infty} (-1)^k \left[ \Lambda^{k} \mathcal{T}^* \right] \in K^G(X) $$
 \end{defn}
 
-In practice, $X$ are points and $G$ is a torus. In that case, since we know the representation of a torus (see Example \ref{eg:K-initial-2}), the Euler class can be explicitly written down. For example, ($X=\pt$)
+In our examples, $X$ are points and $G$ is a torus. In that case, since we know the representation of a torus (see Example \ref{eg:K-initial-2}), the Euler class can be explicitly written down. For example, ($X=\pt$)
 \begin{equation*}
 \begin{aligned}
   &\eu\left( 1 \right)=  1\\ 
@@ -19,20 +19,17 @@ In practice, $X$ are points and $G$ is a torus. In that case, since we know the 
       &\eu\left(\frac{e_1}{e_2}+\frac{e_2}{e_3}+\frac{e_3}{e_1} \right)=  \left(1-\frac{e_2}{e_1}\right)\left(1-\frac{e_3}{e_2}\right)\left(1-\frac{e_1}{e_3}\right)\\ 
 \end{aligned}
 \end{equation*}
-Here we confuse the notation of $\Rpt(T)$ and $\Rep(T)$: the elements inside the bracket of Euler class should be viewed as a vector bundle rather than a $\mathbb{Z}$-linear combination of coherent sheaves. 
-
-\begin{warning}
-Compared with usual Euler class, some properties are kept in $K$-theory version, while some are not. For example, for line bundles $\mathcal{L}$, $\mathcal{L}_1$, $\mathcal{L}_2$ over $X$,
-\begin{equation*}
-\begin{aligned}
-  &  \eu(\mathcal{T} \oplus \mathcal{T}') \cong \eu(\mathcal{T}) \cdot \eu(\mathcal{T}'),            \\ 
-  & \eu(\mathcal{L}_1 \otimes \mathcal{L}_2) \neq \eu(\mathcal{L}_1 )+\eu( \mathcal{L}_2) \qquad \eu(\mathcal{L}^{*}) \neq -\eu(\mathcal{L}).
-\end{aligned}
-\end{equation*}
-\end{warning}
+Here we abuse the notation for $\Rpt(T)$ and $\Rep(T)$: the elements inside the bracket of Euler class should be viewed as a vector bundle rather than a $\mathbb{Z}$-linear combination of coherent sheaves. 
 
 \begin{remark}
-We also have equivariant Euler class for cohomology theory, see \cite[Chapter 9]{przezdziecki2015geometric}, ??? for more details. In particular, for any $T$-representation $\mathcal{T}$ with weight space decomposition $\mathcal{T}^{*} = \oplus \mathcal{T}_{\lambda}^{*}$, the Euler class of $\mathcal{T}$ (for cohomology theory) is defined by
+For Euler classes in $K$-theory, we have
+\begin{equation*}
+\begin{aligned}
+  &  \eu(\mathcal{T} \oplus \mathcal{T}') \cong \eu(\mathcal{T}) \cdot \eu(\mathcal{T}')            \\ 
+  & \eu(\mathcal{L}_1 \otimes \mathcal{L}_2) \neq \eu(\mathcal{L}_1 )+\eu( \mathcal{L}_2) \qquad \eu(\mathcal{L}^{*}) \neq -\eu(\mathcal{L})
+\end{aligned}
+\end{equation*}
+for line bundles $\mathcal{L}$, $\mathcal{L}_1$, $\mathcal{L}_2$ over $X$. We also have equivariant Euler class for cohomology, see \cite[Chapter 9]{przezdziecki2015geometric}, ??? for more details. In particular, for any $T$-representation $\mathcal{T}$ with weight space decomposition $\mathcal{T}^{*} = \oplus \mathcal{T}_{\lambda}^{*}$, the Euler class of $\mathcal{T}$ (for cohomology theory) is defined by
 $$\eu'(\mathcal{T}):= \prod_{\lambda \in X^{*}(T)} \lambda^{\dim \mathcal{T}_{\lambda}^{*}} \in \Spt(T) $$
 where $X^{*}(T)$ embeds in $\Spt(T)$ by
 $$X^{*}(T) \longrightarrow \Spt(T) \qquad \sum_{i}k_i \varepsilon_i \longmapsto \sum_{i}k_i \lambda_i.$$
@@ -93,7 +90,7 @@ $$i^*i_* \beta =\eu \left( \bigoplus_k T_{x_k}X \right) \cdot \beta \qquad i_{k}
 
 \end{proposition}
 
-This proposition is not as powerful as it is supposed to be, but it explains some technical details in the localization theorem and localization formula. First, we would like to work on a base ring where Euler classes are invertible, so we denote the curly font as everything in the fraction field.
+This proposition explains some technical details in the localization theorem and localization formula. First, we would like to work on a base ring where Euler classes are invertible, so we denote the curly font as everything in the fraction field.
 \begin{equation*}
 \begin{aligned}
   \Rptc(T):=\;& \Frac\!\big(\!\Rpt(T)\big) \qquad & \Kcurl^T(X):=\;& K^T(X) \otimes_{\Rpt(T)}\Rptc(T)  \\ 
@@ -101,7 +98,7 @@ This proposition is not as powerful as it is supposed to be, but it explains som
 \end{aligned}
 \end{equation*}
 
-Now we can do linear algebras and discuss about the actual basis:
+
 \begin{theorem}[{Localization theorem, \cite[Theorem 10.1]{przezdziecki2015geometric} or \cite[Corollary 5.11.3]{chriss1997representation}}] \label{thm:localization_theorem}
 Let $X$ be a smooth $T$-variety,  $i:X^T \longrightarrow X$ be the embedding. The morphisms $i_*$, $i^*$ are isomorphism after tensored over the fraction field, i.e.,
 % https://q.uiver.app/?q=WzAsNixbMSwwLCJcXEtjdXJsXlQoWCkiXSxbMCwwLCJcXEtjdXJsXlQoWF5UKSJdLFsyLDAsIlxcS2N1cmxeVChYXlQpIl0sWzAsMSwiXFxIY3VybF97VH1eeyp9KFheVCkiXSxbMSwxLCJcXEhjdXJsX3tUfV57Kn0oWCkiXSxbMiwxLCJcXEhjdXJsX3tUfV57Kn0oWF5UKSJdLFswLDIsImleKiJdLFszLDQsImlfKiJdLFs0LDUsImleKiJdLFsxLDAsImlfKiJdXQ==
@@ -119,21 +116,21 @@ are isomorphism as $\mathcal{R}(T)$ or $\mathcal{S}(T)$-modules.
 The genuine localization formula is stated as follows.
 
 \begin{theorem}[{Localization formula, \cite[Theorem 10.2]{przezdziecki2015geometric} or \cite[Proposition 6]{edidin1998localization}}]\label{thm:localization_formula}
-For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote $i_k: \{x_k\} \longrightarrow X$ as embeddings. For any $\alpha \in \Kcurl^T(X)$, we have formula
+For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote by $i_k: \{x_k\} \longrightarrow X$ the embeddings. For any $\alpha \in \Kcurl^T(X)$, we have
 $$\alpha= \sum_{k=1}^{m} \eta_k \cdot i_{k,*}i_{k}^* \alpha $$
 where $\eta_k:= \left(\!\rule{0mm}{3.5mm} \eu(T_{x_k}X) \right)^{-1} \in \Rptc(T)$.
 
-More generally, suppose $f: Y \hookrightarrow X$ is a $T$-equivariant closed subvariety with finite fixed points $\{x_1,\ldots,x_{m'} \}$, denote $i'_k: \{x_k\} \longrightarrow Y$ as embeddings. For any $\beta \in \Kcurl^T(Y)$, we have formula
+More generally, suppose $f: Y \hookrightarrow X$ is a $T$-equivariant closed subvariety with finite fixed points $\{x_1,\ldots,x_{m'} \}$, let $i'_k: \{x_k\} \longrightarrow Y$ be the embeddings. For any $\beta \in \Kcurl^T(Y)$, we have
 $$\beta= \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} \beta. $$
 
 \end{theorem}
 
-Let us unravel Theorem \ref{thm:localization_formula} a little bit. For the closed $T$-equivariant subset $Z$ of $Y$, denote $[Z]_X^T \in K^T(X)$, $[Z]_Y^T \in K^T(Y)$, $[x_k]_Y^T \in K^T(Y)$. Substitute the localization formula, we get
+Let us unravel Theorem \ref{thm:localization_formula} a little bit. For the closed $T$-equivariant subset $Z$ of $Y$, denote $[Z]_X^T \in K^T(X)$, $[Z]_Y^T \in K^T(Y)$, $[x_k]_Y^T \in K^T(Y)$. By the localization theorem, we get
 \begin{equation*}
 \begin{aligned}\
    [Z]_Y^T=\;& \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} [Z]_Y^T&& \\
    =\;& \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}\left(i_{k}^* [Z]_X^T \cdot 1_{\Rpt(T)}\right) && \text{definition of $[Z]_X^T$}\\
-   =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot\left( i'_{k,*} 1_{\Rpt(T)}\right) && \text{$i'_{k,*}$ is a $\Rpt(T)$-module homomorphism}\hspace{-14mm}\\
+   =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot\left( i'_{k,*} 1_{\Rpt(T)}\right) && \text{$i'_{k,*}$ is an $\Rpt(T)$-module homomorphism}\hspace{-14mm}\\
    =\;& \sum_{k=1}^{m} \eta_k \cdot \left(i_{k}^* [Z]_X^T\right) \cdot[x_k]_Y^T && \text{definition of $[x_k]_Y^T$}\\
 \end{aligned}
 \end{equation*}

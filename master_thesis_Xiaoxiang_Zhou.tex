@@ -2,7 +2,7 @@
 \documentclass[reqno,11pt]{book}
 %\special{dvipdfmx:config z 0}
 %%%\includeonly{}
-%\includeonly{chapters/chapter2}
+%\includeonly{chapters/chapter5}
 
 %\usepackage{color,graphicx}
 %\usepackage{mathrsfs,amsbsy}
@@ -227,7 +227,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Generalizations, examples and connections}
 \section{Generalization}\label{sec:generalization}
-In this section we generalize results in different directions. Generalizing complete flag variety to partial flag variety needs further investigation, so we don't do this. After the generalization, we are able to cover the result in \cite[Theorem 7.2.5]{chriss1997representation}.
+In this section we generalize Theorem \ref{thm:Demazure_operator_1} in different directions. Quivers with loops are allowed, and the group actions can be replaced by $G \times \mathbb{C}^{\times}$-actions. After the generalization, we are able to cover the result in \cite[Theorem 7.2.5]{chriss1997representation}.
 
 \subsection{Quiver with loops}
 In this section we still assume the quiver has no cycles. For quiver with loops, we need to redefine Definition \ref{def:incidence_variety} in a strict version:
@@ -289,7 +289,7 @@ and similar for the equivariant cohomology theory:
 \end{theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{From formula to diagram}\label{sec:diagram}
-This section is designed for showing examples. Recall Fact \ref{fact:5-case-0.05} that every $\ftdimvec{d}$ or $u$ corresponds to an ordered set of colored points. It can be imagined that the lines connecting two ordered sets represents one element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$. Actually, we draw the picture of generators of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ in Figure \ref{fig:generators}, where
+This section is designed for showing examples. Recall Proposition \ref{prop:5-case-0.05} that every $\ftdimvec{d}$ or $u$ corresponds to an ordered set of colored points. It can be imagined that the lines connecting two ordered sets represents one element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$. Actually, we draw the picture of generators of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ in Figure \ref{fig:generators}, where
 $$e_{i}^{u}=:e_{u^{-1}(i)} \left[ \RRep_{u}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} \left( \RRep_{u}(Q) \right) \hookrightarrow K^{G_{\dimvec{d}}} \left( \St^{u,u} \right).$$
 
 \begin{figure}[ht]
@@ -315,7 +315,7 @@ By Proposition \ref{prop:generators}, every element in $K^{G_{\dimvec{d}}}(\St_{
       \label{fig:clear_relations}        
 \end{figure}
 
-We won't draw these "obvious" relations later. The first nontrivial relation comes from the following lemma.
+We won't draw these ``obvious" relations later. The first nontrivial relation comes from the following lemma.
 
 \begin{lemma}\label{lem:convolution_product_1}
 For $f \in \Rpt(T_{\dimvec{d}})$, denote $D_i^{u,u'} =\left[\St_{s_{i}}^{u,u'}\right]^{G_{\dimvec{d}}}$, $f^{u}=f \cdot \left[ \RRep_{\dimvec{d}}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} (\St_{\dimvec{d}})$, we have
@@ -329,7 +329,7 @@ By Proposition \ref{prop:generators}, we only need to show, for any $g \in \Rpt(
 $$D_i^{u,u'} \fakestar f^{u'} \star g^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} \star g^{u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} \star g^{u'}.$$
 Now we apply Theorem \ref{thm:Demazure_operator_1}. The same argument works for equivariant cohomology theory.
 \end{proof}
-Lemma \ref{lem:convolution_product_1} explains "what would happen when a point walk through a crossing". For other relations, people have to guess by trial-and-error method. The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR-algebra}. The relations of the KLR-algebra can be found in ???, and we will only show the relations of $K$-theoretical version.
+Lemma \ref{lem:convolution_product_1} explains ``what happens when a point walk through a crossing". The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR-algebra}. The relations of the KLR-algebra can be found in ???, and we will only show the relations of $K$-theoretical version.
 \begin{warning}
 In the following examples, $\fakestar$ is often omitted for simplicity.
 \end{warning}
