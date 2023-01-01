@@ -63,10 +63,10 @@
 \contentsline {section}{\numberline {7.1}Preliminaries}{74}{section.7.1}% 
 \contentsline {subsection}{\numberline {7.1.1}Extended quiver}{74}{subsection.7.1.1}% 
 \contentsline {subsection}{\numberline {7.1.2}Canonical functor $\Phi $}{75}{subsection.7.1.2}% 
-\contentsline {subsection}{\numberline {7.1.3}Dimension vector}{77}{subsection.7.1.3}% 
+\contentsline {subsection}{\numberline {7.1.3}Dimension vector}{76}{subsection.7.1.3}% 
 \contentsline {subsection}{\numberline {7.1.4}Ext-vanishing properties}{79}{subsection.7.1.4}% 
-\contentsline {section}{\numberline {7.2}A crash course on Auslander--Reiten theory}{81}{section.7.2}% 
+\contentsline {section}{\numberline {7.2}A crash course on Auslander--Reiten theory}{80}{section.7.2}% 
 \contentsline {section}{\numberline {7.3}Main Theorem}{85}{section.7.3}% 
 \contentsline {section}{\numberline {7.4}Application: Dynkin Case}{89}{section.7.4}% 
-\contentsline {section}{\numberline {7.5}Application: Affine Case}{92}{section.7.5}% 
+\contentsline {section}{\numberline {7.5}Application: Affine Case}{91}{section.7.5}% 
 \contentsline {section}{\numberline {7.6}Proof of Claim \otherrobustref }{92}{section.7.6}% 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  1 JAN 2023 23:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  1 JAN 2023 23:44
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -2209,8 +2209,8 @@ File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic.pdf>
 File: figures/affine_paving/bigpic2.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic2.pdf>
- [76] [77] [78] [79]
-Overfull \hbox (25.6146pt too wide) in paragraph at lines 336--338
+ [76] [77] [78]
+Overfull \hbox (25.6146pt too wide) in paragraph at lines 335--337
 \TU/lmr/m/n/10.95 By Lemma [][]7.1.18[][] [][](1)[][] and [][](5)[][], $[][]\OT
 1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.
 95 =W; T\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/n/10.95 and $[][]\OT1/cmr/m/n/10.95 (^^
@@ -2219,26 +2219,26 @@ H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; T\OT1/cmr/m/n/
 o $[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 W; T\OT1/cmr/m/n/10.95 ) =
  []
 
-
-Overfull \hbox (9.09087pt too wide) in paragraph at lines 369--370
+[79]
+Overfull \hbox (9.09087pt too wide) in paragraph at lines 368--369
 \TU/lmr/m/n/10.95 composable representation, irreducible morphism, Auslander–Re
 iten translation, Auslander–
  []
 
 [80]
-Overfull \hbox (7.1089pt too wide) in paragraph at lines 393--508
+Overfull \hbox (7.1089pt too wide) in paragraph at lines 392--507
  [][] 
  []
 
 
-Overfull \hbox (9.12483pt too wide) in paragraph at lines 513--514
+Overfull \hbox (9.12483pt too wide) in paragraph at lines 512--513
 [][]\TU/lmr/bx/n/10.95 Definition 7.2.2 \TU/lmr/m/n/10.95 (Irreducible morphism
 )\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Given two indecomposable representat
 ions $\OML/cmm/m/it/10.95 T; T[] \OMS/cmsy/m/n/10.95 2
  []
 
-[81] [82]
-Overfull \hbox (22.33162pt too wide) in paragraph at lines 555--557
+[81]
+Overfull \hbox (22.33162pt too wide) in paragraph at lines 554--556
 \TU/lmr/m/n/10.95 which is functorial for any $\OML/cmm/m/it/10.95 T; T[] \OMS/
 cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 
 )$\TU/lmr/m/n/10.95 . Especially, when $\OML/cmm/m/it/10.95 T$ \TU/lmr/m/n/10.9
@@ -2246,13 +2246,13 @@ cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95
 cmr/m/n/10.95 ) =
  []
 
-[83] [84] [85]
-Overfull \hbox (0.1651pt too wide) detected at line 796
+[82] [83] [84] [85]
+Overfull \hbox (0.1651pt too wide) detected at line 795
 []
  []
 
 
-Overfull \hbox (48.96696pt too wide) in paragraph at lines 807--808
+Overfull \hbox (48.96696pt too wide) in paragraph at lines 806--807
 []\TU/lmr/m/n/10.95 By using the long exact sequence of extension groups and th
 e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
 5 )\OML/cmm/m/it/10.95 =W; \OT1/cmr/m/n/10.95 ^^H(\OML/cmm/m/it/10.95 X\OT1/cmr
@@ -2260,13 +2260,13 @@ e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
  []
 
 [86]
-Overfull \hbox (17.63919pt too wide) detected at line 838
+Overfull \hbox (17.63919pt too wide) detected at line 837
  [] \OMS/cmsy/m/n/10.95 ! [][]   [] ! [][]   [] ^^H  [][]   [] ! [][]   [] ! []
   \OML/cmm/m/it/10.95 :
  []
 
 [87]
-Overfull \hbox (19.55673pt too wide) in paragraph at lines 898--899
+Overfull \hbox (19.55673pt too wide) in paragraph at lines 897--898
 [][]\TU/lmr/bx/n/10.95 Lemma 7.3.13. []\TU/lmr/m/it/10.95 For $\OT1/cmr/m/n/10.
 95 (\OML/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] \OT1/
 cmr/m/n/10.95 ^^I$\TU/lmr/m/it/10.95 , the preimage of $\OT1/cmr/m/n/10.95 (\OM
@@ -2277,7 +2277,7 @@ lmr/m/it/10.95 .
  []
 
 
-Overfull \hbox (0.1651pt too wide) detected at line 929
+Overfull \hbox (0.1651pt too wide) detected at line 928
 []
  []
 
@@ -2291,9 +2291,10 @@ File: figures/affine_paving/E8.pdf Graphic file (type pdf)
  [89] [90]
 File: figures/affine_paving/flowchart.pdf Graphic file (type pdf)
 <use figures/affine_paving/flowchart.pdf>
- [91] [92]
+ [91]
 File: figures/affine_paving/preferredimage.pdf Graphic file (type pdf)
 <use figures/affine_paving/preferredimage.pdf>
+ [92]
 File: figures/affine_paving/E6easy.pdf Graphic file (type pdf)
 <use figures/affine_paving/E6easy.pdf>
 File: figures/affine_paving/E7easy.pdf Graphic file (type pdf)
