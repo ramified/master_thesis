@@ -1,0 +1,75 @@
+
+\documentclass[border={10pt 10pt 10pt 10pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{quiver}
+\usepackage{xcolor}%colors
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Gralg}[1]{\operatorname{Gr}^{#1}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+\begin{document}
+% https://q.uiver.app/?q=WzAsMTA3LFs0LDAsIjEiXSxbMywxLCIxIl0sWzQsMSwiMSJdLFs1LDEsIjEiXSxbMiwyLCIxIl0sWzQsMiwiMiJdLFs2LDIsIjEiXSxbNSwzLCIyIl0sWzQsMywiMSJdLFszLDMsIjIiXSxbMSwzLCIxIl0sWzIsNCwiMiJdLFs0LDQsIjMiXSxbNiw0LCIxIl0sWzEsNSwiMiJdLFsxLDcsIjIiXSxbMSw5LCIyIl0sWzEsMTEsIjIiXSxbMSwxMywiMyJdLFsyLDE0LCI0Il0sWzMsNSwiMyJdLFs0LDUsIjIiXSxbNSw1LCIyIl0sWzIsNiwiMyJdLFs0LDYsIjQiXSxbNiw2LCIxIl0sWzMsNywiNCJdLFs0LDcsIjIiXSxbNSw3LCIzIl0sWzIsOCwiMyJdLFs0LDgsIjUiXSxbNiw4LCIyIl0sWzMsOSwiNCJdLFs0LDksIjMiLFszNTgsMTAwLDUwLDFdXSxbNSw5LCI0Il0sWzIsMTAsIjMiXSxbNCwxMCwiNiJdLFs2LDEwLCIyIl0sWzMsMTEsIjUiXSxbNCwxMSwiMyIsWzM1OCwxMDAsNTAsMV1dLFs1LDExLCI0Il0sWzIsMTIsIjQiXSxbNCwxMiwiNiJdLFs2LDEyLCIyIl0sWzMsMTMsIjUiXSxbNCwxMywiMyIsWzM1OCwxMDAsNTAsMV1dLFs1LDEzLCI0Il0sWzQsMTQsIjYiXSxbNiwxNCwiMiJdLFszLDE1LCI1Il0sWzQsMTUsIjMiLFszNTgsMTAwLDUwLDFdXSxbNSwxNSwiNCJdLFs0LDE2LCI2Il0sWzAsNCwiMSJdLFswLDYsIjEiXSxbMCw4LCIxIl0sWzAsMTAsIjEiXSxbMCwxMiwiMSJdLFswLDE0LCIyIl0sWzEsMTUsIjMiXSxbMiwxNiwiNCJdLFswLDE2LCIxIl0sWzAsMTgsIjEiXSxbMCwyMCwiMSJdLFswLDIyLCIxIl0sWzAsMjQsIjEiXSxbMSwxNywiMiJdLFszLDE3LCI1Il0sWzQsMTcsIjMiLFszNTgsMTAwLDUwLDFdXSxbNSwxNywiNCJdLFs2LDE2LCIyIl0sWzIsMTgsIjMiXSxbNCwxOCwiNiJdLFs2LDE4LCIyIl0sWzEsMTksIjIiXSxbMywxOSwiNCJdLFs0LDE5LCIzIixbMzU4LDEwMCw1MCwxXV0sWzUsMTksIjQiXSxbMiwyMCwiMyJdLFs0LDIwLCI1Il0sWzYsMjAsIjIiXSxbMywyMSwiNCJdLFsxLDIxLCIyIl0sWzQsMjEsIjIiXSxbNSwyMSwiMyJdLFsyLDIyLCIzIl0sWzQsMjIsIjQiXSxbNiwyMiwiMSJdLFsxLDIzLCIyIl0sWzMsMjMsIjMiLFszNTgsMTAwLDUwLDFdXSxbNCwyMywiMiJdLFs1LDIzLCIyIl0sWzIsMjQsIjIiXSxbNCwyNCwiMyJdLFs2LDI0LCIxIl0sWzEsMjUsIjEiXSxbMywyNSwiMiJdLFs0LDI1LCIxIl0sWzUsMjUsIjIiXSxbMiwyNiwiMSJdLFs0LDI2LCIyIl0sWzYsMjYsIjEiXSxbMywyNywiMSJdLFs0LDI3LCIxIl0sWzUsMjcsIjEiXSxbNCwyOCwiMSJdLFs2LDBdLFs5LDEyXSxbMTEsMjBdLFsyMCwyNF0sWzE0LDIzXSxbMjMsMjZdLFsyNiwzMF0sWzE1LDI5XSxbMjksMzJdLFszMiwzNl0sWzE2LDM1XSxbMzUsMzhdLFszOCw0Ml0sWzE3LDQxXSxbNDEsNDRdLFs0NCw0N10sWzU3LDE4XSxbMTgsMTldLFsxOSw0OV0sWzQ5LDUyXSxbNTgsNTldLFs1OSw2MF0sWzYwLDY3XSxbNjcsNzJdLFs2Niw3MV0sWzcxLDc1XSxbNzUsNzldLFs3NCw3OF0sWzc4LDgxXSxbODIsODVdLFs4Myw4Nl0sWzkwLDkzXSxbMjUsMjhdLFszMSwzNF0sWzM3LDQwXSxbNDMsNDZdLFs0OCw1MV0sWzcwLDY5XSxbNzMsNzddLFs4MCw4NF1d
+\definecolor{viridian}{rgb}{0.25, 0.51, 0.43}
+\tikzcdset{arrow style=tikz,
+           diagrams={>=Classical TikZ Rightarrow,shorten <=-2pt,shorten >=-2pt,}
+           }
+\tikzset{long/.style={red, to path={
+	.. controls +(-135:1.3cm) and +(90:0.4cm) .. (\tikztotarget) \tikztonodes}}}
+\tikzset{short/.style={blue, to path={
+	.. controls +(-135:0.35cm) and +(90:0.2cm) .. (\tikztotarget) \tikztonodes}}}
+\tikzset{longleft/.style={viridian,curve={height=6pt}}}             
+\[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins},cramped]
+	&&&& 1 && {} \\
+	&&& 1 & 1 & 1 \\
+	&& 1 && 2 && 1 \\
+	& 1 && 2 & 1 & 2 \\
+	1 && 2 && 3 && 1 \\
+	& 2 && 3 & 2 & 2 \\
+	1 && 3 && 4 && 1 \\
+	& 2 && 4 & 2 & 3 \\
+	1 && 3 && 5 && 2 \\
+	& 2 && 4 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	1 && 3 && 6 && 2 \\
+	& 2 && 5 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	1 && 4 && 6 && 2 \\
+	& 3 && 5 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	2 && 4 && 6 && 2 \\
+	& 3 && 5 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	1 && 4 && 6 && 2 \\
+	& 2 && 5 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	1 && 3 && 6 && 2 \\
+	& 2 && 4 & \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 4 \\
+	1 && 3 && 5 && 2 \\
+	& 2 && 4 & 2 & 3 \\
+	1 && 3 && 4 && 1 \\
+	& 2 && \textcolor{rgb,255:red,255;green,0;blue,8}{3} & 2 & 2 \\
+	1 && 2 && 3 && 1 \\
+	& 1 && 2 & 1 & 2 \\
+	&& 1 && 2 && 1 \\
+	&&& 1 & 1 & 1 \\
+	&&&& 1
+	\arrow[from=8-6, to=10-5, short,shift right=0.5]
+	\arrow[from=7-7, to=10-5, long,viridian]	
+	\arrow[from=9-7, to=12-5, long]	
+	\arrow[from=11-7, to=14-5, long]	
+	\arrow[from=13-7, to=16-5, long]	
+	\arrow[from=15-7, to=18-5, long]	
+	\arrow[from=17-7, to=20-5, long]
+	\arrow[from=23-3, to=24-4, shift left=0.5,blue]
+	\arrow[from=22-2, to=24-4, longleft]				
+\end{tikzcd}\]
+\end{document}

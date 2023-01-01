@@ -1,0 +1,92 @@
+
+\documentclass[border={10pt 30pt 150pt 0pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,\operatorname{str}}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Gralg}[1]{\operatorname{Gr}^{#1}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,\operatorname{str}}}
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+\begin{document}
+$$
+\left\{
+% https://q.uiver.app/?q=WzAsMjAsWzEsMSwiWF97M3h9Il0sWzIsMSwiWF97M3l9Il0sWzEsMiwiWF97Mnh9Il0sWzIsMiwiWF97Mnl9Il0sWzEsMywiWF97MXh9Il0sWzIsMywiWF97MXl9Il0sWzMsMywiWF97MXp9Il0sWzMsMiwiWF97Mnp9Il0sWzMsMSwiWF97M3p9Il0sWzQsMSwiWF97M3d9Il0sWzQsMiwiWF97Mnd9Il0sWzQsMywiWF97MXd9Il0sWzAsMiwiWF8yOiJdLFsyLDAsIlhfeSJdLFsxLDAsIlhfeCJdLFszLDAsIlhfeiJdLFs0LDAsIlhfdyJdLFswLDMsIlhfMToiXSxbMCwxLCJYXzM6Il0sWzAsMCwiWDoiXSxbMCwxXSxbMiwzXSxbNCw1XSxbNiw1XSxbNywzXSxbOCwxXSxbOCw5XSxbNywxMF0sWzYsMTFdLFsxLDEzLCJcXHN1YnNldGVxIiwxLHsib2Zmc2V0Ijo1LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTQsMTNdLFsxNSwxM10sWzE1LDE2XSxbMywxLCJcXHN1YnNldGVxIiwxLHsib2Zmc2V0Ijo1LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwzLCJcXHN1YnNldGVxIiwxLHsib2Zmc2V0Ijo1LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[row sep={15mm,between origins},column sep={13mm,between origins},labl/.style={rotate=90,pos=0.5}]
+	{X\!\!:} &[-6mm] {X_x} & {X_y} & {X_z} & {X_w} \\
+	{X_3\!:} & {X_{3x}} & {X_{3y}} & {X_{3z}} & {X_{3w}} \\
+	{X_2\!:} & {X_{2x}} & {X_{2y}} & {X_{2z}} & {X_{2w}} \\
+	{X_1\!:} & {X_{1x}} & {X_{1y}} & {X_{1z}} & {X_{1w}}
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-4, to=4-3]
+	\arrow[from=3-4, to=3-3]
+	\arrow[from=2-4, to=2-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=4-4, to=4-5]
+	\arrow["\mbox{\huge$\subseteq$}"{description,labl}, shift right=5, draw=none, from=2-3, to=1-3]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-4, to=1-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["\mbox{\huge$\subseteq$}"{description,labl}, shift right=5, draw=none, from=3-3, to=2-3]
+	\arrow["\mbox{\huge$\subseteq$}"{description,labl}, shift right=5, draw=none, from=4-3, to=3-3]
+\end{tikzcd}
+\middle|
+\,x.X_{k+1} \subseteq X_k
+\right\}
+\xleftrightarrow{\hspace{1.4cm}}\left\{
+% https://q.uiver.app/?q=WzAsMjYsWzEsMywiWF97M3h9Il0sWzIsMywiWF97M3l9Il0sWzEsNCwiWF97Mnh9Il0sWzIsNCwiWF97Mnl9Il0sWzEsNSwiWF97MXh9Il0sWzIsNSwiWF97MXl9Il0sWzMsNSwiWF97MXp9Il0sWzMsNCwiWF97Mnp9Il0sWzMsMywiWF97M3p9Il0sWzQsMywiWF97M3d9Il0sWzQsNCwiWF97Mnd9Il0sWzQsNSwiWF97MXd9Il0sWzAsNF0sWzIsMiwiWF95Il0sWzEsMiwiWF94Il0sWzEsMCwiWF94Il0sWzEsMSwiWF94Il0sWzIsMCwiWF95Il0sWzIsMSwiWF95Il0sWzMsMCwiWF96Il0sWzMsMSwiWF96Il0sWzMsMiwiWF96Il0sWzQsMiwiWF93Il0sWzQsMSwiWF93Il0sWzQsMCwiWF93Il0sWzAsMSwiXFxQaGkoWCkiXSxbMTEsMTBdLFsxMCw5XSxbNyw4XSxbNiw3XSxbNSwzXSxbMywxXSxbMiwwXSxbNCwyXSxbMSwxMywiXFxzdWJzZXRlcSIsMSx7Im9mZnNldCI6NSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE0LDE2XSxbMTYsMTVdLFsxMywxOF0sWzE4LDE3XSxbMjAsMTldLFsyMSwyMF0sWzIyLDIzXSxbMjMsMjRdLFsxNiwxM10sWzE1LDE4XSxbMTksMThdLFsyMCwxM10sWzIwLDIyXSxbMTksMjNdLFswLDNdLFsyLDVdLFs4LDNdLFs3LDVdLFs4LDEwXSxbNywxMV1d
+\begin{tikzcd}[row sep={12mm,between origins},column sep={14mm,between origins},labl/.style={rotate=90,pos=0.5}]
+	&[-5mm] {X_x} & {X_y} & {X_z} & {X_w} \\
+	{\Phi(X)\!:} & {X_x} & {X_y} & {X_z} & {X_w} \\
+	& {X_x} & {X_y} & {X_z} & {X_w} \\
+	& {X_{3x}} & {X_{3y}} & {X_{3z}} & {X_{3w}} \\
+	{} & {X_{2x}} & {X_{2y}} & {X_{2z}} & {X_{2w}} \\
+	& {X_{1x}} & {X_{1y}} & {X_{1z}} & {X_{1w}}
+	\arrow[from=6-5, to=5-5]
+	\arrow[from=5-5, to=4-5]
+	\arrow[from=5-4, to=4-4]
+	\arrow[from=6-4, to=5-4]
+	\arrow[from=6-3, to=5-3]
+	\arrow[from=5-3, to=4-3]
+	\arrow[from=5-2, to=4-2]
+	\arrow[from=6-2, to=5-2]
+	\arrow["\mbox{\huge$\subseteq$}"{description,labl}, shift right=5, draw=none, from=4-3, to=3-3]
+	\arrow[from=3-2, to=2-2]
+	\arrow[from=2-2, to=1-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow[from=2-3, to=1-3]
+	\arrow[from=2-4, to=1-4]
+	\arrow[from=3-4, to=2-4]
+	\arrow[from=3-5, to=2-5]
+	\arrow[from=2-5, to=1-5]
+	\arrow[from=2-2, to=3-3]
+	\arrow[from=1-2, to=2-3]
+	\arrow[from=1-4, to=2-3]
+	\arrow[from=2-4, to=3-3]
+	\arrow[from=2-4, to=3-5]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=4-2, to=5-3]
+	\arrow[from=5-2, to=6-3]
+	\arrow[from=4-4, to=5-3]
+	\arrow[from=5-4, to=6-3]
+	\arrow[from=4-4, to=5-5]
+	\arrow[from=5-4, to=6-5]
+\end{tikzcd}
+\right\}
+$$
+$\hspace{3.3cm}\Flagstr{3}(X) \hspace{3cm} \xleftrightarrow{\hspace{1.4cm}} \hspace{2.5cm} \Gralg{R_{3,\operatorname{str}}}(\Phi(X))\hspace{-10cm}$
+\end{document}

@@ -1,0 +1,15 @@
+\documentclass[draft]{article}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=new]{german}
+
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+
+\begin{document}
+\begin{tikzpicture}
+    \draw (1,1) -- (2,2);
+\end{tikzpicture}
+\end{document}

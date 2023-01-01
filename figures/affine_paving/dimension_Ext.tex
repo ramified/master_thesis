@@ -1,0 +1,43 @@
+
+\documentclass[border={7pt 7pt 7pt 7pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{diagbox}
+\usepackage{multirow}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Gralg}[1]{\operatorname{Gr}^{#1}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+\begin{document}
+\begin{table}
+\centering
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{|c|>{ \centering }m{5mm}|>{ \centering }m{5mm}|>{\centering\arraybackslash}m{5mm}|} 
+\hline
+       \diagbox[height=3.8\line]{$M$}{$[M,N]$\\$[M,N]^1$}{$N$}            & X & Y & S  \\ 
+\hline
+\multirow{2}{*}{X} & 1 & 1 & 0  \\
+                   & 0 & 0 & 0  \\ 
+\hline
+\multirow{2}{*}{Y} & 0 & 1 & 1  \\
+                   & 0 & 0 & 0  \\ 
+\hline
+\multirow{2}{*}{S} & 0 & 0 & 1  \\
+                   & 1 & 0 & 0  \\
+\hline
+\end{tabular}
+\end{table}
+\end{document}

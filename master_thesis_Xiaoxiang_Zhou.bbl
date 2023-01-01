@@ -1,9 +1,26 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{bongartz1984critical}
+Klaus Bongartz.
+\newblock Critical simply connected algebras.
+\newblock {\em manuscripta mathematica}, 46(1):117--136, 1984.
 
 \bibitem{chriss1997representation}
 Neil Chriss and Victor Ginzburg.
 \newblock {\em Representation theory and complex geometry}, volume~42.
 \newblock Springer, 1997.
+
+\bibitem{crawley1992lectures}
+William Crawley-Boevey.
+\newblock Lectures on representations of quivers.
+\newblock {\em unpublished notes}, 1992.
+
+\bibitem{de1988homology}
+Corrado De~Concini, George Lusztig, and Claudio Procesi.
+\newblock Homology of the zero-set of a nilpotent vector field on a flag
+  manifold.
+\newblock {\em Journal of the American Mathematical Society}, 1(1):15--34,
+  1988.
 
 \bibitem{dugger2014geometric}
 Daniel Dugger.
@@ -11,16 +28,42 @@ Daniel Dugger.
 \newblock {\em Available to download at pages. uoregon. edu/ddugger/kgeom. pdf
   (On pp. 3, 13, 16, 30, 35, and 38)}, 2014.
 
+\bibitem{eberhardt2022motivic}
+Jens~Niklas Eberhardt and Catharina Stroppel.
+\newblock Motivic {S}pringer theory.
+\newblock {\em Indagationes Mathematicae}, 33(1):190--217, 2022.
+
 \bibitem{edidin1998localization}
 Dan Edidin and William Graham.
 \newblock Localization in equivariant intersection theory and the {B}ott
   residue formula.
 \newblock {\em American Journal of Mathematics}, 120(3):619--636, 1998.
 
+\bibitem{article}
+D.~Faenzi.
+\newblock A one-day tour of representations and invariants of quivers.
+\newblock {\em Rendiconti del Seminario Matematico}, 71:3--34, 01 2013.
+
+\bibitem{irelli2019cell}
+Giovanni~Cerulli Irelli, Francesco Esposito, Hans Franzen, and Markus Reineke.
+\newblock Cell decompositions and algebraicity of cohomology for quiver
+  {G}rassmannians, 2019.
+
+\bibitem{maksimau2019flag}
+Ruslan Maksimau.
+\newblock Flag versions of quiver {G}rassmannians for {D}ynkin quivers have no
+  odd cohomology over $\mathbb{Z}$, 2019.
+
 \bibitem{przezdziecki2015geometric}
 Tomasz Przezdziecki.
 \newblock Geometric approach to {KLR} algebras and their representation theory,
   2015.
+
+\bibitem{sauter2015cell}
+Julia Sauter.
+\newblock Cell decompositions of quiver flag varieties for nilpotent
+  representations of the oriented cycle.
+\newblock {\em arXiv preprint arXiv:1509.08026}, 2015.
 
 \bibitem{seiffarth2017klr}
 Florian Seiffarth.

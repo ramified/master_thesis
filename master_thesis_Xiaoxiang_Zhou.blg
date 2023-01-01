@@ -7,7 +7,16 @@ A level-1 auxiliary file: chapters/chapter4.aux
 A level-1 auxiliary file: chapters/chapter5.aux
 A level-1 auxiliary file: chapters/chapter6.aux
 A level-1 auxiliary file: chapters/chapter7.aux
+A level-1 auxiliary file: chapters/affinepaving.aux
 The style file: plain.bst
 Database file #1: reference.bib
+Repeated entry---line 103 of file reference.bib
+ : @article{crawley1992lectures
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 118 of file reference.bib
+ : @article{crawley1992lectures
+ :                             ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in varagnolo2011canonical
-(There was 1 warning)
+(There were 2 error messages)

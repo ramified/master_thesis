@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  1 JAN 2023 19:20
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  1 JAN 2023 23:39
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1662,62 +1662,86 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (MA_Titlepage.sty
 Package: MA_Titlepage 2010/04/25
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 \c@theorem=\count340
 \c@thmsub=\count341
 \c@remarks=\count342
- (master_thesis_Xiaoxiang_Zhou.aux
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/todonotes\
+todonotes.sty"
+Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
+Package: todonotes 2018/11/22
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
+tendlayer/tikz/libraries\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2019/01/05 v3.1 (3.1)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
+tendlayer/tikz/libraries\tikzlibraryshadows.code.tex"
+File: tikzlibraryshadows.code.tex 2019/01/05 v3.1 (3.1)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
+tendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libr
+aries\pgflibraryfadings.code.tex"
+File: pgflibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
+)))
+\c@@todonotes@numberoftodonotes=\count343
+) (master_thesis_Xiaoxiang_Zhou.aux
 (chapters/contents.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
-(chapters/chapter6.aux) (chapters/chapter7.aux))
+(chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
 \openout1 = `master_thesis_Xiaoxiang_Zhou.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 201.
-LaTeX Font Info:    ... okay on input line 201.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 201.
+LaTeX Font Info:    Try loading font information for U+msa on input line 243.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 201.
+LaTeX Font Info:    Try loading font information for U+msb on input line 243.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 201.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 243.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 201.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 243.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Package xypdf Info: Line width: 0.43799pt on input line 201.
+Package xypdf Info: Line width: 0.43799pt on input line 243.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1739,7 +1763,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 201.
 * \headsep=19.8738pt
 * \topskip=11.0pt
 * \footskip=27.46295pt
-* \marginparwidth=116.0pt
+* \marginparwidth=71.13188pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.0pt plus 4.0pt minus 2.0pt
@@ -1754,7 +1778,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 201.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring OFF on input line 201.
+Package hyperref Info: Link coloring ON on input line 243.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1768,11 +1792,11 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 \gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count343
+\c@section@level=\count344
 )
-LaTeX Info: Redefining \ref on input line 201.
-LaTeX Info: Redefining \pageref on input line 201.
-LaTeX Info: Redefining \nameref on input line 201.
+LaTeX Info: Redefining \ref on input line 243.
+LaTeX Info: Redefining \pageref on input line 243.
+LaTeX Info: Redefining \nameref on input line 243.
  (master_thesis_Xiaoxiang_Zhou.out)
 (master_thesis_Xiaoxiang_Zhou.out)
 \@outlinefile=\write5
@@ -1799,7 +1823,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 \openout6 = `master_thesis_Xiaoxiang_Zhou.toc'.
 
 ) [2]
-Overfull \hbox (12.57808pt too wide) in paragraph at lines 225--226
+Overfull \hbox (18.05307pt too wide) in paragraph at lines 267--268
 []\TU/lmr/m/n/10.95 In the first part, we follow methods from Varagnolo-Vassero
 t’s article [[]] and Przezdziecki’s
  []
@@ -1807,13 +1831,10 @@ t’s article [[]] and Przezdziecki’s
 [3
 
 
-]
+] [4]
 \openout2 = `chapters/chapter1.aux'.
 
- (chapters/chapter1.tex [4
-
-
-]
+ (chapters/chapter1.tex
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
@@ -1840,7 +1861,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 15.
 
-[5] [6] [7] [8] [9] [10] [11]
+[5
+
+
+] [6] [7] [8] [9] [10] [11]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2046,29 +2070,29 @@ TU/lmr/m/n/10.95 -equivariant
 \openout2 = `chapters/chapter3.aux'.
 
 
-(chapters/chapter3.tex [44
-
-
-
-]
+(chapters/chapter3.tex
 Chapter 3.
-[45] [46]
+[44
+
+
+
+] [45]
 File: figures/table/table_module_initial.pdf Graphic file (type pdf)
 <use figures/table/table_module_initial.pdf>
 File: figures/table/table_module_relative.pdf Graphic file (type pdf)
 <use figures/table/table_module_relative.pdf>
 File: figures/table/table_module_absolute.pdf Graphic file (type pdf)
 <use figures/table/table_module_absolute.pdf>
- [47] [48]) [49]
+ [46] [47]) [48]
 \openout2 = `chapters/chapter4.aux'.
 
- (chapters/chapter4.tex [50
-
-
-
-]
+ (chapters/chapter4.tex
 Chapter 4.
-[51] [52] [53] [54] [55]) [56]
+[49
+
+
+
+] [50] [51] [52] [53]) [54]
 \openout2 = `chapters/chapter5.aux'.
 
  (chapters/chapter5.tex
@@ -2083,7 +2107,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[57
+[55
 
 
 
@@ -2094,12 +2118,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
 File: figures/table/figure_convolution.pdf Graphic file (type pdf)
 <use figures/table/figure_convolution.pdf>
-[58] [59]
+[56] [57]
 Overfull \hbox (25.45673pt too wide) detected at line 202
 []
  []
 
-[60]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
@@ -2109,21 +2133,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-[61] [62] [63]
+[59] [60] [61]
 Overfull \hbox (1.4011pt too wide) in paragraph at lines 355--357
 \TU/lmr/m/n/10.95 Later, every expression before $[]$ should be viewed as an ex
 pression in $\U/msb/m/n/10.95 Z  []$\TU/lmr/m/n/10.95 . 
  []
 
-[64] [65]
+[62] [63]
 File: figures/table/table_euler_class.pdf Graphic file (type pdf)
 <use figures/table/table_euler_class.pdf>
-) [66]
+) [64]
 \openout2 = `chapters/chapter6.aux'.
 
  (chapters/chapter6.tex
 Chapter 6.
-[67
+[65
 
 
 
@@ -2134,22 +2158,22 @@ Overfull \hbox (23.3304pt too wide) detected at line 42
 
 File: figures/table/table_euler_class_q.pdf Graphic file (type pdf)
 <use figures/table/table_euler_class_q.pdf>
-[68]
+[66]
 File: figures/strands/generators.pdf Graphic file (type pdf)
 <use figures/strands/generators.pdf>
 File: figures/strands/glue_vertically.pdf Graphic file (type pdf)
 <use figures/strands/glue_vertically.pdf>
 File: figures/strands/clear_relations.pdf Graphic file (type pdf)
 <use figures/strands/clear_relations.pdf>
- [69] [70]
+ [67] [68]
 File: figures/strands/relations_1.pdf Graphic file (type pdf)
 <use figures/strands/relations_1.pdf>
- [71]
+ [69]
 File: figures/strands/relations_2.pdf Graphic file (type pdf)
 <use figures/strands/relations_2.pdf>
 File: figures/strands/relations_3.pdf Graphic file (type pdf)
 <use figures/strands/relations_3.pdf>
- [72]
+ [70]
 Overfull \hbox (22.14848pt too wide) in paragraph at lines 205--206
 [][]\TU/lmr/bx/n/10.95 Lemma 6.2.3. []\TU/lmr/m/it/10.95 For $\OML/cmm/m/it/10.
 95 f \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/c
@@ -2166,36 +2190,154 @@ H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 /m/n/10.95 ] [] \OML/cmm/m/it/10.95 :
  []
 
-[73] [74]) [75]
+[71] [72]) [73]
 \openout2 = `chapters/chapter7.aux'.
 
- (chapters/chapter7.tex) (master_thesis_Xiaoxiang_Zhou.bbl
-[76
+ (chapters/chapter7.tex)
+\openout2 = `chapters/affinepaving.aux'.
+
+ (chapters/affinepaving.tex
+Chapter 7.
+[74
 
 
 
 
-]) [77]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
- (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
-(chapters/chapter1.aux) (chapters/chapter2.aux) (chapters/chapter3.aux)
-(chapters/chapter4.aux) (chapters/chapter5.aux) (chapters/chapter6.aux)
-(chapters/chapter7.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 245.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
+
+] [75]
+File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
+<use figures/affine_paving/bigpic.pdf>
+File: figures/affine_paving/bigpic2.pdf Graphic file (type pdf)
+<use figures/affine_paving/bigpic2.pdf>
+ [76] [77] [78] [79]
+Overfull \hbox (25.6146pt too wide) in paragraph at lines 336--338
+\TU/lmr/m/n/10.95 By Lemma [][]7.1.18[][] [][](1)[][] and [][](5)[][], $[][]\OT
+1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.
+95 =W; T\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/n/10.95 and $[][]\OT1/cmr/m/n/10.95 (^^
+H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; T\OT1/cmr/m/n/
+10.95 )$ \TU/lmr/m/n/10.95 are both $\OT1/cmr/m/n/10.95 0$\TU/lmr/m/n/10.95 , s
+o $[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 W; T\OT1/cmr/m/n/10.95 ) =
+ []
+
+
+Overfull \hbox (9.09087pt too wide) in paragraph at lines 369--370
+\TU/lmr/m/n/10.95 composable representation, irreducible morphism, Auslander–Re
+iten translation, Auslander–
+ []
+
+[80]
+Overfull \hbox (7.1089pt too wide) in paragraph at lines 393--508
+ [][] 
+ []
+
+
+Overfull \hbox (9.12483pt too wide) in paragraph at lines 513--514
+[][]\TU/lmr/bx/n/10.95 Definition 7.2.2 \TU/lmr/m/n/10.95 (Irreducible morphism
+)\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Given two indecomposable representat
+ions $\OML/cmm/m/it/10.95 T; T[] \OMS/cmsy/m/n/10.95 2
+ []
+
+[81] [82]
+Overfull \hbox (22.33162pt too wide) in paragraph at lines 555--557
+\TU/lmr/m/n/10.95 which is functorial for any $\OML/cmm/m/it/10.95 T; T[] \OMS/
+cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 
+)$\TU/lmr/m/n/10.95 . Especially, when $\OML/cmm/m/it/10.95 T$ \TU/lmr/m/n/10.9
+5 is not injective, $[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T; ^^\T[]\OT1/
+cmr/m/n/10.95 ) =
+ []
+
+[83] [84] [85]
+Overfull \hbox (0.1651pt too wide) detected at line 796
+[]
+ []
+
+
+Overfull \hbox (48.96696pt too wide) in paragraph at lines 807--808
+[]\TU/lmr/m/n/10.95 By using the long exact sequence of extension groups and th
+e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
+5 )\OML/cmm/m/it/10.95 =W; \OT1/cmr/m/n/10.95 ^^H(\OML/cmm/m/it/10.95 X\OT1/cmr
+/m/n/10.95 )) =
+ []
+
+[86]
+Overfull \hbox (17.63919pt too wide) detected at line 838
+ [] \OMS/cmsy/m/n/10.95 ! [][]   [] ! [][]   [] ^^H  [][]   [] ! [][]   [] ! []
+  \OML/cmm/m/it/10.95 :
+ []
+
+[87]
+Overfull \hbox (19.55673pt too wide) in paragraph at lines 898--899
+[][]\TU/lmr/bx/n/10.95 Lemma 7.3.13. []\TU/lmr/m/it/10.95 For $\OT1/cmr/m/n/10.
+95 (\OML/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] \OT1/
+cmr/m/n/10.95 ^^I$\TU/lmr/m/it/10.95 , the preimage of $\OT1/cmr/m/n/10.95 (\OM
+L/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/it/10.95 is a torsor of $ 
+[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 W; \OT1/cmr/m/n/10.95 ^^H(\OML/cmm/
+m/it/10.95 X\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =V\OT1/cmr/m/n/10.95 )$\TU/
+lmr/m/it/10.95 .
+ []
+
+
+Overfull \hbox (0.1651pt too wide) detected at line 929
+[]
+ []
+
+[88]
+File: figures/affine_paving/E6.pdf Graphic file (type pdf)
+<use figures/affine_paving/E6.pdf>
+File: figures/affine_paving/E7.pdf Graphic file (type pdf)
+<use figures/affine_paving/E7.pdf>
+File: figures/affine_paving/E8.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8.pdf>
+ [89] [90]
+File: figures/affine_paving/flowchart.pdf Graphic file (type pdf)
+<use figures/affine_paving/flowchart.pdf>
+ [91] [92]
+File: figures/affine_paving/preferredimage.pdf Graphic file (type pdf)
+<use figures/affine_paving/preferredimage.pdf>
+File: figures/affine_paving/E6easy.pdf Graphic file (type pdf)
+<use figures/affine_paving/E6easy.pdf>
+File: figures/affine_paving/E7easy.pdf Graphic file (type pdf)
+<use figures/affine_paving/E7easy.pdf>
+File: figures/affine_paving/E8easy.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8easy.pdf>
+File: figures/affine_paving/E8hard.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8hard.pdf>
+File: figures/affine_paving/dimension_Ext.pdf Graphic file (type pdf)
+<use figures/affine_paving/dimension_Ext.pdf>
+ [93] [94]
+File: figures/affine_paving/E8graypic1.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8graypic1.pdf>
+File: figures/affine_paving/E8graypic2.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8graypic2.pdf>
+File: figures/affine_paving/E8graypic3.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8graypic3.pdf>
+File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
+<use figures/affine_paving/E8graypic4.pdf>
+ [95] [96] [97]) [98]
+(master_thesis_Xiaoxiang_Zhou.bbl [99
+
+
+]) [100]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
+ (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux) (chapters/chapter1.a
+ux) (chapters/chapter2.aux)
+(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
+(chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 338.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: D7BA5ED1CB37BAD3F2F3F9334474CFA7.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
+(rerunfilecheck)             Checksum: 92D92B9C4E4CA6C81AB60019FC69A0DD.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
- 41978 strings out of 427748
- 783452 string characters out of 3150981
- 965897 words of memory out of 3000000
- 45283 multiletter control sequences out of 15000+200000
+ 44994 strings out of 427748
+ 862178 string characters out of 3150981
+ 979312 words of memory out of 3000000
+ 48260 multiletter control sequences out of 15000+200000
  570384 words of font info for 195 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,28n,96p,3277b,1271s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,28n,96p,4130b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (79 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (102 pages).
