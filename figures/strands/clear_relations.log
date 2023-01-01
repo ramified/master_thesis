@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  30 DEC 2022 23:10
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  1 JAN 2023 16:19
 entering extended mode
 **./clear_relations.tex
 (clear_relations.tex
@@ -1108,12 +1108,12 @@ LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
  ABD: EveryShipout initializing macros
-Overfull \hbox (75.79958pt too wide) detected at line 75
+Overfull \hbox (71.38982pt too wide) detected at line 75
 []
  []
 
 
-Overfull \hbox (75.79958pt too wide) detected at line 77
+Overfull \hbox (71.38982pt too wide) detected at line 77
 []
  []
 
@@ -1123,7 +1123,7 @@ Overfull \hbox (75.79958pt too wide) detected at line 77
 Here is how much of TeX's memory you used:
  26608 strings out of 427748
  539818 string characters out of 3150981
- 613327 words of memory out of 3000000
+ 613323 words of memory out of 3000000
  30301 multiletter control sequences out of 15000+200000
  532800 words of font info for 27 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191

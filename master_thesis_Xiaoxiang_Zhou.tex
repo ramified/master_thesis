@@ -2,7 +2,7 @@
 \documentclass[reqno,11pt]{book}
 %\special{dvipdfmx:config z 0}
 %%\includeonly{chapters/contents}
-%\includeonly{chapters/chapter6}
+%\includeonly{chapters/chapter7}
 
 %\usepackage{color,graphicx}
 %\usepackage{mathrsfs,amsbsy}
@@ -216,13 +216,29 @@
 \setcounter{tocdepth}{1}
 
 \include{chapters/contents}
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+With two different goals, this master thesis is naturally divided into two parts. The first part is dedicated to computing the equivariant $K$-theory of Steinberg varieties, while the second part is dedicated to constructing affine pavings for quiver partial flag varieties.
+
+In the first part, we follow methods from Varagnolo-Vasserot's article \cite{varagnolo2011canonical} and Przezdziecki's master thesis \cite{przezdziecki2015geometric}, in which the equivariant cohomology of Steinberg varieties is computed. For carrying the arguments to $K$-theoretical version, we quote properties of $K$-theory in \cite[Chapter 5]{chriss1997representation}.
+
+We proceed as follows.
+
+In Chapter \ref{chap:variety_stratification}, we fix notation and collect properties of quiver flag varieties. Especially, the Steinberg varieties are also defined as an incidence variety, and their properties are described for future use.
+
+From Chapter \ref{chap:Ktheory} to Chapter \ref{chap:excess_intersection_formula}, we introduce general results of $K$-theory, and then specify them to our cases. Both $K$-theory and cohomology are defined in Chapter \ref{chap:Ktheory}, with examples and functorialities carefully discussed (in $K$-theoretical version). Three isomorphisms are also stated in $K$-theoretical version in Section \ref{sec:Thom_isomorphism}-\ref{sec:reduction}. We compute the module structure of $K$-groups by the cellular fibration theorem \ref{thm:cellular_fibration}, see Chapter \ref{chap:cellular_fibration_theorem}. For the computation of convolution product, we introduce another basis of $K$-groups (in the field of fractions) and compute the transition matrix by the localization formula \ref{thm:localization_formula}, see Chapter \ref{chap:localization}. Finally, we compute the convolution structure of $K$-theory (Proposition \ref{prop:convolution_product_formula} for $T_{\dimvec{d}}$-equivariant, and Theorem \ref{thm:Demazure_operator_1} for $G_{\dimvec{d}}$-equivariant) by the excess intersection formula \ref{thm:excess_intersection_formula}.
+
+Different from the previous chapters, the three sections in Chapter \ref{chap:applications} are quite independent, and can be read in any order. In Section \ref{sec:generalization}, we slightly relax the conditions on quivers and group actions. Section \ref{sec:diagram} collect examples and present them by diagrams. In Section \ref{sec:AScompletion}, $K$-theory and cohomology are connected by the Atiyah--Segal completion theorem \ref{thm:Atiyah--Segal_completion_theorem}, and the Chern class and the Todd class emerge explicitly in examples.
+
 \include{chapters/chapter1}
 \include{chapters/chapter2}
 \include{chapters/chapter3}
 \include{chapters/chapter4}
 \include{chapters/chapter5}
 \include{chapters/chapter6}
-
+\include{chapters/chapter7}
 
 \bibliographystyle{plain}
 \bibliography{reference}
