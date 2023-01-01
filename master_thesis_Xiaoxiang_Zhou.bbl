@@ -5,20 +5,30 @@ Neil Chriss and Victor Ginzburg.
 \newblock {\em Representation theory and complex geometry}, volume~42.
 \newblock Springer, 1997.
 
+\bibitem{dugger2014geometric}
+Daniel Dugger.
+\newblock A geometric introduction to {K}-theory.
+\newblock {\em Available to download at pages. uoregon. edu/ddugger/kgeom. pdf
+  (On pp. 3, 13, 16, 30, 35, and 38)}, 2014.
+
 \bibitem{edidin1998localization}
 Dan Edidin and William Graham.
-\newblock Localization in equivariant intersection theory and the bott residue
-  formula.
+\newblock Localization in equivariant intersection theory and the {B}ott
+  residue formula.
 \newblock {\em American Journal of Mathematics}, 120(3):619--636, 1998.
 
 \bibitem{przezdziecki2015geometric}
 Tomasz Przezdziecki.
-\newblock Geometric approach to klr algebras and their representation theory,
+\newblock Geometric approach to {KLR} algebras and their representation theory,
   2015.
+
+\bibitem{seiffarth2017klr}
+Florian Seiffarth.
+\newblock On {KLR} and quiver {S}chur algebras, 2017.
 
 \bibitem{thomason1993k}
 Robert~W Thomason.
-\newblock Les k-groupes d'un sch{\'e}ma {\'e}clat{\'e} et une formule
+\newblock Les {K}-groupes d'un sch{\'e}ma {\'e}clat{\'e} et une formule
   d'intersection exc{\'e}dentaire.
 \newblock {\em Inventiones mathematicae}, 112(1):195--215, 1993.
 
@@ -29,7 +39,7 @@ Ravi Vakil.
 
 \bibitem{varagnolo2011canonical}
 Michela Varagnolo and Eric Vasserot.
-\newblock Canonical bases and klr-algebras.
+\newblock Canonical bases and {KLR}-algebras.
 \newblock 2011.
 
 \end{thebibliography}
