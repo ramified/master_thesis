@@ -2,10 +2,11 @@
 \documentclass[reqno,11pt,openany]{book}
 
 %%%%%%%%%%%%%%%Setting for fast compiling
-%\special{dvipdfmx:config z 0}
-%%\includeonly{chapters/contents}
-%\includeonly{chapters/affinepaving,chapters/chapter1}
-%%\includeonly{chapters/chapter1}
+\special{dvipdfmx:config z 0}
+%\includeonly{chapters/contents}
+%\includeonly{chapters/introduction}
+%\includeonly{chapters/affinepaving,chapters/introduction}
+%\includeonly{chapters/chapter3}
 
 %packages
 %\usepackage{color,graphicx}
@@ -249,7 +250,7 @@ urlcolor=blue,
 
 \include{chapters/contents}
 \include{chapters/introduction}
-\part{$K$-theory of the Steinberg varieties}
+\part{{$K$-theory of the Steinberg varieties}}\label{part:Steinberg_varieties}
 \include{chapters/chapter1}
 \include{chapters/chapter2}
 \include{chapters/chapter3}
@@ -257,7 +258,7 @@ urlcolor=blue,
 \include{chapters/chapter5}
 \include{chapters/chapter6}
 \include{chapters/chapter7}
-\part{Affine paving of partial flag varieties}
+\part{Affine paving of partial flag varieties}\label{part:partial_flag_varieties}
 \include{chapters/affinepaving}
 
 \bibliographystyle{plain}

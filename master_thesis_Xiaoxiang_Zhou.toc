@@ -1,5 +1,5 @@
 \contentsline {chapter}{Introduction}{3}{chapter*.2}% 
-\contentsline {part}{I\hspace {1em}$K$-theory of the Steinberg varieties}{6}{part.1}% 
+\contentsline {part}{I\hspace {1em}{$K$-theory of the Steinberg varieties}}{6}{part.1}% 
 \contentsline {chapter}{\numberline {1}Variety and stratification}{7}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Initial case: $\mathcal {F}$ and $\mathcal {F} \times \mathcal {F}$}{7}{section.1.1}% 
 \contentsline {subsection}{\numberline {1.1.1}The flag variety $\mathcal {F}$}{7}{subsection.1.1.1}% 
@@ -65,10 +65,10 @@
 \contentsline {section}{\numberline {7.1}Extended quiver}{77}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}Canonical functor $\Phi $}{78}{section.7.2}% 
 \contentsline {section}{\numberline {7.3}Dimension vector}{79}{section.7.3}% 
-\contentsline {section}{\numberline {7.4}Ext-vanishing properties}{81}{section.7.4}% 
+\contentsline {section}{\numberline {7.4}Ext-vanishing properties}{82}{section.7.4}% 
 \contentsline {section}{\numberline {7.5}A crash course on Auslander--Reiten theory}{83}{section.7.5}% 
-\contentsline {chapter}{\numberline {8}Affine Pavings of Quiver Flag Varieties}{88}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Main theorem}{88}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Application: Dynkin case}{92}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}Proof of Claim \otherrobustref }{94}{section.8.3}% 
-\contentsline {section}{\numberline {8.4}Application: affine case}{100}{section.8.4}% 
+\contentsline {chapter}{\numberline {8}Constructions of Affine Pavings}{89}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Main theorem in Part II}{89}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Application: Dynkin case}{93}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Proof of Claim \otherrobustref }{96}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}Application: affine case}{101}{section.8.4}% 

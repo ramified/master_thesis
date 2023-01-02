@@ -5,6 +5,12 @@ Klaus Bongartz.
 \newblock Critical simply connected algebras.
 \newblock {\em manuscripta mathematica}, 46(1):117--136, 1984.
 
+\bibitem{brown2018flag}
+Justin Brown.
+\newblock Flag varieties: An interplay of geometry, combinatorics, and
+  representation theory.
+\newblock 2018.
+
 \bibitem{chriss1997representation}
 Neil Chriss and Victor Ginzburg.
 \newblock {\em Representation theory and complex geometry}, volume~42.
@@ -25,8 +31,8 @@ Corrado De~Concini, George Lusztig, and Claudio Procesi.
 \bibitem{dugger2014geometric}
 Daniel Dugger.
 \newblock A geometric introduction to {K}-theory.
-\newblock {\em Available to download at pages. uoregon. edu/ddugger/kgeom. pdf
-  (On pp. 3, 13, 16, 30, 35, and 38)}, 2014.
+\newblock {\em Available to download at
+  \url{https://pages.uoregon.edu/ddugger/kgeom.pdf}}, 2014.
 
 \bibitem{eberhardt2022motivic}
 Jens~Niklas Eberhardt and Catharina Stroppel.

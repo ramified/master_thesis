@@ -9,6 +9,12 @@
 
 
 \chapter{Preliminaries for Affine Pavings}\label{chap:flag=gr}
+
+The goal of the two chapters is to fine an affine paving of the partial flag variety $\Flag{\ftdimvec{f}}(X)$, which generalizes the variety $\Flag{\ftdimvec{d}}(X)$ defined in \ref{rmk:flag_variety_FlagX}. We have constructed some stratifications of most varieties by orbits in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}, and some are even affine pavings. For $\Flag{\ftdimvec{f}}(X)$, we have no natural group actions, so we can not find affine pavings by methods in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}. To achieve our goal, we extend methods from \cite{irelli2019cell}
+ and \cite{maksimau2019flag} as well as techniques from Auslander--Reiten theory.
+
+In this chapter, we realize the partial flag variety $\Flag{\ftdimvec{f}}(X)$ as a quiver Grassmannian of the extended quiver, prove some $\Ext$-vanishing properties, and also give a short introduction of Auslander--Reiten theory. 
+
 \begin{setting}
 Throughout Chapter \ref{chap:flag=gr} and \ref{chap:affine_pavings}, $R$ is a $\mathbb{C}$-algebra with unit, and $\Mod(R)$ denotes the category of $R$-modules of finite dimension. For a representation $X\in \rep(Q)$, we denote by $X_i:=e_iX$ the $\mathbb{C}$-linear space at the vertex $i\in v(Q)$. We denote by $P(i)$, $I(i)$ and $S(i)$ the indecomposable projective, injective, simple modules corresponding to the vertex $i$, respectively.
 \end{setting}
@@ -28,10 +34,10 @@ For a quiver $Q$ and an integer $d \geqslant 1$, the extended quiver $Q_{d}$ is 
 The extended quiver $Q_d$ is exactly the same quiver as $\hat{\Gamma}_d$ in \cite[Definition 2.2]{maksimau2019flag}. The next definition is a small variation:
 
 \begin{defn}[Strict extended quiver]
-For a quiver $Q$ and an integer $d \geqslant 2$, the strict extended quiver $Q_{d,\operatorname{str}}$ is defined as follows:
+For a quiver $Q$ and an integer $d \geqslant 2$, the strict extended quiver $Q_{d,\str}$ is defined as follows:
 \begin{itemize}
 	\item The vertex set of $Q_d$ is defined as the Cartesian product of the vertex set of $Q$ and $\{1,\ldots,d\}$, i.e.,
-	$$v(Q_{d,\operatorname{str}})=v(Q) \times \{1,\ldots,d\}.$$
+	$$v(Q_{d,\str})=v(Q) \times \{1,\ldots,d\}.$$
 	\item  We have two types of arrows: for each $(i,r) \in v(Q) \times \{1,\ldots,d-1\}$, there is one arrow from $(i,r)$ to $(i,r+1)$; for each arrow $i \longrightarrow j$ in quiver $Q$ and $r \in \{2,\ldots,d\}$, there is one arrow from $(i,r)$ to $(j,r-1)$.
 \end{itemize}
 \end{defn}
@@ -44,7 +50,7 @@ The (strict) extended quiver for a Dynkin quiver $Q$ of type $A_4$ looks as foll
 	&&&&&&&[5mm] \bullet && \bullet && \bullet && \bullet &[5mm] \bullet && \bullet && \bullet && \bullet \\
 	&&&&&&& \bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet \\
 	\bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet \\[-5mm]
-	&&& {\hspace{-1cm}Q\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_3\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_{3,\operatorname{str}}\hspace{-1cm}}
+	&&& {\hspace{-1cm}Q\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_3\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_{3,\str}\hspace{-1cm}}
 	\arrow[from=3-1, to=3-3]
 	\arrow[from=3-5, to=3-3]
 	\arrow[from=3-5, to=3-7]
@@ -86,20 +92,20 @@ Next, we define the quiver algebras for later use.
 \begin{defn}[Algebra of an extended quiver]\label{def:bqa}
 For an extended quiver $Q_d$, let $\mathbb{C}Q_d$ be the corresponding path algebra, and $I$ be the ideal of $\mathbb{C}Q_d$ identifying all the paths with the same sources and targets. The algebra of the extended quiver $Q_d$ is defined as
 $$R_d:= \mathbb{C}Q_d/I.$$
-Similarly, we define the algebra $R_{d,\operatorname{str}}:= \mathbb{C}Q_{d,\operatorname{str}}/I$ for the strict extended quiver.
+Similarly, we define the algebra $R_{d,\str}:= \mathbb{C}Q_{d,\str}/I$ for the strict extended quiver.
 \end{defn}
-By abuse of notation, we often abbreviate $R_d$ and $R_{d,\operatorname{str}}$ by $R$. 
+By abuse of notation, we often abbreviate $R_d$ and $R_{d,\str}$ by $R$. 
 \section{Canonical functor $\Phi$}
 We follow \cite[2.3]{maksimau2019flag} in this section with a few variations. 
-\begin{defn}[Partial flag]\label{def:pf}
-For a quiver representation $X \in \rep(Q)$, a partial flag of $X$ is defined as an increasing sequence of subrepresentation of $X$. For an integer $d \geqslant 1$, we denote
+\begin{defn}[Partial flag variety]\label{def:pf}
+For a quiver representation $X \in \rep(Q)$ and an integer $d \geqslant 1$, we denote
 $$\Flagd(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \right\}$$
-as the collection of all partial flags of length $d$, and call it the partial flag variety. 
+as the collection of all partial flags of length $d$, and call it the partial flag variety associated to $X$. 
 \end{defn}
-\begin{defn}[Strict partial flag]\label{def:spf}
-For a quiver representation $X \in \rep(Q)$, a strict partial flag of $X$ is defined as an increasing sequence of subrepresentation $(M_k)_k$ of $X$ such that for any arrow $x \in v(Q)$ and any $k$, we have $x.M_{k+1} \subseteq M_{k}$. For an integer $d \geqslant 2$, we denote
+\begin{defn}[Strict partial flag variety]\label{def:spf}
+For a quiver representation $X \in \rep(Q)$ and an integer $d \geqslant 2$, we denote
 $$\Flagdstr(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X\mid x.M_{k+1} \subseteq M_k \right\}$$
-as the collection of all strict partial flags of length $d$, and call it the strict partial flag variety. 
+as the collection of all strict partial flags of length $d$, and call it the strict partial flag variety associated to $X$. 
 \end{defn}
 \begin{defn}[Grassmannian]
 Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \Mod(R)$, the Grassmannian $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
@@ -110,13 +116,13 @@ The canonical functor $\Phi:\rep(Q) \longrightarrow \Mod(R) $ is defined as foll
 \begin{itemize}
 \item $\left(\Phi(X)\right)_{(i,r)}:=X_i$;
 \item $\left(\Phi(X)\right)_{(i,r) \rightarrow (i,r+1)}:=\Id_{X_i}$;
-\item Either $\left(\Phi(X)\right)_{(i,r) \rightarrow (j,r)}:=X_{i \rightarrow j}$ for $R=R_d$, \\or $\left(\Phi(X)\right)_{(i,r) \rightarrow (j,r-1)}:=X_{i \rightarrow j}$ for $R=R_{d,\operatorname{str}}$.
+\item Either $\left(\Phi(X)\right)_{(i,r) \rightarrow (j,r)}:=X_{i \rightarrow j}$ for $R=R_d$, \\or $\left(\Phi(X)\right)_{(i,r) \rightarrow (j,r-1)}:=X_{i \rightarrow j}$ for $R=R_{d,\str}$.
 \end{itemize}
 \end{defn}
 The functor $\Phi$ helps to realize a partial flag as a quiver subrepresentation. 
 \begin{proposition}\label{prop:flag=gr}
 For a representation $X\in \rep(Q)$, the canonical functor $\Phi$ induces isomorphisms
-$$\Flagd(X)\cong \Gralg{R_d}(\Phi(X)) \qquad \Flagdstr(X)\cong \Gralg{R_{d,\operatorname{str}}}(\Phi(X)).$$
+$$\Flagd(X)\cong \Gralg{R_d}(\Phi(X)) \qquad \Flagdstr(X)\cong \Gralg{R_{d,\str}}(\Phi(X)).$$
 \end{proposition}
 \begin{proof}
 The isomorphism maps a flag $M:M_1 \subseteq \cdots \subseteq M_d$ to a representation $\Phi'(M)$ with $\Phi'(M)_{(i,r)}=M_{i,r}$ and obvious morphisms for arrows. The non-strict case is mentioned in \cite[page 4]{maksimau2019flag} and the strict case works similarly.
@@ -131,7 +137,7 @@ Consider the quiver $Q\colon x \longrightarrow y \longleftarrow z \longrightarro
 		\includegraphics[width=0.81\linewidth]{figures/affine_paving/bigpic.pdf}
 		\vspace{-0.5cm}
 		\includegraphics[width=0.9\linewidth]{figures/affine_paving/bigpic2.pdf}
-		\vspace{-0.55cm}
+		\vspace{-0.35cm}
 %		\captionsetup{labelformat=empty}
 		\caption{}
 		\vspace{0.3cm}
@@ -142,37 +148,37 @@ In many cases, the proof of the strict case and the non-strict case is the same,
 $$\Flag{}(X)\cong \Gr(\Phi(X)).$$
 \section{Dimension vector}In this section we define some varieties indexed by dimension vectors. Recall Definition \ref{def:Q-vs} and \ref{def:ftdv}. Notice that every module $T \in \Mod(\mathbb{C}Q/I)$ can be viewed as a representation of $Q$, so we automatically have a notion of dimension vector for $T$.
 
-We can write the (strict) partial flag variety and Grassmannian as disjoint union of several pieces. Since $v(Q_{d,(\operatorname{str})})=v(Q) \times \{1,\ldots,d\}$, any dimension vector $\dimvec{f}$ of $R$ can be viewed as $d$ dimension vectors $(\dimvec{f}_1,\ldots,\dimvec{f}_d)$. Define
+We can write the (strict) partial flag variety and Grassmannian as disjoint union of several pieces. Since $v(Q_{d,(\str)})=v(Q) \times \{1,\ldots,d\}$, any dimension vector $\ftdimvec{f}$ of $R$ can be viewed as $d$ dimension vectors $(\ftdimvec{f}_1,\ldots,\ftdimvec{f}_d)$. Define
 \begin{equation*}
 \begin{aligned}
-  \Flagd_{,\dimvec{f}}(X):=\;&\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \;\middle|\; \dimv M_k=\dimvec{f}_k \right\} && \subseteq  \Flagd(X), \\ 
-  \Flag{d,\dimvec{f}}^{\operatorname{str}}(X):=\;&\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \;\middle|\; x.M_{k+1} \subseteq M_k,\, \dimv M_k=\dimvec{f}_k \right\} && \subseteq  \Flagdstr(X), \\ 
-  \Gralg{R}_{\dimvec{f}}(T):=\;&\{T' \subseteq T \text{ with } \dimv T'=\dimvec{f}\} && \subseteq  \Gralg{R}(T). 
+  \Flag{\ftdimvec{f}}(X):=\;&\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \;\middle|\; \dimv M_k=\ftdimvec{f}_k \right\} && \subseteq  \Flagd(X), \\ 
+  \Flag{\ftdimvec{f},\str}(X):=\;&\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \;\middle|\; x.M_{k+1} \subseteq M_k,\, \dimv M_k=\ftdimvec{f}_k \right\} && \subseteq  \Flagdstr(X), \\ 
+  \Gralg{R}_{\ftdimvec{f}}(T):=\;&\{T' \subseteq T \text{ with } \dimv T'=\ftdimvec{f}\} && \subseteq  \Gralg{R}(T). 
 \end{aligned}
 \end{equation*}
 Then from the Proposition \ref{prop:flag=gr} we get 
-$$\Flagd_{,\dimvec{f}}(X) \cong \Gralg{R_d}_{\dimvec{f}}(\Phi(X)) \qquad \Flag{d,\dimvec{f}}^{\operatorname{str}}(X) \cong \Gralg{R_{d,\operatorname{str}}}_{\dimvec{f}}(\Phi(X)).$$
+$$\Flag{\ftdimvec{f}}(X) \cong \Gralg{R_d}_{\ftdimvec{f}}(\Phi(X)) \qquad \Flag{\ftdimvec{f},\str}(X) \cong \Gralg{R_{d,\str}}_{\ftdimvec{f}}(\Phi(X)).$$
 \begin{remark}
 All the spaces we defined here have natural topologies and variety structures. For example, by the standard embedding
 \[\begin{tikzcd}
-	\Gralg{R}_{\dimvec{f}}(T) & \displaystyle\prod_{(i,r) \in v\left(Q_{d,(str)}\right)} \Gr_{\dimvec{f}_{i,r}}\big(T_{(i,r)}\big),
+	\Gralg{R}_{\ftdimvec{f}}(T) & \displaystyle\prod_{(i,r) \in v\left(Q_{d,(str)}\right)} \Gr_{\ftdimvec{f}_{i,r}}\big(T_{(i,r)}\big),
 	\arrow[hook, from=1-1, to=1-2]
 \end{tikzcd}\]
-$\Gralg{R}_{\dimvec{f}}(T)$ is then endowed with the subspace topology and subvariety structure.
+$\Gralg{R}_{\ftdimvec{f}}(T)$ is then endowed with the subspace topology and subvariety structure.
 \end{remark}
 
 
-Finally, we need to define the Euler form of two dimension vectors. For this we need to define the set of virtual arrows of the quivers $Q_d$ and $Q_{d,\operatorname{str}}$. Following Example \ref{example:virtualarrow}, the virtual arrows of the quivers $Q_3$ and $Q_{3,\operatorname{str}}$ are depicted in red.
+Finally, we need to define the Euler form of two dimension vectors. For this we need to define the set of virtual arrows of the quivers $Q_d$ and $Q_{d,\str}$. Following Example \ref{example:virtualarrow}, the virtual arrows of the quivers $Q_3$ and $Q_{3,\str}$ are depicted in red.
 \begin{defn}[Virtual arrows of the quiver $Q_d$]
 For $d \geqslant 1$, the virtual arrows of the quiver $Q_d$ is defined as a triple $\big(va(Q_d),s,t\big)$, where
 $$va(Q_d):=a(Q) \times \{1,\ldots, d-1 \}$$
 is a finite set, and $s,t: va(Q_d) \longrightarrow v(Q_d)$ are maps defined by
 $$s\big((i\rightarrow j,r)\big)=(i,r) \qquad t \big((i\rightarrow j,r)\big)=(j,r+1).$$
 \end{defn}
-\begin{defn}[Virtual arrows of the quiver $Q_{d,\operatorname{str}}$]
-For $d \geqslant 2$, the virtual arrows of the quiver $Q_{d,\operatorname{str}}$ is defined as a triple $\big(va(Q_{d,\operatorname{str}}),s,t\big)$, where
-$$va(Q_{d,\operatorname{str}}):=a(Q) \times \{2,\ldots, d-1 \}$$
-is a finite set, and $s,t: va(Q_{d,\operatorname{str}}) \longrightarrow v(Q_{d,\operatorname{str}})$ are maps defined by
+\begin{defn}[Virtual arrows of the quiver $Q_{d,\str}$]
+For $d \geqslant 2$, the virtual arrows of the quiver $Q_{d,\str}$ is defined as a triple $\big(va(Q_{d,\str}),s,t\big)$, where
+$$va(Q_{d,\str}):=a(Q) \times \{2,\ldots, d-1 \}$$
+is a finite set, and $s,t: va(Q_{d,\str}) \longrightarrow v(Q_{d,\str})$ are maps defined by
 $$s\big((i\rightarrow j,r)\big)=(i,r) \qquad t \big((i\rightarrow j,r)\big)=(j,r).$$
 \end{defn}
 \begin{eg}\label{example:virtualarrow}
@@ -185,7 +191,7 @@ $\qquad$
 	&&&&&&&[5mm] \bullet && \bullet && \bullet && \bullet &[5mm] \bullet && \bullet && \bullet && \bullet \\
 	&&&&&&& \bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet \\
 	\bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet & \bullet && \bullet && \bullet && \bullet \\[-5mm]
-	&&& {\hspace{-1cm}Q\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_3\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_{3,\operatorname{str}}\hspace{-1cm}}
+	&&& {\hspace{-1cm}Q\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_3\hspace{-1cm}} &&&&&&& {\hspace{-1cm}Q_{3,\str}\hspace{-1cm}}
 	\arrow[from=3-1, to=3-3]
 	\arrow[from=3-5, to=3-3]
 	\arrow[from=3-5, to=3-7]
@@ -239,14 +245,14 @@ $\qquad$
 Let $R$ be a bounded quiver algebra defined in Definition \ref{def:bqa}. We denote
 \begin{equation*}
 \begin{aligned}
-	v(R):&= \{\text{vertices in $Q_d$ or $Q_{d,\operatorname{str}}$}\}, \\
-	a(R):&= \{\text{arrows in $Q_d$ or $Q_{d,\operatorname{str}}$}\}, \\
-	va(R):&= \{\text{virtual arrows in $Q_d$ or $Q_{d,\operatorname{str}}$}\}. \\
+	v(R):&= \{\text{vertices in $Q_d$ or $Q_{d,\str}$}\}, \\
+	a(R):&= \{\text{arrows in $Q_d$ or $Q_{d,\str}$}\}, \\
+	va(R):&= \{\text{virtual arrows in $Q_d$ or $Q_{d,\str}$}\}. \\
 \end{aligned}
 \end{equation*}
 
-For two dimension vectors $\dimvec{f},\dimvec{g}$ of $R$, the Euler form $\left< \dimvec{f},\dimvec{g}\right>_R$ is defined by
-	$$\left< \dimvec{f},\dimvec{g}\right>_R:= \sum_{i \in v(R)} f_ig_i - \sum_{b \in a(R)} f_{s(b)}g_{t(b)}+ \sum_{c \in va(R)} f_{s(c)}g_{t(c)}.$$
+For two dimension vectors $\ftdimvec{f},\ftdimvec{g}$ of $R$, the Euler form $\left< \ftdimvec{f},\ftdimvec{g}\right>_R$ is defined by
+	$$\left< \ftdimvec{f},\ftdimvec{g}\right>_R:= \sum_{i \in v(R)} f_ig_i - \sum_{b \in a(R)} f_{s(b)}g_{t(b)}+ \sum_{c \in va(R)} f_{s(c)}g_{t(c)}.$$
 \end{defn}
 \section{Ext-vanishing properties}
 We will show that some higher rank extension group are zero, which will be a key ingredient in the proofs of Section \ref{sec:mainthm}.
@@ -500,6 +506,7 @@ $E_8$ & \begin{tikzcd}[sep=4mm]
 \vspace{1mm}
 \caption{Roots which control all other roots.}
 \label{table:importantroots}
+\vspace{3mm}
 \end{table}
 Indecomposable representations form the vertices of Auslander–Reiten quiver, while irreducible morphisms form the arrows.
 \begin{defn}[Irreducible morphism]
@@ -719,35 +726,36 @@ Minimal sectional monos can also be clearly seen from the Auslander–Reiten qui
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Affine Pavings of Quiver Flag Varieties}\label{chap:affine_pavings}
+\chapter{Constructions of Affine Pavings}\label{chap:affine_pavings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Main theorem}\label{sec:mainthm}
+With tools in hand, we prove the main theorem \ref{thm:main1} and \ref{thm:main2} in Part \ref{part:partial_flag_varieties}, and apply them to obtain the affine paving structure of partial flag varieties, see Theorem \ref{thm:affine_paving}.
+\section{Main theorem in Part II}\label{sec:mainthm}
 In this section we state and prove the main theorems, which are essential in Section \ref{sec:Dynkin} and \ref{sec:affine}.
    
 Let $\eta: 0\longrightarrow X \stackrel{\iota}{\longrightarrow} Y \stackrel{\pi}{\longrightarrow} S \longrightarrow 0$ be a short exact sequence in $\rep(Q)$. Consider the canonical \textbf{non-continuous} map
 $$\Psi: \Grr(\Phi(Y)) \longrightarrow \Grr(\Phi(X)) \times \Grr(\Phi(S)) \qquad U \longmapsto \left([\Phi(\iota)]^{-1}(U),[\Phi(\pi)](U)   \right).$$
 Denote the set
-$$\Grr(\Phi(Y))_{\dimvec{f},\dimvec{g}}:= \Psi^{-1}\Big(\Grr_{\dimvec{f}}(\Phi(X)) \times \Grr_{\dimvec{g}}(\Phi(S))\Big)$$
+$$\Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}:= \Psi^{-1}\Big(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S))\Big)$$
 and
-let $\Psi_{\dimvec{f},\dimvec{g}}$ be the map $\Psi$ restricted to $\Grr(\Phi(Y))_{\dimvec{f},\dimvec{g}}$, i.e.,
-$$\Psi_{\dimvec{f},\dimvec{g}}: \Grr(\Phi(Y))_{\dimvec{f},\dimvec{g}} \longrightarrow \Grr_{\dimvec{f}}(\Phi(X)) \times \Grr_{\dimvec{g}}(\Phi(S)).$$
+let $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ be the map $\Psi$ restricted to $\Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}$, i.e.,
+$$\Psi_{\ftdimvec{f},\ftdimvec{g}}: \Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}} \longrightarrow \Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)).$$
 \begin{remark}\label{rem:topo}
-Even though $\Psi$ is not continuous, $\Psi_{\dimvec{f},\dimvec{g}}$ is continuous. Moreover, for any dimension vectors $\dimvec{f},\dimvec{g}$, the set
-$$\Gr(\Phi(Y))_{\geqslant \dimvec{f}, \leqslant \dimvec{g} }:= \left\{ U \in \Gr(\Phi(Y)) \,\middle|\,\begin{aligned}
-\dimv [\Phi(\iota)]^{-1}(U) &\geqslant \dimvec{f}\\ \dimv [\Phi(\pi)]\phantom{^{0}}(U) &\leqslant \dimvec{g}
+Even though $\Psi$ is not continuous, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is continuous. Moreover, for any dimension vectors $\ftdimvec{f},\ftdimvec{g}$, the set
+$$\Gr(\Phi(Y))_{\geqslant \ftdimvec{f}, \leqslant \ftdimvec{g} }:= \left\{ U \in \Gr(\Phi(Y)) \,\middle|\,\begin{aligned}
+\dimv [\Phi(\iota)]^{-1}(U) &\geqslant \ftdimvec{f}\\ \dimv [\Phi(\pi)]\phantom{^{0}}(U) &\leqslant \ftdimvec{g}
 \end{aligned}  \right\}$$
 is closed in $\Gr(\Phi(Y))$. This gives us a filtration 
-$$0= Z_0 \subset Z_1 \subset \cdots \subset Z_d=\Gr_{\dimvec{h}}(\Phi(Y))$$
-with $Z_i$ closed and $Z_{i+1} \setminus Z_i$ isomorphic to $\Gr(\Phi(Y))_{ \dimvec{f},\dimvec{g}}$ for some $\dimvec{f},\dimvec{g}$. Therefore, from the affine pavings of $\Gr(\Phi(Y))_{ \dimvec{f},\dimvec{g}}$ (for every $\dimvec{f},\dimvec{g}$) one can construct one affine paving of $\Gr_{\dimvec{h}}(\Phi(Y))$.
+$$0= Z_0 \subset Z_1 \subset \cdots \subset Z_d=\Gr_{\ftdimvec{h}}(\Phi(Y))$$
+with $Z_i$ closed and $Z_{i+1} \setminus Z_i$ isomorphic to $\Gr(\Phi(Y))_{ \ftdimvec{f},\ftdimvec{g}}$ for some $\ftdimvec{f},\ftdimvec{g}$. Therefore, from the affine pavings of $\Gr(\Phi(Y))_{ \ftdimvec{f},\ftdimvec{g}}$ (for every $\ftdimvec{f},\ftdimvec{g}$) one can construct one affine paving of $\Gr_{\ftdimvec{h}}(\Phi(Y))$.
 \end{remark} 
 %The goal of this section is to prove the following theorems:
 \begin{theorem}\label{thm:main1}
-	If $\eta$ splits, then $\Psi$ is surjective. Moreover, if $[S,X]^1=0$, then $\Psi_{\dimvec{f},\dimvec{g}}$ is a Zarisky-locally trivial affine bundle of rank $\left< \dimvec{g},\dimv \Phi(X) - \dimvec{f}\right>_R$.
+	If $\eta$ splits, then $\Psi$ is surjective. Moreover, if $[S,X]^1=0$, then $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle of rank $\left< \ftdimvec{g},\dimv \Phi(X) - \ftdimvec{f}\right>_R$.
 \end{theorem}
 \begin{theorem}[Generalizes {\cite[Theorem 32]{irelli2019cell}}]\label{thm:main2}
 	When $\eta$ does not split and $[S,X]^1=1$, 
-	$$\Img \Psi_{\dimvec{f},\dimvec{g}} = \bigg(\Grr_{\dimvec{f}}(\Phi(X)) \times \Grr_{\dimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\dimvec{f}}(\Phi(X_S)) \times \Grr_{\dimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg)$$
+	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\ftdimvec{f}}(\Phi(X_S)) \times \Grr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg)$$
 	where 
 	\begin{equation*}
 	\begin{aligned}
@@ -755,7 +763,7 @@ with $Z_i$ closed and $Z_{i+1} \setminus Z_i$ isomorphic to $\Gr(\Phi(Y))_{ \dim
 	S^X:&= \max \left\{ M \subseteq S \,\middle|\; [M,X]^1=1 \right\} \subseteq S.
 	\end{aligned}
 	\end{equation*}
-Moreover, $\Psi_{\dimvec{f},\dimvec{g}}$ is a Zarisky-locally trivial affine bundle of rank $\left< \dimvec{g},\dimv \Phi(X) - \dimvec{f}\right>_R$ over $\Img \Psi_{\dimvec{f},\dimvec{g}}$.
+Moreover, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle of rank $\left< \ftdimvec{g},\dimv \Phi(X) - \ftdimvec{f}\right>_R$ over $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$.
 \end{theorem}
 
 We will spend the rest of the section proving these theorems. We investigate the image as well as the fiber of $\Psi$ respectively.
@@ -888,7 +896,7 @@ $$V \nsubseteq \Phi(X_S) \iff [\Phi(S),\Phi(X)/V ]^1=0 \Rightarrow  [W,\Phi(X)/V
 \end{proof}
 \begin{corollary}\label{cor:img2}
 When $\eta$ generates $\Ext^1(S,X)$, we have 
-	$$\Img \Psi_{\dimvec{f},\dimvec{g}} = \bigg(\Grr_{\dimvec{f}}(\Phi(X)) \times \Grr_{\dimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\dimvec{f}}(\Phi(X_S)) \times \Grr_{\dimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg).$$
+	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\ftdimvec{f}}(\Phi(X_S)) \times \Grr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg).$$
 \end{corollary}
 
 \begin{lemma}\label{lem:torsor}
@@ -929,14 +937,14 @@ When $(V,W) \in \Img \Psi$, $\bar{\eta}$ is split, and each split morphism $\the
 $$\Psi^{-1}((V,W)) \cong \{ \theta: \text{ split morphism} \} \cong \Hom_{R}(W,\Phi(X)/V).$$
 \end{proof}
 \begin{remark}\label{rem:bundleprop}
-Any point $(V,W) \in \Img \Psi_{\dimvec{f},\dimvec{g}}$ can be also viewed as a morphism
-$$f: \Spec \mathbb{C} \longrightarrow \Img \Psi_{\dimvec{f},\dimvec{g}}  \subseteq \Grr_{\dimvec{f}}(\Phi(X)) \shorttimes \Grr_{\dimvec{g}}(\Phi(S)) $$
-where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by replacing $\Spec \mathbb{C}$ by any locally closed reduced subscheme $\Spec A$ of $\Img \Psi_{\dimvec{f},\dimvec{g}}$ in Lemma \ref{lem:torsor}, we can run the machinery of algebraic geometry, and mimic the proof of \cite[Theorem 24]{irelli2019cell} to show that $\Psi_{\dimvec{f},\dimvec{g}}$ is a Zarisky-locally trivial affine bundle over $\Img \Psi_{\dimvec{f},\dimvec{g}}$ when $\eta$ generates $\Ext^1(S,X)$. Roughly, there are 4 steps:
+Any point $(V,W) \in \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ can be also viewed as a morphism
+$$f: \Spec \mathbb{C} \longrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}  \subseteq \Grr_{\ftdimvec{f}}(\Phi(X)) \shorttimes \Grr_{\ftdimvec{g}}(\Phi(S)) $$
+where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by replacing $\Spec \mathbb{C}$ by any locally closed reduced subscheme $\Spec A$ of $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ in Lemma \ref{lem:torsor}, we can run the machinery of algebraic geometry, and mimic the proof of \cite[Theorem 24]{irelli2019cell} to show that $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle over $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ when $\eta$ generates $\Ext^1(S,X)$. Roughly, there are 4 steps:
 \begin{enumerate}[1.]
 \item Realise Grassmannians as representable functors, and replace $\mathbb{C}$-modules by $A$-modules;
-\item Verify that $\Psi_{\dimvec{f},\dimvec{g}}^{-1} (\Spec A)$ is a $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$-torsor, where $$(\mathcal{V},\mathcal{W}) \in \Grr_{\dimvec{f}}(\Phi(X))(A) \shorttimes \Grr_{\dimvec{g}}(\Phi(S))(A)$$ corresponds to the immersion $\Spec A \hookrightarrow \Img \Psi_{\dimvec{f},\dimvec{g}}\,$;
-\item Verify that $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$ is a vector bundle over $\Spec A$ of constant dimension $\left< \dimvec{f},\dimv \Phi(X)-\dimvec{g}\right>_R\,$;
-\item Find a section of $\Psi_{\dimvec{f},\dimvec{g}}^{-1} (\Spec A) \longrightarrow \Spec A$, which is essentially the splitting $\theta$ in \cite[Lemma 22]{irelli2019cell}.
+\item Verify that $\Psi_{\ftdimvec{f},\ftdimvec{g}}^{-1} (\Spec A)$ is a $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$-torsor, where $$(\mathcal{V},\mathcal{W}) \in \Grr_{\ftdimvec{f}}(\Phi(X))(A) \shorttimes \Grr_{\ftdimvec{g}}(\Phi(S))(A)$$ corresponds to the immersion $\Spec A \hookrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}\,$;
+\item Verify that $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$ is a vector bundle over $\Spec A$ of constant dimension $\left< \ftdimvec{f},\dimv \Phi(X)-\ftdimvec{g}\right>_R\,$;
+\item Find a section of $\Psi_{\ftdimvec{f},\ftdimvec{g}}^{-1} (\Spec A) \longrightarrow \Spec A$, which is essentially the splitting $\theta$ in \cite[Lemma 22]{irelli2019cell}.
 \end{enumerate}
 
 \end{remark}
@@ -944,11 +952,11 @@ where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by
 We have already computed $\Img \Psi$ in Corollary \ref{cor:img1} and \ref{cor:img2}. In both cases $\eta$ generates $\Ext^1(S,X)$, so by Corollary \ref{cor:0or1} we get
 \begin{equation*}
 \begin{aligned}
-(V,W) \in \Img \Psi_{\dimvec{f},\dimvec{g}} &\Longleftrightarrow [W,\Phi(X)/V]^1=0\\
-& \Longrightarrow [W,\Phi(X)/V]=\left< W,\Phi(X)/V\right>_R=\left< \dimvec{f},\dimv \Phi(X)-\dimvec{g}\right>_R.
+(V,W) \in \Img \Psi_{\ftdimvec{f},\ftdimvec{g}} &\Longleftrightarrow [W,\Phi(X)/V]^1=0\\
+& \Longrightarrow [W,\Phi(X)/V]=\left< W,\Phi(X)/V\right>_R=\left< \ftdimvec{f},\dimv \Phi(X)-\ftdimvec{g}\right>_R.
 \end{aligned}
 \end{equation*}
-From Remark \ref{rem:bundleprop}, $\Psi_{\dimvec{f},\dimvec{g}}$ is a Zarisky-locally trivial affine bundle.
+From Remark \ref{rem:bundleprop}, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle.
 \end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -997,11 +1005,11 @@ is equal to $\ord(M)$ unless $\orde(M)=0$.
 The next lemma shows the affine paving property for representations of small order.
 
 \begin{lemma}[{Follows \cite[Lemma 2.22]{maksimau2019flag}}]\label{lem:smallvecdim}
-	Suppose that the underlying graph of $Q$ is a tree. For an indecomposable representation $M \in \rep(Q)$ with $\ord(M) \leqslant 2$, the variety $\Grr_{\dimvec{f}}(\Phi(M))$ is either empty or a direct product of some copies of $\mathbb{P}^1$. Especially, the partial flag variety $ \Grr_{\dimvec{f}}(\Phi(M))$ has an affine paving.
+	Suppose that the underlying graph of $Q$ is a tree. For an indecomposable representation $M \in \rep(Q)$ with $\ord(M) \leqslant 2$, the variety $\Grr_{\ftdimvec{f}}(\Phi(M))$ is either empty or a direct product of some copies of $\mathbb{P}^1$. Especially, the partial flag variety $ \Grr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving.
 \end{lemma}
 \begin{proof}\belowdisplayskip=-12pt
-	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Grr_{\dimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\dimvec{f}$.} we get the natural embedding
-	$$\Grr_{\dimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \dimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
+	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Grr_{\ftdimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\ftdimvec{f}$.} we get the natural embedding
+	$$\Grr_{\ftdimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \ftdimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
 	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. Precisely, one need to carefully discuss three cases of $M_i \longrightarrow M_j$:
 	% https://q.uiver.app/?q=WzAsNyxbMCwwLCJLIl0sWzMsMCwiSyJdLFsxLDAsIkteMiJdLFsyLDAsIkteMiJdLFs1LDAsIkteMiJdLFs2LDAsIkteMi4iXSxbNCwwLCJcXHRleHR7YW5kfSJdLFs0LDUsIlxcY29uZyJdLFszLDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
 	\[\begin{tikzcd}
@@ -1035,7 +1043,7 @@ $$0 \longrightarrow M_1 \longrightarrow M \longrightarrow M_2 \longrightarrow 0,
 we get an affine paving from the affine pavings of $M_1$ and $M_2$, see Remark \ref{rem:topo}.
 \end{proof}
 \begin{remark}\label{rem:smallorder}
-By the same technique one can show that, for Dynkin quiver $Q$ and any representation $M$ with $\displaystyle\max_{i \in v(Q)} \dim_\mathbb{C} M_i \leqslant 2$, the variety $\Grr_{\dimvec{f}}(\Phi(M))$ has an affine paving. This result does not depend on Claim \ref{claim:bigorder}.
+By the same technique one can show that, for Dynkin quiver $Q$ and any representation $M$ with $\displaystyle\max_{i \in v(Q)} \dim_\mathbb{C} M_i \leqslant 2$, the variety $\Grr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving. This result does not depend on Claim \ref{claim:bigorder}.
 \end{remark}
 
 
@@ -1051,7 +1059,7 @@ The task of this section is to prove Claim \ref{claim:bigorder}. When the quiver
 
 The idea of the proof is as follows. For any indecomposable representation $Y$ with $\ord(Y)>2$, we put $Y$ into a short exact sequence 
 $$\eta:0\longrightarrow X \longrightarrow Y \longrightarrow S \longrightarrow 0$$
-fulfilling the assumptions of Theorem \ref{thm:main2}, and then $\Gr(\Phi(Y))$ has an affine paving if $\Img \Psi$ has. If additionally the map $X \hookrightarrow Y$ is a minimal sectional mono, then $\Img \Psi_{\dimvec{f},\dimvec{g}}$ can be written as the product space, which makes $\Img \Psi$ easier to understand.
+fulfilling the assumptions of Theorem \ref{thm:main2}, and then $\Gr(\Phi(Y))$ has an affine paving if $\Img \Psi$ has. If additionally the map $X \hookrightarrow Y$ is a minimal sectional mono, then $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ can be written as the product space, which makes $\Img \Psi$ easier to understand.
 
 
 
@@ -1171,7 +1179,7 @@ By observation of  Figure \ref{fig:minisecmono}, $\orde(S)=\orde(Y)-\orde(X)$ is
 \end{equation*}
 Luckily $\orde(S_1)$ is still smaller or equal to $2$. We can continue this process until the order of representations are small enough.
 
-The exceptional cases are similar, but the discussion is a bit more complicated. Let us look at some examples. (We simplify the notations: $\Gr(M)$ as $\Grr_{\dimvec{f}}(\Phi(M))$, $U(M,N)$ as $\Grr_{\dimvec{f}}(\Phi(M)) \setminus \Grr_{\dimvec{f}}(\Phi(N))$, and we also ignore the dimension vectors.)
+The exceptional cases are similar, but the discussion is a bit more complicated. Let us look at some examples. (We simplify the notations: $\Gr(M)$ as $\Grr_{\ftdimvec{f}}(\Phi(M))$, $U(M,N)$ as $\Grr_{\ftdimvec{f}}(\Phi(M)) \setminus \Grr_{\ftdimvec{f}}(\Phi(N))$, and we also ignore the dimension vectors.)
 \captionsetup[subfigure]{labelfont=rm}
 \captionsetup[subfigure]{labelformat=parens}
 %https://tex.stackexchange.com/questions/233481/subcaption-defaulting-to-capital-letter-labels

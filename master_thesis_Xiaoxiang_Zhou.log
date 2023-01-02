@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 JAN 2023 01:50
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 JAN 2023 12:42
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1662,7 +1662,7 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (MA_Titlepage.sty
 Package: MA_Titlepage 2010/04/25
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 \c@theorem=\count340
 \c@thmsub=\count341
 \c@remarks=\count342
@@ -1696,53 +1696,53 @@ File: pgflibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
 (chapters/affinepaving.aux))
 \openout1 = `master_thesis_Xiaoxiang_Zhou.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 244.
+LaTeX Font Info:    Try loading font information for U+msa on input line 245.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 244.
+LaTeX Font Info:    Try loading font information for U+msb on input line 245.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 244.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 245.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 244.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 245.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Package xypdf Info: Line width: 0.43799pt on input line 244.
+Package xypdf Info: Line width: 0.43799pt on input line 245.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1779,7 +1779,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 244.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring ON on input line 244.
+Package hyperref Info: Link coloring ON on input line 245.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1795,9 +1795,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count344
 )
-LaTeX Info: Redefining \ref on input line 244.
-LaTeX Info: Redefining \pageref on input line 244.
-LaTeX Info: Redefining \nameref on input line 244.
+LaTeX Info: Redefining \ref on input line 245.
+LaTeX Info: Redefining \pageref on input line 245.
+LaTeX Info: Redefining \nameref on input line 245.
  (master_thesis_Xiaoxiang_Zhou.out)
 (master_thesis_Xiaoxiang_Zhou.out)
 \@outlinefile=\write5
@@ -1838,11 +1838,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [4]) [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 252.
+(hyperref)                removing `math shift' on input line 253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 252.
+(hyperref)                removing `math shift' on input line 253.
 
 [6
 
@@ -1859,23 +1859,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 13.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 13.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 13.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 15.
+(hyperref)                removing `\times' on input line 13.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 15.
+(hyperref)                removing `math shift' on input line 13.
 
 [7
 
@@ -1932,7 +1932,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (45.23189pt too wide) detected at line 633
+Overfull \hbox (45.23189pt too wide) detected at line 634
 [][]
  []
 
@@ -1993,13 +1993,13 @@ Missing character: There is no ; in font nullfont!
  [18]
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1015.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1016.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1015.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1016.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 1015.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1016.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
@@ -2018,7 +2018,7 @@ File: figures/comm_diagram/incidence_variety_1.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_2.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_2.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1225--1230
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1228--1233
 [][] [] 
  []
 
@@ -2028,17 +2028,17 @@ File: figures/comm_diagram/incidence_variety_3.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_4.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1268--1273
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1271--1276
 [][] [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1287.
+(hyperref)                removing `math shift' on input line 1290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1287.
+(hyperref)                removing `math shift' on input line 1290.
 
 [24] [25]
 File: figures/table/table_1.pdf Graphic file (type pdf)
@@ -2047,13 +2047,13 @@ File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
 
 
-LaTeX Warning: Float too large for page by 98.40668pt on input line 1386.
+LaTeX Warning: Float too large for page by 98.40668pt on input line 1389.
 
 [26] [27]
 File: figures/table/table_orbit.pdf Graphic file (type pdf)
 <use figures/table/table_orbit.pdf>
  [28] [29] [30]
-Overfull \hbox (44.07256pt too wide) detected at line 1585
+Overfull \hbox (44.07256pt too wide) detected at line 1589
 []
  []
 
@@ -2224,15 +2224,15 @@ Chapter 7.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Phi' on input line 92.
+(hyperref)                removing `\Phi' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 98.
 
 [78]
 File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
@@ -2240,7 +2240,7 @@ File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
 File: figures/affine_paving/bigpic2.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic2.pdf>
  [79] [80] [81]
-Overfull \hbox (20.1396pt too wide) in paragraph at lines 328--330
+Overfull \hbox (20.1396pt too wide) in paragraph at lines 334--336
 \TU/lmr/m/n/10.95 By Lemma [][]7.4.1[][] [][](1)[][] and [][](5)[][], $[][]\OT1
 /cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.9
 5 =W; T\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/n/10.95 and $[][]\OT1/cmr/m/n/10.95 (^^H
@@ -2250,25 +2250,25 @@ Overfull \hbox (20.1396pt too wide) in paragraph at lines 328--330
  []
 
 [82]
-Overfull \hbox (9.09087pt too wide) in paragraph at lines 362--363
+Overfull \hbox (9.09087pt too wide) in paragraph at lines 368--369
 \TU/lmr/m/n/10.95 composable representation, irreducible morphism, Auslander–Re
 iten translation, Auslander–
  []
 
 [83]
-Overfull \hbox (7.1089pt too wide) in paragraph at lines 386--501
+Overfull \hbox (7.1089pt too wide) in paragraph at lines 392--507
  [][] 
  []
 
 
-Overfull \hbox (9.12483pt too wide) in paragraph at lines 506--507
+Overfull \hbox (9.12483pt too wide) in paragraph at lines 513--514
 [][]\TU/lmr/bx/n/10.95 Definition 7.5.2 \TU/lmr/m/n/10.95 (Irreducible morphism
 )\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Given two indecomposable representat
 ions $\OML/cmm/m/it/10.95 T; T[] \OMS/cmsy/m/n/10.95 2
  []
 
 [84]
-Overfull \hbox (22.33162pt too wide) in paragraph at lines 548--550
+Overfull \hbox (22.33162pt too wide) in paragraph at lines 555--557
 \TU/lmr/m/n/10.95 which is functorial for any $\OML/cmm/m/it/10.95 T; T[] \OMS/
 cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 
 )$\TU/lmr/m/n/10.95 . Especially, when $\OML/cmm/m/it/10.95 T$ \TU/lmr/m/n/10.9
@@ -2276,31 +2276,38 @@ cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95
 cmr/m/n/10.95 ) =
  []
 
-[85] [86] [87]
+[85] [86] [87] [88]
 Chapter 8.
-[88
+[89
 
 ]
-Overfull \hbox (0.1651pt too wide) detected at line 793
+Overfull \hbox (0.1651pt too wide) detected at line 801
 []
  []
 
 
-Overfull \hbox (48.96696pt too wide) in paragraph at lines 804--805
+Overfull \hbox (48.96696pt too wide) in paragraph at lines 812--813
 []\TU/lmr/m/n/10.95 By using the long exact sequence of extension groups and th
 e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
 5 )\OML/cmm/m/it/10.95 =W; \OT1/cmr/m/n/10.95 ^^H(\OML/cmm/m/it/10.95 X\OT1/cmr
 /m/n/10.95 )) =
  []
 
-[89]
-Overfull \hbox (17.63919pt too wide) detected at line 835
+[90]
+Overfull \hbox (17.63919pt too wide) detected at line 843
  [] \OMS/cmsy/m/n/10.95 ! [][]   [] ! [][]   [] ^^H  [][]   [] ! [][]   [] ! []
   \OML/cmm/m/it/10.95 :
  []
 
-[90]
-Overfull \hbox (19.55673pt too wide) in paragraph at lines 895--896
+
+Overfull \hbox (5.47496pt too wide) in paragraph at lines 847--850
+[][]\TU/lmr/bx/n/10.95 Lemma 8.1.9 \TU/lmr/m/n/10.95 (Follows [[], Lemma 31(1)(
+2)], with the same proof)\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Let $\OML/cm
+m/m/it/10.95 ^^\$ \TU/lmr/m/it/10.95 be the Auslander–
+ []
+
+[91]
+Overfull \hbox (19.55673pt too wide) in paragraph at lines 903--904
 [][]\TU/lmr/bx/n/10.95 Lemma 8.1.13. []\TU/lmr/m/it/10.95 For $\OT1/cmr/m/n/10.
 95 (\OML/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] \OT1/
 cmr/m/n/10.95 ^^I$\TU/lmr/m/it/10.95 , the preimage of $\OT1/cmr/m/n/10.95 (\OM
@@ -2311,21 +2318,21 @@ lmr/m/it/10.95 .
  []
 
 
-Overfull \hbox (0.1651pt too wide) detected at line 926
+Overfull \hbox (0.1651pt too wide) detected at line 934
 []
  []
 
-[91]
+[92]
 File: figures/affine_paving/E6.pdf Graphic file (type pdf)
 <use figures/affine_paving/E6.pdf>
 File: figures/affine_paving/E7.pdf Graphic file (type pdf)
 <use figures/affine_paving/E7.pdf>
 File: figures/affine_paving/E8.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8.pdf>
- [92] [93]
+ [93] [94]
 File: figures/affine_paving/flowchart.pdf Graphic file (type pdf)
 <use figures/affine_paving/flowchart.pdf>
- [94]
+ [95]
 File: figures/affine_paving/preferredimage.pdf Graphic file (type pdf)
 <use figures/affine_paving/preferredimage.pdf>
 File: figures/affine_paving/E6easy.pdf Graphic file (type pdf)
@@ -2338,7 +2345,7 @@ File: figures/affine_paving/E8hard.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8hard.pdf>
 File: figures/affine_paving/dimension_Ext.pdf Graphic file (type pdf)
 <use figures/affine_paving/dimension_Ext.pdf>
- [95] [96]
+ [96] [97]
 File: figures/affine_paving/E8graypic1.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic1.pdf>
 File: figures/affine_paving/E8graypic2.pdf Graphic file (type pdf)
@@ -2347,32 +2354,32 @@ File: figures/affine_paving/E8graypic3.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic3.pdf>
 File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic4.pdf>
- [97] [98] [99] [100]) [101]
-(master_thesis_Xiaoxiang_Zhou.bbl [102
+ [98] [99] [100] [101]) [102]
+(master_thesis_Xiaoxiang_Zhou.bbl [103
 
 
-]) [103]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+]) [104]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
 
 (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
 (chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 265.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 266.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: C8C1EF9F9CAD7D2B1252AE0FBA7C9A53.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
+(rerunfilecheck)             Checksum: 4BC2F35DDD2ABA98BC3A8FBFEFE40FF5.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 45008 strings out of 427748
- 862433 string characters out of 3150981
- 980203 words of memory out of 3000000
- 48267 multiletter control sequences out of 15000+200000
- 570384 words of font info for 195 fonts, out of 3000000 for 9000
+ 45019 strings out of 427748
+ 862695 string characters out of 3150981
+ 980571 words of memory out of 3000000
+ 48276 multiletter control sequences out of 15000+200000
+ 570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (105 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (106 pages).

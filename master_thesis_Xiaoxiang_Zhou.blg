@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: master_thesis_Xiaoxiang_Zhou.aux
 A level-1 auxiliary file: chapters/contents.aux
+A level-1 auxiliary file: chapters/introduction.aux
 A level-1 auxiliary file: chapters/chapter1.aux
 A level-1 auxiliary file: chapters/chapter2.aux
 A level-1 auxiliary file: chapters/chapter3.aux
@@ -10,13 +11,14 @@ A level-1 auxiliary file: chapters/chapter7.aux
 A level-1 auxiliary file: chapters/affinepaving.aux
 The style file: plain.bst
 Database file #1: reference.bib
-Repeated entry---line 103 of file reference.bib
+Repeated entry---line 108 of file reference.bib
  : @article{crawley1992lectures
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 118 of file reference.bib
+Repeated entry---line 123 of file reference.bib
  : @article{crawley1992lectures
  :                             ,
 I'm skipping whatever remains of this entry
+Warning--empty journal in brown2018flag
 Warning--empty journal in varagnolo2011canonical
 (There were 2 error messages)

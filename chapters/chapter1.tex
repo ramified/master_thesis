@@ -3,16 +3,16 @@
 \begingroup
 In this chapter we fix notation and state properties of various varieties. In particular, we will:\\[-9mm]
 \begin{itemize}
-\setlength\itemsep{-2.4mm}
+\setlength\itemsep{-2mm}
 \item investigate stratifications for each variety;
 \item describe the closure of some cells;
 \item list $T$-fixed points;
 \item describe the tangent space of some varieties.
 \end{itemize}
-$\,$\\[-7mm]
-In section \ref{sec:inital_case}, we introduce the complete flag variety to give a bird's eye view on the whole chapter.
 \endgroup
 \section{Initial case: $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$}\label{sec:inital_case} 
+
+In this section, we introduce the complete flag variety to give a bird's eye view on the whole chapter. We refer readers to the book \cite{brown2018flag} for detailed description of flag varieties, Bruhat order and Bruhat decomposition.
 
 \begin{setting}\label{set:initial_case}
 Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
@@ -46,9 +46,9 @@ $$W:= N_{\GL_n}(T)/T \cong S_n$$
 
 \subsection{The flag variety $\mathcal{F}$}
 \begin{defn}[Flag]
-For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ of length $d \in \mathbb{N}_{>0}$ is an increasing sequence of subspaces of $V$:
+For a finite dimensional $\mathbb{C}$-vector space $V$, a \textbf{(partial) flag} of $V$ of length $d \in \mathbb{N}_{>0}$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_d \subseteq V.$$
-$F$ is called a complete flag if $d=\dim_{\mathbb{C}} V$ and $\dim M_k = k$ for all $k$, otherwise $F$ is called a partial flag.
+$F$ is called a \textbf{complete flag} if $d=\dim_{\mathbb{C}} V$ and $\dim M_k = k$ for all $k$.
 \end{defn}
 
 \begin{defn}[Complete flag variety]
@@ -123,7 +123,7 @@ the Schubert cell is an affine space of dimension $l(w)$.
 
 
 $\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
-$$\overline{\Omcell}_w= \bigsqcup_{w' \leq w} \Omcell_w$$
+$$\overline{\Omcell}_w= \bigsqcup_{w' \leqslant w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
 $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
 Most  Schubert varieties are not smooth.
@@ -201,11 +201,12 @@ T    & -                                  & \{F_w |  \, w \in W \} \\ \hline
 	\end{minipage}
 \caption{Orbit and fixed points}
 \label{table:orbit_fixed_points}
+\vspace{3mm}
 \end{table}
 
 Like $\mathcal{F}$, we also study the closure of $\OOmcell_{w'}$ and $\OOmcell_{w,w'}$ in special case. It can be shown that 
-$$\overline{\OOmcell}_{w'} = \bigsqcup_{x'\leq w'} \OOmcell_{x'} \qquad 
-\overline{\OOmcell}_{w,w'} = \bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}$$
+$$\overline{\OOmcell}_{w'} = \bigsqcup_{x'\leqslant w'} \OOmcell_{x'} \qquad 
+\overline{\OOmcell}_{w,w'} = \bigsqcup_{x \leqslant w, x'\leqslant w'} \OOmcell_{x,x'}$$
 as a set. Especially, for any $s \in W$ with $l(s)=1$, \footnote{Here, $\GL_n \times^B X$ is called balanced product. Roughly, it is defined by
 $$\GL_n \times^B X :=\GL_n \times X/\big( (gb,x) \sim (g,bx) \big)$$
 We will discuss balanced product in Subsection \ref{subsec:balanced_product} thoroughly.}
@@ -383,18 +384,18 @@ Since we encode the information of vector space in $\dimvec{d}$, $\Rep_{\dimvec{
 For both $Q$-vector spaces and $Q$-representations, we can define (complete) flags.
 
 \begin{defn}[Flag with quiver] \label{def:flag_with_quiver}
-For a quiver representation $V \in \rep(Q)$, a flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
+For a quiver representation $V \in \rep(Q)$, a (partial) flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
 $$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k\in \rep(Q). $$
-For a $Q$-vector space $V=\oplus_{i \in v(Q)}V_i$, a (quiver-graded) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
+For a $Q$-vector space $V=\oplus_{i \in v(Q)}V_i$, a (quiver-graded partial) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
 $$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k=\bigoplus_{i \in v(Q)}M_{k,i}. $$
-For both $Q$-vector space and $Q$-representation, $F$ is called a complete flag if $d=\dim_{\mathbb{C}} V$ and
+For both $Q$-vector space and $Q$-representation, $F$ is called a \textbf{complete flag} if $d=\dim_{\mathbb{C}} V$ and
 $$\dim_{\mathbb{C}} M_k=k \qquad \text{ for any }k \in \{1,\ldots, d  \}$$
 \end{defn}
 For the flag we also have the notation of dimension vector.
 \begin{defn}[flag-type dimension vector]\label{def:ftdv}
-For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the dimension vector of $F$ is defined as
+For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the (flag-type) dimension vector of $F$ is defined as
 $$\ftdimvec{d}=\big(\!\dimv M_k   \big)_{k \in \{1,\ldots,d\}} \in  \prod_{\substack{i \in v(Q) \\ k \in \{1,\ldots,d\}}} \mathbb{Z}.$$
-$\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we denote $M_0$ by 0.} $d=\abdimvec{d}$ and
+$\ftdimvec{d}$ is called a complete flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we denote $M_0$ by 0.} $d=\abdimvec{d}$ and
 $$\left| \dimv M_{k+1}/M_k \right|=1 \qquad \text{ for any }k \in \{0,\ldots, d-1  \}.$$
 \end{defn}
 
@@ -412,7 +413,7 @@ $$F: 0 \subseteq \left< v_4 \right>
 \subseteq \left< v_4,v_1,v_2 \right>
 \subseteq \left< v_4,v_1,v_2,v_5 \right>
 \subseteq \left< v_4,v_1,v_2,v_5,v_3 \right>=V$$
-is a complete flag of $V$, with dimension vector
+is a complete flag of $V$, with complete dimension vector
 {
 \def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
@@ -421,7 +422,7 @@ $$\ftdimvec{d}= \begin{pmatrix}
 }
 \end{eg}
 \begin{remark}
-The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition of set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
+Any complete flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition of set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
 $$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow v(Q)$$
 such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in v(Q)}\ptt^{-1}(i).$$} We color the set $\{1,\ldots, \abdimvec{d}  \}$ by the partition $\ptt$. In the Example \ref{eg:5-case-0},
 {
@@ -450,7 +451,7 @@ $$
 
 \section{Symmetric group calculus}
 
-As a reminder, we recall some basic diagrams referring to the elements in $S_n$, and do some calculations by these diagrams. We will also relate cosets with flag-type dimension vectors.
+As a reminder, we recall some basic diagrams referring to the elements in $S_n$, and do some calculations by these diagrams. We will also relate cosets with complete flag-type dimension vectors.
 
 Fix a quiver $Q$ and dimension vector $\dimvec{d}$. Later (Definition \ref{def:absalggp}, \ref{def:relalggp}) we will define 
 $$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \in v(Q)} S_{\dimvec{d}_i} \leqslant \absgp{W}_{\abdimvec{d}}$$
@@ -558,7 +559,7 @@ We discuss right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and mi
 Multiplying on the left by $w\in W_{\dimvec{d}}$ is equivalent to plugging in a diagram representing $w \in W_{\dimvec{d}}$ underneath the original diagram. Therefore, we connect some bottom points by lines, indicating that switching them will cause no trouble. Furthermore, we color different parts to make the following more explicitly.
 
 \begin{proposition}\label{prop:5-case-0.05}
-Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a flag-type dimension vector $\ftdimvec{d}$, i.e., an ordered set of points colored by the vertices of $Q$.
+Every element $W_{\dimvec{d}}\ww \in W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ corresponds to a partition on set $\left\{ 1, \ldots , \abdimvec{d} \right\}$ (of a given number partition $\dimvec{d}$), which corresponds to a complete flag-type dimension vector $\ftdimvec{d}$, i.e., an ordered set of points colored by the vertices of $Q$.
 \end{proposition}
 
 \begin{eg}\label{eg:5-case-0.1}
@@ -759,9 +760,9 @@ $$\abdimvec{d}=3,\quad \dimvec{d}=(1,2),\qquad \WWd=S_3,\quad \Wd=S_1 \times S_2
   \vspace{0cm}
     \centering  \includegraphics[width=15cm]{figures/table/table_basic_information.pdf}
       \caption{Basic information of $(1,2)$-case}  
-      \label{table:smalleg_Weyl}     
-        \end{table}
-        
+      \label{table:smalleg_Weyl} 
+      \vspace{3mm}    
+        \end{table}       
 \end{eg}
 \section{Algebraic groups and Lie algebras}\label{sec:algebraic_group_Lie_algebra}
 In this section we fix notation for some algebraic groups and Lie algebras. 
@@ -1117,7 +1118,7 @@ Here, $M_i$ can have no $Q$-vector space structure.
 \end{defn}
 
 \begin{defn}[complete flag variety with flag-type dimension vector]
-For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
+For a complete flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
 \begin{equation*}
 \begin{aligned}
   \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in v(Q)} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
@@ -1197,8 +1198,10 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 \displaystyle\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}       & -          & \displaystyle\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}} = \bigsqcup_{\ftdimvec{d},\ftdimvec{d}'}\mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'} & -            \\ \hline
 \end{array}
 \]
+\vspace{-5mm}
 \caption{Base varieties and their preferred base point}
 \label{table:base_varieties}
+\vspace{3mm}
 \end{table}
 
 \subsection{Incidence variety}
@@ -1206,7 +1209,7 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 Now it is time to include information about arrows.
 
 \begin{defn}[Incidence variety]\label{def:incidence_variety}
-For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
+For a quiver $Q$ with complete flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
   \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
@@ -1230,14 +1233,14 @@ and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimve
 	\end{figure}
 \end{center}
 
-\begin{remark}
-Fix $X \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
+\begin{remark}\label{rmk:flag_variety_FlagX}
+Fix $X \in \Rep_{\dimvec{d}}(Q)$, the flag variety associated to $X$
 $$\Flag{\ftdimvec{d}}(X):= \mu_{\ftdimvec{d}}^{-1}(X) \cong \pi_{\ftdimvec{d}}\big(\mu_{\ftdimvec{d}}^{-1}(X)\big) \subseteq \mathcal{F}_{\ftdimvec{d}}$$
-records the complete flags of subrepresentations of $M$. The partial flag variety version of $\Flag{\ftdimvec{d}}(M)$ will become the key object in the second part.
+records the complete flags of subrepresentations of $X$. The partial flag variety version of $\Flag{\ftdimvec{d}}(X)$ will become the key object in Part \ref{part:partial_flag_varieties}.
 \end{remark}
 \end{defn}
 \begin{defn}[Steinberg variety]
-For a quiver $Q$ with flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define 
+For a quiver $Q$ with complete flag-type dimension vectors $\ftdimvec{d}$, $\ftdimvec{d}'$, define 
 \begin{equation*}
 \begin{aligned}
   \St_{\ftdimvec{d},\ftdimvec{d}'}:=\;& \RRep_{\ftdimvec{d}}(Q) \times_{\Rep_{\dimvec{d}}(Q)} \RRep_{\ftdimvec{d}'}(Q) \\
@@ -1290,7 +1293,7 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notation of orbits. We will also discuss their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another ``basis" in Chapter \ref{chap:localization}.
 
 \subsection{Stratification: flag variety}
-
+\label{subsec:stratification_flag_variety}
 We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
 
 \begin{defn}[Twisted action]
@@ -1413,7 +1416,7 @@ We have given every orbit a name, and other spaces are finite union of these orb
 \end{eg}
 
 
-\subsection{Stratification: incidence variety}
+\subsection{Stratification: incidence variety}\label{subsec:stratification:_incidence_variety}
 Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
 
 \begin{defn}[Stratifications of incidence varieties]
@@ -1457,15 +1460,16 @@ We end this subsection by Table \ref{table:orbit}:
   \vspace{0cm}
     \centering  \includegraphics[width=15cm]{figures/table/table_orbit.pdf}
       \caption{stratifications of typical varieties}
-      \label{table:orbit}        
+      \label{table:orbit}    
+      \vspace{3mm}    
 \end{table}
 \subsection{Closure of cells}
 
 In this subsection we describe the closure of cells. We begin with $\OOmcell$-cells:
 \begin{equation*}
-  \overline{\Omcell}_{w}^{u}= \bigsqcup_{x\leq w}\Omcell_{x}^{u}  \qquad
-  \overline{\OOmcell}_{w,w'}^{u,u'}=\bigsqcup_{x \leq w, x'\leq w'} \OOmcell_{x,x'}^{u,u'} \qquad
-  \overline{\OOmcell}_{w'}^{u,u'}=\bigsqcup_{x'\leq w'} \OOmcell_{x'}^{u,u'} \\ 
+  \overline{\Omcell}_{w}^{u}= \bigsqcup_{x\leqslant w}\Omcell_{x}^{u}  \qquad
+  \overline{\OOmcell}_{w,w'}^{u,u'}=\bigsqcup_{x \leqslant w, x'\leqslant w'} \OOmcell_{x,x'}^{u,u'} \qquad
+  \overline{\OOmcell}_{w'}^{u,u'}=\bigsqcup_{x'\leqslant w'} \OOmcell_{x'}^{u,u'} \\ 
 \end{equation*}
 Especially, for any $s \in \Pi_{\dimvec{d}}$, $u,u' \in \MinWd$, we have
 $$\overline{\OOmcell}_{s}^{u,u'} = \OOmcell_{s}^{u,u'} \sqcup \OOmcell_{\Id}^{u,u'} \cong G_{\dimvec{d}} \times^{B_{\dimvec{d}}} \left( P_{\Id,s} / B_{\dimvec{d}} \right)$$
