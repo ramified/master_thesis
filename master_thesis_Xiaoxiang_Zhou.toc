@@ -1,74 +1,74 @@
 \contentsline {chapter}{Introduction}{3}{chapter*.2}% 
-\contentsline {part}{I\hspace {1em}{$K$-theory of the Steinberg varieties}}{6}{part.1}% 
-\contentsline {chapter}{\numberline {1}Variety and stratification}{7}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}Initial case: $\mathcal {F}$ and $\mathcal {F} \times \mathcal {F}$}{7}{section.1.1}% 
-\contentsline {subsection}{\numberline {1.1.1}The flag variety $\mathcal {F}$}{7}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.1.2}$\mathcal {F} \times \mathcal {F}$}{9}{subsection.1.1.2}% 
-\contentsline {section}{\numberline {1.2}Quiver}{11}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Symmetric group calculus}{14}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Algebraic groups and Lie algebras}{17}{section.1.4}% 
-\contentsline {subsection}{\numberline {1.4.1}Algebraic groups}{18}{subsection.1.4.1}% 
-\contentsline {subsection}{\numberline {1.4.2}Lie algebra}{19}{subsection.1.4.2}% 
-\contentsline {section}{\numberline {1.5}Quiver flag varieties}{21}{section.1.5}% 
-\contentsline {subsection}{\numberline {1.5.1}Flag variety}{21}{subsection.1.5.1}% 
-\contentsline {subsection}{\numberline {1.5.2}Incidence variety}{23}{subsection.1.5.2}% 
-\contentsline {section}{\numberline {1.6}Stratification and $T$-fixed points}{24}{section.1.6}% 
-\contentsline {subsection}{\numberline {1.6.1}Stratification: flag variety}{25}{subsection.1.6.1}% 
-\contentsline {subsection}{\numberline {1.6.2}Stratification: incidence variety}{28}{subsection.1.6.2}% 
-\contentsline {subsection}{\numberline {1.6.3}Closure of cells}{28}{subsection.1.6.3}% 
-\contentsline {subsection}{\numberline {1.6.4}$T$-fixed points}{31}{subsection.1.6.4}% 
-\contentsline {subsection}{\numberline {1.6.5}Tangent spaces of $T$-fixed points}{31}{subsection.1.6.5}% 
-\contentsline {chapter}{\numberline {2}$K$-theory and cohomology theory}{33}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Definitions and initial examples}{33}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}$G$-equivariant sheaf and $K^G_0(X)$}{33}{subsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.1.2}Representation ring $\Rpt (G)$}{36}{subsection.2.1.2}% 
-\contentsline {section}{\numberline {2.2}Three functors}{37}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Non-derived three functors in $\Coh ^G(X)$}{37}{subsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.2.2}Smooth case}{39}{subsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.2.3}Restriction with supports}{39}{subsection.2.2.3}% 
-\contentsline {subsection}{\numberline {2.2.4}Algebraic structures of $K$-theory}{41}{subsection.2.2.4}% 
-\contentsline {section}{\numberline {2.3}Thom isomorphism}{41}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Induction}{42}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}Balanced product}{42}{subsection.2.4.1}% 
-\contentsline {subsection}{\numberline {2.4.2}Statement}{42}{subsection.2.4.2}% 
-\contentsline {subsection}{\numberline {2.4.3}Applications}{43}{subsection.2.4.3}% 
-\contentsline {section}{\numberline {2.5}Reduction}{43}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{44}{section.2.6}% 
-\contentsline {subsection}{\numberline {2.6.1}$G$-equivariant cohomology $H_G^* (X; \mathbb {Q})$}{44}{subsection.2.6.1}% 
-\contentsline {subsection}{\numberline {2.6.2}Cohomology ring $\Spt (G)$}{44}{subsection.2.6.2}% 
-\contentsline {chapter}{\numberline {3}Cellular fibration theorem}{46}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Statement}{46}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Application: module structure}{48}{section.3.2}% 
-\contentsline {chapter}{\numberline {4}Localization theorem}{51}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Euler class}{51}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Statement}{52}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Application: change of basis}{54}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Excess intersection formula}{57}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Convolution}{57}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Statement}{58}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Application: convolution structure}{60}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}Algebraic structures induced by convolution product}{60}{subsection.5.3.1}% 
-\contentsline {subsection}{\numberline {5.3.2}Convolution product formula}{61}{subsection.5.3.2}% 
-\contentsline {subsection}{\numberline {5.3.3}Demazure operator}{63}{subsection.5.3.3}% 
-\contentsline {subsection}{\numberline {5.3.4}Miscellaneous}{66}{subsection.5.3.4}% 
-\contentsline {chapter}{\numberline {6}Generalizations, examples and connections}{67}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Generalization}{67}{section.6.1}% 
-\contentsline {subsection}{\numberline {6.1.1}Quiver with loops}{67}{subsection.6.1.1}% 
-\contentsline {subsection}{\numberline {6.1.2}$G \times \mathbb {C}^{\times }$-action}{68}{subsection.6.1.2}% 
-\contentsline {section}{\numberline {6.2}From formula to diagram}{69}{section.6.2}% 
-\contentsline {subsection}{\numberline {6.2.1}One point quiver}{70}{subsection.6.2.1}% 
-\contentsline {subsection}{\numberline {6.2.2}$A_2$-quiver}{71}{subsection.6.2.2}% 
-\contentsline {subsection}{\numberline {6.2.3}$1$-loop quiver}{73}{subsection.6.2.3}% 
-\contentsline {section}{\numberline {6.3}Atiyah--Segal completion theorem}{74}{section.6.3}% 
-\contentsline {part}{II\hspace {1em}Affine paving of partial flag varieties}{76}{part.2}% 
-\contentsline {chapter}{\numberline {7}Preliminaries for Affine Pavings}{77}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Extended quiver}{77}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Canonical functor $\Phi $}{78}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}Dimension vector}{79}{section.7.3}% 
-\contentsline {section}{\numberline {7.4}Ext-vanishing properties}{82}{section.7.4}% 
-\contentsline {section}{\numberline {7.5}A crash course on Auslander--Reiten theory}{83}{section.7.5}% 
-\contentsline {chapter}{\numberline {8}Constructions of Affine Pavings}{89}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Main theorem in Part II}{89}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Application: Dynkin case}{93}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}Proof of Claim \otherrobustref }{96}{section.8.3}% 
-\contentsline {section}{\numberline {8.4}Application: affine case}{101}{section.8.4}% 
+\contentsline {part}{I\hspace {1em}{$K$-theory of the Steinberg varieties}}{7}{part.1}% 
+\contentsline {chapter}{\numberline {1}Variety and stratification}{8}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Initial case: $\mathcal {F}$ and $\mathcal {F} \times \mathcal {F}$}{8}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}The flag variety $\mathcal {F}$}{8}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}$\mathcal {F} \times \mathcal {F}$}{10}{subsection.1.1.2}% 
+\contentsline {section}{\numberline {1.2}Quiver}{12}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Symmetric group calculus}{15}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Algebraic groups and Lie algebras}{18}{section.1.4}% 
+\contentsline {subsection}{\numberline {1.4.1}Algebraic groups}{19}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {1.4.2}Lie algebra}{20}{subsection.1.4.2}% 
+\contentsline {section}{\numberline {1.5}Quiver flag varieties}{22}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}Flag variety}{22}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2}Incidence variety}{24}{subsection.1.5.2}% 
+\contentsline {section}{\numberline {1.6}Stratification and $T$-fixed points}{25}{section.1.6}% 
+\contentsline {subsection}{\numberline {1.6.1}Stratification: flag variety}{26}{subsection.1.6.1}% 
+\contentsline {subsection}{\numberline {1.6.2}Stratification: incidence variety}{29}{subsection.1.6.2}% 
+\contentsline {subsection}{\numberline {1.6.3}Closure of cells}{29}{subsection.1.6.3}% 
+\contentsline {subsection}{\numberline {1.6.4}$T$-fixed points}{32}{subsection.1.6.4}% 
+\contentsline {subsection}{\numberline {1.6.5}Tangent spaces of $T$-fixed points}{32}{subsection.1.6.5}% 
+\contentsline {chapter}{\numberline {2}$K$-theory and cohomology theory}{34}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Definitions and initial examples}{34}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}$G$-equivariant sheaf and $K^G_0(X)$}{34}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Representation ring $\Rpt (G)$}{37}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Three functors}{38}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Non-derived three functors in $\Coh ^G(X)$}{38}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Smooth case}{40}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Restriction with supports}{40}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}Algebraic structures of $K$-theory}{42}{subsection.2.2.4}% 
+\contentsline {section}{\numberline {2.3}Thom isomorphism}{42}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Induction}{43}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Balanced product}{43}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Statement}{43}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Applications}{44}{subsection.2.4.3}% 
+\contentsline {section}{\numberline {2.5}Reduction}{44}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Equivariant cohomology theory}{45}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.6.1}$G$-equivariant cohomology $H_G^* (X; \mathbb {Q})$}{45}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}Cohomology ring $\Spt (G)$}{45}{subsection.2.6.2}% 
+\contentsline {chapter}{\numberline {3}Cellular fibration theorem}{47}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Statement}{47}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Application: module structure}{49}{section.3.2}% 
+\contentsline {chapter}{\numberline {4}Localization theorem}{52}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Euler class}{52}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Statement}{53}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Application: change of basis}{55}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Excess intersection formula}{58}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Convolution}{58}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Statement}{59}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Application: convolution structure}{61}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Algebraic structures induced by convolution product}{61}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Convolution product formula}{62}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Demazure operator}{64}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}Miscellaneous}{67}{subsection.5.3.4}% 
+\contentsline {chapter}{\numberline {6}Generalizations, examples and connections}{68}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Generalization}{68}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Quiver with loops}{68}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}$G \times \mathbb {C}^{\times }$-action}{69}{subsection.6.1.2}% 
+\contentsline {section}{\numberline {6.2}From formula to diagram}{70}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}One point quiver}{71}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}$A_2$-quiver}{72}{subsection.6.2.2}% 
+\contentsline {subsection}{\numberline {6.2.3}$1$-loop quiver}{74}{subsection.6.2.3}% 
+\contentsline {section}{\numberline {6.3}Atiyah--Segal completion theorem}{75}{section.6.3}% 
+\contentsline {part}{II\hspace {1em}Affine paving of partial flag varieties}{77}{part.2}% 
+\contentsline {chapter}{\numberline {7}Preliminaries for Affine Pavings}{78}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Extended quiver}{78}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Canonical functor $\Phi $}{79}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}Dimension vector}{80}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}Ext-vanishing properties}{83}{section.7.4}% 
+\contentsline {section}{\numberline {7.5}A crash course on Auslander--Reiten theory}{84}{section.7.5}% 
+\contentsline {chapter}{\numberline {8}Constructions of Affine Pavings}{90}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Main theorem in Part II}{90}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Application: Dynkin case}{94}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}Proof of Claim \otherrobustref }{97}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}Application: affine case}{102}{section.8.4}% 

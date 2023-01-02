@@ -277,9 +277,9 @@ For a bounded quiver algebra $R$ defined in Definition \ref{def:bqa}, we have a 
 There are exactly two paths of length two from $s(c)$ to $t(c)$ for any virtual arrow $c$, which we denoted by $b_1c_1$ and $b_2c_2$ in the above. By definition, these paths are identified in $R$.
 
 \begin{lemma}\label{lm:Extvan}
-Let $M,N \in \rep(Q)$.
-
-
+Let $M,N \in \rep(Q)$.\\[-8mm]
+\begingroup
+\upshape
 \begin{enumerate}[(1)]
 	\item $\gldim R \leqslant 2$;\label{lm:gldim}
 	\item The functor $\Phi:\rep(Q) \longrightarrow \Mod(R)$ is exact and fully faithful;\label{lm:functorisexact}
@@ -287,6 +287,7 @@ Let $M,N \in \rep(Q)$.
 	\item $\Ext^i_{\mathbb{C}Q}(M,N) \cong \Ext^i_{R}(\Phi(M),\Phi(N))$;\label{lm:isoofext}
 	\item $\projdim \Phi(M) \leqslant 1. \injdim \Phi(M) \leqslant 1$;\label{lm:projdim}
 \end{enumerate}
+\endgroup
 \end{lemma}
 \begin{proof}$\,$
 
@@ -829,10 +830,13 @@ In the case where $\eta$ generates $\Ext^1(S,X)$, we want to describe $\Img \Psi
 	\end{equation*}
 $\widetilde{X_S}$ and $\widetilde{S^X}$ are well-defined because of the following lemma:
 \begin{lemma}[Follows {\cite[Lemma 27]{irelli2019cell}}]\
+\begingroup
+\upshape
 \begin{enumerate}[(i)] 
 	\item Let $V,V' \subset \Phi(X)$ such that $[\Phi(S),\Phi(X)/V ]^1=[\Phi(S),\Phi(X)/V']^1=1 .$ Then $\allowbreak[\Phi(S),\Phi(X)/(V+V') ]^1=1$.
 	\item  Let $W,W' \subset \Phi(S)$ such that $[W,\Phi(X)]^1=[W',\Phi(X)]^1=1 .$ Then $\allowbreak[W\cap W',\Phi(X)]^1=1$.
 \end{enumerate}
+\endgroup
 \end{lemma}
 \begin{proof}
 We only prove (i). (ii) is similar.
@@ -946,7 +950,6 @@ where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by
 \item Verify that $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$ is a vector bundle over $\Spec A$ of constant dimension $\left< \ftdimvec{f},\dimv \Phi(X)-\ftdimvec{g}\right>_R\,$;
 \item Find a section of $\Psi_{\ftdimvec{f},\ftdimvec{g}}^{-1} (\Spec A) \longrightarrow \Spec A$, which is essentially the splitting $\theta$ in \cite[Lemma 22]{irelli2019cell}.
 \end{enumerate}
-
 \end{remark}
 \begin{proof}[{Proof of Theorem \ref{thm:main1} and \ref{thm:main2}}]%\belowdisplayskip=-12pt
 We have already computed $\Img \Psi$ in Corollary \ref{cor:img1} and \ref{cor:img2}. In both cases $\eta$ generates $\Ext^1(S,X)$, so by Corollary \ref{cor:0or1} we get
@@ -1320,10 +1323,13 @@ The concept ``quasi-simple'' is defined in \cite[Definition 15]{irelli2019cell};
 %We use rep 2 Cor 18.8.
 
 \begin{theorem}\label{thm:affinecase}\
+\begingroup
+\upshape
 \begin{enumerate}[(1)]
 \item Assume that $Q$ is an affine quiver of type $A$ or $D$, then for any indecomposable representation $M$, the Grassmannian $\Gr(\Phi(M))$ has an affine paving;
 \item Assume that $Q$ is an affine quiver of type $E$, and $\Gr(\Phi(N))$ has an affine paving for any regular quasi-simple representation $N \in \rep(Q)$. The Grassmannian $\Gr(\Phi(M))$ then has an affine paving for any indecomposable representation $M$.
 \end{enumerate}
+\endgroup
 \end{theorem}
 
 For a regular quasi-simple representation $Y$ of type $\tilde{E}$, it's possible that there's no short exact sequence

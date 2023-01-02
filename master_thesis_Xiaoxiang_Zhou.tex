@@ -2,11 +2,11 @@
 \documentclass[reqno,11pt,openany]{book}
 
 %%%%%%%%%%%%%%%Setting for fast compiling
-\special{dvipdfmx:config z 0}
+%\special{dvipdfmx:config z 0}
 %\includeonly{chapters/contents}
-%\includeonly{chapters/introduction}
+%\includeonly{chapters/introduction,chapters/chapter5}
 %\includeonly{chapters/affinepaving,chapters/introduction}
-%\includeonly{chapters/chapter3}
+%\includeonly{chapters/chapter5}
 
 %packages
 %\usepackage{color,graphicx}
@@ -86,6 +86,14 @@ urlcolor=blue,
 
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}{Remarks}
+
+
+\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+\theoremstyle{theoremletter}
+\newtheorem{theoremA}{Theorem}
+\renewcommand{\thetheoremA}{A}
+\newtheorem{theoremB}{Theorem}
+\renewcommand{\thetheoremB}{B}
 
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
