@@ -46,9 +46,9 @@ $$W:= N_{\GL_n}(T)/T \cong S_n$$
 
 \subsection{The flag variety $\mathcal{F}$}
 \begin{defn}[Flag]
-For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ is an increasing sequence of subspaces of $V$:
-$$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_k = V.$$
-$F$ is called a complete flag if $\dim M_j = j$ for all $j$, otherwise $F$ is called a partial flag.
+For a finite dimensional $\mathbb{C}$-vector space $V$, a flag of $V$ of length $d \in \mathbb{N}_{>0}$ is an increasing sequence of subspaces of $V$:
+$$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_d \subseteq V.$$
+$F$ is called a complete flag if $d=\dim_{\mathbb{C}} V$ and $\dim M_k = k$ for all $k$, otherwise $F$ is called a partial flag.
 \end{defn}
 
 \begin{defn}[Complete flag variety]
@@ -57,7 +57,7 @@ The complete flag variety $\mathcal{F}$ is defined as
 \begin{aligned}
   \mathcal{F}:=\;& \GL_n/B \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^n \right\} \\ 
-      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = \mathbb{C}^n \;\middle|\; \dim M_j =j \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = \mathbb{C}^n \;\middle|\; \dim M_k =k \right\} \\ 
        \cong\;&  \left\{ \text{Borel subgroups of } \GL_n \right\} \\
           =\;& \left\{ gBg^{-1} \;\middle|\; g \in \GL_n \right\} \\ 
 \end{aligned}
@@ -258,18 +258,18 @@ Roughly speaking, a quiver is a directed multigraph permitting loops.
 
 \begin{defn}[Quiver]
 A quiver is a quadruple 
-$$Q=(Q_0,Q_1,s,t)$$
+$$Q=(v(Q),a(Q),s,t)$$
 where
 \begin{itemize}[noitemsep,topsep=0pt]
-\item $Q_0$ is a non-empty set consisting of vertices of $Q$,
-\item $Q_1$ is a set consisting of arrows of $Q$,
-\item $s:Q_1 \longrightarrow Q_0$ is a map indicating the start vertex of arrows,
-\item $t:Q_1 \longrightarrow Q_0$ is a map indicating the terminal vertex of arrows.
+\item $v(Q)$ is a non-empty set consisting of vertices of $Q$,
+\item $a(Q)$ is a set consisting of arrows of $Q$,
+\item $s:a(Q) \longrightarrow v(Q)$ is a map indicating the start vertex of arrows,
+\item $t:a(Q) \longrightarrow v(Q)$ is a map indicating the terminal vertex of arrows.
 \end{itemize}
 \end{defn}
 
 \begin{remark}\label{rmk:quiver_restriction}
-In the first part of our master thesis, all the quivers are supposed to be connected and finite (i.e., $Q_0$, $Q_1$ are finite sets). We will only encounter disconnected and infinite quiver as Auslander--Reiten quiver later on.
+In the first part of our master thesis, all the quivers are supposed to be connected and finite (i.e., $v(Q)$, $a(Q)$ are finite sets). We will only encounter disconnected and infinite quiver as Auslander--Reiten quiver later on.
 \end{remark}
 
 \begin{eg}
@@ -297,7 +297,7 @@ $$\begin{tikzcd}[ampersand replacement=\&]
 \vspace{5mm}
 \end{table}
 The reader can easily read the quadruple of quivers from the graphs. Take $Q=K(2)$ as an example, we have 
-$$Q_0=\{1,2\}, \qquad Q_1=\{a,b\} \qquad s,t: \{a,b\}\longrightarrow \{1,2\}$$
+$$v(Q)=\{1,2\}, \qquad a(Q)=\{a,b\} \qquad s,t: \{a,b\}\longrightarrow \{1,2\}$$
 by $s(a)=s(b)=1$, $t(a)=t(b)=2$.
 
 For simplicity, we mainly use simpler quivers as examples:
@@ -327,19 +327,19 @@ Fix a quiver $Q$.
 
 A representation of $Q$ consists of the following data:
 \begin{itemize}[noitemsep,topsep=0pt]
-\item A finite dimensional $\mathbb{C}$-vector space $V_i$ for each vertex $i \in Q_0$;
-\item A $\mathbb{C}$-linear map $V_a: V_{s(a)} \longrightarrow V_{t(a)}$ for each arrow $a \in Q_1$.
+\item A finite dimensional $\mathbb{C}$-vector space $V_i$ for each vertex $i \in v(Q)$;
+\item A $\mathbb{C}$-linear map $V_r: V_{s(r)} \longrightarrow V_{t(r)}$ for each arrow $r \in a(Q)$.
 \end{itemize}
 
-A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longrightarrow W_i$ (for every $i \in Q_0$) which makes the following diagram commute:
+A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longrightarrow W_i$ (for every $i \in v(Q)$) which makes the following diagram commute:
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJWX3tzKGEpfSAiXSxbMSwwLCJWX3t0KGEpfSJdLFsxLDEsIldfe3QoYSl9Il0sWzAsMSwiV197cyhhKX0gIl0sWzAsMywiZl97cyhhKX0iLDJdLFswLDEsIlZfYSJdLFsxLDIsImZfe3QoYSl9Il0sWzMsMiwiV19hIl1d
 \[\begin{tikzcd}
-	{V_{s(a)} } & {V_{t(a)}} \\
-	{W_{s(a)} } & {W_{t(a)}}
-	\arrow["{f_{s(a)}}"', from=1-1, to=2-1]
-	\arrow["{V_a}", from=1-1, to=1-2]
-	\arrow["{f_{t(a)}}", from=1-2, to=2-2]
-	\arrow["{W_a}", from=2-1, to=2-2]
+	{V_{s(r)} } & {V_{t(r)}} \\
+	{W_{s(r)} } & {W_{t(r)}}
+	\arrow["{f_{s(r)}}"', from=1-1, to=2-1]
+	\arrow["{V_r}", from=1-1, to=1-2]
+	\arrow["{f_{t(r)}}", from=1-2, to=2-2]
+	\arrow["{W_r}", from=2-1, to=2-2]
 \end{tikzcd}\]
 
 We denote $\rep(Q)$ as the category of representations of $Q$.
@@ -353,27 +353,27 @@ which is equivalent to a (finite dimensional) $\mathbb{C}[t]$-module.
 The equivalence in Example \ref{eg:1-loop_quiver} can be generalized to arbitrary quivers. For a quiver $Q$, we can define the path algebra $\mathbb{C}Q$, and view any $Q$-representation as $\mathbb{C}Q$-module, and vice versa.
 \end{remark}
 
-\begin{defn}[$Q$-vector space/Vector space with quiver partition]
+\begin{defn}[$Q$-vector space/Vector space with quiver partition]\label{def:Q-vs}
 Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with a direct sum decomposition
-$$V= \bigoplus_{i \in Q_0} V_i.$$
+$$V= \bigoplus_{i \in v(Q)} V_i.$$
 The dimension vector of a $Q$-vector space is defined as
-$$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in Q_0} \in \prod_{i \in Q_0} \mathbb{Z}.$$
+$$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in v(Q)} \in \prod_{i \in v(Q)} \mathbb{Z}.$$
 \end{defn} 
 
-On the contrary, given $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
-$$V= \bigoplus_{i \in Q_0} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
+On the contrary, given $\dimvec{d} \in \prod_{i \in v(Q)} \mathbb{N}_{\geqslant 0}$, we can construct a canonical $Q$-vector space of dimension vector $\dimvec{d}$, as follows:
+$$V= \bigoplus_{i \in v(Q)} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
 
 \begin{defn}
 The total dimension vector of a $Q$-vector space $V$ is defined as
 $$\left| \dimv V  \right|:=\dim_{\mathbb{C}} V.$$
-For $\dimvec{d} \in \prod_{i \in Q_0} \mathbb{N}_{\geqslant 0}$, denote $\abdimvec{d}:= \sum_{i \in Q_0} \dimvec{d}_i$.
+For $\dimvec{d} \in \prod_{i \in v(Q)} \mathbb{N}_{\geqslant 0}$, denote $\abdimvec{d}:= \sum_{i \in v(Q)} \dimvec{d}_i$.
 \end{defn}
 \begin{defn}[Space of representations with given dimension vector]
-For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in Q_0} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
+For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in v(Q)} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
 \begin{equation*}
 \begin{aligned}
   \Rep_{\dimvec{d}}(Q):=\;&  \left\{ (V_i,V_a: V_{s(a)} \longrightarrow V_{t(a)} ) \text{ as a representation of $Q$}  \right\} \\ 
-  =\;& \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right)
+  =\;& \bigoplus_{r \in a(Q)} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right)
 \end{aligned}
 \end{equation*}
 
@@ -384,18 +384,18 @@ For both $Q$-vector spaces and $Q$-representations, we can define (complete) fla
 
 \begin{defn}[Flag with quiver] \label{def:flag_with_quiver}
 For a quiver representation $V \in \rep(Q)$, a flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
-$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V \qquad M_j\in \rep(Q). $$
-For a $Q$-vector space $V=\oplus_{i \in Q_0}V_i$, a (quiver-graded) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
-$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V \qquad M_j=\bigoplus_{i \in Q_0}M_{j,i}. $$
-For both $Q$-vector space and $Q$-representation, $F$ is called a complete flag if $k=\dim_{\mathbb{C}} V$ and
-$$\dim_{\mathbb{C}} M_j=j \qquad \text{ for any }j \in \{1,\ldots, \abdimvec{d}  \}$$
+$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k\in \rep(Q). $$
+For a $Q$-vector space $V=\oplus_{i \in v(Q)}V_i$, a (quiver-graded) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
+$$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k=\bigoplus_{i \in v(Q)}M_{k,i}. $$
+For both $Q$-vector space and $Q$-representation, $F$ is called a complete flag if $d=\dim_{\mathbb{C}} V$ and
+$$\dim_{\mathbb{C}} M_k=k \qquad \text{ for any }k \in \{1,\ldots, d  \}$$
 \end{defn}
 For the flag we also have the notation of dimension vector.
-\begin{defn}[flag-type dimension vector]
-For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_k=V$, the dimension vector of $F$ is defined as
-$$\ftdimvec{d}=\big(\!\dimv M_j   \big)_{j \in \{1,\ldots,k\}} \in  \prod_{\substack{i \in Q_0 \\ j \in \{1,\ldots,k\}}} \mathbb{Z}.$$
-$\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e., \footnote{For convenience, we denote $M_0$ by 0.}
-$$\left| \dimv M_{j+1}/M_j \right|=1 \qquad \text{ for any }j \in \{0,\ldots, \abdimvec{d}-1  \}.$$
+\begin{defn}[flag-type dimension vector]\label{def:ftdv}
+For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the dimension vector of $F$ is defined as
+$$\ftdimvec{d}=\big(\!\dimv M_k   \big)_{k \in \{1,\ldots,d\}} \in  \prod_{\substack{i \in v(Q) \\ k \in \{1,\ldots,d\}}} \mathbb{Z}.$$
+$\ftdimvec{d}$ is called a flag-type dimension vector if $\ftdimvec{d}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we denote $M_0$ by 0.} $d=\abdimvec{d}$ and
+$$\left| \dimv M_{k+1}/M_k \right|=1 \qquad \text{ for any }k \in \{0,\ldots, d-1  \}.$$
 \end{defn}
 
 \begin{eg}\label{eg:5-case-0}
@@ -422,8 +422,8 @@ $$\ftdimvec{d}= \begin{pmatrix}
 \end{eg}
 \begin{remark}
 The flag-type dimension vector $\ftdimvec{d}$ can be viewed as a partition of set $\{1,\ldots, \abdimvec{d} \}$, i.e., a map
-$$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow Q_0$$
-such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in Q_0}\ptt^{-1}(i).$$} We color the set $\{1,\ldots, \abdimvec{d}  \}$ by the partition $\ptt$. In the Example \ref{eg:5-case-0},
+$$\ptt: \{1,\ldots, \abdimvec{d}  \} \longrightarrow v(Q)$$
+such that $\#\ptt^{-1}(i)=\dimvec{d}_i$.\footnote{The partition corresponding to $\ptt$ is$$\{1,\ldots, \abdimvec{d}\}=\bigsqcup_{i \in v(Q)}\ptt^{-1}(i).$$} We color the set $\{1,\ldots, \abdimvec{d}  \}$ by the partition $\ptt$. In the Example \ref{eg:5-case-0},
 {
 \def\arraystretch{0.8}
 $$\ftdimvec{d}= \begin{pmatrix}
@@ -453,8 +453,8 @@ $$
 As a reminder, we recall some basic diagrams referring to the elements in $S_n$, and do some calculations by these diagrams. We will also relate cosets with flag-type dimension vectors.
 
 Fix a quiver $Q$ and dimension vector $\dimvec{d}$. Later (Definition \ref{def:absalggp}, \ref{def:relalggp}) we will define 
-$$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \in Q_0} S_{\dimvec{d}_i} \leqslant \absgp{W}_{\abdimvec{d}}$$
-For simplicity, we take $Q_0=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embeds in  $S_{\abdimvec{d}}$.
+$$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \in v(Q)} S_{\dimvec{d}_i} \leqslant \absgp{W}_{\abdimvec{d}}$$
+For simplicity, we take $v(Q)=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embeds in  $S_{\abdimvec{d}}$.
 
 \begin{remark}
 We have different ways to express $\ww \in \absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}}$. For example, take $\abdimvec{d}=5$, $\ww \in S_5$ by
@@ -768,8 +768,8 @@ In this section we fix notation for some algebraic groups and Lie algebras.
 
 \begin{setting}\label{set:Qvs}
 Fix a quiver $Q$, a dimension vector $\dimvec{d}$ and a $Q$-vector space 
-$$V=\bigoplus_{i \in Q_0} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
-When a basis of $V$ is needed, we fix a total order on $Q_0$, and denote
+$$V=\bigoplus_{i \in v(Q)} V_i \qquad \text{with } V_i=\mathbb{C}^{\dimvec{d}_i}.$$
+When a basis of $V$ is needed, we fix a total order on $v(Q)$, and denote
 $$V=\left< v_1, \ldots v_{\abdimvec{d}} \right> $$
 where
 $$V_i=\left< v_{f_i+1}, \ldots v_{f_i+\dimvec{d}_i} \right> \qquad f_i= \sum_{i' < i} \dimvec{d}_{i'}.$$
@@ -794,11 +794,11 @@ We will view $\absgp{B}_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $\ab
 \begin{defn}[Relative algebraic groups]\label{def:relalggp}
 
 We set
-$$G_{\dimvec{d}}:= \prod_{i \in Q_0}\GL(V_i)=\prod_{i \in Q_0}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
+$$G_{\dimvec{d}}:= \prod_{i \in v(Q)}\GL(V_i)=\prod_{i \in v(Q)}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
 and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
 
 The Weyl group is
-$$W_{\dimvec{d}}:= N_{G_{\dimvec{d}}}(T_{\dimvec{d}})/T_{\dimvec{d}} \cong \prod_{i \in Q_0}S_{\dimvec{d}_i}.$$
+$$W_{\dimvec{d}}:= N_{G_{\dimvec{d}}}(T_{\dimvec{d}})/T_{\dimvec{d}} \cong \prod_{i \in v(Q)}S_{\dimvec{d}_i}.$$
 
 For $\ww=wu \in W_{\dimvec{d}}$, we define
 $$B_{\ww}:= w B_{\dimvec{d}} w^{-1}.$$
@@ -1029,14 +1029,14 @@ We use Fraktur-font symbols to represent the Lie algebras of the corresponding a
 We also have to encode the information of representations as Lie algebra. Notice that
 $$\Hom (V_{s(a)},V_{t(a)}) \hookrightarrow \Hom(V,V) \cong \boldsymbol{\mathfrak{g}}_{\abdimvec{d}} \qquad f \longmapsto \iota_{t(a)} \circ f \circ \pi_{s(a)}$$
 realizes $\Hom (V_{s(a)},V_{t(a)})$ as a subspace of $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$, so 
-$$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{a \in Q_1} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
+$$  \Rep_{\dimvec{d}}(Q)= \bigoplus_{r \in a(Q)} \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \subseteq \bigoplus_{r \in a(Q)} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}.$$
 \begin{defn}[Lie algebras connected with representations]\label{def:Lie_alg_with_rep}
 For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote 
-$$V_{\ww,j}:= \left< e_{\ww(1)},\ldots e_{\ww(j)} \right> \subseteq V.$$
+$$V_{\ww,k}:= \left< e_{\ww(1)},\ldots e_{\ww(k)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
 %https://tex.stackexchange.com/questions/352752/align-inside-left-right
 
-$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in Q_1} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,j} \cap V_{s(a)}) \subseteq V_{\ww,j} \text{ for any } j \right\},$$
+$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in a(Q)} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,k} \cap V_{s(a)}) \subseteq V_{\ww,k} \text{ for any } k \right\},$$
 \begin{equation*}
 \begin{aligned}
   \mathfrak{r}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww} \cap \mathfrak{r}_{\ww''},  \\ 
@@ -1108,7 +1108,7 @@ The absolute complete flag variety $\mathcal{F}_{\abdimvec{d}}$ is defined as
 \begin{aligned}
   \mathcal{F}_{\abdimvec{d}}=\;& \absgp{G}_{\abdimvec{d}}/\absgp{B}_{\abdimvec{d}} \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^{\abdimvec{d}} \right\} \\ 
-      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = \mathbb{C}^{\abdimvec{d}} \;\middle|\; \dim M_j =j \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = \mathbb{C}^{\abdimvec{d}} \;\middle|\; \dim M_k =k \right\} \\ 
        \cong\;&  \left\{ \text{Borel subgroups of } \absgp{G}_{\abdimvec{d}} \right\} \\
           =\;& \left\{ g\absgp{B}_{\abdimvec{d}}g^{-1} \;\middle|\; g \in \absgp{G}_{\abdimvec{d}} \right\} \\ 
 \end{aligned}
@@ -1120,7 +1120,7 @@ Here, $M_i$ can have no $Q$-vector space structure.
 For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
 \begin{equation*}
 \begin{aligned}
-  \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
+  \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in v(Q)} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
       =\;& \left\{ F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \dimv F =\ftdimvec{d} \phantom{\Big)\!\!\!} \right\}
 \end{aligned}
 \end{equation*}
@@ -1130,8 +1130,8 @@ For a flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{
 The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
 \begin{equation*}
 \begin{aligned}
-  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in Q_0} V_i \right\} \\ 
-      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_j \right| =j \phantom{\Big)\!\!\!} \right\}\\
+  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in v(Q)} V_i \right\} \\ 
+      =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_k \right| =k \phantom{\Big)\!\!\!} \right\}\\
       =\;& \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}
 \end{aligned}
 \end{equation*}
@@ -1141,7 +1141,7 @@ Here, $M_i$ are $Q$-vector spaces.
 \begin{remark}\label{rmk:action_on_flag}\
 \begin{enumerate}
 \item $\mathcal{F}_{\abdimvec{d}}$, $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ are smooth varieties, since
-$$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in Q_0} \GL_{\dimvec{d}_i}/B$$
+$$\mathcal{F}_{\abdimvec{d}} \cong \GL_{\abdimvec{d}}/B \qquad \mathcal{F}_{\ftdimvec{d}} \cong \prod_{i \in v(Q)} \GL_{\dimvec{d}_i}/B$$
 are products of usual flag varieties.
 \item $\mathcal{F}_{\abdimvec{d}}$ is an $\absgp{G}_{\abdimvec{d}}$-variety, while $\mathcal{F}_{\ftdimvec{d}}$, $\mathcal{F}_{\dimvec{d}}$ are $G_{\dimvec{d}}$-varieties. The actions are induced by the actions on the vector space $V$.
 \end{enumerate}
@@ -1209,8 +1209,8 @@ Now it is time to include information about arrows.
 For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
-  \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_j \text{ for any } j \right\} \\
-  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_j) \subseteq M_j \text{ for any } j \right\} \\
+  \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
+  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
   =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
 \end{aligned}
 \end{equation*}
@@ -1231,8 +1231,8 @@ and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimve
 \end{center}
 
 \begin{remark}
-Fix $M \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
-$$\Flag{\ftdimvec{d}}(M):= \mu_{\ftdimvec{d}}^{-1}(M) \cong \pi_{\ftdimvec{d}}\big(\mu_{\ftdimvec{d}}^{-1}(M)\big) \subseteq \mathcal{F}_{\ftdimvec{d}}$$
+Fix $X \in \Rep_{\dimvec{d}}(Q)$, the \textbf{Springer fiber}
+$$\Flag{\ftdimvec{d}}(X):= \mu_{\ftdimvec{d}}^{-1}(X) \cong \pi_{\ftdimvec{d}}\big(\mu_{\ftdimvec{d}}^{-1}(X)\big) \subseteq \mathcal{F}_{\ftdimvec{d}}$$
 records the complete flags of subrepresentations of $M$. The partial flag variety version of $\Flag{\ftdimvec{d}}(M)$ will become the key object in the second part.
 \end{remark}
 \end{defn}
@@ -1276,7 +1276,7 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 
 \begin{remark}[Group actions]\
 \begin{enumerate}
-\item $\Rep_{\dimvec{d}}(Q)\subseteq \oplus_{a \in Q_1} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$ has a natural $G_{\dimvec{d}}$-action, which is induced by the conjugation action of $G_{\dimvec{d}}$ on $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$. We have already mentioned the $G_{\dimvec{d}}$-action on $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ in Remark \ref{rmk:action_on_flag}. Therefore, by restriction we automatically get $G_{\dimvec{d}}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. All the maps we mentioned in Definition \ref{def:incidence_variety} are $G_{\dimvec{d}}$-equivariant.
+\item $\Rep_{\dimvec{d}}(Q)\subseteq \oplus_{r \in a(Q)} \boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$ has a natural $G_{\dimvec{d}}$-action, which is induced by the conjugation action of $G_{\dimvec{d}}$ on $\boldsymbol{\mathfrak{g}}_{\abdimvec{d}}$. We have already mentioned the $G_{\dimvec{d}}$-action on $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$ in Remark \ref{rmk:action_on_flag}. Therefore, by restriction we automatically get $G_{\dimvec{d}}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. All the maps we mentioned in Definition \ref{def:incidence_variety} are $G_{\dimvec{d}}$-equivariant.
 \item In Subsection \ref{subsec:Cstar_action} we will also view all the varieties as $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-varieties, so we also shortly introduce $\mathbb{C}^{\times}$-action here. View $\Rep_{\dimvec{d}}(Q)$ as a $\mathbb{C}$-vector space, $\mathbb{C}^{\times}$ acts on $\Rep_{\dimvec{d}}(Q)$ by scalar multiplication. For $\mathcal{F}_{\ftdimvec{d}}$ and $\mathcal{F}_{\dimvec{d}}$, $\mathbb{C}^{\times}$ acts trivially, and by restriction we get $\mathbb{C}^{\times}$-actions on $\RRep_{\ftdimvec{d}}(Q)$, $\RRep_{\dimvec{d}}(Q)$, $\St_{\ftdimvec{d},\ftdimvec{d}'}$ and $\St_{\dimvec{d}}$. Also, all the maps we mentioned above are $\mathbb{C}^{\times}$-equivariant.
 \item It may be worth mentioning that $\mathcal{F}_{\dimvec{d}}$ has an $\WWd$-action which can be extended neither to $\absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\dimvec{d}}$ nor to $\WWd$-action on $\RRep_{\ftdimvec{d}}(Q)$.
 
@@ -1573,7 +1573,7 @@ By the same method, one can show that $\overline{\preimage{\Ocell}}_{s}$ is a Za
 Recall that the $T$-fixed points of a complete flag variety $\mathcal{F}$ are exactly the coordinate flags $\left\{ F_w \,\middle|\, w \in W \right\}$. For absolute or relative flag varieties, we have similar results:
 $$\mathcal{F}_{\abdimvec{d}}^{\absgp{T}_{\abdimvec{d}}} = \mathcal{F}_{\dimvec{d}}^{T_{\dimvec{d}}}= \left\{ F_{\ww} \,\middle|\, \ww \in \WWd \right\} \qquad \mathcal{F}_u^{T_{\dimvec{d}}} = \left\{ F_{wu} \,\middle|\, w \in \Wd \right\}$$ 
 For $\Rep_{\dimvec{d}}(Q)$, we get
-$$\big(\!\Rep_{\dimvec{d}}(Q) \big)^{T_{\dimvec{d}}} = \bigoplus_{a \in Q_1} \bigg( \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \bigg)^{T_{\dimvec{d}}} =\{ \rho_0 \}$$
+$$\big(\!\Rep_{\dimvec{d}}(Q) \big)^{T_{\dimvec{d}}} = \bigoplus_{r \in a(Q)} \bigg( \Hom \left(\mathbb{C}^{\dimvec{d}_{s(a)}},\mathbb{C}^{\dimvec{d}_{t(a)}}\right) \bigg)^{T_{\dimvec{d}}} =\{ \rho_0 \}$$
 where $\rho_0$ is the zero representation in $\Rep_{\dimvec{d}}(Q)$.
 
 Combining these two results, one can easily describe $T$-fixed points of varieties constructed over them:
