@@ -158,14 +158,6 @@ We can write the (strict) partial flag variety and Grassmannian as disjoint unio
 \end{equation*}
 Then from the Proposition \ref{prop:flag=gr} we get 
 $$\Flag{\ftdimvec{f}}(X) \cong \Gralg{R_d}_{\ftdimvec{f}}(\Phi(X)) \qquad \Flag{\ftdimvec{f},\str}(X) \cong \Gralg{R_{d,\str}}_{\ftdimvec{f}}(\Phi(X)).$$
-\begin{remark}
-All the spaces we defined here have natural topologies and variety structures. For example, by the standard embedding
-\[\begin{tikzcd}
-	\Gralg{R}_{\ftdimvec{f}}(T) & \displaystyle\prod_{(i,r) \in v\left(Q_{d,(str)}\right)} \Gr_{\ftdimvec{f}_{i,r}}\big(T_{(i,r)}\big),
-	\arrow[hook, from=1-1, to=1-2]
-\end{tikzcd}\]
-$\Gralg{R}_{\ftdimvec{f}}(T)$ is then endowed with the subspace topology and subvariety structure.
-\end{remark}
 
 
 Finally, we need to define the Euler form of two dimension vectors. For this we need to define the set of virtual arrows of the quivers $Q_d$ and $Q_{d,\str}$. Following Example \ref{example:virtualarrow}, the virtual arrows of the quivers $Q_3$ and $Q_{3,\str}$ are depicted in red.
@@ -597,7 +589,7 @@ of the corresponding quiver.
 
 \begin{figure}[!ht]
   \vspace{0cm}
-    \centering  \[\begin{tikzcd}[row sep=5mm]
+    \centering  \[\begin{tikzcd}[row sep=5mm, scale=0.7]
     	{\substack{0\\10000}} &&[-5mm]&[-16mm] {\substack{0\\00100}} \\
     	& {\substack{0\\11100}} & {\substack{1\\00100}} && {\substack{0\\00110}} \\
     	{\substack{0\\01100}} &&& {\substack{1\\11210}} && {\substack{0\\00111}} \\
@@ -943,13 +935,7 @@ $$\Psi^{-1}((V,W)) \cong \{ \theta: \text{ split morphism} \} \cong \Hom_{R}(W,\
 \begin{remark}\label{rem:bundleprop}
 Any point $(V,W) \in \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ can be also viewed as a morphism
 $$f: \Spec \mathbb{C} \longrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}  \subseteq \Grr_{\ftdimvec{f}}(\Phi(X)) \shorttimes \Grr_{\ftdimvec{g}}(\Phi(S)) $$
-where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by replacing $\Spec \mathbb{C}$ by any locally closed reduced subscheme $\Spec A$ of $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ in Lemma \ref{lem:torsor}, we can run the machinery of algebraic geometry, and mimic the proof of \cite[Theorem 24]{irelli2019cell} to show that $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle over $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ when $\eta$ generates $\Ext^1(S,X)$. Roughly, there are 4 steps:
-\begin{enumerate}[1.]
-\item Realise Grassmannians as representable functors, and replace $\mathbb{C}$-modules by $A$-modules;
-\item Verify that $\Psi_{\ftdimvec{f},\ftdimvec{g}}^{-1} (\Spec A)$ is a $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$-torsor, where $$(\mathcal{V},\mathcal{W}) \in \Grr_{\ftdimvec{f}}(\Phi(X))(A) \shorttimes \Grr_{\ftdimvec{g}}(\Phi(S))(A)$$ corresponds to the immersion $\Spec A \hookrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}\,$;
-\item Verify that $\Hom_A(\mathcal{W},\Phi(X)_A/\mathcal{V})$ is a vector bundle over $\Spec A$ of constant dimension $\left< \ftdimvec{f},\dimv \Phi(X)-\ftdimvec{g}\right>_R\,$;
-\item Find a section of $\Psi_{\ftdimvec{f},\ftdimvec{g}}^{-1} (\Spec A) \longrightarrow \Spec A$, which is essentially the splitting $\theta$ in \cite[Lemma 22]{irelli2019cell}.
-\end{enumerate}
+where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by replacing $\Spec \mathbb{C}$ by any locally closed reduced subscheme $\Spec A$ of $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ in Lemma \ref{lem:torsor}, we can run the machinery of algebraic geometry, and mimic the proof of \cite[Theorem 24]{irelli2019cell} to show that $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle over $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ when $\eta$ generates $\Ext^1(S,X)$. 
 \end{remark}
 \begin{proof}[{Proof of Theorem \ref{thm:main1} and \ref{thm:main2}}]%\belowdisplayskip=-12pt
 We have already computed $\Img \Psi$ in Corollary \ref{cor:img1} and \ref{cor:img2}. In both cases $\eta$ generates $\Ext^1(S,X)$, so by Corollary \ref{cor:0or1} we get
@@ -1013,14 +999,7 @@ The next lemma shows the affine paving property for representations of small ord
 \begin{proof}\belowdisplayskip=-12pt
 	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Grr_{\ftdimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\ftdimvec{f}$.} we get the natural embedding
 	$$\Grr_{\ftdimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \ftdimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
-	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. Precisely, one need to carefully discuss three cases of $M_i \longrightarrow M_j$:
-	% https://q.uiver.app/?q=WzAsNyxbMCwwLCJLIl0sWzMsMCwiSyJdLFsxLDAsIkteMiJdLFsyLDAsIkteMiJdLFs1LDAsIkteMiJdLFs2LDAsIkteMi4iXSxbNCwwLCJcXHRleHR7YW5kfSJdLFs0LDUsIlxcY29uZyJdLFszLDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
-	\[\begin{tikzcd}
-		\mathbb{C} & {\mathbb{C}^2} & {\mathbb{C}^2} & \mathbb{C} &[-0.5cm] {\text{and}} &[-0.5cm] {\mathbb{C}^2} & {\mathbb{C}^2.}
-		\arrow["\cong", from=1-6, to=1-7]
-		\arrow[two heads, from=1-3, to=1-4]
-		\arrow[hook, from=1-1, to=1-2]
-	\end{tikzcd}\]
+	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. 
 \end{proof}
 
 Now we've nearly prepared every step of the proof of Theorem \ref{thm:Dynkincase}. By following the process in Figure \ref{fig:flowchart}, we now prove Theorem \ref{thm:Dynkincase} assuming Claim \ref{claim:bigorder}. We will prove Claim \ref{claim:bigorder} in Section \ref{appendix:proofcomplement}.
@@ -1117,7 +1096,7 @@ and the dimensions of extension groups among $X,Y,S$ are as shown in the Table \
 %https://tex.stackexchange.com/questions/552563/centering-on-the-last-column-messes-table-up
 \begin{table}
 \centering
-\includegraphics[width=6cm]{figures/affine_paving/dimension_Ext.pdf}
+\includegraphics[width=5cm]{figures/affine_paving/dimension_Ext.pdf}
 \vspace{1mm}
 \caption{}
 \label{table:dim}
@@ -1191,19 +1170,19 @@ The exceptional cases are similar, but the discussion is a bit more complicated.
 		\centering
 			\vspace{0cm}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=3.2cm]{figures/affine_paving/E8graypic1.pdf}
+			\includegraphics[width=28mm]{figures/affine_paving/E8graypic1.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=3.2cm]{figures/affine_paving/E8graypic2.pdf}
+			\includegraphics[width=28mm]{figures/affine_paving/E8graypic2.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=3.2cm]{figures/affine_paving/E8graypic3.pdf}
+			\includegraphics[width=28mm]{figures/affine_paving/E8graypic3.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=3.2cm]{figures/affine_paving/E8graypic4.pdf}
+			\includegraphics[width=28mm]{figures/affine_paving/E8graypic4.pdf}
 			\subcaption{}
 			}
 			\caption{special cases}

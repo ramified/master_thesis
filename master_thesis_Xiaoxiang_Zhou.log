@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 01:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 11:59
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1825,11 +1825,16 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 \tf@toc=\write6
 \openout6 = `master_thesis_Xiaoxiang_Zhou.toc'.
 
-) [2]
+)
+Overfull \hbox (14.83295pt too wide) in paragraph at lines 53--259
+[][]\TU/lmr/m/n/10.95 https://github.com/ramified/master_thesis/raw/main/master
+_thesis_Xiaoxiang_Zhou.pdf[][] 
+ []
+
+[2]
 \openout2 = `chapters/introduction.aux'.
 
-
-(chapters/introduction.tex
+ (chapters/introduction.tex
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 7.
 
@@ -2253,12 +2258,12 @@ File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
 File: figures/affine_paving/bigpic2.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic2.pdf>
  [81] [82] [83]
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
 
-Overfull \hbox (20.1396pt too wide) in paragraph at lines 335--337
+Overfull \hbox (20.1396pt too wide) in paragraph at lines 327--329
 \TU/lmr/m/n/10.95 By Lemma [][]7.4.1[][] [][](1)[][] and [][](5)[][], $[][]\OT1
 /cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.9
 5 =W; T\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/n/10.95 and $[][]\OT1/cmr/m/n/10.95 (^^H
@@ -2268,25 +2273,25 @@ Overfull \hbox (20.1396pt too wide) in paragraph at lines 335--337
  []
 
 [84]
-Overfull \hbox (9.09087pt too wide) in paragraph at lines 369--370
+Overfull \hbox (9.09087pt too wide) in paragraph at lines 361--362
 \TU/lmr/m/n/10.95 composable representation, irreducible morphism, Auslander–Re
 iten translation, Auslander–
  []
 
 [85]
-Overfull \hbox (7.1089pt too wide) in paragraph at lines 393--508
+Overfull \hbox (7.1089pt too wide) in paragraph at lines 385--500
  [][] 
  []
 
 
-Overfull \hbox (9.12483pt too wide) in paragraph at lines 514--515
+Overfull \hbox (9.12483pt too wide) in paragraph at lines 506--507
 [][]\TU/lmr/bx/n/10.95 Definition 7.5.2 \TU/lmr/m/n/10.95 (Irreducible morphism
 )\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Given two indecomposable representat
 ions $\OML/cmm/m/it/10.95 T; T[] \OMS/cmsy/m/n/10.95 2
  []
 
 [86]
-Overfull \hbox (22.33162pt too wide) in paragraph at lines 556--558
+Overfull \hbox (22.33162pt too wide) in paragraph at lines 548--550
 \TU/lmr/m/n/10.95 which is functorial for any $\OML/cmm/m/it/10.95 T; T[] \OMS/
 cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 
 )$\TU/lmr/m/n/10.95 . Especially, when $\OML/cmm/m/it/10.95 T$ \TU/lmr/m/n/10.9
@@ -2294,38 +2299,38 @@ cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95
 cmr/m/n/10.95 ) =
  []
 
-[87] [88] [89] [90]
+[87] [88] [89]
 Chapter 8.
-[91
+[90
 
 ]
-Overfull \hbox (0.1651pt too wide) detected at line 802
+Overfull \hbox (0.1651pt too wide) detected at line 794
 []
  []
 
 
-Overfull \hbox (48.96696pt too wide) in paragraph at lines 813--814
+Overfull \hbox (48.96696pt too wide) in paragraph at lines 805--806
 []\TU/lmr/m/n/10.95 By using the long exact sequence of extension groups and th
 e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
 5 )\OML/cmm/m/it/10.95 =W; \OT1/cmr/m/n/10.95 ^^H(\OML/cmm/m/it/10.95 X\OT1/cmr
 /m/n/10.95 )) =
  []
 
-[92]
-Overfull \hbox (17.63919pt too wide) detected at line 847
+[91]
+Overfull \hbox (17.63919pt too wide) detected at line 839
  [] \OMS/cmsy/m/n/10.95 ! [][]   [] ! [][]   [] ^^H  [][]   [] ! [][]   [] ! []
   \OML/cmm/m/it/10.95 :
  []
 
 
-Overfull \hbox (5.47496pt too wide) in paragraph at lines 851--854
+Overfull \hbox (5.47496pt too wide) in paragraph at lines 843--846
 [][]\TU/lmr/bx/n/10.95 Lemma 8.1.9 \TU/lmr/m/n/10.95 (Follows [[], Lemma 31(1)(
 2)], with the same proof)\TU/lmr/bx/n/10.95 . []\TU/lmr/m/it/10.95 Let $\OML/cm
 m/m/it/10.95 ^^\$ \TU/lmr/m/it/10.95 be the Auslander–
  []
 
-[93]
-Overfull \hbox (19.55673pt too wide) in paragraph at lines 907--908
+[92]
+Overfull \hbox (19.55673pt too wide) in paragraph at lines 899--900
 [][]\TU/lmr/bx/n/10.95 Lemma 8.1.13. []\TU/lmr/m/it/10.95 For $\OT1/cmr/m/n/10.
 95 (\OML/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] \OT1/
 cmr/m/n/10.95 ^^I$\TU/lmr/m/it/10.95 , the preimage of $\OT1/cmr/m/n/10.95 (\OM
@@ -2336,23 +2341,24 @@ lmr/m/it/10.95 .
  []
 
 
-Overfull \hbox (0.1651pt too wide) detected at line 938
+Overfull \hbox (0.1651pt too wide) detected at line 930
 []
  []
 
-[94]
+[93]
 File: figures/affine_paving/E6.pdf Graphic file (type pdf)
 <use figures/affine_paving/E6.pdf>
 File: figures/affine_paving/E7.pdf Graphic file (type pdf)
 <use figures/affine_paving/E7.pdf>
 File: figures/affine_paving/E8.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8.pdf>
- [95] [96]
+ [94]
 File: figures/affine_paving/flowchart.pdf Graphic file (type pdf)
 <use figures/affine_paving/flowchart.pdf>
- [97]
+ [95]
 File: figures/affine_paving/preferredimage.pdf Graphic file (type pdf)
 <use figures/affine_paving/preferredimage.pdf>
+ [96]
 File: figures/affine_paving/E6easy.pdf Graphic file (type pdf)
 <use figures/affine_paving/E6easy.pdf>
 File: figures/affine_paving/E7easy.pdf Graphic file (type pdf)
@@ -2363,7 +2369,7 @@ File: figures/affine_paving/E8hard.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8hard.pdf>
 File: figures/affine_paving/dimension_Ext.pdf Graphic file (type pdf)
 <use figures/affine_paving/dimension_Ext.pdf>
- [98] [99]
+ [97] [98]
 File: figures/affine_paving/E8graypic1.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic1.pdf>
 File: figures/affine_paving/E8graypic2.pdf Graphic file (type pdf)
@@ -2372,17 +2378,20 @@ File: figures/affine_paving/E8graypic3.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic3.pdf>
 File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic4.pdf>
- [100] [101] [102] [103]) [104]
-(master_thesis_Xiaoxiang_Zhou.bbl
-Missing character: There is no 𝐾 in font [lmroman10-regular]:mapping=tex-text;!
- [105
+ [99] [100] [101]) [102]
+(master_thesis_Xiaoxiang_Zhou.bbl [103
 
 
-]) [106]
+]
+Underfull \hbox (badness 2213) in paragraph at lines 120--123
+[]\TU/lmr/m/n/10.95 Xiaoxiang Zhou.  Affine pavings of quiver flag varieties.  
+\TU/lmr/m/it/10.95 arXiv preprint
+ []
+
+) [104]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
-
-(master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
+ (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
 (chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
@@ -2390,16 +2399,16 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 274.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: 4BC2F35DDD2ABA98BC3A8FBFEFE40FF5.
+(rerunfilecheck)             Checksum: 7170A4D0EEE39BC453FAEBA7535F36A2.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
- 45117 strings out of 427748
- 864664 string characters out of 3150981
- 997396 words of memory out of 3000000
- 48374 multiletter control sequences out of 15000+200000
+ 45046 strings out of 427748
+ 862763 string characters out of 3150981
+ 996434 words of memory out of 3000000
+ 48303 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (108 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (106 pages).

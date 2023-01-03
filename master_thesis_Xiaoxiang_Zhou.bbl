@@ -62,7 +62,7 @@ Mikhail Khovanov and Aaron~D. Lauda.
 
 \bibitem{lusztig1985equivariant}
 George Lusztig.
-\newblock Equivariant 𝐾-theory and representations of {H}ecke algebras.
+\newblock Equivariant $k$-theory and representations of {H}ecke algebras.
 \newblock {\em Proceedings of the American Mathematical Society},
   94(2):337--342, 1985.
 
@@ -115,5 +115,10 @@ Ravi Vakil.
 Michela Varagnolo and Eric Vasserot.
 \newblock Canonical bases and {KLR}-algebras.
 \newblock 2011.
+
+\bibitem{zhou2022affine}
+Xiaoxiang Zhou.
+\newblock Affine pavings of quiver flag varieties.
+\newblock {\em arXiv preprint arXiv:2206.00444}, 2022.
 
 \end{thebibliography}
