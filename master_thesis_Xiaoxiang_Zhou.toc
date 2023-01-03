@@ -9,13 +9,13 @@
 \contentsline {section}{\numberline {1.4}Algebraic groups and Lie algebras}{18}{section.1.4}% 
 \contentsline {subsection}{\numberline {1.4.1}Algebraic groups}{19}{subsection.1.4.1}% 
 \contentsline {subsection}{\numberline {1.4.2}Lie algebra}{20}{subsection.1.4.2}% 
-\contentsline {section}{\numberline {1.5}Quiver flag varieties}{21}{section.1.5}% 
+\contentsline {section}{\numberline {1.5}Quiver flag varieties}{22}{section.1.5}% 
 \contentsline {subsection}{\numberline {1.5.1}Flag variety}{22}{subsection.1.5.1}% 
 \contentsline {subsection}{\numberline {1.5.2}Incidence variety}{24}{subsection.1.5.2}% 
 \contentsline {section}{\numberline {1.6}Stratification and $T$-fixed points}{26}{section.1.6}% 
 \contentsline {subsection}{\numberline {1.6.1}Stratification: flag variety}{26}{subsection.1.6.1}% 
 \contentsline {subsection}{\numberline {1.6.2}Stratification: incidence variety}{29}{subsection.1.6.2}% 
-\contentsline {subsection}{\numberline {1.6.3}Closure of cells}{31}{subsection.1.6.3}% 
+\contentsline {subsection}{\numberline {1.6.3}Closure of cells}{30}{subsection.1.6.3}% 
 \contentsline {subsection}{\numberline {1.6.4}$T$-fixed points}{32}{subsection.1.6.4}% 
 \contentsline {subsection}{\numberline {1.6.5}Tangent spaces of $T$-fixed points}{33}{subsection.1.6.5}% 
 \contentsline {chapter}{\numberline {2}$K$-theory and cohomology theory}{35}{chapter.2}% 

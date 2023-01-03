@@ -137,14 +137,14 @@ $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/
 
 For $w'\in W$, denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
 $$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
-which is an $\mathbb{A}^{l(w')}$-bundle over $\mathcal{F}$, as shown below:
+which is an $\mathbb{A}^{l(w')}$-bundle over $\mathcal{F}$.
 % https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG1hdGhiYntBfV57bCh3Jyl9IFxcY29uZyBCL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMCwiXFxHTF9uL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMSwiXFxtYXRoY2Fse0Z9PVxcR0xfbi9CXFxoc3BhY2V7NW1tfSJdLFswLDFdLFsxLDJdXQ==
-\[\begin{tikzcd}
-	{\mathbb{A}^{l(w')} \cong B/\left( B \cap w'B(w')^{-1}  \right)} & {\GL_n/\left( B \cap w'B(w')^{-1}  \right)} \\
-	& {\hspace{-10mm}\mathcal{F}=\GL_n/B}
-	\arrow[from=1-1, to=1-2]
-	\arrow[from=1-2, to=2-2]
-\end{tikzcd}\]
+%\[\begin{tikzcd}
+%	{\mathbb{A}^{l(w')} \cong B/\left( B \cap w'B(w')^{-1}  \right)} & {\GL_n/\left( B \cap w'B(w')^{-1}  \right)} \\
+%	& {\hspace{-10mm}\mathcal{F}=\GL_n/B}
+%	\arrow[from=1-1, to=1-2]
+%	\arrow[from=1-2, to=2-2]
+%\end{tikzcd}\]
 
 Different from $\mathcal{F}$, the $\GL_n$-action on $\mathcal{F} \times \mathcal{F}$ is not transitive. To facilitate the stratification of $\mathcal{F}\times \mathcal{F}$, we introduce the twisted $\GL_n \times \GL_n$-action:
 $$\GL_n \times \GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times \mathcal{F} \qquad (g_1,g_2,F_g,F_{g'}) \longmapsto (F_{g_1g},F_{g_1(gg_2g^{-1}) g'}).$$
@@ -276,7 +276,7 @@ In the first part of our master thesis, all the quivers are supposed to be conne
 \begin{eg}
 The following graphs are quivers.
 
-\begin{table}[ht]
+\begin{table}[b]
 \centering
 \begin{tabular}{@{\extracolsep{5mm}}ccc}
 $$\begin{tikzcd}[ampersand replacement=\&]
@@ -294,9 +294,10 @@ $$\begin{tikzcd}[ampersand replacement=\&]
  	\arrow["b"', curve={height=6pt}, from=1-1, to=1-2]
  \end{tikzcd}$$ \\
  quiver of type $A_3$ & $3$-loop quiver $L(3)$ & $2$-Kronecker quiver $K(2)$
+ \vspace{-10mm}
 \end{tabular}
-\vspace{5mm}
 \end{table}
+\clearpage
 The reader can easily read the quadruple of quivers from the graphs. Take $Q=K(2)$ as an example, we have 
 $$v(Q)=\{1,2\}, \qquad a(Q)=\{a,b\} \qquad s,t: \{a,b\}\longrightarrow \{1,2\}$$
 by $s(a)=s(b)=1$, $t(a)=t(b)=2$.
@@ -316,7 +317,6 @@ $$\begin{tikzcd}[ampersand replacement=\&]
  \end{tikzcd}$$ \\
  trivial quiver & quiver of type $A_1$ & $1$-loop quiver $L(1)$
 \end{tabular}
-\vspace{5mm}
 \end{table}
 
 \end{eg}
@@ -1038,8 +1038,8 @@ For $\ww \in \absgp{W}_{\abdimvec{d}}$, denote
 $$V_{\ww,k}:= \left< e_{\ww(1)},\ldots e_{\ww(k)} \right> \subseteq V.$$
 We define Lie subalgebras of $\Rep_{\dimvec{d}}(Q)$ as follows.
 %https://tex.stackexchange.com/questions/352752/align-inside-left-right
-
-$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in a(Q)} \in \Rep_{\dimvec{d}}(Q) \;\middle| \;  f_a(V_{\ww,k} \cap V_{s(a)}) \subseteq V_{\ww,k} \text{ for any } k \right\},$$
+$$\mathfrak{r}_{\ww}:=\; \left\{ (f_a)_{a\in a(Q)} \in \Rep_{\dimvec{d}}(Q) \;\middle| \; f_a(V_{\ww,k} \cap V_{s(a)}) \subseteq V_{\ww,k} \text{ for any } k \right\},$$
+\vspace{-8mm}
 \begin{equation*}
 \begin{aligned}
   \mathfrak{r}_{\ww,\ww''}:=\;& \mathfrak{r}_{\ww} \cap \mathfrak{r}_{\ww''},  \\ 
@@ -1123,7 +1123,7 @@ Here, $M_i$ can have no $Q$-vector space structure.
 For a complete flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mathcal{F}_{\ftdimvec{d}}$ is defined as
 \begin{equation*}
 \begin{aligned}
-  \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in v(Q)} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
+  \mathcal{F}_{\ftdimvec{d}}=\;&  \left\{ \text{complete flags of } V=\raisebox{1.3mm}{$\displaystyle\bigoplus_{i \in v(Q)}$} V_i \text{ with dimension vector } \ftdimvec{d}\right\} \\ 
       =\;& \left\{ F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \dimv F =\ftdimvec{d} \phantom{\Big)\!\!\!} \right\}
 \end{aligned}
 \end{equation*}
@@ -1133,7 +1133,7 @@ For a complete flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mat
 The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
 \begin{equation*}
 \begin{aligned}
-  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\bigoplus_{i \in v(Q)} V_i \right\} \\ 
+  \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\raisebox{1.3mm}{$\displaystyle\bigoplus_{i \in v(Q)}$} V_i \right\} \\ 
       =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = V \;\middle|\; \left|\dimv M_k \right| =k \phantom{\Big)\!\!\!} \right\}\\
       =\;& \bigsqcup_{\ftdimvec{d}}\mathcal{F}_{\ftdimvec{d}}
 \end{aligned}
@@ -1215,25 +1215,22 @@ For a quiver $Q$ with complete flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
   \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
-  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
-  =\;& \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
+  \RRep_{\dimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} =\; \bigsqcup_{\ftdimvec{d}} \RRep_{\ftdimvec{d}}(Q)
 \end{aligned}
 \end{equation*}
 and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimvec{d}}$ to be the natural morphisms from the incidence varieties to $\Rep_{\dimvec{d}}(Q)$ or flag varieties, as follows:
-
-\begin{center}
 	\begin{figure}[ht]
+	\centering
 		\vspace{0cm}
-			\parbox[t]{.5\textwidth}{\centering
+			\parbox[t]{.48\textwidth}{\centering
 			\vspace{0cm}
-			\includegraphics[width=7cm]{figures/comm_diagram/incidence_variety_1.pdf}
+			\includegraphics[width=6cm]{figures/comm_diagram/incidence_variety_1.pdf}
 			}
-			\parbox[t]{.5\textwidth}{\centering
+			\parbox[t]{.48\textwidth}{\centering
 			\vspace{0cm}
-			\includegraphics[width=7cm]{figures/comm_diagram/incidence_variety_2.pdf}
+			\includegraphics[width=6cm]{figures/comm_diagram/incidence_variety_2.pdf}
 			}
 	\end{figure}
-\end{center}
 
 \begin{remark}\label{rmk:flag_variety_FlagX}
 Fix $X \in \Rep_{\dimvec{d}}(Q)$, the flag variety associated to $X$
@@ -1264,20 +1261,18 @@ $\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence var
 \end{equation*} 
 For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$ as natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
 
-\begin{center}
 	\begin{figure}[ht]
+		\centering
 		\vspace{0cm}
-			\parbox[t]{.5\textwidth}{\centering
+			\parbox[t]{.48\textwidth}{\centering
 			\vspace{0cm}
-			\includegraphics[width=7cm]{figures/comm_diagram/incidence_variety_3.pdf}
+			\includegraphics[width=6cm]{figures/comm_diagram/incidence_variety_3.pdf}
 			}
-			\parbox[t]{.5\textwidth}{\centering
+			\parbox[t]{.48\textwidth}{\centering
 			\vspace{0cm}
-			\includegraphics[width=7cm]{figures/comm_diagram/incidence_variety_4.pdf}
+			\includegraphics[width=6cm]{figures/comm_diagram/incidence_variety_4.pdf}
 			}
 	\end{figure}
-\end{center}
-
 
 \begin{remark}[Group actions]\
 \begin{enumerate}

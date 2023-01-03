@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 11:59
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 12:27
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1902,7 +1902,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [8
 
 
-] [9] [10] [11] [12] [13] [14] [15]
+] [9] [10] [11] [12] [13
+
+] [14] [15]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2030,48 +2032,34 @@ File: figures/comm_diagram/incidence_variety_1.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_1.pdf>
 File: figures/comm_diagram/incidence_variety_2.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_2.pdf>
-
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1230--1235
-[][] [] 
- []
-
-[24]
+ [24]
 File: figures/comm_diagram/incidence_variety_3.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_3.pdf>
 File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_4.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1273--1278
-[][] [] 
- []
-
-[25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1292.
+(hyperref)                removing `math shift' on input line 1287.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1292.
+(hyperref)                removing `math shift' on input line 1287.
 
-[26]
+[25] [26]
 File: figures/table/table_1.pdf Graphic file (type pdf)
 <use figures/table/table_1.pdf>
 File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
 
 
-LaTeX Warning: Float too large for page by 98.40668pt on input line 1391.
+LaTeX Warning: Float too large for page by 98.40668pt on input line 1386.
 
 [27] [28] [29]
 File: figures/table/table_orbit.pdf Graphic file (type pdf)
 <use figures/table/table_orbit.pdf>
-
-Underfull \vbox (badness 4193) has occurred while \output is active []
-
- [30]
-[31]
-Overfull \hbox (44.07256pt too wide) detected at line 1591
+ [30] [31]
+Overfull \hbox (44.07256pt too wide) detected at line 1586
 []
  []
 
@@ -2403,10 +2391,10 @@ anged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
- 45046 strings out of 427748
- 862763 string characters out of 3150981
- 996434 words of memory out of 3000000
- 48303 multiletter control sequences out of 15000+200000
+ 45016 strings out of 427748
+ 861970 string characters out of 3150981
+ 996853 words of memory out of 3000000
+ 48273 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s
