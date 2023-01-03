@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Variety and stratification}\label{chap:variety_stratification}
 \begingroup
-In this chapter we fix notation and state properties of various varieties. In particular, we will:\\[-9mm]
+In this chapter we fix notation and state properties of various varieties. In particular, we will:\\[-7mm]
 \begin{itemize}
 \setlength\itemsep{-2mm}
 \item investigate stratifications for each variety;
@@ -276,7 +276,7 @@ In the first part of our master thesis, all the quivers are supposed to be conne
 \begin{eg}
 The following graphs are quivers.
 
-\begin{table}[b]
+\begin{table}[ht]
 \centering
 \begin{tabular}{@{\extracolsep{5mm}}ccc}
 $$\begin{tikzcd}[ampersand replacement=\&]
@@ -294,10 +294,8 @@ $$\begin{tikzcd}[ampersand replacement=\&]
  	\arrow["b"', curve={height=6pt}, from=1-1, to=1-2]
  \end{tikzcd}$$ \\
  quiver of type $A_3$ & $3$-loop quiver $L(3)$ & $2$-Kronecker quiver $K(2)$
- \vspace{-10mm}
 \end{tabular}
 \end{table}
-\clearpage
 The reader can easily read the quadruple of quivers from the graphs. Take $Q=K(2)$ as an example, we have 
 $$v(Q)=\{1,2\}, \qquad a(Q)=\{a,b\} \qquad s,t: \{a,b\}\longrightarrow \{1,2\}$$
 by $s(a)=s(b)=1$, $t(a)=t(b)=2$.
@@ -1107,15 +1105,13 @@ Recall Setting \ref{sec:inital_case} and Definition \ref{def:flag_with_quiver}.
 \subsection{Flag variety}
 \begin{defn}[Absolute complete flag variety]
 The absolute complete flag variety $\mathcal{F}_{\abdimvec{d}}$ is defined as 
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
   \mathcal{F}_{\abdimvec{d}}=\;& \absgp{G}_{\abdimvec{d}}/\absgp{B}_{\abdimvec{d}} \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^{\abdimvec{d}} \right\} \\ 
       =\;& \left\{ 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_{\abdimvec{d}} = \mathbb{C}^{\abdimvec{d}} \;\middle|\; \dim M_k =k \right\} \\ 
        \cong\;&  \left\{ \text{Borel subgroups of } \absgp{G}_{\abdimvec{d}} \right\} \\
           =\;& \left\{ g\absgp{B}_{\abdimvec{d}}g^{-1} \;\middle|\; g \in \absgp{G}_{\abdimvec{d}} \right\} \\ 
-\end{aligned}
-\end{equation*}
+\end{align*}
 Here, $M_i$ can have no $Q$-vector space structure.
 \end{defn}
 
