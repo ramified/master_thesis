@@ -4,18 +4,23 @@
 With two different goals, this master thesis is naturally divided into two parts. The first part is dedicated to computing the equivariant $K$-theory of Steinberg varieties, while the second part is dedicated to constructing affine pavings for quiver partial flag varieties.
 
 \section*{Part I}
-In 1976, Steinberg introduced a variety $\St$ of triples in \cite{steinberg1976desingularization} which is called the Steinberg variety nowadays. By convolution product,\todo{delete this sentense?} the top Borel--Moore homology has an algebra structure. Building on the work of Springer \cite{springer1978construction}, in 1980, Kazhdan and Lusztig realized the top Borel--Moore homology of $\St$ as the group algebra of the Weyl group $W$. \todo{delete "Upgrading the group algebra to the affine Hecke algebra,"?}Upgrading the group algebra to the affine Hecke algebra, in 1985, Lusztig realized the affine Hecke algebra as the $G \times \mathbb{C}^{\times}$-equivariant $K$-theory of $\St$ in \cite{lusztig1985equivariant}, which is called the Kazhdan--Lusztig isomorphism nowadays. In particular, the top Borel--Moore homology and $K$-theory are realized as the irreducible representations of the corresponding algebra. These correspondences play a key role in the research off the local Langlands program.
 
-On the other hand,\todo{Do I need to combine two paragraphs? I want to say first paragraph as the classical Steinberg, while in the second paragraph we works over the quiver version of Steinberg.} in 2008, Khovanov and Lauda \cite{https://doi.org/10.48550/arxiv.0803.4121} and Rouquier \cite{https://doi.org/10.48550/arxiv.0812.5023} defined an algebra as the categorification of certain quantum groups, which is called the KLR-algebra nowadays. In 2010, Varagnolo and Vasserot realized this algebra as the $G$-equivariant cohomology of some quiver version Steinberg variety $\St_{\dimvec{d}}$ in \cite{varagnolo2011canonical}.
+The Steinberg variety $\St$ was introduced in \cite{steinberg1976desingularization} and, in type $A$, consists of triples of a nilpotent operator and two flags fixed by this operator. The (top) Borel--Moore homology of $\St$ can be equipped with the structure of convolution algebra which yields the group algebra of Weyl group, see \cite{kazhdan1980topological}.
+ 
+Similarly, Lusztig showed in \cite{lusztig1985equivariant} that the affine Hecke algebra can realized as the $G \times \mathbb{C}^{\times}$-equivariant $K$-theory of $\St$—a fact that is often referred to as the Kazhdan–Lusztig isomorphism. Moreover, irreducible representations of these algebras can be constructed using the geometry of Springer fibers.
 
+Khovanov and Lauda \cite{https://doi.org/10.48550/arxiv.0803.4121} and Rouquier \cite{https://doi.org/10.48550/arxiv.0812.5023} defined an algebra, called the quiver Hecke algebra or KLR algebra in order to categorify quantum groups. In fact, Varagnolo--Vasserot \cite{varagnolo2011canonical} show that this algebra arises as the $G$-equivariant cohomology of a quiver version $\St_{\dimvec{d}}$ of the Steinberg variety.
 
-In the first part,\todo{Here, I want to say that we work in the middle of the two paragraphs, i.e., K-theory in paragraph 1 and quiver version in paragraph 2.} we try to extend the work of \cite{varagnolo2011canonical}, and compute the $G$-equivariant $K$-theory of $\St_{\dimvec{d}}$ as the $K$-theoretical analog of KLR-algebras. we follow methods from Varagnolo-Vasserot's article \cite{varagnolo2011canonical} and Przezdziecki's master thesis \cite{przezdziecki2015geometric}. For carrying the arguments to $K$-theoretical version, we quote properties of $K$-theory in \cite[Chapter 5]{chriss1997representation}.
+Motivated by this, we study a $K$-theoretic version of the KLR algebra in the first part of this thesis. We follow methods from Varagnolo--Vasserot \cite{varagnolo2011canonical} and Przezdziecki’s master thesis \cite{przezdziecki2015geometric}. We base our $K$-theoretic arguments on the exposition in \cite[Chapter 5]{chriss1997representation}.
 
 $\,$
 
-For stating the theorem properly, we fix some notation. For a $G$-variety $X$, denote $K^G(X)=K(\Coh^G(X))$ as the Grothendieck group of the $G$-equivariant coherent sheaves on $X$, and $\Rpt(G)=K^G(\pt)$ as the representation ring. For a quiver $Q$ without loops and cycles and a dimension vector $\dimvec{d}$, denote $G_{\dimvec{d}}=\prod_{i \in v(Q)} \GL_{\dimvec{d}_i}(\mathbb{C})$ and $T_{\dimvec{d}}$ as the maximal torus, $\mathcal{F}_{\dimvec{d}}$ as the complete flag variety, $\Rep_{\dimvec{d}}(Q)$ as the space of representations, $\RRep_{\dimvec{d}}(Q) \subseteq \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}$ as the incidence varieties of one representation fixing one flag, and the Steinberg variety $\St_{\dimvec{d}}$ as the incidence varieties of two representations fixing one flag. Now we state Theorem \ref{thm:A} as our main result in the first part.
+To state our results, we fix some notation. For a $G$-variety $X$, denote $K^G(X)=K\big(\!\Coh^G(X)\big)$ by the Grothendieck group of $G$-equivariant coherent sheaves on $X$, and by $\Rpt(G)=K^G(\pt)$ the representation ring. Fix a quiver $Q$ (without loops and cycles) and dimension vector $\dimvec{d}$. Denote by $G_{\dimvec{d}}=\prod_{i \in v(Q)} \GL_{\dimvec{d}_i}(\mathbb{C})$ and by $T_{\dimvec{d}} \subset G_{\dimvec{d}}$ the maximal torus of diagonal matrices. Let $\mathcal{F}_{\dimvec{d}}$ be the complete flag variety and $\Rep_{\dimvec{d}}(Q)$ be the vector space of representations of $Q$ with dimension vector $\dimvec{d}$.
+
+We will study the geometry of the incidence varieties $\RRep_{\dimvec{d}}(Q) \subseteq \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}}$ and $\St_{\dimvec{d}} \subseteq \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}$ consisting of pairs, respectively triples, of a representation of $Q$ and one, respectively two, flags fixed by this representation. Now we state Theorem \ref{thm:A} as the main result in Part \ref{part:Steinberg_varieties}.
+
 \begin{theoremA}\label{thm:A}
-Under the convolution product, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q)) \cong \Rpt(T_{\dimvec{d}})$-algebra structure. Moreover,
+Under the convolution product, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a $K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right) \cong \Rpt(T_{\dimvec{d}})$-algebra structure. Moreover,
 \begingroup
 \upshape
 \setlist{itemsep=-0.4em}
@@ -24,19 +29,15 @@ Under the convolution product, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a $K^{
 \item $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is a free $\Rpt(T_{\dimvec{d}})$-module of rank $\abdimvec{d}!$, with a basis corresponding to the $\OOcell$-cells of $\St_{\dimvec{d}}$;\label{item:A1}
 \item After base change to fraction field, $\Kcurl^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is a free $\Rptc(T_{\dimvec{d}})$-module of rank $\abdimvec{d}!$, with a new basis corresponding to the $T_{\dimvec{d}}$-fixed points of $\St_{\dimvec{d}}$;\label{item:A2}
 \item As an $\Rpt(T_{\dimvec{d}})$-algebra, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is generated by the Demazure operators $\{D_i\}_{i=1}^{\abdimvec{d}-1}$;\label{item:A3}
-\item $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a faithful action on $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))$, which embeds $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ as a subalgebra of the endomorphism ring $\End_{\mathbb{Z}}\label{item:A4} \left(K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q))\right)$. Also, we have an explicit formula for the Demazure operator action on $K^{G_{\dimvec{d}}}(\RRep_{\dimvec{d}}(Q)) \cong \Rpt(T_{\dimvec{d}})$:
-\begin{equation*}\label{eq:Demazure_operator_copy}
-D_i^{u,u'} \star f^{u'}=\begin{cases}
-\left[\left( \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u=u',\\[8mm]
-\left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u \neq u'.
-\end{cases}
-\end{equation*}
+\item $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a faithful action on $K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right)$, which embeds $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ as a subalgebra of the endomorphism ring $\End_{\mathbb{Z}}\label{item:A4} \left(K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right)\right)$. Also, we have an explicit formula for the Demazure operator action on $K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right)$.
 \item Any element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ can be written as formal sum of certain planar diagrams, and the algebraic structure of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ can be understood in a diagrammatic way.\label{item:A5}
 \end{enumerate} 
 \endgroup
 \end{theoremA}
 
 We will show \eqref{item:A1} in Chapter \ref{chap:cellular_fibration_theorem} (see Table \ref{table:module_absolute}), \eqref{item:A2} in Chapter \ref{chap:localization} (see Theorem \ref{thm:localization_theorem}, Definition \ref{def:localization_basis}), \eqref{item:A3}, \eqref{item:A4} in Chapter \ref{chap:excess_intersection_formula} (see Proposition \ref{prop:generators} for \eqref{item:A3}, Proposition \ref{prop:faithfulness}, Theorem \ref{thm:Demazure_operator_1} for \eqref{item:A4}). \eqref{item:A5} will be explained in detail in Chapter \ref{chap:applications} (see Section \ref{sec:diagram}). Varieties as well as their stratifications and $T$-fixed points will be defined in Chapter \ref{chap:variety_stratification}, while the basic results on $K$-theory will be treated in Chapter \ref{chap:Ktheory}.
+
+Similar methods should apply to the case of partial flag varieties and yield a $K$-theoretic version of the quiver Schur algebra introduced by Stroppel--Webster \cite{https://doi.org/10.48550/arxiv.1110.1115}. We also note that similar $K$-theoretic analogs in the context of Soergel bimodules where studied by Eberhardt in  \cite{Eberhardt2022Koszul,https://doi.org/10.48550/arxiv.2208.01665}. Using the work of Stroppel--Eberhardt \cite{https://doi.org/10.48550/arxiv.1110.1115}, one should be able to show that the derived categories of modules of the $K$-theoretic KLR algebra can be realized in terms of certain K-motives on $\RRep_{\dimvec{d}}(Q)$.
 
 $\,$
 
@@ -50,7 +51,8 @@ Different from the previous chapters, the three sections in Chapter \ref{chap:ap
 
 \section*{Part II}
 
-
+As explained in the introduction of Part \ref{part:Steinberg_varieties}, irreducible representations of convolution algebras, such as (quiver) Hecke algebras, can be realized in terms of Springer fibers or generalizations thereof.
+While the geometry of Springer fibers can be very intricate, one often show that they admit affine pavings.
 
 Affine pavings are an important concept in algebraic geometry similar to cellular decompositions in topology. A complex algebraic variety $X$ has an affine paving if $X$ has a filtration
 $$0= X_0 \subset X_1 \subset \cdots \subset X_d=X$$
@@ -62,14 +64,15 @@ Affine pavings have been constructed in many cases, as for Grassmannians, flag v
 In this case, affine pavings have been constructed in \cite{irelli2019cell} for quiver Grassmannians in all types and in \cite{maksimau2019flag} for partial flag varieties of type $A$ and $D$ (see Table \ref{table:result}). Besides, affine pavings 
 have been constructed in \cite[Theorem 6.3]{eberhardt2022motivic} for strict partial flag varieties in type $\tilde{A}$ with cyclic orientation, which generalized the result in \cite{sauter2015cell} for complete quiver flag varieties in nilpotent representations of an oriented cycle. In this part, we will tackle the remaining cases.
 \begin{theoremB}\label{thm:affine_paving}
-Denote $Q$ a quiver and $M$ a representation of $Q$.
+Fix a quiver $Q$ and a representation $M$ of $Q$.
 \begingroup
 \setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
 \upshape
-\begin{enumerate}[(1)]
-\item If $Q$ is Dynkin, then any (strict) partial flag variety $\Flag{}(M)$ has an affine paving;
-\item If $Q$ is of type $\tilde{A}$ or $\tilde{D}$, then for any indecomposable representation $M$, the (strict) partial flag variety $\Flag{}(M)$ has an affine paving;
-\item If $Q$ is of type $\tilde{E}$, assume that $\Flag{}(N)$ has an affine paving for any regular quasi-simple representation $N \in \rep(Q)$, then $\Flag{}(M)$ has an affine paving for any indecomposable representation $M$.
+\begin{enumerate}
+\item If $Q$ is Dynkin, then any (strict) partial flag variety $\Flag{}(M)$ has an affine paving;\label{item:B1}
+\item If $Q$ is of type $\tilde{A}$ or $\tilde{D}$, then for any indecomposable representation $M$, the (strict) partial flag variety $\Flag{}(M)$ has an affine paving;\label{item:B2}
+\item If $Q$ is of type $\tilde{E}$, assume that $\Flag{}(N)$ has an affine paving for any regular quasi-simple representation $N \in \rep(Q)$, then $\Flag{}(M)$ has an affine paving for any indecomposable representation $M$.\label{item:B3}
 \end{enumerate}
 \endgroup
 \end{theoremB}
@@ -94,6 +97,10 @@ $\tilde{E}$ &                            & \multicolumn{2}{c|}{reduced to the re
 \caption{}\label{table:result}
 \end{table}
 \endgroup
+We will show \eqref{item:B1} in Theorem \ref{thm:Dynkincase} and \eqref{item:B2}, \eqref{item:B3} in Theorem \ref{thm:affinecase}.
+
+$\,$
+
 We proceed as follows. In Chapter \ref{chap:flag=gr}, we discuss basic definitions and properties of partial flags. In Section \ref{sec:mainthm} we will prove key Theorems \ref{thm:main1} and \ref{thm:main2}, which allow us to construct affine pavings for quiver partial flag varieties inductively. We apply these theorems to partial flag varieties of Dynkin type, see Section \ref{sec:Dynkin}, and to partial flag varieties of affine type, see Section \ref{sec:affine}. We will combine and extend results from \cite{irelli2019cell} and \cite{maksimau2019flag}.
 Following the arguments of \cite{maksimau2019flag} would require studying millions of cases when we  consider the Dynkin quivers of type $E$. To avoid this, we extend the methods of \cite{irelli2019cell} from quiver Grassmannian to quiver partial flag variety. This will reduce the case by case analysis to a feasible computation of (mostly) 8 critical cases, which we carry out in Section \ref{sec:Dynkin} and Section \ref{appendix:proofcomplement}. The reduction uses Auslander--Reiten theory which we recall in Section \ref{appendix:arth}.
 %It's easy to see that $\Flag{1}(X)=\Grq(X)$. These geometrical objects can be divided into different pieces according to the dimension vectors of $M_1,\ldots,M_d$, and each piece have its own natural (complex/Zariski) topology. It was proved in \cite{irelli2019cell} that $\Grq(X)$ have an affine paving, and in \cite{maksimau2019flag} that $\Flagd(X)$ have the same property when $Q$ is Dynkin quiver of type $A/E$. Here we go one step further, the results are concluded in the Table \ref{table:result}.
@@ -106,7 +113,7 @@ Following the arguments of \cite{maksimau2019flag} would require studying millio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgement}
 %\addcontentsline{toc}{section}{Acknowledgement}
-First, I would like to thank my supervisor, Jens Niklas Eberhardt, for introducing me these problems, discussing earlier drafts, as well as providing help with the write-up.  I’d also like to extend my gratitude to my supervisor Professor Dr. Catharina Stroppel, who provided me with support and outstanding suggestions. I would also like to thank Hans Franzen for answering some questions regarding \cite{irelli2019cell}, and thank Ruslan Maksimau, Francesco Esposito for some comments and suggestions. Finally, I am also grateful to Luozi Shi and Haohao Liu for reading earlier drafts and giving me feedback. Thanks for everyone who encourage and support me in the last month of deadline chasing.
+First, I would like to thank my supervisor, Jens Niklas Eberhardt, for introducing me to these problems, discussing earlier drafts, as well as providing help with the write-up.  I’d also like to extend my gratitude to my supervisor Professor Dr. Catharina Stroppel, who provided me with support and suggestions. I would also like to thank Hans Franzen for answering some questions regarding \cite{irelli2019cell}, and thank Ruslan Maksimau, Francesco Esposito for some comments and suggestions. Finally, I am also grateful to Luozi Shi and Haohao Liu for reading earlier drafts and giving me feedback. Thanks for everyone who encouraged and supported me in the last month of deadline chasing.
 %My thanks go to Professor xyz for his / her guidance and advice in the preparation and finalization of this article
 % I would like to express my gratitude to
 %my advisor James Newton without whom this paper would never have been completed. I

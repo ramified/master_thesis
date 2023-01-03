@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Variety and stratification}\label{chap:variety_stratification}
+\chapter{Varieties and stratifications}\label{chap:variety_stratification}
 \begingroup
 In this chapter we fix notation and state properties of various varieties. In particular, we will:\\[-7mm]
 \begin{itemize}
@@ -15,7 +15,7 @@ In this chapter we fix notation and state properties of various varieties. In pa
 In this section, we introduce the complete flag variety to give a bird's eye view on the whole chapter. We refer readers to the book \cite{brown2018flag} for detailed description of flag varieties, Bruhat order and Bruhat decomposition.
 
 \begin{setting}\label{set:initial_case}
-Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
+Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ by the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
 {
 \setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
@@ -252,7 +252,7 @@ We color pieces of $\OOmcell_{s}$ by blue, and $\OOmcell_{ts,s}$ by light blue.
 
 
 Now we understand the structure a lot about $\mathcal{F}$ and $\mathcal{F} \times \mathcal{F}$, and the whole process will be applied repeatedly in Section \ref{sec:typical_variety} and \ref{sec:stratification}. 
-\section{Quiver}
+\section{Quivers}
 To introduce more complicated spaces and discuss their stratifications, we fix notation related to quiver and algebraic group in the following sections.
 
 Roughly speaking, a quiver is a directed multigraph permitting loops.
@@ -341,7 +341,7 @@ A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longr
 	\arrow["{W_r}", from=2-1, to=2-2]
 \end{tikzcd}\]
 
-We denote $\rep(Q)$ as the category of representations of $Q$.
+We denote $\rep(Q)$ by the category of representations of $Q$.
 \end{defn}
 \begin{eg}\label{eg:1-loop_quiver}
 A representation of the $1$-loop quiver $L(1)$ is a $2$-tuple
@@ -395,7 +395,7 @@ For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, th
 $$\ftdimvec{f}=\big(\!\dimv M_k   \big)_{k \in \{1,\ldots,d\}} \in  \prod_{\substack{i \in v(Q) \\ k \in \{1,\ldots,d\}}} \mathbb{Z}.$$
 $\ftdimvec{f}$ is called a complete flag-type dimension vector if $\ftdimvec{f}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we denote $M_0$ by 0.} $d=\abdimvec{f}$ and
 $$\left| \dimv M_{k+1}/M_k \right|=1 \qquad \text{ for any }k \in \{0,\ldots, d-1  \}.$$
-We would always denote $\ftdimvec{d}$ as a complete dimension vector, and $\ftdimvec{f}$, $\ftdimvec{g}$ as (partial) dimension vectors.
+We would always denote $\ftdimvec{d}$ by a complete dimension vector, and $\ftdimvec{f}$, $\ftdimvec{g}$ by (partial) dimension vectors.
 \end{defn}
 
 
@@ -550,9 +550,9 @@ We denote
     =\;&\left\{ s_1,\ldots, s_{\abdimvec{d}-1} \right\} \smallsetminus \left\{s_{\dimvec{d}_1},s_{\dimvec{d}_1+\dimvec{d}_2},\ldots,s_{\dimvec{d}_1+\cdots+\dimvec{d}_{k-1}} \right\} \\
 \end{aligned}
 \end{equation*}
-to be the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively.
+by the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively.
 \end{defn}
-We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ to be the longest elements in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively. See Table \ref{table:Wgp_collected_notation} for a picture of $\ww_{\max}$ and $w_{\max}$.
+We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ by the longest elements in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively. See Table \ref{table:Wgp_collected_notation} for a picture of $\ww_{\max}$ and $w_{\max}$.
 
 We discuss right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
 
@@ -1199,7 +1199,7 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 \vspace{-5mm}
 \caption{Base varieties and their preferred base point}
 \label{table:base_varieties}
-\vspace{3mm}
+\vspace{1mm}
 \end{table}
 
 \subsection{Incidence variety}
@@ -1226,6 +1226,7 @@ and $\mu_{\ftdimvec{d}}$, $\pi_{\ftdimvec{d}}$, $\mu_{\dimvec{d}}$, $\pi_{\dimve
 			\vspace{0cm}
 			\includegraphics[width=6cm]{figures/comm_diagram/incidence_variety_2.pdf}
 			}
+			\vspace{-7mm}
 	\end{figure}
 
 \begin{remark}\label{rmk:flag_variety_FlagX}
@@ -1255,7 +1256,7 @@ $\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence var
 \cong\;& \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}
 \end{aligned}
 \end{equation*} 
-For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$ as natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
+For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$ by natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
 
 	\begin{figure}[ht]
 		\centering
@@ -1280,12 +1281,12 @@ For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 \end{remark}
 
 
-\section{Stratification and $T$-fixed points}\label{sec:stratification}
+\section{Stratifications and $T$-fixed points}\label{sec:stratification}
 
 %Natural defined varieties resemble burr puzzles, they have delicate structures and can be decomposed into relatively easy pieces. 
 In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notation of orbits. We will also discuss their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another ``basis" in Chapter \ref{chap:localization}.
 
-\subsection{Stratification: flag variety}
+\subsection{Stratifications: flag varieties}
 \label{subsec:stratification_flag_variety}
 We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
 
@@ -1409,7 +1410,7 @@ We have given every orbit a name, and other spaces are finite union of these orb
 \end{eg}
 
 
-\subsection{Stratification: incidence variety}\label{subsec:stratification:_incidence_variety}
+\subsection{Stratifications: incidence varieties}\label{subsec:stratification:_incidence_variety}
 Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
 
 \begin{defn}[Stratifications of incidence varieties]

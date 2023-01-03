@@ -100,12 +100,12 @@ We follow \cite[2.3]{maksimau2019flag} in this section with a few variations.
 \begin{defn}[Partial flag variety]\label{def:pf}
 For a quiver representation $X \in \rep(Q)$ and an integer $d \geqslant 1$, we denote
 $$\Flagd(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \right\}$$
-as the collection of all partial flags of length $d$, and call it the partial flag variety associated to $X$. 
+by the collection of all partial flags of length $d$, and call it the partial flag variety associated to $X$. 
 \end{defn}
 \begin{defn}[Strict partial flag variety]\label{def:spf}
 For a quiver representation $X \in \rep(Q)$ and an integer $d \geqslant 2$, we denote
 $$\Flagdstr(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X\mid x.M_{k+1} \subseteq M_k \right\}$$
-as the collection of all strict partial flags of length $d$, and call it the strict partial flag variety associated to $X$. 
+by the collection of all strict partial flags of length $d$, and call it the strict partial flag variety associated to $X$. 
 \end{defn}
 \begin{defn}[Grassmannian]
 Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \Mod(R)$, the Grassmannian $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
@@ -503,7 +503,7 @@ $E_8$ & \begin{tikzcd}[sep=4mm]
 \end{table}
 Indecomposable representations form the vertices of Auslander–Reiten quiver, while irreducible morphisms form the arrows.
 \begin{defn}[Irreducible morphism]
-Given two indecomposable representations $T,T' \in \Mod(R)$, denote
+Given two indecomposable representations $T,T' \in \Mod(R)$, let
 \begin{equation*}
 \begin{aligned}
   \rad(T,T'):=\;& \left\{ f \in \Hom_{R}(T,T')  \middle|  f \text{ is not invertible}  \right\} \\
@@ -589,7 +589,7 @@ of the corresponding quiver.
 
 \begin{figure}[!ht]
   \vspace{0cm}
-    \centering  \[\begin{tikzcd}[row sep=5mm, scale=0.7]
+    \centering  \[\begin{tikzcd}[row sep=5mm, scale=1]
     	{\substack{0\\10000}} &&[-5mm]&[-16mm] {\substack{0\\00100}} \\
     	& {\substack{0\\11100}} & {\substack{1\\00100}} && {\substack{0\\00110}} \\
     	{\substack{0\\01100}} &&& {\substack{1\\11210}} && {\substack{0\\00111}} \\
@@ -1045,7 +1045,7 @@ fulfilling the assumptions of Theorem \ref{thm:main2}, and then $\Gr(\Phi(Y))$ h
 
 
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
     \includegraphics[scale=0.7]{figures/affine_paving/preferredimage.pdf}
 \end{figure}
@@ -1170,19 +1170,19 @@ The exceptional cases are similar, but the discussion is a bit more complicated.
 		\centering
 			\vspace{0cm}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=28mm]{figures/affine_paving/E8graypic1.pdf}
+			\includegraphics[width=32mm]{figures/affine_paving/E8graypic1.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=28mm]{figures/affine_paving/E8graypic2.pdf}
+			\includegraphics[width=32mm]{figures/affine_paving/E8graypic2.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=28mm]{figures/affine_paving/E8graypic3.pdf}
+			\includegraphics[width=32mm]{figures/affine_paving/E8graypic3.pdf}
 			\subcaption{}
 			}
 			\parbox[b]{.23\textwidth}{\centering
-			\includegraphics[width=28mm]{figures/affine_paving/E8graypic4.pdf}
+			\includegraphics[width=32mm]{figures/affine_paving/E8graypic4.pdf}
 			\subcaption{}
 			}
 			\caption{special cases}

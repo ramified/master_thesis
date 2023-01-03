@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 12:40
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 17:03
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1835,32 +1835,19 @@ _thesis_Xiaoxiang_Zhou.pdf[][]
 \openout2 = `chapters/introduction.aux'.
 
  (chapters/introduction.tex
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 7.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 24.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 29.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 24.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 29.
 
 [3
 
 
 
-] [4])
-Underfull \vbox (badness 3019) has occurred while \output is active []
-
- [5]
-[6]
+] [4] [5]) [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 261.
@@ -2042,11 +2029,11 @@ File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1283.
+(hyperref)                removing `math shift' on input line 1284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1283.
+(hyperref)                removing `math shift' on input line 1284.
 
 [23] [24]
 File: figures/table/table_1.pdf Graphic file (type pdf)
@@ -2055,13 +2042,13 @@ File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
 
 
-LaTeX Warning: Float too large for page by 31.65494pt on input line 1382.
+LaTeX Warning: Float too large for page by 31.65494pt on input line 1383.
 
 [25] [26]
 File: figures/table/table_orbit.pdf Graphic file (type pdf)
 <use figures/table/table_orbit.pdf>
  [27] [28]
-Overfull \hbox (44.07256pt too wide) detected at line 1582
+Overfull \hbox (44.07256pt too wide) detected at line 1583
 []
  []
 
@@ -2100,14 +2087,20 @@ Chapter 3.
 
 
 ]
+Overfull \hbox (9.48949pt too wide) in paragraph at lines 96--122
+[][] [] [] []
+ []
+
+[45]
 File: figures/table/table_module_initial.pdf Graphic file (type pdf)
 <use figures/table/table_module_initial.pdf>
- [45]
 File: figures/table/table_module_relative.pdf Graphic file (type pdf)
 <use figures/table/table_module_relative.pdf>
 File: figures/table/table_module_absolute.pdf Graphic file (type pdf)
 <use figures/table/table_module_absolute.pdf>
- [46] [47]) [48]
+ [46] [47
+
+]) [48]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
@@ -2172,21 +2165,20 @@ File: figures/table/table_euler_class.pdf Graphic file (type pdf)
 
  (chapters/chapter6.tex
 Chapter 6.
-
-Overfull \hbox (23.3304pt too wide) detected at line 42
-[][]
- []
-
 [64
 
 
 
 ]
+Overfull \hbox (23.3304pt too wide) detected at line 58
+[][]
+ []
+
 File: figures/table/table_euler_class_q.pdf Graphic file (type pdf)
 <use figures/table/table_euler_class_q.pdf>
+[65]
 File: figures/strands/generators.pdf Graphic file (type pdf)
 <use figures/strands/generators.pdf>
- [65]
 File: figures/strands/glue_vertically.pdf Graphic file (type pdf)
 <use figures/strands/glue_vertically.pdf>
 File: figures/strands/clear_relations.pdf Graphic file (type pdf)
@@ -2200,7 +2192,10 @@ File: figures/strands/relations_2.pdf Graphic file (type pdf)
 File: figures/strands/relations_3.pdf Graphic file (type pdf)
 <use figures/strands/relations_3.pdf>
 
-Overfull \hbox (22.14848pt too wide) in paragraph at lines 205--206
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+ [68]
+Overfull \hbox (22.14848pt too wide) in paragraph at lines 221--222
 [][]\TU/lmr/bx/n/10.95 Lemma 6.2.3. []\TU/lmr/m/it/10.95 For $\OML/cmm/m/it/10.
 95 f \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/c
 msy/m/n/10.95 ^^B \U/msb/m/n/10.95 C[]\OT1/cmr/m/n/10.95 )$\TU/lmr/m/it/10.95 ,
@@ -2209,14 +2204,14 @@ msy/m/n/10.95 ^^B \U/msb/m/n/10.95 C[]\OT1/cmr/m/n/10.95 )$\TU/lmr/m/it/10.95 ,
 m/n/10.95 ^^A [][] 2
  []
 
-[68]
-Overfull \hbox (25.49971pt too wide) detected at line 213
+[69]
+Overfull \hbox (25.49971pt too wide) detected at line 229
 \OML/cmm/m/it/10.95 K[] [] [] \U/msb/m/n/10.95 Z []  [] \OML/cmm/m/it/10.95 ;  
 H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 /m/n/10.95 ] [] \OML/cmm/m/it/10.95 :
  []
 
-[69] [70]) [71]
+[70]) [71]
 \openout2 = `chapters/chapter7.aux'.
 
  (chapters/chapter7.tex) [72
@@ -2374,7 +2369,7 @@ File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 
 
 ]
-Underfull \hbox (badness 2213) in paragraph at lines 120--123
+Underfull \hbox (badness 2213) in paragraph at lines 134--137
 []\TU/lmr/m/n/10.95 Xiaoxiang Zhou.  Affine pavings of quiver flag varieties.  
 \TU/lmr/m/it/10.95 arXiv preprint
  []
@@ -2390,14 +2385,14 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 274.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: 7170A4D0EEE39BC453FAEBA7535F36A2.
+(rerunfilecheck)             Checksum: C495F2513F2FD043074BD4F725E3AB1C.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
- 45016 strings out of 427748
- 861970 string characters out of 3150981
- 997928 words of memory out of 3000000
- 48273 multiletter control sequences out of 15000+200000
+ 44941 strings out of 427748
+ 860348 string characters out of 3150981
+ 984521 words of memory out of 3000000
+ 48198 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s

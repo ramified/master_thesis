@@ -34,6 +34,16 @@ Daniel Dugger.
 \newblock {\em Available to download at
   \url{https://pages.uoregon.edu/ddugger/kgeom.pdf}}, 2014.
 
+\bibitem{Eberhardt2022Koszul}
+Jens~Niklas Eberhardt.
+\newblock ${K}$-motives and {K}oszul duality.
+\newblock {\em Bulletin of the London Mathematical Society}, 54(6):2232--2253,
+  2022.
+
+\bibitem{https://doi.org/10.48550/arxiv.2208.01665}
+Jens~Niklas Eberhardt.
+\newblock ${K}$-theory {S}oergel bimodules, 2022.
+
 \bibitem{eberhardt2022motivic}
 Jens~Niklas Eberhardt and Catharina Stroppel.
 \newblock Motivic {S}pringer theory.
@@ -55,6 +65,11 @@ Giovanni~Cerulli Irelli, Francesco Esposito, Hans Franzen, and Markus Reineke.
 \newblock Cell decompositions and algebraicity of cohomology for quiver
   {G}rassmannians, 2019.
 
+\bibitem{kazhdan1980topological}
+David Kazhdan and George Lusztig.
+\newblock A topological approach to {S}pringer's representations.
+\newblock {\em Advances in Mathematics}, 38(2):222--228, 1980.
+
 \bibitem{https://doi.org/10.48550/arxiv.0803.4121}
 Mikhail Khovanov and Aaron~D. Lauda.
 \newblock A diagrammatic approach to categorification of quantum groups i.
@@ -62,7 +77,7 @@ Mikhail Khovanov and Aaron~D. Lauda.
 
 \bibitem{lusztig1985equivariant}
 George Lusztig.
-\newblock Equivariant $k$-theory and representations of {H}ecke algebras.
+\newblock Equivariant ${K}$-theory and representations of {H}ecke algebras.
 \newblock {\em Proceedings of the American Mathematical Society},
   94(2):337--342, 1985.
 
@@ -90,15 +105,14 @@ Julia Sauter.
 Florian Seiffarth.
 \newblock On {KLR} and quiver {S}chur algebras, 2017.
 
-\bibitem{springer1978construction}
-Tonny~Albert Springer.
-\newblock A construction of representations of {W}eyl groups.
-\newblock {\em Inventiones mathematicae}, 44(3):279--293, 1978.
-
 \bibitem{steinberg1976desingularization}
 Robert Steinberg.
 \newblock On the desingularization of the unipotent variety.
 \newblock {\em Inventiones mathematicae}, 36(1):209--224, 1976.
+
+\bibitem{https://doi.org/10.48550/arxiv.1110.1115}
+Catharina Stroppel and Ben Webster.
+\newblock Quiver {S}chur algebras and $q$-{F}ock space, 2011.
 
 \bibitem{thomason1993k}
 Robert~W Thomason.

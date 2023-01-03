@@ -2,10 +2,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Generalizations, examples and connections}\label{chap:applications}
-This chapter is devoted for further discussions of Theorem \ref{thm:Demazure_operator_1}. Generalizations of Theorem \ref{thm:Demazure_operator_1} are discussed in Section \ref{sec:generalization}, while examples are shown by strands in Section \ref{sec:diagram}. Finally, we will mention about the connection between equivariant $K$-theory and equivariant cohomology in Section \ref{sec:AScompletion}. In the second part, we extend methods from Cerulli-Irelli--Esposito--Franzen--Reineke
- and Maksimau as well as techniques from Auslander--Reiten theory.
+This chapter is devoted for further discussions of Theorem \ref{thm:Demazure_operator_1}. Generalizations of Theorem \ref{thm:Demazure_operator_1} are discussed in Section \ref{sec:generalization}, while examples are shown by strands in Section \ref{sec:diagram}. Finally, we will mention about the connection between equivariant $K$-theory and equivariant cohomology in Section \ref{sec:AScompletion}. 
 
-\section{Generalization}\label{sec:generalization}
+\section{Generalizations}\label{sec:generalization}
 In this section we generalize Theorem \ref{thm:Demazure_operator_1} in different directions. Quivers with loops are allowed, and the group actions can be replaced by $G \times \mathbb{C}^{\times}$-actions. After the generalization, we are able to cover the result in \cite[Theorem 7.2.5]{chriss1997representation}.
 
 \subsection{Quiver with loops}
@@ -28,7 +27,24 @@ We then replace $\RRep_{\dimvec{d}}(Q)$ by $\RRep_{\dimvec{d},\str}(Q)$. The Lie
   \cong\;& \pi_{\dimvec{d},\str}^{-1}(\{F_{\ww} \})
 \end{aligned}
 \end{equation*}
-then the same formula in Theorem \ref{thm:Demazure_operator_1} still works.
+then the same formula in \eqref{eq:final_destination} still works.
+\begin{theorem}\label{thm:Demazure_operator_1.5}
+We obtain a formula for the Demazure operator:
+\begin{equation*}\label{eq:Demazure_operator_1.5}
+D_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \raisebox{1mm}{$\displaystyle\frac{s_i f}{ 1-\frac{e_{i+1}}{e_{i}}}     + \frac{f}{1-\frac{e_{i}}{e_{i+1}}}$}  \right)\left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+and similarly in equivariant cohomology:
+\begin{equation*}\label{eq:Demazure_operator_cth_1.5}
+\partial_i^{u,u'} \star f^{u'}=\begin{cases}
+\left[\left( \displaystyle\frac{s_i f}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u=u',\\[8mm]
+\left[s_i f  \left(\lambda_{i+1}-\lambda_{i}\right)^{k} \right]^{u} & u \neq u'.
+\end{cases}
+\end{equation*}
+\end{theorem}
+
 \subsection{$G \times \mathbb{C}^{\times}$-action}\label{subsec:Cstar_action}
 
 
@@ -58,7 +74,7 @@ D_i^{u,u'} \star f^{u'}=\begin{cases}
 \left[s_i f  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}} q\right)^{k} \right]^{u} & u \neq u'.
 \end{cases}
 \end{equation*}
-and similar for the equivariant cohomology theory:
+and similar for the equivariant cohomology:
 \begin{equation*}\label{eq:Demazure_operator_cth_C*action}
 \partial_i^{u,u'} \star f^{u'}=\begin{cases}
 \left[\left( \displaystyle\frac{s_i f}{ \lambda_{i+1}-\lambda_{i}}     + \frac{f}{\lambda_{i}-\lambda_{i+1} }  \right)\left(\lambda_{i+1}-\lambda_{i} +t \right)^{k} \right]^{u} & u=u',\\[8mm]
@@ -99,16 +115,16 @@ We won't draw these ``obvious" relations later. The first nontrivial relation co
 \begin{lemma}\label{lem:convolution_product_1}
 For $f \in \Rpt(T_{\dimvec{d}})$, denote $D_i^{u,u'} =\left[\St_{s_{i}}^{u,u'}\right]^{G_{\dimvec{d}}}$, $f^{u}=f \cdot \left[ \RRep_{\dimvec{d}}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} (\St_{\dimvec{d}})$, we have
 $$D_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u}.$$
-Similarly, for the $G_{\dimvec{d}}$-equivariant cohomology theory, we have
+Similarly, for the $G_{\dimvec{d}}$-equivariant cohomology, we have
 $$\partial_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar \partial_i^{u,u'} +  \delta_{u,u'}\left[\left(s_i f-f\right)   \left(\lambda_{i+1}-\lambda_{i}\right)^{k-1} \right]^{u}.$$
 In the formula, $k$ stands for the number of arrows from the vertex associated to $v_{u(i+1)}$ to the vertex associated to $v_{u(i)}$.
 \end{lemma}
 \begin{proof}
 By Proposition \ref{prop:generators}, we only need to show, for any $g \in \Rpt(T_{\dimvec{d}})$,
 $$D_i^{u,u'} \fakestar f^{u'} \star g^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} \star g^{u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} \star g^{u'}.$$
-Now we apply Theorem \ref{thm:Demazure_operator_1}. The same argument works for equivariant cohomology theory.
+Now we apply Theorem \ref{thm:Demazure_operator_1}. The same argument works for equivariant cohomology.
 \end{proof}
-Lemma \ref{lem:convolution_product_1} explains ``what happens when a point walk through a crossing". The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR-algebra}. The relations of the KLR-algebra can be found in \cite[Definition 3.2.2]{seiffarth2017klr}, and we will only show the relations of $K$-theoretical version.
+Lemma \ref{lem:convolution_product_1} explains ``what happens when a point walk through a crossing". The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR algebra}. The relations of the KLR algebra can be found in \cite[Definition 3.2.2]{seiffarth2017klr}, and we will only show the relations of $K$-theoretical version.
 \begin{warning}
 In the following examples, $\fakestar$ is often omitted for simplicity.
 \end{warning}
@@ -204,7 +220,7 @@ Now for the $G_{\dimvec{d}} \times \mathbb{C}^{\times}$-action. We have analog o
 \begin{lemma}\label{lem:convolution_product_2}
 For $f \in \Rpt(T_{\dimvec{d}} \times \mathbb{C}^{\times})$, denote $D_i^{u,u'} =\left[\St_{s_{i}}^{u,u'}\right]^{G_{\dimvec{d}}\times \mathbb{C}^{\times}}$, $f^{u}=f \cdot \left[ \RRep_{\dimvec{d}}(Q) \right]^{G_{\dimvec{d}}\times \mathbb{C}^{\times}} \in K^{G_{\dimvec{d}}\times \mathbb{C}^{\times}} (\St_{\dimvec{d}})$, we have
 $$D_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} +  \delta_{u,u'}\left[\left(f-s_i f\right) \raisebox{-1mm}{$\displaystyle\frac{\left( 1-\frac{e_{i+1}}{e_{i}} q\right)^{k}}{ 1-\frac{e_{i}}{e_{i+1}}}$}\right]^{u}.$$
-Similarly, for the $(G_{\dimvec{d}}\times \mathbb{C}^{\times})$-equivariant cohomology theory, we have
+Similarly, for the $(G_{\dimvec{d}}\times \mathbb{C}^{\times})$-equivariant cohomology, we have
 $$\partial_i^{u,u'} \fakestar f^{u'}= (s_i f)^{u} \fakestar \partial_i^{u,u'} +  \delta_{u,u'}\left[\left(f-s_i f\right) 
 \frac{\left(\lambda_{i+1}-\lambda_{i}+t\right)^{k}}{\lambda_{i}-\lambda_{i+1}}   \right]^{u}.$$
 In the formula, $k$ stands for the number of arrows from the vertex associated to $v_{u(i+1)}$ to the vertex associated to $v_{u(i)}$.
@@ -228,7 +244,7 @@ Readers are welcomed to write a complete set of relations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Atiyah--Segal completion theorem}\label{sec:AScompletion}
 
-Different cohomology theories are connected in a incredible way. In this section, we describe the Atiyah--Segal completion theorem, which connect $G$-equivariant $K$-theory with $G$-equivariant cohomology theory. Roughly speaking, they are isomorphic after completion (and base change to $\mathbb{Q}$).
+Different cohomology theories are connected in a incredible way. In this section, we describe the Atiyah--Segal completion theorem, which connect $G$-equivariant $K$-theory with $G$-equivariant cohomology. Roughly speaking, they are isomorphic after completion (and base change to $\mathbb{Q}$).
 
 For an algebraic group $G$, denote
 $$I:= \ker \left(\Rpt(G) \longrightarrow \Rpt(\Id) \right) \qquad J:= \ker \left(\Spt(G) \longrightarrow \Spt(\Id) \right)$$

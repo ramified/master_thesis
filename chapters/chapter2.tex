@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{$K$-theory and cohomology theory}\label{chap:Ktheory}
+\chapter{$K$-theory and cohomology}\label{chap:Ktheory}
 
 
 
@@ -514,7 +514,7 @@ $$G \times^H X \longrightarrow G/H \qquad (g,x) \longrightarrow gH$$
 which realize $G \times^H X$ as an $X$-bundle over $G/H$. In particular, for $X=\pt$, we get an isomorphism of $G$-varieties
 $$G \times^H \pt \stackrel{\sim}{\longrightarrow} G/H.$$
 
-The balanced product is not only used for the induction isomorphism, but also used in the definition of equivariant cohomology theory (see Definition \ref{def:equivariant_cohomology}) and description of some typical varieties (see the description of $\overline{\OOmcell}_s$ in  \ref{subsec:product_of_F}).
+The balanced product is not only used for the induction isomorphism, but also used in the definition of equivariant cohomology  (see Definition \ref{def:equivariant_cohomology}) and description of some typical varieties (see the description of $\overline{\OOmcell}_s$ in  \ref{subsec:product_of_F}).
 
 \begin{eg}\label{eg:balanced_product_FF}
 In the setting \ref{set:initial_case}, the $\GL_n$-equivariant map
@@ -586,15 +586,15 @@ In the proof of the reduction isomorphism, the induction isomorphism and the Tho
 
 This isomorphism allows us to identify $B$-equivariant $K$-theory and $T$-equivariant $K$-theory. In particular, $\Rpt(B) \cong \Rpt(T)$ as $\mathbb{Z}$-algebras.
 
-\section{Equivariant cohomology theory}
-The theory of equivariant cohomology theory is completely parallel with the theory of equivariant $K$-theory. We shortly sketch the definition and refer readers to see \cite[Chapter 2]{przezdziecki2015geometric} for details (like the definition of universal principle bundle $\EGG G \longrightarrow \BGG G$)
+\section{Equivariant cohomology}
+The theory of equivariant cohomology is completely parallel with the theory of equivariant $K$-theory. We shortly sketch the definition and refer readers to see \cite[Chapter 2]{przezdziecki2015geometric} for details (like the definition of universal principle bundle $\EGG G \longrightarrow \BGG G$)
 
 Nearly all the abstract results for $K$-theory have a corresponding cohomology theory version in \cite{przezdziecki2015geometric}. We will mention about the difference of Euler class in Section \ref{sec:euler_class}, compute some examples in Section \ref{sec:diagram}, and compare these two theories in Section \ref{sec:AScompletion}.
 
 \subsection{$G$-equivariant cohomology $H_G^* (X; \mathbb{Q})$}
 
 \begin{defn}[{$G$-equivariant cohomology, \cite[Definition 2.7]{przezdziecki2015geometric}}]\label{def:equivariant_cohomology}
-For a $G$-variety $X$, the $G$-equivariant cohomology theory is defined as the (singular) cohomology ring of the balanced product space $\EGG G \times^G X$, i.e.,
+For a $G$-variety $X$, the $G$-equivariant cohomology is defined as the (singular) cohomology ring of the balanced product space $\EGG G \times^G X$, i.e.,
 $$H_G^* (X; \mathbb{Q}):= H^* \!\left(\EGG G \times^G X; \mathbb{Q}\right).$$
 Specifically, for a point $\{\pt\}=\Spec \mathbb{C}$ with trivial $G$-action, denote
 $$\Spt(G):= H_G^* \big(\{\pt\}; \mathbb{Q}\big)=H^* (\BGG G; \mathbb{Q})$$
@@ -641,7 +641,7 @@ We also have the Chevalley restriction theorem in the version of cohomology theo
 $$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]^{S_n}.$$
 \end{eg}
 
-See \cite[2.3.2]{przezdziecki2015geometric} for the functionalities of equivariant cohomology. Thom isomorphism, induction isomorphism and reduction isomorphism are still true in the equivariant cohomology theory case. In particular, we have
+See \cite[2.3.2]{przezdziecki2015geometric} for the functionalities of equivariant cohomology. Thom isomorphism, induction isomorphism and reduction isomorphism are still true in the equivariant cohomology  case. In particular, we have
 $$H_{\GL_n}^*(\mathcal{F}) \cong H_B^*(\pt) \cong H_T^*(\pt) \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]$$
 as an $\Spt(\GL_n)$-module. $H_{\GL_n}^*(\mathcal{F})$ is a free $\Spt(\GL_n)$-module with rank $\#W=n!$.
 
