@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 JAN 2023 18:01
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 JAN 2023 01:30
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1830,23 +1830,29 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 
 (chapters/introduction.tex
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 18.
-
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 18.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 7.
 
 
-Underfull \vbox (badness 1817) has occurred while \output is active []
+LaTeX Warning: Marginpar on page 3 moved.
 
- [3
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+[3
 
 
 
 ]
-[4] [5]) [6]
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 24.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 24.
+
+[4]) [5] [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 261.
@@ -1927,6 +1933,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
+ [16]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1943,11 +1950,10 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (45.23189pt too wide) detected at line 634
+Overfull \hbox (45.23189pt too wide) detected at line 636
 [][]
  []
 
-[16]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1990,7 +1996,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 File: figures/table/table_basic_information.pdf Graphic file (type pdf)
 <use figures/table/table_basic_information.pdf>
- [17] [18]
+[17] [18] [19]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2001,8 +2007,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [19]
-LaTeX Font Info:    Try loading font information for U+euf on input line 1016.
+LaTeX Font Info:    Try loading font information for U+euf on input line 1018.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
@@ -2021,7 +2026,7 @@ File: figures/comm_diagram/incidence_variety_1.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_2.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_2.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1228--1233
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1230--1235
 [][] [] 
  []
 
@@ -2031,36 +2036,41 @@ File: figures/comm_diagram/incidence_variety_3.pdf Graphic file (type pdf)
 File: figures/comm_diagram/incidence_variety_4.pdf Graphic file (type pdf)
 <use figures/comm_diagram/incidence_variety_4.pdf>
 
-Overfull \hbox (2.43091pt too wide) in paragraph at lines 1271--1276
+Overfull \hbox (2.43091pt too wide) in paragraph at lines 1273--1278
 [][] [] 
  []
 
+[25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
+(hyperref)                removing `math shift' on input line 1292.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
+(hyperref)                removing `math shift' on input line 1292.
 
-[25] [26]
+[26]
 File: figures/table/table_1.pdf Graphic file (type pdf)
 <use figures/table/table_1.pdf>
 File: figures/table/table_2.pdf Graphic file (type pdf)
 <use figures/table/table_2.pdf>
 
 
-LaTeX Warning: Float too large for page by 98.40668pt on input line 1389.
+LaTeX Warning: Float too large for page by 98.40668pt on input line 1391.
 
-[27] [28]
+[27] [28] [29]
 File: figures/table/table_orbit.pdf Graphic file (type pdf)
 <use figures/table/table_orbit.pdf>
- [29] [30] [31]
-Overfull \hbox (44.07256pt too wide) detected at line 1589
+
+Underfull \vbox (badness 4193) has occurred while \output is active []
+
+ [30]
+[31]
+Overfull \hbox (44.07256pt too wide) detected at line 1591
 []
  []
 
-[32]) [33]
+[32] [33]) [34]
 \openout2 = `chapters/chapter2.aux'.
 
  (chapters/chapter2.tex
@@ -2080,37 +2090,37 @@ Overfull \hbox (0.72012pt too wide) in paragraph at lines 32--33
 TU/lmr/m/n/10.95 -equivariant
  []
 
-[34
+[35
 
 
 
-] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]) [46]
+] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]) [47]
 \openout2 = `chapters/chapter3.aux'.
 
 
 (chapters/chapter3.tex
 Chapter 3.
-[47
+[48
 
 
 
-] [48]
+] [49]
 File: figures/table/table_module_initial.pdf Graphic file (type pdf)
 <use figures/table/table_module_initial.pdf>
 File: figures/table/table_module_relative.pdf Graphic file (type pdf)
 <use figures/table/table_module_relative.pdf>
 File: figures/table/table_module_absolute.pdf Graphic file (type pdf)
 <use figures/table/table_module_absolute.pdf>
- [49] [50]) [51]
+ [50] [51]) [52]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
 Chapter 4.
-[52
+[53
 
 
 
-] [53] [54] [55] [56]) [57]
+] [54] [55] [56] [57]) [58]
 \openout2 = `chapters/chapter5.aux'.
 
  (chapters/chapter5.tex
@@ -2125,7 +2135,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[58
+[59
 
 
 
@@ -2136,12 +2146,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
 File: figures/table/figure_convolution.pdf Graphic file (type pdf)
 <use figures/table/figure_convolution.pdf>
-[59] [60]
+[60] [61]
 Overfull \hbox (25.45673pt too wide) detected at line 202
 []
  []
 
-[61]
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
@@ -2151,21 +2161,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-[62] [63] [64]
+[63] [64] [65]
 Overfull \hbox (1.4011pt too wide) in paragraph at lines 355--357
 \TU/lmr/m/n/10.95 Later, every expression before $[]$ should be viewed as an ex
 pression in $\U/msb/m/n/10.95 Z  []$\TU/lmr/m/n/10.95 . 
  []
 
-[65] [66]
+[66] [67]
 File: figures/table/table_euler_class.pdf Graphic file (type pdf)
 <use figures/table/table_euler_class.pdf>
-) [67]
+) [68]
 \openout2 = `chapters/chapter6.aux'.
 
  (chapters/chapter6.tex
 Chapter 6.
-[68
+[69
 
 
 
@@ -2176,22 +2186,22 @@ Overfull \hbox (23.3304pt too wide) detected at line 42
 
 File: figures/table/table_euler_class_q.pdf Graphic file (type pdf)
 <use figures/table/table_euler_class_q.pdf>
-[69]
+[70]
 File: figures/strands/generators.pdf Graphic file (type pdf)
 <use figures/strands/generators.pdf>
 File: figures/strands/glue_vertically.pdf Graphic file (type pdf)
 <use figures/strands/glue_vertically.pdf>
 File: figures/strands/clear_relations.pdf Graphic file (type pdf)
 <use figures/strands/clear_relations.pdf>
- [70] [71]
+ [71] [72]
 File: figures/strands/relations_1.pdf Graphic file (type pdf)
 <use figures/strands/relations_1.pdf>
- [72]
+ [73]
 File: figures/strands/relations_2.pdf Graphic file (type pdf)
 <use figures/strands/relations_2.pdf>
 File: figures/strands/relations_3.pdf Graphic file (type pdf)
 <use figures/strands/relations_3.pdf>
- [73]
+ [74]
 Overfull \hbox (22.14848pt too wide) in paragraph at lines 205--206
 [][]\TU/lmr/bx/n/10.95 Lemma 6.2.3. []\TU/lmr/m/it/10.95 For $\OML/cmm/m/it/10.
 95 f \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T[] \OMS/c
@@ -2208,10 +2218,10 @@ H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 /m/n/10.95 ] [] \OML/cmm/m/it/10.95 :
  []
 
-[74] [75]) [76]
+[75] [76]) [77]
 \openout2 = `chapters/chapter7.aux'.
 
- (chapters/chapter7.tex) [77
+ (chapters/chapter7.tex) [78
 
 
 
@@ -2221,7 +2231,7 @@ H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 
  (chapters/affinepaving.tex
 Chapter 7.
-[78
+[79
 
 
 ]
@@ -2237,12 +2247,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 98.
 
-[79]
+[80]
 File: figures/affine_paving/bigpic.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic.pdf>
 File: figures/affine_paving/bigpic2.pdf Graphic file (type pdf)
 <use figures/affine_paving/bigpic2.pdf>
- [80] [81] [82]
+ [81] [82] [83]
 Underfull \hbox (badness 10000) in paragraph at lines 280--283
 
  []
@@ -2257,13 +2267,13 @@ Overfull \hbox (20.1396pt too wide) in paragraph at lines 335--337
  $[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 W; T\OT1/cmr/m/n/10.95 ) =
  []
 
-[83]
+[84]
 Overfull \hbox (9.09087pt too wide) in paragraph at lines 369--370
 \TU/lmr/m/n/10.95 composable representation, irreducible morphism, Auslander–Re
 iten translation, Auslander–
  []
 
-[84]
+[85]
 Overfull \hbox (7.1089pt too wide) in paragraph at lines 393--508
  [][] 
  []
@@ -2275,7 +2285,7 @@ Overfull \hbox (9.12483pt too wide) in paragraph at lines 514--515
 ions $\OML/cmm/m/it/10.95 T; T[] \OMS/cmsy/m/n/10.95 2
  []
 
-[85]
+[86]
 Overfull \hbox (22.33162pt too wide) in paragraph at lines 556--558
 \TU/lmr/m/n/10.95 which is functorial for any $\OML/cmm/m/it/10.95 T; T[] \OMS/
 cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95 
@@ -2284,9 +2294,9 @@ cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R\OT1/cmr/m/n/10.95
 cmr/m/n/10.95 ) =
  []
 
-[86] [87] [88] [89]
+[87] [88] [89] [90]
 Chapter 8.
-[90
+[91
 
 ]
 Overfull \hbox (0.1651pt too wide) detected at line 802
@@ -2301,7 +2311,7 @@ e fact that $[][]\OT1/cmr/m/n/10.95 (^^H(\OML/cmm/m/it/10.95 S\OT1/cmr/m/n/10.9
 /m/n/10.95 )) =
  []
 
-[91]
+[92]
 Overfull \hbox (17.63919pt too wide) detected at line 847
  [] \OMS/cmsy/m/n/10.95 ! [][]   [] ! [][]   [] ^^H  [][]   [] ! [][]   [] ! []
   \OML/cmm/m/it/10.95 :
@@ -2314,7 +2324,7 @@ Overfull \hbox (5.47496pt too wide) in paragraph at lines 851--854
 m/m/it/10.95 ^^\$ \TU/lmr/m/it/10.95 be the Auslander–
  []
 
-[92]
+[93]
 Overfull \hbox (19.55673pt too wide) in paragraph at lines 907--908
 [][]\TU/lmr/bx/n/10.95 Lemma 8.1.13. []\TU/lmr/m/it/10.95 For $\OT1/cmr/m/n/10.
 95 (\OML/cmm/m/it/10.95 V; W\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 [] \OT1/
@@ -2330,17 +2340,17 @@ Overfull \hbox (0.1651pt too wide) detected at line 938
 []
  []
 
-[93]
+[94]
 File: figures/affine_paving/E6.pdf Graphic file (type pdf)
 <use figures/affine_paving/E6.pdf>
 File: figures/affine_paving/E7.pdf Graphic file (type pdf)
 <use figures/affine_paving/E7.pdf>
 File: figures/affine_paving/E8.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8.pdf>
- [94] [95]
+ [95] [96]
 File: figures/affine_paving/flowchart.pdf Graphic file (type pdf)
 <use figures/affine_paving/flowchart.pdf>
- [96]
+ [97]
 File: figures/affine_paving/preferredimage.pdf Graphic file (type pdf)
 <use figures/affine_paving/preferredimage.pdf>
 File: figures/affine_paving/E6easy.pdf Graphic file (type pdf)
@@ -2353,7 +2363,7 @@ File: figures/affine_paving/E8hard.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8hard.pdf>
 File: figures/affine_paving/dimension_Ext.pdf Graphic file (type pdf)
 <use figures/affine_paving/dimension_Ext.pdf>
- [97] [98]
+ [98] [99]
 File: figures/affine_paving/E8graypic1.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic1.pdf>
 File: figures/affine_paving/E8graypic2.pdf Graphic file (type pdf)
@@ -2362,11 +2372,13 @@ File: figures/affine_paving/E8graypic3.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic3.pdf>
 File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic4.pdf>
- [99] [100] [101] [102]) [103]
-(master_thesis_Xiaoxiang_Zhou.bbl [104
+ [100] [101] [102] [103]) [104]
+(master_thesis_Xiaoxiang_Zhou.bbl
+Missing character: There is no 𝐾 in font [lmroman10-regular]:mapping=tex-text;!
+ [105
 
 
-]) [105]
+]) [106]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
 
@@ -2382,12 +2394,12 @@ anged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
- 45042 strings out of 427748
- 862960 string characters out of 3150981
- 981221 words of memory out of 3000000
- 48299 multiletter control sequences out of 15000+200000
+ 45117 strings out of 427748
+ 864664 string characters out of 3150981
+ 997396 words of memory out of 3000000
+ 48374 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (107 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (108 pages).

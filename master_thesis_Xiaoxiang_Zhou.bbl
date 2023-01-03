@@ -55,6 +55,17 @@ Giovanni~Cerulli Irelli, Francesco Esposito, Hans Franzen, and Markus Reineke.
 \newblock Cell decompositions and algebraicity of cohomology for quiver
   {G}rassmannians, 2019.
 
+\bibitem{https://doi.org/10.48550/arxiv.0803.4121}
+Mikhail Khovanov and Aaron~D. Lauda.
+\newblock A diagrammatic approach to categorification of quantum groups i.
+\newblock 2008.
+
+\bibitem{lusztig1985equivariant}
+George Lusztig.
+\newblock Equivariant 𝐾-theory and representations of {H}ecke algebras.
+\newblock {\em Proceedings of the American Mathematical Society},
+  94(2):337--342, 1985.
+
 \bibitem{maksimau2019flag}
 Ruslan Maksimau.
 \newblock Flag versions of quiver {G}rassmannians for {D}ynkin quivers have no
@@ -65,6 +76,10 @@ Tomasz Przezdziecki.
 \newblock Geometric approach to {KLR} algebras and their representation theory,
   2015.
 
+\bibitem{https://doi.org/10.48550/arxiv.0812.5023}
+Raphael Rouquier.
+\newblock 2-{K}ac-{M}oody algebras, 2008.
+
 \bibitem{sauter2015cell}
 Julia Sauter.
 \newblock Cell decompositions of quiver flag varieties for nilpotent
@@ -74,6 +89,16 @@ Julia Sauter.
 \bibitem{seiffarth2017klr}
 Florian Seiffarth.
 \newblock On {KLR} and quiver {S}chur algebras, 2017.
+
+\bibitem{springer1978construction}
+Tonny~Albert Springer.
+\newblock A construction of representations of {W}eyl groups.
+\newblock {\em Inventiones mathematicae}, 44(3):279--293, 1978.
+
+\bibitem{steinberg1976desingularization}
+Robert Steinberg.
+\newblock On the desingularization of the unipotent variety.
+\newblock {\em Inventiones mathematicae}, 36(1):209--224, 1976.
 
 \bibitem{thomason1993k}
 Robert~W Thomason.
