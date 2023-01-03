@@ -9,9 +9,9 @@ The construction of the convolution product is similar to a Fourier-Mukai transf
 For the convenience of reading, we divide the whole process into three steps.
 \paragraph*{\underline{Step1.}}Setting.\\[-3mm]
 
-Let $M_1$, $M_2$, $M_3$ be smooth quasi-projective $G$-varieties. For convenience, denote
+Let $M_1$, $M_2$, $M_3$ be smooth quasi-projective $G$-varieties. For convenience, let
 $$M_{ij}:=M_i \times M_j \qquad M_{123}=M_1 \times M_2 \times M_3$$
-and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.
+and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ be projections onto some factors, as follows.
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
 \[\begin{tikzcd}[column sep={1.5cm,between origins}]
 	&& {M_{123}} &&&[2cm]\\
@@ -33,17 +33,17 @@ and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some fa
 
 \paragraph*{\underline{Step2.}}Convolution product on the level of varieties.\\[-3mm]
 
-For closed $G$-subvarieties $Z_{12} \subseteq M_{12}$, $Z_{23} \subseteq M_{23}$, denote
+For closed $G$-subvarieties $Z_{12} \subseteq M_{12}$, $Z_{23} \subseteq M_{23}$, let
 $$Z_{123}:= p_{12}^{-1}(Z_{12}) \cap p_{23}^{-1}(Z_{23}) \subseteq M_{123}$$
-as the intersection of two preimages. The \textbf{convolution product} of $Z_{12}$ and $Z_{23}$ is defined as
+be the intersection of two preimages. The \textbf{convolution product} of $Z_{12}$ and $Z_{23}$ is defined as
 $$Z_{12} \circ Z_{23} := p_{13}(Z_{123}) \subseteq M_{13}$$
 which is a closed $G$-subvariety of $M_{13}$.
 \paragraph*{\underline{Step3.}}Convolution product on the level of $K$-theories.\\[-3mm]
 
-Denote 
+Let 
 $$\pi_{12}:=p_{12}\big|_{p_{12}^{-1}(Z_{12})} \qquad \pi_{23}:=p_{23}\big|_{p_{23}^{-1}(Z_{23})} \qquad
 \pi_{13}:=p_{13}\big|_{Z_{123}}$$
-as corresponding morphisms restricted to $p_{12}^{-1}(Z_{12})$, $p_{23}^{-1}(Z_{23})$ and  $Z_{123}$, respectively. We assume that $\pi_{13}$ is proper, so that we can use proper pushforward in $K$-theory.
+be corresponding morphisms restricted to $p_{12}^{-1}(Z_{12})$, $p_{23}^{-1}(Z_{23})$ and  $Z_{123}$, respectively. We assume that $\pi_{13}$ is proper, so that we can use proper pushforward in $K$-theory.
 
 We define the convolution product by
 $$*: K_0^G(Z_{12}) \times K_0^G(Z_{23}) \longrightarrow K_0^G(Z_{12} \circ Z_{23}) \qquad (\mathcal{F}_{12}, \mathcal{F}_{23}) \longmapsto \mathcal{F}_{12}*\mathcal{F}_{23}$$
@@ -275,7 +275,7 @@ where
 \begin{equation*}
 \begin{aligned}
   &Y=\{y\} \qquad && y=\big( (\rho_0,F_{\ww}),(\rho_0,F_{\ww'}),(\rho_0,F_{\ww''})  \big) & &\in M_{123}  \\ 
-  &Y_{13}=\{y_{13}\} \qquad && y_{13}=\big( (\rho_0,F_{\ww}),(\rho_0,F_{\ww''})  \big) & &\in M_{13}  \\
+  &Y_{13}=\{y_{13}\} \qquad && y_{13}=\big( (\rho_0,F_{\ww}),(\rho_0,F_{\ww''})  \big) & &\in M_{13}.  \\
 \end{aligned}
 \end{equation*}
 Therefore, 

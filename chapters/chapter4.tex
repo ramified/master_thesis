@@ -47,7 +47,7 @@ For example,
 We first state one general theorem, which will be connected with both localization formula and excess intersection formula.
 
 \begin{theorem}[{Excess base change, \cite[Théorème 3.1]{thomason1993k}}]\label{thm:excess_base_change}
-Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$, $\varphi$ are regular embeddings and $f,g$ are of globally finite $\Tor$-dimension. Denote $\mathcal{N}_{\phi}$ and $\mathcal{N}_{\varphi}$ as the normal cone of $\phi$, $\varphi$ respectively, and $\mathcal{T}:=(g^{*}\mathcal{N}_{\varphi})/\mathcal{N}_{\phi}$ as a vector bundle over $W$.
+Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$, $\varphi$ are regular embeddings and $f,g$ are of globally finite $\Tor$-dimension. Define $\mathcal{N}_{\phi}$ and $\mathcal{N}_{\varphi}$ as the normal cone of $\phi$ and $\varphi$, respectively, and $\mathcal{T}:=(g^{*}\mathcal{N}_{\varphi})/\mathcal{N}_{\phi}$ as a vector bundle over $W$.
 \begin{equation}\label{eq:excess_base_change}
 % https://q.uiver.app/?q=WzAsNyxbMSwxLCJXIl0sWzMsMSwiWiJdLFszLDIsIlgiXSxbMSwyLCJZIl0sWzQsMCwiXFxtYXRoY2Fse059X3tcXHZhcnBoaX0iXSxbMiwwLCJnXnsqfVxcbWF0aGNhbHtOfV97XFx2YXJwaGl9Il0sWzAsMCwiXFxtYXRoY2Fse059X3tcXHBoaX0iXSxbMywyLCJmIl0sWzEsMiwiXFx2YXJwaGkiXSxbMCwxLCJnIl0sWzAsMywiXFxwaGkiLDJdLFs0LDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}[row sep={between origins,20mm},column sep={between origins,5mm}]
@@ -84,13 +84,13 @@ By applying Theorem \ref{thm:excess_base_change} to the Cartesian square \eqref{
 \end{equation}
 
 \begin{proposition}[Fake localization formula]
-For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote $i:X^T \longrightarrow X$ and $i_k: \{x_k\} \longrightarrow X$ as embeddings. For any $\beta \in K^T(X^T)$, $\beta_k \in K^T(\{x_k\})$, we have formulas
+For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, let $i:X^T \longrightarrow X$ and $i_k: \{x_k\} \longrightarrow X$ be embeddings. For any $\beta \in K^T(X^T)$, $\beta_k \in K^T(\{x_k\})$, we have formulas
 $$i^*i_* \beta =\eu \left( \bigoplus_k T_{x_k}X \right) \cdot \beta \qquad i_{k}^*i_{k,*} \beta =\eu \left( T_{x_k}X \right) \cdot \beta_k.$$
 
 
 \end{proposition}
 
-This proposition explains some technical details in the localization theorem and localization formula. First, we would like to work on a base ring where Euler classes are invertible, so we denote the curly font as everything in the fraction field.
+This proposition explains some technical details in the localization theorem and localization formula. First, we would like to work on a base ring where Euler classes are invertible, so we use the curly font to indicate everything in the fraction field.
 \begin{equation*}
 \begin{aligned}
   \Rptc(T):=\;& \Frac\!\big(\!\Rpt(T)\big) \qquad & \Kcurl^T(X):=\;& K^T(X) \otimes_{\Rpt(T)}\Rptc(T)  \\ 
@@ -100,7 +100,7 @@ This proposition explains some technical details in the localization theorem and
 
 
 \begin{theorem}[{Localization theorem, \cite[Theorem 10.1]{przezdziecki2015geometric} or \cite[Corollary 5.11.3]{chriss1997representation}}] \label{thm:localization_theorem}
-Let $X$ be a smooth $T$-variety,  $i:X^T \longrightarrow X$ be the embedding. The morphisms $i_*$, $i^*$ are isomorphism after tensored over the fraction field, i.e.,
+Let $X$ be a smooth $T$-variety,  $i:X^T \longrightarrow X$ be the embedding. The morphisms $i_*$, $i^*$ are isomorphisms after tensored over the fraction field, i.e.,
 % https://q.uiver.app/?q=WzAsNixbMSwwLCJcXEtjdXJsXlQoWCkiXSxbMCwwLCJcXEtjdXJsXlQoWF5UKSJdLFsyLDAsIlxcS2N1cmxeVChYXlQpIl0sWzAsMSwiXFxIY3VybF97VH1eeyp9KFheVCkiXSxbMSwxLCJcXEhjdXJsX3tUfV57Kn0oWCkiXSxbMiwxLCJcXEhjdXJsX3tUfV57Kn0oWF5UKSJdLFswLDIsImleKiJdLFszLDQsImlfKiJdLFs0LDUsImleKiJdLFsxLDAsImlfKiJdXQ==
 \[\begin{tikzcd}[row sep=0mm]
 	{\Kcurl^T(X^T)} & {\Kcurl^T(X)} & {\Kcurl^T(X^T)} \\
@@ -116,7 +116,7 @@ are isomorphism as $\mathcal{R}(T)$ or $\mathcal{S}(T)$-modules.
 The genuine localization formula is stated as follows.
 
 \begin{theorem}[{Localization formula, \cite[Theorem 10.2]{przezdziecki2015geometric} or \cite[Proposition 6]{edidin1998localization}}]\label{thm:localization_formula}
-For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, denote by $i_k: \{x_k\} \longrightarrow X$ the embeddings. For any $\alpha \in \Kcurl^T(X)$, we have
+For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, let $i_k: \{x_k\} \longrightarrow X$ be embeddings. For any $\alpha \in \Kcurl^T(X)$, we have
 $$\alpha= \sum_{k=1}^{m} \eta_k \cdot i_{k,*}i_{k}^* \alpha $$
 where $\eta_k:= \left(\!\rule{0mm}{3.5mm} \eu(T_{x_k}X) \right)^{-1} \in \Rptc(T)$.
 
@@ -125,7 +125,7 @@ $$\beta= \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} \beta. $$
 
 \end{theorem}
 
-Let us unravel Theorem \ref{thm:localization_formula} a little bit. For the closed $T$-equivariant subset $Z$ of $Y$, denote $[Z]_X^T \in K^T(X)$, $[Z]_Y^T \in K^T(Y)$, $[x_k]_Y^T \in K^T(Y)$. By the localization theorem, we get
+Let us unravel Theorem \ref{thm:localization_formula} a little bit. By the localization theorem, we get
 \begin{equation*}
 \begin{aligned}\
    [Z]_Y^T=\;& \sum_{k=1}^{m} \eta_k \cdot i'_{k,*}i_{k}^* f_{*} [Z]_Y^T&& \\
@@ -174,7 +174,7 @@ By Theorem \ref{thm:localization_theorem},
 \end{equation*}
 
 \begin{defn}[Shorthand for Euler class]
-For $\ww$, $\ww'$, $x \in \WWd$, denote the Euler class in $\Rpt(T_{\dimvec{d}})$:
+For $\ww$, $\ww'$, $x \in \WWd$, we define Euler classes in $\Rpt(T_{\dimvec{d}})$:
 \begin{equation*}
 \begin{aligned}
   \Lambda_{\ww}:=\;& \eu\left(\mathcal{T}_{\ww}\right) \quad& \Lambda_{\ww}^x:=\;& \eu\left(\mathcal{T}_{\ww}^x\right) \quad& \Lambda_{\ww,\ww'}^x:=\;& \eu\left(\mathcal{T}_{\ww,\ww'}^x \right) \\ 

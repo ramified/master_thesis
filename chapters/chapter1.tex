@@ -15,7 +15,7 @@ In this chapter we fix notation and state properties of various varieties. In pa
 In this section, we introduce the complete flag variety to give a bird's eye view on the whole chapter. We refer readers to the book \cite{brown2018flag} for detailed description of flag varieties, Bruhat order and Bruhat decomposition.
 
 \begin{setting}\label{set:initial_case}
-Fix $n \geqslant 1$, we denote $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ by the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
+Fix $n \geqslant 1$. Let $\GL_n:=\GL_n(\mathbb{C})$, $B$, $T$, $N$, $W$ be the standard Borel subgroup, standard torus, unipotent subgroup and Weyl group, respectively, i.e.,
 {
 \setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
@@ -134,7 +134,7 @@ $$\GL_n \times \mathcal{F} \times \mathcal{F} \longrightarrow \mathcal{F} \times
 Under this action, $\mathcal{F} \times \mathcal{F}$ has a stratification consisting of $\GL_n$-orbits, indexed by the Weyl group:
 $$\GL_n \setminus (\mathcal{F} \times \mathcal{F}) \cong \GL_n \setminus (\GL_n/B \times \GL_n/B) \cong B \setminus \GL_n /B \cong W \quad \text{ as sets.}$$
 
-For $w'\in W$, denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$, then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
+For $w'\in W$, denote $\OOmcell_{w'}:= \GL_n \cdot (F_{\Id}, F_{w'})$. Then $\mathcal{F} \times \mathcal{F}= \sqcup_{w'} \OOmcell_{w'}$. Moreover, by the orbit-stabilizer theorem, we get
 $$\OOmcell_{w'} \cong \GL_n/\left( B \cap w'B(w')^{-1}  \right)$$
 which is an $\mathbb{A}^{l(w')}$-bundle over $\mathcal{F}$.
 % https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG1hdGhiYntBfV57bCh3Jyl9IFxcY29uZyBCL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMCwiXFxHTF9uL1xcbGVmdCggQiBcXGNhcCB3J0IodycpXnstMX0gIFxccmlnaHQpIl0sWzEsMSwiXFxtYXRoY2Fse0Z9PVxcR0xfbi9CXFxoc3BhY2V7NW1tfSJdLFswLDFdLFsxLDJdXQ==
@@ -340,7 +340,7 @@ A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longr
 	\arrow["{W_r}", from=2-1, to=2-2]
 \end{tikzcd}\]
 
-We denote $\rep(Q)$ by the category of representations of $Q$.
+We denote the category of representations of $Q$ by $\rep(Q)$.
 \end{defn}
 \begin{eg}\label{eg:1-loop_quiver}
 A representation of the $1$-loop quiver $L(1)$ is a $2$-tuple
@@ -392,11 +392,10 @@ For the flag we also have the notation of dimension vector.
 \begin{defn}[flag-type dimension vector]\label{def:ftdv}
 For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the (flag-type) dimension vector of $F$ is defined as
 $$\ftdimvec{f}=\big(\!\dimv M_k   \big)_{k \in \{1,\ldots,d\}} \in  \prod_{\substack{i \in v(Q) \\ k \in \{1,\ldots,d\}}} \mathbb{Z}.$$
-$\ftdimvec{f}$ is called a complete flag-type dimension vector if $\ftdimvec{f}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we denote $M_0$ by 0.} $d=\abdimvec{f}$ and
+$\ftdimvec{f}$ is called a complete flag-type dimension vector if $\ftdimvec{f}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we define $M_0:=0$.} $d=\abdimvec{f}$ and
 $$\left| \dimv M_{k+1}/M_k \right|=1 \qquad \text{ for any }k \in \{0,\ldots, d-1  \}.$$
-We would always denote $\ftdimvec{d}$ by a complete dimension vector, and $\ftdimvec{f}$, $\ftdimvec{g}$ by (partial) dimension vectors.
 \end{defn}
-
+From now on, we denote a complete dimension vector by $\ftdimvec{d}$, and  (partial) dimension vectors by $\ftdimvec{f}$, $\ftdimvec{g}$. 
 
 \begin{eg}\label{eg:5-case-0}
 For the quiver $Q: \textcolor{red}{i} \longrightarrow \textcolor{blue}{i'}$, $\dimvec{d}=(3,2)$, the canonical $Q$-vector space of dimension vector $\dimvec{d}$ is
@@ -541,17 +540,18 @@ where $s_i:=(i,i+1) \in S_5$ are simple reflections.
 \begin{defn}[Simple reflections in the Weyl group]
 For $i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\}$, the simple reflection is defined as
 $$s_i:=(i,i+1) \in  S_{\abdimvec{d}}.$$
-We denote
+We define
+$$\Pi=\;  \Big\{ s_i \in S_{\abdimvec{d}} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\}$$
+as the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$, and
 \begin{equation*}
-\begin{aligned}
-  \Pi=\;&  \Big\{ s_i \in S_{\abdimvec{d}} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\} \\ 
+\begin{aligned} 
     \Pi_{\dimvec{d}}=\;&  \Big\{ s_i \in S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\} \\ 
     =\;&\left\{ s_1,\ldots, s_{\abdimvec{d}-1} \right\} \smallsetminus \left\{s_{\dimvec{d}_1},s_{\dimvec{d}_1+\dimvec{d}_2},\ldots,s_{\dimvec{d}_1+\cdots+\dimvec{d}_{k-1}} \right\} \\
 \end{aligned}
 \end{equation*}
-by the set of simple reflections in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively.
+as the set of simple reflections in $W_{\dimvec{d}}$.
 \end{defn}
-We also denote $\ww_{\max} \in \absgp{W}_{\abdimvec{d}}$, $w_{\max} \in W_{\dimvec{d}}$ by the longest elements in $\absgp{W}_{\abdimvec{d}}$ and $W_{\dimvec{d}}$, respectively. See Table \ref{table:Wgp_collected_notation} for a picture of $\ww_{\max}$ and $w_{\max}$.
+We also denote  the longest elements in $\absgp{W}_{\abdimvec{d}}$ and  $W_{\dimvec{d}}$ by $\ww_{\max}$ and $w_{\max}$,  respectively. See Table \ref{table:Wgp_collected_notation} for a picture of $\ww_{\max}$ and $w_{\max}$.
 
 We discuss right cosets $W_{\dimvec{d}}\setminus\absgp{W}_{\abdimvec{d}}$ and minimal length coset representatives now.
 
@@ -647,7 +647,7 @@ This coset corresponds to the partition $\{1,2,3,4,5 \}= \{2,3,5\} \sqcup \{1,4\
 
 \end{eg}
 
-It is easy to see from the diagram that in every coset, there exists an unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. We collect these minimal length coset representatives as a set, and denote it by $\MinWd$.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
+It is easy to see from the diagram that in every coset, there exists a unique element $u \in \absgp{W}_{\abdimvec{d}}$ of minimal length. Let $\MinWd$ be the collection of these minimal  length coset representatives.\footnote{In some references $\MinWd$ is also denoted by $\Shuffled$, since those elements can be thought as ways off riffle shuffling several words together.}
 
 \begin{proposition}
 For any $\ww \in \absgp{W}_{\abdimvec{d}}$, there exists unique $w \in \Wd$, $u \in \MinWd$ such that $\ww=wu$. 
@@ -1147,7 +1147,7 @@ are products of usual flag varieties.
 
 We need to simplify our notation of flags.
 \begin{defn}[Coordinate flags and related flags]\label{def:special_flags}
-For a basis $\{x_1, \ldots ,x_{\abdimvec{d}} \}$, denote the flag
+For a basis $\{x_1, \ldots ,x_{\abdimvec{d}} \}$, define the flag
 $$F_{\{x_1, \ldots ,x_{\abdimvec{d}} \}} : 0 \subseteq \left<x_1 \right> \subseteq \left<x_1,x_2 \right>\subseteq \cdots \subseteq  \left<x_1,\ldots x_{\abdimvec{d}} \right>=V.$$
 \end{defn}
 For $g\in \absgp{G}_{\abdimvec{d}}$, $\ww \in \WWd$, define
@@ -1255,7 +1255,7 @@ $\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence var
 \cong\;& \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}
 \end{aligned}
 \end{equation*} 
-For that reason, we denote $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$ by natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
+For that reason, we define $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d},\ftdimvec{d}'}$, $\mu_{\dimvec{d},\dimvec{d}}$, $\pi_{\dimvec{d},\dimvec{d}}$  as natural morphisms from $\St_{\ftdimvec{d},\ftdimvec{d}'}$, $\St_{\dimvec{d}}$ to $\Rep_{\dimvec{d}}(Q)$ or product of flag varieties, as follows:
 
 	\begin{figure}[ht]
 		\centering
@@ -1363,7 +1363,7 @@ $$\mathcal{F}_{\dimvec{d}}= \bigsqcup_{\ww} \Ocell_{\ww} \qquad \mathcal{F}_{\di
 
 
 
-We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'u'=\tilde{w}\tilde{u}$ for $\tilde{w}' \in \Wd$, $\tilde{u} \in \MinWd$, then
+We still need to care about symbols. For $\ww=wu$, $\ww'=w'u'$, denote $uw'u'$ by $\tilde{w}\tilde{u}$ for some unique $\tilde{w} \in \Wd$, $\tilde{u} \in \MinWd$, then
 $$\underline{F}_{\ww,\ww'}= \left( F_{\ww}, F_{\ww\ww'}  \right)= \left( F_{wu}, F_{wuw'u'}  \right)= \left( F_{wu}, F_{w\tilde{w}\tilde{u}}  \right) \in \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}}.$$
 This incompatibility comes from our twisted $G_{\dimvec{d}} \times G_{\dimvec{d}}$-actions. In particular, denote
 $$\OOcell_{\ww'}^{u}:= G_{\dimvec{d}} \cdot \underline{F}_{u,\ww'}\subseteq \mathcal{F}_{u} \times \mathcal{F}_{\tilde{u}},$$
@@ -1413,7 +1413,7 @@ We have given every orbit a name, and other spaces are finite union of these orb
 Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
 
 \begin{defn}[Stratifications of incidence varieties]
-For $\ww=wu$, $\ww'=w'u' \in \WWd$, denote $uwu' =\tilde{w}\tilde{u}$, $\ftdimvec{d}=\Wd u$, $\ftdimvec{d}'=\Wd u'$, $\widetilde{\ftdimvec{d}}=\Wd \tilde{u}$, we define
+For $\ww=wu$, $\ww'=w'u' \in \WWd$, denote $\tilde{w}\tilde{u}=uwu' $, $\ftdimvec{d}=\Wd u$, $\ftdimvec{d}'=\Wd u'$, $\widetilde{\ftdimvec{d}}=\Wd \tilde{u}$. We define
 
 \begin{align*}
   \preimage{\Omcell}_{w}^{u}:=\;& \pi_{\ftdimvec{d}}^{-1}(\Omcell_{w}^{u})&& \subseteq \RRep_{\ftdimvec{d}}(Q) &\preimage{\Ocell}_{\ww}:=\;& \pi_{\dimvec{d}}^{-1}(\Ocell_{\ww})\hspace{-7mm}&& \subseteq \RRep_{\dimvec{d}}(Q)\\ 
@@ -1596,7 +1596,7 @@ Notice that, each $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit of $\mathcal{F}_{
 The tangent space of $T$-fixed points will be used in Chapter \ref{chap:localization}, so we fix symbols of them and compute some of them as Lie algebras.\footnote{In algebraic geometry, we can define the tangent space even at singular points, see \cite[12.1]{vakil2017rising}.}
 
 \begin{defn}[Tangent space of $T$-fixed points]
-For $\ww,\ww',x \in \WWd$, we denote the following tangent spaces:
+For $\ww,\ww',x \in \WWd$, we define the following tangent spaces:
 \begin{equation*}
 \begin{aligned}
   \mathcal{T}_{\ww}:=\;& T_{F_{\ww}}\mathcal{F}_{\dimvec{d}} \quad& \mathcal{T}_{\ww}^x:=\;& T_{F_{\ww}}\overline{\Ocell}_x \quad& \mathcal{T}_{\ww,\ww'}^x:=\;& T_{F_{\ww,\ww'}}\overline{\OOcell}_x  \\ 

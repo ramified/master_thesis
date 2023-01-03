@@ -4,7 +4,7 @@ In this chapter, we state the cellular fibration theorem \ref{thm:cellular_fibra
 \section{Statement}
 We first state one general theorem, and then apply it repeatly to get the cellular fibration theorem.
 \begin{theorem}[{Glueing theorem, \cite[Lemma 5.5.1(a)]{chriss1997representation}}]\label{thm:glueing_theorem}
-Suppose the triple $(X,Y,\pi)$ satisfies assumption \eqref{eq:assumption2}. For a $G$-equivariant closed embedding $i:Z \hookrightarrow Y$, denote $U:=Y \smallsetminus Z$, and $j:U \hookrightarrow Y$ as the open immersion, as follows.
+Suppose the triple $(X,Y,\pi)$ satisfies assumption \eqref{eq:assumption2}. For a $G$-equivariant closed embedding $i:Z \hookrightarrow Y$, define $U:=Y \smallsetminus Z$, and $j:U \hookrightarrow Y$ as the open immersion, as follows.
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJaIl0sWzEsMCwiWSJdLFsyLDAsIlUiXSxbMSwxLCJYIl0sWzAsMSwiaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzEsMywiXFxwaSJdXQ==
 \[\begin{tikzcd}
 	Z & Y & U \\
@@ -68,7 +68,7 @@ Suppose a $G$-equivariant morphism $\pi: E \longrightarrow X$ has a cellular fib
 $$\varnothing =E_0 \subseteq E_1 \subseteq \cdots \subseteq E_k=E$$
 and $K^G(X)$ is a free $\Rpt(G)$-module with basis $\{y_1,\ldots,y_m \}$. 
 
-For $j \in \{1,\ldots,k \}$, denote $U_j:=E_j \setminus E_{j-1}$, $\overline{U}_j$ as the closure of $U_j$ in $E_j$, $\iota_{\overline{U}_j}$ as $\overline{U}_j$ embedded in $E$,  $\pi_{\overline{U}_j}:= \pi\big|_{\overline{U}_j}=\pi \circ \iota$, as follows.
+For $j \in \{1,\ldots,k \}$, let $U_j:=E_j \setminus E_{j-1}$, $\overline{U}_j$ denotes the closure of $U_j$ in $E_j$, $\iota_{\overline{U}_j}$ be the embedding of  $\overline{U}_j$ in $E$,  $\pi_{\overline{U}_j}:= \pi\big|_{\overline{U}_j}=\pi \circ \iota$, as follows.
 % https://q.uiver.app/?q=WzAsMyxbMCwwLCJcXG92ZXJsaW5le1V9X2oiXSxbMSwwLCJFIl0sWzAsMSwiWCJdLFsxLDIsIlxccGkiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCJcXHBpXFxiaWd8X3tcXG92ZXJsaW5le1V9X2p9IiwyXSxbMCwxLCJcXGlvdGFfe1xcb3ZlcmxpbmV7VX1fan0iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
 \[\begin{tikzcd}
 	{\overline{U}_j} & E \\
@@ -97,7 +97,7 @@ Before we really start working, let us make a shorthand for the basis.
   \vspace{5mm}
 \begin{defn}
 Let $\iota_Y: Y \longrightarrow X$ be a closed $G$-equivariant embedding, $\pi_Y:Y \longrightarrow \pt$ be the projection map. Denote
-$$[Y]^G:= \iota_{Y,*}\pi_Y^* 1_{\Rpt(G)} \in K^G(X).$$
+$$[Y]_X^G:= \iota_{Y,*}\pi_Y^* 1_{\Rpt(G)} \in K^G(X).$$
 
 \end{defn}
   \end{minipage}  
@@ -121,7 +121,7 @@ $$[Y]^G:= \iota_{Y,*}\pi_Y^* 1_{\Rpt(G)} \in K^G(X).$$
       \end{minipage}
         
 \begin{warning}
-The symbol $[Y]^G$ (weakly) depends on $X$, and we don't want to mention $X$ all the time. In practice, $Y$ will be the closure of some $U_i$ for the stratification $X=\sqcup_i U_i$, so we can read $X$ from the symbol in the bracket. In case $X$ is not clear from the context, we write $[Y]_{X}^G$ to emphasize $X$.
+The symbol $[Y]_X^G$ (weakly) depends on $X$, and we don't want to mention $X$ all the time. In practice, $Y$ will be the closure of some $U_i$ for the stratification $X=\sqcup_i U_i$, so we can read $X$ from the symbol in the bracket. 
 \end{warning}
 
 Table \ref{table:module_initial} to \ref{table:module_absolute} conclude the results in this section.

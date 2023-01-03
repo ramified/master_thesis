@@ -14,14 +14,11 @@ The main reference for the $K$-theory is \cite[Chapter 5]{chriss1997representati
 Throughout abstract results of $K$-theory, we use the following notation:
 \begin{itemize}
 \setlength\itemsep{-2mm}
-\item $G$ stands for a linear algebraic group, i.e., a closed subgroup of $\GL_n(\mathbb{C})$.\footnote{The closed embedding $G \hookrightarrow \GL_n(\mathbb{C})$ is not considered as the data of $G$.} Denote
-$m: G \times G \longrightarrow G$
-as the multiplication map of $G$.
+\item $G$ stands for a linear algebraic group, i.e., a closed subgroup of $\GL_n(\mathbb{C})$.\footnote{The closed embedding $G \hookrightarrow \GL_n(\mathbb{C})$ is not considered as the data of $G$.} Let $m: G \times G \longrightarrow G$ denote
+the multiplication map of $G$.
 \item $X$ is a variety over $\mathbb{C}$, i.e., a reduced, separated scheme of finite type over $\mathbb{C}$. We assume $X$ to be quasi-projective.
 \item 
-Usually, $X$ is equipped with an algebraic $G$-action (which is compatible with the variety structure of $G$ and $X$), and we say that $X$ is a $G$-variety. In that case, we will denote 
-$\alpha: G \times X \longrightarrow X$
-as the $G$-action map.
+Usually, $X$ is equipped with an algebraic $G$-action (which is compatible with the variety structure of $G$ and $X$), and we say that $X$ is a $G$-variety. In that case, let $\alpha: G \times X \longrightarrow X$ denote the $G$-action map.
 \item $\mathcal{F}$ is usually a sheaf on $X$.
 \end{itemize}
 \end{setting}
@@ -32,7 +29,7 @@ as the $G$-action map.
 We give definition of equivariant algebraic $K$-theory. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
 
 \begin{defn}[{$G$-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]\label{def:G-equivariant_sheaf}
-For a $G$-variety $X$, denote $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ as projections onto some factors, as follows.
+For a $G$-variety $X$, let $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ represent projections onto some factors, as follows.
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
 \[\begin{tikzcd}[column sep={1.5cm,between origins}]
 	&& {G \times G \times X} &&&[2cm]\\
@@ -99,7 +96,7 @@ A \textbf{($\mathbf{G}$-equivariant) morphism} $f: (\mathcal{F},\phi_{\mathcal{F
 \end{equation}
 commutes.
 
-We denote $\Coh^G(X)$ as the category of $G$-equivariant sheaves.
+We denote the category of $G$-equivariant sheaves by $\Coh^G(X)$.
 
 
 \end{defn}
@@ -201,20 +198,20 @@ For a torus $T$, every $T$-representation can be written as direct sum of $1$-di
 \begin{equation*}
 \begin{aligned}
   \Irr(T)=\;&  \left\{ \rho: T \longrightarrow \mathbb{C}^{\times} \;\middle|\;\rho \text{ is an (algebraic) group homomorphism}  \right\} \\ 
-  =\;& \Hom_{\mathbb{C}\Alggp}(T, \mathbb{C}^{\times}):= X^{*}(T)
+  =\;& \Hom_{\mathbb{C}\Alggp}(T, \mathbb{C}^{\times})\hat{=} X^{*}(T)
 \end{aligned}
 \end{equation*} 
 We get
 $$\Rpt(T)=\bigoplus_{\rho \in \Irr(T)} \mathbb{Z}=\mathbb{Z}\left[X^{*}(T) \right].$$
-The group structure in $X^{*}(T)$ is given by tensor product, so the multiplication structure is induced by the group structure in $X^{*}(T)$. Denote 
+The group structure in $X^{*}(T)$ is given by tensor product, so the multiplication structure is induced by the group structure in $X^{*}(T)$. Take the following $\mathbb{Z}$-basis of $X^{*}(T)$:
 $$\varepsilon_i: T \longrightarrow \mathbb{C}^{\times} \qquad \begin{pmatrix}
 t_1 &&&&\\[-3mm]
 & \ddots&&&\\[-1mm]
 &&t_i&&\\[-3mm]
 &&& \ddots&\\[-1mm]
 &&&&t_n\\
-\end{pmatrix} \longmapsto t_i$$
-as a $\mathbb{Z}$-basis of $X^{*}(T)$, then $X^*(T) \cong \oplus_{i=1}^{n}\mathbb{Z} \varepsilon_i$.
+\end{pmatrix} \longmapsto t_i.$$
+Then $X^*(T) \cong \oplus_{i=1}^{n}\mathbb{Z} \varepsilon_i$.
 
 To distinguish the addition in $X^{*}(T)$ and $\mathbb{Z}\left[ X^{*}(T) \right]$, we rewrite $\varepsilon_i$ as $e_i$. In that case, $\sum_{i=1}^{n}k_i\varepsilon_i$ is sent to $\prod_{i=1}^{n}e_{i}^{k_i}$, and 
 
@@ -382,7 +379,7 @@ We can now define pullback of $f$ in the following assumption:
 \begin{defn}[Pullback with supports]
 Let $Z,Z'$ be $G$-varieties, $h: Z' \longrightarrow Z$ be a $G$-equivariant closed embedding. Suppose that $h$ is a restriction with support of some $(X,Y,f)$ satisfying the assumption \eqref{eq:assumption1}, i.e., we have a $G$-equivariant closed embedding $\iota_Z: Z \longrightarrow X$ such that 
 $Z' \cong f^{-1}(Z)$ and $h=f\big|_{Z'}$.
-Denote $\iota_{Z'}: Z' \longrightarrow Y$ as the induced $G$-equivariant closed embedding, we would like to construct the pullback $h^*: K^G(Z) \longrightarrow K^G(Z')$.
+Let $\iota_{Z'}: Z' \longrightarrow Y$ represent the induced $G$-equivariant closed embedding, we would like to construct the pullback $h^*: K^G(Z) \longrightarrow K^G(Z')$.
 \begin{equation}\label{eq:pullback_with_supports}
 % https://q.uiver.app/?q=WzAsMTAsWzAsMCwiWiciXSxbMSwwLCJaIl0sWzAsMiwiWSJdLFsxLDIsIlgiXSxbMiwwLCJLXkcoWicpIl0sWzIsMiwiS15HKFkpIl0sWzMsMiwiS15HKFgpIl0sWzMsMCwiS15HKFopIl0sWzEsMV0sWzIsMV0sWzAsMSwiaCIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiXFxpb3RhX1oiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDMsImYiXSxbMCwyLCJcXGlvdGFfe1onfSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNSwiXFxpb3RhX3taJywqfSIsMl0sWzYsNSwiZl4qIiwyXSxbNyw2LCJcXGlvdGFfe1osKn0iXSxbNSw0LCJcXGdyIiwyLHsiY3VydmUiOjIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDQsImheKiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDksIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifSwiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=
 \begin{tikzcd}[column sep={10mm}, row sep={4mm}]
@@ -598,7 +595,7 @@ For a $G$-variety $X$, the $G$-equivariant cohomology is defined as the (singula
 $$H_G^* (X; \mathbb{Q}):= H^* \!\left(\EGG G \times^G X; \mathbb{Q}\right).$$
 Specifically, for a point $\{\pt\}=\Spec \mathbb{C}$ with trivial $G$-action, denote
 $$\Spt(G):= H_G^* \big(\{\pt\}; \mathbb{Q}\big)=H^* (\BGG G; \mathbb{Q})$$
-as the cohomology ring of classifying space $\BGG G$.
+the cohomology ring of classifying space $\BGG G$.
 
 We work with coefficient $\mathbb{Q}$ for simplicity, and we may omit $\mathbb{Q}$ for the convenience of writing and typing.
 \end{defn}

@@ -11,15 +11,5 @@ A level-1 auxiliary file: chapters/chapter7.aux
 A level-1 auxiliary file: chapters/affinepaving.aux
 The style file: plain.bst
 Database file #1: reference.bib
-Repeated entry---line 108 of file reference.bib
- : @article{crawley1992lectures
- :                             ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 123 of file reference.bib
- : @article{crawley1992lectures
- :                             ,
-I'm skipping whatever remains of this entry
 Warning--empty journal in brown2018flag
-Warning--empty journal in https://doi.org/10.48550/arxiv.0803.4121
-Warning--empty journal in varagnolo2011canonical
-(There were 2 error messages)
+(There was 1 warning)
