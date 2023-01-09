@@ -268,6 +268,7 @@
 \newcommand{\abdimvec}[1]{|\dimvec{#1}|}
 \newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
 
+\newcommand{\absgp}[1]{\mathbb{#1}}
 \newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
 \newcommand{\Wd}{W_{\dimvec{d}}}
 \newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
@@ -384,15 +385,37 @@ In the first part, we compute the $G$-equivariant $K$-theory of the Steinberg va
 \end{frame}
 
 \begin{frame}[fragile]{Main theorem}
-内容...
+\begin{theorem}
+Under the convolution product, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a $\Rpt(T_{\dimvec{d}})$-algebra structure. Moreover,
+\begingroup
+\upshape
+\newcommand\labelenumi{(\theenumi)}
+\begin{enumerate}
+\item As an $\Rpt(T_{\dimvec{d}})$-module, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is free of rank $\abdimvec{d}!$;\label{item:A1}
+\item As an $\Rpt(T_{\dimvec{d}})$-algebra, we can write down generators and relations explicitly.\label{item:A5}
+\end{enumerate}
+\endgroup 
+\end{theorem}
+For proving \eqref{item:A5}, we mainly use the localization formula and the excess intersection formula.
 \end{frame}
 
 \begin{frame}[fragile]{Generators}
+$\begin{tikzcd}[ampersand replacement=\&]
+	\textcolor{red}{\bullet} \& \textcolor{blue}{\bullet} 
+	\arrow[from=1-1, to=1-2]
+ \end{tikzcd}$, 
+$\dimvec{d}=(3,2)$, 
+$\MinWd =\left\{ ,\ldots \right\}$
 \begin{figure}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=8cm]{strands/generators.pdf}
-      \caption{Generators}
       \label{fig:generators}        
+\end{figure}
+A typical element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is a $\mathbb{Z}$-linear combination of diagrams shown below:
+\begin{figure}[ht]
+  \vspace{0cm}
+    \centering  \includegraphics[width=3cm]{strands/glue_vertically_part.pdf}
+      \label{fig:glue_vertically_part}        
 \end{figure}
 \end{frame}
 
