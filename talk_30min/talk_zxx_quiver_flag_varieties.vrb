@@ -1,2 +1,9 @@
-\frametitle{Outlook}
-内容...
+\frametitle{Further discussion}
+
+\begin{itemize}
+\item Discuss the representation theory of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$, and connect that with the geometry of $\Flag_{d}(M)$;
+\item Generalize the result of first part to partial flag varieties (by introducing merge and split);
+\item Understand Kazhdan-Lusztig isomorphism and its categorifications;
+\item Understand ``KLR-algebra categorifies quantum groups''.
+\end{itemize}
+

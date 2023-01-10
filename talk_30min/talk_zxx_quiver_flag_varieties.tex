@@ -33,7 +33,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+%\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
 
 %%%packages for special symbols
 \usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
@@ -271,9 +271,11 @@
 \newcommand{\absgp}[1]{\mathbb{#1}}
 \newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
 \newcommand{\Wd}{W_{\dimvec{d}}}
+\newcommand{\ww}{\varpi}
 \newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
 \newcommand{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
 \newcommand{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
+
 
 \newcommand{\Omcell}{\Omega}
 \newcommand{\OOmcell}{\boldsymbol{\Omega}}
@@ -365,9 +367,12 @@ In the first part, we compute the $G$-equivariant $K$-theory of the Steinberg va
 \end{frame}
 
 \begin{frame}[fragile]{Variety structure}
+$$V_1 \longrightarrow V_2 \qquad \dimvec{d}=(\dim_{\mathbb{C}} V_1, \dim_{\mathbb{C}} V_2) \operatorname{\hat{=}} (\dimvec{d}_1,\dimvec{d}_2)$$
+ $$\mathcal{F}_{\dimvec{d}} = \left\{  \text{complete flags of $V_1 \oplus V_2$ respect to the index} \rule{0mm}{3.4mm} \right\} $$
+ $$\Rep_{\dimvec{d}}(Q) = \Hom_{\mathbb{C}}(V_1,V_2)$$
 	\begin{figure}[ht]
 	\centering
-		\vspace{0cm}
+		\vspace{-7mm}
 			\parbox[t]{.48\textwidth}{\centering
 			\vspace{0cm}
 			\includegraphics[width=5cm]{comm_diagram/incidence_variety_2.pdf}
@@ -376,20 +381,39 @@ In the first part, we compute the $G$-equivariant $K$-theory of the Steinberg va
 			\vspace{0cm}
 			\includegraphics[width=5cm]{comm_diagram/incidence_variety_4.pdf}
 			}
-			\vspace{-7mm}
 	\end{figure}
+ $$\Flag(M) := \mu_{\dimvec{d}}^{-1}(M)= \left\{ \text{(complete) flags of $M$} \right\}$$
 \end{frame}
 
 \begin{frame}[fragile]{Stratification structure}
-内容...
+$\,$\\[-12mm]
+$$\ww \in \WWd:=S_{\abdimvec{d}}, \quad G_{\dimvec{d}}:=\GL_{\dimvec{d}_1} \times \GL_{\dimvec{d}_2}, \quad B_{\dimvec{d}}, T_{\dimvec{d}}.$$
+% https://q.uiver.app/?q=WzAsOCxbMCwwLCJcXFJSZXBfe1xcZGltdmVje2R9fShRKSJdLFsxLDAsIj0gXFxiaWdzcWN1cF97XFx3d31cXHByZWltYWdle1xcT21jZWxsfV97XFx3d30iXSxbMiwwLCJcXFN0X3tcXGRpbXZlY3tkfX0iXSxbMywwLCI9IFxcYmlnc3FjdXBfe1xcd3d9XFxwcmVpbWFnZXtcXE9PY2VsbH1fe1xcd3d9Il0sWzAsMSwiXFxtYXRoY2Fse0Z9X3tcXGRpbXZlY3tkfX0iXSxbMSwxLCI9IFxcYmlnc3FjdXBfe1xcd3d9XFxPbWNlbGxfe1xcd3d9Il0sWzIsMSwiXFxtYXRoY2Fse0Z9X3tcXGRpbXZlY3tkfX0gXFx0aW1lcyBcXG1hdGhjYWx7Rn1fe1xcZGltdmVje2R9fSJdLFszLDEsIj1cXGJpZ3NxY3VwX3tcXHd3fVxcT09jZWxsX3tcXHd3fSJdLFswLDRdLFsyLDZdXQ==
+\[\begin{tikzcd}[column sep = 0mm]
+	{\RRep_{\dimvec{d}}(Q)} &[-3mm] {= \bigsqcup_{\ww}\preimage{\Omcell}_{\ww}} & [20mm]{\St_{\dimvec{d}}} &[-3mm] {= \bigsqcup_{\ww}\preimage{\OOcell}_{\ww}} \\
+	{\mathcal{F}_{\dimvec{d}}} & {= \bigsqcup_{\ww}\Omcell_{\ww}} & {\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}}} & {=\bigsqcup_{\ww}\OOcell_{\ww}}
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-3, to=2-3]
+\end{tikzcd}\]
+\hrule
+\begin{equation*}
+\begin{aligned}
+  K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})\cong\;&   \bigoplus\nolimits_{\ww}\; K^{G_{\dimvec{d}}}\left(\preimage{\OOcell}_{\ww}\right) \quad&& \text{Cellular fibration theorem}\\ 
+  \cong\;&   \bigoplus\nolimits_{\ww}\; K^{G_{\dimvec{d}}}\left(\OOcell_{\ww}\right) && \text{Thom isomorphism}\\ 
+  \cong\;&   \bigoplus\nolimits_{\ww}\; K^{B_{\dimvec{d}}}\left(\Omcell_{\ww}\right) && \text{Induction isomorphism}\\ 
+  \cong\;&   \bigoplus\nolimits_{\ww}\; K^{T_{\dimvec{d}}}\left(\Omcell_{\ww}\right) && \text{Reduction isomorphism}\\ 
+  \cong\;&   \bigoplus\nolimits_{\ww}\; \Rpt(T_d) && \text{Thom isomorphism}\\ 
+\end{aligned}
+\end{equation*}
 \end{frame}
 
 \begin{frame}[fragile]{Main theorem}
 \begin{theorem}
 Under the convolution product, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ has a $\Rpt(T_{\dimvec{d}})$-algebra structure. Moreover,
 \begingroup
-\upshape
-\newcommand\labelenumi{(\theenumi)}
+\setbeamertemplate{enumerate item}{(\arabic{enumi})}
+%https://latexref.xyz/_005calph-_005cAlph-_005carabic-_005croman-_005cRoman-_005cfnsymbol.html
+\setbeamercolor{enumerate item}{fg=black}
 \begin{enumerate}
 \item As an $\Rpt(T_{\dimvec{d}})$-module, $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is free of rank $\abdimvec{d}!$;\label{item:A1}
 \item As an $\Rpt(T_{\dimvec{d}})$-algebra, we can write down generators and relations explicitly.\label{item:A5}
@@ -400,12 +424,26 @@ For proving \eqref{item:A5}, we mainly use the localization formula and the exce
 \end{frame}
 
 \begin{frame}[fragile]{Generators}
-$\begin{tikzcd}[ampersand replacement=\&]
+$\,$\\[-12mm]
+$$\begin{tikzcd}[ampersand replacement=\&]
 	\textcolor{red}{\bullet} \& \textcolor{blue}{\bullet} 
 	\arrow[from=1-1, to=1-2]
- \end{tikzcd}$, 
-$\dimvec{d}=(3,2)$, 
-$\MinWd =\left\{ ,\ldots \right\}$
+ \end{tikzcd},\quad
+\dimvec{d}=(3,2),\quad 
+ u=\begin{tikzpicture}[scale=0.4]
+% \vpartition[
+% floor=1,
+% tkzpic=0,
+% type=0
+% ]{{5}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{1,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{2,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{3,0}}
+ \tie[color=blue,bull=1,bulletie=0.04,style=solid]{{4,0}}
+ \tie[color=red,bull=1,bulletie=0.04,style=solid]{{5,0}}
+ \tie[color=red,bull=1,bulletie=0.00,style=solid]{{5,-0.25}}
+ \end{tikzpicture},\quad u \in \MinWd.$$
+ Generators:
 \begin{figure}[ht]
   \vspace{0cm}
     \centering  \includegraphics[width=8cm]{strands/generators.pdf}
@@ -420,15 +458,17 @@ A typical element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is a $\mathbb{Z}$-li
 \end{frame}
 
 \begin{frame}[fragile]{Compositions and trivial relations}
-\begin{figure}[ht]
-  \vspace{0cm}
-    \centering  \includegraphics[width=7cm]{strands/glue_vertically.pdf}
-      \label{fig:glue_vertically}        
-\end{figure}
 
 \begin{figure}[ht]
   \vspace{0cm}
-    \centering  \includegraphics[width=10cm]{strands/clear_relations.pdf}
+    \centering  \includegraphics[width=9cm]{strands/glue_vertically.pdf}
+    \vspace{-10mm}
+      \label{fig:glue_vertically}        
+\end{figure}
+\begin{figure}[ht]
+  \vspace{0cm}
+  \centering
+     \includegraphics[width=11cm]{strands/clear_relations.pdf}
       \label{fig:clear_relations}        
 \end{figure}
 \end{frame}
@@ -466,14 +506,36 @@ A typical element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ is a $\mathbb{Z}$-li
 \end{frame}
 
 \begin{frame}[fragile]{Affine pavings}
-内容...
+\begin{theorem}
+For a Dynkin quiver $Q$ and $M \in \Rep(Q)$, the \textbf{partial flag variety} of length $d$
+$$\Flag_{d}(X)\colon=\left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq M \;\middle|\;\rule{0mm}{3.4mm} N_i \in \Rep(Q) \right\}$$
+has an affine paving.
+\end{theorem}
+Roughly speaking, we decompose $\Flag_{d}(M)$ into several pieces, and each piece is an affine space.
+
 \end{frame}
 
 \begin{frame}[fragile]{Idea of affine pavings}
-内容...
+Find a nice short exact sequence 
+$$0\longrightarrow X \stackrel{\iota}{\longrightarrow} M \stackrel{\pi}{\longrightarrow} S \longrightarrow 0$$
+which induces a nice morphism
+\begin{equation*}
+\begin{aligned}
+  \Psi: \Flag_{d}(M) \longrightarrow\;& \Flag_{d}(X) \times \Flag_{d}(S) \\ 
+  F\hspace{5mm} \longmapsto\;& \hspace{5mm}\left( \iota^{-1}(F), \pi(F) \right)
+\end{aligned}
+\end{equation*}
+We construct the affine paving of $\Flag_{d}(M)$ from the affine paving of $\Flag_{d}(X)$ and $\Flag_{d}(S)$. Then, we use mathematical induction.
 \end{frame}
 
-\begin{frame}[fragile]{Outlook}
-内容...
+\begin{frame}[fragile]{Further discussion}
+
+\begin{itemize}
+\item Discuss the representation theory of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$, and connect that with the geometry of $\Flag_{d}(M)$;
+\item Generalize the result of first part to partial flag varieties (by introducing merge and split);
+\item Understand Kazhdan-Lusztig isomorphism and its categorifications;
+\item Understand ``KLR-algebra categorifies quantum groups''.
+\end{itemize}
+
 \end{frame}
 \end{document}
