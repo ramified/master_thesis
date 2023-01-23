@@ -10,13 +10,13 @@
 
 \chapter{Preliminaries for Affine Pavings}\label{chap:flag=gr}
 
-The goal of the two chapters is to fine an affine paving of the partial flag variety $\Flag{\ftdimvec{f}}(X)$, which generalizes the variety $\Flag{\ftdimvec{d}}(X)$ defined in \ref{rmk:flag_variety_FlagX}. We have constructed some stratifications of most varieties by orbits in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}, and some are even affine pavings. For $\Flag{\ftdimvec{f}}(X)$, we have no natural group actions, so we can not find affine pavings by methods in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}. To achieve our goal, we extend methods from \cite{irelli2019cell}
+The goal of the two chapters is to find an affine paving of the partial flag variety $\Flag{\ftdimvec{f}}(X)$, which generalizes the variety $\Flag{\ftdimvec{d}}(X)$ defined in \ref{rmk:flag_variety_FlagX}. We have constructed some stratifications of most varieties by orbits in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}, and some are even affine pavings. For $\Flag{\ftdimvec{f}}(X)$, we have no natural group actions, so we can not find affine pavings by methods in Subsection \ref{subsec:stratification_flag_variety} and \ref{subsec:stratification:_incidence_variety}. To achieve our goal, we extend methods from \cite{irelli2019cell}
  and \cite{maksimau2019flag} as well as techniques from Auslander--Reiten theory.
 
 In this chapter, we realize the partial flag variety $\Flag{\ftdimvec{f}}(X)$ as a quiver Grassmannian of the extended quiver, prove some $\Ext$-vanishing properties, and also give a short introduction of Auslander--Reiten theory. 
 
 \begin{setting}
-Throughout Chapter \ref{chap:flag=gr} and \ref{chap:affine_pavings}, $R$ is a $\mathbb{C}$-algebra with unit, and $\Mod(R)$ denotes the category of $R$-modules of finite dimension. For a representation $X\in \rep(Q)$, we denote by $X_i:=e_iX$ the $\mathbb{C}$-linear space at the vertex $i\in v(Q)$. We denote by $P(i)$, $I(i)$ and $S(i)$ the indecomposable projective, injective, simple modules corresponding to the vertex $i$, respectively.
+Throughout Chapter \ref{chap:flag=gr} and \ref{chap:affine_pavings}, $R$ is a $\mathbb{C}$-algebra with unit, and $\catmod(R)$ denotes the category of $R$-modules of finite dimension. For a representation $X\in \rep(Q)$, we denote by $X_i:=e_iX$ the $\mathbb{C}$-linear space at the vertex $i\in v(Q)$. We denote by $P(i)$, $I(i)$ and $S(i)$ the indecomposable projective, injective, simple modules corresponding to the vertex $i$, respectively.
 \end{setting}
 
 \section{Extended quiver}
@@ -108,11 +108,11 @@ $$\Flagdstr(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X\mid x.M
 as the collection of all strict partial flags of length $d$, and call it the strict partial flag variety associated to $X$. 
 \end{defn}
 \begin{defn}[Grassmannian]
-Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \Mod(R)$, the Grassmannian $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
+Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \catmod(R)$, the Grassmannian $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
 $$\Gralg{R}(T):=\{T' \subseteq T \text{ as the submodule}  \}.$$
 \end{defn}
 \begin{defn}[Canonical functor $\Phi$]
-The canonical functor $\Phi:\rep(Q) \longrightarrow \Mod(R) $ is defined as follows:
+The canonical functor $\Phi:\rep(Q) \longrightarrow \catmod(R) $ is defined as follows:
 \begin{itemize}
 \item $\left(\Phi(X)\right)_{(i,r)}:=X_i$;
 \item $\left(\Phi(X)\right)_{(i,r) \rightarrow (i,r+1)}:=\Id_{X_i}$;
@@ -146,7 +146,7 @@ Consider the quiver $Q\colon x \longrightarrow y \longleftarrow z \longrightarro
 \end{eg}
 In many cases, the proof of the strict case and the non-strict case is the same, so we often treat them in the same way. For example, we may abbreviate the formula in Proposition \ref{prop:flag=gr} as 
 $$\Flag{}(X)\cong \Gr(\Phi(X)).$$
-\section{Dimension vector}In this section we define some varieties indexed by dimension vectors. Recall Definition \ref{def:Q-vs} and \ref{def:ftdv}. Notice that every module $T \in \Mod(\mathbb{C}Q/I)$ can be viewed as a representation of $Q$, so we automatically have a notion of dimension vector for $T$.
+\section{Dimension vector}In this section we define some varieties indexed by dimension vectors. Recall Definition \ref{def:Q-vs} and \ref{def:ftdv}. Notice that every module $T \in \catmod(\mathbb{C}Q/I)$ can be viewed as a representation of $Q$, so we automatically have a notion of dimension vector for $T$.
 
 We can write the (strict) partial flag variety and Grassmannian as disjoint union of several pieces. Since $v(Q_{d,(\str)})=v(Q) \times \{1,\ldots,d\}$, any dimension vector $\ftdimvec{f}$ of $R$ can be viewed as $d$ dimension vectors $(\ftdimvec{f}_1,\ldots,\ftdimvec{f}_d)$. Define
 \begin{equation*}
@@ -274,7 +274,7 @@ Let $M,N \in \rep(Q)$.\\[-8mm]
 \upshape
 \begin{enumerate}[(1)]
 	\item $\gldim R \leqslant 2$;\label{lm:gldim}
-	\item The functor $\Phi:\rep(Q) \longrightarrow \Mod(R)$ is exact and fully faithful;\label{lm:functorisexact}
+	\item The functor $\Phi:\rep(Q) \longrightarrow \catmod(R)$ is exact and fully faithful;\label{lm:functorisexact}
 	\item $\Phi$ maps projective module to projective module, and maps injective module to injective module;\label{lm:toproj}
 	\item $\Ext^i_{\mathbb{C}Q}(M,N) \cong \Ext^i_{R}(\Phi(M),\Phi(N))$;\label{lm:isoofext}
 	\item $\projdim \Phi(M) \leqslant 1. \injdim \Phi(M) \leqslant 1$;\label{lm:projdim}
@@ -318,7 +318,7 @@ For \ref{lm:projdim}, notice that the minimal projective resolution of $M$ is of
 \end{proof}
 The following key lemma will be crucial later.
 \begin{lemma}\label{lm:Ext2van}
-Let $X,S \in \rep(Q)$ and $V \subseteq \Phi(X), W \subseteq \Phi(S)$, $T \in \Mod(R)$. Then $\Ext^2_{R}(W,T)=0$ and $\Ext^2_{R}(T,\Phi(X)/V)=0$.
+Let $X,S \in \rep(Q)$ and $V \subseteq \Phi(X), W \subseteq \Phi(S)$, $T \in \catmod(R)$. Then $\Ext^2_{R}(W,T)=0$ and $\Ext^2_{R}(T,\Phi(X)/V)=0$.
 \end{lemma}
 \begin{proof}
 The short exact sequence 
@@ -361,7 +361,7 @@ Compute $\left< T,T'\right>_R$ by applying the functor $\Hom_R(-,T')$ to the sta
 In this section, we will introduce concepts in Auslander--Reiten theory one by one: indecomposable representation, irreducible morphism, Auslander--Reiten translation, Auslander--Reiten sequence, Auslander--Reiten quiver, and minimal sectional mono. The main references for the material covered in this section are \cite{crawley1992lectures,maksimau2019flag}.
 
 \begin{defn}[Indecomposable module]
-Fix an algebra $R$. A non-zero module $M \in \mod(R)$ is called indecomposable if $M$ can not be written as a direct sum of two non-zero submodules. The set of all indecomposable modules is denoted by $\ind(R)$.
+Fix an algebra $R$. A non-zero module $M \in \catmod(R)$ is called indecomposable if $M$ can not be written as a direct sum of two non-zero submodules. The set of all indecomposable modules is denoted by $\ind(R)$.
 \end{defn}
 There are several descriptions of the indecomposable representations in special cases. For instance:
 \begin{itemize}
@@ -503,7 +503,7 @@ $E_8$ & \begin{tikzcd}[sep=4mm]
 \end{table}
 Indecomposable representations form the vertices of Auslander–Reiten quiver, while irreducible morphisms form the arrows.
 \begin{defn}[Irreducible morphism]
-Given two indecomposable representations $T,T' \in \Mod(R)$, let
+Given two indecomposable representations $T,T' \in \catmod(R)$, let
 \begin{equation*}
 \begin{aligned}
   \rad(T,T'):=\;& \left\{ f \in \Hom_{R}(T,T')  \middle|  f \text{ is not invertible}  \right\} \\
@@ -524,7 +524,7 @@ The definition of irreducible morphism applies to any representation, and one ca
 Let $R=\mathbb{C}Q/I$ be a bounded quiver algebra. We define the Nakayama functor $\nu_R$, Auslander--Reiten translation $\tau_R$, and inverse Auslander--Reiten translation $\tau_R^{-1}$, as follows:
 % https://q.uiver.app/?q=WzAsMTIsWzAsMCwiXFxudV9SOiJdLFsxLDAsIlxcTW9kKFIpIl0sWzMsMCwiXFxNb2QoUikiXSxbMiwwLCJcXE1vZChSXntvcH0pIl0sWzEsMSwiXFxNb2Rkb3duKFIpIl0sWzMsMSwiXFxNb2R1cChSKSJdLFsyLDEsIlxcTW9kZG93bihSXntvcH0pIl0sWzAsMSwiXFx0YXVfUjoiXSxbMCwyLCJcXHRhdV9SXnstMX06Il0sWzMsMiwiXFxNb2Rkb3duKFIpIl0sWzIsMiwiXFxNb2Rkb3duKFJee29wfSkiXSxbMSwyLCJcXE1vZHVwKFIpIl0sWzEsMywiXFxIb21fUigtLF9SXFwhUikiXSxbMywyLCJcXEhvbV9LKC0sSykiXSxbNCw2LCJcXEV4dF4xX1IoLSxfUlxcIVIpIl0sWzYsNSwiXFxIb21fSygtLEspIl0sWzExLDEwLCJcXEhvbV9LKC0sSykiXSxbMTAsOSwiXFxFeHReMV97Ul57b3B9fSgtLFJfUikiXV0=
 \[\begin{tikzcd}[row sep=0mm, column sep=2cm]
-	{\nu_R:} &[-1.8cm] {\Mod(R)} & {\Mod(R^{op})} & {\Mod(R)}, \\
+	{\nu_R:} &[-1.8cm] {\catmod(R)} & {\catmod(R^{op})} & {\catmod(R)}, \\
 	{\tau_R:} & {\Moddown(R)} & {\Moddown(R^{op})} & {\Modup(R)}, \\
 	{\tau_R^{-1}:} & {\Modup(R)} & {\Moddown(R^{op})} & {\Moddown(R)}.
 	\arrow["{\Hom_R(-,_R\!R)}", from=1-2, to=1-3]
@@ -534,19 +534,19 @@ Let $R=\mathbb{C}Q/I$ be a bounded quiver algebra. We define the Nakayama functo
 	\arrow["{\Hom_\mathbb{C}(-,\mathbb{C})}", from=3-2, to=3-3]
 	\arrow["{\Ext^1_{R^{op}}(-,R_R)}", from=3-3, to=3-4]
 \end{tikzcd}\]
-Here $\Moddown(R)$ and $\Modup(R)$ denote the stable module categories. The objects are the same as in $\Mod(R)$, and their morphisms are modified by ``collapsing'' the morphisms passing through projective/injective modules to zero, i.e.,
+Here $\Moddown(R)$ and $\Modup(R)$ denote the stable module categories. The objects are the same as in $\catmod(R)$, and their morphisms are modified by ``collapsing'' the morphisms passing through projective/injective modules to zero, i.e.,
 \begin{equation*}
 \begin{aligned}
-  \Mor_{\Moddown(R)}(T,T'):=\;& \Mor_{\Mod(R)}(T,T')/(f:T \rightarrow P \rightarrow T', P \text{ is projective}), \\ 
-  \Mor_{\Modup(R)}(T,T'):=\;& \Mor_{\Mod(R)}(T,T')/(f:T \rightarrow I \rightarrow T', I \text{ is injective}).
+  \Mor_{\Moddown(R)}(T,T'):=\;& \Mor_{\catmod(R)}(T,T')/(f:T \rightarrow P \rightarrow T', P \text{ is projective}), \\ 
+  \Mor_{\Modup(R)}(T,T'):=\;& \Mor_{\catmod(R)}(T,T')/(f:T \rightarrow I \rightarrow T', I \text{ is injective}).
 \end{aligned}
 \end{equation*}
-These modifications guarantee that the Auslander--Reiten translation $\tau_R$ is indeed a functor. For convenience, we abbreviate $\Mor_{\Moddown(R)}$, $\Mor_{\Modup(R)}$, $\Mor_{\Mod(R)}$ as $\Homdown_R$, $\Homup_R$, $\Hom_R$, and ignore the subscription $R$ in the symbol $\tau_R$.
+These modifications guarantee that the Auslander--Reiten translation $\tau_R$ is indeed a functor. For convenience, we abbreviate $\Mor_{\Moddown(R)}$, $\Mor_{\Modup(R)}$, $\Mor_{\catmod(R)}$ as $\Homdown_R$, $\Homup_R$, $\Hom_R$, and ignore the subscription $R$ in the symbol $\tau_R$.
 \end{defn}
 The Auslander--Reiten translation has many magical properties. For example, $\tau_R$ induces the one-to-one correspondence between non-projective indecomposable representations and non-injective indecomposable representations. We would also frequently use the Auslander--Reiten formulas: ($(-)^{\vee}=\Hom_\mathbb{C}(-,\mathbb{C})$ is the dual)
 $$\left(\Homup_R (T,\tau T') \right)^{\vee} \stackrel{\sim}{\longrightarrow} \Ext_R^1(T',T)$$
 $$\left(\Homdown_R (\tau^{-1}T,T') \right)^{\vee} \stackrel{\sim}{\longrightarrow} \Ext_R^1(T',T)$$
-which is functorial for any $T,T' \in \Mod(R)$. Especially, when $T$ is not injective, $\Homup_R (T,\tau T')=\Hom_R (T,\tau T')$, we get $[T',T]^1=[T,\tau T']$; when $T'$ is not projective, $\Homdown_R (\tau^{-1}T,T')=\Hom_R (\tau^{-1}T,T')$, we get $[T',T]^1=[\tau^{-1}T, T']$.
+which is functorial for any $T,T' \in \catmod(R)$. Especially, when $T$ is not injective, $\Homup_R (T,\tau T')=\Hom_R (T,\tau T')$, we get $[T',T]^1=[T,\tau T']$; when $T'$ is not projective, $\Homdown_R (\tau^{-1}T,T')=\Hom_R (\tau^{-1}T,T')$, we get $[T',T]^1=[\tau^{-1}T, T']$.
 
 For the Auslander–Reiten sequence there can be many equivalent definitions, and we only present one due to limitations of space. 
 \begin{defn}[Auslander–Reiten sequence]
