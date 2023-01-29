@@ -356,11 +356,11 @@
     \draw (PosA\x) [line width=\borderlinewholewidth,black,rounded corners=\cornerradius]rectangle (PosD\x) node(recCen\x)[midway] {};
 
     \draw[line width=\borderlinewholewidth,rounded corners=\cornerradius]
-    (PosC\x) ++(36mm+ 2 * \x * \betweenpieces ,0) --++(\cornerradius,0)-- ++(0,-\extraheight) --++(2 * \betweenpieces,0) -- ++(0,\extraheight) --++(\cornerradius,0);
+    (PosC0) ++(36mm+ 2 * \x * \betweenpieces ,0) --++(\cornerradius,0)-- ++(0,-\extraheight) --++(2 * \betweenpieces,0) -- ++(0,\extraheight) --++(\cornerradius,0);
 
     \draw (PosA\x) [line width=\borderlinewhitewidth,\xcolor,rounded corners=\cornerradius]rectangle (PosD\x);
     \draw[line width=\borderlinewhitewidth,\xcolor,rounded corners=\cornerradius]
-        (PosC\x) ++(36mm+ 2 * \x * \betweenpieces ,0) --++(\cornerradius,0)-- ++(0,-\extraheight) --++(\betweenpieces,0)node(PosE\x)[yshift=\extraheight/2,black] {}--++(\betweenpieces,0) -- ++(0,\extraheight) --++(\cornerradius,0);
+        (PosC0) ++(36mm+ 2 * \x * \betweenpieces ,0) --++(\cornerradius,0)-- ++(0,-\extraheight) --++(\betweenpieces,0)node(PosE\x)[yshift=\extraheight/2,black] {}--++(\betweenpieces,0) -- ++(0,\extraheight) --++(\cornerradius,0);
     
     \draw (PosE\x) [yshift=-3mm,fill=black]circle (0.6mm)node(PosF0\x){};
     \draw (PosF0\x) [xshift=-7mm,fill=black]circle (0.6mm)node(PosF1\x){};
@@ -418,7 +418,7 @@ $\begin{tikzcd}[sep={between origins, \betweenpieces}]
 \end{tikzcd}$
 };
 
-\node [black] at (recCen1) {
+\node [black] at (recCen0) {
 $\begin{tikzcd}[sep={between origins, \betweenpieces}]
 \blockone{0} && \blockone{0} && \blockone{1} && \blockone{0} && \blockone{1} && \blockone{0} && \blockone{0} \\
 \blockone{0} & \blockone{0} & \blockone{0} & \blockone{0} & \blockone{0} & \blockone{1} & \blockone{1} & \blockone{1} & \blockone{0} & \blockone{0} & \blockone{0} & \blockone{0} & \blockone{0} \\
@@ -462,7 +462,7 @@ $\begin{tikzcd}[sep={between origins, \betweenpieces}]
 \end{tikzcd}$
 };
 
-    \node [black] at (recCen2) {
+    \node [black] at (recCen0) {
 $\begin{tikzcd}[sep={between origins, \betweenpieces}]
    	\blocktwo{0} && \blocktwo{0} && \blocktwo{0} && \blocktwo{1} && \blocktwo{0} && \blocktwo{0} && \blocktwo{0} \\
    	\blocktwo{0} & \blocktwo{0} & \blocktwo{0} & \blocktwo{0} & \blocktwo{0} & \blocktwo{1} & \blocktwo{1} & \blocktwo{1} & \blocktwo{0} & \blocktwo{0} & \blocktwo{0} & \blocktwo{0} & \blocktwo{0} \\
@@ -506,7 +506,7 @@ $\begin{tikzcd}[sep={between origins, \betweenpieces}]
 \end{tikzcd}$
     };
     
-        \node [black] at (recCen3) {
+        \node [black] at (recCen0) {
     $\begin{tikzcd}[sep={between origins, \betweenpieces}]
        	\blockthree{0} && \blockthree{0} && \blockthree{0} && \blockthree{1} && \blockthree{0} && \blockthree{0} && \blockthree{0} \\
        	\blockthree{0} & \blockthree{0} & \blockthree{0} & \blockthree{0} & \blockthree{1} & \blockthree{1} & \blockthree{0} & \blockthree{1} & \blockthree{1} & \blockthree{0} & \blockthree{0} & \blockthree{0} & \blockthree{0} \\
@@ -549,6 +549,7 @@ $\begin{tikzcd}[sep={between origins, \betweenpieces}]
        	\arrow[from=2-12, to=3-13]
     \end{tikzcd}$
     };    
+
 
 \end{tikzpicture}
 \include{chapters/chapter9}

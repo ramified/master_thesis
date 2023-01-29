@@ -52,7 +52,7 @@
 \usepackage{tikz-cd}
 %\usepackage{quiver}			% see https://q.uiver.app/
 \usepackage{tikz}
-\usetikzlibrary{calc,shapes}
+\usetikzlibrary{calc,shapes,intersections}
 
 %%%packages for pictures
 \usepackage[width=0.5,tiewidth=0.7]{strands}
@@ -348,7 +348,7 @@
 \def\borderlinewidth{0.3mm}
 \def\borderlinewhitewidth{0.8mm}
 \def\borderlinewholewidth{\borderlinewidth *2 + \borderlinewhitewidth}
-    \foreach \x/\xcolor in {0/red,1/orange,2/yellow,3/green}
+    \foreach \x/\xcolor in {0/white,1/white,2/white,3/white}
     {
     \node (PosA\x) at ([xshift=\border,yshift=-(\upborder+\x * \distance)]current page.north west){};
     \node (PosC\x) at ([xshift=\border,yshift=-(\upborder+\height+\x *\distance)]current page.north west){};
@@ -549,6 +549,8 @@ $\begin{tikzcd}[sep={between origins, \betweenpieces}]
        	\arrow[from=2-12, to=3-13]
     \end{tikzcd}$
     };    
+%    https://tex.stackexchange.com/questions/641843/plot-difference-of-sets-in-tikz
+%\fill[even odd rule] (PosF00) circle (1) (PosF10) circle (1);
 
 \end{tikzpicture}
 \include{chapters/chapter9}
