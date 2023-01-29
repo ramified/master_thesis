@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Setting and Statement}{3}{0}{1}
+\beamer@sectionintoc {2}{Case study}{9}{0}{2}
+\beamer@sectionintoc {3}{Auslander--Reiten theory}{11}{0}{3}
+\beamer@sectionintoc {4}{Sketch of proof}{13}{0}{4}
