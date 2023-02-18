@@ -72,3 +72,6 @@
 \contentsline {section}{\numberline {8.2}Application: Dynkin case}{91}{section.8.2}% 
 \contentsline {section}{\numberline {8.3}Proof of Claim \otherrobustref }{92}{section.8.3}% 
 \contentsline {section}{\numberline {8.4}Application: affine case}{98}{section.8.4}% 
+\contentsline {chapter}{List of Tables}{99}{Item.28}% 
+\contentsline {chapter}{List of Figures}{99}{chapter*.49}% 
+\contentsline {chapter}{Bibliography}{100}{chapter*.50}% 
