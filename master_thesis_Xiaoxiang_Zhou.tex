@@ -5,8 +5,8 @@
 %\special{dvipdfmx:config z 0}
 %\includeonly{chapters/contents}
 %\includeonly{chapters/introduction}
-%\includeonly{chapters/introduction,chapters/affinepaving}
-%\includeonly{chapters/chapter1}
+%\includeonly{chapters/affinepaving}
+%\includeonly{chapters/chapter5}
 
 %packages
 %\usepackage{color,graphicx}
@@ -42,6 +42,7 @@
 \usepackage{indentfirst}
 \usepackage{pifont}
 \usepackage{MA_Titlepage}
+
 %\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
 
@@ -270,6 +271,18 @@ urlcolor=blue,
 \include{chapters/chapter7}
 \part{Affine pavings of partial flag varieties}\label{part:partial_flag_varieties}
 \include{chapters/affinepaving}
+
+%https://tex.stackexchange.com/questions/14510/how-to-show-listoffigures-and-listoftables-on-one-page-and-in-the-toc
+%https://tex.stackexchange.com/questions/30747/remove-newpage-after-tableofcontents-listoffigures-etc-in-book-class
+
+
+\begingroup
+\let\cleardoublepage\relax
+%\let\clearpage\relax
+\listoftables
+\listoffigures
+\endgroup
+
 
 \bibliographystyle{plain}
 \bibliography{reference}

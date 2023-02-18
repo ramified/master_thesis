@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  23 JAN 2023 15:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 FEB 2023 11:22
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1663,7 +1663,7 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (MA_Titlepage.sty
 Package: MA_Titlepage 2010/04/25
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 54.
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
 \c@theorem=\count340
 \c@thmsub=\count341
 \c@remarks=\count342
@@ -1699,53 +1699,53 @@ File: pgflibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
 (chapters/affinepaving.aux))
 \openout1 = `master_thesis_Xiaoxiang_Zhou.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 255.
+LaTeX Font Info:    Try loading font information for U+msa on input line 256.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 255.
+LaTeX Font Info:    Try loading font information for U+msb on input line 256.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 255.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 256.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\u
 rsfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 255.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 256.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Package xypdf Info: Line width: 0.43799pt on input line 255.
+Package xypdf Info: Line width: 0.43799pt on input line 256.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1782,7 +1782,7 @@ Package xypdf Info: Line width: 0.43799pt on input line 255.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box101
-Package hyperref Info: Link coloring ON on input line 255.
+Package hyperref Info: Link coloring ON on input line 256.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1798,9 +1798,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 255.
-LaTeX Info: Redefining \pageref on input line 255.
-LaTeX Info: Redefining \nameref on input line 255.
+LaTeX Info: Redefining \ref on input line 256.
+LaTeX Info: Redefining \pageref on input line 256.
+LaTeX Info: Redefining \nameref on input line 256.
  (master_thesis_Xiaoxiang_Zhou.out)
 (master_thesis_Xiaoxiang_Zhou.out)
 \@outlinefile=\write5
@@ -1827,7 +1827,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 \openout6 = `master_thesis_Xiaoxiang_Zhou.toc'.
 
 )
-Overfull \hbox (14.83295pt too wide) in paragraph at lines 57--261
+Overfull \hbox (14.83295pt too wide) in paragraph at lines 57--262
 [][]\TU/lmr/m/n/10.95 https://github.com/ramified/master_thesis/raw/main/master
 _thesis_Xiaoxiang_Zhou.pdf[][] 
  []
@@ -1853,11 +1853,11 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
 ]) [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 263.
+(hyperref)                removing `math shift' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 263.
+(hyperref)                removing `math shift' on input line 264.
 
 [7
 
@@ -2370,8 +2370,18 @@ File: figures/affine_paving/E8graypic3.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic3.pdf>
 File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 <use figures/affine_paving/E8graypic4.pdf>
- [95] [96] [97]) [98] (master_thesis_Xiaoxiang_Zhou.bbl [99
+ [95] [96] [97]) [98] (master_thesis_Xiaoxiang_Zhou.lot)
+\tf@lot=\write7
+\openout7 = `master_thesis_Xiaoxiang_Zhou.lot'.
 
+ (master_thesis_Xiaoxiang_Zhou.lof [99
+
+])
+\tf@lof=\write8
+\openout8 = `master_thesis_Xiaoxiang_Zhou.lof'.
+
+ (master_thesis_Xiaoxiang_Zhou.bbl
+[100] [101
 
 ]
 Underfull \hbox (badness 2213) in paragraph at lines 135--138
@@ -2379,27 +2389,27 @@ Underfull \hbox (badness 2213) in paragraph at lines 135--138
 \TU/lmr/m/it/10.95 arXiv preprint
  []
 
-) [100]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
+) [102]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
 (chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 276.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: 088E04164EC3A5D33135B7FDF5FA779A.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 44943 strings out of 427748
- 860361 string characters out of 3150981
- 984702 words of memory out of 3000000
- 48200 multiletter control sequences out of 15000+200000
+ 44951 strings out of 427748
+ 860509 string characters out of 3150981
+ 985367 words of memory out of 3000000
+ 48202 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1278s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (102 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (104 pages).

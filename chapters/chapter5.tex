@@ -47,8 +47,8 @@ be corresponding morphisms restricted to $p_{12}^{-1}(Z_{12})$, $p_{23}^{-1}(Z_{
 
 We define the convolution product by
 $$*: K_0^G(Z_{12}) \times K_0^G(Z_{23}) \longrightarrow K_0^G(Z_{12} \circ Z_{23}) \qquad (\mathcal{F}_{12}, \mathcal{F}_{23}) \longmapsto \mathcal{F}_{12}*\mathcal{F}_{23}$$
-$$\mathcal{F}_{12}*\mathcal{F}_{23}=\pi_{13,*}\left(\pi_{12}^* \mathcal{F}_{12} \otimes \pi_{23}^* \mathcal{F}_{23} \right) \in K_0^G(Z_{12} \circ Z_{23})$$
-
+$$\mathcal{F}_{12}*\mathcal{F}_{23}=\pi_{13,*}\left(\rule{0mm}{3.4mm}\pi_{12}^* \mathcal{F}_{12} \otimes \eu(\mathcal{T})         \otimes \pi_{23}^* \mathcal{F}_{23} \right) \in K_0^G(Z_{12} \circ Z_{23})$$
+where $\mathcal{T}:= (p_{23}^{*}\mathcal{N}_{p_{2}^{23}})/\mathcal{N}_{p_{12}}$.
 \end{defn}
 
 \begin{remark}
@@ -59,7 +59,7 @@ Those ``$Z$-varieties" ($Z_{12}$, $p_{12}^{-1}(Z_{12})$, $Z_{123}$, etc.) are of
     cells={nodes={scale=#1}}}}
 \begin{equation}\label{eq:convolution_singularity_solved}
 \begin{tikzcd}[scale cd=0.7]
-	{K_0^G(Z_{12}) \times K_0^G(Z_{23})} & {K_0^G\big(p_{12}^{-1}(Z_{12})\big) \times K_0^G\big(p_{12}^{-1}(Z_{23})\big)} & {K_0^G(Z_{123})} & {K_0^G(Z_{12} \circ Z_{23})} \\
+	{K_0^G(Z_{12}) \times K_0^G(Z_{23})} & {K_0^G\big(p_{12}^{-1}(Z_{12})\big) \times K_0^G\big(p_{12}^{-1}(Z_{23})\big)} &[4mm] {K_0^G(Z_{123})} & {K_0^G(Z_{12} \circ Z_{23})} \\
 	{K_0^G(M_{12}) \times K_0^G(M_{23})} & {K_0^G(M_{123}) \times K_0^G(M_{123})} & {K_0^G(M_{123})} & {K_0^G(M_{13})}
 	\arrow["{\iota_{Z_{12},*}, \iota_{Z_{23},*}}",from=1-1, to=2-1]
 	\arrow[from=1-2, to=2-2]
@@ -69,11 +69,11 @@ Those ``$Z$-varieties" ($Z_{12}$, $p_{12}^{-1}(Z_{12})$, $Z_{123}$, etc.) are of
 	\arrow["\otimes", from=2-2, to=2-3]
 	\arrow["{p_{13,*}}", from=2-3, to=2-4]
 	\arrow["{\pi_{13,*}}", from=1-3, to=1-4]
-	\arrow["\otimes", dashed, from=1-2, to=1-3]
+	\arrow["- \otimes\, \eu(\mathcal{T}) \,\otimes -", dashed, from=1-2, to=1-3]
 	\arrow["{\pi_{12}^* \times \pi_{23}^*}", dashed, from=1-1, to=1-2]
 \end{tikzcd}
 \end{equation}
-The diagram in \eqref{eq:convolution_singularity_solved} commutes by the vanishing of the Euler class. Therefore, one can compute
+The diagram in \eqref{eq:convolution_singularity_solved} commutes by comparing the Euler class. Therefore, one can compute
 $$\mathcal{F}_{12}*\mathcal{F}_{23}=p_{13,*}\left(p_{12}^* \iota_{Z_{12},*}\mathcal{F}_{12} \otimes p_{23}^* \iota_{Z_{23},*}\mathcal{F}_{23} \right) \in K_0^G(M_{13}),$$
 and then find the preimage of it under the map $\iota_{Z_{12} \circ Z_{23},*}$. This technique will be used in Subsection \ref{subsec:convolution_product_fml}.
 \end{remark}
@@ -83,7 +83,7 @@ The whole process can be concluded in Figure \ref{fig:convolution_product}.
   \vspace{0cm}
     \centering  
     \includegraphics[]{figures/table/figure_convolution.pdf}    
-    \caption{Convolution Product}  
+    \caption[The process of convolution product]{Convolution product}  
     \label{fig:convolution_product}
 \end{figure}
 
@@ -422,7 +422,7 @@ Recall the computation in \ref{eg:5-case-3} and Section \ref{sec:euler_class}. W
 \begin{table}[ht]
   \vspace{1mm}
     \centering  \includegraphics[width=12cm]{figures/table/table_euler_class.pdf}
-      \caption{}
+      \caption[Lie algebras and corresponding Euler classes, $G_{\dimvec{d}}$-action]{}
       \label{table:euler_class_1}        
 \end{table}
 
