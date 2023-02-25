@@ -42,6 +42,8 @@
 \usepackage{indentfirst}
 \usepackage{pifont}
 \usepackage{MA_Titlepage}
+\usepackage{tocloft}
+\usepackage{etoolbox}
 
 %\usepackage{nicematrix}%https://ctan.org/pkg/nicematrix?lang=en
 %\usepackage[notcite,notref]{showkeys}
@@ -256,8 +258,34 @@ urlcolor=blue,
 \begin{document}
 
 
-
 \setcounter{tocdepth}{1}
+
+
+%%%Caceat: This command can not be moved to anywhere!!! I don't know why.
+\makeatletter
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+%                         \addcontentsline{lot}{chapter}%
+%                                   {\protect\numberline{\thechapter}#1}%
+                       \else
+                         \addcontentsline{lot}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{lot}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+%                    \addtocontents{lof}{\protect\addvspace{10\p@}}% NEW
+%                    \addtocontents{lot}{\protect\addvspace{10\p@}}% NEW
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\makeatother
+
 
 \include{chapters/contents}
 \include{chapters/introduction}
@@ -276,6 +304,10 @@ urlcolor=blue,
 %https://tex.stackexchange.com/questions/30747/remove-newpage-after-tableofcontents-listoffigures-etc-in-book-class
 
 
+
+% List of Tables
+
+
 \begingroup
 \let\cleardoublepage\relax
 %\let\clearpage\relax
@@ -284,6 +316,8 @@ urlcolor=blue,
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
 \endgroup
+
+
 
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{plain}
