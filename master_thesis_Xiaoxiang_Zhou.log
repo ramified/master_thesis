@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 FEB 2023 17:19
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 FEB 2023 17:32
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -1867,7 +1867,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 \openout6 = `master_thesis_Xiaoxiang_Zhou.toc'.
 
 )
-Overfull \hbox (14.83295pt too wide) in paragraph at lines 57--290
+Overfull \hbox (14.83295pt too wide) in paragraph at lines 57--289
 [][]\TU/lmr/m/n/10.95 https://github.com/ramified/master_thesis/raw/main/master
 _thesis_Xiaoxiang_Zhou.pdf[][] 
  []
@@ -1893,11 +1893,11 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
 ]) [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 292.
+(hyperref)                removing `math shift' on input line 291.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 292.
+(hyperref)                removing `math shift' on input line 291.
 
 [7
 
@@ -1911,10 +1911,6 @@ Chapter 1.
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 13.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2107,6 +2103,14 @@ Overfull \hbox (44.07256pt too wide) detected at line 1583
  (chapters/chapter2.tex
 Chapter 2.
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
 Overfull \hbox (0.72012pt too wide) in paragraph at lines 29--30
 []\TU/lmr/m/n/10.95 We give definition of equivariant algebraic $\OML/cmm/m/it/
 10.95 K$\TU/lmr/m/n/10.95 -theory. Roughly speaking, a $\OML/cmm/m/it/10.95 G$\
@@ -2265,10 +2269,6 @@ H[]   [] [] \U/msb/m/n/10.95 Q\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 t\OT1/cmr
 
  (chapters/affinepaving.tex
 Chapter 7.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 22.
-
 [77
 
 
@@ -2430,24 +2430,24 @@ Underfull \hbox (badness 2213) in paragraph at lines 135--138
  []
 
 ) [102]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
  (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
 (chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: ED07493FCA39706823E61F54588CF562.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
+(rerunfilecheck)             Checksum: D2380D22B19BEA98960D36947A9434F2.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
  ) 
 Here is how much of TeX's memory you used:
- 45206 strings out of 427748
- 864302 string characters out of 3150981
- 990311 words of memory out of 3000000
- 48454 multiletter control sequences out of 15000+200000
+ 45212 strings out of 427748
+ 864364 string characters out of 3150981
+ 990349 words of memory out of 3000000
+ 48460 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s

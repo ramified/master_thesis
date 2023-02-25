@@ -260,20 +260,19 @@ urlcolor=blue,
 
 \setcounter{tocdepth}{1}
 
-
 %%%Caceat: This command can not be moved to anywhere!!! I don't know why.
 \makeatletter
 \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
                        \if@mainmatter
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter.}%
-%                         \addcontentsline{lot}{chapter}%
-%                                   {\protect\numberline{\thechapter}#1}%
+                         \addcontentsline{toc}{chapter}%
+                                   {\protect\numberline{\thechapter}#1}%
                        \else
-                         \addcontentsline{lot}{chapter}{#1}%
+                         \addcontentsline{toc}{chapter}{#1}%
                        \fi
                     \else
-                      \addcontentsline{lot}{chapter}{#1}%
+                      \addcontentsline{toc}{chapter}{#1}%
                     \fi
                     \chaptermark{#1}%
 %                    \addtocontents{lof}{\protect\addvspace{10\p@}}% NEW
