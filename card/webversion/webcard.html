@@ -2,53 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Canvas Example</title>
+  <title>Webcard</title>
 </head>
 <body>
-  <canvas id="myCanvas" width="900" height="1500"></canvas>
+  <p>This is my card game. It is still bad-behaved. See the <a href="https://www.javascripttutorial.net/web-apis/javascript-drag-and-drop/">ideal states</a>.</p>
+  <p>This card game can generate different Auslander-Reiten quivers. Move blue botton.</p>
+<!--   <img id="image" src="card_ext_png1.png" alt="Your Image" width="900">
+  <img id="image" src="card_ext_png2.png" alt="Your Image" width="900"> -->
+  <canvas id="myCanvas" width="1300" height="700"></canvas>
 
   <script>
     const canvas = document.getElementById('myCanvas');
     const ctx = canvas.getContext('2d');
 
 
-    // Create a new image object
-    const img = new Image();
-
-// Set the image source to a PNG file
-img.src = "card_ext_png1.png";
-
-// When the image is loaded, draw it onto the canvas
-img.onload = function() {
-  drawImageWithAspectRatio(ctx, img, 0, 0, 900);
-};
 
 
-    const img2 = new Image();
 
-// Set the image source to a PNG file
-img2.src = "card_ext_png2.png";
-
-// When the image is loaded, draw it onto the canvas
-img2.onload = function() {
-  drawImageWithAspectRatio(ctx, img2, 0, 0, 900);
-};
-
-
-function drawImageWithAspectRatio(ctx, img, x, y, width) {
-  const aspectRatio = img.height / img.width;
-  ctx.drawImage(img, x, y, width, aspectRatio * width);
-}
-
-
-      // Define an array of squares with different sizes and positions
-      const squares = [
-      {x: 500, y: 500, width: 20, height: 20},
-      {x: 120, y: 170, width: 40, height: 200},
-      {x: 207, y: 158, width: 60, height: 70},
-      {x: 304, y: 205, width: 80, height: 60},
-      {x: 405, y: 254, width: 500, height: 500}
-      ];
 
       let selectedSquare = null; // keep track of the selected square
       let offsetX = 0;
@@ -58,12 +28,12 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
       // Draw the grid once
       // Define the grid parameters
       const gridSize = {
-        x: 167, // width of each grid square
+        x: 111.3, // width of each grid square
         y: 330, // height of each grid square
       };
       const gridOffset = {
-        x: 60, // width of each grid square
-        y: 70, // height of each grid square
+        x: 60, 
+        y: 70, 
       };
       const gridStep = {
         x: gridSize.x + gridOffset.x,
@@ -71,6 +41,16 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
       };
 
       drawGrid();
+
+
+      const edgeLength = 30;
+
+    let squares = [
+    {source: "card_ext_png1.png", x: 60, y: 70, width: 10, height: 10, xsq:278, ysq:263},
+    {source: "card_ext_png2.png", x: 60, y: 70, width: 10, height: 10, xsq:278+111.3-edgeLength, ysq:263},
+    {source: "card_ext_png3.png", x: 60, y: 70, width: 10, height: 10, xsq:278+111.3*2+edgeLength, ysq:263},
+    {source: "card_ext_png4.png", x: 60, y: 70, width: 10, height: 10, xsq:278+111.3*3, ysq:263-edgeLength},
+    ];
 
       // Loop through the array of squares and draw each one
       squares.forEach(square => {
@@ -97,7 +77,7 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
               const y = event.clientY - rect.top;
               square.x = x + startX + rect.left;
               square.y = y + startY + rect.top;
-              redrawCanvas();
+              // redrawCanvas();
 
             }
 
@@ -120,15 +100,30 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
         }
       });
 
+      function drawImageWithAspectRatio(ctx, img, x, y, width) {
+        const aspectRatio = img.height / img.width;
+        ctx.drawImage(img, x, y, width, aspectRatio * width);
+      }
+
       // Draw a square on the canvas
       function drawSquare(square) {
         ctx.fillStyle = 'blue'; // set the fill color to blue
-        ctx.fillRect(square.x, square.y, square.width, square.height);
+        ctx.fillRect(square.x+square.xsq, square.y+square.ysq, square.width, square.height);
+        // Create a new image object
+        const img = new Image();
+
+        // Set the image source to a PNG file
+        img.src = square.source;
+
+        // When the image is loaded, draw it onto the canvas
+        img.onload = function() {
+          drawImageWithAspectRatio(ctx, img, square.x, square.y, 900);
+        };
       }
 
       // Check if a point is inside a square
       function isInsideSquare(x, y, square) {
-        return x >= square.x && x <= square.x + square.width && y >= square.y && y <= square.y + square.height;
+        return x >= square.x+square.xsq && x <= square.x+square.xsq + square.width && y >= square.y+square.ysq && y <= square.y+square.ysq + square.height;
       }
 
 
@@ -144,7 +139,7 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
           ctx.lineTo(canvas.width, y);
         }
         ctx.strokeStyle = "#ddd"; // set the color of the grid lines
-        ctx.lineWidth = 1; // set the thickness of the grid lines
+        ctx.lineWidth = 0.1; // set the thickness of the grid lines
         ctx.stroke(); // draw the grid lines
       }
 
@@ -154,8 +149,7 @@ function drawImageWithAspectRatio(ctx, img, x, y, width) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawGrid(); // Move this here to redraw the grid every time
         squares.forEach(square => drawSquare(square));
-        drawImageWithAspectRatio(ctx, img, 0, 0, 900);
-        drawImageWithAspectRatio(ctx, img2, 0, 0, 900);
+        // drawImageWithAspectRatio(ctx, img, 0, 0, 900);
         
       }
     </script>
