@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  7 MAR 2023 00:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  7 MAR 2023 20:29
 entering extended mode
 **./talk_zxx_affine_pavings.tex
 (talk_zxx_affine_pavings.tex
@@ -1895,10 +1895,13 @@ Overfull \hbox (9.18552pt too wide) detected at line 19
 
 
 (talk_zxx_affine_pavings.vrb
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 17.
+
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 22.
 ) [7
 
 ]
@@ -1906,16 +1909,16 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 
  (talk_zxx_affine_pavings.vrb) [8
 
-]
-(talk_zxx_affine_pavings.toc) [9
+] (talk_zxx_affine_pavings.toc) [9
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb)
+
+(talk_zxx_affine_pavings.vrb)
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 476.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 477.
 
 [10
 
@@ -1936,7 +1939,7 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 3--45
  []
 
 )
-Overfull \vbox (44.65816pt too high) detected at line 551
+Overfull \vbox (44.65816pt too high) detected at line 552
  []
 
 [13
@@ -1953,20 +1956,20 @@ Overfull \vbox (44.65816pt too high) detected at line 551
 \tf@snm=\write8
 \openout8 = `talk_zxx_affine_pavings.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 562.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 562.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 563.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 563.
  (talk_zxx_affine_pavings.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 562.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 562.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 563.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 563.
 Package rerunfilecheck Info: File `talk_zxx_affine_pavings.out' has not changed
 .
 (rerunfilecheck)             Checksum: 87745A5F4C116FC187A91CA6CC5E6EA2.
  ) 
 Here is how much of TeX's memory you used:
- 39617 strings out of 427748
- 765445 string characters out of 3150981
- 863687 words of memory out of 3000000
- 42948 multiletter control sequences out of 15000+200000
+ 39618 strings out of 427748
+ 765454 string characters out of 3150981
+ 863703 words of memory out of 3000000
+ 42949 multiletter control sequences out of 15000+200000
  580539 words of font info for 103 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  59i,28n,84p,812b,1686s stack positions out of 5000i,500n,10000p,200000b,50000s

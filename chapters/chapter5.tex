@@ -35,10 +35,10 @@ and $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ be projections onto some fa
 
 For closed $G$-subvarieties $Z_{12} \subseteq M_{12}$, $Z_{23} \subseteq M_{23}$, let
 $$Z_{123}:= p_{12}^{-1}(Z_{12}) \cap p_{23}^{-1}(Z_{23}) \subseteq M_{123}$$
-be the intersection of two preimages. The \textbf{convolution product} of $Z_{12}$ and $Z_{23}$ is defined as
+be the intersection of two preimages. The \textbf{convolution product}\index{convolution product!of varieties} of $Z_{12}$ and $Z_{23}$ is defined as
 $$Z_{12} \circ Z_{23} := p_{13}(Z_{123}) \subseteq M_{13}$$
 which is a closed $G$-subvariety of $M_{13}$.
-\paragraph*{\underline{Step3.}}Convolution product on the level of $K$-theories.\\[-3mm]
+\paragraph*{\underline{Step3.}}Convolution product on the level of $K$-theories.\\[-3mm]\index{convolution product!of K-theory@of $K$-theory}
 
 Let 
 $$\pi_{12}:=p_{12}\big|_{p_{12}^{-1}(Z_{12})} \qquad \pi_{23}:=p_{23}\big|_{p_{23}^{-1}(Z_{23})} \qquad
@@ -90,7 +90,7 @@ The whole process can be concluded in Figure \ref{fig:convolution_product}.
 \section{Statement}
 To facilitate the computation of intersections (i.e., tensor product in the construction of convolution product), we state the excess intersection formula.
 
-\begin{theorem}[{Excess intersection formula, \cite[Corollary 9.4]{przezdziecki2015geometric}}]\label{thm:excess_intersection_formula}
+\begin{theorem}[{Excess intersection formula, \cite[Corollary 9.4]{przezdziecki2015geometric}}]\label{thm:excess_intersection_formula}\index{excess intersection formula}
 Let $X'$ be a smooth $G$-variety, $X \subseteq X'$ be a (maybe singular) closed $G$-subvariety, and $Y_1,Y_2 \subseteq X$ be closed $G$-equivariant embeddings (of globally finite $\Tor$-dimension). Denote
 \begin{equation*}
 \begin{aligned}
@@ -134,7 +134,7 @@ Readers may find Theorem \ref{thm:excess_intersection_formula} as a special case
 
 The projection formula is stated here.
 \begin{proposition}[Projection formula]
-For any proper $G$-equivariant morphism $f:Y \longrightarrow X$ of globally finite $\Tor$-dimension, $\alpha \in K^G(Y)$, $\beta \in K^G(X)$, we have proper projection formula:
+For any proper $G$-equivariant morphism $f:Y \longrightarrow X$ of globally finite $\Tor$-dimension, $\alpha \in K^G(Y)$, $\beta \in K^G(X)$, we have proper projection formula\index{projection formula}:
 $$f_* \alpha \otimes \beta =f_*(\alpha \otimes f^{*} \beta).$$
 \end{proposition}
 
@@ -213,7 +213,7 @@ $$\fakestar: K^{G_{\dimvec{d}}}\left(\RRep_{\dimvec{d}}(Q)\right) \times K^{G_{\
 
 
 In this subsection, we compute the convolution product in the bottom line of the diagram in Remark \ref{rmk:process_convolution_product}.
-\begin{proposition}[Convolution product formula]\label{prop:convolution_product_formula}
+\begin{proposition}[Convolution product formula]\label{prop:convolution_product_formula}\label{convolution product formula}
 For $\ww$, $\ww'$, $\ww''$, $\ww''' \in \WWd$, we have
 \begin{equation*}
 \begin{aligned}
@@ -357,7 +357,7 @@ Later, every expression before $\preimage{\psi}_{\ww}$ should be viewed as an ex
 \end{remark}
 
 \begin{defn}[Demazure operator]
-For $i \in \{ 1,\ldots, \abdimvec{d}-1 \}$, set $s=s_i$, the (absolute) Demazure operator is defined as
+For $i \in \{ 1,\ldots, \abdimvec{d}-1 \}$, set $s=s_i$, the (absolute) Demazure operator\index{Demazure operator} is defined as
 $$D_i:= \left[\St_{s_i} \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}}(\St_{\dimvec{d}}).$$
 View $D_i$ as an element in $\Kcurl^{T_{\dimvec{d}}}(\St_{\dimvec{d}})$, we get
 $$D_i=\sum_{\ww \in \WWd} \left( \preimage{\Lambda}_{\ww,\ww s}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww s} + \sum_{\stackrel{\ww \in \WWd}{\ww s \ww^{-1}\in \Wd}} \left( \preimage{\Lambda}_{\ww,\ww}^{s} \right)^{-1} \preimage{\psi}_{\ww,\ww}.$$

@@ -28,7 +28,7 @@ Usually, $X$ is equipped with an algebraic $G$-action (which is compatible with 
 \subsection{$G$-equivariant sheaf and $K^G_0(X)$}
 We give definition of equivariant algebraic $K$-theory. Roughly speaking, a $G$-equivariant coherent sheaf over $X$ is a sheaf $\mathcal{F} \in \Coh(X)$ equipped with $G$-action which is compatible with the $G$-action on $X$, and $K$-theory is the Grothendieck group of $G$-equivariant coherent sheaves over $X$.
 
-\begin{defn}[{$G$-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]\label{def:G-equivariant_sheaf}
+\begin{defn}[{$G$-equivariant sheaf, \cite[Definition 5.1.6]{chriss1997representation}}]\label{def:G-equivariant_sheaf}\index{equivariant sheaf}
 For a $G$-variety $X$, let $p_i^{jk}, p_i:=p_i^{123}, p_{ij}:=p_{ij}^{123}$ represent projections onto some factors, as follows.
 % https://q.uiver.app/?q=WzAsNyxbMiwwLCJHIFxcdGltZXMgRyBcXHRpbWVzIFgiXSxbMSwxLCJHIFxcdGltZXMgRyJdLFszLDEsIkcgXFx0aW1lcyBYIl0sWzUsMSwiRyBcXHRpbWVzIFgiXSxbNCwyLCJYIl0sWzIsMiwiRyJdLFswLDIsIkciXSxbMSw2LCJwXzFeezEyfSIsMl0sWzAsMSwicF97MTJ9IiwyXSxbMCwyLCJwX3syM30iXSxbMiw0LCJwXzNeezIzfSJdLFsxLDUsInBfMl57MTJ9Il0sWzIsNSwicF8yXnsyM30iLDJdLFszLDQsInBfM157MTN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw2LCJwXzFeezEzfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMywicF97MTN9IiwwLHsiY3VydmUiOi0yfV1d
 \[\begin{tikzcd}[column sep={1.5cm,between origins}]
@@ -100,12 +100,12 @@ We denote the category of $G$-equivariant sheaves by $\Coh^G(X)$.
 
 
 \end{defn}
-\begin{defn}[$G$-equivariant $K$-theory]
+\begin{defn}[$G$-equivariant $K$-theory]\index{equivariant K-theory@equivariant $K$-theory}
 For a $G$-variety $X$, the $G$-equivariant $K$-theory is defined as the Grothendieck group of $G$-equivariant coherent sheaves over $X$, i.e.,
 $$K_0^G(X):= K_0(\Coh^G(X)).$$
 Specifically, for a point $\pt=\Spec \mathbb{C}$ with trivial $G$-action, we obtain
 $$\Rpt(G):= K_0^G(\pt)=K_0(\Rep(G))$$
-the representation ring of group $G$.
+the representation ring\index{representation ring} of group $G$.
 
 We may omit $0$ for convenience.
 \end{defn}
@@ -230,7 +230,7 @@ $$\Rpt(N) \cong \Rpt(\Id) \cong \mathbb{Z} \qquad \Rpt(B) \cong \Rpt(T) \cong \m
 \begin{eg}\label{eg:K-initial-4}
 By \cite[Theorem 6.1.4]{chriss1997representation},
 $$\Rpt(\GL_n) \cong \Rpt(T)^{W} \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_n^{\pm 1} \right]^{S_n}.$$
-This can be viewed as an analogue of the Chevalley restriction theorem. 
+This can be viewed as an analogue of the Chevalley restriction theorem. \index{Chevalley restriction theorem!for K-theory@for $K$-theory}
 \end{eg}
 
 From these examples we already see the difficulty of computing $K$-theories. Therefore, a series of properties of $K$-theories are definitely needed for computations. To state these properties, we need to define some tools in $K$-theory.
@@ -312,7 +312,7 @@ For two $G$-varieties $X$ and $Y$, define a functor
 $$\boxtimes: \Coh^G(X) \times \Coh^G(Y) \longrightarrow \Coh^G(X \times Y) \qquad (\mathcal{F},\mathcal{G}) \longmapsto \mathcal{F} \boxtimes \mathcal{G}$$
 where
 $$\mathcal{F} \boxtimes \mathcal{G}:=p_X^*\mathcal{F} \otimes p_Y^*\mathcal{G}, \qquad \text{$p_X$, $p_Y$ are projections.}\hspace{-40mm}  $$
-$\boxtimes$ is called the \textbf{external tensor product}.
+$\boxtimes$ is called the \textbf{external tensor product}\index{tensor product!external tensor product}.
 \end{defn}
 \begin{remark}\label{rmk:ext_tensor_product}
 For $G$-variety $X$ and $\mathcal{F}$, $\mathcal{F}' \in \Coh^G(X)$, let $\Delta: X \hookrightarrow X \times X$ be the diagonal embedding. Then
@@ -366,7 +366,7 @@ When $f: Y \longrightarrow X$ is an open embedding, the non-derived pullback $f^
 In practice, the varieties we consider are not smooth, but always embed in some ambiance spaces which are smooth.
 
 \begin{defn}[Restriction with supports]
-For a triple $(X,Y,f)$ satisfying assumption \eqref{eq:assumption1}, and a $G$-equivariant closed subvariety $Z$ of $X$, the triple $\left(Z,f^{-1}(Z),f\big|_{f^{-1}(Z)}  \right)$ is called a restriction with supports of $(X,Y,f)$.
+For a triple $(X,Y,f)$ satisfying assumption \eqref{eq:assumption1}, and a $G$-equivariant closed subvariety $Z$ of $X$, the triple $\left(Z,f^{-1}(Z),f\big|_{f^{-1}(Z)}  \right)$ is called a restriction with supports\index{restriction with supports} of $(X,Y,f)$.
 \end{defn}
 We can now define pullback of $f$ in the following assumption:
 \begin{equation}\label{eq:assumption2}
@@ -418,7 +418,7 @@ and the pullback is defined as
 The diagram \eqref{eq:pullback_with_supports} of $K$-group is usually not commutative. In fact, we will state the excess base change in Section \ref{sec:statement_localization}, in which the Euler class measures the failure of diagram to be commutative. We draw the dashed arrow for $h^{*}$ to emphasize this noncommutativity.
 \end{warning}
 
-\begin{defn}[Tensor product with supports/Intersection product]
+\begin{defn}[Tensor product with supports/Intersection product]\index{tensor product!with supports}\index{intersection product|see{tensor product with supports}}
 Let $X$ be a smooth $G$-variety, and $Z$, $Z' \subseteq X$ be two closed $G$-subvarieties. The tensor product with supports is defined as
 % https://q.uiver.app/?q=WzAsMyxbMiwwLCJLXkcoWiBcXGNhcCBaJykiXSxbMSwwLCJLXkcoWiBcXHRpbWVzIFonKSJdLFswLDAsIlxcb3RpbWVzOkteRyhaKSBcXHRpbWVzIEteRyhaJykiXSxbMSwwLCJcXERlbHRhXioiXSxbMiwxLCJcXGJveHRpbWVzIl1d
 \[\begin{tikzcd}
@@ -483,7 +483,7 @@ After that, whenever we see an isomorphism of $K$-theories, we need to specify w
 
 \section{Thom isomorphism}\label{sec:Thom_isomorphism}
 In this section we state Thom isomorphism theorem, which is an analogy of Poincaré lemma in $K$-theory.
-\begin{proposition}[{Thom isomorphism, \cite[Theorem 5.4.17]{chriss1997representation}}]
+\begin{proposition}[{Thom isomorphism, \cite[Theorem 5.4.17]{chriss1997representation}}]\index{Thom isomorphism}
 Let $X$ be a $G$-variety, $\pi: E \longrightarrow X$ be a $G$-equivariant affine bundle on $X$. The pullback 
 $$\pi^*: K^G(X) \longrightarrow K^G(E)$$
 is an isomorphism of $K$-theories as $\Rpt(G)$-modules.
@@ -501,7 +501,7 @@ as an $\Rpt(G)$-module.
 \subsection{Balanced product}\label{subsec:balanced_product}
 Before stating the induction isomorphism, let us recall one basic construction of spaces: the balanced product.
 \begin{defn}[Balanced product]
-Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety. The balanced product of $G$ and $X$ over $H$ is defined as
+Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety. The balanced product\index{balanced product} of $G$ and $X$ over $H$ is defined as
 $$G \times^H X :=(G \times X)/\sim$$
 where
 $$(gh,x) \sim (g,hx) \qquad \text{ for any $g \in G$, $h \in H$, $x \in X$.}$$
@@ -522,7 +522,7 @@ under this isomorphism.
 \end{eg}
 \subsection{Statement}
 
-\begin{proposition}[{Induction isomorphism, \cite[5.2.16]{chriss1997representation}}]\label{prop:induction_isomorphism}
+\begin{proposition}[{Induction isomorphism, \cite[5.2.16]{chriss1997representation}}]\label{prop:induction_isomorphism}\index{induction isomorphism}
 Let $H \subseteq G$ be a closed algebraic subgroup and $X$ be an $H$-variety, we have a Cartesian diagram of $H$-varieties
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJYPUggXFx0aW1lc15IWCJdLFsxLDAsIkcgXFx0aW1lc15IWCJdLFswLDEsIlxccHQ9SC9IIl0sWzEsMSwiRy9IIl0sWzAsMl0sWzIsMywiXFxpb3RhX3tcXHB0fSJdLFsxLDMsIlxccGkiXSxbMCwxLCJcXGlvdGFfWCJdXQ==
 \[\begin{tikzcd}
@@ -573,7 +573,7 @@ In the next section we will explore how to reduce $B$-equivariant $K$-theory to 
 \section{Reduction}\label{sec:reduction}
 Let $P = M \ltimes U$ be a linear algebraic group in this section, where $M$ is reductive and $U=R_u(M)$ is the unipotent radical of $P$.
 
-\begin{proposition}[{Reduction isomorphism, \cite[5.2.18]{chriss1997representation} }]\label{prop:reduction_isomorphism}
+\begin{proposition}[{Reduction isomorphism, \cite[5.2.18]{chriss1997representation}}]\label{prop:reduction_isomorphism}\index{reduction isomorphism}
 For any $P$-variety $X$, the forgetful map
 $$K^P(X) \longrightarrow K^M(X)$$
 is an isomorphism as $\Rpt(M)$-modules. (and as algebras for $\otimes$-product, when $X$ is smooth)
@@ -591,7 +591,7 @@ Nearly all the abstract results for $K$-theory have a corresponding cohomology t
 \subsection{$G$-equivariant cohomology $H_G^* (X; \mathbb{Q})$}
 
 \begin{defn}[{$G$-equivariant cohomology, \cite[Definition 2.7]{przezdziecki2015geometric}}]\label{def:equivariant_cohomology}
-For a $G$-variety $X$, the $G$-equivariant cohomology is defined as the (singular) cohomology ring of the balanced product space $\EGG G \times^G X$, i.e.,
+For a $G$-variety $X$, the $G$-equivariant cohomology\index{equivariant cohomology} is defined as the (singular) cohomology ring of the balanced product space $\EGG G \times^G X$, i.e.,
 $$H_G^* (X; \mathbb{Q}):= H^* \!\left(\EGG G \times^G X; \mathbb{Q}\right).$$
 Specifically, for a point $\{\pt\}=\Spec \mathbb{C}$ with trivial $G$-action, denote
 $$\Spt(G):= H_G^* \big(\{\pt\}; \mathbb{Q}\big)=H^* (\BGG G; \mathbb{Q})$$
@@ -634,7 +634,7 @@ $$\Spt(N) \cong \Spt(\Id) \cong \mathbb{Q} \qquad \Spt(B) \cong \Spt(T) \cong \m
 For group $\GL_n$, $\BGG \GL_n=\Gr(n,\infty)$, so
 $$\Spt(\GL_n)=H^*\!\left(\Gr(n,\infty) ; \mathbb{Q}\right) \cong \mathbb{Q}[\sigma_1,\ldots,\sigma_n] \qquad \deg \sigma_j=2j$$
 
-We also have the Chevalley restriction theorem in the version of cohomology theory. In this case, it says
+We also have the Chevalley restriction theorem\index{Chevalley restriction theorem!in cohomology theory} in the version of cohomology theory. In this case, it says
 $$\Spt(\GL_n) \cong \Spt(T)^{W} \cong \mathbb{Q}\!\left[ \lambda_1,\ldots,\lambda_n \right]^{S_n}.$$
 \end{eg}
 

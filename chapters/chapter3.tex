@@ -3,7 +3,7 @@
 In this chapter, we state the cellular fibration theorem \ref{thm:cellular_fibration}, and apply it to get the module structure of $K$-groups, as shown in Table \ref{table:module_initial}, \ref{table:module_relative} and \ref{table:module_absolute}.
 \section{Statement}
 We first state one general theorem, and then apply it repeatly to get the cellular fibration theorem.
-\begin{theorem}[{Glueing theorem, \cite[Lemma 5.5.1(a)]{chriss1997representation}}]\label{thm:glueing_theorem}
+\begin{theorem}[{Glueing theorem, \cite[Lemma 5.5.1(a)]{chriss1997representation}}]\label{thm:glueing_theorem}\index{glueing theorem}
 Suppose the triple $(X,Y,\pi)$ satisfies assumption \eqref{eq:assumption2}. For a $G$-equivariant closed embedding $i:Z \hookrightarrow Y$, define $U:=Y \smallsetminus Z$, and $j:U \hookrightarrow Y$ as the open immersion, as follows.
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJaIl0sWzEsMCwiWSJdLFsyLDAsIlUiXSxbMSwxLCJYIl0sWzAsMSwiaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzEsMywiXFxwaSJdXQ==
 \[\begin{tikzcd}
@@ -56,14 +56,14 @@ where $\iota_{\overline{U}}$, $\pi\big|_{\overline{U}}$ are defined in the follo
 In practice, we will use Theorem \ref{thm:glueing_theorem} by repetition.
 
 \begin{defn}[Cellular fibration]
-Let $\pi:E \longrightarrow X$ be a $G$-equivariant morphism satisfying the assumption \eqref{eq:assumption2}. A ($G$-equivariant) \textbf{cellular fibration structure} of $E$ is a fibration of closed $G$-equivariant subvarieties
+Let $\pi:E \longrightarrow X$ be a $G$-equivariant morphism satisfying the assumption \eqref{eq:assumption2}. A ($G$-equivariant) \textbf{cellular fibration structure}\index{cellular fibration structure} of $E$ is a fibration of closed $G$-equivariant subvarieties
 $$\varnothing =E_0 \subseteq E_1 \subseteq \cdots \subseteq E_k=E$$
 such that $\pi_j:=\pi\big|_{E_j \smallsetminus E_{j-1}}: E_j \smallsetminus E_{j-1} \longrightarrow X$ is a $G$-equivariant affine bundle over $X$, for any $j \in \{1,\ldots,k \}$.
 
-When $X=\pt$, this filtration is called a \textbf{cellular decomposition} of $E$.
+When $X=\pt$, this filtration is called a \textbf{cellular decomposition}\index{cellular decomposition} of $E$.
 \end{defn}
 
-\begin{theorem}[{Cellular fibration, \cite[Lemma 5.5.1]{chriss1997representation}}]\label{thm:cellular_fibration}
+\begin{theorem}[{Cellular fibration theorem, \cite[Lemma 5.5.1]{chriss1997representation}}]\label{thm:cellular_fibration}\index{cellular fibration theorem}
 Suppose a $G$-equivariant morphism $\pi: E \longrightarrow X$ has a cellular fibration structure
 $$\varnothing =E_0 \subseteq E_1 \subseteq \cdots \subseteq E_k=E$$
 and $K^G(X)$ is a free $\Rpt(G)$-module with basis $\{y_1,\ldots,y_m \}$. 

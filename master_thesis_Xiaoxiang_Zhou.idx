@@ -14,7 +14,6 @@
 \indexentry{Repd(Q)@$\Rep_{\dimvec{d}}(Q)$|hyperpage}{14}
 \indexentry{flag!of quiver representation|hyperpage}{14}
 \indexentry{dimension vector!of flag-type|hyperpage}{15}
-\indexentry{ww1@$\ww$|hyperpage}{16}
 \indexentry{simple reflection|hyperpage}{16}
 \indexentry{algebraic group!absolute algebraic group|hyperpage}{19}
 \indexentry{algebraic group!relative algebraic group|hyperpage}{19}
@@ -27,3 +26,65 @@
 \indexentry{twisted action|hyperpage}{25}
 \indexentry{stratification!of incidence variety|hyperpage}{28}
 \indexentry{tangent space!of $T$-fixed points|hyperpage}{31}
+\indexentry{equivariant sheaf|hyperpage}{33}
+\indexentry{equivariant K-theory@equivariant $K$-theory|hyperpage}{34}
+\indexentry{representation ring|hyperpage}{34}
+\indexentry{Chevalley restriction theorem!for K-theory@for $K$-theory|hyperpage}{37}
+\indexentry{tensor product!external tensor product|hyperpage}{38}
+\indexentry{restriction with supports|hyperpage}{39}
+\indexentry{tensor product!with supports|hyperpage}{40}
+\indexentry{intersection product|hyperindexformat{\see{tensor product with supports}}}{40}
+\indexentry{Thom isomorphism|hyperpage}{41}
+\indexentry{balanced product|hyperpage}{41}
+\indexentry{induction isomorphism|hyperpage}{42}
+\indexentry{reduction isomorphism|hyperpage}{42}
+\indexentry{equivariant cohomology|hyperpage}{43}
+\indexentry{Chevalley restriction theorem!in cohomology theory|hyperpage}{44}
+\indexentry{glueing theorem|hyperpage}{45}
+\indexentry{cellular fibration structure|hyperpage}{46}
+\indexentry{cellular decomposition|hyperpage}{46}
+\indexentry{cellular fibration theorem|hyperpage}{46}
+\indexentry{Poincaré-Hopf theorem|hyperpage}{51}
+\indexentry{characteristic class!Euler class|hyperpage}{51}
+\indexentry{excess base change formula|hyperpage}{52}
+\indexentry{localization!fake localization formula|hyperpage}{53}
+\indexentry{localization!localization theorem|hyperpage}{53}
+\indexentry{localization!localization formula|hyperpage}{53}
+\indexentry{convolution product!of varieties|hyperpage}{57}
+\indexentry{convolution product!of K-theory@of $K$-theory|hyperpage}{58}
+\indexentry{excess intersection formula|hyperpage}{59}
+\indexentry{projection formula|hyperpage}{59}
+\indexentry{Demazure operator|hyperpage}{63}
+\indexentry{incidence variety!for strict flag|hyperpage}{67}
+\indexentry{diagram of strands|hyperpage}{69}
+\indexentry{KLR algebra|hyperpage}{70}
+\indexentry{NilHecke algebra|hyperpage}{70}
+\indexentry{augmentation ideal|hyperpage}{73}
+\indexentry{Atiyah--Segal completion theorem|hyperpage}{74}
+\indexentry{Characteristic class!Chern class|hyperpage}{74}
+\indexentry{Characteristic class!Todd class|hyperpage}{74}
+\indexentry{extended quiver|hyperpage}{77}
+\indexentry{flag variety!partial flag variety|hyperpage}{78}
+\indexentry{Grassmannian|hyperpage}{78}
+\indexentry{canonical functor|hyperpage}{79}
+\indexentry{virtual arrow|hyperpage}{80}
+\indexentry{Euler form|hyperpage}{81}
+\indexentry{Euler form!homological interpretation|hyperpage}{82}
+\indexentry{Auslander--Reiten theory|hyperpage}{83}
+\indexentry{indecomposable module|hyperpage}{83}
+\indexentry{Gabriel's theorem|hyperpage}{83}
+\indexentry{minimal imaginary root|hyperpage}{83}
+\indexentry{irreducible morphism|hyperpage}{83}
+\indexentry{Nakayama functor|hyperpage}{84}
+\indexentry{Auslander--Reiten translation|hyperpage}{84}
+\indexentry{stable module category|hyperpage}{84}
+\indexentry{right almost split|hyperpage}{85}
+\indexentry{Auslander–Reiten sequence|hyperpage}{85}
+\indexentry{sectional morphism|hyperpage}{85}
+\indexentry{sectional morphism!sectional mono|hyperpage}{85}
+\indexentry{sectional morphism!minimal sectional mono|hyperpage}{85}
+\indexentry{preprojective representation|hyperpage}{85}
+\indexentry{preinjective representation|hyperpage}{85}
+\indexentry{order of representation|hyperpage}{91}
+\indexentry{starting function|hyperindexformat{\see{order of representation}}}{91}
+\indexentry{quasi-simple representation|hyperpage}{98}

@@ -9,7 +9,7 @@ In this section we generalize Theorem \ref{thm:Demazure_operator_1} in different
 
 \subsection{Quiver with loops}
 In this section we still assume the quiver has no cycles. For quiver with loops, we need to redefine Definition \ref{def:incidence_variety} in a strict version:
-\begin{defn}[Incidence variety for strict flags]\label{def:incidence_variety_str}
+\begin{defn}[Incidence variety for strict flags]\label{def:incidence_variety_str}\index{incidence variety!for strict flag}
 For a quiver $Q$ with flag-type dimension vector $\ftdimvec{d}$, define
 \begin{equation*}
 \begin{aligned}
@@ -83,7 +83,7 @@ and similar for the equivariant cohomology:
 \end{equation*}
 \end{theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{From formula to diagram}\label{sec:diagram}
+\section{From formula to diagram}\label{sec:diagram}\index{diagram of strands}
 This section is designed for showing examples. Recall Proposition \ref{prop:5-case-0.05} that every $\ftdimvec{d}$ or $u$ corresponds to an ordered set of colored points. It can be imagined that the lines connecting two ordered sets represents one element in $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$. Actually, we draw the picture of generators of $K^{G_{\dimvec{d}}}(\St_{\dimvec{d}})$ in Figure \ref{fig:generators}, where
 $$e_{i}^{u}=:e_{u^{-1}(i)} \left[ \RRep_{u}(Q) \right]^{G_{\dimvec{d}}} \in K^{G_{\dimvec{d}}} \left( \RRep_{u}(Q) \right) \hookrightarrow K^{G_{\dimvec{d}}} \left( \St^{u,u} \right).$$
 
@@ -124,7 +124,7 @@ By Proposition \ref{prop:generators}, we only need to show, for any $g \in \Rpt(
 $$D_i^{u,u'} \fakestar f^{u'} \star g^{u'}= (s_i f)^{u} \fakestar D_i^{u,u'} \star g^{u'} +  \delta_{u,u'}\left[\left(s_i f-f\right) \frac{e_{i+1}}{e_i}  \left(\displaystyle 1-\frac{e_{i+1}}{e_{i}}\right)^{k-1} \right]^{u} \star g^{u'}.$$
 Now we apply Theorem \ref{thm:Demazure_operator_1}. The same argument works for equivariant cohomology.
 \end{proof}
-Lemma \ref{lem:convolution_product_1} explains ``what happens when a point walk through a crossing". The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR algebra}. The relations of the KLR algebra can be found in \cite[Definition 3.2.2]{seiffarth2017klr}, and we will only show the relations of $K$-theoretic version.
+Lemma \ref{lem:convolution_product_1} explains ``what happens when a point walk through a crossing". The convolution algebra $H_{G_{\dimvec{d}}}^{*}(\St_{\dimvec{d}})$ is called the \textbf{KLR algebra}\index{KLR algebra}. The relations of the KLR algebra can be found in \cite[Definition 3.2.2]{seiffarth2017klr}, and we will only show the relations of $K$-theoretic version.
 \begin{warning}
 In the following examples, $\fakestar$ is often omitted for simplicity.
 \end{warning}
@@ -132,7 +132,7 @@ In the following examples, $\fakestar$ is often omitted for simplicity.
 We begin with the trivial quiver, which has only one vertex and no arrows. Everything is simplified: 
 $$\WWd=\Wd,\quad \MinWd =\{\Id \}, \quad \RRep_{\dimvec{d}}(Q) \cong \mathcal{F}_{\dimvec{d}}, \quad \St_{\dimvec{d}} \cong\mathcal{F}_{\dimvec{d}} \times \mathcal{F}_{\dimvec{d}},$$
 $$K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}}) \cong \mathbb{Z}\!\left[ e_1^{\pm 1},\ldots,e_{\abdimvec{d}}^{\pm 1} \right], \qquad H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}}) \cong \mathbb{Q}[\lambda_1,\ldots,\lambda_{\abdimvec{d}}].$$
-In this case, $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{$\boldsymbol{K}$-theoretic NilHecke algebra}, and $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{(cohomological) NilHecke algebra}.
+In this case, $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{$\boldsymbol{K}$-theoretic NilHecke algebra}, and $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$ is called the \textbf{(cohomological) NilHecke algebra}.\index{NilHecke algebra}
 
 The formulas in Theorem \ref{thm:Demazure_operator_1} and Lemma \ref{lem:convolution_product_1} are simplified: (superscripts are omitted, and functions $f$ in four formulas lie in $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}})$, $K^{G_{\dimvec{d}}} (\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$, $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}})$ and $H_{G_{\dimvec{d}}}^{*}(\mathcal{F}_{\dimvec{d}} \times  \mathcal{F}_{\dimvec{d}})$, respectively)
 \begin{equation*}
@@ -248,14 +248,14 @@ Different cohomology theories are connected in a incredible way. In this section
 
 For an algebraic group $G$, we define
 $$I:= \ker \left(\Rpt(G) \longrightarrow \Rpt(\Id) \right) \qquad J:= \ker \left(\Spt(G) \longrightarrow \Spt(\Id) \right)$$
-as the augmentation ideals in $\Rpt(G)$ and $\Spt(G)$, respectively. We define
+as the augmentation ideals\index{augmentation ideal} in $\Rpt(G)$ and $\Spt(G)$, respectively. We define
 $$K^G(X)_I^{\wedge}:= \varprojlim_n K^G(X)/\left(I^n K^G(X) \right) \qquad H_G^{*}(X)_J^{\wedge}:= \varprojlim_n H_G^{*}(X)/\left(J^n H_G^{*}(X) \right)$$
 as the $I$-adic (resp. $J$-adic) completion.
 
-\begin{theorem}[Atiyah--Segal completion theorem]\label{thm:Atiyah--Segal_completion_theorem}
+\begin{theorem}[Atiyah--Segal completion theorem]\label{thm:Atiyah--Segal_completion_theorem}\index{Atiyah--Segal completion theorem}
 For a $G$-variety $X$, the Atiyah--Segal map from the equivariant $K$-theory to the ordinary topological $K$-theory
 $$\AS:K^G(X)_I^{\wedge} \longrightarrow K(\EGG G \times^G X ) $$
-is an isomorphism, and the (cohomology) Chern class map (defined in \cite[5.8]{chriss1997representation})
+is an isomorphism, and the (cohomology) Chern class map\index{Characteristic class!Chern class} (defined in \cite[5.8]{chriss1997representation})
 $$\chern: K(\EGG G \times^G X ) \longrightarrow H_G^{*}(X)_J^{\wedge}$$
 is an isomorphism after base change to $\mathbb{Q}$.
 \end{theorem}
@@ -331,6 +331,6 @@ Under this isomorphism, the Demazure operator $D_i$ is sent to $\partial_i \fake
 \end{equation}
 \end{eg}
 
-As a quotient of two (different types of) Euler class, the \textbf{Todd class}
+As a quotient of two (different types of) Euler class, the \textbf{Todd class}\index{Characteristic class!Todd class}
 $$\Td_i:=\frac{\lambda_{i}-\lambda_{i+1}}{1-e^{\lambda_{i}-\lambda_{i+1}}}$$
 measures the noncommutativity of \eqref{eq:Todd_class} when $\partial_i \fakestar \displaystyle\frac{\lambda_{i}-\lambda_{i+1}}{1-\exp(\lambda_{i}-\lambda_{i+1})}$ is replaced by $\partial_i$.

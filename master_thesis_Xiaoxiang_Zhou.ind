@@ -4,17 +4,54 @@
   \item algebraic group
     \subitem absolute algebraic group, \hyperpage{19}
     \subitem relative algebraic group, \hyperpage{19}
+  \item Atiyah--Segal completion theorem, \hyperpage{74}
+  \item augmentation ideal, \hyperpage{73}
+  \item Auslander--Reiten theory, \hyperpage{83}
+  \item Auslander--Reiten translation, \hyperpage{84}
+  \item Auslander–Reiten sequence, \hyperpage{85}
 
   \indexspace
 
+  \item balanced product, \hyperpage{41}
+
+  \indexspace
+
+  \item canonical functor, \hyperpage{79}
+  \item cellular decomposition, \hyperpage{46}
+  \item cellular fibration structure, \hyperpage{46}
+  \item cellular fibration theorem, \hyperpage{46}
+  \item Characteristic class
+    \subitem Chern class, \hyperpage{74}
+    \subitem Todd class, \hyperpage{74}
+  \item characteristic class
+    \subitem Euler class, \hyperpage{51}
+  \item Chevalley restriction theorem
+    \subitem for $K$-theory, \hyperpage{37}
+    \subitem in cohomology theory, \hyperpage{44}
   \item complete flag variety, \hyperpage{9}
+  \item convolution product
+    \subitem of $K$-theory, \hyperpage{58}
+    \subitem of varieties, \hyperpage{57}
 
   \indexspace
 
+  \item Demazure operator, \hyperpage{63}
+  \item diagram of strands, \hyperpage{69}
   \item dimension vector
     \subitem of $Q$-vector space, \hyperpage{14}
     \subitem of flag-type, \hyperpage{15}
     \subitem total dimension vector, \hyperpage{14}
+
+  \indexspace
+
+  \item equivariant cohomology, \hyperpage{43}
+  \item equivariant $K$-theory, \hyperpage{34}
+  \item equivariant sheaf, \hyperpage{33}
+  \item Euler form, \hyperpage{81}
+    \subitem homological interpretation, \hyperpage{82}
+  \item excess base change formula, \hyperpage{52}
+  \item excess intersection formula, \hyperpage{59}
+  \item extended quiver, \hyperpage{77}
 
   \indexspace
 
@@ -24,30 +61,85 @@
     \subitem standard flag, \hyperpage{22}
   \item flag variety
     \subitem absolute complete flag variety, \hyperpage{21}
+    \subitem partial flag variety, \hyperpage{78}
     \subitem relative complete flag variety, \hyperpage{22}
 
   \indexspace
 
+  \item Gabriel's theorem, \hyperpage{83}
+  \item glueing theorem, \hyperpage{45}
+  \item Grassmannian, \hyperpage{78}
+
+  \indexspace
+
   \item incidence variety, \hyperpage{23}
+    \subitem for strict flag, \hyperpage{67}
+  \item indecomposable module, \hyperpage{83}
+  \item induction isomorphism, \hyperpage{42}
+  \item intersection product, 
+		\hyperindexformat{\see{tensor product with supports}}{40}
+  \item irreducible morphism, \hyperpage{83}
+
+  \indexspace
+
+  \item KLR algebra, \hyperpage{70}
+
+  \indexspace
+
+  \item localization
+    \subitem fake localization formula, \hyperpage{53}
+    \subitem localization formula, \hyperpage{53}
+    \subitem localization theorem, \hyperpage{53}
+
+  \indexspace
+
+  \item minimal imaginary root, \hyperpage{83}
+
+  \indexspace
+
+  \item Nakayama functor, \hyperpage{84}
+  \item NilHecke algebra, \hyperpage{70}
+
+  \indexspace
+
+  \item order of representation, \hyperpage{91}
+
+  \indexspace
+
+  \item Poincaré-Hopf theorem, \hyperpage{51}
+  \item preinjective representation, \hyperpage{85}
+  \item preprojective representation, \hyperpage{85}
+  \item projection formula, \hyperpage{59}
 
   \indexspace
 
   \item $Q$-vector space, \hyperpage{14}
+  \item quasi-simple representation, \hyperpage{98}
   \item quiver, \hyperpage{13}
   \item quiver representation, \hyperpage{13}
 
   \indexspace
 
+  \item reduction isomorphism, \hyperpage{42}
   \item $\Rep_{\dimvec{d}}(Q)$, \hyperpage{14}
   \item $\rep(Q)$, \hyperpage{13}
+  \item representation ring, \hyperpage{34}
+  \item restriction with supports, \hyperpage{39}
+  \item right almost split, \hyperpage{85}
 
   \indexspace
 
   \item Schubert cell, \hyperpage{10}
   \item Schubert variety, \hyperpage{11}
+  \item sectional morphism, \hyperpage{85}
+    \subitem minimal sectional mono, \hyperpage{85}
+    \subitem sectional mono, \hyperpage{85}
   \item simple reflection, \hyperpage{16}
   \item space of representations, 
 		\hyperindexformat{\see{$\Rep_{\dimvec{d}}(Q)$}}{14}
+  \item stable module category, \hyperpage{84}
+  \item starting function, 
+		\hyperindexformat{\see{order of representation}}{91}
   \item Steinberg variety, \hyperpage{24}
   \item stratification
     \subitem of flag variety, \hyperpage{25}
@@ -57,15 +149,16 @@
 
   \item tangent space
     \subitem of $T$-fixed points, \hyperpage{31}
+  \item tensor product
+    \subitem external tensor product, \hyperpage{38}
+    \subitem with supports, \hyperpage{40}
+  \item Thom isomorphism, \hyperpage{41}
   \item twisted action, \hyperpage{25}
 
   \indexspace
 
   \item vector space with quiver partition, 
 		\hyperindexformat{\see{$Q$-vector space}}{14}
-
-  \indexspace
-
-  \item $\ww$, \hyperpage{16}
+  \item virtual arrow, \hyperpage{80}
 
 \end{theindex}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  7 MAR 2023 18:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  7 MAR 2023 23:21
 entering extended mode
 **./master_thesis_Xiaoxiang_Zhou.tex
 (master_thesis_Xiaoxiang_Zhou.tex
@@ -2178,11 +2178,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
 [57
 
 
@@ -2427,12 +2422,22 @@ File: figures/affine_paving/E8graypic4.pdf Graphic file (type pdf)
 \tf@lof=\write9
 \openout9 = `master_thesis_Xiaoxiang_Zhou.lof'.
 
- (master_thesis_Xiaoxiang_Zhou.ind [99
+ [99
+
+] [100
 
 ]
-[100
+(master_thesis_Xiaoxiang_Zhou.ind
+Overfull \hbox (1.7808pt too wide) in paragraph at lines 79--81
+[]\TU/lmr/m/n/10.95 intersection product, \TU/lmr/m/it/10.95 see \TU/lmr/m/n/10
+.95 tensor product with
+ []
 
-]) (master_thesis_Xiaoxiang_Zhou.bbl [101
+[101
+
+] [102
+
+]) (master_thesis_Xiaoxiang_Zhou.bbl [103
 
 
 ]
@@ -2441,27 +2446,27 @@ Underfull \hbox (badness 2213) in paragraph at lines 135--138
 \TU/lmr/m/it/10.95 arXiv preprint
  []
 
-) [102]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
+) [104]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
  (master_thesis_Xiaoxiang_Zhou.aux (chapters/contents.aux)
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
 (chapters/chapter6.aux) (chapters/chapter7.aux) (chapters/affinepaving.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 333.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 334.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
 Package rerunfilecheck Info: File `master_thesis_Xiaoxiang_Zhou.out' has not ch
 anged.
 (rerunfilecheck)             Checksum: D2380D22B19BEA98960D36947A9434F2.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 45227 strings out of 427748
- 864618 string characters out of 3150981
- 990477 words of memory out of 3000000
- 48468 multiletter control sequences out of 15000+200000
+ 45228 strings out of 427748
+ 864647 string characters out of 3150981
+ 990544 words of memory out of 3000000
+ 48469 multiletter control sequences out of 15000+200000
  570392 words of font info for 196 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,28n,96p,4130b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on master_thesis_Xiaoxiang_Zhou.pdf (104 pages).
+Output written on master_thesis_Xiaoxiang_Zhou.pdf (106 pages).

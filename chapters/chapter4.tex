@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Localization theorem}\label{chap:localization}
-We have already gotten the module structure of $K$-theories. However, this basis behaves badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because ``the information is not concentrated enough". In this chapter we will introduce another basis, which ``concentrates information in the $T$-fixed points". The localization formula describes the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem.
+We have already gotten the module structure of $K$-theories. However, this basis behaves badly with the convolution product (will be introduced in Section \ref{sec:convolution}), because ``the information is not concentrated enough". In this chapter we will introduce another basis, which ``concentrates information in the $T$-fixed points". The localization formula describes the transition matrix of two basis. Readers with topological background can compare the localization theorem with the Poincaré-Hopf theorem\index{Poincaré-Hopf theorem}.
 
 
 \section{Euler class}\label{sec:euler_class}
 In the category of coherent sheaf, the ``proper base change" is usually not true. In order to describe the defect of the diagram, we introduce the Euler class.
 
 \begin{defn}[Euler class, for $K$-group]
-Let $X$ be a $G$-variety, and $\mathcal{T}$ be a $G$-equivariant vector bundle over $X$. The Euler class is defined by
+Let $X$ be a $G$-variety, and $\mathcal{T}$ be a $G$-equivariant vector bundle over $X$. The Euler class\index{characteristic class!Euler class} is defined by
 $$\eu(\mathcal{T}):= \sum_{k=0}^{\infty} (-1)^k \left[ \Lambda^{k} \mathcal{T}^* \right] \in K^G(X) $$
 \end{defn}
 
@@ -64,7 +64,7 @@ Let \eqref{eq:excess_base_change} be a Cartesian square of $G$-varieties, $\phi$
 \end{tikzcd}
 \end{equation}
 
-For any $\alpha \in K^G(Z)$, we have the \textbf{excess base change formula}:
+For any $\alpha \in K^G(Z)$, we have the \textbf{excess base change formula}\index{excess base change formula}:
 $$f^* \circ \varphi_{*}(\alpha)=\phi_{*} \left( \eu(\mathcal{T})\cdot g^*(\alpha)\rule{0mm}{4mm}  \right) \qquad \text{ in }K^{G}(Y)$$
 where the dot product of $\eu(\mathcal{T})$ is given by the tensor product in $K^G(W)$.
 
@@ -83,7 +83,7 @@ By applying Theorem \ref{thm:excess_base_change} to the Cartesian square \eqref{
 \end{tikzcd}
 \end{equation}
 
-\begin{proposition}[Fake localization formula]
+\begin{proposition}[Fake localization formula]\index{localization!fake localization formula}
 For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, let $i:X^T \longrightarrow X$ and $i_k: \{x_k\} \longrightarrow X$ be embeddings. For any $\beta \in K^T(X^T)$, $\beta_k \in K^T(\{x_k\})$, we have formulas
 $$i^*i_* \beta =\eu \left( \bigoplus_k T_{x_k}X \right) \cdot \beta \qquad i_{k}^*i_{k,*} \beta =\eu \left( T_{x_k}X \right) \cdot \beta_k.$$
 
@@ -99,7 +99,7 @@ This proposition explains some technical details in the localization theorem and
 \end{equation*}
 
 
-\begin{theorem}[{Localization theorem, \cite[Theorem 10.1]{przezdziecki2015geometric} or \cite[Corollary 5.11.3]{chriss1997representation}}] \label{thm:localization_theorem}
+\begin{theorem}[{Localization theorem, \cite[Theorem 10.1]{przezdziecki2015geometric} or \cite[Corollary 5.11.3]{chriss1997representation}}] \label{thm:localization_theorem}\index{localization!localization theorem}
 Let $X$ be a smooth $T$-variety,  $i:X^T \longrightarrow X$ be the embedding. The morphisms $i_*$, $i^*$ are isomorphisms after tensored over the fraction field, i.e.,
 % https://q.uiver.app/?q=WzAsNixbMSwwLCJcXEtjdXJsXlQoWCkiXSxbMCwwLCJcXEtjdXJsXlQoWF5UKSJdLFsyLDAsIlxcS2N1cmxeVChYXlQpIl0sWzAsMSwiXFxIY3VybF97VH1eeyp9KFheVCkiXSxbMSwxLCJcXEhjdXJsX3tUfV57Kn0oWCkiXSxbMiwxLCJcXEhjdXJsX3tUfV57Kn0oWF5UKSJdLFswLDIsImleKiJdLFszLDQsImlfKiJdLFs0LDUsImleKiJdLFsxLDAsImlfKiJdXQ==
 \[\begin{tikzcd}[row sep=0mm]
@@ -115,7 +115,7 @@ are isomorphism as $\mathcal{R}(T)$ or $\mathcal{S}(T)$-modules.
 
 The genuine localization formula is stated as follows.
 
-\begin{theorem}[{Localization formula, \cite[Theorem 10.2]{przezdziecki2015geometric} or \cite[Proposition 6]{edidin1998localization}}]\label{thm:localization_formula}
+\begin{theorem}[{Localization formula, \cite[Theorem 10.2]{przezdziecki2015geometric} or \cite[Proposition 6]{edidin1998localization}}]\label{thm:localization_formula}\index{localization!localization formula}
 For a smooth $T$-variety $X$ with finite fixed points $\{x_1,\ldots,x_m \}$, let $i_k: \{x_k\} \longrightarrow X$ be embeddings. For any $\alpha \in \Kcurl^T(X)$, we have
 $$\alpha= \sum_{k=1}^{m} \eta_k \cdot i_{k,*}i_{k}^* \alpha $$
 where $\eta_k:= \left(\!\rule{0mm}{3.5mm} \eu(T_{x_k}X) \right)^{-1} \in \Rptc(T)$.

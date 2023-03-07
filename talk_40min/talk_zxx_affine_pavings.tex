@@ -339,7 +339,7 @@
 %\setcounter{secnumdepth}{3}
 
 \allowdisplaybreaks
-
+\newcommand\scalemath[2]{\scalebox{#1}{$\displaystyle #2$}}
 
 
 % 设置图形文件的搜索路径
@@ -421,11 +421,12 @@ Fix a quiver $Q$ and $M \in \rep(Q)$,
 \end{equation*}
 \end{definition}
 \begin{eg}
-$Q= \bullet$, $M=\mathbb{C}^n$, $\ftdimvec{f}:=\left(
+$Q= \bullet$, $M=\mathbb{C}^n$, $\ftdimvec{f}:=\scalemath{0.7}
+{\left(
     \begin{smallmatrix}
-    n \\ \vphantom{\int\limits^x}\smash{\vdots} \\ 1
+    \scriptsize n \\ \vphantom{\int\limits^x}\smash{\vdots} \\ 1
     \end{smallmatrix}
-    \right)$
+    \right)}$
 \begin{equation*}
 \begin{aligned}
   \Flag_{d}(\mathbb{C}^n)=\;& \left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq \mathbb{C}^n  \right\}\hspace{-10mm}& \\ 

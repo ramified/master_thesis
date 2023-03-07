@@ -23,7 +23,7 @@ Throughout Chapter \ref{chap:flag=gr} and \ref{chap:affine_pavings}, $R$ is a $\
 In this section, we introduce the notion of extended quiver which allows to view partial flag varieties as quiver Grassmannians. Intuitively, a flag of quiver representations can be encoded as a subspace of a representation of the extended quiver.
 
 \begin{defn}[Extended quiver]
-For a quiver $Q$ and an integer $d \geqslant 1$, the extended quiver $Q_{d}$ is defined as follows:
+For a quiver $Q$ and an integer $d \geqslant 1$, the extended quiver\index{extended quiver} $Q_{d}$ is defined as follows:
 \begin{itemize}
 	\item The vertex set of $Q_d$ is defined as the Cartesian product of the vertex set of $Q$ and $\{1,\ldots,d\}$, i.e.,
 	$$v(Q_d)=v(Q) \times \{1,\ldots,d\}.$$
@@ -97,7 +97,7 @@ Similarly, we define the algebra $R_{d,\str}:= \mathbb{C}Q_{d,\str}/I$ for the s
 By abuse of notation, we often abbreviate $R_d$ and $R_{d,\str}$ by $R$. 
 \section{Canonical functor $\Phi$}
 We follow \cite[2.3]{maksimau2019flag} in this section with a few variations. 
-\begin{defn}[Partial flag variety]\label{def:pf}
+\begin{defn}[Partial flag variety]\label{def:pf}\index{flag variety!partial flag variety}
 For a quiver representation $X \in \rep(Q)$ and an integer $d \geqslant 1$, we define
 $$\Flagd(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X \right\}$$
 as the collection of all partial flags of length $d$, and call it the partial flag variety associated to $X$. 
@@ -108,11 +108,11 @@ $$\Flagdstr(X):=\left\{ 0 \subseteq M_1 \subseteq \cdots M_d \subseteq X\mid x.M
 as the collection of all strict partial flags of length $d$, and call it the strict partial flag variety associated to $X$. 
 \end{defn}
 \begin{defn}[Grassmannian]
-Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \catmod(R)$, the Grassmannian $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
+Let $R$ be the bounded quiver algebra defined in Definition \ref{def:pf} or \ref{def:spf}. For a module $T \in \catmod(R)$, the Grassmannian\index{Grassmannian} $\Gralg{R}(T)$ is defined as the set of all submodules of $T$, i.e.,
 $$\Gralg{R}(T):=\{T' \subseteq T \text{ as the submodule}  \}.$$
 \end{defn}
 \begin{defn}[Canonical functor $\Phi$]
-The canonical functor $\Phi:\rep(Q) \longrightarrow \catmod(R) $ is defined as follows:
+The canonical functor\index{canonical functor} $\Phi:\rep(Q) \longrightarrow \catmod(R) $ is defined as follows:
 \begin{itemize}
 \item $\left(\Phi(X)\right)_{(i,r)}:=X_i$;
 \item $\left(\Phi(X)\right)_{(i,r) \rightarrow (i,r+1)}:=\Id_{X_i}$;
@@ -168,7 +168,7 @@ is a finite set, and $s,t: va(Q_d) \longrightarrow v(Q_d)$ are maps defined by
 $$s\big((i\rightarrow j,r)\big)=(i,r) \qquad t \big((i\rightarrow j,r)\big)=(j,r+1).$$
 \end{defn}
 \begin{defn}[Virtual arrows of the quiver $Q_{d,\str}$]
-For $d \geqslant 2$, the virtual arrows of the quiver $Q_{d,\str}$ is defined as a triple $\big(va(Q_{d,\str}),s,t\big)$, where
+For $d \geqslant 2$, the virtual arrows\index{virtual arrow} of the quiver $Q_{d,\str}$ is defined as a triple $\big(va(Q_{d,\str}),s,t\big)$, where
 $$va(Q_{d,\str}):=a(Q) \times \{2,\ldots, d-1 \}$$
 is a finite set, and $s,t: va(Q_{d,\str}) \longrightarrow v(Q_{d,\str})$ are maps defined by
 $$s\big((i\rightarrow j,r)\big)=(i,r) \qquad t \big((i\rightarrow j,r)\big)=(j,r).$$
@@ -243,7 +243,7 @@ Let $R$ be a bounded quiver algebra defined in Definition \ref{def:bqa}. We deno
 \end{aligned}
 \end{equation*}
 
-For two dimension vectors $\ftdimvec{f},\ftdimvec{g}$ of $R$, the Euler form $\left< \ftdimvec{f},\ftdimvec{g}\right>_R$ is defined by
+For two dimension vectors $\ftdimvec{f},\ftdimvec{g}$ of $R$, the Euler form\index{Euler form} $\left< \ftdimvec{f},\ftdimvec{g}\right>_R$ is defined by
 	$$\left< \ftdimvec{f},\ftdimvec{g}\right>_R:= \sum_{i \in v(R)} f_ig_i - \sum_{b \in a(R)} f_{s(b)}g_{t(b)}+ \sum_{c \in va(R)} f_{s(c)}g_{t(c)}.$$
 \end{defn}
 \section{Ext-vanishing properties}
@@ -342,7 +342,7 @@ We will frequently use extension groups as well as long exact sequences, so we i
 \end{equation*}
 and write the Euler form as
 $$\left< T,T'\right>_R:= \sum_{i=0}^{\infty} (-1)^i [T,T']^i \quad=[T,T']-[T,T']^1+[T,T']^2.$$
-\begin{lemma}[Homological interpretation of the Euler form]
+\begin{lemma}[Homological interpretation of the Euler form]\index{Euler form!homological interpretation}
 	For two $R$-modules $T,T'$, we have
 	$$	\left< T,T'\right>_R = 	\left< \dimv T,\dimv T'\right>_R.$$
 \end{lemma}
@@ -358,21 +358,21 @@ Compute $\left< T,T'\right>_R$ by applying the functor $\Hom_R(-,T')$ to the sta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A crash course on Auslander--Reiten theory}\label{appendix:arth}
 
-In this section, we will introduce concepts in Auslander--Reiten theory one by one: indecomposable representation, irreducible morphism, Auslander--Reiten translation, Auslander--Reiten sequence, Auslander--Reiten quiver, and minimal sectional mono. The main references for the material covered in this section are \cite{crawley1992lectures,maksimau2019flag}.
+In this section, we will introduce concepts in Auslander--Reiten theory\index{Auslander--Reiten theory} one by one: indecomposable representation, irreducible morphism, Auslander--Reiten translation, Auslander--Reiten sequence, Auslander--Reiten quiver, and minimal sectional mono. The main references for the material covered in this section are \cite{crawley1992lectures,maksimau2019flag}.
 
 \begin{defn}[Indecomposable module]
-Fix an algebra $R$. A non-zero module $M \in \catmod(R)$ is called indecomposable if $M$ can not be written as a direct sum of two non-zero submodules. The set of all indecomposable modules is denoted by $\ind(R)$.
+Fix an algebra $R$. A non-zero module $M \in \catmod(R)$ is called indecomposable\index{indecomposable module} if $M$ can not be written as a direct sum of two non-zero submodules. The set of all indecomposable modules is denoted by $\ind(R)$.
 \end{defn}
 There are several descriptions of the indecomposable representations in special cases. For instance:
 \begin{itemize}
-\item By Gabriel's theorem \cite[Theorem  2.1]{article}, the functor $\dimv$ yields a bijection from the indecomposable representations of a Dynkin quiver to the positive roots of the associated Lie algebra.
+\item By Gabriel's theorem\index{Gabriel's theorem} \cite[Theorem  2.1]{article}, the functor $\dimv$ yields a bijection from the indecomposable representations of a Dynkin quiver to the positive roots of the associated Lie algebra.
 
 There is a unique indecomposable representation of maximal dimension vector which corresponds to the unique maximal positive root. This is shown in Table \ref{table:importantroots}.
 
 \item By \cite[Theorem 2, p34]{crawley1992lectures}, in the affine case, the functor $\dimv$ yields a surjective map from the indecomposable representations to the positive roots of the associated affine diagram. The map is $\infty$-to-$1$ when the root is imaginary, and is $1$-to-$1$ when the root is real.\footnote{The root $\alpha \in \dimv(Q)$ is called real if $\left< \alpha,\alpha \right>=1$, and called imaginary if $\left< \alpha,\alpha \right>=0$.}
 %See Jan's lecture notes about Theorem 11.4(Kac)
 
-We also have a unique minimal imaginary root $\delta$ which controls the whole indecomposable representation theory, as shown in Table \ref{table:importantroots}.
+We also have a unique minimal imaginary root\index{minimal imaginary root} $\delta$ which controls the whole indecomposable representation theory, as shown in Table \ref{table:importantroots}.
 
 \item All indecomposable representations of Dynkin quivers and all indecomposable representations of affine quivers corresponding to the positive real roots $\alpha$ with $\alpha < \delta$ or $\left< \alpha,\delta \right> \neq 0$ are rigid, i.e., $[M,M]^1=0$. They are also bricks, i.e., $[M,M]^1=0$ and $[M,M]=1$.\footnote{Any rigid indecomposable module of a hereditary algebra is a brick.}
 %This is a result coming from Jan Cor 15.2
@@ -502,7 +502,7 @@ $E_8$ & \begin{tikzcd}[sep=4mm]
 \vspace{3mm}
 \end{table}
 Indecomposable representations form the vertices of Auslander–Reiten quiver, while irreducible morphisms form the arrows.
-\begin{defn}[Irreducible morphism]
+\begin{defn}[Irreducible morphism]\index{irreducible morphism}
 Given two indecomposable representations $T,T' \in \catmod(R)$, let
 \begin{equation*}
 \begin{aligned}
@@ -521,7 +521,7 @@ be the subspace of $\rad(T,T')$. A morphism $f\in \Hom_{R}(T,T')$ is called irre
 The definition of irreducible morphism applies to any representation, and one can easily show that any irreducible morphism is either injective or surjective.
 
 \begin{defn}\label{def:Auslander--Reiten translation}
-Let $R=\mathbb{C}Q/I$ be a bounded quiver algebra. We define the Nakayama functor $\nu_R$, Auslander--Reiten translation $\tau_R$, and inverse Auslander--Reiten translation $\tau_R^{-1}$, as follows:
+Let $R=\mathbb{C}Q/I$ be a bounded quiver algebra. We define the Nakayama functor\index{Nakayama functor} $\nu_R$, Auslander--Reiten translation\index{Auslander--Reiten translation} $\tau_R$, and inverse Auslander--Reiten translation $\tau_R^{-1}$, as follows:
 % https://q.uiver.app/?q=WzAsMTIsWzAsMCwiXFxudV9SOiJdLFsxLDAsIlxcTW9kKFIpIl0sWzMsMCwiXFxNb2QoUikiXSxbMiwwLCJcXE1vZChSXntvcH0pIl0sWzEsMSwiXFxNb2Rkb3duKFIpIl0sWzMsMSwiXFxNb2R1cChSKSJdLFsyLDEsIlxcTW9kZG93bihSXntvcH0pIl0sWzAsMSwiXFx0YXVfUjoiXSxbMCwyLCJcXHRhdV9SXnstMX06Il0sWzMsMiwiXFxNb2Rkb3duKFIpIl0sWzIsMiwiXFxNb2Rkb3duKFJee29wfSkiXSxbMSwyLCJcXE1vZHVwKFIpIl0sWzEsMywiXFxIb21fUigtLF9SXFwhUikiXSxbMywyLCJcXEhvbV9LKC0sSykiXSxbNCw2LCJcXEV4dF4xX1IoLSxfUlxcIVIpIl0sWzYsNSwiXFxIb21fSygtLEspIl0sWzExLDEwLCJcXEhvbV9LKC0sSykiXSxbMTAsOSwiXFxFeHReMV97Ul57b3B9fSgtLFJfUikiXV0=
 \[\begin{tikzcd}[row sep=0mm, column sep=2cm]
 	{\nu_R:} &[-1.8cm] {\catmod(R)} & {\catmod(R^{op})} & {\catmod(R)}, \\
@@ -534,7 +534,7 @@ Let $R=\mathbb{C}Q/I$ be a bounded quiver algebra. We define the Nakayama functo
 	\arrow["{\Hom_\mathbb{C}(-,\mathbb{C})}", from=3-2, to=3-3]
 	\arrow["{\Ext^1_{R^{op}}(-,R_R)}", from=3-3, to=3-4]
 \end{tikzcd}\]
-Here $\Moddown(R)$ and $\Modup(R)$ denote the stable module categories. The objects are the same as in $\catmod(R)$, and their morphisms are modified by ``collapsing'' the morphisms passing through projective/injective modules to zero, i.e.,
+Here $\Moddown(R)$ and $\Modup(R)$ denote the stable module categories\index{stable module category}. The objects are the same as in $\catmod(R)$, and their morphisms are modified by ``collapsing'' the morphisms passing through projective/injective modules to zero, i.e.,
 \begin{equation*}
 \begin{aligned}
   \Mor_{\Moddown(R)}(T,T'):=\;& \Mor_{\catmod(R)}(T,T')/(f:T \rightarrow P \rightarrow T', P \text{ is projective}), \\ 
@@ -550,9 +550,9 @@ which is functorial for any $T,T' \in \catmod(R)$. Especially, when $T$ is not i
 
 For the Auslander–Reiten sequence there can be many equivalent definitions, and we only present one due to limitations of space. 
 \begin{defn}[Auslander–Reiten sequence]
-For $X \in \ind (R)$ non-projective, an epimorphism $g:E \longrightarrow X$ is called \textbf{right almost split} if $g$ is not split epi and every homomorphism $h:T \longrightarrow X$ which is not split epi factors through $E$. The short exact sequence 
+For $X \in \ind (R)$ non-projective, an epimorphism $g:E \longrightarrow X$ is called \textbf{right almost split}\index{right almost split} if $g$ is not split epi and every homomorphism $h:T \longrightarrow X$ which is not split epi factors through $E$. The short exact sequence 
 $$0 \longrightarrow \tau X \longrightarrow E \stackrel{g}{\longrightarrow} X \longrightarrow 0$$
-is called an Auslander–Reiten sequence if $g$ is right almost split.
+is called an Auslander–Reiten sequence\index{Auslander–Reiten sequence} if $g$ is right almost split.
 \end{defn}
 
 All the concepts introduced in this section can be clearly observed from the Auslander–Reiten quiver. In the Auslander–Reiten quiver the vertices are indecomposable representations, the arrows are irreducible morphisms among indecomposable representations, Auslander--Reiten translation is labeled as the dotted arrow, and the Auslander–Reiten sequence can be read by collecting all paths from $\tau X$ to $X$. For instance, in Figure \ref{fig:Auslander–Reiten_quiver} we can get an Auslander–Reiten sequence 
@@ -698,8 +698,8 @@ of the corresponding quiver.
 \end{figure} 
 Finally we move forward to the definition of minimal sectional mono. The rest can be skipped until Lemma \ref{lem:msm&order}.
 
-\begin{defn}[Sectional morphism]
-Let $Q$ be a quiver of Dynkin/affine type, and $M,N \in \rep(Q)$ be two indecomposable representations of $Q$, which are preprojective\footnote{A representation $M \in \rep(Q)$ is called preprojective if $\tau^k M$ is projective for some $k \geqslant 0$. Similarly, A representation $M \in \rep(Q)$ is called preinjective if $\tau^{-k} M$ is injective for some $k \geqslant 0$.} when $Q$ is affine. A morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is called sectional if $f$ can be written as the composition
+\begin{defn}[Sectional morphism]\index{sectional morphism}
+Let $Q$ be a quiver of Dynkin/affine type, and $M,N \in \rep(Q)$ be two indecomposable representations of $Q$, which are preprojective\footnote{A representation $M \in \rep(Q)$ is called preprojective\index{preprojective representation} if $\tau^k M$ is projective for some $k \geqslant 0$. Similarly, A representation $M \in \rep(Q)$ is called preinjective\index{preinjective representation} if $\tau^{-k} M$ is injective for some $k \geqslant 0$.} when $Q$ is affine. A morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is called sectional if $f$ can be written as the composition
 $$f: M=X_0 \stackrel{f_1}{\longrightarrow} X_1 \stackrel{f_2}{\longrightarrow} \cdots \stackrel{f_{t-1}}{\longrightarrow} X_{t-1} \stackrel{f_t}{\longrightarrow} X_t=N$$
 where $f_i \in \Hom_{\mathbb{C}Q}(X_{i-1},X_i)$ are irreducible morphisms between indecomposable representations, and $\tau X_{i+2} \ncong X_i$ for any suitable $i$.
 \end{defn}
@@ -713,7 +713,7 @@ Any sectional morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is either surjective or i
 When $Q$ is a quiver without oriented cycles, then $[N,M]^1 \leqslant [M,\tau N]=0$, thus by \cite[Lemma 7]{maksimau2019flag} we get the result; when $Q$ is of type $\tilde{A}$, the result comes from \cite[Lemma 51]{maksimau2019flag}.
 \end{proof}
 \begin{defn}[Sectional mono, minimal sectional mono]
-Let $Q$ be a quiver without oriented cycles. A sectional morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is called as a sectional mono if $f$ is injective; a sectional mono is called minimal if $f_t \circ \cdots \circ f_{i+1}:X_i \longrightarrow N$ are surjective for any $i \in \{1,2,\ldots,t \}$.
+Let $Q$ be a quiver without oriented cycles. A sectional morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is called as a sectional mono\index{sectional morphism!sectional mono} if $f$ is injective; a sectional mono is called minimal\index{sectional morphism!minimal sectional mono} if $f_t \circ \cdots \circ f_{i+1}:X_i \longrightarrow N$ are surjective for any $i \in \{1,2,\ldots,t \}$.
 \end{defn}
 Minimal sectional monos can also be clearly seen from the Auslander–Reiten quiver, and we can check if a sectional morphism is mono by comparing the dimension vectors. In the case of Example $E_6$ in Figure \ref{fig:Auslander–Reiten_quiver}, a non-zero morphism from $\substack{1\\00110}$ to $\substack{1\\11110}$ is a minimal sectional mono while a non-zero morphism from $\substack{0\\01100}$ to $\substack{1\\01211}$ is not, since a sectional morphism from $\substack{1\\01210}$ to $\substack{1\\01211}$ is also injective.
 
@@ -983,9 +983,9 @@ Before discussing the proof of the affine paving property, we introduce some num
 		\caption[The quantity $\orde$ for indecomposable representations in type $E$ ]{The quantity $\orde$ for indecomposable representations \\\centering in type $E$ arranged in the Auslander--Reiten quiver \footnotemark}
 		\label{fig:startingfunction}
 	\end{figure}
-\footnotetext{Some representations $M$ are hidden when $\orde(M)=0$. In \cite{bongartz1984critical} the Figure \ref{fig:startingfunction} is called the starting functions.}
+\footnotetext{Some representations $M$ are hidden when $\orde(M)=0$. In \cite{bongartz1984critical} the Figure \ref{fig:startingfunction} is called the starting functions\index{starting function|see{order of representation}}.}
 
-For an \textbf{indecomposable} quiver representation $M \in \rep(Q)$, we define the order of $M$ by
+For an \textbf{indecomposable} quiver representation $M \in \rep(Q)$, we define the order of $M$\index{order of representation} by
 $$\ord(M):= \max_{i \in v(Q)} \dim_{\mathbb{C}} M_i.$$
 When the quiver $Q$ is of type $E$, we denote by $e \in v(Q)$ the unique vertex which is connected to three other vertices, and the number 
 $$\orde(M):=\dim_\mathbb{C} M_e=[P(e),M]$$
@@ -1294,7 +1294,7 @@ For any affine quiver $Q$ and any indecomposable representation $M \in \rep(Q)$,
 Actually, if readers follow the proof in \cite[Section 6]{irelli2019cell}, and change everything from $\Gr(-)$ to $\Grr(\Phi(-))$, then there is no difference except the Proposition 48, in which the authors proved the affine paving properties of quasi-simple regular representations. So we reduced the question to the case of quasi-simple regular representation. Combined with Lemma \ref{lem:affineADcase}, we've proved the affine paving properties for $\tilde{A},\tilde{D}$ cases.
 
 \begin{lemma}\label{lem:affineADcase}
-	Assume that $Q$ is an affine quiver of type $A$ or $D$, $M \in \rep(Q)$ is the \textbf{regular quasi-simple} representation, then the Grassmannian $\Grr(\Phi(M))$ has an affine paving.
+	Assume that $Q$ is an affine quiver of type $A$ or $D$, $M \in \rep(Q)$ is the \textbf{regular quasi-simple} representation\index{quasi-simple representation}, then the Grassmannian $\Grr(\Phi(M))$ has an affine paving.
 \end{lemma}
 \begin{proof}
 The concept ``quasi-simple'' is defined in \cite[Definition 15]{irelli2019cell}; the concepts ``preprojective'',``preinjective'' and ``regular'' are defined in \cite[2.1.1]{irelli2019cell}. It's shown in \cite[Section 9, Lemma 3]{crawley1992lectures} that the regular quasi-simple representation $M$ have dimension vector smaller or equal to the minimal positive imaginary root, thus $\orde(M) \leqslant 2$ for the quiver of type $\tilde{D}$ and $\orde(M) \leqslant 1$ for the quiver of type $\tilde{A}$.
