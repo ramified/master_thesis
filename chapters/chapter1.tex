@@ -46,13 +46,13 @@ $$W:= N_{\GL_n}(T)/T \cong S_n$$
 
 \subsection{The flag variety $\mathcal{F}$}
 \begin{defn}[Flag]
-For a finite dimensional $\mathbb{C}$-vector space $V$, a \textbf{(partial) flag} of $V$ of length $d \in \mathbb{N}_{>0}$ is an increasing sequence of subspaces of $V$:
+For a finite dimensional $\mathbb{C}$-vector space $V$, a \textbf{(partial) flag}\index{flag!of vector space} of $V$ of length $d \in \mathbb{N}_{>0}$ is an increasing sequence of subspaces of $V$:
 $$F: 0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_d \subseteq V.$$
 $F$ is called a \textbf{complete flag} if $d=\dim_{\mathbb{C}} V$ and $\dim M_k = k$ for all $k$.
 \end{defn}
 
 \begin{defn}[Complete flag variety]
-The complete flag variety $\mathcal{F}$ is defined as 
+The complete flag variety\index{complete flag variety} $\mathcal{F}$ is defined as 
 \begin{equation*}
 \begin{aligned}
   \mathcal{F}:=\;& \GL_n/B \\ 
@@ -107,7 +107,7 @@ $\mathcal{F}$ is a well-studied variety, and has many combinatorical properties.
 $$\GL_n =\bigsqcup_{w\in W} BwB,$$
 we get a stratification of $\mathcal{F}$ by $B$-orbits:
 $$\mathcal{F} = \GL_n/B \cong \bigsqcup_{w\in W} BwB/B$$
-The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}, denoted by $\Omcell_w$. Since 
+The $B$-orbit $BwB/B$ is called the \textbf{Schubert cell}\index{Schubert cell}, denoted by $\Omcell_w$. Since 
 $$\Omcell_w=BwB/B \cong B/\left( B \cap wBw^{-1} \right) \cong \mathbb{A}^{l(w)},$$
 the Schubert cell is an affine space of dimension $l(w)$.
 
@@ -121,7 +121,7 @@ the Schubert cell is an affine space of dimension $l(w)$.
 %\end{table}
 
 
-$\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}. It is well-known that
+$\overline{\Omcell}_w \subseteq \mathcal{F}$ is called the \textbf{Schubert variety}\index{Schubert variety}. It is well-known that
 $$\overline{\Omcell}_w= \bigsqcup_{w' \leqslant w} \Omcell_w$$
 as a set. Especially, for any $s\in W$ with $l(s)=1$, denote $P_s=B \sqcup BsB$,
 $$\overline{\Omcell}_s= \Omcell_{\Id} \sqcup \Omcell_s = B/B \sqcup BsB/B = P_s/B \cong \mathbb{P}^1.$$
@@ -257,7 +257,7 @@ To introduce more complicated spaces and discuss their stratifications, we fix n
 Roughly speaking, a quiver is a directed multigraph permitting loops.
 
 \begin{defn}[Quiver]
-A quiver is a quadruple 
+A quiver\index{quiver} is a quadruple 
 $$Q=(v(Q),a(Q),s,t)$$
 where
 \begin{itemize}[noitemsep,topsep=0pt]
@@ -323,7 +323,7 @@ From those quivers we are able to construct relatively complicated algebraic and
 \begin{defn}[Quiver representation]
 Fix a quiver $Q$. 
 
-A representation of $Q$ consists of the following data:
+A representation\index{quiver representation} of $Q$ consists of the following data:
 \begin{itemize}[noitemsep,topsep=0pt]
 \item A finite dimensional $\mathbb{C}$-vector space $V_i$ for each vertex $i \in v(Q)$;
 \item A $\mathbb{C}$-linear map $V_r: V_{s(r)} \longrightarrow V_{t(r)}$ for each arrow $r \in a(Q)$.
@@ -340,7 +340,7 @@ A morphism $f:V \longrightarrow W$ is a collection of morphisms $f_i: V_i \longr
 	\arrow["{W_r}", from=2-1, to=2-2]
 \end{tikzcd}\]
 
-We denote the category of representations of $Q$ by $\rep(Q)$.
+We denote the category of representations of $Q$ by $\rep(Q)$\index{repQ@$\rep(Q)$}.
 \end{defn}
 \begin{eg}\label{eg:1-loop_quiver}
 A representation of the $1$-loop quiver $L(1)$ is a $2$-tuple
@@ -352,9 +352,9 @@ The equivalence in Example \ref{eg:1-loop_quiver} can be generalized to arbitrar
 \end{remark}
 
 \begin{defn}[$Q$-vector space/Vector space with quiver partition]\label{def:Q-vs}
-Fix a quiver $Q$, a $Q$-vector space is a finite dimensional $\mathbb{C}$-vector space with a direct sum decomposition
+Fix a quiver $Q$, a $Q$-vector space\index{Q-vector space@$Q$-vector space}\index{vector space with quiver partition|see{$Q$-vector space}} is a finite dimensional $\mathbb{C}$-vector space with a direct sum decomposition
 $$V= \bigoplus_{i \in v(Q)} V_i.$$
-The dimension vector of a $Q$-vector space is defined as
+The dimension vector\index{dimension vector!of $Q$-vector space} of a $Q$-vector space is defined as
 $$\dimv V :=\left( \dim_{\mathbb{C}} V_i \right)_{i \in v(Q)} \in \prod_{i \in v(Q)} \mathbb{Z}.$$
 \end{defn} 
 
@@ -362,12 +362,12 @@ On the contrary, given $\dimvec{d} \in \prod_{i \in v(Q)} \mathbb{N}_{\geqslant 
 $$V= \bigoplus_{i \in v(Q)} V_i \qquad \text{ with } V_i= \mathbb{C}^{\dimvec{d}_i}.$$
 
 \begin{defn}
-The total dimension vector of a $Q$-vector space $V$ is defined as
+The total dimension vector\index{dimension vector!total dimension vector} of a $Q$-vector space $V$ is defined as
 $$\left| \dimv V  \right|:=\dim_{\mathbb{C}} V.$$
 For $\dimvec{d} \in \prod_{i \in v(Q)} \mathbb{N}_{\geqslant 0}$, denote $\abdimvec{d}:= \sum_{i \in v(Q)} \dimvec{d}_i$.
 \end{defn}
 \begin{defn}[Space of representations with given dimension vector]
-For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in v(Q)} V_i$, the space of representations with dimension vector $\dimvec{d}$ is defined as
+For any quiver $Q$, dimension vector $\dimvec{d}$, fix the canonical $Q$-vector space $V= \bigoplus_{i \in v(Q)} V_i$, the space of representations\index{space of representations|see{$\Rep_{\dimvec{d}}(Q)$}}\index{Repd(Q)@$\Rep_{\dimvec{d}}(Q)$} with dimension vector $\dimvec{d}$ is defined as
 \begin{equation*}
 \begin{aligned}
   \Rep_{\dimvec{d}}(Q):=\;&  \left\{ (V_i,V_a: V_{s(a)} \longrightarrow V_{t(a)} ) \text{ as a representation of $Q$}  \right\} \\ 
@@ -381,7 +381,7 @@ Since we encode the information of vector space in $\dimvec{d}$, $\Rep_{\dimvec{
 For both $Q$-vector spaces and $Q$-representations, we can define (complete) flags.
 
 \begin{defn}[Flag with quiver] \label{def:flag_with_quiver}
-For a quiver representation $V \in \rep(Q)$, a (partial) flag of $V$ is defined as an increasing sequence of subrepresentation of $V$, i.e.,
+For a quiver representation $V \in \rep(Q)$, a (partial) flag of $V$\index{flag!of quiver representation} is defined as an increasing sequence of subrepresentation of $V$, i.e.,
 $$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k\in \rep(Q). $$
 For a $Q$-vector space $V=\oplus_{i \in v(Q)}V_i$, a (quiver-graded partial) flag of $V$ is defined as an increasing sequence of $Q$-subspace of $V$, i.e.,
 $$F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d=V \qquad M_k=\bigoplus_{i \in v(Q)}M_{k,i}. $$
@@ -390,7 +390,7 @@ $$\dim_{\mathbb{C}} M_k=k \qquad \text{ for any }k \in \{1,\ldots, d  \}$$
 \end{defn}
 For the flag we also have the notation of dimension vector.
 \begin{defn}[flag-type dimension vector]\label{def:ftdv}
-For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the (flag-type) dimension vector of $F$ is defined as
+For any flag $F: 0 \subseteq M_1 \subseteq \ldots \subseteq M_d \subseteq V$, the (flag-type) dimension vector of $F$\index{dimension vector!of flag-type} is defined as
 $$\ftdimvec{f}=\big(\!\dimv M_k   \big)_{k \in \{1,\ldots,d\}} \in  \prod_{\substack{i \in v(Q) \\ k \in \{1,\ldots,d\}}} \mathbb{Z}.$$
 $\ftdimvec{f}$ is called a complete flag-type dimension vector if $\ftdimvec{f}$ is the dimension vector of some complete flag $F$, i.e.,\footnote{For convenience, we define $M_0:=0$.} $d=\abdimvec{f}$ and
 $$\left| \dimv M_{k+1}/M_k \right|=1 \qquad \text{ for any }k \in \{0,\ldots, d-1  \}.$$
@@ -456,7 +456,7 @@ $$\absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}} \qquad W_{\dimvec{d}} = \prod_{i \i
 For simplicity, we take $v(Q)=\{1,\ldots, k\}$, then $W_{\dimvec{d}}= S_{\dimvec{d}_1} \times \cdots \times S_{\dimvec{d}_k}$ embeds in  $S_{\abdimvec{d}}$.
 
 \begin{remark}
-We have different ways to express $\ww \in \absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}}$. For example, take $\abdimvec{d}=5$, $\ww \in S_5$ by
+We have different ways to express $\ww \in \absgp{W}_{\abdimvec{d}}= S_{\abdimvec{d}}$\index{ww1@$\ww$}. For example, take $\abdimvec{d}=5$, $\ww \in S_5$ by
 $$\ww(1)=4,\quad \ww(2)=3,\quad \ww(3)=1,\quad \ww(4)=5,\quad \ww(5)=2,$$ 
 then one can represent $\ww$ via
 {
@@ -538,7 +538,7 @@ where $s_i:=(i,i+1) \in S_5$ are simple reflections.
 \end{remark}
 
 \begin{defn}[Simple reflections in the Weyl group]
-For $i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\}$, the simple reflection is defined as
+For $i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\}$, the simple reflection\index{simple reflection} is defined as
 $$s_i:=(i,i+1) \in  S_{\abdimvec{d}}.$$
 We define
 $$\Pi=\;  \Big\{ s_i \in S_{\abdimvec{d}} \;\Big|\; i \in \left\{ 1, \ldots , \abdimvec{d}-1 \right\} \Big\}$$
@@ -781,7 +781,7 @@ $$V_i=\left< v_{f_i+1}, \ldots v_{f_i+\dimvec{d}_i} \right> \qquad f_i= \sum_{i'
 %The following algebraic groups are not related to the quiver partition of $V$.
 We set
 $$\absgp{G}_{\abdimvec{d}}:= \GL(V)=\GL_{\abdimvec{d}}(\mathbb{C}),$$
-and $\absgp{B}_{\abdimvec{d}}$, $\absgp{T}_{\abdimvec{d}}$, $\absgp{N}_{\abdimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups, respectively.
+and $\absgp{B}_{\abdimvec{d}}$, $\absgp{T}_{\abdimvec{d}}$, $\absgp{N}_{\abdimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups, respectively.\index{algebraic group!absolute algebraic group}
 
 The Weyl group is
 $$\absgp{W}_{\abdimvec{d}}:= N_{\absgp{G}_{\abdimvec{d}}}(\absgp{T}_{\abdimvec{d}})/\absgp{T}_{\abdimvec{d}} \cong S_{\abdimvec{d}}.$$
@@ -795,7 +795,7 @@ We will view $\absgp{B}_{\ww}$ as the stabilizer of the flag $F_{\ww}$ with $\ab
 
 We set
 $$G_{\dimvec{d}}:= \prod_{i \in v(Q)}\GL(V_i)=\prod_{i \in v(Q)}\GL_{\dimvec{d}_i}(\mathbb{C}) \subseteq \absgp{G}_{\abdimvec{d}},$$
-and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.
+and $B_{\dimvec{d}}$, $T_{\dimvec{d}}$, $N_{\dimvec{d}}$ are corresponding standard Borel, torus and unipotent subgroups.\index{algebraic group!relative algebraic group}
 
 The Weyl group is
 $$W_{\dimvec{d}}:= N_{G_{\dimvec{d}}}(T_{\dimvec{d}})/T_{\dimvec{d}} \cong \prod_{i \in v(Q)}S_{\dimvec{d}_i}.$$
@@ -1104,7 +1104,7 @@ In this section, we define quiver flag varieties we care about in the same spiri
 Recall Setting \ref{sec:inital_case} and Definition \ref{def:flag_with_quiver}.
 \subsection{Flag variety}
 \begin{defn}[Absolute complete flag variety]
-The absolute complete flag variety $\mathcal{F}_{\abdimvec{d}}$ is defined as 
+The absolute complete flag variety\index{flag variety!absolute complete flag variety} $\mathcal{F}_{\abdimvec{d}}$ is defined as 
 \begin{align*}
   \mathcal{F}_{\abdimvec{d}}=\;& \absgp{G}_{\abdimvec{d}}/\absgp{B}_{\abdimvec{d}} \\ 
     \cong\;&  \left\{ \text{complete flags of } \mathbb{C}^{\abdimvec{d}} \right\} \\ 
@@ -1126,7 +1126,7 @@ For a complete flag-type dimension vector $\ftdimvec{d}$, the flag variety $\mat
 \end{defn}
 
 \begin{defn}[Relative complete flag variety]
-The relative complete flag variety $\mathcal{F}_{\dimvec{d}}$ is defined as 
+The relative complete flag variety\index{flag variety!relative complete flag variety} $\mathcal{F}_{\dimvec{d}}$ is defined as 
 \begin{equation*}
 \begin{aligned}
   \mathcal{F}_{\dimvec{d}}=\;&  \left\{ \text{complete flags of } V=\raisebox{1.3mm}{$\displaystyle\bigoplus_{i \in v(Q)}$} V_i \right\} \\ 
@@ -1159,7 +1159,7 @@ For $g\in \absgp{G}_{\abdimvec{d}}$, $\ww \in \WWd$, define
   F_{\ww}=\;& \ww F_{\Id}=F_{\{v_{\ww(1)}, \ldots ,v_{\ww(\abdimvec{d})} \}} \qquad&& \in \mathcal{F}_{\dimvec{d}} \\ 
 \end{aligned}
 \end{equation*}
-$F_{\Id}$ is called the \textbf{standard flag} of $V$.
+$F_{\Id}$ is called the \textbf{standard flag}\index{flag!standard flag} of $V$.
 
 Now we can define flag varieties attached to $\ww \in \WWd$.
 \begin{defn}
@@ -1207,7 +1207,7 @@ Table \ref{table:base_varieties} concludes all varieties we get until now.
 Now it is time to include information about arrows.
 
 \begin{defn}[Incidence variety]\label{def:incidence_variety}
-For a quiver $Q$ with complete flag-type dimension vector $\ftdimvec{d}$, define
+For a quiver $Q$ with complete flag-type dimension vector $\ftdimvec{d}$, define\index{incidence variety}
 \begin{equation*}
 \begin{aligned}
   \RRep_{\ftdimvec{d}}(Q):=\;& \left\{ (\rho,F) \in \Rep_{\dimvec{d}}(Q) \times \mathcal{F}_{\ftdimvec{d}}  \,\middle|\, \rho(M_k) \subseteq M_k \text{ for any } k \right\} \\
@@ -1244,7 +1244,7 @@ For a quiver $Q$ with complete flag-type dimension vectors $\ftdimvec{d}$, $\ftd
   =\;& \bigsqcup_{\ftdimvec{d},\ftdimvec{d}'} \St_{\ftdimvec{d},\ftdimvec{d}'}
 \end{aligned}
 \end{equation*}
-$\St_{\dimvec{d}}$ is called the \textbf{Steinberg variety}.
+$\St_{\dimvec{d}}$ is called the \textbf{Steinberg variety}\index{Steinberg variety}.
 \end{defn}
 $\St_{\ftdimvec{d},\ftdimvec{d}'}$ can actually be realized as the incidence variety between $\Rep_{\dimvec{d}}(Q)$ and $\mathcal{F}_{\ftdimvec{d}} \times \mathcal{F}_{\ftdimvec{d}'}$, since
 \begin{equation*}
@@ -1287,10 +1287,10 @@ For that reason, we define $\mu_{\ftdimvec{d},\ftdimvec{d}'}$, $\pi_{\ftdimvec{d
 In this subsection, we will find stratifications of varieties introduced in Section \ref{sec:typical_variety}, and fix notation of orbits. We will also discuss their $T$-fixed points. These stratifications will give us a basis for the $K$-theory and cohomology in Chapter \ref{chap:Ktheory}, while those $T$-fixed points will give us another ``basis" in Chapter \ref{chap:localization}.
 
 \subsection{Stratifications: flag varieties}
-\label{subsec:stratification_flag_variety}
+\label{subsec:stratification_flag_variety}\index{stratification!of flag variety}
 We begin with $\mathcal{F}_{\abdimvec{d}}$ and $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$, which is roughly a repetition of Section \ref{sec:inital_case}.
 
-\begin{defn}[Twisted action]
+\begin{defn}[Twisted action]\index{twisted action}
 We define the twisted $\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}}$-action on $\mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}}$:
 $$\absgp{G}_{\abdimvec{d}} \times \absgp{G}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \longrightarrow \mathcal{F}_{\abdimvec{d}} \times \mathcal{F}_{\abdimvec{d}} \qquad \left( g_1,g_2,\underline{F}_{g,g'} \right) \longmapsto \underline{F}_{g_1g,g_2g'}$$
 which is the same as original $\absgp{G}_{\abdimvec{d}}$-action when we restrict to $\absgp{G}_{\abdimvec{d}} \times \{\Id \}$-action. Other $G \times G$-actions on $\mathcal{F} \times \mathcal{F}$ are defined in a similar way.
@@ -1410,7 +1410,7 @@ We have given every orbit a name, and other spaces are finite union of these orb
 \end{eg}
 
 
-\subsection{Stratifications: incidence varieties}\label{subsec:stratification:_incidence_variety}
+\subsection{Stratifications: incidence varieties}\label{subsec:stratification:_incidence_variety}\index{stratification!of incidence variety}
 Now comes the stratifications of incidence varieties. Those stratifications are produced by taking the preimage of stratifications on base spaces. They are relatively easy to obtain, while their closures are quite difficult to analyze.
 
 \begin{defn}[Stratifications of incidence varieties]
@@ -1596,7 +1596,7 @@ Notice that, each $B_{\dimvec{d}} \times B_{\dimvec{d}}$-orbit of $\mathcal{F}_{
 
 The tangent space of $T$-fixed points will be used in Chapter \ref{chap:localization}, so we fix symbols of them and compute some of them as Lie algebras.\footnote{In algebraic geometry, we can define the tangent space even at singular points, see \cite[12.1]{vakil2017rising}.}
 
-\begin{defn}[Tangent space of $T$-fixed points]
+\begin{defn}[Tangent space of $T$-fixed points]\index{tangent space!of $T$-fixed points}
 For $\ww,\ww',x \in \WWd$, we define the following tangent spaces:
 \begin{equation*}
 \begin{aligned}

@@ -74,4 +74,4 @@
 \contentsline {section}{\numberline {8.4}Application: affine case}{98}{section.8.4}% 
 \contentsline {chapter}{List of Tables}{99}{Item.28}% 
 \contentsline {chapter}{List of Figures}{99}{Item.28}% 
-\contentsline {chapter}{Bibliography}{99}{Item.28}% 
+\contentsline {chapter}{Bibliography}{101}{Item.28}% 

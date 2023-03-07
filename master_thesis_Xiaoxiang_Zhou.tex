@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%Setting for fast compiling
 %\special{dvipdfmx:config z 0}
 %\includeonly{chapters/contents}
-%\includeonly{chapters/introduction}
+%\includeonly{chapters/introduction, chapters/chapter1}
 %\includeonly{chapters/affinepaving}
 %\includeonly{chapters/chapter5}
 
@@ -41,6 +41,7 @@
 \usepackage{adjustbox}
 \usepackage{indentfirst}
 \usepackage{pifont}
+\usepackage{makeidx}
 \usepackage{MA_Titlepage}
 \usepackage{tocloft}
 \usepackage{etoolbox}
@@ -255,6 +256,10 @@ urlcolor=blue,
 \setlength{\marginparwidth}{2.5cm}
 \newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
 \newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+\makeindex
+
 \begin{document}
 
 
@@ -286,6 +291,7 @@ urlcolor=blue,
 \makeatother
 
 
+
 \include{chapters/contents}
 \include{chapters/introduction}
 \part{{$K$-theory of the Steinberg varieties}}\label{part:Steinberg_varieties}
@@ -314,6 +320,9 @@ urlcolor=blue,
 \listoftables
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
+%https://tex.stackexchange.com/questions/41140/symbol-index-sorted-by-occurrence
+%https://tex.stackexchange.com/questions/68240/index-ordering-when-using-math-symbols
+\printindex
 \endgroup
 
 
