@@ -26,20 +26,38 @@
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\slideentry {2}{0}{3}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@sectionpages {9}{11}}
-\headcommand {\beamer@subsectionpages {9}{11}}
-\headcommand {\sectionentry {3}{Auslander--Reiten theory}{12}{Auslander--Reiten theory}{0}}
-\headcommand {\slideentry {3}{0}{1}{12/12}{}{0}}
+\headcommand {\slideentry {2}{0}{4}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {3}{0}{2}{13/13}{}{0}}
+\headcommand {\slideentry {2}{0}{5}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {12}{13}}
-\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\sectionentry {4}{Sketch of proof}{14}{Sketch of proof}{0}}
-\headcommand {\slideentry {4}{0}{1}{14/14}{}{0}}
+\headcommand {\slideentry {2}{0}{6}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@documentpages {14}}
-\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\slideentry {2}{0}{7}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{0}{8}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {2}{0}{9}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {2}{0}{10}{18/18}{}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {2}{0}{11}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {2}{0}{12}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@sectionpages {9}{20}}
+\headcommand {\beamer@subsectionpages {9}{20}}
+\headcommand {\sectionentry {3}{Auslander--Reiten theory}{21}{Auslander--Reiten theory}{0}}
+\headcommand {\slideentry {3}{0}{1}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {3}{0}{2}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@sectionpages {21}{22}}
+\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\sectionentry {4}{Sketch of proof}{23}{Sketch of proof}{0}}
+\headcommand {\slideentry {4}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@partpages {1}{23}}
+\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\beamer@sectionpages {23}{23}}
+\headcommand {\beamer@documentpages {23}}
+\headcommand {\gdef \inserttotalframenumber {23}}
