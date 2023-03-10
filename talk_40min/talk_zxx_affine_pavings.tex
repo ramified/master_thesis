@@ -81,7 +81,7 @@
 
 %%%packages for temporary usage
 \usepackage{mathtools}
-
+\usepackage{tabularx}
 
 
 
@@ -767,7 +767,7 @@ Need: more informations of indecomposable representations!
 \begin{frame}{Process}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
-\begin{frame}[fragile]{Another example: $D_4 \qquad$% https://q.uiver.app/?q=WzAsNCxbMCwxLCIxIl0sWzEsMSwiMiJdLFsyLDEsIjMiXSxbMSwwLCI0Il0sWzAsMV0sWzIsMV0sWzMsMV1d
+\begin{frame}[fragile]{Auslander--Reiten quiver: $D_4 \qquad$% https://q.uiver.app/?q=WzAsNCxbMCwxLCIxIl0sWzEsMSwiMiJdLFsyLDEsIjMiXSxbMSwwLCI0Il0sWzAsMV0sWzIsMV0sWzMsMV1d
 \begin{tikzcd}[sep={3mm},font = \small, ampersand replacement=\&]
 \& 4 \\
 1 \& 2 \& 3
@@ -821,13 +821,149 @@ For other examples, see \href{https://github.com/ramified/personal_handwritten_c
 \end{overlayarea}
 \end{frame}
 
+\begin{frame}[fragile]{First application}
+\begin{block}{Corollary}
+For a Dynkin quiver, we can give an total order to the set of all indecomposable representations, such that 
+$$i \leqslant j \quad \Longrightarrow \quad \Ext^1(M_i, M_j)=0.$$
+\end{block}
+
+By Theorem A, the problem reduced to
+\begin{short}
+For a Dynkin quiver $Q$ and $M \in \ind(Q)$, 
+$$\Flag_{d}(M) \text{ has an affine paving.}$$
+\end{short}
+\end{frame}
+
+\begin{frame}[fragile]{Indecomposable representations of low order are easy!}
+
+
+\begin{lemma}
+Suppose $Q$ is a tree. For $M \in \ind(Q)$, $\ord(M) \leqslant 2$, 
+$$\Flag_{\ftdimvec{f}}(M)\;\; \cong\quad \mathbb{P}^1 \times \cdots \times \mathbb{P}^1 \quad\text{ or }\quad \varnothing.$$
+\end{lemma}
+
+\begin{eg}
+$\;\;Q= 
+\adjustbox{scale=0.7}{
+\begin{tikzcd}[sep={between origins, 10mm}, ampersand replacement=\&]
+	\&\& \scriptstyle\bullet \&\\
+	\scriptstyle\bullet \&\scriptstyle\bullet \& \scriptstyle\bullet \& \scriptstyle\bullet\\[-6mm]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-2]
+	\arrow[from=2-3, to=2-4]
+\end{tikzcd}
+}$  $ M
+%=\substack{\phantom{1}1\\1221}
+=\adjustbox{scale=0.68}{
+\begin{tikzcd}[sep={between origins, 12mm}, ampersand replacement=\&]
+	\&\& \mathbb{C} \&\\
+	\mathbb{C} \&\mathbb{C}^2 \& \mathbb{C}^2 \& \mathbb{C}\\[-6mm]
+	\arrow[hook,from=1-3, to=2-3]
+	\arrow[hook,from=2-1, to=2-2]
+	\arrow["\sim"',from=2-3, to=2-2]
+	\arrow[two heads,from=2-3, to=2-4]
+%	\arrow[from=1-3, to=2-3]
+%	\arrow[from=2-1, to=2-2]
+%	\arrow[from=2-3, to=2-2]
+%	\arrow[from=2-3, to=2-4]
+\end{tikzcd}
+}$
+%https://tex.stackexchange.com/questions/453436/how-to-make-large-brace-and-parenthesis-thinner
+%https://tex.stackexchange.com/questions/385013/how-to-set-temporary-math-font
+ $\rm \ftdimvec{f}= \left(\begin{smallmatrix}
+&&0&\\
+1&2&1&1\\[1mm]
+&&0&\\
+1&1&0&1\\
+\end{smallmatrix}\right)$
+\begin{equation*}
+\begin{aligned}
+  \Flag_{\ftdimvec{f}}(M)\hookrightarrow\;& \Flag_{\left(\substack{\scriptscriptstyle 1\\\scriptscriptstyle 1}\right)} (\mathbb{C}) \times 
+  \Flag_{\left(\substack{\scriptscriptstyle 2\\\scriptscriptstyle 1}\right)} (\mathbb{C}^2) \times 
+  \Flag_{\left(\substack{\scriptscriptstyle 1\\\scriptscriptstyle 0}\right)} (\mathbb{C}^2) \\
+  \;& \times 
+  \Flag_{\left(\substack{\scriptscriptstyle 1\\\scriptscriptstyle 1}\right)} (\mathbb{C}) \times 
+  \Flag_{\left(\substack{\scriptscriptstyle 0\\\scriptscriptstyle 0}\right)} (\mathbb{C}) \\
+   \;& \cong \mathbb{P}^1 \times \mathbb{P}^1
+\end{aligned}
+\end{equation*}
+
+
+
+%% https://q.uiver.app/?q=WzAsOCxbMCwxLCJcXEZsYWdfe1xcZnRkaW12ZWN7Zn19KE0pIl0sWzEsMSwiXFxGbGFnX3tcXGxlZnQoXFxzdWJzdGFja3sxXFxcXDF9XFxyaWdodCl9IChcXG1hdGhiYntDfSkiXSxbMiwxLCJcXEZsYWdfe1xcbGVmdChcXHN1YnN0YWNrezJcXFxcMX1cXHJpZ2h0KX0gKFxcbWF0aGJie0N9XjIpIl0sWzMsMSwiXFxGbGFnX3tcXGxlZnQoXFxzdWJzdGFja3sxXFxcXDB9XFxyaWdodCl9IChcXG1hdGhiYntDfV4yKSJdLFszLDAsIlxcRmxhZ197XFxsZWZ0KFxcc3Vic3RhY2t7MFxcXFwwfVxccmlnaHQpfSAoXFxtYXRoYmJ7Q30pIl0sWzQsMSwiXFxGbGFnX3tcXGxlZnQoXFxzdWJzdGFja3sxXFxcXDF9XFxyaWdodCl9IChcXG1hdGhiYntDfSkiXSxbMSwyLCJcXG1hdGhiYntQfV4xIFxcdGltZXMgXFxtYXRoYmJ7UH1eMSJdLFswLDJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMiwiXFx0aW1lcyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIlxcdGltZXMiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw1LCJcXHRpbWVzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiXFx0aW1lcyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDYsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+%\[\begin{tikzcd}[sep=tiny]
+%	&&& {\Flag_{\left(\substack{0\\0}\right)} (\mathbb{C})} \\
+%	{\Flag_{\ftdimvec{f}}(M)} & {\Flag_{\left(\substack{1\\1}\right)} (\mathbb{C})} & {\Flag_{\left(\substack{2\\1}\right)} (\mathbb{C}^2)} & {\Flag_{\left(\substack{1\\0}\right)} (\mathbb{C}^2)} & {\Flag_{\left(\substack{1\\1}\right)} (\mathbb{C})} \\
+%	{} & {\mathbb{P}^1 \times \mathbb{P}^1}
+%	\arrow[hook, from=2-1, to=2-2]
+%	\arrow["\times"{description}, draw=none, from=2-2, to=2-3]
+%	\arrow["\times"{description}, draw=none, from=2-3, to=2-4]
+%	\arrow["\times"{description}, draw=none, from=2-4, to=2-5]
+%	\arrow["\times"{description}, draw=none, from=1-4, to=2-4]
+%	\arrow["\cong"{description}, draw=none, from=3-1, to=3-2]
+%\end{tikzcd}\]
+\end{eg}
+
+\end{frame}
+
+\begin{frame}[fragile]{Continue}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{$}Y<{$}} % math-mode version 
+\begin{table}[]
+
+\[
+\begin{tabularx}{.78\textwidth}{|c|*{6}{L|}}
+\hline
+ & \multicolumn{2}{c|}{$\mathbb{C} \hookrightarrow \mathbb{C}^2$} & \multicolumn{2}{c|}{$\mathbb{C}^2 \twoheadrightarrow \mathbb{C}$} & \multicolumn{2}{c|}{$\mathbb{C}^2 \rightarrow \mathbb{C}^2$} \\
+ \hline
+\multirow{2}{*}{No restriction} & - & 2 & 0 & - & - & 1 \\
+\cline{2-7}
+ & 0 & - & 1 & 2 & 0 & 0 \\
+ \hline
+Reduce & 1 & 1 & 1 & 1 & 1 & 0 \\
+\hline
+\multirow{3}{*}{Impossible} & 2 & 1 &  &  &  &  \\
+\cline{2-3}
+ & 2 & 0 & 1 & 0 & 2 & 0 \\\cline{2-3}
+ & 1 & 0 &  &  &  &  \\\hline
+\end{tabularx}
+\]
+\end{table}
+
+
+
+\begin{corollary}
+The main theorem is true for quivers of type $A$, $D$.
+\end{corollary}
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sketch of proof}
+\section{Tackle the type $E$ case}
 \begin{frame}{Process}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
 
+\begin{frame}[fragile]{Statement}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.75]{figures/flowchart/flowchart.pdf}
+%    \caption[The proof of affine paving in Dynkin case]{The process of induction}
+%    \vspace{2mm}
+    \label{fig:flowchart}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Statement}
+233
+\end{frame}
 
 
 \end{document}

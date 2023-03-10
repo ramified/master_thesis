@@ -999,7 +999,14 @@ The next lemma shows the affine paving property for representations of small ord
 \begin{proof}\belowdisplayskip=-12pt
 	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Grr_{\ftdimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\ftdimvec{f}$.} we get the natural embedding
 	$$\Grr_{\ftdimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \ftdimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
-	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. 
+	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. Precisely, one need to carefully discuss three cases of $M_i \longrightarrow M_j$:
+		% https://q.uiver.app/?q=WzAsNyxbMCwwLCJLIl0sWzMsMCwiSyJdLFsxLDAsIkteMiJdLFsyLDAsIkteMiJdLFs1LDAsIkteMiJdLFs2LDAsIkteMi4iXSxbNCwwLCJcXHRleHR7YW5kfSJdLFs0LDUsIlxcY29uZyJdLFszLDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+		\[\begin{tikzcd}
+			K & {K^2} & {K^2} & K &[-0.5cm] {\text{and}} &[-0.5cm] {K^2} & {K^2.}
+			\arrow["\cong", from=1-6, to=1-7]
+			\arrow[two heads, from=1-3, to=1-4]
+			\arrow[hook, from=1-1, to=1-2]
+		\end{tikzcd}\]
 \end{proof}
 
 Now we've nearly prepared every step of the proof of Theorem \ref{thm:Dynkincase}. By following the process in Figure \ref{fig:flowchart}, we now prove Theorem \ref{thm:Dynkincase} assuming Claim \ref{claim:bigorder}. We will prove Claim \ref{claim:bigorder} in Section \ref{appendix:proofcomplement}.
