@@ -1,0 +1,14 @@
+\frametitle{Process}
+\begin{figure}[ht]
+    \centering
+    \only<1>{\includegraphics[scale=0.75]{figures/flowchart/flowchart11.pdf}}
+    \only<2>{\includegraphics[scale=0.75]{figures/flowchart/flowchart12.pdf}}
+    \only<3>{\includegraphics[scale=0.75]{figures/flowchart/flowchart13.pdf}}
+    \only<4>{\includegraphics[scale=0.75]{figures/flowchart/flowchart1.pdf}}
+    \only<5>{\includegraphics[scale=0.75]{figures/flowchart/flowchart2.pdf}}
+    \only<6>{\includegraphics[scale=0.75]{figures/flowchart/flowchart3.pdf}}
+    \only<7>{\includegraphics[scale=0.75]{figures/flowchart/flowchart4.pdf}}
+%    \caption[The proof of affine paving in Dynkin case]{The process of induction}
+%    \vspace{2mm}
+    \label{fig:flowchart}
+\end{figure}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  10 MAR 2023 01:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  10 MAR 2023 23:28
 entering extended mode
 **./talk_zxx_affine_pavings.tex
 (talk_zxx_affine_pavings.tex
@@ -1752,24 +1752,24 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )) (talk_zxx_affine_pavings.aux)
 \openout1 = `talk_zxx_affine_pavings.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1806,7 +1806,7 @@ LaTeX Font Info:    ... okay on input line 352.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box115
-Package hyperref Info: Link coloring OFF on input line 352.
+Package hyperref Info: Link coloring OFF on input line 399.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1822,9 +1822,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count361
 )
-LaTeX Info: Redefining \ref on input line 352.
-LaTeX Info: Redefining \pageref on input line 352.
-LaTeX Info: Redefining \nameref on input line 352.
+LaTeX Info: Redefining \ref on input line 399.
+LaTeX Info: Redefining \pageref on input line 399.
+LaTeX Info: Redefining \nameref on input line 399.
  (talk_zxx_affine_pavings.out)
 (talk_zxx_affine_pavings.out)
 \@outlinefile=\write5
@@ -1858,19 +1858,19 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (talk_zxx_affine_pavings.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 352.
+LaTeX Font Info:    Try loading font information for U+msa on input line 399.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 352.
+LaTeX Font Info:    Try loading font information for U+msb on input line 399.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 352.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 399.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
@@ -1878,15 +1878,15 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 352.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 399.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 352.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 399.
 
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 358.
+(hyperref)                setting the option has no effect on input line 404.
 
 [1
 
@@ -1955,7 +1955,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 (talk_zxx_affine_pavings.vrb)
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 478.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 524.
 
 [10
 
@@ -2034,7 +2034,7 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 3--45
  []
 
 )
-Overfull \vbox (44.65816pt too high) detected at line 822
+Overfull \vbox (44.65816pt too high) detected at line 870
  []
 
 [22
@@ -2058,27 +2058,210 @@ Overfull \vbox (44.65816pt too high) detected at line 822
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 949.
+(hyperref)                removing `math shift' on input line 997.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 949.
+(hyperref)                removing `math shift' on input line 997.
 
 (talk_zxx_affine_pavings.toc) [26
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb
-File: figures/flowchart/flowchart.pdf Graphic file (type pdf)
-<use figures/flowchart/flowchart.pdf>
-) [27
+ (talk_zxx_affine_pavings.vrb) [27
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
 
 (talk_zxx_affine_pavings.vrb) [28
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb) [29
+
+]
+(talk_zxx_affine_pavings.vrb
+File: figures/space/preferredimage.pdf Graphic file (type pdf)
+<use figures/space/preferredimage.pdf>
+) [30
+
+] (talk_zxx_affine_pavings.vrb
+File: figures/space/preferredimage.pdf Graphic file (type pdf)
+<use figures/space/preferredimage.pdf>
+) [31
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+
+(talk_zxx_affine_pavings.vrb) [32
+
+]
+\openout4 = `talk_zxx_affine_pavings.31.vrb'.
+
+ (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart11.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart11.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 4--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[33
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart12.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart12.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 5--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[34
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart13.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart13.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 6--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[35
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart1.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart1.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 7--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[36
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart2.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart2.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 8--14
+ [] 
+ []
+
+)
+Overfull \vbox (2.8525pt too high) detected at line 1133
+ []
+
+[37
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart3.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart3.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 9--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[38
+
+] (talk_zxx_affine_pavings.31.vrb
+File: figures/flowchart/flowchart4.pdf Graphic file (type pdf)
+<use figures/flowchart/flowchart4.pdf>
+
+Overfull \hbox (0.20937pt too wide) in paragraph at lines 10--14
+ [] 
+ []
+
+)
+Overfull \vbox (5.1025pt too high) detected at line 1133
+ []
+
+[39
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb
+File: figures/horizontal/h_E6.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E6.pdf>
+File: figures/horizontal/h_E7.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E7.pdf>
+File: figures/horizontal/h_E8.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E8.pdf>
+
+Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
+[][] 
+ []
+
+)
+Overfull \vbox (0.9997pt too high) detected at line 1145
+ []
+
+[40
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb
+File: figures/horizontal/h_E6_red.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E6_red.pdf>
+File: figures/horizontal/h_E7_red.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E7_red.pdf>
+File: figures/horizontal/h_E8_red.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E8_red.pdf>
+
+Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
+[][] 
+ []
+
+)
+Overfull \vbox (0.9997pt too high) detected at line 1156
+ []
+
+[41
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb
+File: figures/horizontal/h_E6_red_easy.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E6_red_easy.pdf>
+File: figures/horizontal/h_E7_red_easy.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E7_red_easy.pdf>
+File: figures/horizontal/h_E8_red_easy.pdf Graphic file (type pdf)
+<use figures/horizontal/h_E8_red_easy.pdf>
+
+Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
+[][] 
+ []
+
+)
+Overfull \vbox (0.9997pt too high) detected at line 1166
+ []
+
+[42
 
 ]
 \tf@nav=\write6
@@ -2090,22 +2273,23 @@ File: figures/flowchart/flowchart.pdf Graphic file (type pdf)
 \tf@snm=\write8
 \openout8 = `talk_zxx_affine_pavings.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 969.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 969.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1167.
  (talk_zxx_affine_pavings.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 969.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 969.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1167.
+
 Package rerunfilecheck Info: File `talk_zxx_affine_pavings.out' has not changed
 .
 (rerunfilecheck)             Checksum: 0FD45614B599B68CC42CB9340D1958C5.
  ) 
 Here is how much of TeX's memory you used:
- 40925 strings out of 427748
- 794434 string characters out of 3150981
- 905955 words of memory out of 3000000
- 44216 multiletter control sequences out of 15000+200000
+ 41343 strings out of 427748
+ 805549 string characters out of 3150981
+ 915550 words of memory out of 3000000
+ 44585 multiletter control sequences out of 15000+200000
  580539 words of font info for 103 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 59i,28n,84p,1214b,1686s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 59i,28n,84p,1214b,1728s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on talk_zxx_affine_pavings.pdf (28 pages).
+Output written on talk_zxx_affine_pavings.pdf (42 pages).

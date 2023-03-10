@@ -1,0 +1,18 @@
+\frametitle{Task 1. $Q= \bullet $, $M=\mathbb {C}^n$}
+
+In this case,
+% https://q.uiver.app/?q=WzAsOSxbMCwwLCJcXEdMX24oXFxtYXRoYmJ7Q30pIFxcLFxccm90YXRlYm94W29yaWdpbj1jXXsyNzB9eyRcXGNpcmNsZWFycm93cmlnaHQkfVxcOyBcXG1hdGhiYntDfV5uIl0sWzMsMCwiXFxHTF9uKFxcbWF0aGJie0N9KSAiXSxbMywxLCJCICJdLFsyLDFdLFs0LDEsIlxccm90YXRlYm94W29yaWdpbj1jXXsyNzB9eyRcXGNpcmNsZWFycm93cmlnaHQkfVxcOyBcXEZsYWdfe2R9KFxcbWF0aGJie0N9Xm4pIl0sWzQsMCwiXFxyb3RhdGVib3hbb3JpZ2luPWNdezI3MH17JFxcY2lyY2xlYXJyb3dyaWdodCR9XFw7IFxcRmxhZ197ZH0oXFxtYXRoYmJ7Q31ebikiXSxbMSwwXSxbMiwwXSxbMSwxXSxbNiw3LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFs4LDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
+\[\begin{tikzcd}[row sep=0mm, column sep=0mm]
+{\GL_n(\mathbb{C}) \,\rotatebox[origin=c]{270}{$\circlearrowright$}\; \mathbb{C}^n} & {} &[20mm] {} & {\GL_n(\mathbb{C}) } &[-3mm] {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)} \\
+& {} & {} & {B } & {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)}
+\arrow[squiggly, from=1-2, to=1-3]
+\arrow[squiggly, from=2-2, to=2-3]
+\end{tikzcd}\]
+
+$\Flag_{d}(\mathbb{C}^n)$ has an affine paving given by Schubert cells (i.e., $B$-orbits).
+
+\begin{block}{Note}
+When $Q= \bullet \longrightarrow \bullet$, $\Flag_{\dimvec{f}}(M)$ have no natural group actions.
+\end{block}
+
+

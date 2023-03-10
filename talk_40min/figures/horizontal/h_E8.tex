@@ -1,0 +1,33 @@
+
+\documentclass[border={10pt 10pt 90pt 10pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Gralg}[1]{\operatorname{Gr}^{#1}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+\begin{document}
+% https://q.uiver.app/?q=WzAsMTA3LFs0LDAsIjEiXSxbMywxLCIxIl0sWzQsMSwiMSJdLFs1LDEsIjEiXSxbMiwyLCIxIl0sWzQsMiwiMiJdLFs2LDIsIjEiXSxbNSwzLCIyIl0sWzQsMywiMSJdLFszLDMsIjIiXSxbMSwzLCIxIl0sWzIsNCwiMiJdLFs0LDQsIjMiXSxbNiw0LCIxIl0sWzEsNSwiMiJdLFsxLDcsIjIiXSxbMSw5LCIyIl0sWzEsMTEsIjIiXSxbMSwxMywiMyJdLFsyLDE0LCI0Il0sWzMsNSwiMyJdLFs0LDUsIjIiXSxbNSw1LCIyIl0sWzIsNiwiMyJdLFs0LDYsIjQiXSxbNiw2LCIxIl0sWzMsNywiNCJdLFs0LDcsIjIiXSxbNSw3LCIzIl0sWzIsOCwiMyJdLFs0LDgsIjUiXSxbNiw4LCIyIl0sWzMsOSwiNCJdLFs0LDksIjMiXSxbNSw5LCI0Il0sWzIsMTAsIjMiXSxbNCwxMCwiNiJdLFs2LDEwLCIyIl0sWzMsMTEsIjUiXSxbNCwxMSwiMyJdLFs1LDExLCI0Il0sWzIsMTIsIjQiXSxbNCwxMiwiNiJdLFs2LDEyLCIyIl0sWzMsMTMsIjUiXSxbNCwxMywiMyJdLFs1LDEzLCI0Il0sWzQsMTQsIjYiXSxbNiwxNCwiMiJdLFszLDE1LCI1Il0sWzQsMTUsIjMiXSxbNSwxNSwiNCJdLFs0LDE2LCI2Il0sWzAsNCwiMSJdLFswLDYsIjEiXSxbMCw4LCIxIl0sWzAsMTAsIjEiXSxbMCwxMiwiMSJdLFswLDE0LCIyIl0sWzEsMTUsIjMiXSxbMiwxNiwiNCJdLFswLDE2LCIxIl0sWzAsMTgsIjEiXSxbMCwyMCwiMSJdLFswLDIyLCIxIl0sWzAsMjQsIjEiXSxbMSwxNywiMiJdLFszLDE3LCI1Il0sWzQsMTcsIjMiXSxbNSwxNywiNCJdLFs2LDE2LCIyIl0sWzIsMTgsIjMiXSxbNCwxOCwiNiJdLFs2LDE4LCIyIl0sWzEsMTksIjIiXSxbMywxOSwiNCJdLFs0LDE5LCIzIl0sWzUsMTksIjQiXSxbMiwyMCwiMyJdLFs0LDIwLCI1Il0sWzYsMjAsIjIiXSxbMywyMSwiNCJdLFsxLDIxLCIyIl0sWzQsMjEsIjIiXSxbNSwyMSwiMyJdLFsyLDIyLCIzIl0sWzQsMjIsIjQiXSxbNiwyMiwiMSJdLFsxLDIzLCIyIl0sWzMsMjMsIjMiXSxbNCwyMywiMiJdLFs1LDIzLCIyIl0sWzIsMjQsIjIiXSxbNCwyNCwiMyJdLFs2LDI0LCIxIl0sWzEsMjUsIjEiXSxbMywyNSwiMiJdLFs0LDI1LCIxIl0sWzUsMjUsIjIiXSxbMiwyNiwiMSJdLFs0LDI2LCIyIl0sWzYsMjYsIjEiXSxbMywyNywiMSJdLFs0LDI3LCIxIl0sWzUsMjcsIjEiXSxbNCwyOCwiMSJdLFs2LDBdXQ==
+\[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins}]
+ &  & 1 &  & 1 &  & 1 &  & 2 &  & 2 &  & 2 &  & 2 &  & 2 &  & 2 &  & 2 &  & 1 &  & 1 &  & 1 &  & {} \\
+ & 1 &  & 2 &  & 2 &  & 3 &  & 4 &  & 4 &  & 4 &  & 4 &  & 4 &  & 4 &  & 3 &  & 2 &  & 2 &  & 1 &  \\
+1 & 1 & 2 & 1 & 3 & 2 & 4 & 2 & 5 & 3 & 6 & 3 & 6 & 3 & 6 & 3 & 6 & 3 & 6 & 3 & 5 & 2 & 4 & 2 & 3 & 1 & 2 & 1 & 1 \\
+ & 1 &  & 2 &  & 3 &  & 4 &  & 4 &  & 5 &  & 5 &  & 5 &  & 5 &  & 4 &  & 4 &  & 3 &  & 2 &  & 1 &  \\
+ &  & 1 &  & 2 &  & 3 &  & 3 &  & 3 &  & 4 &  & 4 &  & 4 &  & 3 &  & 3 &  & 3 &  & 2 &  & 1 &  &  \\
+ &  &  & 1 &  & 2 &  & 2 &  & 2 &  & 2 &  & 3 &  & 3 &  & 2 &  & 2 &  & 2 &  & 2 &  & 1 &  &  &  \\
+ &  &  &  & 1 &  & 1 &  & 1 &  & 1 &  & 1 &  & 2 &  & 1 &  & 1 &  & 1 &  & 1 &  & 1 &  &  &  & 
+\end{tikzcd}\]
+\end{document}

@@ -1,0 +1,32 @@
+
+\documentclass[border={10pt 10pt 10pt 10pt},varwidth]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns}
+%include other needed packages here   
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Gralg}[1]{\operatorname{Gr}^{#1}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+\begin{document}
+% https://q.uiver.app/?q=WzAsNTMsWzMsMCwiMSJdLFsyLDEsIjEiXSxbMywxLCIxIl0sWzQsMSwiMSJdLFsxLDIsIjEiXSxbMywyLCIyIl0sWzUsMiwiMSJdLFs0LDMsIjIiXSxbMywzLCIxIl0sWzIsMywiMiJdLFswLDMsIjEiXSxbMSw0LCIyIl0sWzMsNCwiMyJdLFs1LDQsIjEiXSxbMCw1LCIxIl0sWzAsNywiMSJdLFswLDksIjEiXSxbMCwxMSwiMSJdLFswLDEzLCIxIl0sWzEsMTQsIjEiXSxbMiw1LCIzIl0sWzMsNSwiMiJdLFs0LDUsIjIiXSxbMSw2LCIyIl0sWzMsNiwiNCJdLFs1LDYsIjEiXSxbMiw3LCIzIl0sWzMsNywiMiJdLFs0LDcsIjMiXSxbMSw4LCIyIl0sWzMsOCwiNCJdLFs1LDgsIjIiXSxbMiw5LCIzIl0sWzMsOSwiMiJdLFs0LDksIjMiXSxbMSwxMCwiMiJdLFszLDEwLCI0Il0sWzUsMTAsIjEiXSxbMiwxMSwiMyJdLFszLDExLCIyIl0sWzQsMTEsIjIiXSxbMSwxMiwiMiJdLFszLDEyLCIzIl0sWzUsMTIsIjEiXSxbMiwxMywiMiJdLFszLDEzLCIxIl0sWzQsMTMsIjIiXSxbMywxNCwiMiJdLFs1LDE0LCIxIl0sWzIsMTUsIjEiXSxbMywxNSwiMSJdLFs0LDE1LCIxIl0sWzMsMTYsIjEiXV0=
+\[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins}]
+ &  & 1 &  & 1 &  & 1 &  & 2 &  & 1 &  & 1 &  & 1 &  & {}\\
+  & 1 &  & 2 &  & 2 &  & 3 &  & 3 &  & 2 &  & 2 &  & 1 &  \\
+ 1 & 1 & 2 & 1 & 3 & 2 & 4 & 2 & 4 & 2 & 4 & 2 & 3 & 1 & 2 & 1 & 1 \\
+  & 1 &  & 2 &  & 3 &  & 3 &  & 3 &  & 3 &  & 2 &  & 1 &  \\
+  &  & 1 &  & 2 &  & 2 &  & 2 &  & 2 &  & 2 &  & 1 &  &  \\
+&  &  & 1 &  & 1 &  & 1 &  & 1 &  & 1 &  & 1 &  &  &  \\
+\end{tikzcd}\]
+\end{document}

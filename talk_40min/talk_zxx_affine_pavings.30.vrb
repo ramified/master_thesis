@@ -1,0 +1,9 @@
+\frametitle{What is remaining?}
+\begin{flushleft}
+
+      $E_6$ :\parbox[h][][c]{7cm}{\includegraphics[height=0.28\textheight]{figures/horizontal/h_E6.pdf}}
+      \\[-2mm]
+      $E_7$ :\parbox[h][][c]{7cm}{\includegraphics[height=0.32\textheight]{figures/horizontal/h_E7.pdf}}
+      \\[-7mm]
+      $E_8$ :\parbox[h][][c]{7cm}{\includegraphics[height=0.37\textheight]{figures/horizontal/h_E8.pdf}}
+\end{flushleft}

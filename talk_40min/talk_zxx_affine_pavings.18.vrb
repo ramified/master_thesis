@@ -1,0 +1,37 @@
+\noindent Consider the short exact sequence of representations
+\vspace{-3mm}
+\[\begin{tikzcd}
+\eta: 0 & {X} & {Y} & {S} & 0
+\arrow[from=1-1, to=1-2]
+\arrow["\iota", from=1-2, to=1-3]
+\arrow["\pi", from=1-3, to=1-4]
+\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+
+\vspace{-4mm}
+\noindent which induce maps
+\vspace{-4mm}
+% https://q.uiver.app/?q=WzAsNixbMSwwLCIgXFxGbGFnX2QoWSkiXSxbMiwwLCJcXEZsYWdfZChYKSBcXHRpbWVzIFxcRmxhZ19kKFMpIl0sWzEsMSwiXFxGbGFnKFkpX3tcXGZ0ZGltdmVje2Z9LFxcZnRkaW12ZWN7Z319Il0sWzIsMSwiXFxGbGFnX3tcXGZ0ZGltdmVje2Z9fShYKSBcXHRpbWVzIFxcRmxhZ197XFxmdGRpbXZlY3tnfX0oUykiXSxbMCwwLCJcXFBzaToiXSxbMCwxLCJcXFBzaV97XFxmdGRpbXZlY3tmfSxcXGZ0ZGltdmVje2d9fTogIl0sWzIsM10sWzAsMV0sWzIsMCwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywxLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[row sep={1mm}]
+^^I{\phantom{f,g}\Psi:} &[-10mm] { \Flag_d(Y)} & {\Flag_d(X) \times \Flag_d(S)} \\
+^^I{\Psi_{\ftdimvec{f},\ftdimvec{g}}: } & {\Flag(Y)_{\ftdimvec{f},\ftdimvec{g}}} & {\Flag_{\ftdimvec{f}}(X) \times \Flag_{\ftdimvec{g}}(S)}
+^^I\arrow[from=2-2, to=2-3]
+^^I\arrow[from=1-2, to=1-3]
+^^I\arrow["\subset"{description}, sloped, draw=none, from=2-2, to=1-2]
+^^I\arrow["\subset"{description}, sloped, draw=none, from=2-3, to=1-3]
+\end{tikzcd}\]
+\vspace{-6mm}
+\begin{block}{Theorem A}
+When $\eta$ splits, then $\Psi$ is surjective. \\
+Moreover, if $\Ext^1(S,X)=0$, then
+\vspace{-3mm}
+\begin{center}
+$\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle.
+\end{center}
+\end{block}
+\noindent By this theorem,
+\vspace{-3mm}
+\begin{center}
+\fbox{
+$\Flag_{d}(Y)$ has an affine paving $\Longleftarrow$ $\Flag_{d}(X)$, $\Flag_{d}(S)$ have.}
+\end{center}
