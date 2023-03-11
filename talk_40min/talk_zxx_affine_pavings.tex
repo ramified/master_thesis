@@ -576,6 +576,7 @@ Fix a quiver $Q$ and $M \in \rep(Q)$,
 \end{aligned}
 \end{equation*}
 \end{definition}
+\visible<2>{
 \begin{eg}
 $Q= \bullet$, $M=\mathbb{C}^n$, $\ftdimvec{f}:=\scalemath{0.7}
 {\left(
@@ -592,6 +593,7 @@ $Q= \bullet$, $M=\mathbb{C}^n$, $\ftdimvec{f}:=\scalemath{0.7}
 \end{aligned}
 \end{equation*}
 \end{eg}
+}
 
 \end{frame}
 
@@ -613,27 +615,31 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 
 \begin{frame}[fragile]{Task 1. $Q= \bullet$, $M=\mathbb{C}^n$}
-
+\visible<2->{
 In this case,
 % https://q.uiver.app/?q=WzAsOSxbMCwwLCJcXEdMX24oXFxtYXRoYmJ7Q30pIFxcLFxccm90YXRlYm94W29yaWdpbj1jXXsyNzB9eyRcXGNpcmNsZWFycm93cmlnaHQkfVxcOyBcXG1hdGhiYntDfV5uIl0sWzMsMCwiXFxHTF9uKFxcbWF0aGJie0N9KSAiXSxbMywxLCJCICJdLFsyLDFdLFs0LDEsIlxccm90YXRlYm94W29yaWdpbj1jXXsyNzB9eyRcXGNpcmNsZWFycm93cmlnaHQkfVxcOyBcXEZsYWdfe2R9KFxcbWF0aGJie0N9Xm4pIl0sWzQsMCwiXFxyb3RhdGVib3hbb3JpZ2luPWNdezI3MH17JFxcY2lyY2xlYXJyb3dyaWdodCR9XFw7IFxcRmxhZ197ZH0oXFxtYXRoYmJ7Q31ebikiXSxbMSwwXSxbMiwwXSxbMSwxXSxbNiw3LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFs4LDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
-\[\begin{tikzcd}[row sep=0mm, column sep=0mm]
-{\GL_n(\mathbb{C}) \,\rotatebox[origin=c]{270}{$\circlearrowright$}\; \mathbb{C}^n} & {} &[20mm] {} & {\GL_n(\mathbb{C}) } &[-3mm] {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)} \\
-& {} & {} & {B } & {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)}
+\[\begin{tikzcd}[row sep=0mm, column sep=0mm, ampersand replacement=\&,]
+{\GL_n(\mathbb{C}) \,\rotatebox[origin=c]{270}{$\circlearrowright$}\; \mathbb{C}^n} \& {} \&[20mm] {} \& {\GL_n(\mathbb{C}) } \&[-3mm] {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)} \\
+\& {} \& {} \& {B } \& {\rotatebox[origin=c]{270}{$\circlearrowright$}\; \Flag_{d}(\mathbb{C}^n)}
 \arrow[squiggly, from=1-2, to=1-3]
 \arrow[squiggly, from=2-2, to=2-3]
 \end{tikzcd}\]
 
 $\Flag_{d}(\mathbb{C}^n)$ has an affine paving given by Schubert cells (i.e., $B$-orbits).
+}
 
+\invisible<3>{
 \begin{block}{Note}
 When $Q= \bullet \longrightarrow \bullet$, $\Flag_{\dimvec{f}}(M)$ have no natural group actions.
 \end{block}
+}
 
 
 \end{frame}
 
 \begin{frame}[fragile]{Task 2a. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle\Id}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
 
+\visible<2->{
 \begin{equation*}
 \begin{aligned}
 \ftdimvec{f}=(1,0):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \varnothing \\
@@ -642,9 +648,11 @@ When $Q= \bullet \longrightarrow \bullet$, $\Flag_{\dimvec{f}}(M)$ have no natur
 \end{aligned}
 \end{equation*}
 $\,$\\[5mm]
+}
 
+\visible<3->{
 In this case, $\Flag_{\ftdimvec{f}}(M)$ is Grassmannian or empty, so it has an affine paving.
-
+}
 
 
 
@@ -652,6 +660,7 @@ In this case, $\Flag_{\ftdimvec{f}}(M)$ is Grassmannian or empty, so it has an a
 
 \begin{frame}[fragile]{Task 2b. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle 0}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
 
+\visible<2->{
 \begin{equation*}
 \begin{aligned}
 \ftdimvec{f}=(1,0):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \mathbb{P}^1 \\
@@ -660,9 +669,11 @@ In this case, $\Flag_{\ftdimvec{f}}(M)$ is Grassmannian or empty, so it has an a
 \end{aligned}
 \end{equation*}
 $\,$\\[5mm]
+}
 
+\visible<3->{
 In this case, $\Flag_{\ftdimvec{f}}(M) \cong \Flag_{\ftdimvec{f}_1}(M) \times \Flag_{\ftdimvec{f}_2}(M) $ has an affine paving.
-
+}
 
 
 
@@ -674,6 +685,7 @@ In this case, $\Flag_{\ftdimvec{f}}(M) \cong \Flag_{\ftdimvec{f}_1}(M) \times \F
 \scriptscriptstyle 1 &  \scriptscriptstyle 0 \\[-0.6mm] \scriptscriptstyle 0 & \scriptscriptstyle 0
 \end{smallmatrix}\!\right)}{\longrightarrow}\mathbb{C}^2\right]$, $d=1$}
 
+\visible<2->{
 \begin{equation*}
 \begin{aligned}
 \ftdimvec{f}=(1,0):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \pt \\
@@ -683,9 +695,11 @@ In this case, $\Flag_{\ftdimvec{f}}(M) \cong \Flag_{\ftdimvec{f}_1}(M) \times \F
 \end{aligned}
 \end{equation*}
 $\,$\\[5mm]
+}
 
+\visible<3->{
 To construct affine pavings systematically, we need to construct an uniform method.
-
+}
 \end{frame}
 
 \begin{frame}[fragile]{Task 2c. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{
@@ -735,8 +749,8 @@ We construct the affine paving of $\Flag_{d}(M)$ from the affine paving of $\Fla
 \begin{frame}[fragile]{Example.  $Q= \bullet$, $M=\mathbb{C}^2$}
 
 % https://q.uiver.app/?q=WzAsNSxbMSwwLCJcXG1hdGhiYntDfSJdLFsyLDAsIlxcbWF0aGJie0N9XjIiXSxbMywwLCJcXG1hdGhiYntDfSJdLFs0LDAsIjAiXSxbMCwwLCIwIl0sWzQsMF0sWzAsMSwiXFxpb3RhIl0sWzEsMiwiXFxwaSJdLFsyLDNdXQ==
-\[\begin{tikzcd}
-0 & {\mathbb{C}} & {\mathbb{C}^2} & {\mathbb{C}} & 0
+\[\begin{tikzcd}[ampersand replacement=\&]
+0 \& {\mathbb{C}} \& {\mathbb{C}^2} \& {\mathbb{C}} \& 0
 \arrow[from=1-1, to=1-2]
 \arrow["\iota", from=1-2, to=1-3]
 \arrow["\pi", from=1-3, to=1-4]
@@ -745,34 +759,38 @@ We construct the affine paving of $\Flag_{d}(M)$ from the affine paving of $\Fla
 
 % https://q.uiver.app/?q=WzAsMTQsWzEsMCwiXFxGbGFnX3sxfShcXG1hdGhiYntDfV4yKSJdLFsyLDAsIlxcRmxhZ197MX0oXFxtYXRoYmJ7Q30pIFxcdGltZXMgXFxGbGFnX3sxfShcXG1hdGhiYntDfSkiXSxbMywwXSxbNCwwXSxbMSwxLCJcXEZsYWdicmF7MX0oXFxtYXRoYmJ7Q30pIl0sWzIsMSwiXFxGbGFnYnJhezF9KFxcbWF0aGJie0N9KSBcXHRpbWVzIFxcRmxhZ2JyYXswfShcXG1hdGhiYntDfSkiXSxbNCwxLCJcXEZsYWdicmF7MH0oXFxtYXRoYmJ7Q30pIFxcdGltZXMgXFxGbGFnYnJhezF9KFxcbWF0aGJie0N9KSJdLFszLDEsIlxcYmlnc3FjdXAiXSxbMSwyLCJcXG1hdGhiYntQfV4xIl0sWzIsMiwiXFx7KlxcfSJdLFs0LDIsIlxceypcXH0iXSxbMywyLCJcXGJpZ3NxY3VwIl0sWzAsMSwiXFxQc2lfeygxKX06Il0sWzAsMCwiXFxQc2lfMToiXSxbNCw1XSxbMCwxXSxbOCw5XV0=
 \adjustbox{scale=0.88,center}{
-\begin{tikzcd}[row sep=tiny, column sep={-2mm}, scale=0.6]
-{\Psi_1:} & {\Flag_{1}(\mathbb{C}^2)} &[10mm] {\Flag_{1}(\mathbb{C}) \times \Flag_{1}(\mathbb{C})} & {} & {} \\
-{\Psi_{(1)}:} & {\Flagbra{1}(\mathbb{C})} & {\Flagbra{1}(\mathbb{C}) \times \Flagbra{0}(\mathbb{C})} & \bigsqcup & {\Flagbra{0}(\mathbb{C}) \times \Flagbra{1}(\mathbb{C})} \\[-3mm]
-& {\mathbb{P}^1} & {\pt} & \bigsqcup & {\pt}
+\begin{tikzcd}[row sep=tiny, column sep={-2mm}, scale=0.6, ampersand replacement=\&]
+{\Psi_1:} \& {\Flag_{1}(\mathbb{C}^2)} \&[10mm] {\Flag_{1}(\mathbb{C}) \times \Flag_{1}(\mathbb{C})} \& {} \& {} \\
+{\Psi_{(1)}:} \& {\Flagbra{1}(\mathbb{C})} \& {\Flagbra{1}(\mathbb{C}) \times \Flagbra{0}(\mathbb{C})} \& \bigsqcup \& {\Flagbra{0}(\mathbb{C}) \times \Flagbra{1}(\mathbb{C})} \\[-3mm]
+\& {\mathbb{P}^1} \& {\pt} \& \bigsqcup \& {\pt}
 \arrow[shorten >=3mm, from=1-2, to=1-3]
 \arrow[shorten >=0mm, from=2-2, to=2-3]
 \arrow[shorten <=7mm, shorten >=17mm, from=3-2, to=3-3]
 \end{tikzcd}
 }
 
+\visible<2->{
 \begin{block}{Question}
 How does $\Psi_{(1)}$ give an affine paving of $\Flagbra{1}(\mathbb{C})$?
 \end{block}
+}
 % https://q.uiver.app/?q=WzAsMyxbMSwxLCJcXHB0IFxcc3FjdXAgXFxwdCJdLFsxLDAsIlxce1xcaW5mdHlcXH0gXFxzcWN1cCBcXG1hdGhiYntDfSJdLFswLDAsIlxcbWF0aGJie1B9XjEiXSxbMiwxLCI9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxQc2lfeygxKX0iXV0=
 \vspace{-5mm}
-\[\begin{tikzcd}[column sep={0mm},row sep={10mm}]
-{\mathbb{P}^1} & {\{\infty\} \sqcup \,\mathbb{C}} \phantom{\{\}}\\
-& {\pt \sqcup \pt}
+\visible<3->{
+\[\begin{tikzcd}[column sep={0mm},row sep={10mm}, ampersand replacement=\&]
+{\mathbb{P}^1} \& {\{\infty\} \sqcup \,\mathbb{C}} \phantom{\{\}}\\
+\& {\pt \sqcup \pt}
 \arrow["{=}"{description}, draw=none, from=1-1, to=1-2]
 \arrow["{\Psi_{(1)}}", from=1-2, to=2-2]
 \end{tikzcd}\]
+}
 \end{frame}
 
 \begin{frame}[fragile]{Example.  $Q= \bullet$, $M=\mathbb{C}^8=\bigoplus_{i=1}^{8} \mathbb{C}v_i$}
 
 % https://q.uiver.app/?q=WzAsNSxbMSwwLCJcXG1hdGhiYntDfSJdLFsyLDAsIlxcbWF0aGJie0N9XjIiXSxbMywwLCJcXG1hdGhiYntDfSJdLFs0LDAsIjAiXSxbMCwwLCIwIl0sWzQsMF0sWzAsMSwiXFxpb3RhIl0sWzEsMiwiXFxwaSJdLFsyLDNdXQ==
-\[\begin{tikzcd}
-0 & {\mathbb{C}^3} & {\mathbb{C}^8} & {\mathbb{C}^5} & 0
+\[\begin{tikzcd}[ampersand replacement=\&]
+0 \& {\mathbb{C}^3} \& {\mathbb{C}^8} \& {\mathbb{C}^5} \& 0
 \arrow[from=1-1, to=1-2]
 \arrow["\iota", from=1-2, to=1-3]
 \arrow["\pi", from=1-3, to=1-4]
@@ -784,15 +802,17 @@ How does $\Psi_{(1)}$ give an affine paving of $\Flagbra{1}(\mathbb{C})$?
 \cong\;& \;\;\mathbb{C}^4
 \end{aligned}
 \end{equation*}
+\invisible{2-}{
 \begin{short}
 In general, 
 % https://q.uiver.app/?q=WzAsMixbMSwwLCJcXEZsYWdicmF7MX0oXFxtYXRoYmJ7Q31eMykgXFx0aW1lcyBcXEZsYWdicmF7Mn0oXFxtYXRoYmJ7Q31eNSkiXSxbMCwwLCJcXEZsYWdicmF7M30oXFxtYXRoYmJ7Q31eOCkiXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
-\[\begin{tikzcd}
-{\Flagbra{3}(\mathbb{C}^8)} & {\Flagbra{1}(\mathbb{C}^3) \times \Flagbra{2}(\mathbb{C}^5)}
+\[\begin{tikzcd}[ampersand replacement=\&]
+{\Flagbra{3}(\mathbb{C}^8)} \& {\Flagbra{1}(\mathbb{C}^3) \times \Flagbra{2}(\mathbb{C}^5)}
 \arrow[dashed, from=1-1, to=1-2]
 \end{tikzcd}\]
 is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
 \end{short}
+}
 \end{frame}
 
 
@@ -820,6 +840,7 @@ is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
 	\arrow["\subset"{description}, sloped, draw=none, from=2-3, to=1-3]
 \end{tikzcd}\]
 \vspace{-6mm}
+\visible<2->{
 \begin{block}{Theorem A}
 When $\eta$ splits, then $\Psi$ is surjective. \\
 Moreover, if $\Ext^1(S,X)=0$, then
@@ -828,12 +849,16 @@ Moreover, if $\Ext^1(S,X)=0$, then
 $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle.
 \end{center}
 \end{block}
+}
+
+\visible<3->{
 \noindent By this theorem, 
 \vspace{-3mm}
 \begin{center}
 \fbox{
 $\Flag_{d}(Y)$ has an affine paving $\Longleftarrow$ $\Flag_{d}(X)$, $\Flag_{d}(S)$ have.}
 \end{center}
+}
 \end{frame}
 
 
@@ -899,7 +924,9 @@ We use following short exact sequences
 
 to reduced the problem to indecomposable representations.
 
+\only<2-4>{
 \hrulefill
+}
 
 %This paragraph should be omitted after the first show.
 \only<2>{Notice that we use the result
@@ -911,7 +938,7 @@ $$\Ext^1 \!\left(\rule{0mm}{3.4mm} \substack{1\\121}, \substack{1\\111}  \right)
 
 $\Flag_{d} \left(\substack{1\\121} \right)$ has an affine paving: it is $\mathbb{P}^1$, $\pt$ or empty.}
 
-\only<3-4>{
+\only<4>{
 \hrulefill
 
 Need: more informations of indecomposable representations!

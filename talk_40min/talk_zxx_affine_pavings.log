@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  11 MAR 2023 15:16
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  11 MAR 2023 16:02
 entering extended mode
 **./talk_zxx_affine_pavings.tex
 (talk_zxx_affine_pavings.tex
@@ -1953,21 +1953,27 @@ Overfull \hbox (9.18552pt too wide) detected at line 19
 
 (talk_zxx_affine_pavings.vrb
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 17.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 28.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 17.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 22.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 28.
 ) [11
+
+] (talk_zxx_affine_pavings.vrb
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 28.
+
+) [12
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [12
+ (talk_zxx_affine_pavings.vrb) [13
 
 ] (talk_zxx_affine_pavings.toc)
-[13
+[14
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -1975,36 +1981,56 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
  (talk_zxx_affine_pavings.vrb)
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 633.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 638.
 
-[14
+[15
 
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
+] (talk_zxx_affine_pavings.vrb) [16
 
- (talk_zxx_affine_pavings.vrb) [15
-
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
-
- (talk_zxx_affine_pavings.vrb) [16
+] (talk_zxx_affine_pavings.vrb) [17
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
 
-(talk_zxx_affine_pavings.vrb) [17
+(talk_zxx_affine_pavings.vrb) [18
+
+] (talk_zxx_affine_pavings.vrb) [19
+
+]
+(talk_zxx_affine_pavings.vrb) [20
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [18
+ (talk_zxx_affine_pavings.vrb) [21
+
+]
+(talk_zxx_affine_pavings.vrb) [22
+
+] (talk_zxx_affine_pavings.vrb) [23
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
 
-(talk_zxx_affine_pavings.vrb) [19
+(talk_zxx_affine_pavings.vrb) [24
+
+] (talk_zxx_affine_pavings.vrb) [25
+
+]
+(talk_zxx_affine_pavings.vrb) [26
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb) [27
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+
+(talk_zxx_affine_pavings.vrb) [28
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2014,7 +2040,21 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 22--23
 [][]  
  []
 
-) [20
+) [29
+
+] (talk_zxx_affine_pavings.vrb
+Overfull \hbox (15.0pt too wide) in paragraph at lines 22--23
+[][]  
+ []
+
+) [30
+
+] (talk_zxx_affine_pavings.vrb
+Overfull \hbox (15.0pt too wide) in paragraph at lines 22--23
+[][]  
+ []
+
+) [31
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2024,33 +2064,38 @@ Overfull \hbox (22.00406pt too wide) detected at line 16
 [][]
  []
 
-) [21
+) [32
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [22
+ (talk_zxx_affine_pavings.vrb) [33
+
+] (talk_zxx_affine_pavings.vrb)
+[34
+
+] (talk_zxx_affine_pavings.vrb) [35
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb)
-[23
+ (talk_zxx_affine_pavings.vrb) [36
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [24
 
-] (talk_zxx_affine_pavings.vrb) [25
+(talk_zxx_affine_pavings.vrb) [37
 
-]
-(talk_zxx_affine_pavings.vrb) [26
-
-] (talk_zxx_affine_pavings.vrb) [27
+] (talk_zxx_affine_pavings.vrb) [38
 
 ]
-(talk_zxx_affine_pavings.toc) [28
+(talk_zxx_affine_pavings.vrb) [39
+
+] (talk_zxx_affine_pavings.vrb) [40
+
+]
+(talk_zxx_affine_pavings.toc) [41
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2058,113 +2103,113 @@ Overfull \hbox (22.00406pt too wide) detected at line 16
  (talk_zxx_affine_pavings.vrb)
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <9> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 983.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1010.
 
-[29
-
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
-
- (talk_zxx_affine_pavings.vrb) [30
-
-] (talk_zxx_affine_pavings.vrb) [31
-
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
-
-
-(talk_zxx_affine_pavings.vrb) [32
-
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
-
- (talk_zxx_affine_pavings.vrb) [33
-
-]
-(talk_zxx_affine_pavings.vrb) [34
-
-] (talk_zxx_affine_pavings.vrb) [35
-
-]
-(talk_zxx_affine_pavings.vrb) [36
-
-] (talk_zxx_affine_pavings.vrb) [37
-
-]
-(talk_zxx_affine_pavings.vrb) [38
-
-] (talk_zxx_affine_pavings.vrb) [39
-
-]
-\openout4 = `talk_zxx_affine_pavings.vrb'.
-
-
-(talk_zxx_affine_pavings.vrb) [40
-
-] (talk_zxx_affine_pavings.vrb)
-Overfull \vbox (4.88602pt too high) detected at line 1245
- []
-
-[41
-
-] (talk_zxx_affine_pavings.vrb) [42
+[42
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
  (talk_zxx_affine_pavings.vrb) [43
 
-]
-(talk_zxx_affine_pavings.vrb) [44
+] (talk_zxx_affine_pavings.vrb) [44
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [45
+
+(talk_zxx_affine_pavings.vrb) [45
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb) [46
+
+]
+(talk_zxx_affine_pavings.vrb) [47
+
+] (talk_zxx_affine_pavings.vrb) [48
+
+]
+(talk_zxx_affine_pavings.vrb) [49
+
+] (talk_zxx_affine_pavings.vrb) [50
+
+]
+(talk_zxx_affine_pavings.vrb) [51
+
+] (talk_zxx_affine_pavings.vrb) [52
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+
+(talk_zxx_affine_pavings.vrb) [53
+
+] (talk_zxx_affine_pavings.vrb)
+Overfull \vbox (4.88602pt too high) detected at line 1272
+ []
+
+[54
+
+] (talk_zxx_affine_pavings.vrb) [55
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb) [56
+
+]
+(talk_zxx_affine_pavings.vrb) [57
+
+]
+\openout4 = `talk_zxx_affine_pavings.vrb'.
+
+ (talk_zxx_affine_pavings.vrb) [58
 
 ]
 (talk_zxx_affine_pavings.vrb
 File: figures/cardinput/card-final_noquiver.pdf Graphic file (type pdf)
 <use figures/cardinput/card-final_noquiver.pdf>
-) [46
+) [59
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/cardinput/card-final_noborder.pdf Graphic file (type pdf)
 <use figures/cardinput/card-final_noborder.pdf>
-) [47
+) [60
 
 ]
 (talk_zxx_affine_pavings.vrb
 File: figures/cardinput/card-final.pdf Graphic file (type pdf)
 <use figures/cardinput/card-final.pdf>
-) [48
+) [61
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/cardinput/card-final.pdf Graphic file (type pdf)
 <use figures/cardinput/card-final.pdf>
-) [49
+) [62
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
 
-(talk_zxx_affine_pavings.vrb) [50
+(talk_zxx_affine_pavings.vrb) [63
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [51
+ (talk_zxx_affine_pavings.vrb) [64
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1443.
+(hyperref)                removing `math shift' on input line 1470.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1443.
+(hyperref)                removing `math shift' on input line 1470.
 
-(talk_zxx_affine_pavings.toc) [52
+(talk_zxx_affine_pavings.toc) [65
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2178,10 +2223,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 4--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1459
+Overfull \vbox (5.1025pt too high) detected at line 1486
  []
 
-[53
+[66
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart12.pdf Graphic file (type pdf)
@@ -2192,10 +2237,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 5--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1459
+Overfull \vbox (5.1025pt too high) detected at line 1486
  []
 
-[54
+[67
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart13.pdf Graphic file (type pdf)
@@ -2206,10 +2251,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 6--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1459
+Overfull \vbox (5.1025pt too high) detected at line 1486
  []
 
-[55
+[68
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart1.pdf Graphic file (type pdf)
@@ -2219,7 +2264,7 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 7--11
  [] 
  []
 
-) [56
+) [69
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2237,10 +2282,10 @@ Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
  []
 
 )
-Overfull \vbox (0.9997pt too high) detected at line 1470
+Overfull \vbox (0.9997pt too high) detected at line 1497
  []
 
-[57
+[70
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2258,10 +2303,10 @@ Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
  []
 
 )
-Overfull \vbox (0.9997pt too high) detected at line 1481
+Overfull \vbox (0.9997pt too high) detected at line 1508
  []
 
-[58
+[71
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2275,10 +2320,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 8--11
  []
 
 )
-Overfull \vbox (2.8525pt too high) detected at line 1494
+Overfull \vbox (2.8525pt too high) detected at line 1521
  []
 
-[59
+[72
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart3.pdf Graphic file (type pdf)
@@ -2288,28 +2333,28 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 9--11
  [] 
  []
 
-) [60
+) [73
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [61
+ (talk_zxx_affine_pavings.vrb) [74
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
  (talk_zxx_affine_pavings.vrb)
-[62
+[75
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/space/preferredimage.pdf Graphic file (type pdf)
 <use figures/space/preferredimage.pdf>
-) [63
+) [76
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/space/preferredimage.pdf Graphic file (type pdf)
 <use figures/space/preferredimage.pdf>
-) [64
+) [77
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2324,10 +2369,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 4--6
  []
 
 )
-Overfull \vbox (2.8525pt too high) detected at line 1582
+Overfull \vbox (2.8525pt too high) detected at line 1609
  []
 
-[65
+[78
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart3.pdf Graphic file (type pdf)
@@ -2337,16 +2382,16 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 5--6
  [] 
  []
 
-) [66
+) [79
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
  (talk_zxx_affine_pavings.vrb)
-Overfull \vbox (4.17052pt too high) detected at line 1614
+Overfull \vbox (4.17052pt too high) detected at line 1641
  []
 
-[67
+[80
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2360,10 +2405,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 5--7
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1623
+Overfull \vbox (5.1025pt too high) detected at line 1650
  []
 
-[68
+[81
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2381,10 +2426,10 @@ Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
  []
 
 )
-Overfull \vbox (0.9997pt too high) detected at line 1646
+Overfull \vbox (0.9997pt too high) detected at line 1673
  []
 
-[69
+[82
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2402,10 +2447,10 @@ Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
  []
 
 )
-Overfull \vbox (0.9997pt too high) detected at line 1656
+Overfull \vbox (0.9997pt too high) detected at line 1683
  []
 
-[70
+[83
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2423,15 +2468,15 @@ Overfull \hbox (107.62303pt too wide) in paragraph at lines 8--8
  []
 
 )
-Overfull \vbox (0.9997pt too high) detected at line 1666
+Overfull \vbox (0.9997pt too high) detected at line 1693
  []
 
-[71
+[84
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
- (talk_zxx_affine_pavings.vrb) [72
+ (talk_zxx_affine_pavings.vrb) [85
 
 ]
 \tf@nav=\write6
@@ -2443,23 +2488,23 @@ Overfull \vbox (0.9997pt too high) detected at line 1666
 \tf@snm=\write8
 \openout8 = `talk_zxx_affine_pavings.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1677.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1677.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1704.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1704.
  (talk_zxx_affine_pavings.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1677.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1677.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1704.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1704.
 
 Package rerunfilecheck Info: File `talk_zxx_affine_pavings.out' has not changed
 .
 (rerunfilecheck)             Checksum: 0FD45614B599B68CC42CB9340D1958C5.
  ) 
 Here is how much of TeX's memory you used:
- 45482 strings out of 427748
- 911701 string characters out of 3150981
- 1016170 words of memory out of 3000000
- 48641 multiletter control sequences out of 15000+200000
+ 46252 strings out of 427748
+ 931663 string characters out of 3150981
+ 1030418 words of memory out of 3000000
+ 49385 multiletter control sequences out of 15000+200000
  586001 words of font info for 114 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 59i,28n,84p,1214b,1661s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,28n,84p,1214b,1661s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on talk_zxx_affine_pavings.pdf (72 pages).
+Output written on talk_zxx_affine_pavings.pdf (85 pages).
