@@ -1,6 +1,0 @@
-\frametitle{Statement}
-\begin{theorem}
-For a Dynkin quiver $Q$ and $M \in \rep(Q)$,
-$$\Flag_{d}(M) \text{ has an affine paving.}$$
-\end{theorem}
-
