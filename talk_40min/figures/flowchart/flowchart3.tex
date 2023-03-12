@@ -80,7 +80,7 @@
 \draw[->]   (smallord) --node [anchor=west,font=\ttfamily,xshift=1mm]{Lemma} (stop);
   \draw[->]      ($ (indrep)!.5!(bigord) $) -| (smallord);
    \draw[->,gray] ($ (bigord.south)+(\a,0)$) -- ++(0,-1) -- ++(5,0) --node[anchor=west,font=\ttfamily,xshift=1mm,align=left]
-          {Theorem B} ++(0,3.8) -- ++ (-5,0) --              
+          {Theorem B\\\textcolor{red}{irr mono}} ++(0,3.8) -- ++ (-5,0) --              
        ($(bigord.north)+(\a,0)$);
    \draw[->,gray] ($ (indrep)!.5!(bigord)+(\a,\b) $)-| ($ (smallord.north)+(\a,0) $);
    \draw[->,red] ($ (indrep)!.5!(bigord)+(\a,\b) $)-| ($ (diffe.north)+(\a,0) $);

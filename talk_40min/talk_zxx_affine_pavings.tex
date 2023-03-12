@@ -872,7 +872,7 @@ $\Psi$ is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
 \vspace{-6mm}
 \visible<2->{
 \begin{block}{Theorem A}
-When $\eta$ splits, then $\Psi$ is surjective. \\
+When $\eta$ splits, then $\Psi$ is surjective. \quad\hyperlink{skipwarning}{\beamergotobutton{skip}} \\
 Moreover, if $\Ext^1(S,X)=0$, then
 \vspace{-2mm}
 \begin{center}
@@ -893,7 +893,7 @@ $\Flag_{d}(Y)$ has an affine paving $\Longleftarrow$ $\Flag_{d}(X)$, $\Flag_{d}(
 
 
 
-\begin{frame}[fragile]{\textcolor{red}{Warming}}
+\begin{frame}[fragile]{\textcolor{red}{Warning}}
 $\eta$ splits and $\Ext^1(S,X)=0$ are necessary for Theorem A.
 
 \visible<2->{
@@ -930,7 +930,7 @@ $$\Flag_{(1,1,1)}(Y) \cong \mathbb{P}^1 = \{0\} \sqcup \{\infty\} \sqcup \mathbb
 
 \end{frame}
 
-\begin{frame}[fragile,t]{Task 3. $Q= {\scriptstyle
+\begin{frame}[fragile,t, label=skipwarning]{Task 3. $Q= {\scriptstyle
 % https://q.uiver.app/?q=WzAsNCxbMSwwLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFswLDFdLFsyLDFdLFszLDFdXQ==
 \adjustbox{scale=0.7}{
 \begin{tikzcd}[sep={between origins, 10mm}, ampersand replacement=\&]
@@ -1047,7 +1047,7 @@ Need: more informations of indecomposable representations!
 }
 \end{frame}
 
-%Vertices
+Vertices  subsection
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1062,7 +1062,7 @@ Need: more informations of indecomposable representations!
 
 \begin{short}
 \vspace{-5mm}
-\only<1>{
+\only<1,3>{
 \[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins},ampersand replacement=\&]
 	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
 	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
@@ -1118,7 +1118,7 @@ Need: more informations of indecomposable representations!
 
 \begin{short}
 $$\text{ Vertices } \quad \Longleftrightarrow \quad \text{ Indecomposable representations }$$
-\visible<2>{$$\text{\textcolor{brown}{irreducible rep},\quad \textcolor{red}{projective rep},\quad \textcolor{OliveGreen}{injective rep} }$$
+\visible<2->{$$\text{\textcolor{brown}{irreducible rep},\quad \textcolor{red}{projective rep},\quad \textcolor{OliveGreen}{injective rep} }$$
 }
 \end{short}
 
@@ -1126,15 +1126,30 @@ $$\text{ Vertices } \quad \Longleftrightarrow \quad \text{ Indecomposable repres
  \begin{tikzpicture}[overlay, remember picture]
  \coordinate (center) at ([xshift=-27mm, yshift=10mm]current page.center);
     \draw[rounded corners=6mm, line width=0.3mm, color=red] (center) --  ++(40:3.1) -- ++(-90:4.6) -- cycle;
-    \node[text=red, font=\Large] at ([xshift=6mm,yshift=12mm]center) {proj};
+    \node[text=red, font=\Large] at ([xshift=30mm,yshift=12mm]center) {proj};
    \coordinate (center2) at ([xshift=52mm]center);
       \draw[rounded corners=6mm, line width=0.3mm, color=OliveGreen] (center2) --  ++(40:3.1) -- ++(-90:4.6) -- cycle;
       \node[text=OliveGreen, font=\Large] at ([xshift=6mm,yshift=12mm]center2) {inj};  
   \end{tikzpicture}
 }
+\only<3->{
+ \begin{tikzpicture}[overlay, remember picture]
+ \coordinate (center) at ([xshift=-27mm, yshift=10mm]current page.center);
+ \coordinate (centertext) at ([xshift=-0.5mm, yshift=-0.3mm]center);
+    \node[text=red, font = \small] at (centertext) {P(1)=};
+    \node[text=red, font = \small] at ([xshift=13mm, yshift=10mm]centertext) {P(2)=};
+    \node[text=red, font = \small] at ([xshift=13mm, yshift=-3mm]centertext) {P(3)=};
+    \node[text=red, font = \small] at ([xshift=13mm, yshift=-13mm]centertext) {P(4)=};
+    \coordinate (centertext2) at ([xshift=66mm]centertext);
+    \node[text=OliveGreen, font = \small] at (centertext2) {=I(1)};
+    \node[text=OliveGreen, font = \small] at ([xshift=13mm, yshift=10mm]centertext2) {=I(2)};
+    \node[text=OliveGreen, font = \small] at ([xshift=13mm, yshift=-3mm]centertext2) {=I(3)};
+    \node[text=OliveGreen, font = \small] at ([xshift=13mm, yshift=-13mm]centertext2) {=I(4)};
+  \end{tikzpicture}
+}
 \end{frame}
 
-%Arrows
+%Arrows  subsection
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1177,7 +1192,7 @@ $$\text{ Vertices } \quad \Longleftrightarrow \quad \text{ Indecomposable repres
 
 \begin{short}
 $$\text{ Arrows } \quad \Longleftrightarrow \quad \text{ Irreducible morphisms }$$
-Instead, I will show you how to construct AR-quiver.
+I will show you how to construct AR-quiver.
 \end{short}
 
 
@@ -1282,7 +1297,7 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 }
 \end{frame}
 
-%Paths
+%Paths subsection
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1297,7 +1312,7 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 
 \begin{short}
 \vspace{-5mm}
-\only<1-3>{
+\only<1,2,6>{
 \[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
 	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
 	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
@@ -1324,7 +1339,88 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 \end{tikzcd}\]
 }
 
+\only<3>{
+\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
+	2 \&\&\& {\substack{0\\110}} \&\& \textcolor{red}{\substack{1\\011}} \&\& {\substack{0\\100}} \\
+	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
+	4 \&\&\& \textcolor{red}{\substack{1\\010}} \&\& {\substack{0\\111}} \&\& {\substack{1\\000}} \\
+	3 \&\&\& {\substack{0\\011}} \&\& {\substack{1\\110}} \&\& {\substack{0\\001}}
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=4-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=4-4, to=2-5]
+	\arrow[from=3-4, to=2-5, red]
+	\arrow[from=2-5, to=1-6, red]
+	\arrow[from=2-5, to=4-6]
+	\arrow[from=2-5, to=3-6]
+	\arrow[from=1-6, to=2-7]
+	\arrow[from=4-6, to=2-7]
+	\arrow[from=3-6, to=2-7]
+	\arrow[from=2-7, to=1-8]
+	\arrow[from=2-7, to=4-8]
+	\arrow[from=2-7, to=3-8]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=4-1, to=2-2]
+\end{tikzcd}\]
+}
+
 \only<4>{
+\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
+	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
+	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
+	4 \&\&\& \textcolor{red}{\substack{1\\010}} \&\& \textcolor{red}{\substack{0\\111}} \&\& {\substack{1\\000}} \\
+	3 \&\&\& {\substack{0\\011}} \&\& {\substack{1\\110}} \&\& {\substack{0\\001}}
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=4-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=4-4, to=2-5]
+	\arrow[from=3-4, to=2-5, OliveGreen]
+	\arrow[from=2-5, to=1-6]
+	\arrow[from=2-5, to=4-6]
+	\arrow[from=2-5, to=3-6, OliveGreen]
+	\arrow[from=1-6, to=2-7]
+	\arrow[from=4-6, to=2-7]
+	\arrow[from=3-6, to=2-7]
+	\arrow[from=2-7, to=1-8]
+	\arrow[from=2-7, to=4-8]
+	\arrow[from=2-7, to=3-8]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=4-1, to=2-2]
+\end{tikzcd}\]
+}
+
+\only<5>{
+\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
+	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
+	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& \textcolor{red}{\substack{1\\111}} \\[-7mm]
+	4 \&\&\& \textcolor{red}{\substack{1\\010}} \&\& {\substack{0\\111}} \&\& {\substack{1\\000}} \\
+	3 \&\&\& {\substack{0\\011}} \&\& {\substack{1\\110}} \&\& {\substack{0\\001}}
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=4-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=4-4, to=2-5]
+	\arrow[from=3-4, to=2-5, red]
+	\arrow[from=2-5, to=1-6, red]
+	\arrow[from=2-5, to=4-6, blue]
+	\arrow[from=2-5, to=3-6, OliveGreen]
+	\arrow[from=1-6, to=2-7, red]
+	\arrow[from=4-6, to=2-7, blue]
+	\arrow[from=3-6, to=2-7, OliveGreen]
+	\arrow[from=2-7, to=1-8]
+	\arrow[from=2-7, to=4-8]
+	\arrow[from=2-7, to=3-8]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=4-1, to=2-2]
+\end{tikzcd}\]
+}
+
+\only<7>{
 \[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
 	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
 	\& 1 \& \textcolor{purple}{\substack{0\\010}} \&\& \textcolor{blue}{\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
@@ -1351,21 +1447,31 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 \end{tikzcd}\]
 }
 \end{short}
-\only<1->{
+
 \begin{short}
 \only<1>{$$\text{ Paths } \quad \Longleftrightarrow \quad \text{ Morphisms }$$}
-\only<2>{In the Dynkin quiver case,\\[-3mm]
+\only<2-5>{In the Dynkin quiver case,\\[-3mm]
 $$\Hom(T,T') \cong \left< \text{ paths from $T$ to $T'$ }  \right>/_{\text{AR-seq}}$$
 For example, \\[-7mm]
+\only<2>{
 $$\Hom\!\left(\substack{1\\010},\substack{1\\011} \right) \cong \mathbb{C},\quad \Hom\!\left(\substack{1\\010},\substack{0\\111} \right) \cong 0,\quad \Hom\!\left(\substack{1\\010},\substack{1\\111} \right) \cong \mathbb{C}$$
 }
-\only<3->{
+\only<3>{
+$$\textcolor{red}{\Hom\!\left(\substack{1\\010},\substack{1\\011} \right) \cong \mathbb{C}},\quad \Hom\!\left(\substack{1\\010},\substack{0\\111} \right) \cong 0,\quad \Hom\!\left(\substack{1\\010},\substack{1\\111} \right) \cong \mathbb{C}$$
+}
+\only<4>{
+$$\Hom\!\left(\substack{1\\010},\substack{1\\011} \right) \cong \mathbb{C},\quad \textcolor{red}{\Hom\!\left(\substack{1\\010},\substack{0\\111} \right) \cong 0},\quad \Hom\!\left(\substack{1\\010},\substack{1\\111} \right) \cong \mathbb{C}$$
+}
+\only<5>{
+$$\Hom\!\left(\substack{1\\010},\substack{1\\011} \right) \cong \mathbb{C},\quad \Hom\!\left(\substack{1\\010},\substack{0\\111} \right) \cong 0,\quad \textcolor{red}{\Hom\!\left(\substack{1\\010},\substack{1\\111} \right) \cong \mathbb{C}}$$
+}
+}
+\only<6->{
 $$\Ext^1(\textcolor{blue}{T},\textcolor{red}{T'}) \cong \Homup (\textcolor{red}{T'},\textcolor{purple}{\tau T})^{\vee}$$
 For example, \\[-7mm]
 $$\Ext^1\left(\textcolor{blue}{\substack{1\\121}},\textcolor{red}{\substack{0\\111}} \right) \cong \Hom\left(\textcolor{red}{\substack{0\\111}},\textcolor{purple}{\substack{0\\010}} \right)^{\vee} \cong 0$$
 }
 \end{short}
-}
 \end{frame}
 
 \begin{frame}[fragile]{First application}
@@ -1384,7 +1490,7 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 \end{frame}
 
-%Shift cards
+%Shift cards  subsection
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1786,7 +1892,9 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 
 \begin{frame}[fragile]{Q \& A}
-Thank you! Any questions?
+Thank you for your listening! 
+
+Any questions?
 \end{frame}
 
 
