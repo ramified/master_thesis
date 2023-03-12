@@ -418,6 +418,10 @@ show frame/.default=true}
 \begin{frame}{Process}
 \tableofcontents[hideallsubsections]
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Setting and Statement}
 \begin{frame}{Process}
 \tableofcontents[currentsection,hideallsubsections]
@@ -428,7 +432,7 @@ $K= \mathbb{C}$, $X$: algebraic variety over $K$.
 \end{setting}
 \begin{definition}
 An \textbf{affine paving} of $X$ is a filtration
-$$0= X_0 \subset X_1 \subset \cdots \subset X_d=X$$
+$$\varnothing = X_0 \subset X_1 \subset \cdots \subset X_d=X$$
 with $X_i$ closed and $X_{i+1} \smallsetminus X_i \cong \mathbb{A}^k_{K}$.
 \end{definition}
 \begin{figure}[th]
@@ -512,12 +516,20 @@ $$\begin{tikzcd}[ampersand replacement=\&, sep=2mm]
 \end{tabular}
 \end{center}
 \end{short}
+
+%https://tex.stackexchange.com/questions/89588/positioning-relative-to-page-in-tikz
+	\begin{tikzpicture}[remember picture,overlay]
+	\coordinate (center) at ([xshift=36mm, yshift=-13mm]current page.center);
+	  % Draw a cross at the center of the page
+	  \draw[red, line width=3pt] (center) -- ++(-1,0.5) -- ++(2,-1);
+	  \draw[red, line width=3pt] (center) -- ++(1,0.5) -- ++(-2,-1);
+	\end{tikzpicture}
 }
 \end{frame}
 % https://q.uiver.app/?q=WzAsNSxbMCwxLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFszLDEsIlxcYnVsbGV0Il0sWzAsMV0sWzIsMV0sWzEsM10sWzQsM11d
 % https://q.uiver.app/?q=WzAsNSxbMCwxLCJWXzEiXSxbMSwxLCJWXzIiXSxbMSwwLCJWXzUiXSxbMiwxLCJWXzMiXSxbMywxLCJWXzQiXSxbMCwxLCJcXGFscGhhIl0sWzIsMSwiXFxkZWx0YSJdLFsxLDMsIlxcYmV0YSJdLFs0LDMsIlxcZ2FtbWEiLDJdXQ==
 % https://q.uiver.app/?q=WzAsNSxbMCwxLCJcXG1hdGhiYntDfV57Mn0iXSxbMSwxLCJcXG1hdGhiYntDfV57Mn0iXSxbMSwwLCIwIl0sWzIsMSwiXFxtYXRoYmJ7Q31eezJ9Il0sWzMsMSwiXFxtYXRoYmJ7Q30iXSxbMCwxLCJcXElkIl0sWzIsMV0sWzEsMywiXFxJZCJdLFs0LDMsIihcXCEgXFxiZWdpbntzbWFsbG1hdHJpeH0gXFxzY3JpcHRzdHlsZSAxICYgIFxcc2NyaXB0c3R5bGUgMCAgXFxlbmR7c21hbGxtYXRyaXh9XFwhKSIsMl1d
-\begin{frame}[fragile,t]{Quiver representation}
+\begin{frame}[fragile]{Quiver representation}
 \begin{short}
 \begin{center}
 \begin{tabular}{cc}
@@ -540,27 +552,27 @@ $$
 	\arrow["\beta", from=2-2, to=2-3]
 	\arrow["\gamma"', from=2-4, to=2-3]
 \end{tikzcd}$$}
-\only<2-4>{$$\begin{tikzcd}[ampersand replacement=\&, sep={between origins, 11mm}]
+\only<2-3>{$$\begin{tikzcd}[ampersand replacement=\&, sep={between origins, 11mm},>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt]
 	\& 0 \& \& \\
 	{\mathbb{C}^{2}} \& {\mathbb{C}^{2}} \& {\mathbb{C}^{2}} \& {\mathbb{C}}
-	\arrow["\Id", from=2-1, to=2-2]
+	\arrow["\scriptscriptstyle\Id", from=2-1, to=2-2]
 	\arrow[from=1-2, to=2-2]
-	\arrow["\Id", from=2-2, to=2-3]
-	\arrow["{(\! \begin{smallmatrix} \scriptstyle 1 &  \scriptstyle 0  \end{smallmatrix}\!)}"', from=2-4, to=2-3]
+	\arrow["\scriptscriptstyle\Id", from=2-2, to=2-3]
+	\arrow["{(\! \begin{smallmatrix} \scriptscriptstyle 1 &  \scriptscriptstyle 0  \end{smallmatrix}\!)}"', from=2-4, to=2-3]
 \end{tikzcd}$$}
   \\[10mm]
  $Q$ & $V \in \rep(Q)$ \\[5mm]
- &  \visible<3->{$\dimv V= \substack{0\phantom{0}\\2221}$}
+ \visible<3->{Dimension vector:} &  \visible<3->{$\dimv V= \substack{0\phantom{0}\\2221}$}
  \\[0mm]
 \end{tabular}
 \end{center}
 \end{short}
 
-\only<4>{
-\begin{eg}
-When $Q= \bullet$, $\rep(Q)= \Vect_{\mathbb{C}}$.
-\end{eg}
-}
+%\only<4>{
+%\begin{eg}
+%When $Q= \bullet$, $\rep(Q)= \Vect_{\mathbb{C}}$.
+%\end{eg}
+%}
 \end{frame}
 
 
@@ -572,24 +584,25 @@ Fix a quiver $Q$ and $M \in \rep(Q)$,
 \begin{equation*}
 \begin{aligned}
 \Flag_{d}(M)\colon=\;& \left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq M  \right\} \\ 
-\Flag_{\ftdimvec{f}}(M)\colon=\;&\left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq M \;\middle|\;\rule{0mm}{3.4mm} \dimv M_i =\ftdimvec{f}_i \right\}
+\Flag_{\ftdimvec{f}}(M)\colon=\;&\left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq M \;\middle|\;\rule{0mm}{3.4mm} \dimv N_i =\ftdimvec{f}_i \right\}
 \end{aligned}
 \end{equation*}
 \end{definition}
 \visible<2>{
 \begin{eg}
-$Q= \bullet$, $M=\mathbb{C}^n$, $\ftdimvec{f}:=\scalemath{0.7}
-{\left(
-\begin{smallmatrix}
-\scriptsize n \\ \vphantom{\int\limits^x}\smash{\vdots} \\ 1
-\end{smallmatrix}
-\right)}$
+$Q= \bullet$, $M=\mathbb{C}^n$, \\[-4mm]
+%$\ftdimvec{f}:=\scalemath{0.7}
+%{\left(
+%\begin{smallmatrix}
+%\scriptsize n \\ \vphantom{\int\limits^x}\smash{\vdots} \\ 1
+%\end{smallmatrix}
+%\right)}$
 \begin{equation*}
 \begin{aligned}
-\Flag_{d}(\mathbb{C}^n)=\;& \left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq \mathbb{C}^n  \right\}\hspace{-10mm}& \\ 
-\Flag_{1}(\mathbb{C}^n)=\;& \left\{ F\colon 0 \subseteq N_1  \subseteq \mathbb{C}^n  \right\} &= \sqcup_{k=0}^{n} \Gr (n,k) \\
-\Flag_{\ftdimvec{f}}(\mathbb{C}^n)=\;&\text{ complete flags of $\mathbb{C}^n$} & \\
-\Flag_{(\!k\!)}\!(\mathbb{C}^n)=\;& \Gr (n,k) &\\
+%\Flag_{d}(\mathbb{C}^n)=\;& \left\{ F\colon 0 \subseteq N_1 \subseteq \cdots\subseteq N_d \subseteq \mathbb{C}^n  \right\}\hspace{-10mm}& \\ 
+\Flag_{1}(\mathbb{C}^n)=\;& \left\{ F\colon 0 \subseteq N_1  \subseteq \mathbb{C}^n  \right\} &= \bigsqcup_{k=0}^{n} \Gr (n,k) \\[-3mm]
+%\Flag_{\ftdimvec{f}}(\mathbb{C}^n)=\;&\text{ complete flags of $\mathbb{C}^n$} & \\
+\Flag_{(k)}(\mathbb{C}^n)=\;& \Gr (n,k) &\\
 \end{aligned}
 \end{equation*}
 \end{eg}
@@ -628,7 +641,7 @@ In this case,
 $\Flag_{d}(\mathbb{C}^n)$ has an affine paving given by Schubert cells (i.e., $B$-orbits).
 }
 
-\invisible<3>{
+\visible<3>{
 \begin{block}{Note}
 When $Q= \bullet \longrightarrow \bullet$, $\Flag_{\dimvec{f}}(M)$ have no natural group actions.
 \end{block}
@@ -637,28 +650,9 @@ When $Q= \bullet \longrightarrow \bullet$, $\Flag_{\dimvec{f}}(M)$ have no natur
 
 \end{frame}
 
-\begin{frame}[fragile]{Task 2a. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle\Id}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
-
-\visible<2->{
-\begin{equation*}
-\begin{aligned}
-\ftdimvec{f}=(1,0):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \varnothing \\
-\ftdimvec{f}=(0,0):\;&  \quad\quad\Flag_{\ftdimvec{f}}(M) = \pt \\
-  \ftdimvec{f}=(1,1):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \mathbb{P}^1 \\
-\end{aligned}
-\end{equation*}
-$\,$\\[5mm]
-}
-
-\visible<3->{
-In this case, $\Flag_{\ftdimvec{f}}(M)$ is Grassmannian or empty, so it has an affine paving.
-}
 
 
-
-\end{frame}
-
-\begin{frame}[fragile]{Task 2b. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle 0}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
+\begin{frame}[fragile]{Task 2a. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle 0}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
 
 \visible<2->{
 \begin{equation*}
@@ -672,7 +666,33 @@ $\,$\\[5mm]
 }
 
 \visible<3->{
-In this case, $\Flag_{\ftdimvec{f}}(M) \cong \Flag_{\ftdimvec{f}_1}(M) \times \Flag_{\ftdimvec{f}_2}(M) $ has an affine paving.
+In this case, 
+$$\Flag_{(a,b)}(M) \cong \Flag_{(a)}(\mathbb{C}^2) \times \Flag_{(b)}(\mathbb{C}^2) $$
+has an affine paving.
+}
+
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Task 2b. $Q= {\textstyle\bullet \rightarrow \bullet}$, $M=\left[\mathbb{C}^2 \stackrel{\scriptstyle\Id}{\rightarrow}\mathbb{C}^2\right]$, $d=1$}
+
+\visible<2->{
+\begin{equation*}
+\begin{aligned}
+\ftdimvec{f}=(1,0):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \varnothing \\
+\ftdimvec{f}=(0,0):\;&  \quad\quad\Flag_{\ftdimvec{f}}(M) = \pt \\
+\ftdimvec{f}=(1,1):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \mathbb{P}^1 \\
+\ftdimvec{f}=(0,1):\;& \quad\quad \Flag_{\ftdimvec{f}}(M) = \mathbb{P}^1 \\
+\end{aligned}
+\end{equation*}
+$\,$\\[5mm]
+}
+
+\visible<3->{
+In this case, 
+$$\Flag_{(a,b)}(M) \cong \Flag_{\left( \substack{b\\a} \right)}(\mathbb{C}^2)$$
+has an affine paving.
 }
 
 
@@ -709,11 +729,17 @@ To construct affine pavings systematically, we need to construct an uniform meth
 \end{smallmatrix}\!\right)}{\longrightarrow}\mathbb{C}^2\right]$, $d=1$}
 
 \begin{block}{First try}
-Let $X= \left[ 0 \rightarrow \mathbb{C} \right]$, $S= \left[ \mathbb{C}^{2} \stackrel{
+Let $X= \left[ 0 
+\stackrel{\phantom{
 (\!
 \begin{smallmatrix}
 \scriptstyle 1 &  \scriptstyle 0 
-\end{smallmatrix}\!)}{\longrightarrow} \mathbb{C} \right]$, then $M=X \oplus S$, and the short exact sequence 
+\end{smallmatrix}\!)}}{\longrightarrow}
+ \mathbb{C} \right]$, $S= \left[ \mathbb{C}^{2} \stackrel{
+(\!
+\begin{smallmatrix}
+\scriptstyle 1 &  \scriptstyle 0 
+\end{smallmatrix}\!)}{\longrightarrow} \mathbb{C} \right]$, then $M=X \oplus S$,\\ and the short exact sequence 
 % https://q.uiver.app/?q=WzAsNSxbMSwwLCJYIl0sWzIsMCwiTSJdLFszLDAsIlMiXSxbNCwwLCIwIl0sWzAsMCwiMCJdLFs0LDBdLFswLDEsIlxcaW90YSJdLFsxLDIsIlxccGkiXSxbMiwzXV0=
 \[\begin{tikzcd}
 0 & X & M & S & 0
@@ -757,23 +783,25 @@ We construct the affine paving of $\Flag_{d}(M)$ from the affine paving of $\Fla
 \arrow[from=1-4, to=1-5]
 \end{tikzcd}\]
 
+\visible<2->{
 % https://q.uiver.app/?q=WzAsMTQsWzEsMCwiXFxGbGFnX3sxfShcXG1hdGhiYntDfV4yKSJdLFsyLDAsIlxcRmxhZ197MX0oXFxtYXRoYmJ7Q30pIFxcdGltZXMgXFxGbGFnX3sxfShcXG1hdGhiYntDfSkiXSxbMywwXSxbNCwwXSxbMSwxLCJcXEZsYWdicmF7MX0oXFxtYXRoYmJ7Q30pIl0sWzIsMSwiXFxGbGFnYnJhezF9KFxcbWF0aGJie0N9KSBcXHRpbWVzIFxcRmxhZ2JyYXswfShcXG1hdGhiYntDfSkiXSxbNCwxLCJcXEZsYWdicmF7MH0oXFxtYXRoYmJ7Q30pIFxcdGltZXMgXFxGbGFnYnJhezF9KFxcbWF0aGJie0N9KSJdLFszLDEsIlxcYmlnc3FjdXAiXSxbMSwyLCJcXG1hdGhiYntQfV4xIl0sWzIsMiwiXFx7KlxcfSJdLFs0LDIsIlxceypcXH0iXSxbMywyLCJcXGJpZ3NxY3VwIl0sWzAsMSwiXFxQc2lfeygxKX06Il0sWzAsMCwiXFxQc2lfMToiXSxbNCw1XSxbMCwxXSxbOCw5XV0=
 \adjustbox{scale=0.88,center}{
 \begin{tikzcd}[row sep=tiny, column sep={-2mm}, scale=0.6, ampersand replacement=\&]
 {\Psi_1:} \& {\Flag_{1}(\mathbb{C}^2)} \&[10mm] {\Flag_{1}(\mathbb{C}) \times \Flag_{1}(\mathbb{C})} \& {} \& {} \\
-{\Psi_{(1)}:} \& {\Flagbra{1}(\mathbb{C})} \& {\Flagbra{1}(\mathbb{C}) \times \Flagbra{0}(\mathbb{C})} \& \bigsqcup \& {\Flagbra{0}(\mathbb{C}) \times \Flagbra{1}(\mathbb{C})} \\[-3mm]
+{\Psi_{(1)}:} \& {\Flagbra{1}(\mathbb{C}^2)} \& {\Flagbra{1}(\mathbb{C}) \times \Flagbra{0}(\mathbb{C})} \& \bigsqcup \& {\Flagbra{0}(\mathbb{C}) \times \Flagbra{1}(\mathbb{C})} \\[-3mm]
 \& {\mathbb{P}^1} \& {\pt} \& \bigsqcup \& {\pt}
 \arrow[shorten >=3mm, from=1-2, to=1-3]
 \arrow[shorten >=0mm, from=2-2, to=2-3]
 \arrow[shorten <=7mm, shorten >=17mm, from=3-2, to=3-3]
 \end{tikzcd}
 }
-
-\visible<2->{
-\begin{block}{Question}
-How does $\Psi_{(1)}$ give an affine paving of $\Flagbra{1}(\mathbb{C})$?
-\end{block}
 }
+
+%\visible<3->{
+%\begin{block}{Question}
+%How does $\Psi_{(1)}$ give an affine paving of $\Flagbra{1}(\mathbb{C}^2)$?
+%\end{block}
+%}
 % https://q.uiver.app/?q=WzAsMyxbMSwxLCJcXHB0IFxcc3FjdXAgXFxwdCJdLFsxLDAsIlxce1xcaW5mdHlcXH0gXFxzcWN1cCBcXG1hdGhiYntDfSJdLFswLDAsIlxcbWF0aGJie1B9XjEiXSxbMiwxLCI9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxQc2lfeygxKX0iXV0=
 \vspace{-5mm}
 \visible<3->{
@@ -796,21 +824,23 @@ How does $\Psi_{(1)}$ give an affine paving of $\Flagbra{1}(\mathbb{C})$?
 \arrow["\pi", from=1-3, to=1-4]
 \arrow[from=1-4, to=1-5]
 \end{tikzcd}\]
+\vspace{-2mm}
+% https://q.uiver.app/?q=WzAsMixbMSwwLCJcXEZsYWdicmF7MX0oXFxtYXRoYmJ7Q31eMykgXFx0aW1lcyBcXEZsYWdicmF7Mn0oXFxtYXRoYmJ7Q31eNSkiXSxbMCwwLCJcXEZsYWdicmF7M30oXFxtYXRoYmJ7Q31eOCkiXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}[ampersand replacement=\&]
+\Psi: {\Flagbra{3}(\mathbb{C}^8)} \& {\Flagbra{1}(\mathbb{C}^3) \times \Flagbra{2}(\mathbb{C}^5) \;\bigsqcup\; \cdots}
+\arrow[from=1-1, to=1-2]
+\end{tikzcd}\]
+\vspace{-10mm}
+
 \begin{equation*}
 \begin{aligned}
 \Psi^{-1}\!\left(\!  \left< v_1 \right>\!,\!\rule{0mm}{3.7mm} \left< v_4,\!v_5 \right> \! \right) =\;&  \left\{\left< v_1, v_4\!+\!av_2\! +\!bv_3 ,v_5\! +\!cv_2\! +\!dv_3 \right>\rule{0mm}{3.7mm}  \middle|\;  a,b,c,d \in \mathbb{C}  \right\} \\ 
 \cong\;& \;\;\mathbb{C}^4
 \end{aligned}
 \end{equation*}
-\invisible{2-}{
+\visible<2->{
 \begin{short}
-In general, 
-% https://q.uiver.app/?q=WzAsMixbMSwwLCJcXEZsYWdicmF7MX0oXFxtYXRoYmJ7Q31eMykgXFx0aW1lcyBcXEZsYWdicmF7Mn0oXFxtYXRoYmJ7Q31eNSkiXSxbMCwwLCJcXEZsYWdicmF7M30oXFxtYXRoYmJ7Q31eOCkiXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
-\[\begin{tikzcd}[ampersand replacement=\&]
-{\Flagbra{3}(\mathbb{C}^8)} \& {\Flagbra{1}(\mathbb{C}^3) \times \Flagbra{2}(\mathbb{C}^5)}
-\arrow[dashed, from=1-1, to=1-2]
-\end{tikzcd}\]
-is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
+$\Psi$ is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
 \end{short}
 }
 \end{frame}
@@ -866,12 +896,13 @@ $\Flag_{d}(Y)$ has an affine paving $\Longleftarrow$ $\Flag_{d}(X)$, $\Flag_{d}(
 \begin{frame}[fragile]{\textcolor{red}{Warming}}
 $\eta$ splits and $\Ext^1(S,X)=0$ are necessary for Theorem A.
 
+\visible<2->{
 \begin{eg}
 Consider the quiver $Q: {\textstyle\bullet \rightarrow \bullet \leftarrow \bullet}$ and the short exact sequence 
 % https://q.uiver.app/?q=WzAsNSxbMSwwLCJcXGxlZnRbICBcXG1hdGhiYntDfWVfMSBcXHJpZ2h0YXJyb3cgXFxtYXRoYmJ7Q31eMiBcXGxlZnRhcnJvdyBcXG1hdGhiYntDfWVfMiBcXHJpZ2h0XSJdLFsyLDAsIlxcbGVmdFsgIFxcbWF0aGJie0N9XjIgXFxzdGFja3JlbHtcXHNjcmlwdHNjcmlwdHN0eWxlXFxJZH17XFxyaWdodGFycm93fSBcXG1hdGhiYntDfV4yIFxcc3RhY2tyZWx7XFxzY3JpcHRzY3JpcHRzdHlsZVxcSWR9e1xcbGVmdGFycm93fSBcXG1hdGhiYntDfV4yIFxccmlnaHRdIl0sWzMsMCwiXFxsZWZ0WyAgXFxtYXRoYmJ7Q31lXzIgXFxyaWdodGFycm93IDAgXFxsZWZ0YXJyb3cgXFxtYXRoYmJ7Q31lXzEgXFxyaWdodF0iXSxbNCwwLCIwIl0sWzAsMCwiMCJdLFswLDFdLFsxLDJdLFsyLDNdLFs0LDBdXQ==
 \adjustbox{scale=0.77,center}{
-\begin{tikzcd}[row sep={14mm}]
-	0 &[-3mm] {\left[  \mathbb{C}e_1 \stackrel{\scriptscriptstyle\phantom{\Id}}{\rightarrow} \mathbb{C}^2 \leftarrow \mathbb{C}e_2 \right]} & {\left[  \mathbb{C}^2 \stackrel{\scriptscriptstyle\Id}{\rightarrow} \mathbb{C}^2 \stackrel{\scriptscriptstyle\Id}{\leftarrow} \mathbb{C}^2 \right]} & {\left[  \mathbb{C}e_2 \stackrel{\scriptscriptstyle\phantom{\Id}}{\rightarrow} 0 \leftarrow \mathbb{C}e_1 \right]} &[-3mm] 0
+\begin{tikzcd}[row sep={14mm}, ampersand replacement=\&]
+	0 \&[-3mm] {\left[  \mathbb{C}e_1 \stackrel{\scriptscriptstyle\phantom{\Id}}{\rightarrow} \mathbb{C}^2 \leftarrow \mathbb{C}e_2 \right]} \& {\left[  \mathbb{C}^2 \stackrel{\scriptscriptstyle\Id}{\rightarrow} \mathbb{C}^2 \stackrel{\scriptscriptstyle\Id}{\leftarrow} \mathbb{C}^2 \right]} \& {\left[  \mathbb{C}e_2 \stackrel{\scriptscriptstyle\phantom{\Id}}{\rightarrow} 0 \leftarrow \mathbb{C}e_1 \right]} \&[-3mm] 0
 	\arrow[from=1-2, to=1-3]
 	\arrow[from=1-3, to=1-4]
 	\arrow[from=1-4, to=1-5]
@@ -880,18 +911,23 @@ Consider the quiver $Q: {\textstyle\bullet \rightarrow \bullet \leftarrow \bulle
 }
 \vspace{0mm}
 
+\visible<3->{
 we get
 \vspace{-3mm}
 $$\Img \Psi_{(0,1,0),(1,0,1)} \cong \left(  \mathbb{P}^1 \smallsetminus \{0, \infty \}\right) \times \pt  \cong \mathbb{C}^*,$$
 \vspace{-7mm}
 
 so $\Psi$ is not surjective.\\[3mm]
-
+}
+\visible<4->{
 In this way, we get a bad stratification
 \vspace{-3mm}
-$$\Flag_{(1,1,1)}(Y) \cong \mathbb{P}^1 = \{0\} \sqcup \{\infty\} \sqcup \mathbb{C}^{\times}.$$
+$$\Flag_{(1,1,1)}(Y) \cong \mathbb{P}^1 = \{0\} \sqcup \{\infty\} \sqcup \mathbb{C}^{*}.$$
 \vspace{-3mm}
+}
 \end{eg}
+}
+
 \end{frame}
 
 \begin{frame}[fragile,t]{Task 3. $Q= {\scriptstyle
@@ -924,21 +960,23 @@ We use following short exact sequences
 
 to reduced the problem to indecomposable representations.
 
-\only<2-4>{
+\only<2->{
 \hrulefill
 }
 
 %This paragraph should be omitted after the first show.
-\only<2>{Notice that we use the result
+\only<2-3>{Notice that we use the result
 $$\Ext^1 \!\left(\rule{0mm}{3.4mm} \substack{1\\121}, \substack{1\\111}  \right)=0, \qquad \Ext^1 \!\left(\rule{0mm}{3.4mm} \substack{1\\111}, \substack{1\\111}  \right)=0.$$}
 
+\only<3>{We can't put $\substack{1\\121}$ on the left, since
+$$\Ext^1 \!\left(\rule{0mm}{3.4mm} \substack{1\\111}, \substack{1\\121}  \right) \cong \mathbb{C}  \neq 0.$$}
 
 %This paragraph should be shown later.
-\only<3-4>{$\Flag_{d} \left(\substack{1\\111} \right)$ has an affine paving: obvious.
+\only<4->{$\Flag_{d} \left(\substack{1\\111} \right)$ has an affine paving: obvious.
 
 $\Flag_{d} \left(\substack{1\\121} \right)$ has an affine paving: it is $\mathbb{P}^1$, $\pt$ or empty.}
 
-\only<4>{
+\only<5>{
 \hrulefill
 
 Need: more informations of indecomposable representations!
@@ -1002,7 +1040,7 @@ Need: more informations of indecomposable representations!
 \text{ Vertices } & \Longleftrightarrow &&\hspace{-2mm} \text{ Indecomposable representations }\\
 \text{ Arrows } & \Longleftrightarrow &&\hspace{-2mm} \text{ Irreducible morphisms }\\
 \text{ Paths } & \Longleftrightarrow &&\hspace{-2mm} \text{ Morphisms }\\
-\text{ Shift of cards } & \Longleftrightarrow &&\hspace{-2mm} \text{ Switch arrows in $Q$ }\\
+\text{ Shift cards } & \Longleftrightarrow &&\hspace{-2mm} \text{ Switch arrows in $Q$ }\\
 \end{aligned}
 \end{equation*}
 \end{short}
@@ -1084,6 +1122,16 @@ $$\text{ Vertices } \quad \Longleftrightarrow \quad \text{ Indecomposable repres
 }
 \end{short}
 
+\only<2>{
+ \begin{tikzpicture}[overlay, remember picture]
+ \coordinate (center) at ([xshift=-27mm, yshift=10mm]current page.center);
+    \draw[rounded corners=6mm, line width=0.3mm, color=red] (center) --  ++(40:3.1) -- ++(-90:4.6) -- cycle;
+    \node[text=red, font=\Large] at ([xshift=6mm,yshift=12mm]center) {proj};
+   \coordinate (center2) at ([xshift=52mm]center);
+      \draw[rounded corners=6mm, line width=0.3mm, color=OliveGreen] (center2) --  ++(40:3.1) -- ++(-90:4.6) -- cycle;
+      \node[text=OliveGreen, font=\Large] at ([xshift=6mm,yshift=12mm]center2) {inj};  
+  \end{tikzpicture}
+}
 \end{frame}
 
 %Arrows
@@ -1175,14 +1223,14 @@ Instead, I will show you how to construct AR-quiver.
 	\arrow[from=1-1, to=2-2, visible on=<1->]
 	\arrow[from=3-1, to=2-2, visible on=<1->]
 	\arrow[from=4-1, to=2-2, visible on=<1->]
-	\arrow[from=1-6, to=1-4, brown, dashed, visible on=<7->]
-	\arrow[from=1-8, to=1-6, brown, dashed, visible on=<7->]
-	\arrow[from=2-5, to=2-3, brown, dashed, visible on=<7->]
-	\arrow[from=2-7, to=2-5, brown, dashed, visible on=<7->]
-	\arrow[from=3-6, to=3-4, brown, dashed, visible on=<7->]
-	\arrow[from=3-8, to=3-6, brown, dashed, visible on=<7->]
-	\arrow[from=4-6, to=4-4, brown, dashed, visible on=<7->]
-	\arrow[from=4-8, to=4-6, brown, dashed, visible on=<7->]
+	\arrow["\tau"', from=1-6, to=1-4, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=1-8, to=1-6, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=2-5, to=2-3, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=2-7, to=2-5, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=3-6, to=3-4, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=3-8, to=3-6, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=4-6, to=4-4, brown, dashed, visible on=<9->]
+	\arrow["\tau"', from=4-8, to=4-6, brown, dashed, visible on=<9->]
 \end{tikzcd}\]
 \end{short}
 \only<1->{
@@ -1202,15 +1250,35 @@ Instead, I will show you how to construct AR-quiver.
 	\arrow[from=1-2, to=1-3]
 	\arrow[from=1-3, to=1-4]
 	\arrow[from=1-4, to=1-5]
-	\arrow[from=1-1, to=1-2]
+\arrow[from=1-1, to=1-2]
 \end{tikzcd}\]
 }
-\only<1,6-7>{
-\visible<7>{
+\only<1,6->{
+\visible<7->{
 $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textcolor{brown}{AR-translation}}$$
 }
 }
 \end{short}
+}
+\only<8>{
+\begin{tikzpicture}[overlay, remember picture, color=blue]
+\coordinate (center) at ([xshift=-27mm, yshift=9.4mm]current page.center);
+\coordinate (center1) at ([xshift=7mm]center);
+\coordinate (center2) at ([xshift=13mm, yshift=-1mm]center1);
+\draw (center2) circle (6mm); 
+ \coordinate (center3) at ([xshift=26mm]center2);
+\draw (center3) circle (6mm); 
+  \coordinate (A) at ([xshift=13mm, yshift=13mm]center2);
+ \coordinate (B) at ([xshift=26mm]A);
+  \draw (A) ++(-40:7mm) arc (-40:-140:7mm);
+  \draw (B) ++(-40:7mm) arc (-40:-140:7mm);
+\coordinate (C) at ([yshift=-26mm]A);
+\coordinate (D) at ([yshift=-26mm]B);
+  \draw (C) ++(30:7mm) arc (30:160:7mm);
+  \draw (D) ++(30:7mm) arc (30:150:7mm);
+  \draw ([yshift=-13mm]C) ++(75:25mm) arc (75:105:25mm);
+  \draw ([yshift=-13mm]D) ++(75:25mm) arc (75:105:25mm);
+\end{tikzpicture}
 }
 \end{frame}
 
@@ -1229,11 +1297,12 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 
 \begin{short}
 \vspace{-5mm}
-\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}]
-	2 &&& {\substack{0\\110}} && {\substack{1\\011}} && {\substack{0\\100}} \\
-	& 1 & {\substack{0\\010}} && {\substack{1\\121}} && {\substack{1\\111}} \\[-7mm]
-	4 &&& {\substack{1\\010}} && {\substack{0\\111}} && {\substack{1\\000}} \\
-	3 &&& {\substack{0\\011}} && {\substack{1\\110}} && {\substack{0\\001}}
+\only<1-3>{
+\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
+	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
+	\& 1 \& {\substack{0\\010}} \&\& {\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
+	4 \&\&\& {\substack{1\\010}} \&\& {\substack{0\\111}} \&\& {\substack{1\\000}} \\
+	3 \&\&\& {\substack{0\\011}} \&\& {\substack{1\\110}} \&\& {\substack{0\\001}}
 	\arrow[from=2-3, to=1-4]
 	\arrow[from=2-3, to=4-4]
 	\arrow[from=2-3, to=3-4]
@@ -1253,6 +1322,34 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
 	\arrow[from=3-1, to=2-2]
 	\arrow[from=4-1, to=2-2]
 \end{tikzcd}\]
+}
+
+\only<4>{
+\[\begin{tikzcd}[column sep={13mm,between origins},row sep={10mm,between origins}, ampersand replacement=\&]
+	2 \&\&\& {\substack{0\\110}} \&\& {\substack{1\\011}} \&\& {\substack{0\\100}} \\
+	\& 1 \& \textcolor{purple}{\substack{0\\010}} \&\& \textcolor{blue}{\substack{1\\121}} \&\& {\substack{1\\111}} \\[-7mm]
+	4 \&\&\& {\substack{1\\010}} \&\& \textcolor{red}{\substack{0\\111}} \&\& {\substack{1\\000}} \\
+	3 \&\&\& {\substack{0\\011}} \&\& {\substack{1\\110}} \&\& {\substack{0\\001}}
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=4-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=4-4, to=2-5]
+	\arrow[from=3-4, to=2-5]
+	\arrow[from=2-5, to=1-6]
+	\arrow[from=2-5, to=4-6]
+	\arrow[from=2-5, to=3-6]
+	\arrow[from=1-6, to=2-7]
+	\arrow[from=4-6, to=2-7]
+	\arrow[from=3-6, to=2-7]
+	\arrow[from=2-7, to=1-8]
+	\arrow[from=2-7, to=4-8]
+	\arrow[from=2-7, to=3-8]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=4-1, to=2-2]
+\end{tikzcd}\]
+}
 \end{short}
 \only<1->{
 \begin{short}
@@ -1262,10 +1359,10 @@ $$\Hom(T,T') \cong \left< \text{ paths from $T$ to $T'$ }  \right>/_{\text{AR-se
 For example, \\[-7mm]
 $$\Hom\!\left(\substack{1\\010},\substack{1\\011} \right) \cong \mathbb{C},\quad \Hom\!\left(\substack{1\\010},\substack{0\\111} \right) \cong 0,\quad \Hom\!\left(\substack{1\\010},\substack{1\\111} \right) \cong \mathbb{C}$$
 }
-\only<3>{
-$$\Ext^1(T,T') \cong \Homup (T',\tau T)^{\vee}$$
+\only<3->{
+$$\Ext^1(\textcolor{blue}{T},\textcolor{red}{T'}) \cong \Homup (\textcolor{red}{T'},\textcolor{purple}{\tau T})^{\vee}$$
 For example, \\[-7mm]
-$$\Ext^1\left(\substack{1\\121},\substack{0\\111} \right) \cong \Hom\left(\substack{0\\111},\substack{0\\010} \right)^{\vee} \cong 0$$
+$$\Ext^1\left(\textcolor{blue}{\substack{1\\121}},\textcolor{red}{\substack{0\\111}} \right) \cong \Hom\left(\textcolor{red}{\substack{0\\111}},\textcolor{purple}{\substack{0\\010}} \right)^{\vee} \cong 0$$
 }
 \end{short}
 }
@@ -1287,7 +1384,7 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 \end{frame}
 
-%Shift of cards
+%Shift cards
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1343,7 +1440,7 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 \only<1>{
 \begin{short}
-$$\text{ Shift of cards } \quad \Longleftrightarrow \quad \text{ Switch arrows in $Q$ }$$
+$$\text{ Shift cards } \quad \Longleftrightarrow \quad \text{ Switch arrows in $Q$ }$$
 \end{short}
 }
 \only<5>{
@@ -1510,13 +1607,8 @@ The main theorem is true for quivers of type $A$, $D$.
 \begin{frame}[fragile]{Process}
 \begin{figure}[ht]
     \centering
-%    \only<1>{\includegraphics[scale=0.75]{figures/flowchart/flowchart11.pdf}}
-%    \only<2>{\includegraphics[scale=0.75]{figures/flowchart/flowchart12.pdf}}
-%    \only<3>{\includegraphics[scale=0.75]{figures/flowchart/flowchart13.pdf}}
-%    \only<4>{\includegraphics[scale=0.75]{figures/flowchart/flowchart1.pdf}}
-    \only<1>{\includegraphics[scale=0.75]{figures/flowchart/flowchart2.pdf}}
-    \only<2>{\includegraphics[scale=0.75]{figures/flowchart/flowchart3.pdf}}
-%    \only<7>{\includegraphics[scale=0.75]{figures/flowchart/flowchart4.pdf}}
+    \only<1>{\includegraphics[scale=0.75]{figures/flowchart/flowchart1.pdf}}
+    \only<2>{\includegraphics[scale=0.75]{figures/flowchart/flowchart2.pdf}}
 \end{figure}
 \end{frame}
 
@@ -1564,7 +1656,7 @@ In this case, we have a clear description of $\Img \Psi_{\ftdimvec{f},\ftdimvec{
 
 %\begin{overlayarea}{\linewidth}{\textheight}
 \begin{proposition}
-For $X \hookrightarrow Y$ irreducible mono, the induced SES
+For $X \hookrightarrow Y$ \textcolor{red}{irreducible mono}, the induced SES
 \vspace{-3mm}
 \[\begin{tikzcd}
 \eta: 0 & {X} & {Y} & {S} & 0
@@ -1582,7 +1674,7 @@ satisfies the condition of Theorem B. Moreover,
 \;\Flag_{\ftdimvec{f}}(X) \times \Flag_{\ftdimvec{g}}(S), & \text{otherwise}
 \end{cases}$$}
 \only<3>{$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \begin{cases}
-U_{\ftdimvec{f}}(X,X_S), & \ftdimvec{g}_i=\dimv S\\
+\;U_{\ftdimvec{f}}(X,X_S), & \ftdimvec{g}_i=\dimv S\\
 \;\Flag_{\ftdimvec{f}}(X) \times \Flag_{\ftdimvec{g}}(S),\hspace{15mm}$\,$ & \text{otherwise}
 \end{cases}$$}
 \\
@@ -1693,8 +1785,8 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 \end{frame}
 
 
-\begin{frame}[fragile]{Final page}
-Thank you! Q and A?
+\begin{frame}[fragile]{Q \& A}
+Thank you! Any questions?
 \end{frame}
 
 
