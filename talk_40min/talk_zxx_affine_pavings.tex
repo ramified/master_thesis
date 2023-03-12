@@ -612,10 +612,10 @@ $Q= \bullet$, $M=\mathbb{C}^n$, \\[-4mm]
 
 
 \begin{frame}[fragile]{Statement}
-\begin{theorem}
+\begin{block}{Theorem [Cerulli-Irelli--Esposito--Franzen--Reineke, Zhou]}
 For a Dynkin quiver $Q$ and $M \in \rep(Q)$, 
 $$\Flag_{d}(M) \text{ has an affine paving.}$$
-\end{theorem}
+\end{block}
 
 \end{frame}
 
@@ -871,7 +871,7 @@ $\Psi$ is a Zarisky-locally trivial affine bundle of rank $2 \cdot (3-1)=4$.
 \end{tikzcd}\]
 \vspace{-6mm}
 \visible<2->{
-\begin{block}{Theorem A}
+\begin{block}{Theorem A [Cerulli-Irelli--Esposito--Franzen--Reineke, Zhou]}
 When $\eta$ splits, then $\Psi$ is surjective. \quad\hyperlink{skipwarning}{\beamergotobutton{skip}} \\
 Moreover, if $\Ext^1(S,X)=0$, then
 \vspace{-2mm}
@@ -1047,7 +1047,7 @@ Need: more informations of indecomposable representations!
 }
 \end{frame}
 
-Vertices  subsection
+%Vertices  subsection
 \begin{frame}[fragile,t]{Auslander--Reiten quiver: $D_4 \qquad$
 \tikzcdset{arrow style=tikz,
            diagrams={>=Classical TikZ Rightarrow,shorten <=-3pt,shorten >=-3pt,}
@@ -1289,7 +1289,7 @@ $$\text{AR-quiver},\quad \text{\textcolor{blue}{AR-sequence}},\quad \text{\textc
   \draw (B) ++(-40:7mm) arc (-40:-140:7mm);
 \coordinate (C) at ([yshift=-26mm]A);
 \coordinate (D) at ([yshift=-26mm]B);
-  \draw (C) ++(30:7mm) arc (30:160:7mm);
+  \draw (C) ++(30:7mm) arc (30:150:7mm);
   \draw (D) ++(30:7mm) arc (30:150:7mm);
   \draw ([yshift=-13mm]C) ++(75:25mm) arc (75:105:25mm);
   \draw ([yshift=-13mm]D) ++(75:25mm) arc (75:105:25mm);
@@ -1561,10 +1561,10 @@ $$\text{ Shift cards } \quad \Longleftrightarrow \quad \text{ Switch arrows in $
 \begin{frame}[fragile]{Indecomposable representations of low order are easy!}
 
 
-\begin{lemma}
+\begin{block}{lemma [Maksimau]}
 Suppose $Q$ is a tree. For $M \in \ind(Q)$, $\ord(M) \leqslant 2$, 
 $$\Flag_{\ftdimvec{f}}(M)\;\; \cong\quad \mathbb{P}^1 \times \cdots \times \mathbb{P}^1 \quad\text{ or }\quad \varnothing.$$
-\end{lemma}
+\end{block}
 
 \begin{eg}
 $\;\;Q= 
@@ -1662,9 +1662,9 @@ Reduce & 1 & 1 & 1 & 1 & 1 & 0 \\
 
 
 
-\begin{corollary}
+\begin{block}{Corollary [Maksimau]}
 The main theorem is true for quivers of type $A$, $D$.
-\end{corollary}
+\end{block}
 \end{frame}
 
 
@@ -1742,7 +1742,7 @@ The main theorem is true for quivers of type $A$, $D$.
 	\arrow["\subset"{description}, sloped, draw=none, from=2-3, to=1-3]
 \end{tikzcd}\]
 \vspace{-6mm}
-\begin{block}{Theorem B}
+\begin{block}{Theorem B [Cerulli-Irelli--Esposito--Franzen--Reineke, Zhou]}
 When $\eta$ does not split and generates $\Ext^1(S,X)$, 
 \vspace{-2mm}
 \begin{center}
@@ -1893,6 +1893,8 @@ $$\Flag_{d}(M) \text{ has an affine paving.}$$
 
 \begin{frame}[fragile]{Q \& A}
 Thank you for your listening! 
+
+Special thanks to Yilong Zhang, Luozi Shi, Chenji Fu, Zheng Huang and Junyan Liu for their valuable feedback.
 
 Any questions?
 \end{frame}
