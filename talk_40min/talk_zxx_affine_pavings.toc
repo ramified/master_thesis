@@ -1,4 +1,4 @@
 \beamer@sectionintoc {1}{Setting and Statement}{3}{0}{1}
 \beamer@sectionintoc {2}{Case study}{13}{0}{2}
 \beamer@sectionintoc {3}{Auslander--Reiten theory}{45}{0}{3}
-\beamer@sectionintoc {4}{Tackle the type $E$ case}{76}{0}{4}
+\beamer@sectionintoc {4}{Tackle the type $E$ case}{80}{0}{4}

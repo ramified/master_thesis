@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  13 MAR 2023 00:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  13 MAR 2023 10:37
 entering extended mode
 **./talk_zxx_affine_pavings.tex
 (talk_zxx_affine_pavings.tex
@@ -2236,17 +2236,6 @@ File: figures/cardinput/card-final.pdf Graphic file (type pdf)
 (talk_zxx_affine_pavings.vrb) [75
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1673.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1673.
-
-(talk_zxx_affine_pavings.toc) [76
-
-]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
 
  (talk_zxx_affine_pavings.vrb
@@ -2258,10 +2247,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 4--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1689
+Overfull \vbox (5.1025pt too high) detected at line 1681
  []
 
-[77
+[76
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart12.pdf Graphic file (type pdf)
@@ -2272,10 +2261,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 5--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1689
+Overfull \vbox (5.1025pt too high) detected at line 1681
  []
 
-[78
+[77
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart13.pdf Graphic file (type pdf)
@@ -2286,10 +2275,10 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 6--11
  []
 
 )
-Overfull \vbox (5.1025pt too high) detected at line 1689
+Overfull \vbox (5.1025pt too high) detected at line 1681
  []
 
-[79
+[78
 
 ] (talk_zxx_affine_pavings.vrb
 File: figures/flowchart/flowchart1.pdf Graphic file (type pdf)
@@ -2299,7 +2288,18 @@ Overfull \hbox (0.20937pt too wide) in paragraph at lines 7--11
  [] 
  []
 
-) [80
+) [79
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1684.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1684.
+
+(talk_zxx_affine_pavings.toc) [80
 
 ]
 \openout4 = `talk_zxx_affine_pavings.vrb'.
@@ -2541,7 +2541,7 @@ Package rerunfilecheck Info: File `talk_zxx_affine_pavings.out' has not changed
 Here is how much of TeX's memory you used:
  47892 strings out of 427748
  974093 string characters out of 3150981
- 1063263 words of memory out of 3000000
+ 1063265 words of memory out of 3000000
  51002 multiletter control sequences out of 15000+200000
  586001 words of font info for 114 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
