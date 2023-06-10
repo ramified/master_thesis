@@ -698,7 +698,7 @@ of the corresponding quiver.
 \end{figure} 
 Finally we move forward to the definition of minimal sectional mono. The rest can be skipped until Lemma \ref{lem:msm&order}.
 
-\begin{defn}[Sectional morphism]\index{sectional morphism}
+\begin{defn}[Sectional morphism]\label{def:sec_morphism}\index{sectional morphism}
 Let $Q$ be a quiver of Dynkin/affine type, and $M,N \in \rep(Q)$ be two indecomposable representations of $Q$, which are preprojective\footnote{A representation $M \in \rep(Q)$ is called preprojective\index{preprojective representation} if $\tau^k M$ is projective for some $k \geqslant 0$. Similarly, A representation $M \in \rep(Q)$ is called preinjective\index{preinjective representation} if $\tau^{-k} M$ is injective for some $k \geqslant 0$.} when $Q$ is affine. A morphism $f \in \Hom_{\mathbb{C}Q}(M,N)$ is called sectional if $f$ can be written as the composition
 $$f: M=X_0 \stackrel{f_1}{\longrightarrow} X_1 \stackrel{f_2}{\longrightarrow} \cdots \stackrel{f_{t-1}}{\longrightarrow} X_{t-1} \stackrel{f_t}{\longrightarrow} X_t=N$$
 where $f_i \in \Hom_{\mathbb{C}Q}(X_{i-1},X_i)$ are irreducible morphisms between indecomposable representations, and $\tau X_{i+2} \ncong X_i$ for any suitable $i$.
@@ -727,12 +727,12 @@ With tools in hand, we prove the main theorem \ref{thm:main1} and \ref{thm:main2
 In this section we state and prove the main theorems, which are essential in Section \ref{sec:Dynkin} and \ref{sec:affine}.
    
 Let $\eta: 0\longrightarrow X \stackrel{\iota}{\longrightarrow} Y \stackrel{\pi}{\longrightarrow} S \longrightarrow 0$ be a short exact sequence in $\rep(Q)$. Consider the canonical \textbf{non-continuous} map
-$$\Psi: \Grr(\Phi(Y)) \longrightarrow \Grr(\Phi(X)) \times \Grr(\Phi(S)) \qquad U \longmapsto \left([\Phi(\iota)]^{-1}(U),[\Phi(\pi)](U)   \right).$$
+$$\Psi: \Gr(\Phi(Y)) \longrightarrow \Gr(\Phi(X)) \times \Gr(\Phi(S)) \qquad U \longmapsto \left([\Phi(\iota)]^{-1}(U),[\Phi(\pi)](U)   \right).$$
 Denote the set
-$$\Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}:= \Psi^{-1}\Big(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S))\Big)$$
+$$\Gr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}:= \Psi^{-1}\Big(\Gr_{\ftdimvec{f}}(\Phi(X)) \times \Gr_{\ftdimvec{g}}(\Phi(S))\Big)$$
 and
-let $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ be the map $\Psi$ restricted to $\Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}$, i.e.,
-$$\Psi_{\ftdimvec{f},\ftdimvec{g}}: \Grr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}} \longrightarrow \Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)).$$
+let $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ be the map $\Psi$ restricted to $\Gr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}}$, i.e.,
+$$\Psi_{\ftdimvec{f},\ftdimvec{g}}: \Gr(\Phi(Y))_{\ftdimvec{f},\ftdimvec{g}} \longrightarrow \Gr_{\ftdimvec{f}}(\Phi(X)) \times \Gr_{\ftdimvec{g}}(\Phi(S)).$$
 \begin{remark}\label{rem:topo}
 Even though $\Psi$ is not continuous, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is continuous. Moreover, for any dimension vectors $\ftdimvec{f},\ftdimvec{g}$, the set
 $$\Gr(\Phi(Y))_{\geqslant \ftdimvec{f}, \leqslant \ftdimvec{g} }:= \left\{ U \in \Gr(\Phi(Y)) \,\middle|\,\begin{aligned}
@@ -748,7 +748,7 @@ with $Z_i$ closed and $Z_{i+1} \setminus Z_i$ isomorphic to $\Gr(\Phi(Y))_{ \ftd
 \end{theorem}
 \begin{theorem}[Generalizes {\cite[Theorem 32]{irelli2019cell}}]\label{thm:main2}
 	When $\eta$ does not split and $[S,X]^1=1$, 
-	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\ftdimvec{f}}(\Phi(X_S)) \times \Grr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg)$$
+	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Gr_{\ftdimvec{f}}(\Phi(X)) \times \Gr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Gr_{\ftdimvec{f}}(\Phi(X_S)) \times \Gr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg)$$
 	where 
 	\begin{equation*}
 	\begin{aligned}
@@ -761,7 +761,7 @@ Moreover, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine
 
 We will spend the rest of the section proving these theorems. We investigate the image as well as the fiber of $\Psi$ respectively.
 \begin{lemma}[Follows {\cite[Lemma 21]{irelli2019cell}}]\label{lm:split}
-The element $(V,W) \in \Grr(\Phi(X)) \times \Grr(\Phi(S))$ lies in the image of $\Psi$ if and only if the canonical map $\Ext^1(\Phi(S),\Phi(X)) \longrightarrow \Ext^1(W,\Phi(X)/V)$ maps $\eta$ to 0.
+The element $(V,W) \in \Gr(\Phi(X)) \times \Gr(\Phi(S))$ lies in the image of $\Psi$ if and only if the canonical map $\Ext^1(\Phi(S),\Phi(X)) \longrightarrow \Ext^1(W,\Phi(X)/V)$ maps $\eta$ to 0.
 \end{lemma}
 \begin{proof}
 	The canonical map is defined as follows:
@@ -840,7 +840,8 @@ $$\hspace{-0.4cm}\cdots\rightarrow \Ext^1\!\!\left(\Phi(S),\textstyle\frac{\Phi(
 By Corollary \ref{cor:0or1}, $[\Phi(S),\Phi(X)/(V\cap V')]^1\leqslant 1, \; [\Phi(S),\Phi(X)/(V+V')]^1\leqslant 1$, and this forces $[\Phi(S),\Phi(X)/(V+V')]^1= 1$.
 \end{proof}
 
-\begin{lemma}[Follows {\cite[Lemma 31(1)(2)]{irelli2019cell}}, with the same proof]Let $\tau$ be the Auslander--Reiten translation.\\
+\begin{lemma}[Follows {\cite[Lemma 31(1)(2)]{irelli2019cell}}, with the same proof]\label{lemma:second_description_XS}
+Let $\tau$ be the Auslander--Reiten translation.\\
 Let $f:X \longrightarrow \tau S$ be a non-zero morphism,\footnote{Since $X$ is not injective, $[X,\tau S]=[S,X]^1=1$, $f$ is uniquely determined up to a constant.} then $X_S=\ker (f)$;\\
  also, $\Phi(f): \Phi(X) \longrightarrow \Phi(\tau S)$ is a non-zero morphism, $\widetilde{X_S}=\ker (\Phi(f))$.
 \end{lemma}
@@ -892,7 +893,7 @@ $$V \nsubseteq \Phi(X_S) \iff [\Phi(S),\Phi(X)/V ]^1=0 \Rightarrow  [W,\Phi(X)/V
 \end{proof}
 \begin{corollary}\label{cor:img2}
 When $\eta$ generates $\Ext^1(S,X)$, we have 
-	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Grr_{\ftdimvec{f}}(\Phi(X)) \times \Grr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Grr_{\ftdimvec{f}}(\Phi(X_S)) \times \Grr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg).$$
+	$$\Img \Psi_{\ftdimvec{f},\ftdimvec{g}} = \bigg(\Gr_{\ftdimvec{f}}(\Phi(X)) \times \Gr_{\ftdimvec{g}}(\Phi(S)) \bigg) \setminus \bigg(\Gr_{\ftdimvec{f}}(\Phi(X_S)) \times \Gr_{\ftdimvec{g}-\dimv \Phi(S^X)}\left(\Phi(S/S^X)\right) \bigg).$$
 \end{corollary}
 
 \begin{lemma}\label{lem:torsor}
@@ -934,7 +935,7 @@ $$\Psi^{-1}((V,W)) \cong \{ \theta: \text{ split morphism} \} \cong \Hom_{R}(W,\
 \end{proof}
 \begin{remark}\label{rem:bundleprop}
 Any point $(V,W) \in \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ can be also viewed as a morphism
-$$f: \Spec \mathbb{C} \longrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}  \subseteq \Grr_{\ftdimvec{f}}(\Phi(X)) \shorttimes \Grr_{\ftdimvec{g}}(\Phi(S)) $$
+$$f: \Spec \mathbb{C} \longrightarrow \Img \Psi_{\ftdimvec{f},\ftdimvec{g}}  \subseteq \Gr_{\ftdimvec{f}}(\Phi(X)) \shorttimes \Gr_{\ftdimvec{g}}(\Phi(S)) $$
 where Grassmannian are viewed as moduli spaces over $\mathbb{C}$. Essentially by replacing $\Spec \mathbb{C}$ by any locally closed reduced subscheme $\Spec A$ of $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ in Lemma \ref{lem:torsor}, we can run the machinery of algebraic geometry, and mimic the proof of \cite[Theorem 24]{irelli2019cell} to show that $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisky-locally trivial affine bundle over $\Img \Psi_{\ftdimvec{f},\ftdimvec{g}}$ when $\eta$ generates $\Ext^1(S,X)$. 
 \end{remark}
 \begin{proof}[{Proof of Theorem \ref{thm:main1} and \ref{thm:main2}}]%\belowdisplayskip=-12pt
@@ -953,7 +954,7 @@ From Remark \ref{rem:bundleprop}, $\Psi_{\ftdimvec{f},\ftdimvec{g}}$ is a Zarisk
 This section (plus Section \ref{appendix:proofcomplement}) mainly focus on the proof of the following result:
 
 \begin{theorem}\label{thm:Dynkincase}
-For any Dynkin quiver $Q$ and any representation $M \in \rep(Q)$, the (strict) partial flag variety $\Flag{}(M)\cong\Grr(\Phi(M))$ has an affine paving.
+For any Dynkin quiver $Q$ and any representation $M \in \rep(Q)$, the (strict) partial flag variety $\Flag{}(M)\cong\Gr(\Phi(M))$ has an affine paving.
 \end{theorem}
 
 Before discussing the proof of the affine paving property, we introduce some numerical concepts, which can be seen as a measure of the ``complexity" of the representation.
@@ -994,11 +995,11 @@ is equal to $\ord(M)$ unless $\orde(M)=0$.
 The next lemma shows the affine paving property for representations of small order.
 
 \begin{lemma}[{Follows \cite[Lemma 2.22]{maksimau2019flag}}]\label{lem:smallvecdim}
-	Suppose that the underlying graph of $Q$ is a tree. For an indecomposable representation $M \in \rep(Q)$ with $\ord(M) \leqslant 2$, the variety $\Grr_{\ftdimvec{f}}(\Phi(M))$ is either empty or a direct product of some copies of $\mathbb{P}^1$. Especially, the partial flag variety $ \Grr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving.
+	Suppose that the underlying graph of $Q$ is a tree. For an indecomposable representation $M \in \rep(Q)$ with $\ord(M) \leqslant 2$, the variety $\Gr_{\ftdimvec{f}}(\Phi(M))$ is either empty or a direct product of some copies of $\mathbb{P}^1$. Especially, the partial flag variety $ \Gr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving.
 \end{lemma}
 \begin{proof}\belowdisplayskip=-12pt
-	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Grr_{\ftdimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\ftdimvec{f}$.} we get the natural embedding
-	$$\Grr_{\ftdimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \ftdimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
+	For every $i \in v(Q)$, $\dim_\mathbb{C} M_i\leqslant 2$. Since $Q$ is a tree and $M$ is indecomposable, for every $b\in a(Q)$ satisfying $\dim_\mathbb{C} M_{s(b)}= \dim_\mathbb{C} M_{t(b)}=2$, the map $M_{s(b)} \longrightarrow M_{t(b)}$ is an isomorphism. Therefore, when $\Gr_{\ftdimvec{f}}(\Phi(M)) \neq \varnothing$,\footnote{This condition imposes very strong restrictions on $\ftdimvec{f}$.} we get the natural embedding
+	$$\Gr_{\ftdimvec{f}}(\Phi(M)) \longrightarrow \prod_{\substack{i \in v(Q) \;s.t.\\ \dim_\mathbb{C} M_i=2 \\ \ftdimvec{f}_{(i,r)}=1 \text{ for some }r}} \mathbb{P}^1,$$\\[0.3cm]
 	and the information of non-vertical arrows in the extended quiver (see Example \ref{eg:ext_quiver}) just reduce the number of $\mathbb{P}^1$. Precisely, one need to carefully discuss three cases of $M_i \longrightarrow M_j$:
 		% https://q.uiver.app/?q=WzAsNyxbMCwwLCJLIl0sWzMsMCwiSyJdLFsxLDAsIkteMiJdLFsyLDAsIkteMiJdLFs1LDAsIkteMiJdLFs2LDAsIkteMi4iXSxbNCwwLCJcXHRleHR7YW5kfSJdLFs0LDUsIlxcY29uZyJdLFszLDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
 		\[\begin{tikzcd}
@@ -1020,7 +1021,7 @@ Now we've nearly prepared every step of the proof of Theorem \ref{thm:Dynkincase
 \end{figure}
 
 \begin{claim}\label{claim:bigorder}
-Suppose $Q$ is of Dynkin type. For any indecomposable representation $M \in \rep(Q)$ with $\ord(M)>2$, the (strict) partial flag variety $\Grr(\Phi(M))$ has an affine paving.
+Suppose $Q$ is of Dynkin type. For any indecomposable representation $M \in \rep(Q)$ with $\ord(M)>2$, the (strict) partial flag variety $\Gr(\Phi(M))$ has an affine paving.
 \end{claim}
 
 \begin{proof}[{Proof of Theorem \ref{thm:Dynkincase}}]
@@ -1032,7 +1033,7 @@ $$0 \longrightarrow M_1 \longrightarrow M \longrightarrow M_2 \longrightarrow 0,
 we get an affine paving from the affine pavings of $M_1$ and $M_2$, see Remark \ref{rem:topo}.
 \end{proof}
 \begin{remark}\label{rem:smallorder}
-By the same technique one can show that, for Dynkin quiver $Q$ and any representation $M$ with $\displaystyle\max_{i \in v(Q)} \dim_\mathbb{C} M_i \leqslant 2$, the variety $\Grr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving. This result does not depend on Claim \ref{claim:bigorder}.
+By the same technique one can show that, for Dynkin quiver $Q$ and any representation $M$ with $\displaystyle\max_{i \in v(Q)} \dim_\mathbb{C} M_i \leqslant 2$, the variety $\Gr_{\ftdimvec{f}}(\Phi(M))$ has an affine paving. This result does not depend on Claim \ref{claim:bigorder}.
 \end{remark}
 
 
@@ -1116,6 +1117,8 @@ Since every indecomposable representation of Dynkin quiver is a brick, we get $[
 $[X,Y]=1, [Y,X]=0$ and $[X,Y]^1=[Y,X]^1=0$. By applying the functors $[Y,-],[-,S],[X,-],[-,X],[-Y]$ to the short exact sequence $\eta$ we get the results. 
 \end{proof}
 In the following two lemmas we will describe the representations $S^X$ and $X_S$ more clearly.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%???Here we begin to correct mistakes
 \begin{lemma} Take the same notations as in Lemma \ref{lem:value}. Then $S^X=S$.
 \end{lemma}
 \begin{proof}
@@ -1124,23 +1127,23 @@ In the following two lemmas we will describe the representations $S^X$ and $X_S$
 
 \[
 \begin{tikzcd}
-\iota^*\eta: & 0 \arrow[r] & X \arrow[r, hook'] \arrow[d, equal] & Y' \arrow[r] \arrow[d, "\eta", hook'] & N \arrow[r] \arrow[d, "\iota", hook'] & 0 \\
+\iota^*\eta: & 0 \arrow[r] & X \arrow[r, hook'] \arrow[d, equal] & Y' \arrow[r] \arrow[d, "h", hook'] & N \arrow[r] \arrow[d, "\iota", hook'] & 0 \\
 \eta:        & 0 \arrow[r] & X \arrow[r]                                       & Y \arrow[r]                           & S \arrow[r]                           & 0
 \end{tikzcd}
 \]
 	
-	We decompose $Y'=\oplus_i Y_i'$ as the direct sum of indecomposable representations. Since the map $X\longrightarrow Y$ is the minimal sectional mono, we get $Y_i'=X$ or $Y_i'=Y$ or $X\stackrel{0}{\longrightarrow} Y_i'$ for all $i$.
-	If there exists $i$ such that $Y_i'=X$, then $\iota^* $ splits; if there exists $i$ such that $Y_i'=Y$, then $\eta$ is isomorphism, we get $\iota$ is isomorphism; if for every $i$ the map $X \longrightarrow Y_i'$ is $0$, then the map $X \longrightarrow Y'$ is $0$, we also get the contradiction.
+	We decompose $Y'=\oplus_i Y_i'$ as the direct sum of indecomposable representations. Since the map $X\longrightarrow Y$ is the minimal sectional mono, we get $Y_i'=X$ or $Y_i'=Y$ or $X\stackrel{0}{\longrightarrow} Y_i'$ for each $i$.
+	If there exists $i$ such that $Y_i'=X$, then $\iota^* \eta $ splits; if there exists $i$ such that $Y_i'=Y$, then $h$ is isomorphism, we get $\iota$ is isomorphism; if for every $i$ the map $X \longrightarrow Y_i'$ is $0$, then the map $X \longrightarrow Y'$ is $0$, we also get the contradiction.
 \end{proof}
 
 \begin{lemma}[{Follows \cite[Lemma 36]{irelli2019cell}, with the same proof}]\label{lem:descriptionofX_S}
-	Let $E \longrightarrow X$ be the minimal right almost split morphism ending in $X$, then we can decompose $E$ as $E=E' \oplus \tau X_1$. When $Y$ is not projective, $X_S$ is isomorphic to $\ker (E \longrightarrow \tau Y) \cong E' \oplus \ker (\tau X_1 \longrightarrow \tau Y)$; when $Y$ is projective, $X_S \cong E$.
+	Let $E \longrightarrow X$ be the minimal right almost split morphism ending in $X$, then we can decompose $E$ as $E=E' \oplus \tau X_1$.\footnote{$X_1$ is defined in Definition \ref{def:sec_morphism}, where we take $M=X$ and $N=Y$.} When $Y$ is not projective, $X_S$ is isomorphic to $\ker (E \longrightarrow \tau Y) \cong E' \oplus \ker (\tau X_1 \longrightarrow \tau Y)$; when $Y$ is projective, $X_S \cong E$.
 \end{lemma}
 \begin{corollary}
 	When $X \longrightarrow Y$ is irreducible monomorphism, the representation $X_S$ is either $0$ or an indecomposable representation with property that $X_S \longrightarrow X$ is also an irreducible monomorphism.
 \end{corollary}
 \begin{remark}
-	We can not copy everything in \cite[Lemma 56]{irelli2019cell}, sometimes it would happen that $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F \hookrightarrow X$ is irreducible but $T \longrightarrow X/F$ is not a good mono.
+	We can not copy everything in \cite[Lemma 56]{irelli2019cell}, sometimes it would happen that $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F \hookrightarrow X$ is irreducible but $T \longrightarrow X/F$ is not a sectional mono. Even when $X_S$ is indecomposable, the map $X_S \longrightarrow X$ can be not a sectional mono.
 	
 	For example, take the quiver of type $E_7$: 
 	\[
@@ -1149,26 +1152,83 @@ In the following two lemmas we will describe the representations $S^X$ and $X_S$
 	\bullet \arrow[r] & \bullet \arrow[r] & \bullet \arrow[r] & \bullet           & \bullet \arrow[l] & \bullet \arrow[l]
 	\end{tikzcd}
 	\]
-	 take $Y=\representation{122321}{1}$, $X=\representation{112321}{1}$, then $X_S=\representation{111210}{1}\oplus \representation{000111}{0}=F \oplus T$, $X/F =\representation{001111}{0}$, the map $T \longrightarrow X/F$ is not a good mono.
-	
-	Luckily, we can avoid this bad situation by carefully choosing the minimal sectional mono $X \longrightarrow Y$. The minimal sectional monos I chose are presented in Figure \ref{fig:minisecmono}. In section \ref{appendix:proofcomplement} we will write down the induction process in detail for some examples.
+	 take $Y=\representation{111111}{0}$, $X=\representation{111110}{0}$, then $X_S=\representation{111100}{0}$, the map $X_S \longrightarrow X$ is not a sectional mono.
 \end{remark}
 
-Now we analyse every case in Figure \ref{fig:minisecmono}, i.e., prove Claim \ref{claim:bigorder} by cases. For convenience we omit subscripts which indicate the dimension vectors. 
+Luckily, we can avoid this bad situation by carefully choosing the minimal sectional mono $X \longrightarrow Y$. The minimal sectional monos I chose are presented in Figure \ref{fig:minisecmono}.  We will write down the induction process in detail for some examples.%???
+
+For convenience, we simplify the notations: write $\Gr(M)$ as $\Gr_{\ftdimvec{f}}(\Phi(M))$, $U(M,N)$ as $\Gr_{\ftdimvec{f}}(\Phi(M)) \setminus \Gr_{\ftdimvec{f}}(\Phi(N))$, where we omit subscripts which indicate the dimension vectors.
+
+\begin{lemma}[{Follows \cite[Theorem 59]{irelli2019cell}}]\label{lem:worst_case}
+Let $f:X \hookrightarrow Y$ be a minimal sectional mono and $S:=Y/X$ be the quotient. When $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, we have
+$$U(X,X_S)\longrightarrow \Gr(F) \shorttimes U(X/F,T) \oder U(F,F_{X/F})$$
+as a Zarisky-locally trivial affine bundle.
+\end{lemma}
+
+\begin{proof}
+We have two short exact sequence satisfying the conditions in \ref{thm:main2}:
+\begin{center}
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkRyQBfU9TXfIRQAmCtTpNW7AGLdeIDNjwEiAZjE0GLNohAANOXyWCiAFg0Tt7PQHpZPIwJUoArBa1TdnBwv7KhJKTE4h46HIa+xs7IbsGakmHe8opOAaJxlp4gACoRKf5qQSEJ1nZ5fiYo5hmhpXoA+gDK5VEB5O4lugA6XTA49Lo++ZXI7TWdID0AHliD4jBQAObwRKAAZgBOEAC2SG4gOBBIAOw+mzsnNIdIABxnW7uIN1dHiACc8VbdXWhYAOQRc6PD4HV4ANnuF0Q6lBSFMkMeolh0M+WR6v0BDyQZGRwgRSHayOIXEoXCAA
+\begin{tikzcd}[row sep=0mm]
+\eta: & 0 \arrow[r] & F \arrow[r] & X \arrow[r, "\pi"]    & X/F \arrow[r]   & 0 \\
+\xi:  & 0 \arrow[r] & T \arrow[r] & X/F \arrow[r, "\pi'"] & X/X_S \arrow[r] & 0.
+\end{tikzcd}
+\end{center}
+Let $N \in \Gr(X)$ be a subrepresentation, it is obvious that $N \in \Gr(X_S) \iff \pi'\circ \pi(N)=0$, so 
+  \begin{equation*}
+  \begin{aligned}
+  N\in U(X,X_S) & \iff \pi'\circ \pi(N) \neq 0\\
+  & \iff \pi(N) \notin \Gr(T)\\
+  & \iff \pi(N) \in U(X/F,T)\\
+  & \iff \Psi_{\eta}(N) \in \Gr(F) \times U(X/F,T).
+  \end{aligned}
+  \end{equation*}
+Thus the Zarisky-locally trivial affine bundle map
+$$U(X,F) \longrightarrow \Gr(F) \shorttimes \Gr(X/F)$$
+restricted to the Zarisky-locally trivial affine bundle map
+$$U(X,X_S) \longrightarrow \Gr(F) \times U(X/F,T).$$
+\end{proof}
+
+We conclude Theorem \ref{thm:main2}, Lemma \ref{lemma:second_description_XS}, \ref{lem:value}, \ref{lem:descriptionofX_S}, \ref{lem:worst_case} in the following proposition.
+
+\begin{proposition}\label{prop:conclusion_for_combinatorics}
+Let $f:X \hookrightarrow Y$ be a minimal sectional mono and $S:=Y/X$ be the quotient. One get Zariski-locally affine maps
+\begin{equation*}
+\begin{aligned}
+\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(S) \oder U(X,X_S), \\
+U(Y,X) &\longrightarrow \Gr(X) \shorttimes \Gr(S) \oder U(X,X_S), \\
+\end{aligned}
+\end{equation*}
+where
+\begin{equation*}
+\begin{aligned}
+  X_S:=\;& \max \left\{ M \subseteq X \,\middle|\; [S,X/M ]^1=1 \right\} \\ 
+  =\;& \ker (X \longrightarrow \tau S) \\ 
+  =\;& \begin{cases}
+  E' \oplus \ker (\tau X_1 \longrightarrow \tau Y) & Y \text{ not projective, }\\
+  E & Y \text{ projective. }
+  \end{cases} \\ 
+\end{aligned}
+\end{equation*}
+Moreover, when $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, one get a Zariski-locally affine map
+$$U(X,X_S)\longrightarrow \Gr(F) \shorttimes U(X/F,T) \oder U(F,F_{X/F}).$$
+\end{proposition}
+
+With Proposition \ref{prop:conclusion_for_combinatorics} in hand, we prove Claim \ref{claim:bigorder} by cases, which turns out to be a pure combinatorical problem. 
 
 \begin{proof}[{Proof of Claim \ref{claim:bigorder}}]
 When the minimal sectional mono $X \longrightarrow Y$ is irreducible, we use Theorem \ref{thm:main2} to get morphism
-$$\Grr(\Phi(Y)) \longrightarrow \Grr(\Phi(X)) \shorttimes \Grr(\Phi(S)) \oder \Grr(\Phi(X)) \setminus \Grr(\Phi(X_S)).$$ 
-By observation of  Figure \ref{fig:minisecmono}, $\orde(S)=\orde(Y)-\orde(X)$ is smaller or equal to $2$, so by Lemma \ref{lem:smallvecdim} $\Gr(\Phi(S))$ has the affine paving property. Let $Y_1:=X$, $X_1:=X_S$, $S_1:=Y_1/X_1$, we again use Theorem \ref{thm:main2} to get Zariski-locally affine maps
+$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(S) \oder U(X,X_S).$$ 
+By observation of  Figure \ref{fig:minisecmono}, $\orde(S)=\orde(Y)-\orde(X)$ is smaller or equal to $2$, so by Lemma \ref{lem:smallvecdim} $\Gr(S)$ has the affine paving property. Let $Y_1:=X$, $X_1:=X_S$, $S_1:=Y_1/X_1$, we again use Theorem \ref{thm:main2} to get Zariski-locally affine maps
 \begin{equation*}
 \begin{aligned}
-\Grr(\Phi(X)) &\longrightarrow \Grr(\Phi(X_1)) \shorttimes \Grr(\Phi(S_1)) \oder \Grr(\Phi(X_1)) \setminus \Grr(\Phi(X_{1S_1}))\\
-\Grr(\Phi(X))\setminus \Grr(\Phi(X_S))&\longrightarrow \Grr(\Phi(X_1)) \shorttimes \Grr(\Phi(S_1)).
+\Gr(X) &\longrightarrow \Gr(X_1) \shorttimes \Gr(S_1) \oder U(X_1,X_{1S_1}) \\
+U(X,X_S)&\longrightarrow \Gr(X_1) \shorttimes \Gr(S_1) \oder U(X_1,X_{1S_1}).
 \end{aligned}
 \end{equation*}
 Luckily $\orde(S_1)$ is still smaller or equal to $2$. We can continue this process until the order of representations are small enough.
 
-The exceptional cases are similar, but the discussion is a bit more complicated. Let us look at some examples. (We simplify the notations: $\Gr(M)$ as $\Grr_{\ftdimvec{f}}(\Phi(M))$, $U(M,N)$ as $\Grr_{\ftdimvec{f}}(\Phi(M)) \setminus \Grr_{\ftdimvec{f}}(\Phi(N))$, and we also ignore the dimension vectors.)
+The exceptional cases are similar, but the discussion is a bit more complicated. Let us look at some examples. 
 \captionsetup[subfigure]{labelfont=rm}
 \captionsetup[subfigure]{labelformat=parens}
 %https://tex.stackexchange.com/questions/233481/subcaption-defaulting-to-capital-letter-labels
@@ -1279,7 +1339,7 @@ Let $N \in \Gr(X)$ be a subrepresentation, it is obvious that $N \in \Gr(X_S) \i
   & \iff \Psi_{\eta}(N) \in \Gr(F) \times U(X/F,T).
   \end{aligned}
   \end{equation*}
-\end{eg}
+
 Thus the Zarisky-locally trivial affine bundle map
 $$U(X,F) \longrightarrow \Gr(F) \shorttimes \Gr(X/F)$$
 restricted to the Zarisky-locally trivial affine bundle map
@@ -1288,6 +1348,7 @@ $$U(X,X_S) \longrightarrow \Gr(F) \times U(X/F,T).$$
 Finally, by applying the short exact sequence $\xi$ to Theorem \ref{thm:main2}, we get the map
 $$U(X/F,T) \longrightarrow \Gr(X/F) \shorttimes \Gr(T).$$
 Since all the Grassmannians $\Gr(X)$, $\Gr(Y/X)$, $\Gr(F)$, $\Gr(X/F)$, $\Gr(T)$ have the affine paving property, we conclude that $\Gr(Y)$ has the affine paving property.
+\end{eg}
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1295,13 +1356,13 @@ Since all the Grassmannians $\Gr(X)$, $\Gr(Y/X)$, $\Gr(F)$, $\Gr(X/F)$, $\Gr(T)$
 This section tries to explain the difficulty of the Conjecture \ref{conj:affinecase}.
 
 \begin{conj}\label{conj:affinecase}
-For any affine quiver $Q$ and any indecomposable representation $M \in \rep(Q)$, the (strict) partial flag variety $\Flag{}(M)\cong\Grr(\Phi(M))$ has an affine paving.
+For any affine quiver $Q$ and any indecomposable representation $M \in \rep(Q)$, the (strict) partial flag variety $\Flag{}(M)\cong\Gr(\Phi(M))$ has an affine paving.
 \end{conj}
 
-Actually, if readers follow the proof in \cite[Section 6]{irelli2019cell}, and change everything from $\Gr(-)$ to $\Grr(\Phi(-))$, then there is no difference except the Proposition 48, in which the authors proved the affine paving properties of quasi-simple regular representations. So we reduced the question to the case of quasi-simple regular representation. Combined with Lemma \ref{lem:affineADcase}, we've proved the affine paving properties for $\tilde{A},\tilde{D}$ cases.
+Actually, if readers follow the proof in \cite[Section 6]{irelli2019cell}, and change everything from $\Gr(-)$ to $\Gr(\Phi(-))$, then there is no difference except the Proposition 48, in which the authors proved the affine paving properties of quasi-simple regular representations. So we reduced the question to the case of quasi-simple regular representation. Combined with Lemma \ref{lem:affineADcase}, we've proved the affine paving properties for $\tilde{A},\tilde{D}$ cases.
 
 \begin{lemma}\label{lem:affineADcase}
-	Assume that $Q$ is an affine quiver of type $A$ or $D$, $M \in \rep(Q)$ is the \textbf{regular quasi-simple} representation\index{quasi-simple representation}, then the Grassmannian $\Grr(\Phi(M))$ has an affine paving.
+	Assume that $Q$ is an affine quiver of type $A$ or $D$, $M \in \rep(Q)$ is the \textbf{regular quasi-simple} representation\index{quasi-simple representation}, then the Grassmannian $\Gr(\Phi(M))$ has an affine paving.
 \end{lemma}
 \begin{proof}
 The concept ``quasi-simple'' is defined in \cite[Definition 15]{irelli2019cell}; the concepts ``preprojective'',``preinjective'' and ``regular'' are defined in \cite[2.1.1]{irelli2019cell}. It's shown in \cite[Section 9, Lemma 3]{crawley1992lectures} that the regular quasi-simple representation $M$ have dimension vector smaller or equal to the minimal positive imaginary root, thus $\orde(M) \leqslant 2$ for the quiver of type $\tilde{D}$ and $\orde(M) \leqslant 1$ for the quiver of type $\tilde{A}$.
