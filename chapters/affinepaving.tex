@@ -1155,9 +1155,9 @@ In the following two lemmas we will describe the representations $S^X$ and $X_S$
 	 take $Y=\representation{111111}{0}$, $X=\representation{111110}{0}$, then $X_S=\representation{111100}{0}$, the map $X_S \longrightarrow X$ is not a sectional mono.
 \end{remark}
 
-Luckily, we can avoid this bad situation by carefully choosing the minimal sectional mono $X \longrightarrow Y$. The minimal sectional monos I chose are presented in Figure \ref{fig:minisecmono}.  We will write down the induction process in detail for some examples.%???
+Luckily, we can avoid this bad situation by carefully choosing the minimal sectional mono $X \longrightarrow Y$. The minimal sectional monos I chose are presented in Figure \ref{fig:minisecmono}.  We will write down the induction process in detail for some examples.
 
-For convenience, we simplify the notations: write $\Gr(M)$ as $\Gr_{\ftdimvec{f}}(\Phi(M))$, $U(M,N)$ as $\Gr_{\ftdimvec{f}}(\Phi(M)) \setminus \Gr_{\ftdimvec{f}}(\Phi(N))$, where we omit subscripts which indicate the dimension vectors.
+For convenience, we simplify the notations: write $\Gr_{\ftdimvec{f}}(\Phi(M))$ as $\Gr(M)$, $\Gr_{\ftdimvec{f}}(\Phi(M)) \setminus \Gr_{\ftdimvec{f}}(\Phi(N))$ as $U(M,N)$, where we omit subscripts which indicate the dimension vectors.
 
 \begin{lemma}[{Follows \cite[Theorem 59]{irelli2019cell}}]\label{lem:worst_case}
 Let $f:X \hookrightarrow Y$ be a minimal sectional mono and $S:=Y/X$ be the quotient. When $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, we have
@@ -1265,17 +1265,17 @@ In the case of Figure \ref{fig:specialcases}(a), if $X_1 \longrightarrow Y$ is i
 \begin{equation*}
 \begin{aligned}
 \Gr(Y) &\longrightarrow \Gr(X_1) \shorttimes \Gr(Y/X_1) &&\oder U(X_1,X)\\
-\Gr(X_1) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,X_S)\\
-U(X_1,X) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,X_S)\\
-U(X,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S) &&\oder U(X_S,-).\footnotemark \\
+\Gr(X_1) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,A)\\
+U(X_1,X) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,A)\\
+U(X,A) &\longrightarrow \Gr(A) \shorttimes \Gr(X/A) &&\oder U(A,-).\footnotemark \\
 \end{aligned}
 \end{equation*}
-\footnotetext{$\Gr(X_S)$ is empty or a singleton, so is $U(X_S,-)$, no matter what representation is in the dash mark.}
+\footnotetext{$\Gr(A)$ is empty or a singleton, so is $U(A,-)$, no matter what representation is in the dash mark.}
 When $X_1 \longrightarrow Y$ is not injective, we get
 \begin{equation*}
 \begin{aligned}
-\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(Y/X) &&\oder U(X,X_S)\\
-U(X,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S) &&\oder U(X_S,-).\\
+\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(Y/X)\hspace{3mm} &&\oder U(X,A)\\
+U(X,A) &\longrightarrow \Gr(A) \shorttimes \Gr(X/A) &&\oder U(A,-).\\
 \end{aligned}
 \end{equation*}
 These maps give the variety $\Gr(Y)$ an affine paving from bottom to top.
