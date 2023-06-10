@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  30 DEC 2021 21:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  10 JUN 2023 13:57
 entering extended mode
 **./E8graypic3.tex
 (E8graypic3.tex
@@ -622,10 +622,10 @@ ABD: EveryShipout initializing macros [1
 Here is how much of TeX's memory you used:
  15963 strings out of 427748
  351707 string characters out of 3150981
- 496722 words of memory out of 3000000
+ 499113 words of memory out of 3000000
  19744 multiletter control sequences out of 15000+200000
  4102 words of font info for 17 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,17n,98p,1572b,1421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,98p,1572b,1423s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on E8graypic3.pdf (1 page).

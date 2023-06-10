@@ -32,13 +32,13 @@
            ignore/.style={dashed}
            }
 \[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins},color=ashgrey,cramped]
-	&&&& 1 && {} \\
+	&&&& 1 && |[label={[black]center:B}]| \\
 	&&& 1 & 1 & 1 \\
 	|[label={[black]center:A}]|{}&& 1 && 2 && 1 \\
 	& |[label={[black]center:N}]|1 && 2 & 1 & 2 \\
 	1 && |[label={[black]center:M}]|2 && 3 && 1 \\
 	& 2 && 3 & 2 & 2 \\
-	1 && 3 && 4 && 1 \\
+	|[label={[black]center:M/N}]|1 && 3 && 4 && 1 \\
 	& 2 && 4 & 2 & |[label={[black]center:\tau X_1}]|3 \\
 	1 && 3 && 5 && |[label={[red]center:X}]|2 \\
 	& 2 && 4 & |[label={[black]center:\tau Y}]|3 & |[label={[black]center:X_1}]|4 \\
@@ -48,7 +48,7 @@
 	& 3 && 5 & 3 & 4 \\
 	2 && 4 && 6 && 2 \\
 	& 3 && 5 & 3 & 4 \\
-	1 && 4 && 6 && 2 \\
+	|[label={[red]center:S}]|1 && 4 && 6 && 2 \\
 	& 2 && 5 & 3 & 4 \\
 	1 && 3 && 6 && 2 \\
 	& 2 && 4 & 3 & 4 \\

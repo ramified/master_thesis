@@ -1165,6 +1165,7 @@ $$U(X,X_S)\longrightarrow \Gr(F) \shorttimes U(X/F,T) \oder U(F,F_{X/F})$$
 as a Zarisky-locally trivial affine bundle.
 \end{lemma}
 
+%https://tex.stackexchange.com/questions/66152/pushing-qed-to-the-right-within-a-displayed-formula
 \begin{proof}
 We have two short exact sequence satisfying the conditions in \ref{thm:main2}:
 \begin{center}
@@ -1186,7 +1187,9 @@ Let $N \in \Gr(X)$ be a subrepresentation, it is obvious that $N \in \Gr(X_S) \i
 Thus the Zarisky-locally trivial affine bundle map
 $$U(X,F) \longrightarrow \Gr(F) \shorttimes \Gr(X/F)$$
 restricted to the Zarisky-locally trivial affine bundle map
-$$U(X,X_S) \longrightarrow \Gr(F) \times U(X/F,T).$$
+
+\vspace{\abovedisplayskip}
+\hfill $\displaystyle U(X,X_S) \longrightarrow \Gr(F) \times U(X/F,T).$ \qedhere
 \end{proof}
 
 We conclude Theorem \ref{thm:main2}, Lemma \ref{lemma:second_description_XS}, \ref{lem:value}, \ref{lem:descriptionofX_S}, \ref{lem:worst_case} in the following proposition.
@@ -1219,14 +1222,14 @@ With Proposition \ref{prop:conclusion_for_combinatorics} in hand, we prove Claim
 \begin{proof}[{Proof of Claim \ref{claim:bigorder}}]
 When the minimal sectional mono $X \longrightarrow Y$ is irreducible, we use Theorem \ref{thm:main2} to get morphism
 $$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(S) \oder U(X,X_S).$$ 
-By observation of  Figure \ref{fig:minisecmono}, $\orde(S)=\orde(Y)-\orde(X)$ is smaller or equal to $2$, so by Lemma \ref{lem:smallvecdim} $\Gr(S)$ has the affine paving property. Let $Y_1:=X$, $X_1:=X_S$, $S_1:=Y_1/X_1$, we again use Theorem \ref{thm:main2} to get Zariski-locally affine maps
+By observation of  Figure \ref{fig:minisecmono}, $\orde(S)=\orde(Y)-\orde(X)$ is smaller or equal to $2$, so by Lemma \ref{lem:smallvecdim} $\Gr(S)$ has the affine paving property. Let $Y':=X$, $X':=X_S$, $S':=Y'/X'$, we again use Theorem \ref{thm:main2} to get Zariski-locally affine maps
 \begin{equation*}
 \begin{aligned}
-\Gr(X) &\longrightarrow \Gr(X_1) \shorttimes \Gr(S_1) \oder U(X_1,X_{1S_1}) \\
-U(X,X_S)&\longrightarrow \Gr(X_1) \shorttimes \Gr(S_1) \oder U(X_1,X_{1S_1}).
+\Gr(X) &\longrightarrow \Gr(X') \shorttimes \Gr(S') \oder U(X',X'_{S'}) \\
+U(X,X_S)&\longrightarrow \Gr(X') \shorttimes \Gr(S') \oder U(X',X'_{S'}).
 \end{aligned}
 \end{equation*}
-Luckily $\orde(S_1)$ is still smaller or equal to $2$. We can continue this process until the order of representations are small enough.
+Luckily $\orde(S')$ is still smaller or equal to $2$. We can continue this process until the order of representations are small enough.
 
 The exceptional cases are similar, but the discussion is a bit more complicated. Let us look at some examples. 
 \captionsetup[subfigure]{labelfont=rm}
@@ -1261,93 +1264,95 @@ The exceptional cases are similar, but the discussion is a bit more complicated.
 In the case of Figure \ref{fig:specialcases}(a), if $X_1 \longrightarrow Y$ is injective, then we obtain some Zariski-locally affine maps
 \begin{equation*}
 \begin{aligned}
-\Gr(Y) &\longrightarrow \Gr(X_1) \shorttimes \Gr(Y/X_1) \oder U(X_1,X)\\
-\Gr(X_1) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) \oder U(X,X_S)\\
-U(X_1,X) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) \\
-U(X,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S). \\
+\Gr(Y) &\longrightarrow \Gr(X_1) \shorttimes \Gr(Y/X_1) &&\oder U(X_1,X)\\
+\Gr(X_1) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,X_S)\\
+U(X_1,X) &\longrightarrow \Gr(X) \shorttimes \Gr(X_1/X) &&\oder U(X,X_S)\\
+U(X,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S) &&\oder U(X_S,-).\footnotemark \\
 \end{aligned}
 \end{equation*}
-
+\footnotetext{$\Gr(X_S)$ is empty or a singleton, so is $U(X_S,-)$, no matter what representation is in the dash mark.}
 When $X_1 \longrightarrow Y$ is not injective, we get
-$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,X_S).$$
-Since the map $\tau X_1 \longrightarrow \tau Y$ is injective, from Lemma \ref{lem:descriptionofX_S} we get $X_S\longrightarrow X$ is irreducible monomorphism. Thus
-$$U(X,X_S) \longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S).$$
+\begin{equation*}
+\begin{aligned}
+\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(Y/X) &&\oder U(X,X_S)\\
+U(X,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S) &&\oder U(X_S,-).\\
+\end{aligned}
+\end{equation*}
 These maps give the variety $\Gr(Y)$ an affine paving from bottom to top.
 \end{eg}
 \begin{eg}
 In Figure \ref{fig:specialcases}(b), we would like to prove that  $\Gr(Y)$ has the affine paving property. We have
-$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,X_S).$$
+$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,A).$$
 When the map $M \longrightarrow X$ is not monomorphism, we get
-$$U(X,X_S) \longrightarrow \Gr(X_S) \shorttimes \Gr(X/X_S);$$
+$$U(X,A) \longrightarrow \Gr(A) \shorttimes \Gr(X/A) \oder U(A,-);$$
 when the map $M \longrightarrow X$ is monomorphism, we get
+%tex.stackexchange.com/questions/453057/alignment-in-cases-with-text-outside-the-cases
+%https://tex.stackexchange.com/questions/483234/align-text-in-a-cases-environment-with-text-outside
 \begin{equation*}
 \begin{aligned}
-U(X,X_S)&=U(X,M) \bigsqcup U(M,X_S)\\
-U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M)\\
-U(M,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(M/X_S).
+&U(X,A)=U(X,M) \bigsqcup U(M,A)\hspace{-30mm}&&\\
+U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M) && \oder U(M,A \oplus B)\\
+U(M,A) &\longrightarrow \Gr(A) \shorttimes \Gr(M/A)&& \oder U(A,-)\\
+U(M,A \oplus B)  &\longrightarrow \begin{cases}
+\Gr(A) \shorttimes \Gr(M/A)\\
+\Gr(A) \shorttimes U(M/A,B)\\
+\end{cases} \hspace{-5mm}&& \begin{aligned}
+\oder U(A,-), &\qquad B=0,\\
+\oder U(A,-), &\qquad B\neq 0.
+\end{aligned}\\
 \end{aligned}
 \end{equation*}
-Since the order of $X$, $Y/X$, $X_S$, $X/X_S$, $M$, $X/M$, $M/X_S$ are smaller or equal to $2$, the induction process stops, we get $\Gr(Y)$ has the affine paving property.
+
+Since the order of $X$, $Y/X$, $A$, $X/A$, $M$, $X/M$, $M/A$ are smaller or equal to $2$ as well as $\ord(A)=1$, the induction process stops, we get an affine paving of $\Gr(Y)$.
 \end{eg}
 \begin{eg}
 In the case of Figure \ref{fig:specialcases}(c), we have 
-$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,X_S)$$
-where $X_S=\ker(\tau X_1 \longrightarrow \tau Y)$. When $X_S=0$ we're done; if not, then $A \neq 0$ and $X_S=A$, we decompose $X_S \longrightarrow Y$ as compositions of minimal sectional monos:
+$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,A).$$
+If $A=0$, we're done; if not, we decompose $A \longrightarrow Y$ as compositions of minimal sectional monos:
 
 Case 1: $M\longrightarrow X$ is not injective, then
  \begin{equation*}
  \begin{aligned}
- U(X,X_S)&=U(X,N) \bigsqcup U(N,X_S)\\
- U(X,N) &\longrightarrow \Gr(N) \shorttimes \Gr(X/N)\\
- U(N,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(N/X_S).
+ &U(X,A)=U(X,N) \bigsqcup U(N,A)\\
+ U(X,N) &\longrightarrow \Gr(N) \shorttimes \Gr(X/N) \oder U(N,-)\\
  \end{aligned}
  \end{equation*}
  
  Case 2: $M\longrightarrow X$ is injective, then
   \begin{equation*}
-  \begin{aligned}
-  U(X,X_S)&=U(X,M) \bigsqcup U(M,N) \bigsqcup U(N,X_S)\\
-  U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M)\\
-  U(M,N) &\longrightarrow \Gr(N) \shorttimes \Gr(M/N)\\
-  U(N,X_S) &\longrightarrow \Gr(X_S) \shorttimes \Gr(N/X_S).
+  \begin{aligned}  
+  &U(X,A)=U(X,M) \bigsqcup U(M,N) \bigsqcup U(N,A)\hspace{-50mm}&&\\
+  U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M) && \oder U(M,N \oplus B)\\
+  U(M,N) &\longrightarrow \Gr(N) \shorttimes \Gr(M/N)&& \oder U(N,-)\\
+  U(M,N \oplus B)  &\longrightarrow \begin{cases}
+  \Gr(N) \shorttimes \Gr(M/N)\\
+  \Gr(N) \shorttimes U(M/N,B)\\
+  \end{cases} \hspace{-5mm}&& \begin{aligned}
+  \oder U(N,-), &\qquad B=0,\\
+  \oder U(N,-), &\qquad B\neq 0.
+  \end{aligned}\\
   \end{aligned}
   \end{equation*}
   
-  Since $\Gr(X)$, $\Gr(Y/X)$, $\Gr(N)$, $\ldots$ have affine paving property, we conclude that $\Gr(Y)$ has also the affine paving property.
+  Since $\Gr(X)$, $\Gr(Y/X)$, $\Gr(N)$, $\ldots$ have the property of affine paving, we conclude that $\Gr(Y)$ also has the property of affine paving.
 \end{eg}
 \begin{eg}
 Finally we begin to tackle the most difficult case(Figure \ref{fig:specialcases}(d)). When $X \longrightarrow Y$ is not injective, we get
-$$\Gr(Y) \longrightarrow \Gr(F) \shorttimes \Gr(Y/F) \oder U(F,?),$$
-and then we get the result.\footnote{$\Gr(F)$ is empty or a singleton, so is $U(F,?)$, no matter what representation is in the questionmark.}
+$$\Gr(Y) \longrightarrow \Gr(F) \shorttimes \Gr(Y/F) \oder U(F,-),\hspace{8mm}$$
+and then we get the result.
 
 When $X \longrightarrow Y$ is injective, we have
-$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,X_S)$$
-where $X_S=F\oplus \ker(\tau X_1 \longrightarrow \tau Y)=F \oplus T$ by Lemma \ref{lem:descriptionofX_S}. Since $X \longrightarrow Y$ is injective, we get $A=0$, thus $B=0$ also, and then the sectional map $T \longrightarrow X/F$ in injective. We thus get two short exact sequence satisfying the conditions in \ref{thm:main2}:
-\begin{center}
-% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZARgBoAGAXVJADcBDAGwFcYkRyQBfU9TXfIRQAmCtTpNW7AGLdeIDNjwEiAZjE0GLNohAANOXyWCiAFg0Tt7PQHpZPIwJUoArBa1TdnBwv7KhJKTE4h46HIa+xs7IbsGakmHe8opOAaJxlp4gACoRKf5qQSEJ1nZ5fiYo5hmhpXoA+gDK5VEB5O4lugA6XTA49Lo++ZXI7TWdID0AHliD4jBQAObwRKAAZgBOEAC2SG4gOBBIAOw+mzsnNIdIABxnW7uIN1dHiACc8VbdXWhYAOQRc6PD4HV4ANnuF0Q6lBSFMkMeolh0M+WR6v0BDyQZGRwgRSHayOIXEoXCAA
-\begin{tikzcd}[row sep=0mm]
-\eta: & 0 \arrow[r] & F \arrow[r] & X \arrow[r, "\pi"]    & X/F \arrow[r]   & 0 \\
-\xi:  & 0 \arrow[r] & T \arrow[r] & X/F \arrow[r, "\pi'"] & X/X_S \arrow[r] & 0.
-\end{tikzcd}
-\end{center}
-Let $N \in \Gr(X)$ be a subrepresentation, it is obvious that $N \in \Gr(X_S) \iff \pi'\circ \pi(N)=0$, so 
-  \begin{equation*}
-  \begin{aligned}
-  N\in U(X,X_S) & \iff \pi'\circ \pi(N) \neq 0\\
-  & \iff \pi(N) \notin \Gr(T)\\
-  & \iff \pi(N) \in U(X/F,T)\\
-  & \iff \Psi_{\eta}(N) \in \Gr(F) \times U(X/F,T).
-  \end{aligned}
-  \end{equation*}
-
-Thus the Zarisky-locally trivial affine bundle map
-$$U(X,F) \longrightarrow \Gr(F) \shorttimes \Gr(X/F)$$
-restricted to the Zarisky-locally trivial affine bundle map
-$$U(X,X_S) \longrightarrow \Gr(F) \times U(X/F,T).$$
-
-Finally, by applying the short exact sequence $\xi$ to Theorem \ref{thm:main2}, we get the map
-$$U(X/F,T) \longrightarrow \Gr(X/F) \shorttimes \Gr(T).$$
-Since all the Grassmannians $\Gr(X)$, $\Gr(Y/X)$, $\Gr(F)$, $\Gr(X/F)$, $\Gr(T)$ have the affine paving property, we conclude that $\Gr(Y)$ has the affine paving property.
+$$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,F \oplus T).$$
+Since $X \longrightarrow Y$ is injective, we get $A=0$, thus $B=0$ also, and then the sectional map $T \longrightarrow X/F$ in injective. We get 
+\begin{equation*}
+\begin{aligned}
+U(X,F \oplus T) &\longrightarrow \Gr(F) \shorttimes U(X/F,T) &&\oder U(F,-)\\
+U(X/F,T) &\longrightarrow \Gr(T) \shorttimes \Gr(X/X_S) &&\oder U(T,C)\\
+U(T,C) &\longrightarrow \Gr(C) \shorttimes \Gr(T/C) &&\oder U(C,D \oplus E)\\
+U(C,D \oplus E) &\longrightarrow \Gr(D) \shorttimes U(C/D,E) &&\oder U(D,-). \\
+\end{aligned}
+\end{equation*}
+We conclude that $\Gr(Y)$ has the affine paving property.\qedhere
 \end{eg}
 \end{proof}
 
