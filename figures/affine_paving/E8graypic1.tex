@@ -28,9 +28,16 @@
 \tikzcdset{arrow style={tikz},
            diagrams={>=Classical TikZ Rightarrow,shorten <=-2pt,shorten >=-2pt,},
            normal/.style={realblack},
-           mark/.style={red}
+           mark/.style={red},
+           ignore/.style={dashed},
+           secondstep/.style={blue,dashed},
+           thirdstep/.style={orange,dashed},
            }
 \[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins},color=ashgrey,cramped]
+{\phantom{G/H}}&&&&&& {\phantom{G/H}} \\
+&&&&&& {} \\
+&&&&&& {} \\
+&&&&&& {} \\
 	&&&& 1 && {} \\
 	&&& 1 & 1 & 1 \\
 	&& 1 && 2 && 1 \\
@@ -60,8 +67,8 @@
 	|[label={[red]center:S}]|&& 1 && 2 && 1 \\
 	&&& 1 & 1 & 1 \\
 	&&&& 1
-		\arrow[from=21-3, to=22-4,normal,hook]
-		\arrow[from=23-3, to=24-4,mark]
-		\arrow[from=22-2, to=23-3,mark]
+		\arrow[from=25-3, to=26-4,normal,hook]
+		\arrow[from=27-3, to=28-4,mark]
+		\arrow[from=26-2, to=27-3,mark]
 \end{tikzcd}\]
 \end{document}

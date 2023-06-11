@@ -1160,7 +1160,7 @@ Luckily, we can avoid this bad situation by carefully choosing the minimal secti
 For convenience, we simplify the notations: write $\Gr_{\ftdimvec{f}}(\Phi(M))$ as $\Gr(M)$, $\Gr_{\ftdimvec{f}}(\Phi(M)) \setminus \Gr_{\ftdimvec{f}}(\Phi(N))$ as $U(M,N)$, where we omit subscripts which indicate the dimension vectors.
 
 \begin{lemma}[{Follows \cite[Theorem 59]{irelli2019cell}}]\label{lem:worst_case}
-Let $f:X \hookrightarrow Y$ be a minimal sectional mono and $S:=Y/X$ be the quotient. When $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, we have
+Let $f:X \hookrightarrow Y$ be a minimal sectional mono and $S:=Y/X$ be the quotient. When $X_S=F \oplus T$ with $F$ and $T$ nonzero indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, we have
 $$U(X,X_S)\longrightarrow \Gr(F) \shorttimes U(X/F,T) \oder U(F,F_{X/F})$$
 as a Zarisky-locally trivial affine bundle.
 \end{lemma}
@@ -1213,7 +1213,7 @@ where
   \end{cases} \\ 
 \end{aligned}
 \end{equation*}
-Moreover, when $X_S=F \oplus T$ with $F$ and $T$ indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, one get a Zariski-locally affine map
+Moreover, when $X_S=F \oplus T$ with $F$ and $T$ nonzero indecomposable, $F\hookrightarrow X$ irreducible and $T \hookrightarrow X/F$ sectional mono, one get a Zariski-locally affine map
 $$U(X,X_S)\longrightarrow \Gr(F) \shorttimes U(X/F,T) \oder U(F,F_{X/F}).$$
 \end{proposition}
 
@@ -1253,6 +1253,7 @@ The exceptional cases are similar, but the discussion is a bit more complicated.
 			}
 			\parbox[b]{.23\textwidth}{\centering
 			\includegraphics[width=32mm]{figures/affine_paving/E8graypic4.pdf}
+			\vspace{-0.75mm}
 			\subcaption{}
 			}
 			\caption[A detailed discussion of the exceptional cases]{Special cases}
@@ -1274,7 +1275,7 @@ U(X,A) &\longrightarrow \Gr(A) \shorttimes \Gr(X/A) &&\oder U(A,-).\footnotemark
 When $X_1 \longrightarrow Y$ is not injective, we get
 \begin{equation*}
 \begin{aligned}
-\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(Y/X)\hspace{3mm} &&\oder U(X,A)\\
+\Gr(Y) &\longrightarrow \Gr(X) \shorttimes \Gr(X/Y)\hspace{3mm} &&\oder U(X,A)\\
 U(X,A) &\longrightarrow \Gr(A) \shorttimes \Gr(X/A) &&\oder U(A,-).\\
 \end{aligned}
 \end{equation*}
@@ -1303,13 +1304,12 @@ U(M,A \oplus B)  &\longrightarrow \begin{cases}
 \end{aligned}
 \end{equation*}
 
-Since the order of $X$, $Y/X$, $A$, $X/A$, $M$, $X/M$, $M/A$ are smaller or equal to $2$ as well as $\ord(A)=1$, the induction process stops, we get an affine paving of $\Gr(Y)$.
+Since the order of $X$, $Y/X$, $A$, $X/A$, $M$, $X/M$, $M/A$ are smaller or equal to $2$ as well as $\ord(A)=\ord(M/A)=1$, the induction process stops, we get an affine paving of $\Gr(Y)$.
 \end{eg}
 \begin{eg}
 In the case of Figure \ref{fig:specialcases}(c), we have 
 $$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,A).$$
-If $A=0$, we're done; if not, we decompose $A \longrightarrow Y$ as compositions of minimal sectional monos:
-
+If $A=0$, we're done; if not, we decompose $A \longrightarrow Y$ as compositions of minimal sectional monos:\\
 Case 1: $M\longrightarrow X$ is not injective, then
  \begin{equation*}
  \begin{aligned}
@@ -1317,23 +1317,18 @@ Case 1: $M\longrightarrow X$ is not injective, then
  U(X,N) &\longrightarrow \Gr(N) \shorttimes \Gr(X/N) \oder U(N,-)\\
  \end{aligned}
  \end{equation*}
- 
- Case 2: $M\longrightarrow X$ is injective, then
+Case 2: $M\longrightarrow X$ is injective, then
   \begin{equation*}
   \begin{aligned}  
-  &U(X,A)=U(X,M) \bigsqcup U(M,N) \bigsqcup U(N,A)\hspace{-50mm}&&\\
-  U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M) && \oder U(M,N \oplus B)\\
-  U(M,N) &\longrightarrow \Gr(N) \shorttimes \Gr(M/N)&& \oder U(N,-)\\
-  U(M,N \oplus B)  &\longrightarrow \begin{cases}
-  \Gr(N) \shorttimes \Gr(M/N)\\
-  \Gr(N) \shorttimes U(M/N,B)\\
-  \end{cases} \hspace{-5mm}&& \begin{aligned}
-  \oder U(N,-), &\qquad B=0,\\
-  \oder U(N,-), &\qquad B\neq 0.
-  \end{aligned}\\
+  U(X,A)&=U(X,M) \bigsqcup U(M,N) \bigsqcup U(N,A)\hspace{-20mm}&&\\
+  U(X,M) &\longrightarrow \Gr(M) \shorttimes \Gr(X/M) &&\hspace{-3mm} \oder U(M,N \oplus T)\\
+  U(M,N) &\longrightarrow \Gr(N) \shorttimes \Gr(M/N)&&\hspace{-3mm} \oder U(N,-),\\
   \end{aligned}
   \end{equation*}
-  
+  Since $M \longrightarrow X$ is injective, we get $B=0$, thus $C=0$ also, and then the sectional map $T \longrightarrow M/N$ is injective. We get 
+  $$  U(M,N \oplus T)  \longrightarrow 
+    \Gr(N) \shorttimes U(M/N,T)
+    \oder U(N,-).$$
   Since $\Gr(X)$, $\Gr(Y/X)$, $\Gr(N)$, $\ldots$ have the property of affine paving, we conclude that $\Gr(Y)$ also has the property of affine paving.
 \end{eg}
 \begin{eg}
@@ -1341,15 +1336,22 @@ Finally we begin to tackle the most difficult case(Figure \ref{fig:specialcases}
 $$\Gr(Y) \longrightarrow \Gr(F) \shorttimes \Gr(Y/F) \oder U(F,-),\hspace{8mm}$$
 and then we get the result.
 
-When $X \longrightarrow Y$ is injective, we have
+When $X \longrightarrow Y$ is injective (i.e., $A=0$), we have
 $$\Gr(Y) \longrightarrow \Gr(X) \shorttimes \Gr(Y/X) \oder U(X,F \oplus T).$$
-Since $X \longrightarrow Y$ is injective, we get $A=0$, thus $B=0$ also, and then the sectional map $T \longrightarrow X/F$ in injective. We get 
+Notice that
+
+$$A=0 \hspace{4mm}\Longrightarrow \begin{cases}
+\hspace{4mm}B=0  \hspace{4mm}\Longleftrightarrow\hspace{4mm} T  \longrightarrow X/F \text{ is injective}\\
+\hspace{4mm}C=0  \hspace{4mm}\Longleftrightarrow\hspace{4mm} G  \longrightarrow T \text{ is injective}\\
+\hspace{4mm}D=0  \hspace{4mm}\Longleftrightarrow \hspace{4mm}I  \longrightarrow G/H \text{ is injective}\\
+\end{cases}$$
+We get 
 \begin{equation*}
 \begin{aligned}
 U(X,F \oplus T) &\longrightarrow \Gr(F) \shorttimes U(X/F,T) &&\oder U(F,-)\\
-U(X/F,T) &\longrightarrow \Gr(T) \shorttimes \Gr(X/X_S) &&\oder U(T,C)\\
-U(T,C) &\longrightarrow \Gr(C) \shorttimes \Gr(T/C) &&\oder U(C,D \oplus E)\\
-U(C,D \oplus E) &\longrightarrow \Gr(D) \shorttimes U(C/D,E) &&\oder U(D,-). \\
+U(X/F,T) &\longrightarrow \Gr(T) \shorttimes \Gr(X/X_S) &&\oder U(T,G)\\
+U(T,G) &\longrightarrow \Gr(G) \shorttimes \Gr(T/G) &&\oder U(G,H \oplus I)\\
+U(G,H \oplus I) &\longrightarrow \Gr(H) \shorttimes U(G/H,I) &&\oder U(H,-). \\
 \end{aligned}
 \end{equation*}
 We conclude that $\Gr(Y)$ has the affine paving property.\qedhere

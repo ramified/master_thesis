@@ -30,14 +30,19 @@
            normal/.style={realblack},
            mark/.style={red},
            ignore/.style={dashed},
-           secondstep/.style={blue,dashed}
+           secondstep/.style={blue,dashed},
+           thirdstep/.style={orange,dashed},
            }
 \[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins},color=ashgrey,cramped]
+|[label={[black]center:D}]|{\phantom{G/H}}&&&&&& {\phantom{G/H}} \\
+&&&&&& {} \\
+|[label={[black]center:C}]|{}&&&&&& {} \\
+&&&&&& {} \\
 	|[label={[black]center:B}]|{}&&&& 1 && {} \\
-	&&& 1 & |[label={[black]center:E}]|1 & 1 \\
-	|[label={[black]center:A}]|{}&& 1 && 2 && |[label={[black]center:D}]|1 \\
-	& 1 && 2 & 1 & |[label={[black]center:C}]|2 \\
-	1 && 2 && 3 && 1 \\
+	&&& 1 & |[label={[black]center:I}]|1 & 1 \\
+	|[label={[black]center:A}]|{}&& 1 && 2 && |[label={[black]center:H}]|1 \\
+	& 1 && 2 & 1 & |[label={[black]center:G}]|2 \\
+	1 && 2 && 3 && |[label={[black]center:G/H}]|1 \\
 	& 2 && 3 & |[label={[black]center:T}]|2 & 2 \\
 	1 && 3 && |[label={[black]center:\tau X_1}]|4 && |[label={[black]center:F}]|1 \\
 	& 2 && 4 & |[label={[black]center:\tau Y}]|2 & |[label={[red]center:X}]|3 \\
@@ -62,11 +67,16 @@
 	&& 1 && 2 && 1 \\
 	&&& 1 & 1 & 1 \\
 	&&&& 1
-		\arrow[from=7-5, to=8-5,normal]
-		\arrow[from=8-6, to=9-5,mark]
-		\arrow[from=9-5, to=10-5,mark]
-		\arrow[from=6-5, to=7-5,secondstep]
-		\arrow[from=7-5, to=8-6,secondstep]
-		\arrow[from=8-6, to=9-7,secondstep]
+		\arrow[from=11-5, to=12-5,normal]
+		\arrow[from=12-6, to=13-5,mark]
+		\arrow[from=13-5, to=14-5,mark]
+		\arrow[from=10-5, to=11-5,normal,ignore]
+		\arrow[from=11-5, to=12-6,normal,ignore]
+		\arrow[from=12-6, to=13-7,normal,ignore]
+		\arrow[from=8-6, to=9-5,secondstep]
+		\arrow[from=9-5, to=10-5,secondstep]
+		\arrow[from=6-5, to=7-5,thirdstep]
+		\arrow[from=7-5, to=8-6,thirdstep]
+		\arrow[from=8-6, to=9-7,thirdstep]
 \end{tikzcd}\]
 \end{document}

@@ -29,9 +29,15 @@
            diagrams={>=Classical TikZ Rightarrow,shorten <=-2pt,shorten >=-2pt,},
            normal/.style={realblack},
            mark/.style={red},
-           ignore/.style={dashed}
+           ignore/.style={dashed},
+           secondstep/.style={blue,dashed},
+           thirdstep/.style={orange,dashed},
            }
 \[\begin{tikzcd}[row sep={5mm,between origins},column sep={5mm,between origins},color=ashgrey,cramped]
+{\phantom{G/H}}&&&&&& {\phantom{G/H}} \\
+&&&&&& {} \\
+&&&&&& {} \\
+&&&&&& {} \\
 	&&&& 1 && |[label={[black]center:B}]| \\
 	&&& 1 & 1 & 1 \\
 	&& 1 && 2 && 1 \\
@@ -61,16 +67,22 @@
 	&& 1 && 2 && 1 \\
 	&&& 1 & 1 & 1 \\
 	&&&& 1
-		\arrow[from=5-1, to=6-2,normal,ignore]
-		\arrow[from=6-2, to=7-3,normal,ignore]
-		\arrow[from=7-3, to=8-4,normal,ignore]
-		\arrow[from=8-4, to=9-5,normal,ignore]
-		\arrow[from=9-5, to=10-6,normal,ignore]
-		\arrow[from=10-6, to=11-7,normal,ignore]
-		\arrow[from=10-6, to=11-5,normal]
-		\arrow[from=11-5, to=12-5,normal]
-		\arrow[from=11-7, to=12-6,mark]
-		\arrow[from=12-6, to=13-5,mark]
-		\arrow[from=13-5, to=14-5,mark]
+		\arrow[from=9-1, to=10-2,normal,ignore]
+		\arrow[from=10-2, to=11-3,normal,ignore]
+		\arrow[from=11-3, to=12-4,normal,ignore]
+		\arrow[from=12-4, to=13-5,normal,ignore]
+		\arrow[from=13-5, to=14-6,normal,ignore]
+		\arrow[from=14-6, to=15-7,normal,ignore]
+		\arrow[from=14-6, to=15-5,normal]
+		\arrow[from=15-5, to=16-5,normal]
+		\arrow[from=15-7, to=16-6,mark]
+		\arrow[from=16-6, to=17-5,mark]
+		\arrow[from=17-5, to=18-5,mark]
+		\arrow[from=5-7, to=6-6,secondstep]
+		\arrow[from=6-6, to=7-5,secondstep]
+		\arrow[from=7-5, to=8-4,secondstep]
+		\arrow[from=8-4, to=9-3,secondstep]
+		\arrow[from=9-3, to=10-2,secondstep]
+		\arrow[from=10-2, to=11-1,secondstep]
 \end{tikzcd}\]
 \end{document}
